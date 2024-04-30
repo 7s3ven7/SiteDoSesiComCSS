@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <title>Teste de site</title>
-        <link rel="stylesheet" href="SitedoSesi/CSS/index.css">
+        <link rel="stylesheet" href="CSS/index.css">
     </head>
     <body>
         <div class="box">
