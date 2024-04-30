@@ -9,12 +9,12 @@
     color:green;
 }
 .box{
-    width:600px;
+    width:500px;
     height:500px;
     background-color:whitesmoke;
     align-items: center;
     text-align: center;
-    top:200px;
+    top:2000px;
     left:35%;
     position:relative;
     border:1px black solid;
