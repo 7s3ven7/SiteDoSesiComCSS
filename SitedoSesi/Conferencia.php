@@ -12,58 +12,18 @@
         ?>
     <head>
         <title>Teste de site</title>
-        <link rel="stylesheet" href="../CSS/conferencia.css">
+        <link rel="stylesheet" href="CSS/conferencia.css">
         
         <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
     </head>
     <body>
         <div class="texto">Menu</div>
         <div class="box">
-        <div class="texto-box">Conferencia</div>
-        <br>
-        <div class="pergunta">Placa do caminhão:</div>
-        <br>
-        <div class="pergunta">Nome do motorista:</div>
-        <br>
-        <div class="pergunta">Containner:</div>
-        <br>
-        <div class="pergunta">Navio:</div>
-        <br>
-        <div class="pergunta">Cliente:</div>
-        <br>
-        <div class="pergunta">Tipo:</div>
-        <br>
-        <div class="pergunta">Lacre:</div>
-        <br>
-        <div class="pergunta">Lacre SIF: [7]</div>
-        <br>
-        <div class="pergunta">Temperatura:</div>
-        <br>
-        <div class="pergunta">IMO:</div>
-        <br>
-        <div class="pergunta">N° ONU:</div>
-        <div class="box-box-box"><input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text">
-        <br>
-        <input class="pergunta-box" type="text"></div>
-    
+        <hr>
+        <hs>esse</hs>
+        </hr>
+        <hr>
+        <hr>
         </div>
         <br><br><br><br>
         <form action="Tela.php">
