@@ -21,22 +21,41 @@
         <div class="box">
         <table>
         <tr>
-            <td>esse</td>
-            <td>esse</td>
+            <td>Primeira fileira</td>
+            <td></td>
+            <td>Segunda fileira</td>
         </tr>
         <tr>
-            <td>esse</td>
-            <td>esse</td>
+            <td>você leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Verdadeiro</td>
         </tr>
         <tr>
-            <td>esse</td>
-            <td>esse</td>
+            <td>você não leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Falso</td>
+        </tr>
+        <tr>
+            <td>você leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Verdadeiro</td>
+        </tr>
+        <tr>
+            <td>você leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Falso</td>
+        </tr>
+        <tr>
+            <td>você leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Verdadeiro</td>
+        </tr>
+        <tr>
+            <td>você leu?</td>
+            <td><input type="checkbox"></td>
+            <td>Falso</td>
         </tr>
         </table>
-        <hr>
-        </hr>
-        <hr>
-        <hr>
         </div>
         <br><br><br><br>
         <form action="Tela.php">
