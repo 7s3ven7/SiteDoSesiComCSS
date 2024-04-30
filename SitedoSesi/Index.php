@@ -7,7 +7,7 @@
         <div class="box">
         <br>
         <div class="box-padding">
-        <div class="title">Nome do proooooooooooooooooooograma</div>
+        <div class="title">Noooooooooooooome do programa</div>
         <br><br><br><br>
         <form action="Cadastro.php"><input class="button" value="Cadastrar-se" type="submit"></form>
         <br><br><hr><br>
