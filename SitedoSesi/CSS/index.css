@@ -9,15 +9,15 @@
     color:green;
 }
 .box{
-    width:500px;
+    width:900px;
     height:500px;
-    background-color:rgb(240, 240, 240);
+    background-color:rgb(238, 14, 14);
     align-items: center;
     text-align: center;
     top:200px;
     left:35%;
     position:relative;
-    border:1px black solid;
+    border:1px rgb(0, 0, 0) solid;
     border-radius:5px;   
 }
 .box-padding{
