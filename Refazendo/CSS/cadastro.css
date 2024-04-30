@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:0;
+}
+.box{
+    width:500px;
+    height:700px;
+    left:35%;
+    top:10%;
+    position:absolute;
+    align-items:center;
+    text-align:center;
+    padding:2%;
+    border:1px black solid;
+    border-radius:5px;
+    background-color:whitesmoke;
+}
+.espaco{
+    padding-top:25px;
+}
+.box-mini{
+    width:100%;
+    height:80%;
+    background-color:blue;
+}
+.texto{
+    font-size:50px;
+}
