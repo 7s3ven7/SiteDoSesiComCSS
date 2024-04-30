@@ -19,8 +19,21 @@
     <body>
         <div class="texto">Menu</div>
         <div class="box">
+        <table>
+        <tr>
+            <td>esse</td>
+            <td>esse</td>
+        </tr>
+        <tr>
+            <td>esse</td>
+            <td>esse</td>
+        </tr>
+        <tr>
+            <td>esse</td>
+            <td>esse</td>
+        </tr>
+        </table>
         <hr>
-        <hs>esse</hs>
         </hr>
         <hr>
         <hr>
