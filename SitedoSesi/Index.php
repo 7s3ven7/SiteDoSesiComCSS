@@ -7,7 +7,7 @@
         <div class="box">
         <br>
         <div class="box-padding">
-        <div class="title">coisa legal</div>
+        <div class="title">coisaaaaaaaaaaaaaaaaaaaaa legal</div>
         <br><br><br><br>
         <form action="Cadastro.php"><input class="button" value="Cadastrar-se" type="submit"></form>
         <br><br><hr><br>
@@ -15,5 +15,5 @@
         <br>
         <form action="Logar.php"><input class="button" value="Logar" type="submit"></form>
         </div>
-    </body>
+    </body> 
 </html>
