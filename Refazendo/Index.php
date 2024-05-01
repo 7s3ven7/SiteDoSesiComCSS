@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="CSS/index.css">
+        <link rel="stylesheet" href="iindex.css">
     </head>
     <body>
         <div class="box">

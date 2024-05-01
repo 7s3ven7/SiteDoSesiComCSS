@@ -6,7 +6,6 @@
     <form method="POST" action="Logar.php">
         <div class="box">
         <div class="texto">Faça o seu cadastro</div>
-        <div class="espaco"></div>
         <div class="box-mini">
         <div class="texto-mini">Nome da conta</div>
         <input class="caixa-texto" type="text" placeholder="Nome" name="nome_conta">
@@ -23,6 +22,10 @@
         </div>
         <br><br><br><br>
         <input class="botao" type="submit" value="Cadastrar">
+        <br><br><hr><br>
+        <form method="" action="Logar.php">
+        <input class="botao" type="submit" value="Logar-se">
+        </form>
     </form>
         </div>
     </body>
