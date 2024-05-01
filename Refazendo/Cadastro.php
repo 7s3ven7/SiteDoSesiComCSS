@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="cadastro.css">
     </head>
     <body>
-    <form method="POST" action="Action_Cadastro">
+    <form method="POST" action="Logar.php">
         <div class="box">
         <div class="texto">Faça o seu cadastro</div>
         <div class="espaco"></div>
