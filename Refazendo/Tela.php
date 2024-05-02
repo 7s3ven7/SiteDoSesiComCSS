@@ -18,7 +18,7 @@
 
 <body>
     <div class="texto">Menu</div>
-    <div class="espaco-2">
+    <div class="espaco">
         <form method="POST" action="Recebimento.php">
             <input type="submit" class="botao" value="Recebimento">
         </form>
