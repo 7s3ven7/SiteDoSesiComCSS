@@ -25,7 +25,7 @@
             </form>
             <div class="box-mini">
                 <form method="" action="Carga.php">
-                    <input type="submit" class="botao-mini" value="Carga">
+                    <input type="submit" id="botao-mini" value="Carga">
                 </form>
                 <form method="" action="Conferencia.php">
                     <input type="submit" class="botao-mini" value="Conferencia">
@@ -55,15 +55,16 @@
     <div class="box">
         <table>
             <tr>
-                <div>Nome do Caminhoneiro: </div>
+                <td><div>Nome do Caminhoneiro: </div></td>
                 <td><input type="text" value="Nome" name="nome_caminhoneiro"></td>
             </tr>
             <tr>
-            <div>Placa do caminhão: </div>
+                <td><div>Placa do caminhão: </div></td>
                 <td><input type="text" value="Placa" name="placa_caminhao"></td>
             </tr>
             <tr>
-                <td><input type="text" value="Placa do Caminhão" name="placa_caminhao"></td>
+            <td><div>CNPJ da empresa: </div></td>
+                <td><input type="text" value="CNPJ" name="placa_caminhao"></td>
             </tr>
         </table>
     </div>
