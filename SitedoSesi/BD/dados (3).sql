@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 02-Maio-2024 às 10:44
+-- Generation Time: 02-Maio-2024 às 14:52
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -50,7 +50,8 @@ CREATE TABLE `estoque` (
   `coluna` int(11) NOT NULL,
   `andar` int(11) NOT NULL,
   `ap` int(11) NOT NULL,
-  `Kg` float NOT NULL
+  `Kg` float NOT NULL,
+  `doca` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -128,6 +129,19 @@ CREATE TABLE `nota_recebimento` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `pedi_clientes`
+--
+
+CREATE TABLE `pedi_clientes` (
+  `CPF` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Gmail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `produto`
 --
 
@@ -156,7 +170,8 @@ CREATE TABLE `produto` (
 --
 
 CREATE TABLE `qualitativo` (
-  `id` int(11) NOT NULL,
+  `cod_inter` int(11) NOT NULL,
+  `cod_forne` int(11) NOT NULL,
   `container_desgas` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avari_late_d` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avari_late_e` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -197,7 +212,8 @@ CREATE TABLE `quantitativa` (
   `IMO` int(11) DEFAULT NULL,
   `n_ONU` int(11) DEFAULT NULL,
   `nome_prod` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quant_prod` float NOT NULL
+  `quant_prod` float NOT NULL,
+  `doca` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -212,7 +228,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_grupo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cargo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cod_prof` varchar(9) DEFAULT NULL
+  `cod_prof` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -256,6 +272,12 @@ ALTER TABLE `nota_recebimento`
   ADD PRIMARY KEY (`n_nota`);
 
 --
+-- Indexes for table `pedi_clientes`
+--
+ALTER TABLE `pedi_clientes`
+  ADD PRIMARY KEY (`CPF`);
+
+--
 -- Indexes for table `produto`
 --
 ALTER TABLE `produto`
@@ -265,7 +287,7 @@ ALTER TABLE `produto`
 -- Indexes for table `qualitativo`
 --
 ALTER TABLE `qualitativo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`cod_inter`);
 
 --
 -- Indexes for table `quantitativa`
@@ -312,7 +334,7 @@ ALTER TABLE `nota_recebimento`
 -- AUTO_INCREMENT for table `qualitativo`
 --
 ALTER TABLE `qualitativo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_inter` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `quantitativa`
 --
