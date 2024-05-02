@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="logar.css">
     </head>
     <body>
-    <form method="POST" action="index.php">
+    <form method="POST" action="Action_Logar.php">
         <div class="box">
         <div class="texto">Faça o seu Login</div>
         <div class="espaco"></div>
