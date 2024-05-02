@@ -20,7 +20,7 @@
     <div class="texto">Menu</div>
     <div class="espaco">
         <div>
-            <form method="" action="Tela.php">
+            <form method="" action="Recebimento.php">
                 <input type="submit" id="botao" value="Recebimento">
             </form>
             <div class="box-mini">
