@@ -12,36 +12,47 @@
         ?>
 
 <head>
-    <link rel="stylesheet" href="tela.css">
+    <link rel="stylesheet" href="recebimento.css">
     <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
 </head>
 
 <body>
     <div class="texto">Menu</div>
     <div class="espaco-2">
-        <form method="POST" action="Recebimento.php">
-            <input type="submit" class="botao" value="Recebimento">
-        </form>
-        <form method="POST" action="Movimentacao.php">
+        <div>
+            <form method="" action="Tela.php">
+                <input type="submit" id="botao" value="Recebimento">
+            </form>
+            <div class="box-mini">
+                <form method="" action="Carga.php">
+                    <input type="submit" class="botao-mini" value="Carga">
+                </form>
+                <form method="" action="Conferencia.php">
+                    <input type="submit" class="botao-mini" value="Conferencia">
+                </form>
+            </div>
+        </div>
+        <br>
+        <form method="" action="Movimentacao.php">
             <input type="submit" class="botao" value="Movimentação">
         </form>
-        <form method="POST" action="Estoque.php">
+        <form method="" action="Estoque.php">
             <input type="submit" class="botao" value="Estoque">
         </form>
-        <form method="POST" action="Picking.php">
+        <form method="P" action="Picking.php">
             <input type="submit" class="botao" value="Picking">
         </form>
-        <form method="POST" action="Expedicao.php">
+        <form method="" action="Expedicao.php">
             <input type="submit" class="botao" value="Expedição">
         </form>
-        <form method="POST" action="Relatorio.php">
+        <form method="" action="Relatorio.php">
             <input type="submit" class="botao" value="Relatório">
         </form>
-        <form method="POST" action="Controle.php">
+        <form method="" action="Controle.php">
             <input type="submit" class="botao" value="Controle">
         </form>
     </div>
-    <div class="box"></div>
+    <div class="box">Bem Vindo...</div>
 </body>
 
 </html>
