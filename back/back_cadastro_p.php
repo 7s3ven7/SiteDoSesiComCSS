@@ -2,7 +2,7 @@
 $hostname = "127.0.0.1";
 $name ="root";
 $password = "root";
-$DB = "a";
+$DB = "dados";
 
 $conexao = new mysqli($hostname,$name,$password,$DB);//Tenta conexão com o DB
 
@@ -12,12 +12,13 @@ if($conexao -> connect_errno){
 }
 else{
 
-$SQL = 'INSERT INTO `produto` (`cod`,`cod_inter`,`tipo`,`validade`,`nome`,`marca_produto`,`embalagem`,`und`,`QTD`,`valor_und`,`tamanho`,`NCM`,`CST`,`CFOP`) 
-    VALUES ("1","1","1","1","1","1","1","1","1","1","1","1","1","1");';
+$SQL = 'INSERT INTO `produto` (`cod_inter`,`cod_fabri`,`tipo`,`validade`,`nome`,`marca_produto`,`embalagem`,`und`,`quantidade_und`,`valor_und`,`Kg/L`,`NCM`,`CST`,`CFOP`,`n_pedido`) 
+    VALUES ("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");';
 //Inserir no DB
 
 $resultado = $conexao -> query($SQL);
 
 $conexao -> close();
+header("Location: index.php");
 }
 ?>
