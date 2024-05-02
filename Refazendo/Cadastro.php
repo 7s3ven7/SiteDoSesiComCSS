@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="cadastro.css">
     </head>
     <body>
-    <form method="POST" action="Logar.php">
+    <form method="POST" action="Action_Cadastro.php">
         <div class="box">
         <div class="texto">Faça o seu cadastro</div>
         <div class="box-mini">
@@ -22,11 +22,11 @@
         </div>
         <br><br><br><br>
         <input class="botao" type="submit" value="Cadastrar">
+        </form>
         <br><br><hr><br>
         <form method="" action="Logar.php">
         <input class="botao" type="submit" value="Logar-se">
         </form>
-    </form>
         </div>
     </body>
 </html>

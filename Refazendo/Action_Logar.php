@@ -15,13 +15,8 @@ if($conexao -> connect_errno){
     exit();
 }
 else{
-$nome = $conexao -> real_escape_string ($_POST["Name_L"]);
-$senha = $conexao -> real_escape_string ($_POST["Senha_L"]);
-
-if($senha == "123123123"){
-	header('Location: TelaProf.php', true, 301);
-	exit();
-}else{
+$nome = $conexao -> real_escape_string ($_POST["nome_conta"]);
+$senha = $conexao -> real_escape_string ($_POST["senha_conta"]);
 
 $SQL = "SELECT `id`, `tipo` FROM `usuario` WHERE `tipo` = '".$nome."' AND `senha` = '".$senha."'";
 
@@ -40,5 +35,4 @@ if($resultado->num_rows != 0)
 		$conexao -> close();
 		header('Location: index.php', true, 301);
 	}}
-}
 ?>
