@@ -11,27 +11,18 @@
         }    
         ?>
     <head>
-        <title>Teste de site</title>
-        <link rel="stylesheet" href="CSS/tela.css">
+        <link rel="stylesheet" href="tela.css">
         <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
     </head>
     <body>
-        <div class="texto">Menu</div>
+        <div class="">Menu</div>
+        <div class="">
+        
+
+
+        </div>
+        <!--<div class="texto">Menu</div>
         <div class="box"><div class="texto-box">Bem vindo...</div>
-        <br>
-        <div class="texto-box-mini">Agradecemos sinceramente por escolher nosso site entre tantas outras opções disponíveis. Sua visita é muito importante para nós, e estamos empenhados em fornecer a você a melhor experiência possível.</div>
-        <br>
-        <div class="texto-box-mini">Nosso site foi projetado para ser informativo, fácil de navegar e cheio de recursos valiosos. Queremos que você encontre tudo o que precisa e muito mais, tudo em um só lugar.</div>
-        <br>
-        <div class="texto-box-mini">Seja você um visitante pela primeira vez ou um usuário recorrente, esperamos que você aproveite seu tempo aqui. Estamos constantemente trabalhando para melhorar nosso site e adicionar novos conteúdos, então não deixe de nos visitar novamente em breve.</div>
-        <br>
-        <div class="texto-box-mini">Mais uma vez, obrigado por sua visita. Estamos ansiosos para atendê-lo e ajudá-lo a encontrar o que você está procurando.</div>
-        <br>
-        <div class="texto-box-mini">Equipe do Site legal :]</div>
-    
-    
-    
-    
         </div>
         <br><br><br><br>
         <form action="Recebimento.php">
@@ -70,6 +61,6 @@
         <input class="button" value="Mais" type="submit">
         </form>
         <br>
-        <br>
+        <br>-->
     </body>
 </html>
