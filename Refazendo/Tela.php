@@ -15,30 +15,31 @@
     <link rel="stylesheet" href="tela.css">
     <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
 </head>
+
 <body>
     <div class="texto">Menu</div>
     <div class="espaco-2">
-    <form method="POST" action="Recebimento.php">
-        <input type="submit" class="botao" value="Recebimento">
-    </form>
-    <form method="POST" action="Movimentacao.php">
-        <input type="submit" class="botao" value="Movimentação">
-    </form>
-    <form method="POST" action="Estoque.php">
-        <input type="submit" class="botao" value="Estoque">
-    </form>
-    <form method="POST" action="Picking.php">
-        <input type="submit" class="botao" value="Picking">
-    </form>
-    <form method="POST" action="Expedicao.php">
-        <input type="submit" class="botao" value="Expedição">
-    </form>
-    <form method="POST" action="Relatorio.php">
-        <input type="submit" class="botao" value="Relatório">
-    </form>
-    <form method="POST" action="Controle.php">
-        <input type="submit" class="botao" value="Controle">
-    </form>
+        <form method="POST" action="Recebimento.php">
+            <input type="submit" class="botao" value="Recebimento">
+        </form>
+        <form method="POST" action="Movimentacao.php">
+            <input type="submit" class="botao" value="Movimentação">
+        </form>
+        <form method="POST" action="Estoque.php">
+            <input type="submit" class="botao" value="Estoque">
+        </form>
+        <form method="POST" action="Picking.php">
+            <input type="submit" class="botao" value="Picking">
+        </form>
+        <form method="POST" action="Expedicao.php">
+            <input type="submit" class="botao" value="Expedição">
+        </form>
+        <form method="POST" action="Relatorio.php">
+            <input type="submit" class="botao" value="Relatório">
+        </form>
+        <form method="POST" action="Controle.php">
+            <input type="submit" class="botao" value="Controle">
+        </form>
     </div>
     <div class="box"></div>
 
