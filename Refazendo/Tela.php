@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="tela.css">
     <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
 </head>
-
 <body>
-    <div class="">Menu</div>
+    <div class="texto">Menu</div>
     <div class="espaco-2">
     <form method="POST" action="Recebimento.php">
         <input type="submit" class="botao" value="Recebimento">
