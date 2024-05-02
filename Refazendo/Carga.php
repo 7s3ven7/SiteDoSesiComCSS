@@ -58,103 +58,103 @@
                 <td>
                     <div>Placa do caminhão: </div>
                 </td>
-                <td><input type="text" value="Placa" name="placa_caminhao"></td>
+                <td><input class="texto-mini" type="text" value="Placa" name="placa_caminhao"></td>
             </tr>
             <tr>
                 <td>
                     <div>Nome do motorista: </div>
                 </td>
-                <td><input type="text" value="Nome" name="nome_motorista"></td>
+                <td><input class="texto-mini" type="text" value="Nome" name="nome_motorista"></td>
             </tr>
             <tr>
                 <td>
                     <div>Container: </div>
                 </td>
-                <td><input type="text" value="Container" name="container"></td>
+                <td><input class="texto-mini" type="text" value="Container" name="container"></td>
             </tr>
             <tr>
                 <td>
                     <div>Navio: </div>
                 </td>
-                <td><input type="text" value="Navio" name="navio"></td>
+                <td><input class="texto-mini" type="text" value="Navio" name="navio"></td>
             </tr>
             <tr>
                 <td>
                     <div>Nome cliente: </div>
                 </td>
-                <td><input type="text" value="Cliente" name="cliente"></td>
+                <td><input class="texto-mini" type="text" value="Cliente" name="cliente"></td>
             </tr>
             <tr>
                 <td>
                     <div>Tipo do container: </div>
                 </td>
-                <td><input type="text" value="tipo" name="tipo_container"></td>
+                <td><input class="texto-mini" type="text" value="tipo" name="tipo_container"></td>
             </tr>
             <tr>
                 <td>
                     <div>Lacre: </div>
                 </td>
-                <td><input type="text" value="KL-0000" name="lacre"></td>
+                <td><input class="texto-mini" type="text" value="KL-0000" name="lacre"></td>
             </tr>
             <tr>
                 <td>
                     <div>Lacre SIF [7]: </div>
                 </td>
-                <td><input type="text" value="0000001" name="lacre_sif"></td>
+                <td><input class="texto-mini" type="text" value="0000001" name="lacre_sif"></td>
             </tr>
             <tr>
                 <td>
                     <div>Temperatura: </div>
                 </td>
-                <td><input type="text" value="25°C" name="temperatura"></td>
+                <td><input class="texto-mini" type="text" value="25°C" name="temperatura"></td>
             </tr>
             <tr>
                 <td>
                     <div>IMO: </div>
                 </td>
-                <td><input type="text" value="1 - 9" name="imo"></td>
+                <td><input class="texto-mini" type="text" value="1 - 9" name="imo"></td>
             </tr>
             <tr>
                 <td>
                     <div>N° ONU: </div>
                 </td>
-                <td><input type="text" value="2546" name="n_onu"></td>
+                <td><input class="texto-mini" type="text" value="2546" name="n_onu"></td>
             </tr>
             <tr>
                 <td>
                     <div>Código de fornecedor: </div>
                 </td>
-                <td><input type="text" value="000001" name="cod_fornecedor"></td>
+                <td><input class="texto-mini" type="text" value="000001" name="cod_fornecedor"></td>
             </tr>
             <tr>
                 <td>
                     <div>Nome da empresa: </div>
                 </td>
-                <td><input type="text" value="apple" name="nome_empresa"></td>
+                <td><input class="texto-mini" type="text" value="apple" name="nome_empresa"></td>
             </tr>
             <tr>
                 <td>
                     <div>CNPJ da empresa: </div>
                 </td>
-                <td><input type="text" value="000.000.000-00" name="cnpj"></td>
+                <td><input class="texto-mini" type="text" value="000.000.000-00" name="cnpj"></td>
             </tr>
             <tr>
                 <td>
                     <div>Nome do Produto: </div>
                 </td>
-                <td><input type="text" value="cachaça" name="nome_produto"></td>
+                <td><input class="texto-mini" type="text" value="cachaça" name="nome_produto"></td>
             </tr>
             <tr>
                 <td>
                     <div>Quantidade do produto: </div>
                 </td>
-                <td><input type="text" value="1" name="quantidade_produto"></td>
+                <td><input class="texto-mini" type="text" value="1" name="quantidade_produto"></td>
             </tr>
             <tr>
                 <td>
-                    <div>Número do pedido: </div>
+                    <div class="texto-mini">Número do pedido: </div>
                 </td>
-                <td><input type="text" value="1" name="numero_pedido"></td>
+                <td><input class="texto-mini" type="text" value="1" name="numero_pedido"></td>
             </tr>
 
         </table>

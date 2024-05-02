@@ -18,6 +18,10 @@
     font-size:60px;
     margin-left:15px;
 }
+.texto-mini{
+    font-size:30px;
+    line-height:5px;
+}
 .padding{
     padding:15px;
 }
