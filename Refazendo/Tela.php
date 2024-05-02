@@ -11,16 +11,35 @@
         }    
         ?>
     <head>
-        <link rel="stylesheet" href="tela.css">
+        <link rel="stylesheet" href="CSS/tela.css">
         <meta http-equiv="Content-Type" content="text/html; charset= utf-8 " />
     </head>
     <body>
         <div class="">Menu</div>
-        <div class="">
+        <form method="POST" action="Recebimento.php">
+        <input type="submit" class="botao" value="Recebimento">
+        </form>
+        <form method="POST" action="Movimentacao.php">
+        <input type="submit" class="" value="Movimentação">
+        </form>
+        <form method="POST" action="Estoque.php">
+        <input type="submit" class="" value="Estoque">
+        </form>
+        <form method="POST" action="Picking.php">
+        <input type="submit" class="" value="Picking">
+        </form>
+        <form method="POST" action="Expedicao.php">
+        <input type="submit" class="" value="Expedição">
+        </form>
+        <form method="POST" action="Relatorio.php">
+        <input type="submit" class="" value="Relatório">
+        </form>
+        <form method="POST" action="Controle.php">
+        <input type="submit" class="" value="Controle">
+        </form>
+        <div class="box"></div>
         
 
-
-        </div>
         <!--<div class="texto">Menu</div>
         <div class="box"><div class="texto-box">Bem vindo...</div>
         </div>
