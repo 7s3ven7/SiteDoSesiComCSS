@@ -21,6 +21,8 @@
 .texto-mini{
     font-size:30px;
     line-height:5px;
+    border:1px black solid;
+    border-radius:5px;
 }
 .padding{
     padding:15px;
