@@ -3,16 +3,42 @@
     padding: 0;
     box-sizing: 0;
 }
-.caixa{
-    width:80%;
-    height:80%;
+
+.caixa {
+    width: 85%;
+    height: 85%;
     background-color: whitesmoke;
-    left:15%;
-    top:10%;
+    left: 12.5%;
+    top: 10%;
     text-align: center;
     align-items: center;
     line-height: 200%;
     position: absolute;
-    border:1px black solid;
+    border: 1px black solid;
     border-radius: 2.5%;
+}
+
+.menu {
+    font-size: 350%;
+    position: relative;
+    padding: 1%;
+}
+.botao{
+    font-size:x-large;
+    width:10%;
+    height:5%;
+    padding:1%;
+    top:15%;
+    border:1px black solid;
+    border-radius:5%;
+    background-color:lightgreen;
+    color:black;
+    text-align: center;
+    position:relative;
+    margin-left:1%;
+    margin-bottom:0.5%;
+}
+.caixa-botao{
+    line-height:50px;
+    position:relative;
 }
