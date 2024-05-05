@@ -15,7 +15,7 @@
     line-height: 200%;
     position: absolute;
     border: 1px black solid;
-    border-radius: 2.5%;
+    border-radius: 1%;
 }
 
 .menu {
@@ -25,8 +25,7 @@
 }
 .botao{
     font-size:x-large;
-    width:10%;
-    height:5%;
+    width:11%;
     padding:1%;
     top:15%;
     border:1px black solid;
@@ -36,7 +35,7 @@
     text-align: center;
     position:relative;
     margin-left:1%;
-    margin-bottom:0.5%;
+    margin-bottom: 0.5%;
 }
 .caixa-botao{
     line-height:50px;
