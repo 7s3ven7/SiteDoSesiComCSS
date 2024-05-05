@@ -30,6 +30,19 @@
     border-radius: 5%;
     background-color: whitesmoke;
 }
+.caixa-3 {
+    width: 35%;
+    height: 70%;
+    left: 35%;
+    top: 10%;
+    padding-top:2%;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5%;
+    background-color: whitesmoke;
+}
 
 .caixa-mini {
     width: 80%;
