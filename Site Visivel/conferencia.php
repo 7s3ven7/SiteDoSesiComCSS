@@ -44,6 +44,6 @@ $SQL = 'INSERT INTO `conferencia` (`cod_inter`,`cod_forne`,`nome_empresa`,`CNPJ_
 $resultado = $conexao -> query($SQL);
 
 $conexao -> close();
-header("Location: index.php"); //Envia para a tela de Login ao Cadastrar
+header("Location: qualitativo.php"); //Envia para a tela de Login ao Cadastrar
 }
 ?>

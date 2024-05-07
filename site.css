@@ -124,3 +124,19 @@
     left: 12.5%;
     top: 5%;
 }
+.tabela{
+    line-height:125%;
+    font-size:xx-large;
+    left:2.5%;
+    top:2.5%;
+    position:relative;
+    text-align: left;
+    align-items: left;
+}
+.botao-tabela{
+    padding:1%;
+    font-size:large;
+    width: 500px;
+    border:1px black solid;
+    border-radius: 5px;
+}
