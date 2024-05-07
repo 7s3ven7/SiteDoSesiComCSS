@@ -58,6 +58,6 @@ $SQL = 'INSERT INTO `conferencia` (`nome_m`,`n_empresa`,`modelo_v`,`eixos`,`PBT`
 $resultado = $conexao -> query($SQL);
 
 $conexao -> close();
-header("Location: index.php"); //Envia para a tela de Login ao Cadastrar
+header("Location: qualitativo.php"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
