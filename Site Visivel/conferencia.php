@@ -38,7 +38,7 @@ $v17=$_POST['17']; //quantidade_unidade
 $v17=$_POST['18']; //doca
 
 $SQL = 'INSERT INTO `conferencia` (`cod_inter`,`cod_forne`,`nome_empresa`,`CNPJ_empre`,`modelo_container`,`navio`,`destinatario`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`nome_produto`,`und`,`quant`,`quant_und`,`doca`) 
-    VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.','.$v17.');';
+    VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.','.$v17.','.$v18.');';
 //Inserir no DB
 
 $resultado = $conexao -> query($SQL);
