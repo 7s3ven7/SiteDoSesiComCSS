@@ -18,8 +18,8 @@ if($conexao -> connect_errno){
 }
 else{
 
-$v1=$_POST['1'];`nome_m`,`modelo_v`,`eixos`,`PBT`,`CNPJ_empre`,`placa_veiculo`,`modelo_container`,`navio`,`destinatario`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`
-$v2=$_POST['2'];n_empresa
+$v1=$_POST['1'];
+$v2=$_POST['2'];
 $v3=$_POST['3'];
 $v4=$_POST['4'];
 $v5=$_POST['5'];
