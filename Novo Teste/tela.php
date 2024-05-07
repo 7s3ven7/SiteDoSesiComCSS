@@ -1,7 +1,18 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if (empty($_SESSION['tipo'])) {
+    header('Location: index.php');
+    exit();
+} else {
+    $nome = $_SESSION['tipo'];
+    echo '<div id="nome"> Aluno: ' . $_SESSION['tipo'] . '</div>';
+}
+?>
 
 <head>
-    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="site.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
