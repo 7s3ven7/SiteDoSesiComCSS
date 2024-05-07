@@ -147,13 +147,23 @@
     align-items: left;
 }
 
+.tabela-2 {
+    border-spacing: 10px;
+    font-size: 40px;
+    left: 2.5%;
+    top: 2.5%;
+    position: relative;
+    text-align: left;
+    align-items: left;
+}
+
 .botao-tabela {
     padding: 1%;
     font-size: large;
-    width:150%;
+    width: 150%;
     border: 1px black solid;
     border-radius: 5px;
-    margin-right:50%;
+    margin-right: 50%;
 }
 
 .botao-2 {
@@ -168,4 +178,9 @@
     border-radius: 5px;
     color: whitesmoke;
     background-color: green;
+}
+
+.check {
+    width: 40px;
+    height: 40px;
 }
