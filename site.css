@@ -18,7 +18,7 @@
     border-radius: 10px;
 }
 
-#caixa {
+#caixa-info {
     width: 85%;
     height: 90%;
     background-color: whitesmoke;
@@ -26,6 +26,18 @@
     top: 5%;
     text-align: center;
     align-items: center;
+    line-height: 200%;
+    position: absolute;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+#caixa {
+    width: 85%;
+    height: 90%;
+    background-color: whitesmoke;
+    left: 12.5%;
+    top: 5%;
     line-height: 200%;
     position: absolute;
     border: 1px black solid;
@@ -116,7 +128,7 @@
     font-size: xx-large;
     width: 50%;
     height: 4%;
-    padding:2.5px;
+    padding: 2.5px;
     background-color: whitesmoke;
     border: 1px black solid;
     border-radius: 5px;
@@ -124,19 +136,35 @@
     left: 12.5%;
     top: 5%;
 }
-.tabela{
-    line-height:125%;
-    font-size:xx-large;
-    left:2.5%;
-    top:2.5%;
-    position:relative;
+
+.tabela {
+    line-height: 125%;
+    font-size: xx-large;
+    left: 2.5%;
+    top: 2.5%;
+    position: relative;
     text-align: left;
     align-items: left;
 }
-.botao-tabela{
-    padding:1%;
-    font-size:large;
+
+.botao-tabela {
+    padding: 1%;
+    font-size: large;
     width: 500px;
-    border:1px black solid;
+    border: 1px black solid;
     border-radius: 5px;
+}
+
+.botao-2 {
+    width: 12.5%;
+    height: 75px;
+    margin: 2.5%;
+    margin-top: 5%;
+    left: 25%;
+    position: relative;
+    font-size: x-large;
+    border: 1px black solid;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: green;
 }
