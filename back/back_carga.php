@@ -11,7 +11,7 @@ if($conexao -> connect_errno){
     exit();
 }
 else{
-$n_pedido = 1;
+$n_pedido = 2;
 
 $SQL = "SELECT * 
             FROM `produto` 
