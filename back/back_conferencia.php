@@ -18,7 +18,7 @@ if($conexao -> connect_errno){
 }
 else{
 
-$v1=$_POST['1']; //nome_m ``,``,``,``,``,`navio`,`destinatario`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`
+$v1=$_POST['1']; //nome_m
 $v2=$_POST['2']; //n_empresa
 $v3=$_POST['3']; //modelo_v
 $v4=$_POST['4']; //eixos
@@ -26,14 +26,14 @@ $v5=$_POST['5']; //PBT
 $v6=$_POST['6']; //CNPJ_empre
 $v7=$_POST['7']; //placa_veiculo
 $v8=$_POST['8']; //modelo_container
-$v9=$_POST['9']; //
-$v10=$_POST['10']; //
-$v11=$_POST['11']; //
-$v12=$_POST['12']; //
-$v13=$_POST['13']; //
-$v14=$_POST['14']; //
-$v15=$_POST['15']; //
-$v16=$_POST['16']; //
+$v9=$_POST['9']; //navio
+$v10=$_POST['10']; //destinatario
+$v11=$_POST['11']; //tipo_container
+$v12=$_POST['12']; //lacre
+$v13=$_POST['13']; //lacre_SIF
+$v14=$_POST['14']; //temperatura
+$v15=$_POST['15']; //IMO
+$v16=$_POST['16']; //n_ONU
 $v1=$_POST['1'];
 $v2=$_POST['2'];
 $v3=$_POST['3'];
