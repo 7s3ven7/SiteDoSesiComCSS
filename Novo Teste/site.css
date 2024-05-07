@@ -15,38 +15,54 @@
     line-height: 200%;
     position: absolute;
     border: 1px black solid;
-    border-radius: 1%;
+    border-radius: 10px;
 }
 
 .menu {
-    font-size: 350%;
+    font-size: 375%;
     position: relative;
-    padding: 1%;
+    padding-left: 1%;
+    margin: 1.5%;
+    margin-left: 0%;
+    margin-top: 0.5%;
 }
 
 .botao {
     font-size: x-large;
     width: 11%;
     padding: 1%;
-    top: 15%;
     border: 1px black solid;
-    border-radius: 5%;
+    border-radius: 10px;
     background-color: green;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     position: relative;
     margin-left: 1%;
     margin-bottom: 0.5%;
 }
 
+#botao{
+    font-size: x-large;
+    width: 11%;
+    padding: 1%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    color: green;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%; 
+}
+
 .caixa-botao-mini {
     width: 11%;
     height: 100px;
     position: relative;
-    background-color: blue;
     align-items: right;
     text-align: right;
-    margin: 1%;
+    padding-left: 0.5%;
+    margin: 0.5%;
     margin-top: 0%;
 }
 
@@ -57,11 +73,23 @@
     padding: 0.5%;
     top: 15%;
     border: 1px black solid;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: green;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     position: relative;
     margin-left: 1%;
-    margin-bottom: 0.5%;
+    margin-bottom: 5%;
+}
+
+#nome {
+    font-size: xx-large;
+    width: 50%;
+    height: 4%;
+    background-color: whitesmoke;
+    border: 1px black solid;
+    border-radius: 5px;
+    position: absolute;
+    left: 12.5%;
+    top: 5%;
 }
