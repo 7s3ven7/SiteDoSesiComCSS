@@ -150,9 +150,10 @@
 .botao-tabela {
     padding: 1%;
     font-size: large;
-    width: 500px;
+    width:150%;
     border: 1px black solid;
     border-radius: 5px;
+    margin-right:50%;
 }
 
 .botao-2 {
@@ -160,7 +161,7 @@
     height: 75px;
     margin: 2.5%;
     margin-top: 5%;
-    left: 25%;
+    left: 20%;
     position: relative;
     font-size: x-large;
     border: 1px black solid;
