@@ -52,7 +52,7 @@ $v15=$_POST['15'];
 $v16=$_POST['16'];
 
 $SQL = 'INSERT INTO `conferencia` (`nome_m`,`n_empresa`,`modelo_v`,`eixos`,`PBT`,`CNPJ_empre`,`placa_veiculo`,`modelo_container`,`navio`,`destinatario`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`) 
-    VALUES ('"$v1"','"$v2"','"$v3"','"$v4"','"$v5"','"$v6"','"$v7"','"$v8"','"$v9"','"$v10"','"$v11"','"$v12"','"$v13"','"$v14"','"$v15"','"$v16"');';
+    VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.');';
 //Inserir no DB
 
 $resultado = $conexao -> query($SQL);
