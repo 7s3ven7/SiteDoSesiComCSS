@@ -1,4 +1,5 @@
 <html>
+
 </html>
 <?php
 session_start();
@@ -14,16 +15,22 @@ if ($conexao->connect_errno) {
 } else {
 	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
 	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
-	$SQL = "SELECT `id`, `tipo` FROM `usuario` WHERE `tipo` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+	$SQL = "SELECT `id`, `tipo`, `senha` FROM `usuario` WHERE `tipo` = '" . $nome . "' AND `senha` = '" . $senha . "'";
 	$resultado = $conexao->query($SQL);
 	if ($resultado->num_rows != 0) {
 		$row = $resultado->fetch_array();
 		$_SESSION['id'] = $row[0];
 		$_SESSION['tipo'] = $row[1];
-		$conexao->close();
-		header('Location: tela.php', true, 301);
-		exit();
-	} else {
+		if ($row[1] == 'professor' and $senha == $row[2]) {
+			$conexao->close();
+			header('Location: tela_professor.php', true, 301);
+			exit();
+		}elseif ($_SESSION['tipo'] != 'professor' and $senha == $row[2]) {
+			$conexao->close();
+			header('Location: tela.php', true, 301);
+			exit();
+		}
+	}else {
 		$conexao->close();
 		header('Location: index.html', true, 301);
 	}
