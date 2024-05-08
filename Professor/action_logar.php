@@ -23,7 +23,7 @@ if ($conexao->connect_errno) {
 		$_SESSION['tipo'] = $row[1];
 		if ($row[1] == 'professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: tela_professor.php', true, 301);
+			header('Location: tela_professor.html', true, 301);
 			exit();
 		}elseif ($_SESSION['tipo'] != 'professor' and $senha == $row[2]) {
 			$conexao->close();
