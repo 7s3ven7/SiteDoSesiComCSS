@@ -50,5 +50,4 @@ if(isset($_POST['2'])){
 } else {
     $v2 = 'f';
 }
-
 p?>
