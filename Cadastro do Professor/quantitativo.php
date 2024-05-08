@@ -38,6 +38,6 @@ if ($conexao->connect_errno) {
     $resultado = $conexao->query($SQL);
 
     $conexao->close();
-    header("Location: qualitativo.php"); //Envia para a tela de Login ao Cadastrar
+    header("Location: movimentacao.html"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
