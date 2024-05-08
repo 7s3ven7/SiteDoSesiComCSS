@@ -25,7 +25,6 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `cliente_p`
 --
-
 CREATE TABLE `cliente_p` (
   `CPF` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
