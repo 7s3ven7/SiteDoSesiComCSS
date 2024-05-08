@@ -22,7 +22,7 @@ if ($conexao->connect_errno) {
 		$_SESSION['id'] = $row[0];
 		$_SESSION['tipo'] = $row[1];
 		$conexao->close();
-		header('Location: tela.html', true, 301);
+		header('Location: tela.php', true, 301);
 		exit();
 	} else {
 		$conexao->close();

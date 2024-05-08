@@ -12,13 +12,12 @@ if($conexao -> connect_errno){
 }
 else{
 
-$SQL = 'INSERT INTO `produto` (`cod_inter`,`cod_fabri`,`tipo`,`validade`,`nome`,`marca_produto`,`embalagem`,`und`,`quantidade_und`,`valor_und`,`Kg/L`,`NCM`,`CST`,`CFOP`,`n_pedido`) 
-    VALUES ("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");';
+$SQL = 'INSERT INTO `produto` (`cod_fabri`,`tipo`,`validade`,`nome`,`marca_produto`,`embalagem`,`und`,`quantidade_und`,`valor_und`,`Kg/L`,`NCM`,`CST`,`CFOP`,`n_pedido`) 
+    VALUES ("2","2","2","2","2","2","2","2","2","2","2","2","2","2");';
 //Inserir no DB
 
 $resultado = $conexao -> query($SQL);
 
 $conexao -> close();
-header("Location: index.php");
 }
 ?>

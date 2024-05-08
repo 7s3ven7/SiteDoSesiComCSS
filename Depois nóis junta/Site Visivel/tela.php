@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if (empty($_SESSION['tipo'])) {
+    header('Location: index.php');
+    exit();
+} else {
+    $nome = $_SESSION['tipo'];
+    echo '<div id="nome"> Aluno: ' . $_SESSION['tipo'] . '</div>';
+}
+?>
 
 <head>
     <link rel="stylesheet" href="site.css">
@@ -12,14 +23,6 @@
     <form action="recebimento.html">
         <input class="botao" type="submit" value="Recebimento">
     </form>
-    <div class="caixa-botao-mini">
-        <form>
-            <input class="botao-mini" type="submit" value="Dados">
-        </form>
-        <form>
-            <input class="botao-mini" type="submit" value="Erros">
-        </form>
-    </div>
     <form action="movimentacao.html">
         <input class="botao" type="submit" value="Movimentação">
     </form>
