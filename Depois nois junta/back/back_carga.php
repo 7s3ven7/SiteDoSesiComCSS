@@ -23,6 +23,7 @@ if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa 
 	{
 		for($i=1;$i<=$resultado->num_rows;$i++){
 			$row = $resultado -> fetch_array();
+			echo 'Produto: '. $row['nome'];
         	echo 'Unidade: '. $row['und'];
        		echo 'Quantidade: '. $row['quantidade_und'];
         	echo 'R$/unit: '. $row['valor_und'];
