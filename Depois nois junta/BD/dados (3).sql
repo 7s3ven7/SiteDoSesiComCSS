@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 08-Maio-2024 às 12:21
+-- Generation Time: 08-Maio-2024 às 13:45
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dados_prof`
+-- Database: `dados`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cliente`
+-- Estrutura da tabela `cliente_p`
 --
 
-CREATE TABLE `cliente` (
+CREATE TABLE `cliente_p` (
   `CPF` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `CEP` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -37,10 +37,45 @@ CREATE TABLE `cliente` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `fornecedor`
+-- Estrutura da tabela `doca`
 --
 
-CREATE TABLE `fornecedor` (
+CREATE TABLE `doca` (
+  `nume_pedido` int(11) NOT NULL,
+  `doca` int(11) NOT NULL,
+  `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quant_und` int(11) NOT NULL,
+  `quant_prod` float NOT NULL,
+  `nome_produto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lote` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `estoque`
+--
+
+CREATE TABLE `estoque` (
+  `cod_inter` int(11) NOT NULL,
+  `cod_forne` int(11) NOT NULL,
+  `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quant_prod` float NOT NULL,
+  `anguar` int(11) NOT NULL,
+  `rua` int(11) NOT NULL,
+  `coluna` int(11) NOT NULL,
+  `andar` int(11) NOT NULL,
+  `ap` int(11) NOT NULL,
+  `Kg` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `fornecedor_p`
+--
+
+CREATE TABLE `fornecedor_p` (
   `CNPJ` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_fornec` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -51,10 +86,10 @@ CREATE TABLE `fornecedor` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nossa_empresa`
+-- Estrutura da tabela `nossa_empresa_p`
 --
 
-CREATE TABLE `nossa_empresa` (
+CREATE TABLE `nossa_empresa_p` (
   `CNPJ_empresa` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gerente` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -63,10 +98,10 @@ CREATE TABLE `nossa_empresa` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nota_expedicao`
+-- Estrutura da tabela `nota_expedicao_p`
 --
 
-CREATE TABLE `nota_expedicao` (
+CREATE TABLE `nota_expedicao_p` (
   `n_nota` int(11) NOT NULL,
   `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_destinatario` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -85,10 +120,10 @@ CREATE TABLE `nota_expedicao` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nota_recebimento`
+-- Estrutura da tabela `nota_recebimento_p`
 --
 
-CREATE TABLE `nota_recebimento` (
+CREATE TABLE `nota_recebimento_p` (
   `n_nota` int(11) NOT NULL,
   `CEP` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_destinatario` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -113,10 +148,10 @@ CREATE TABLE `nota_recebimento` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pedi_clientes`
+-- Estrutura da tabela `pedi_clientes_p`
 --
 
-CREATE TABLE `pedi_clientes` (
+CREATE TABLE `pedi_clientes_p` (
   `CPF` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_c` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -136,10 +171,10 @@ CREATE TABLE `pedi_clientes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produto`
+-- Estrutura da tabela `produto_p`
 --
 
-CREATE TABLE `produto` (
+CREATE TABLE `produto_p` (
   `cod_inter` int(11) NOT NULL,
   `cod_forne` int(11) NOT NULL,
   `tipo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -187,12 +222,42 @@ CREATE TABLE `qualitativo` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `quantitava_p`
+--
+
+CREATE TABLE `quantitava_p` (
+  `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_empre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CNPJ_empre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `modelo_conta` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `navio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CNPJ_dest` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_dest` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipo_container` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lacre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lacre_SIF` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `temperatura` decimal(10,0) NOT NULL,
+  `IMO` int(11) NOT NULL,
+  `n_ONU` int(11) NOT NULL,
+  `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quant_und` int(11) NOT NULL,
+  `quant_produto` float NOT NULL,
+  `lote` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `n_pedido` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `tipo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_grupo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cargo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -204,51 +269,51 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indexes for table `cliente`
+-- Indexes for table `cliente_p`
 --
-ALTER TABLE `cliente`
+ALTER TABLE `cliente_p`
   ADD PRIMARY KEY (`CPF`);
 
 --
--- Indexes for table `fornecedor`
+-- Indexes for table `fornecedor_p`
 --
-ALTER TABLE `fornecedor`
+ALTER TABLE `fornecedor_p`
   ADD PRIMARY KEY (`CNPJ`);
 
 --
--- Indexes for table `nossa_empresa`
+-- Indexes for table `nossa_empresa_p`
 --
-ALTER TABLE `nossa_empresa`
+ALTER TABLE `nossa_empresa_p`
   ADD PRIMARY KEY (`CNPJ_empresa`);
 
 --
--- Indexes for table `nota_expedicao`
+-- Indexes for table `nota_expedicao_p`
 --
-ALTER TABLE `nota_expedicao`
+ALTER TABLE `nota_expedicao_p`
   ADD PRIMARY KEY (`n_nota`);
 
 --
--- Indexes for table `nota_recebimento`
+-- Indexes for table `nota_recebimento_p`
 --
-ALTER TABLE `nota_recebimento`
+ALTER TABLE `nota_recebimento_p`
   ADD PRIMARY KEY (`n_nota`);
 
 --
--- Indexes for table `pedi_clientes`
+-- Indexes for table `pedi_clientes_p`
 --
-ALTER TABLE `pedi_clientes`
+ALTER TABLE `pedi_clientes_p`
   ADD PRIMARY KEY (`CPF`);
 
 --
--- Indexes for table `produto`
+-- Indexes for table `produto_p`
 --
-ALTER TABLE `produto`
+ALTER TABLE `produto_p`
   ADD PRIMARY KEY (`cod_inter`);
 
 --
--- Indexes for table `qualitativo`
+-- Indexes for table `quantitava_p`
 --
-ALTER TABLE `qualitativo`
+ALTER TABLE `quantitava_p`
   ADD PRIMARY KEY (`cod_inter`);
 
 --
