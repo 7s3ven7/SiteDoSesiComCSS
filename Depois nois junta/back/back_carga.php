@@ -36,3 +36,19 @@ if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa 
 	}}
 	for($i=0;$i<=$resultado->num_rows;$i++)
 ?>
+
+<?php
+
+if(isset($_POST['1'])){
+    $v1 = 'v';
+} else {
+    $v1 = 'f';
+}
+
+if(isset($_POST['2'])){
+    $v2 = 'v';
+} else {
+    $v2 = 'f';
+}
+
+p?>
