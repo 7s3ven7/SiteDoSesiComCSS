@@ -7,7 +7,7 @@ session_start();
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
-$DB = "dados_prof";
+$DB = "dados";
 $conexao = new mysqli($hostname, $name, $password, $DB);
 if ($conexao->connect_errno) {
 	echo "Failes conection :" . $conexao->connect_error;

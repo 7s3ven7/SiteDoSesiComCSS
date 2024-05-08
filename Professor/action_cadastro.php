@@ -8,7 +8,6 @@ $password = "root";
 $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);
-
 if ($conexao->connect_errno) {
     echo "Failes conection: " . $conexao->connect_error;
     exit();

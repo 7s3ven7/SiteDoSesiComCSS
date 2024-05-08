@@ -10,7 +10,6 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-
     $v1 = $_POST['1']; //cod_inter
     $v2 = $_POST['2']; //cod_forne
     $v3 = $_POST['3']; //nome_empresa
