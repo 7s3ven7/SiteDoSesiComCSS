@@ -7,7 +7,7 @@ $DB = "dados";
 $conexao = new mysqli($hostname,$name,$password,$DB);//Tenta conexão com DB
 
 if($conexao -> connect_errno){
-    echo "Failes conection: " .$conexao -> connect_error; //erro caso não consiga conectar ao DB
+    echo "Failed conection: " .$conexao -> connect_error; //erro caso não consiga conectar ao DB
     exit();
 }
 else
