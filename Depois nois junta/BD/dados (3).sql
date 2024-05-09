@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 08-Maio-2024 às 13:48
+-- Generation Time: 09-Maio-2024 às 13:43
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -25,6 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `cliente_p`
 --
+
 CREATE TABLE `cliente_p` (
   `CPF` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -36,10 +37,10 @@ CREATE TABLE `cliente_p` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `doca`
+-- Estrutura da tabela `doca_a`
 --
 
-CREATE TABLE `doca` (
+CREATE TABLE `doca_a` (
   `nume_pedido` int(11) NOT NULL,
   `doca` int(11) NOT NULL,
   `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -52,13 +53,15 @@ CREATE TABLE `doca` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `estoque`
+-- Estrutura da tabela `estoque_a`
 --
 
-CREATE TABLE `estoque` (
+CREATE TABLE `estoque_a` (
   `cod_inter` int(11) NOT NULL,
   `cod_forne` int(11) NOT NULL,
   `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quant_und` int(11) NOT NULL,
   `quant_prod` float NOT NULL,
   `anguar` int(11) NOT NULL,
   `rua` int(11) NOT NULL,
@@ -164,7 +167,29 @@ CREATE TABLE `pedi_clientes_p` (
   `quant_prod` float NOT NULL,
   `NCM` int(11) NOT NULL,
   `CST` int(11) NOT NULL,
-  `CFOP` int(11) NOT NULL
+  `CFOP` int(11) NOT NULL,
+  `sinop` varchar(1255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `picking_a`
+--
+
+CREATE TABLE `picking_a` (
+  `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `anguar` int(11) NOT NULL,
+  `rua` int(11) NOT NULL,
+  `coluna` int(11) NOT NULL,
+  `andar` int(11) NOT NULL,
+  `ap` int(11) NOT NULL,
+  `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quant_und` int(11) NOT NULL,
+  `quant_prod` float NOT NULL,
+  `kg` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -193,10 +218,10 @@ CREATE TABLE `produto_p` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `qualitativo`
+-- Estrutura da tabela `qualitativo_a`
 --
 
-CREATE TABLE `qualitativo` (
+CREATE TABLE `qualitativo_a` (
   `cod_inter` int(11) NOT NULL,
   `cod_forne` int(11) NOT NULL,
   `container_desgas` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -302,6 +327,12 @@ ALTER TABLE `nota_recebimento_p`
 --
 ALTER TABLE `pedi_clientes_p`
   ADD PRIMARY KEY (`CPF`);
+
+--
+-- Indexes for table `picking_a`
+--
+ALTER TABLE `picking_a`
+  ADD PRIMARY KEY (`cod_inter`);
 
 --
 -- Indexes for table `produto_p`
