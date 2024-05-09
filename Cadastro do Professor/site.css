@@ -138,10 +138,9 @@
 }
 
 .tabela {
-    line-height: 125%;
+    line-height: 150%;
+    padding:3%;
     font-size: xx-large;
-    left: 2.5%;
-    top: 2.5%;
     position: relative;
     text-align: left;
     align-items: left;
@@ -182,4 +181,7 @@
 .check {
     width: 40px;
     height: 40px;
+}
+.texto-tabela{
+    color: transparent;
 }
