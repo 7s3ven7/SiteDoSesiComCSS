@@ -31,7 +31,6 @@ if ($result->num_rows > 0) {
 		$row = $result->fetch_array();
 		$_SESSION['tipo'] = $row[0];
 		$_SESSION['nome'] = $row[1];
-
 		$_SESSION['senha'] = $row[2];
 		if ($row[1] == 'professor' and $senha == $row[2]) {
 			$conexao->close();
@@ -41,11 +40,12 @@ if ($result->num_rows > 0) {
 			$conexao->close();
 			header('Location: tela.php', true, 301);
 			exit();
-		}
-	}else {
+		}else {
 		$conexao->close();
 		header('Location: index.html', true, 301);
+		exit();
 	}
+}
 }
 }
 ?>
