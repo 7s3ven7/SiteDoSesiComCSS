@@ -18,35 +18,27 @@ if ($conexao->connect_errno) {
 
 $SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
 
-$result = $conexao->query($SQL);
-if ($result->num_rows > 0) {
-	$row = $result->fetch_array();
-	$_SESSION['tipo'] = $row[0];
-	$_SESSION['nome'] = $row[1];
-
-	$SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
-
 	$result = $conexao->query($SQL);
 	if ($result->num_rows > 0) {
 		$row = $result->fetch_array();
 		$_SESSION['tipo'] = $row[0];
 		$_SESSION['nome'] = $row[1];
-		$_SESSION['senha'] = $row[2];
-		if ($row[1] == 'professor' and $senha == $row[2]) {
+		$_SSION['senha'] = $row[2];
+		echo "secuss";
+		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/tela_professor.html', true, 301);
+			header('Location: ../HTML/Professor/tela.html', true, 301);
 			exit();
-		}elseif ($_SESSION['tipo'] != 'professor' and $senha == $row[2]) {
+		}elseif ($row[0] != 'Professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/tela.php', true, 301);
+			header('Location: ../HTML/Aluno/tela.html', true, 301);
 			exit();
 		}
-}
-}
-else{
+}else{
 	$conexao->close();
 	header('Location: ../HTML/index.html', true, 301);
 	exit();
 }
 }
+
 ?>
