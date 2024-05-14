@@ -15,7 +15,7 @@ if ($conexao->connect_errno) {
 } else {
 	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
 	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
-	$SQL = "SELECT `id`, `tipo`, `senha` FROM `usuario` WHERE `tipo` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+	$SQL = "SELECT `id`, `tipo`, `senha` FROM `usuario` WHERE `tipo` = '".$nome."' AND `senha` = '".$senha."'";
 	$resultado = $conexao->query($SQL);
 	if ($resultado->num_rows != 0) {
 		$row = $resultado->fetch_array();
