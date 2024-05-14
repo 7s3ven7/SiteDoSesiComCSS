@@ -47,4 +47,5 @@ if ($result->num_rows > 0) {
 		header('Location: index.html', true, 301);
 	}
 }
+}
 ?>
