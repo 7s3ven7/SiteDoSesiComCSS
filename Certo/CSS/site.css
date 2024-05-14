@@ -24,7 +24,8 @@
     position: absolute;
     align-items: left;
     text-align: left;
-    font-size:x-large;
+    font-size: xx-large;
+    line-height: 150%;
 }
 #caixa-info {
     width: 85%;
@@ -73,6 +74,15 @@
     position: relative;
     margin-left: 1%;
     margin-bottom: 0.5%;
+    transition: 0.25s;
+}
+.botao:hover{
+    background-color: whitesmoke;
+    color: green;
+}
+#botao:hover{
+    background-color: green;
+    color: whitesmoke;
 }
 
 #botao {
@@ -87,6 +97,7 @@
     position: relative;
     margin-left: 1%;
     margin-bottom: 0.5%;
+    transition: 0.25s;
 }
 
 .caixa-botao-mini {
