@@ -21,6 +21,7 @@ if ($conexao->connect_errno) {
 		$row = $resultado->fetch_array();
 		$_SESSION['id'] = $row[0];
 		$_SESSION['tipo'] = $row[1];
+		$_SESSION['senha'] = $row[2];
 		if ($row[1] == 'professor' and $senha == $row[2]) {
 			$conexao->close();
 			header('Location: tela_professor.html', true, 301);
