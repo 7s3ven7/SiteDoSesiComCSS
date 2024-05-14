@@ -167,13 +167,13 @@
 }
 
 .tabela-2 {
-    border-spacing: 10px;
-    font-size: 40px;
-    left: 2.5%;
-    top: 2.5%;
+    left: 50%;
+    line-height: 150%;
+    width:47%;
+    padding: 3%;
+    font-size: xx-large;
     position: relative;
     text-align: left;
-    align-items: left;
 }
 
 .botao-tabela {
@@ -199,8 +199,8 @@
 }
 
 .check {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 }
 #tipo{
     font-size:xx-large;
