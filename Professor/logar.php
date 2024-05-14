@@ -40,11 +40,7 @@ if ($result->num_rows > 0) {
 			$conexao->close();
 			header('Location: tela.php', true, 301);
 			exit();
-		}else {
-		$conexao->close();
-		header('Location: index.html', true, 301);
-		exit();
-	}
+		}
 }
 }
 else{
