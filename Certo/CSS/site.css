@@ -139,7 +139,8 @@
 
 .tabela {
     line-height: 150%;
-    padding:3%;
+    width:80%;
+    padding: 3%;
     font-size: xx-large;
     position: relative;
     text-align: left;
@@ -159,7 +160,7 @@
 .botao-tabela {
     padding: 1%;
     font-size: large;
-    width: 150%;
+    width: 80%;
     border: 1px black solid;
     border-radius: 5px;
     margin-right: 50%;
@@ -181,7 +182,4 @@
 .check {
     width: 40px;
     height: 40px;
-}
-.texto-tabela{
-    color: transparent;
 }

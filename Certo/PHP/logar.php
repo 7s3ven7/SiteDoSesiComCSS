@@ -34,18 +34,18 @@ if ($result->num_rows > 0) {
 		$_SESSION['senha'] = $row[2];
 		if ($row[1] == 'professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: tela_professor.html', true, 301);
+			header('Location: ../HTML/tela_professor.html', true, 301);
 			exit();
 		}elseif ($_SESSION['tipo'] != 'professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: tela.php', true, 301);
+			header('Location: ../HTML/tela.php', true, 301);
 			exit();
 		}
 }
 }
 else{
 	$conexao->close();
-	header('Location: index.html', true, 301);
+	header('Location: ../HTML/index.html', true, 301);
 	exit();
 }
 }
