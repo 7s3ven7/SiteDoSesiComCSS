@@ -47,5 +47,10 @@ if ($result->num_rows > 0) {
 	}
 }
 }
+else{
+	$conexao->close();
+	header('Location: index.html', true, 301);
+	exit();
+}
 }
 ?>
