@@ -18,9 +18,17 @@ if ($conexao->connect_errno) {
     $codg = $conexao->real_escape_string($_POST["codigo_sala_criado"]);
     $codi = $conexao->real_escape_string($_POST["codigo_interno_criado"]);
 
-    $SQL = 'INSERT INTO `usuario` (`tipo`,`senha`,`cod_grupo`,`cargo`,`cod_prof`) VALUES ("' . $nome . '","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
+    if($senha == $codi){
+        $SQL = 'INSERT INTO `usuario` (`nome`,`tipo`,`senha`,`cod_grupo`,`cargo`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
+        $resultado = $conexao->query($SQL);
+        $conexao->close();
+        header("Location: ../HTML/index.html");
+    }else{
+    
+
+    $SQL = 'INSERT INTO `usuario` (`nome`,`tipo`,`senha`,`cod_grupo`,`cargo`,`cod_prof`) VALUES ("' . $nome . '","Aluno","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
     $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location: index.html");
-}
+    header("Location: ../HTML/index.html");
+}}
 ?>
