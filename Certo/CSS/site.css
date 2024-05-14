@@ -87,9 +87,9 @@
     position: relative;
     align-items: right;
     text-align: right;
-    padding-left: 0.5%;
-    margin: 0.5%;
-    margin-top: 0%;
+    padding-left: 1.1%;
+    margin: -4px;
+    margin-top: -4px;
 }
 
 .botao-mini {
