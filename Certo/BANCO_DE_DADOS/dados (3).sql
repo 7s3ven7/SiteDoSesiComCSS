@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 09-Maio-2024 às 13:43
+-- Generation Time: 14-Maio-2024 às 11:32
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -19,20 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `dados`
 --
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `cliente_p`
---
-
-CREATE TABLE `cliente_p` (
-  `CPF` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CEP` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fone` int(11) NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -218,10 +204,22 @@ CREATE TABLE `produto_p` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `qualitativo_a`
+-- Estrutura da tabela `qualitativo_expedicao_a`
 --
 
-CREATE TABLE `qualitativo_a` (
+CREATE TABLE `qualitativo_expedicao_a` (
+  `cod_inter` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(6) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_val` varchar(6) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `qualitativo_recebimento_a`
+--
+
+CREATE TABLE `qualitativo_recebimento_a` (
   `cod_inter` int(11) NOT NULL,
   `cod_forne` int(11) NOT NULL,
   `container_desgas` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -285,7 +283,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_grupo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cargo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cod_prof` int(5) DEFAULT NULL
+  `cod_prof` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -293,10 +291,16 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indexes for table `cliente_p`
+-- Indexes for table `doca_a`
 --
-ALTER TABLE `cliente_p`
-  ADD PRIMARY KEY (`CPF`);
+ALTER TABLE `doca_a`
+  ADD PRIMARY KEY (`nume_pedido`);
+
+--
+-- Indexes for table `estoque_a`
+--
+ALTER TABLE `estoque_a`
+  ADD PRIMARY KEY (`cod_inter`);
 
 --
 -- Indexes for table `fornecedor_p`
@@ -338,6 +342,18 @@ ALTER TABLE `picking_a`
 -- Indexes for table `produto_p`
 --
 ALTER TABLE `produto_p`
+  ADD PRIMARY KEY (`cod_inter`);
+
+--
+-- Indexes for table `qualitativo_expedicao_a`
+--
+ALTER TABLE `qualitativo_expedicao_a`
+  ADD PRIMARY KEY (`cod_inter`);
+
+--
+-- Indexes for table `qualitativo_recebimento_a`
+--
+ALTER TABLE `qualitativo_recebimento_a`
   ADD PRIMARY KEY (`cod_inter`);
 
 --
