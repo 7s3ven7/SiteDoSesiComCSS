@@ -17,16 +17,18 @@
     border: 1px black solid;
     border-radius: 10px;
 }
-#informacao{
-    width:90%;
-    height:80%;
-    margin:5%;
+
+#informacao {
+    width: 90%;
+    height: 80%;
+    margin: 5%;
     position: absolute;
     align-items: left;
     text-align: left;
     font-size: xx-large;
     line-height: 150%;
 }
+
 #caixa-info {
     width: 85%;
     height: 90%;
@@ -76,11 +78,13 @@
     margin-bottom: 0.5%;
     transition: 0.25s;
 }
-.botao:hover{
+
+.botao:hover {
     background-color: whitesmoke;
     color: green;
 }
-#botao:hover{
+
+#botao:hover {
     background-color: green;
     color: whitesmoke;
 }
@@ -125,6 +129,15 @@
     position: relative;
     margin-left: 1%;
     margin-bottom: 5%;
+    transition: 0.25s;
+}
+.botao-mini:hover{
+    background-color: whitesmoke;
+    color: green;
+}
+#botao-mini:hover{
+    background-color: green;
+    color: whitesmoke;
 }
 
 #botao-mini {
@@ -141,6 +154,7 @@
     position: relative;
     margin-left: 1%;
     margin-bottom: 5%;
+    transition: 0.25s;
 }
 
 #nome {
@@ -158,7 +172,7 @@
 
 .tabela {
     line-height: 150%;
-    width:80%;
+    width: 80%;
     padding: 3%;
     font-size: xx-large;
     position: relative;
@@ -202,16 +216,17 @@
     width: 20px;
     height: 20px;
 }
-#tipo{
-    font-size:xx-large;
+
+#tipo {
+    font-size: xx-large;
     background-color: whitesmoke;
-    border:1px solid black;
-    border-radius:5px;
+    border: 1px solid black;
+    border-radius: 5px;
     position: absolute;
-    top:3%;
-    padding:0.5%;
-    padding-left:1%;
-    padding-right:1%;
-    left:12.5%;
-    width:6%;
+    top: 3%;
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    left: 12.5%;
+    width: 6%;
 }
