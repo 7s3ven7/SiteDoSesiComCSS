@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 14-Maio-2024 às 11:32
+-- Generation Time: 14-Maio-2024 às 13:39
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `doca_a` (
-  `nume_pedido` int(11) NOT NULL,
+  `n_nota` int(11) NOT NULL,
   `doca` int(11) NOT NULL,
   `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `quant_und` int(11) NOT NULL,
@@ -80,6 +80,7 @@ CREATE TABLE `fornecedor_p` (
 CREATE TABLE `nossa_empresa_p` (
   `CNPJ_empresa` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gerente` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -185,8 +186,8 @@ CREATE TABLE `picking_a` (
 --
 
 CREATE TABLE `produto_p` (
-  `cod_inter` int(11) NOT NULL,
-  `cod_forne` int(11) NOT NULL,
+  `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tipo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `validade` date DEFAULT NULL,
   `lote` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -208,9 +209,17 @@ CREATE TABLE `produto_p` (
 --
 
 CREATE TABLE `qualitativo_expedicao_a` (
-  `cod_inter` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cod_forne` varchar(6) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `data_val` varchar(6) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_val` varchar(6) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cod_avariado` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `und_avariada` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_lacrado` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quantidade_correta` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `modelo_correto` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `container_correto` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lacre_correto` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_veiculo` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -220,8 +229,8 @@ CREATE TABLE `qualitativo_expedicao_a` (
 --
 
 CREATE TABLE `qualitativo_recebimento_a` (
-  `cod_inter` int(11) NOT NULL,
-  `cod_forne` int(11) NOT NULL,
+  `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `container_desgas` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avari_late_d` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avari_late_e` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -267,7 +276,7 @@ CREATE TABLE `quantitava_p` (
   `quant_und` int(11) NOT NULL,
   `quant_produto` float NOT NULL,
   `lote` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `n_pedido` int(11) NOT NULL
+  `n_nota` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -294,7 +303,7 @@ CREATE TABLE `usuario` (
 -- Indexes for table `doca_a`
 --
 ALTER TABLE `doca_a`
-  ADD PRIMARY KEY (`nume_pedido`);
+  ADD PRIMARY KEY (`n_nota`);
 
 --
 -- Indexes for table `estoque_a`
