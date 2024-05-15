@@ -181,8 +181,8 @@
 }
 
 .tabela-2 {
-    line-height: 150%;
-    width:100%;
+    line-height: 120%;
+    width:50%;
     padding: 1%;
     font-size: 20px;
     position: relative;
@@ -192,9 +192,18 @@
 .botao-tabela {
     padding: 1%;
     font-size: large;
-    width: 80%;
+    width: 100%;
     border: 1px black solid;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-right: 50%;
+}
+
+.texto2 {
+    padding: 1%;
+    font-size: large;
+    width: 90%;
+    border: 1px black solid;
+    border-radius: 10px;
     margin-right: 50%;
 }
 

@@ -29,9 +29,9 @@ echo '<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="Certo/CSS/site.css">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
 </head>
 
 <body>
@@ -71,127 +71,127 @@ echo '<!DOCTYPE html>
     </form>
     <div id="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
-            <table class="tabela-2" border=1px>
+            <table class="tabela-2">
                 <tr>
-                    <td>Código Interno: </td>
-                    <td>'.$row['cod_inter'].'</td>
-                    <td>Código do fornecedor: </td>
+                    <td><div class="texto2">Código Interno: </div></td>
+                    <td><div class="">'.$row['cod_inter'].'</div></td>
+                    <td><div class="texto2">Código do fornecedor: </div></td>
                     <td>'.$row['cod_forne'].'</td>
                 </tr>
                 <tr>
                     <td>Nome da empresa: </td>
                     <td>'.$row['nome_empre'].'</td>
                     <td>CNPJ da empresa: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['CNPJ_empre'].'</td>
                 </tr>
                 <tr>
                     <td>Modelo do container: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['modelo_conta'].'</td>
                     <td>Navio: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['navio'].'</td>
                 </tr>
                 <tr>
                     <td>Destinatário: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['CNPJ_dest'].'</td>
                     <td>Tipo do container: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['tipo_container'].'</td>
                 </tr>
                 <tr>
                     <td>Lacre: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['lacre'].'</td>
                     <td>Lacre SIF: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['lacre_SIF'].'</td>
                 </tr>
                 <tr>
                     <td>Temperatura: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['temperatura'].'</td>
                     <td>IMO: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['IMO'].'</td>
                 </tr>
                 <tr>
                     <td>Número ONU: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['n_ONU'].'</td>
                     <td>Nome do produto: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['nome_prod'].'</td>
                 </tr>
                 <tr>
                     <td>Unidades: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['und'].'</td>
                     <td>Quantidade de produto: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['quant_produto'].'</td>
                 </tr>
                 <tr>
                     <td>Quantidade do unidade: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['quant_und'].'</td>
                     <td>Lotes: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['lote'].'</td>
                 </tr>
                 <tr>
                     <td>CNPJ do destinatário: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['CNPJ_dest'].'</td>
                     <td>Número do pedido: </td>
-                    <td>'.$row['cod_inter'].'</td>
+                    <td>'.$row['n_pedido'].'</td>
                 </tr>
                 
                 <tr>
-                    <td>a: </td>
+                    <td>Container bem desgastado: </td>
                     <td><input class="check" type="checkbox" name="1"</td>
-                    <td>Código do fornecedor: </td>
+                    <td>Avaria na lateral direita: </td>
                     <td><input class="check" type="checkbox" name="2"</td>
                 </tr>
                     <tr>
-                    <td>Nome da empresa: </td>
+                    <td>Avaria na lateral esquerda: </td>
                     <td><input class="check" type="checkbox" name="3"</td>
-                    <td>CNPJ da empresa: </td>
+                    <td>Avaria no teto: </td>
                     <td><input class="check" type="checkbox" name="4"</td>
                 </tr>
                 <tr>
-                    <td>Modelo do container: </td>
+                    <td>Avaria na frente: </td>
                     <td><input class="check" type="checkbox" name="5"</td>
-                    <td>Navio: </td>
+                    <td>Sem lacre </td>
                     <td><input class="check" type="checkbox" name="6"</td>
                 </tr>
                 <tr>
-                    <td>Destinatário: </td>
+                    <td>Adesivos avariados: </td>
                     <td><input class="check" type="checkbox" name="7"</td>
-                    <td>Tipo do container: </td>
+                    <td>Excesso de altura: </td>
                     <td><input class="check" type="checkbox" name="8"</td>
                 </tr>
                 <tr>
-                    <td>Lacre: </td>
+                    <td>Excesso na direita: </td>
                     <td><input class="check" type="checkbox" name="9"</td>
-                    <td>Lacre SIF: </td>
+                    <td>Excesso na esquerda: </td>
                     <td><input class="check" type="checkbox" name="10"</td>
                 </tr>
                 <tr>
-                    <td>Temperatura: </td>
+                    <td>Excesso frontal: </td>
                     <td><input class="check" type="checkbox" name="11"</td>
-                    <td>IMO: </td>
+                    <td>Painel avariado: </td>
                     <td><input class="check" type="checkbox" name="12"</td>
                 </tr>
                 <tr>
-                    <td>Número ONU: </td>
+                    <td>Sem cabo de energia: </td>
                     <td><input class="check" type="checkbox" name="13"</td>
-                    <td>Nome do produto: </td>
+                    <td>Sem lona: </td>
                     <td><input class="check" type="checkbox" name="14"</td>
                 </tr>
                 <tr>
-                    <td>Unidades: </td>
+                    <td>canhoto assinado: </td>
                     <td><input class="check" type="checkbox" name="15"</td>
-                    <td>Quantidade de produto: </td>
+                    <td>volume_correto: </td>
                     <td><input class="check" type="checkbox" name="16"</td>
                 </tr>
                 <tr>
-                    <td>Quantidade do unidade: </td>
+                    <td>Atraso: </td>
                     <td><input class="check" type="checkbox" name="17"</td>
                     <td>Lotes: </td>
                     <td><input class="check" type="checkbox" name="18"</td>
                 </tr>
                 <tr>
-                    <td>CNPJ do destinatário: </td>
+                    <td>Faltando: </td>
                     <td><input class="check" type="checkbox" name="19"</td>
-                    <td>Número do pedido: </td>
-                    <td><input class="check" type="checkbox" name="20"</td>
+                    <td>Observação: </td>
+                    <td><input class="botao-tabela" type="text" name="20"</td>
                 </tr>
             </table>
             <input class="botao-2" type="submit" value="Enviar">
