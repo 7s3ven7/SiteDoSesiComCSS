@@ -34,7 +34,6 @@ if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa 
 		header("Location: index.php");
 		exit();
 	}}
-	for($i=0;$i<=$resultado->num_rows;$i++)
 ?>
 
 <?php

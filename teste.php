@@ -1,4 +1,7 @@
-<?php
+
+<!DOCTYPE html>
+<head></head>
+<body><?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -197,4 +200,91 @@ echo '<!DOCTYPE html>
         </form>
     </div>
 </body>
-</html>';?>
+</html>';
+
+$n_pedido = 25;
+$SQL = 'SELECT * FROM `produto_p` 
+WHERE `n_pedido` = '.$n_pedido.';';
+$resultado = $conexao->query($SQL);
+if($resultado->num_rows != 0)
+{
+    for($i=1;$i<=$resultado->num_rows;$i++){
+        $row = $resultado -> fetch_array();
+echo '<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="Certo/CSS/site.css">
+    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+</head>
+
+<body>
+    <div class="caixa-2">
+        <form method="POST" action="../PHP/quantitativo.php">
+            <table class="tabela-3">
+                <tr>
+                    <td><div class="texto2">Produto</div></td>
+                    <td>'.$row['nome'].'</td>
+                    <td><div class="texto2">Código do fornecedor: </div></td>
+                    <td>'.$row['cod_forne'].'</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+';}}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php       /*<table class="tabela-3" border="1px">
+                <tr>
+                    <td>
+                    <?php
+                    $n_pedido = 25;
+                    $SQL = 'SELECT * FROM `produto_p` 
+                    WHERE `n_pedido` = '.$n_pedido.';';
+                    $resultado = $conexao->query($SQL);
+                    if($resultado->num_rows != 0)
+                    {
+                        for($i=1;$i<=$resultado->num_rows;$i++){
+                            $row = $resultado -> fetch_array();
+                            echo 'Produto: '. $row['nome'];
+                            echo 'Unidade: '. $row['und'];
+                            echo 'Quantidade: '. $row['quantidade_und'];
+                            echo 'R$/unit: '. $row['valor_und'];
+                            echo 'Valor total: '.($row['quantidade_und']*$row['valor_und']);
+                            }
+                        } else {
+                            $conexao -> close();
+                            header("Location: index.php");
+                            exit();
+                    }
+                    </td>
+                </tr>
+            </table>        
+</body> */?>
