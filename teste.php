@@ -73,66 +73,65 @@ echo '<!DOCTYPE html>
         <form method="POST" action="../PHP/quantitativo.php">
             <table class="tabela-2">
                 <tr>
-                    <td><div class="texto2">Código Interno: </div></td>
-                    <td><div class="">'.$row['cod_inter'].'</div></td>
+                    <td><div class="texto2">Código Interno:</div></td>
+                    <td>'.$row['cod_inter'].'</td>
                     <td><div class="texto2">Código do fornecedor: </div></td>
                     <td>'.$row['cod_forne'].'</td>
                 </tr>
                 <tr>
-                    <td>Nome da empresa: </td>
+                    <td><div class="texto2">Nome da empresa: </div></td>
                     <td>'.$row['nome_empre'].'</td>
-                    <td>CNPJ da empresa: </td>
+                    <td><div class="texto2">CNPJ da empresa: </div></td>
                     <td>'.$row['CNPJ_empre'].'</td>
                 </tr>
                 <tr>
-                    <td>Modelo do container: </td>
+                    <td><div class="texto2">Modelo do container: </div></td>
                     <td>'.$row['modelo_conta'].'</td>
-                    <td>Navio: </td>
+                    <td><div class="texto2">Navio: </div></td>
                     <td>'.$row['navio'].'</td>
                 </tr>
                 <tr>
-                    <td>Destinatário: </td>
+                    <td><div class="texto2">Destinatário: </div></td>
                     <td>'.$row['CNPJ_dest'].'</td>
-                    <td>Tipo do container: </td>
+                    <td><div class="texto2">Tipo do container: </div></td>
                     <td>'.$row['tipo_container'].'</td>
                 </tr>
                 <tr>
-                    <td>Lacre: </td>
+                    <td><div class="texto2">Lacre: </div></td>
                     <td>'.$row['lacre'].'</td>
-                    <td>Lacre SIF: </td>
+                    <td><div class="texto2">Lacre SIF: </div></td>
                     <td>'.$row['lacre_SIF'].'</td>
                 </tr>
                 <tr>
-                    <td>Temperatura: </td>
+                    <td><div class="texto2">Temperatura: </div></td>
                     <td>'.$row['temperatura'].'</td>
-                    <td>IMO: </td>
+                    <td><div class="texto2">IMO: </div></td>
                     <td>'.$row['IMO'].'</td>
                 </tr>
                 <tr>
-                    <td>Número ONU: </td>
+                    <td><div class="texto2">Número ONU: </div></td>
                     <td>'.$row['n_ONU'].'</td>
-                    <td>Nome do produto: </td>
+                    <td><div class="texto2">Nome do produto: </div></td>
                     <td>'.$row['nome_prod'].'</td>
                 </tr>
                 <tr>
-                    <td>Unidades: </td>
+                    <td><div class="texto2">Unidades: </td>
                     <td>'.$row['und'].'</td>
-                    <td>Quantidade de produto: </td>
+                    <td><div class="texto2">Quantidade de produto: </div></td>
                     <td>'.$row['quant_produto'].'</td>
                 </tr>
                 <tr>
-                    <td>Quantidade do unidade: </td>
+                    <td><div class="texto2">Quantidade do unidade: </div></td>
                     <td>'.$row['quant_und'].'</td>
-                    <td>Lotes: </td>
+                    <td><div class="texto2">Lotes: </div></td>
                     <td>'.$row['lote'].'</td>
                 </tr>
                 <tr>
-                    <td>CNPJ do destinatário: </td>
+                    <td><div class="texto2">CNPJ do destinatário: </div></td>
                     <td>'.$row['CNPJ_dest'].'</td>
-                    <td>Número do pedido: </td>
+                    <td><div class="texto2">Número do pedido: </div></td>
                     <td>'.$row['n_pedido'].'</td>
-                </tr>
-                
+                </tr>          
                 <tr>
                     <td>Container bem desgastado: </td>
                     <td><input class="check" type="checkbox" name="1"</td>
