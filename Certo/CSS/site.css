@@ -240,7 +240,15 @@
     position: fixed;
 }
 
-
+.tabela-4 {
+    top: 5%;
+    left: 0%;
+    line-height: 100%;
+    width: 100%;
+    padding: 1%;
+    font-size: 20px;
+    position: relative;
+}
 
 .botao-tabela {
     padding: 1%;
@@ -257,17 +265,14 @@
     width: 100%;
     border: 1px black solid;
     border-radius: 10px;
-    margin-right: 50%;
     position: relative;
 }
 
 .texto3 {
-    padding: 1%;
-    font-size: large;
-    width: 50%;
+    font-size: big;
+    width: 60%;
     border: 1px black solid;
-    border-radius: 10px;
-    margin-right: 50%;
+    border-radius: 7px;
     position: relative;
 }
 
