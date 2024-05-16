@@ -55,6 +55,19 @@
     border-radius: 10px;
 }
 
+.caixa-2 {
+    width: 42.5%;
+    height: 90%;
+    background-color: whitesmoke;
+    left: 55%;
+    top: 5%;
+    line-height: 200%;
+    position: absolute;
+    border: 1px black solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+}
+
 .menu {
     font-size: 375%;
     position: relative;
@@ -211,6 +224,18 @@
     position: relative;
     text-align: center;
 }
+.tabela-3 {
+    top: 5%;
+    right: 10%;
+    line-height: 100%;
+    width:80%;
+    padding: 1%;
+    font-size: 20px;
+    position: absolute;
+    text-align: right;
+}
+
+
 
 .botao-tabela {
     padding: 1%;
