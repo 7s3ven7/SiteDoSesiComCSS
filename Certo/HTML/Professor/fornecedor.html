@@ -9,15 +9,25 @@
 
 <body>
     <div class="menu">Menu</div>
-    <form action="recebimento.html">
+    <form action="tela.html">
         <input class="botao" type="submit" value="Recebimento">
     </form>
-    <form action="tela.html">
-        <input id="botao" type="submit" value="Fornecedor">
+    <form action="cadastro.html">
+        <input id="botao" type="submit" value="Cadastros">
     </form>
     <div class=" caixa-botao-mini">
-        <form action="fornecedor_cadastro.html">
-            <input class="botao-mini" type="submit" value="cadastro">
+        <form action="cadastro.html">
+            <input id="botao-mini" type="submit" value="Fornecedor">
+        </form>
+    </div>
+    <div class=" caixa-botao-mini">
+        <form action="empresa.html">
+            <input class="botao-mini" type="submit" value="Empresa">
+        </form>
+    </div>
+    <div class=" caixa-botao-mini">
+        <form action="cliente.html">
+            <input class="botao-mini" type="submit" value="Cliente">
         </form>
     </div>
     <form action="dados.html">
@@ -32,7 +42,32 @@
     <form action="produto.html">
         <input class="botao" type="submit" value="Produto">
     </form>
-    <div id="caixa-info">
+    <div id="caixa">
+        <form method="POST" action="../PHP/quantitativo.php">
+            <table class="tabela-mini">
+                <tr>
+                    <td>CNPJ: </td>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="592.460.749.0001-22"></td>
+                </tr>
+                <tr>
+                    <td>Nome do fornecedor: </td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="Nome"></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input class="botao-tabela" type="text" name="5" placeholder="exemplo@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td>CEP: </td>
+                    <td><input class="botao-tabela" type="text" name="7" placeholder="317-454-119"></td>
+                </tr>
+                <tr>
+                    <td>fone: </td>
+                    <td><input class="botao-tabela" type="text" name="9" placeholder="(47) 99999-9999"></td>
+                </tr>
+            </table>
+            <input id="botao-2" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 

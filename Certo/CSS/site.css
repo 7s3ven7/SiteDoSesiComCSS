@@ -181,6 +181,27 @@
     text-align: left;
     align-items: left;
 }
+.tabela-mini {
+    line-height: 150%;
+    width: 45%;
+    padding: 3%;
+    font-size: xx-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+}
+#botao-2{
+    width: 12.5%;
+    height: 75px;
+    margin: 1%;
+    left: 15%;
+    position: relative;
+    font-size: x-large;
+    border: 1px black solid;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: green;
+}
 
 .tabela-2 {
     line-height: 120%;

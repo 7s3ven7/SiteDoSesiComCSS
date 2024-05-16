@@ -12,6 +12,25 @@ if ($conexao->connect_errno) {
     echo "Failes conection :" . $conexao->connect_error;
     exit();
 } else {
+
+    /*DROP TABLE `doca_a`;
+    DROP TABLE `controle_a`;
+    DROP TABLE `doca_expedicao_a`;
+    DROP TABLE `doca_recebimento_a`;
+    DROP TABLE `estoque_a`;
+    DROP TABLE `movimenta_a`;
+    DROP TABLE `fornecedor_p`;
+    DROP TABLE `nossa_empresa_p`;
+    DROP TABLE `nota_expedicao_p`;
+    DROP TABLE `nota_recebimento_p`;
+    DROP TABLE `pedido_cliente_p`;
+    DROP TABLE `picking_a`;
+    DROP TABLE `produto_p`;
+    DROP TABLE `qualitativo_expedicao_a`;
+    DROP TABLE `qualitativo_recebimento_a`;
+    DROP TABLE `quantitativa_recebimento_p`;
+    DROP TABLE `quantitative_expedicao_p`;
+    DROP TABLE `usuario`;*/
     $SQL = '-- phpMyAdmin SQL Dump
     -- version 4.5.4.1
     -- http://www.phpmyadmin.net
@@ -37,25 +56,6 @@ if ($conexao->connect_errno) {
     -- --------------------------------------------------------
     -- Dropados
 
-    DROP TABLE `doca_a`;
-    DROP TABLE `controle_a`;
-    DROP TABLE `doca_expedicao_a`;
-    DROP TABLE `doca_recebimento_a`;
-    DROP TABLE `estoque_a`;
-    DROP TABLE `movimenta_a`;
-    DROP TABLE `fornecedor_p`;
-    DROP TABLE `nossa_empresa_p`;
-    DROP TABLE `nota_expedicao_p`;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
-    DROP TABLE ``;
 
     --
     -- Estrutura da tabela `doca_a`
