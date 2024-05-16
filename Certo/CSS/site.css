@@ -345,19 +345,19 @@
     margin-left: 1%;
     margin-bottom: 0.5%;
     transition: 0.15s;
+    position: absolute;
+    top:88%;
 }
 
 #reset:hover {
     background-color: lightcoral;
-    color: black;
-    font-size: xx-large;
-    padding: 1%;
+    color: black;;
 }
 
 #reset-2 {
-    font-size: xx-large;
+    font-size: x-large;
     width: 11%;
-    padding: 1%;
+    padding: 1.175%;
     border: 1px black solid;
     border-radius: 10px;
     background-color: lightcoral;
@@ -367,11 +367,11 @@
     margin-left: 1%;
     margin-bottom: 0.5%;
     transition: 0.15s;
+    position: absolute;
+    top:88%;
 }
 
 #reset-2:hover {
     background-color: green;
     color: whitesmoke;
-    font-size: x-large;
-    padding: 1.175%;
 }
