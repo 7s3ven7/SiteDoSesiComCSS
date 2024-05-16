@@ -1,6 +1,7 @@
-
 <!DOCTYPE html>
+
 <head></head>
+
 <body><?php
 $hostname = "127.0.0.1";
 $name = "root";
@@ -228,18 +229,22 @@ echo '<!DOCTYPE html>
                     <head>
                     </head>
                     <body>
-                    <div class="texto2">Produto:</div>
-                    '.$row['nome'].'
-                    <div class="texto2">Unidade: </div>
-                    '.$row['und'].'
-                    <div class="texto2">Quantidade de Unidades: </div>
-                    '.$row['quantidade_und'].'
-                    <div class="texto2">Valor por Unidade: </div>
-                    '.$row['valor_und'].'
-                    <div class="texto2">Quantidade de Produtos: </div>
-                    '.$row['quant_prod'].'
-                    <div class="texto2">Valor total: </div>
-                    '.$row['quantidade_und']*$row['valor_und'].'
+                    <table class="tabela-4">
+                    <tr>
+                    <td><div class="texto3">Produto: '.$row['nome'].'</div></td>
+                    <td><div class="texto3">Unidade: '.$row['und'].'</div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="texto3">Quantidade de Unidades: </div>'.$row['quantidade_und'].'</td>
+                    <td><div class="texto3">Valor por Unidade: </div>'.$row['valor_und'].'</td>
+                    </tr>
+                    <tr>
+                    <td><div class="texto3">Quantidade de Produtos: </div>'.$row['quant_prod'].'</td>
+                    <td><div class="texto3">Valor total: </div>'.$row['quantidade_und']*$row['valor_und'].'</td>
+                    </tr>
+
+                    <table>
+                    
 </body>
 </html>
 ';}}
@@ -269,7 +274,7 @@ echo '<!DOCTYPE html>
 
 
 
-<?php       /*<table class="tabela-3" border="1px">
+    <?php       /*<table class="tabela-3" border="1px">
                 <tr>
                     <td>
                     <?php
