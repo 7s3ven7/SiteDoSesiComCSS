@@ -10,7 +10,7 @@
     left: 35%;
     top: 10%;
     padding-top: 2%;
-    position: absolute;
+    position: fixed;
     align-items: center;
     text-align: center;
     border: 1px black solid;
@@ -23,7 +23,7 @@
     height: 25%;
     left: 35%;
     top: 58.5%;
-    position: absolute;
+    position: fixed;
     align-items: center;
     text-align: center;
     border: 1px black solid;
@@ -37,7 +37,7 @@
     left: 35%;
     top: 10%;
     padding-top: 2%;
-    position: absolute;
+    position: fixed;
     align-items: center;
     text-align: center;
     border: 1px black solid;

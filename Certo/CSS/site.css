@@ -13,7 +13,7 @@
     text-align: center;
     align-items: center;
     line-height: 200%;
-    position: absolute;
+    position: fixed;
     border: 1px black solid;
     border-radius: 10px;
 }
@@ -22,7 +22,7 @@
     width: 90%;
     height: 80%;
     margin: 5%;
-    position: absolute;
+    position: fixed;
     align-items: left;
     text-align: left;
     font-size: xx-large;
@@ -38,7 +38,7 @@
     text-align: center;
     align-items: center;
     line-height: 200%;
-    position: absolute;
+    position: fixed;
     border: 1px black solid;
     border-radius: 10px;
 }
@@ -50,7 +50,7 @@
     left: 12.5%;
     top: 5%;
     line-height: 200%;
-    position: absolute;
+    position: fixed;
     border: 1px black solid;
     border-radius: 10px;
 }
@@ -58,11 +58,10 @@
 .caixa-2 {
     width: 42.5%;
     height: 90%;
-    background-color: whitesmoke;
     left: 55%;
     top: 5%;
-    line-height: 200%;
-    position: absolute;
+    line-height: 140%;
+    position: fixed;
     border: 1px black solid;
     border-top-right-radius: 10px;
     border-bottom-right-radius:10px;
@@ -178,7 +177,7 @@
     background-color: whitesmoke;
     border: 1px black solid;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     left: 12.5%;
     top: 5%;
 }
@@ -208,8 +207,7 @@
     width:80%;
     padding: 1%;
     font-size: 20px;
-    position: absolute;
-    text-align: right;
+    position: fixed;
 }
 
 
@@ -226,10 +224,21 @@
 .texto2 {
     padding: 1%;
     font-size: large;
-    width: 90%;
+    width: 100%;
     border: 1px black solid;
     border-radius: 10px;
     margin-right: 50%;
+    position: relative;
+}
+
+.texto3 {
+    padding: 1%;
+    font-size: large;
+    width: 50%;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-right: 50%;
+    position: relative;
 }
 
 .botao-2 {
@@ -255,7 +264,7 @@
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     top: 3%;
     padding: 0.5%;
     padding-left: 1%;
