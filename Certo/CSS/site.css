@@ -64,7 +64,7 @@
     position: fixed;
     border: 1px black solid;
     border-top-right-radius: 10px;
-    border-bottom-right-radius:10px;
+    border-bottom-right-radius: 10px;
 }
 
 .menu {
@@ -94,11 +94,7 @@
 .botao:hover {
     background-color: whitesmoke;
     color: green;
-}
-
-#botao:hover {
-    background-color: green;
-    color: whitesmoke;
+    padding: 1.005%;
 }
 
 #botao {
@@ -115,6 +111,14 @@
     margin-bottom: 0.5%;
     transition: 0.25s;
 }
+
+#botao:hover {
+    background-color: green;
+    color: whitesmoke;
+    padding: 1.005%;
+}
+
+
 
 .caixa-botao-mini {
     width: 11%;
@@ -143,11 +147,13 @@
     margin-bottom: 5%;
     transition: 0.25s;
 }
-.botao-mini:hover{
+
+.botao-mini:hover {
     background-color: whitesmoke;
     color: green;
 }
-#botao-mini:hover{
+
+#botao-mini:hover {
     background-color: green;
     color: whitesmoke;
 }
@@ -192,19 +198,43 @@
     align-items: left;
 }
 
+.tabela-mini {
+    line-height: 150%;
+    width: 45%;
+    padding: 3%;
+    font-size: xx-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+}
+
+#botao-2 {
+    width: 12.5%;
+    height: 75px;
+    margin: 1%;
+    left: 15%;
+    position: relative;
+    font-size: x-large;
+    border: 1px black solid;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: green;
+}
+
 .tabela-2 {
     line-height: 120%;
-    width:50%;
+    width: 50%;
     padding: 1%;
     font-size: 20px;
     position: relative;
     text-align: center;
 }
+
 .tabela-3 {
     top: 5%;
     right: 10%;
     line-height: 100%;
-    width:80%;
+    width: 80%;
     padding: 1%;
     font-size: 20px;
     position: fixed;
@@ -271,4 +301,72 @@
     padding-right: 1%;
     left: 12.5%;
     width: 6%;
+}
+
+#texto-submit {
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    font-size: x-large;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 45%;
+    top: 50%;
+    position: absolute;
+    ;
+}
+
+#submit {
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 47.5%;
+    top: 60%;
+    position: absolute;
+}
+
+#reset {
+    font-size: x-large;
+    width: 11%;
+    padding: 1.175%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    transition: 0.15s;
+}
+
+#reset:hover {
+    background-color: lightcoral;
+    color: black;
+    font-size: xx-large;
+    padding: 1%;
+}
+
+#reset-2 {
+    font-size: xx-large;
+    width: 11%;
+    padding: 1%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: lightcoral;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    transition: 0.15s;
+}
+
+#reset-2:hover {
+    background-color: green;
+    color: whitesmoke;
+    font-size: x-large;
+    padding: 1.175%;
 }

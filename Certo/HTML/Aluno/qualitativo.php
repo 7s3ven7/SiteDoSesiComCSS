@@ -8,13 +8,13 @@ $password = "root";
 $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-$n_nota = 544;
+$n_pedido = 544;
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
     $SQL = 'SELECT * FROM `quantitava_p` 
-    WHERE `n_nota` = '.$n_nota.';';
+    WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
     if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
@@ -31,7 +31,7 @@ if ($conexao->connect_errno) {
 echo '<!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="Certo/CSS/site.css">
+    <link rel="stylesheet" href="../../CSS/site.css">
     <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
@@ -40,7 +40,7 @@ echo '<!DOCTYPE html>
 <body>
     <div class="menu">Menu</div>
     <form action="recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
+        <input id="botao" type="submit" value="Recebimento">
     </form>
     <div class="caixa-botao-mini">
         <form action="quantitativo.html">
@@ -49,7 +49,7 @@ echo '<!DOCTYPE html>
     </div>
     <div class="caixa-botao-mini">
         <form action="qualitativo.html">
-            <input class="botao-mini" type="submit" value="Qualitativo">
+            <input id="botao-mini" type="submit" value="Qualitativo">
         </form>
     </div>
     <form action="movimentacao.html">
