@@ -1,0 +1,12 @@
+
+o controle é um setor que ucida de todo armazem, Ele decide para onde vai ser direcionado o produto.
+O recebimento vai olhar e conferir se está tudo certo, ele apenas recebe e analisa.
+
+O controle do aluno e do professor são a mesma coisa
+
+A essência do relatório é tirar tudo de tudo.
+Possuir registro de todos os produtos e por onde passaram.
+"Uma mega-tabela com tudo"
+
+Possuir um botão para zerar o banco
+
