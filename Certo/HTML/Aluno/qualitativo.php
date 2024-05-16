@@ -235,12 +235,12 @@ echo '<!DOCTYPE html>
                     <td><div class="texto3">Unidade: '.$row['und'].'</div></td>
                     </tr>
                     <tr>
-                    <td><div class="texto3">Quantidade de Unidades: </div>'.$row['quantidade_und'].'</td>
-                    <td><div class="texto3">Valor por Unidade: </div>'.$row['valor_und'].'</td>
+                    <td><div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div></td>
+                    <td><div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div></td>
                     </tr>
                     <tr>
-                    <td><div class="texto3">Quantidade de Produtos: </div>'.$row['quant_prod'].'</td>
-                    <td><div class="texto3">Valor total: </div>'.$row['quantidade_und']*$row['valor_und'].'</td>
+                    <td><div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div></td>
+                    <td><div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div></td>
                     </tr>
 
                     <table>
