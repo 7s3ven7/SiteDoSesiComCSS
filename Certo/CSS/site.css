@@ -65,7 +65,7 @@
     position: absolute;
     border: 1px black solid;
     border-top-right-radius: 10px;
-    border-bottom-right-radius:10px;
+    border-bottom-right-radius: 10px;
 }
 
 .menu {
@@ -95,11 +95,7 @@
 .botao:hover {
     background-color: whitesmoke;
     color: green;
-}
-
-#botao:hover {
-    background-color: green;
-    color: whitesmoke;
+    padding: 1.005%;
 }
 
 #botao {
@@ -116,6 +112,14 @@
     margin-bottom: 0.5%;
     transition: 0.25s;
 }
+
+#botao:hover {
+    background-color: green;
+    color: whitesmoke;
+    padding: 1.005%;
+}
+
+
 
 .caixa-botao-mini {
     width: 11%;
@@ -194,6 +198,7 @@
     text-align: left;
     align-items: left;
 }
+
 .tabela-mini {
     line-height: 150%;
     width: 45%;
@@ -203,7 +208,8 @@
     text-align: left;
     align-items: left;
 }
-#botao-2{
+
+#botao-2 {
     width: 12.5%;
     height: 75px;
     margin: 1%;
@@ -224,11 +230,12 @@
     position: relative;
     text-align: center;
 }
+
 .tabela-3 {
     top: 5%;
     right: 10%;
     line-height: 100%;
-    width:80%;
+    width: 80%;
     padding: 1%;
     font-size: 20px;
     position: absolute;
@@ -294,7 +301,7 @@
     font-size: x-large;
     border: 1px solid black;
     border-radius: 5px;
-    left:45%;
+    left: 45%;
     top: 50%;
     position: absolute;
     ;
@@ -306,7 +313,51 @@
     font-size: large;
     border: 1px solid black;
     border-radius: 5px;
-    left:47.5%;
+    left: 47.5%;
     top: 60%;
     position: absolute;
+}
+
+#reset {
+    font-size: x-large;
+    width: 11%;
+    padding: 1.175%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    transition: 0.15s;
+}
+
+#reset:hover {
+    background-color: lightcoral;
+    color: black;
+    font-size: xx-large;
+    padding: 1%;
+}
+
+#reset-2 {
+    font-size: xx-large;
+    width: 11%;
+    padding: 1%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: lightcoral;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    transition: 0.15s;
+}
+
+#reset-2:hover {
+    background-color: green;
+    color: whitesmoke;
+    font-size: x-large;
+    padding: 1.175%;
 }
