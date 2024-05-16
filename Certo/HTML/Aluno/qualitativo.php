@@ -202,14 +202,6 @@ echo '<!DOCTYPE html>
 </body>
 </html>';
 
-$n_pedido = 25;
-$SQL = 'SELECT * FROM `produto_p` 
-WHERE `n_pedido` = '.$n_pedido.';';
-$resultado = $conexao->query($SQL);
-if($resultado->num_rows != 0)
-{
-    for($i=1;$i<=$resultado->num_rows;$i++){
-        $row = $resultado -> fetch_array();
 echo '<!DOCTYPE html>
 
 <head>
@@ -221,17 +213,33 @@ echo '<!DOCTYPE html>
 
 <body>
     <div class="caixa-2">
-        <form method="POST" action="../PHP/quantitativo.php">
-            <table class="tabela-3">
-                <tr>
-                    <td><div class="texto2">Produto</div></td>
-                    <td>'.$row['nome'].'</td>
-                    <td><div class="texto2">Código do fornecedor: </div></td>
-                    <td>'.$row['cod_forne'].'</td>
-                </tr>
-            </table>
-        </form>
-    </div>
+</body>
+</html>';
+            $n_pedido = 25;
+            $SQL = 'SELECT * FROM `produto_p` 
+                WHERE `n_pedido` = '.$n_pedido.';';
+            $resultado = $conexao->query($SQL);
+            if($resultado->num_rows != 0)
+            {
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                    echo '
+                    <!DOCTYPE html>
+                    <head>
+                    </head>
+                    <body>
+                    <div class="texto2">Produto:</div>
+                    '.$row['nome'].'
+                    <div class="texto2">Unidade: </div>
+                    '.$row['und'].'
+                    <div class="texto2">Quantidade de Unidades: </div>
+                    '.$row['quantidade_und'].'
+                    <div class="texto2">Valor por Unidade: </div>
+                    '.$row['valor_und'].'
+                    <div class="texto2">Quantidade de Produtos: </div>
+                    '.$row['quant_prod'].'
+                    <div class="texto2">Valor total: </div>
+                    '.$row['quantidade_und']*$row['valor_und'].'
 </body>
 </html>
 ';}}
