@@ -5,13 +5,13 @@ $password = "root";
 $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-$n_pedido = 2;
+$n_nota = 544;
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
     $SQL = 'SELECT * FROM `quantitava_p` 
-    WHERE `n_pedido` = '.$n_pedido.';';
+    WHERE `n_nota` = '.$n_nota.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
     if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
@@ -130,7 +130,7 @@ echo '<!DOCTYPE html>
                     <td><div class="texto2">CNPJ do destinatário: </div></td>
                     <td>'.$row['CNPJ_dest'].'</td>
                     <td><div class="texto2">Número do pedido: </div></td>
-                    <td>'.$row['n_pedido'].'</td>
+                    <td>'.$row['n_nota'].'</td>
                 </tr>          
                 <tr>
                     <td>Container bem desgastado: </td>
