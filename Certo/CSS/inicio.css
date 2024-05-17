@@ -102,3 +102,132 @@
     border-radius: 5px;
     padding-left: 5px;
 }
+
+@media(max-width:1400px) {
+    .caixa {
+        width: 35%;
+        height: 44%;
+        left: 35%;
+        top: 10%;
+        padding-top: 2%;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5%;
+        background-color: whitesmoke;
+    }
+
+    .caixa-2 {
+        width: 35%;
+        height: 25%;
+        left: 35%;
+        top: 58.5%;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5%;
+        background-color: whitesmoke;
+    }
+
+    .caixa-3 {
+        width: 35%;
+        height: 70%;
+        left: 35%;
+        top: 10%;
+        padding-top: 2%;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 5%;
+        background-color: whitesmoke;
+    }
+
+    .caixa-mini {
+        width: 80%;
+        height: 35%;
+        padding: 5%;
+        text-align: left;
+        align-items: left;
+        position: relative;
+    }
+
+    .caixa-mini-mini {
+        padding: 10%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .caixa-mini-2 {
+        width: 100%;
+        height: 20%;
+        padding-top: 5%;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        line-height: 500%;
+    }
+
+    .texto {
+        font-size: 40px;
+    }
+
+    .padding {
+        padding: 15px;
+    }
+
+    .botao {
+        font-size: 25px;
+        position: relative;
+        width: 200px;
+        height: 60px;
+        padding: 7.5px;
+        border: 1px black solid;
+        border-radius: 5px;
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #botao {
+        font-size: 25px;
+        position: relative;
+        left: 10%;
+        width: 200px;
+        height: 60px;
+        padding: 7.5px;
+        border: 1px black solid;
+        border-radius: 5px;
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #botao-2 {
+        font-size: 25px;
+        position: relative;
+        top: 10%;
+        width: 200px;
+        height: 60px;
+        padding: 7.5px;
+        border: 1px black solid;
+        border-radius: 5px;
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    .texto-mini {
+        font-size: 25px;
+        color: darkslategray;
+    }
+
+    .caixa-texto {
+        font-size: 20px;
+        width: 110%;
+        height: 35px;
+        border: 1px black solid;
+        border-radius: 5px;
+        padding-left: 2.5px;
+    }
+
+}
