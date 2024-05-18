@@ -431,6 +431,8 @@
         top: 5%;
         line-height: 200%;
         position: fixed;
+        align-items: center;
+        text-align: center;
         border: 1px black solid;
         border-radius: 10px;
     }
@@ -571,8 +573,6 @@
     #botao-2 {
         width: 12.5%;
         height: 75px;
-        margin: 1%;
-        left: 42.5%;
         position: relative;
         font-size: x-large;
         border: 1px black solid;
@@ -664,7 +664,6 @@
         width: 12%;
         height: 60px;
         margin: 1%;
-        left: 42.5%;
         position: relative;
         font-size: large;
         border: 1px black solid;
@@ -699,21 +698,25 @@
         font-size: x-large;
         border: 1px solid black;
         border-radius: 5px;
-        left: 45%;
-        top: 50%;
         position: absolute;
         ;
     }
 
     #submit {
-        width: 100px;
-        height: 40px;
+        width: 150px;
+        height: 60px;
         font-size: large;
+        background-color: gray;
+        color: red;
         border: 1px solid black;
         border-radius: 5px;
-        left: 47.5%;
-        top: 60%;
         position: absolute;
+        transition: 0.25s;
+    }
+
+    #submit:hover {
+        background-color: lightcoral;
+        color: black;
     }
 
     #reset {
