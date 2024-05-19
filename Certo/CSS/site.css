@@ -431,8 +431,6 @@
         top: 5%;
         line-height: 200%;
         position: fixed;
-        align-items: center;
-        text-align: center;
         border: 1px black solid;
         border-radius: 10px;
     }
@@ -573,7 +571,8 @@
     #botao-2 {
         width: 12.5%;
         height: 75px;
-        position: relative;
+        position: absolute;
+        left: 42.5%;
         font-size: x-large;
         border: 1px black solid;
         border-radius: 5px;
@@ -664,7 +663,8 @@
         width: 12%;
         height: 60px;
         margin: 1%;
-        position: relative;
+        left: 40%;
+        position: absolute;
         font-size: large;
         border: 1px black solid;
         border-radius: 5px;
@@ -739,7 +739,6 @@
     #reset:hover {
         background-color: lightcoral;
         color: black;
-        ;
     }
 
     #reset-2 {
@@ -762,6 +761,71 @@
     #reset-2:hover {
         background-color: green;
         color: whitesmoke;
+    }
+
+    #nota-1 {
+        width: 100%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-2 {
+        width: 50%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-3 {
+        width: 60%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-4 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-5 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 03%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    .texto-mini-2 {
+        font-size: x-large;
+        color: gray;
+    }
+
+    .submit-1 {
+        border-radius: 15px;
+        width: 95%;
+        padding: 1%;
+        font-size: medium;
+    }
+
+    #tabela-8 {
+        width: 80%;
+        margin: 3%;
+        border: 2.5px solid black;
     }
 
 }
