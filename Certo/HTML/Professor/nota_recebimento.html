@@ -36,22 +36,33 @@
         <form method="POST" action="../PHP/quantitativo.php">
             <div id="quadrado-1">
                 <div class="texto-1">NOME/RAZÃO_SOCIAL</div>
-                <input class="input-especial" name="cnpj">
+                <input class="input-especial" type="text" name="cnpj">
             </div>
             <div id="quadrado-2">
-                <div class="texto-1">CNPJ/CPF</div>
-                <input class="input-1" name="municipio">
+                <div class="texto-1">CNPJ</div>
+                <input class="input-1" type="text" name="municipio">
             </div>
             <div id="quadrado-3">
-                <div class="texto-1">ENDEREÇO NÚMERO</div>
-                <input class="input-1" name="cep">
-                <input class="input-2" name="num">
+                <div class="texto-2">DATA_DE_EMISSÃO</div>
+                <input class="input-mini" type="date" name="municipio">
             </div>
             <div id="quadrado-4">
-                <div class="texto-1">BAIRRO/DISTRITO</div>
-                <input class="input-1" name="cep">
+                <div class="texto-1">ENDEREÇO NÚMERO</div>
+                <input class="input-1" type="text" name="cep">
+                <input class="input-2" type="number" name="num">
             </div>
-            <input class="botao-2" type="submit" value="Enviar">
+            <div id="quadrado-5">
+                <div class="texto-1">BAIRRO/DISTRITO</div>
+                <input class="input-1" type="text" name="cep">
+            </div>
+            <div id="quadrado-6">
+                <div class="texto-1">CEP</div>
+                <input class="input-mini" type="text" name="cep">
+            </div>
+            <div id="quadrado-7">
+                <div class="texto-2">DATA_DE_ENTRADA/SAIDA</div>
+                <input class="input-mini" type="date" name="municipio">
+            </div>
         </form>
     </div>
 </body>
