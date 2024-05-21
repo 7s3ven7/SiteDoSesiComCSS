@@ -48,6 +48,11 @@ echo '<!DOCTYPE html>
             <input id="botao-mini" type="submit" value="Qualitativo">
         </form>
     </div>
+        <div class="caixa-botao-mini">
+        <form action="quantitativo.php">
+            <input class="botao-mini" type="submit" value="Quantitativo">
+        </form>
+    </div>
     <form action="movimentacao.html">
         <input class="botao" type="submit" value="Movimentação">
     </form>
@@ -68,8 +73,9 @@ echo '<!DOCTYPE html>
     <form action="controle.html">
         <input class="botao" type="submit" value="Controle">
     </form>
-    <div id="caixa">
+    <div class="caixa">
         <form method="POST" action="../../PHP/Aluno/qualitativo.php">
+        <div class="texto4">Número do pedido:</div></td>
             <table class="tabela-2">
                 <tr>
                     <td><div class="texto2">Código Interno:</div></td>
@@ -185,60 +191,11 @@ echo '<!DOCTYPE html>
                     <td>Observações: </td>
                     <td><input class="botao-tabela" type="text" name="18"</td>
                 </tr>
-                <tr>
-                    <td>produto faltando: </td>
-                    <td><input class="check" type="checkbox" name="19"</td>
-                    <td>produto avariado: </td>
-                    <td><input class="check" type="checkbox" name="20"</td>
-                </tr>
+
             </table>
             <input class="botao-2" type="submit" value="Enviar" left=5px>
         </form>
     </div>
 </body>
 </html>';
-
-echo '<!DOCTYPE html>
-
-<head>
-    <link rel="stylesheet" href="Certo/CSS/site.css">
-    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-</head>
-
-<body>
-    <div class="caixa-2">
-</body>
-</html>';
-            $n_pedido = 1;
-            $SQL = 'SELECT * FROM `produto_p_1` 
-                WHERE `n_pedido` = '.$n_pedido.';';
-            $resultado = $conexao->query($SQL);
-            if($resultado->num_rows != 0)
-            {
-                for($i=1;$i<=$resultado->num_rows;$i++){
-                    $row = $resultado -> fetch_array();
-                    echo '
-                    <!DOCTYPE html>
-                    <head>
-                    </head>
-                    <body>
-                    <table class="tabela-4">
-                    <tr>
-                    <td><div class="texto3">Produto: '.$row['nome'].'</div></td>
-                    <td><div class="texto3">Unidade: '.$row['und'].'</div></td>
-                    </tr>
-                    <tr>
-                    <td><div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div></td>
-                    <td><div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div></td>
-                    </tr>
-                    <tr>
-                    <td><div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div></td>
-                    <td><div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div></td>
-                    </tr>
-                    <table>
-</body>
-</html>
-';}}
 ?>

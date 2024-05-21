@@ -356,12 +356,9 @@
 }
 
 .tabela-4 {
-    top: 10%;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 100%;
     width: 100%;
-    padding: 1%;
+    padding: 0.25%;
     font-size: 20px;
     position: relative;
 }
@@ -372,7 +369,8 @@
     width: 90%;
     border: 1px black solid;
     border-radius: 10px;
-    margin-right: 50%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .texto2 {
@@ -382,11 +380,20 @@
     border: 1px black solid;
     border-radius: 10px;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .texto3 {
-    font-size: big;
     width: 60%;
+    border: 1px black solid;
+    border-radius: 7px;
+    position: relative;
+}
+
+.texto4 {
+    font-size: large;
+    width: 40%;
     border: 1px black solid;
     border-radius: 7px;
     position: relative;
@@ -407,6 +414,8 @@
 .check {
     width: 25px;
     height: 25px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #tipo {
@@ -489,6 +498,12 @@
 #reset-2:hover {
     background-color: green;
     color: whitesmoke;
+}
+
+.linha{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media(max-width:1400px) {
