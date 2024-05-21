@@ -376,3 +376,456 @@
     background-color: green;
     color: whitesmoke;
 }
+
+@media(max-width:1400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+
+    .caixa {
+        width: 85%;
+        height: 85%;
+        background-color: whitesmoke;
+        left: 12.5%;
+        top: 10%;
+        text-align: center;
+        align-items: center;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    #informacao {
+        width: 75%;
+        height: 80%;
+        margin: 5%;
+        position: fixed;
+        align-items: left;
+        text-align: left;
+        font-size: x-large;
+        line-height: 150%;
+    }
+
+    #caixa-info {
+        width: 85%;
+        height: 90%;
+        background-color: whitesmoke;
+        left: 12.5%;
+        top: 5%;
+        text-align: center;
+        align-items: center;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    #caixa {
+        width: 85%;
+        height: 90%;
+        background-color: whitesmoke;
+        left: 12.5%;
+        top: 5%;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    .caixa-2 {
+        width: 42.5%;
+        height: 90%;
+        left: 55%;
+        top: 5%;
+        line-height: 140%;
+        position: fixed;
+        border: 1px black solid;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .menu {
+        font-size: 300%;
+        position: relative;
+        padding-left: 1%;
+        margin: 1%;
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+
+    .botao {
+        font-size: large;
+        width: 11%;
+        padding: 1%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: green;
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+    }
+
+    .botao:hover {
+        background-color: whitesmoke;
+        color: green;
+        padding: 1.005%;
+    }
+
+    #botao {
+        font-size: large;
+        width: 11%;
+        padding: 1%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        color: green;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+    }
+
+    #botao:hover {
+        background-color: green;
+        color: whitesmoke;
+        padding: 1.005%;
+    }
+
+
+
+    .caixa-botao-mini {
+        width: 11%;
+        height: 50px;
+        position: relative;
+        align-items: right;
+        text-align: right;
+        padding-left: 1.1%;
+        margin: -4px;
+        margin-top: -4px;
+    }
+
+    .botao-mini {
+        font-size: large;
+        width: 80%;
+        height: 40px;
+        padding: 0.5%;
+        top: 15%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: green;
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 5%;
+        transition: 0.25s;
+    }
+
+    .botao-mini:hover {
+        background-color: whitesmoke;
+        color: green;
+    }
+
+    #botao-mini:hover {
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #botao-mini {
+        font-size: large;
+        width: 80%;
+        height: 40px;
+        padding: 0.5%;
+        top: 15%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        color: green;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 5%;
+        transition: 0.25s;
+    }
+
+    #nome {
+        font-size: xx-large;
+        width: 50%;
+        height: 4%;
+        padding: 2.5px;
+        background-color: whitesmoke;
+        border: 1px black solid;
+        border-radius: 5px;
+        position: fixed;
+        left: 12.5%;
+        top: 5%;
+    }
+
+    #botao-2 {
+        width: 12.5%;
+        height: 75px;
+        position: absolute;
+        left: 42.5%;
+        font-size: x-large;
+        border: 1px black solid;
+        border-radius: 5px;
+        color: whitesmoke;
+        background-color: green;
+    }
+
+    .tabela-mini {
+        line-height: 150%;
+        width: 100%;
+        padding: 25%;
+        padding-top: 7.5%;
+        padding-bottom: 3%;
+        font-size: xx-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela {
+        line-height: 175%;
+        width: 100%;
+        padding: 10%;
+        padding-bottom: 3%;
+        padding-top: 5%;
+        font-size: x-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela-2 {
+        line-height: 120%;
+        width: 50%;
+        padding: 1%;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+    }
+
+    .tabela-3 {
+        top: 5%;
+        right: 10%;
+        line-height: 100%;
+        width: 80%;
+        padding: 1%;
+        font-size: 20px;
+        position: fixed;
+    }
+
+    .tabela-4 {
+        top: 5%;
+        left: 0%;
+        line-height: 100%;
+        width: 100%;
+        padding: 1%;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .botao-tabela {
+        padding: 1%;
+        font-size: large;
+        width: 90%;
+        border: 1px black solid;
+        border-radius: 10px;
+        margin-right: 50%;
+    }
+
+    .texto2 {
+        padding: 1%;
+        font-size: large;
+        width: 100%;
+        border: 1px black solid;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .texto3 {
+        font-size: big;
+        width: 60%;
+        border: 1px black solid;
+        border-radius: 7px;
+        position: relative;
+    }
+
+    .botao-2 {
+        width: 12%;
+        height: 60px;
+        margin: 1%;
+        left: 40%;
+        position: absolute;
+        font-size: large;
+        border: 1px black solid;
+        border-radius: 5px;
+        color: whitesmoke;
+        background-color: green;
+    }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    #tipo {
+        font-size: x-large;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: fixed;
+        top: 3%;
+        padding: 0.5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        left: 12.5%;
+        width: 8%;
+    }
+
+    #texto-submit {
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        font-size: x-large;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        ;
+    }
+
+    #submit {
+        width: 150px;
+        height: 60px;
+        font-size: large;
+        background-color: gray;
+        color: red;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        transition: 0.25s;
+    }
+
+    #submit:hover {
+        background-color: lightcoral;
+        color: black;
+    }
+
+    #reset {
+        font-size: large;
+        width: 11%;
+        padding: 1.175%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: green;
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+        position: absolute;
+        top: 88%;
+    }
+
+    #reset:hover {
+        background-color: lightcoral;
+        color: black;
+    }
+
+    #reset-2 {
+        font-size: large;
+        width: 11%;
+        padding: 1.175%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: lightcoral;
+        color: black;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+        position: absolute;
+        top: 88%;
+    }
+
+    #reset-2:hover {
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #nota-1 {
+        width: 100%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-2 {
+        width: 50%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-3 {
+        width: 60%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-4 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-5 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 03%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    .texto-mini-2 {
+        font-size: x-large;
+        color: gray;
+    }
+
+    .submit-1 {
+        border-radius: 15px;
+        width: 95%;
+        padding: 1%;
+        font-size: medium;
+    }
+
+    #tabela-8 {
+        width: 80%;
+        margin: 3%;
+        border: 2.5px solid black;
+    }
+
+}
