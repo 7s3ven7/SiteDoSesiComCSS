@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="../../CSS/site.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">Menu</div>
+    <form action="recebimento.html">
+        <input class="botao" type="submit" value="Recebimento">
+    </form>
+    <form action="cadastro.html">
+        <input class="botao" type="submit" value="Cadastros">
+    </form>
+    <form action="notas.html">
+        <input class="botao" type="submit" value="Notas">
+    </form>
+    <form action="pedido.html">
+        <input id="botao" type="submit" value="Pedido">
+    </form>
+    <div class=" caixa-botao-mini">
+        <form action="pedido.html">
+            <input id="botao-mini" type="submit" value="Cliente">
+        </form>
+    </div>
+    <form action="produto.html">
+        <input class="botao" type="submit" value="Produto">
+    </form>
+    <form action="reset.html">
+        <input id="reset" type="submit" value="Recomeçar">
+    </form>
+    <div id="caixa-info">
+        <form method="POST" action="../PHP/quantitativo.php">
+            <table class="tabela">
+                <tr>
+                    <td>CPF: </td>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="000.000.000-00"></td>
+                    <td>Unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="caixa"></td>
+                </tr>
+                <tr>
+                    <td>Nome do cliente: </td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="nome"></td>
+                    <td>Quantidade de unidades: </td>
+                    <td><input class="botao-tabela" type="text" name="4" placeholder="10"></td>
+                </tr>
+                <tr>
+                    <td>CEP: </td>
+                    <td><input class="botao-tabela" type="text" name="5" placeholder="000.000.000-00"></td>
+                    <td>Quantidade de produtos: </td>
+                    <td><input class="botao-tabela" type="text" name="6" placeholder="10"></td>
+                </tr>
+                <tr>
+                    <td>Gmail: </td>
+                    <td><input class="botao-tabela" type="text" name="7" placeholder="exemplo@gmail.com"></td>
+                    <td>Valor da unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="8" placeholder="R$50,00"></td>
+                </tr>
+                <tr>
+                    <td>Telefone: </td>
+                    <td><input class="botao-tabela" type="text" name="9" placeholder="(00) 00000 0000"></td>
+                    <td>NCM: </td>
+                    <td><input class="botao-tabela" type="text" name="10" placeholder="*"></td>
+                </tr>
+                <tr>
+                    <td>Número do pedido: </td>
+                    <td><input class="botao-tabela" type="text" name="11" placeholder="10"></td>
+                    <td>CST: </td>
+                    <td><input class="botao-tabela" type="text" name="12" placeholder="*"></td>
+                </tr>
+                <tr>
+                    <td>Nome do produto: </td>
+                    <td><input class="botao-tabela" type="text" name="13" placeholder="Pasta de dentes"></td>
+                    <td>CFOP: </td>
+                    <td><input class="botao-tabela" type="text" name="14" placeholder="*"></td>
+                </tr>
+                <tr>
+                    <td>Sinopse do pedido: </td>
+                    <td><input class="botao-tabela" type="text" name="15" placeholder="Observações"></td>
+                </tr>
+            </table>
+            <input class="botao-2" type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>

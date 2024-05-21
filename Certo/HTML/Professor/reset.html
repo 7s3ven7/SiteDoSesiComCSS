@@ -28,12 +28,17 @@
         <input id="reset-2" type="submit" value="Recomeçar">
     </form>
     <div id="caixa">
+        <form method="POST" action="../../PHP/reset.php">
+            <div id="informacao">
+                Tem certeza que quer redefinir o banco de dados do site?
+                <br>
+                Confirme com a senha, e no botão de "Enviar" abaixo!
+            </div>
+            <input id="texto-submit" type="number" placeholder="senha" name="senha_secreta">
+            <br>
+            <input id="submit" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
-</html>
 
-<!--form method="POST" action="../../PHP/reset.php">
-    <input id="texto-submit" type="text" placeholder="senha" name="senha">
-    <br>
-    <input id="submit" type="submit" value="Enviar">
-    </form>-->
+</html>
