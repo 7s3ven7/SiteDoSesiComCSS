@@ -4,17 +4,12 @@
     box-sizing: 0;
 }
 
-.espaco-1 {
-    width: 75px;
-    height: 1px;
-    background-color: white;
-}
-
 .input-1 {
     font-size: large;
     text-align: left;
     background-color: white;
-    width: 50%;
+    border: 1px solid white;
+    width: 300px;
     padding: 2px;
     padding-left: 5px;
     border-radius: 7.5px;
@@ -24,7 +19,8 @@
     font-size: large;
     text-align: left;
     background-color: white;
-    width: 80%;
+    border: 1px solid white;
+    width: 675px;
     padding: 2px;
     padding-left: 5px;
     border-radius: 7.5px;
@@ -34,20 +30,41 @@
     font-size: large;
     text-align: left;
     background-color: white;
+    border: 1px solid white;
     width: 45px;
     padding: 2px;
-    padding-left: 5px;
+    padding-left: 2px;
     border-radius: 7.5px;
     position: absolute;
-    left: 390px;
+    left: 350px;
+}
+
+.input-mini {
+    font-size: large;
+    text-align: left;
+    background-color: white;
+    border: 1px solid white;
+    width: 200px;
+    padding: 2px;
+    padding-left: 2px;
+    border-radius: 7.5px;
+    position: absolute;
 }
 
 .texto-1 {
     font-size: x-large;
     color: gray;
     padding: 10px;
-    padding-left: 2px;
-    word-spacing: 250px;
+    word-spacing: 200px;
+    font-weight: bold;
+}
+
+.texto-2 {
+    font-size: 20px;
+    color: gray;
+    padding: 10px;
+    word-spacing: 200px;
+    font-weight: bold;
 }
 
 #quadrado-1 {
@@ -55,8 +72,8 @@
     text-align: left;
     align-items: left;
     background-color: white;
-    width: 800px;
-    height: 100px;
+    width: 750px;
+    height: 90px;
     left: 80px;
     top: 100px;
     border: 1px black solid;
@@ -68,9 +85,9 @@
     text-align: left;
     align-items: left;
     background-color: white;
-    width: 400px;
-    height: 100px;
-    left: 891px;
+    width: 350px;
+    height: 90px;
+    left: 841px;
     top: 100px;
     border: 1px black solid;
     padding: 5px;
@@ -81,10 +98,10 @@
     text-align: left;
     align-items: left;
     background-color: white;
-    width: 600px;
-    height: 100px;
-    left: 80px;
-    top: 211px;
+    width: 300px;
+    height: 90px;
+    left: 1202px;
+    top: 100px;
     border: 1px black solid;
     padding: 5px;
 }
@@ -93,25 +110,58 @@
     position: absolute;
     text-align: left;
     align-items: left;
-    width: 400px;
-    height: 100px;
     background-color: white;
-    left: 691px;
-    top: 211px;
+    width: 475px;
+    height: 90px;
+    left: 80px;
+    top: 201px;
     border: 1px black solid;
     padding: 5px;
 }
 
-/*#quadrado-1 {
+#quadrado-5 {
     position: absolute;
-    width: ;
-    height: ;
+    text-align: left;
+    align-items: left;
+    width: 350px;
+    height: 90px;
+    background-color: white;
+    left: 566px;
+    top: 201px;
     border: 1px black solid;
-}*/
+    padding: 5px;
+}
+
+#quadrado-6 {
+    position: absolute;
+    text-align: left;
+    align-items: left;
+    width: 264px;
+    height: 90px;
+    border: 1px black solid;
+    background-color: white;
+    left: 927px;
+    top: 201px;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#quadrado-7 {
+    position: absolute;
+    text-align: left;
+    align-items: left;
+    background-color: white;
+    width: 300px;
+    height: 90px;
+    left: 1202px;
+    top: 201px;
+    border: 1px black solid;
+    padding: 5px;
+}
 
 .caixa {
-    width: 1765px;
-    height: 915px;
+    width: 1600px;
+    height: 825px;
     background-color: whitesmoke;
     left: 12.5%;
     top: 10%;
@@ -307,8 +357,8 @@
 }
 
 #caixa {
-    width: 1765px;
-    height: 969px;
+    width: 1580px;
+    height: 875px;
     background-color: whitesmoke;
     left: 12.5%;
     top: 5%;
