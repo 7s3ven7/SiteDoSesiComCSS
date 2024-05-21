@@ -34,45 +34,18 @@
     </form>
     <div id="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
-            <table id="tabela-8">
-                <tr>
-                    <td>
-                        <div id="nota-1">
-                            <div class="texto-mini-2">Nome</div>
-                            <input class="submit-1" type="text" placeholder="valor">
-                        </div>
-                    </td>
-                    <td>
-                        <div id="nota-2">
-                            <div class="texto-mini-2">CNPJ</div>
-                            <input class="submit-1" type="text" placeholder="valor">
-                        </div>
-                    </td>
-                    <td>
-                        <div id="nota-3">
-                            <div class="texto-mini-2">Data de Emissão</div>
-                            <input class="submit-1" type="text" placeholder="valor">
-                        </div>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <div id="nota-4">
-                            <div class="texto-mini-2">Endereço</div>
-                            <input class="submit-1" type="text" placeholder="valor">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="nota-5">
-                            <div class="texto-mini-2">Municipio</div>
-                            <input class="submit-1" type="text" placeholder="valor">
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <div id="quadrado-1">
+                <div class="texto-1">CNPJ</div>
+                <input class="input-1" name="cnpj">
+            </div>
+            <div id="quadrado-3">
+                <div class="texto-1">Município</div>
+                <input class="input-1" name="municipio">
+            </div>
+            <div id="quadrado-4">
+                <div class="texto-1">CEP</div>
+                <input class="input-1" name="cep">
+            </div>
             <input class="botao-2" type="submit" value="Enviar">
         </form>
     </div>
