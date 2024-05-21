@@ -14,7 +14,7 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $SQL = 'SELECT * FROM `quantitava_p` 
+    $SQL = 'SELECT * FROM `quantitava_expedicao_p_1` 
     WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
@@ -44,11 +44,6 @@ echo '<!DOCTYPE html>
         <input id="botao" type="submit" value="Recebimento">
     </form>
     <div class="caixa-botao-mini">
-        <form action="quantitativo.html">
-            <input class="botao-mini" type="submit" value="Quantitativo">
-        </form>
-    </div>
-    <div class="caixa-botao-mini">
         <form action="qualitativo.html">
             <input id="botao-mini" type="submit" value="Qualitativo">
         </form>
@@ -74,7 +69,7 @@ echo '<!DOCTYPE html>
         <input class="botao" type="submit" value="Controle">
     </form>
     <div id="caixa">
-        <form method="POST" action="../PHP/quantitativo.php">
+        <form method="POST" action="../../PHP/Aluno/qualitativo.php">
             <table class="tabela-2">
                 <tr>
                     <td><div class="texto2">Código Interno:</div></td>
@@ -191,10 +186,10 @@ echo '<!DOCTYPE html>
                     <td><input class="check" type="checkbox" name="18"</td>
                 </tr>
                 <tr>
-                    <td>Faltando: </td>
+                    <td>produto faltando: </td>
                     <td><input class="check" type="checkbox" name="19"</td>
-                    <td>Observação: </td>
-                    <td><input class="botao-tabela" type="text" name="20"</td>
+                    <td>produto avariado: </td>
+                    <td><input class="check" type="checkbox" name="20"</td>
                 </tr>
             </table>
             <input class="botao-2" type="submit" value="Enviar">
@@ -216,8 +211,8 @@ echo '<!DOCTYPE html>
     <div class="caixa-2">
 </body>
 </html>';
-            $n_pedido = 25;
-            $SQL = 'SELECT * FROM `produto_p` 
+            $n_pedido = 1;
+            $SQL = 'SELECT * FROM `produto_p_1` 
                 WHERE `n_pedido` = '.$n_pedido.';';
             $resultado = $conexao->query($SQL);
             if($resultado->num_rows != 0)
@@ -242,62 +237,8 @@ echo '<!DOCTYPE html>
                     <td><div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div></td>
                     <td><div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div></td>
                     </tr>
-
                     <table>
-                    
 </body>
 </html>
 ';}}
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <?php       /*<table class="tabela-3" border="1px">
-                <tr>
-                    <td>
-                    <?php
-                    $n_pedido = 25;
-                    $SQL = 'SELECT * FROM `produto_p` 
-                    WHERE `n_pedido` = '.$n_pedido.';';
-                    $resultado = $conexao->query($SQL);
-                    if($resultado->num_rows != 0)
-                    {
-                        for($i=1;$i<=$resultado->num_rows;$i++){
-                            $row = $resultado -> fetch_array();
-                            echo 'Produto: '. $row['nome'];
-                            echo 'Unidade: '. $row['und'];
-                            echo 'Quantidade: '. $row['quantidade_und'];
-                            echo 'R$/unit: '. $row['valor_und'];
-                            echo 'Valor total: '.($row['quantidade_und']*$row['valor_und']);
-                            }
-                        } else {
-                            $conexao -> close();
-                            header("Location: index.php");
-                            exit();
-                    }
-                    </td>
-                </tr>
-            </table>        
-</body> */?>
