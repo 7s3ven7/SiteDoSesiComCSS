@@ -10,14 +10,21 @@
     background-color: lightgray;
     border: 1px solid black;
     border-radius: 15px;
-    margin-left: auto;
     margin-right: auto;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    top: 150px;
+    margin-left: 100px;
+}
+
+.input-nota {
+    font-size: large;
+    color: black;
+    border: 1px white solid;
+    width: 90%;
 }
 
 #qd1 {
-    width: 300px;
+    width: 335px;
     height: 50px;
     padding: 10px;
     font-weight: bold;
@@ -25,15 +32,16 @@
     align-items: left;
     text-align: left;
     position: absolute;
-    left: 250px;
-    top: 200px;
+    left: 50px;
+    top: 100px;
+    font-size: 15px;
     color: darkslategray;
     background-color: whitesmoke;
     border: 1px solid black;
 }
 
 #qd2 {
-    width: 200px;
+    width: 260px;
     height: 50px;
     padding: 10px;
     font-weight: bold;
@@ -41,15 +49,16 @@
     align-items: left;
     text-align: left;
     position: absolute;
-    left: 571px;
-    top: 200px;
+    left: 406px;
+    top: 100px;
+    font-size: 15px;
     color: darkslategray;
     background-color: whitesmoke;
     border: 1px solid black;
 }
 
 #qd3 {
-    width: 150px;
+    width: 210px;
     height: 50px;
     padding: 10px;
     font-weight: bold;
@@ -57,8 +66,9 @@
     align-items: left;
     text-align: left;
     position: absolute;
-    left: 792px;
-    top: 200px;
+    left: 687px;
+    top: 100px;
+    font-size: 15px;
     color: darkslategray;
     background-color: whitesmoke;
     border: 1px solid black;

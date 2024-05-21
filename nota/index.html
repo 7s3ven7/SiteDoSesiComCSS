@@ -8,39 +8,15 @@
 </head>
 
 <body>
-    <div class="menu">Menu</div>
-    <form action="recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
-    </form>
-    <form action="fornecedor.html">
-        <input class="botao" type="submit" value="Cadastros">
-    </form>
-    <form action="nota_recebimento.html">
-        <input id="botao" type="submit" value="Notas">
-    </form>
-    <div class=" caixa-botao-mini">
-        <form action="notas.html">
-            <input id="botao-mini" type="submit" value="Expedição">
-        </form>
-    </div>
-    <form action="pedido.html">
-        <input class="botao" type="submit" value="Pedido">
-    </form>
-    <form action="produto.html">
-        <input class="botao" type="submit" value="Produto">
-    </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
-    </form>
     <div id="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
             <div id="qd1">
                 <div class="texto-1">NOME/RAZÃO_SOCIAL</div>
-                <input class="input-especial" type="text" name="cnpj">
+                <input class="input-nota" type="text" name="cnpj">
             </div>
             <div id="qd2">
                 <div class="texto-1">CNPJ</div>
-                <input class="input-1" type="text" name="municipio">
+                <input class="input-nota" type="text" name="municipio">
             </div>
             <div id="qd3">
                 <div class="texto-2">DATA_DE_EMISSÃO</div>
@@ -48,20 +24,20 @@
             </div>
             <div id="quadrado-4">
                 <div class="texto-1">ENDEREÇO NÚMERO</div>
-                <input class="input-1" type="text" name="cep">
-                <input class="input-2" type="number" name="num">
+                <input class="input-nota" type="text" name="cep">
+                <input class="input-nota" type="number" name="num">
             </div>
             <div id="quadrado-5">
                 <div class="texto-1">BAIRRO/DISTRITO</div>
-                <input class="input-1" type="text" name="cep">
+                <input class="input-nota" type="text" name="cep">
             </div>
             <div id="quadrado-6">
                 <div class="texto-1">CEP</div>
-                <input class="input-mini" type="text" name="cep">
+                <input class="input-nota" type="text" name="cep">
             </div>
             <div id="quadrado-7">
                 <div class="texto-2">DATA_DE_ENTRADA/SAIDA</div>
-                <input class="input-mini" type="date" name="municipio">
+                <input class="input-nota" type="date" name="municipio">
             </div>
         </form>
     </div>
