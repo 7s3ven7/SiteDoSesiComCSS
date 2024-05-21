@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+#caixa {
+    width: 1000px;
+    height: 600px;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+}
+
+#qd1 {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    padding-bottom: 0;
+    align-items: left;
+    text-align: left;
+    position: absolute;
+    left: 250px;
+    top: 200px;
+    color: darkslategray;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+#qd2 {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    padding-bottom: 0;
+    align-items: left;
+    text-align: left;
+    position: absolute;
+    left: 571px;
+    top: 200px;
+    color: darkslategray;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+#qd3 {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    padding-bottom: 0;
+    align-items: left;
+    text-align: left;
+    position: absolute;
+    left: 792px;
+    top: 200px;
+    color: darkslategray;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
