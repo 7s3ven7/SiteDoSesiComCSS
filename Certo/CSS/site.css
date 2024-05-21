@@ -4,13 +4,42 @@
     box-sizing: 0;
 }
 
+.espaco-1 {
+    width: 75px;
+    height: 1px;
+    background-color: white;
+}
+
 .input-1 {
     font-size: large;
     text-align: left;
-    background-color: whitesmoke;
+    background-color: white;
+    width: 50%;
     padding: 2px;
     padding-left: 5px;
     border-radius: 7.5px;
+}
+
+.input-especial {
+    font-size: large;
+    text-align: left;
+    background-color: white;
+    width: 80%;
+    padding: 2px;
+    padding-left: 5px;
+    border-radius: 7.5px;
+}
+
+.input-2 {
+    font-size: large;
+    text-align: left;
+    background-color: white;
+    width: 45px;
+    padding: 2px;
+    padding-left: 5px;
+    border-radius: 7.5px;
+    position: absolute;
+    left: 390px;
 }
 
 .texto-1 {
@@ -18,15 +47,17 @@
     color: gray;
     padding: 10px;
     padding-left: 2px;
+    word-spacing: 250px;
 }
 
 #quadrado-1 {
     position: absolute;
     text-align: left;
     align-items: left;
-    width: 400px;
+    background-color: white;
+    width: 800px;
     height: 100px;
-    left: 200px;
+    left: 80px;
     top: 100px;
     border: 1px black solid;
     padding: 5px;
@@ -34,9 +65,12 @@
 
 #quadrado-2 {
     position: absolute;
+    text-align: left;
+    align-items: left;
+    background-color: white;
     width: 400px;
     height: 100px;
-    left: 611px;
+    left: 891px;
     top: 100px;
     border: 1px black solid;
     padding: 5px;
@@ -46,9 +80,10 @@
     position: absolute;
     text-align: left;
     align-items: left;
-    width: 300px;
+    background-color: white;
+    width: 600px;
     height: 100px;
-    left: 200px;
+    left: 80px;
     top: 211px;
     border: 1px black solid;
     padding: 5px;
@@ -56,11 +91,15 @@
 
 #quadrado-4 {
     position: absolute;
+    text-align: left;
+    align-items: left;
     width: 400px;
     height: 100px;
-    left: 600px;
+    background-color: white;
+    left: 691px;
     top: 211px;
     border: 1px black solid;
+    padding: 5px;
 }
 
 /*#quadrado-1 {

@@ -35,15 +35,20 @@
     <div id="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
             <div id="quadrado-1">
-                <div class="texto-1">NOME/RAZÃO SOCIAL</div>
-                <input class="input-1" name="cnpj">
+                <div class="texto-1">NOME/RAZÃO_SOCIAL</div>
+                <input class="input-especial" name="cnpj">
             </div>
             <div id="quadrado-2">
-                <div class="texto-1">Município</div>
+                <div class="texto-1">CNPJ/CPF</div>
                 <input class="input-1" name="municipio">
             </div>
             <div id="quadrado-3">
-                <div class="texto-1">CEP</div>
+                <div class="texto-1">ENDEREÇO NÚMERO</div>
+                <input class="input-1" name="cep">
+                <input class="input-2" name="num">
+            </div>
+            <div id="quadrado-4">
+                <div class="texto-1">BAIRRO/DISTRITO</div>
                 <input class="input-1" name="cep">
             </div>
             <input class="botao-2" type="submit" value="Enviar">
