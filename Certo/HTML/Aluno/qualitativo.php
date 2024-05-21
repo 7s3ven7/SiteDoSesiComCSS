@@ -44,7 +44,7 @@ echo '<!DOCTYPE html>
         <input id="botao" type="submit" value="Recebimento">
     </form>
     <div class="caixa-botao-mini">
-        <form action="qualitativo.html">
+        <form action="qualitativo.php">
             <input id="botao-mini" type="submit" value="Qualitativo">
         </form>
     </div>
@@ -182,8 +182,8 @@ echo '<!DOCTYPE html>
                 <tr>
                     <td>Atraso: </td>
                     <td><input class="check" type="checkbox" name="17"</td>
-                    <td>Lotes: </td>
-                    <td><input class="check" type="checkbox" name="18"</td>
+                    <td>Observações: </td>
+                    <td><input class="botao-tabela" type="text" name="18"</td>
                 </tr>
                 <tr>
                     <td>produto faltando: </td>
@@ -192,7 +192,7 @@ echo '<!DOCTYPE html>
                     <td><input class="check" type="checkbox" name="20"</td>
                 </tr>
             </table>
-            <input class="botao-2" type="submit" value="Enviar">
+            <input class="botao-2" type="submit" value="Enviar" left=5px>
         </form>
     </div>
 </body>
