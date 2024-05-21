@@ -551,9 +551,10 @@
 }
 
 .linha{
-    width: 100px;
+    width: 1599px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 500%;
 }
 
 @media(max-width:1400px) {
