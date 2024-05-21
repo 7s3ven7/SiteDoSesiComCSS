@@ -4,9 +4,75 @@
     box-sizing: 0;
 }
 
+.input-1 {
+    font-size: large;
+    text-align: left;
+    background-color: whitesmoke;
+    padding: 2px;
+    padding-left: 5px;
+    border-radius: 7.5px;
+}
+
+.texto-1 {
+    font-size: x-large;
+    color: gray;
+    padding: 10px;
+    padding-left: 2px;
+}
+
+#quadrado-1 {
+    position: absolute;
+    text-align: left;
+    align-items: left;
+    width: 400px;
+    height: 100px;
+    left: 200px;
+    top: 100px;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#quadrado-2 {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: 611px;
+    top: 100px;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#quadrado-3 {
+    position: absolute;
+    text-align: left;
+    align-items: left;
+    width: 300px;
+    height: 100px;
+    left: 200px;
+    top: 211px;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#quadrado-4 {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: 600px;
+    top: 211px;
+    border: 1px black solid;
+}
+
+/*#quadrado-1 {
+    position: absolute;
+    width: ;
+    height: ;
+    border: 1px black solid;
+}*/
+
 .caixa {
-    width: 85%;
-    height: 85%;
+    width: 1765px;
+    height: 915px;
     background-color: whitesmoke;
     left: 12.5%;
     top: 10%;
@@ -202,8 +268,8 @@
 }
 
 #caixa {
-    width: 85%;
-    height: 90%;
+    width: 1765px;
+    height: 969px;
     background-color: whitesmoke;
     left: 12.5%;
     top: 5%;
