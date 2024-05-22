@@ -75,42 +75,58 @@ echo '
 echo '
 <!DOCTYPE html>
 <body>
-<div class="texto5">Número do pedido: 
-<form action="controle.html">
-<input class="botao-tabela2" type="text" name="n_pedido">
-</form>
-</div>
-<div class="texto5">Número da nota: 
-<br>
-Doca: </div>
+<form method="POST" action="<?php echo $PHP_SELF; ?>">
+    <div class="texto5">Número do pedido:
+        <form action="controle.html">
+            <input class="botao-tabela2" type="text" name="n_pedido">
+        </form>
+        </form>
+    </div>
+    <div class="texto5">Número da nota:
+        <br>
+        Doca:
+    </div>
 </body>
+
 </html>';
-            $n_pedido = 1;
-            $SQL = 'SELECT * FROM `produto_p` 
-                WHERE `n_pedido` = '.$n_pedido.';';
-            $resultado = $conexao->query($SQL);
-            if($resultado->num_rows != 0)
-            {
-                for($i=1;$i<=$resultado->num_rows;$i++){
-                    $row = $resultado -> fetch_array();
-                    echo '
-                    <table class="tabela-4">
-                    <div id="linha">
-                    <hr class="linha">
-                    <tr>
-                    <td><div class="texto3">Produto: '.$row['nome'].'</div></td>
-                    <td><div class="texto3">Unidade: '.$row['und'].'</div></td>
-                    <td><div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div></td>
-                    </tr>
-                    <tr>
-                    <td><div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div></td>
-                    <td><div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div></td>
-                    <td><div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div></td>
-                    </tr>
-                    </div>
-                    </table>
-';}}
-echo '<form method="POST" action="action_qualitativo.php">
-<input class="botao-2" type="submit" value="Enviar" left=5px>
-</form>';
-?>
+$n_pedido = 1;
+$SQL = 'SELECT * FROM `produto_p`
+WHERE `n_pedido` = '.$n_pedido.';';
+$resultado = $conexao->query($SQL);
+if($resultado->num_rows != 0)
+{
+for($i=1;$i<=$resultado->num_rows;$i++){
+    $row = $resultado -> fetch_array();
+    echo '
+    <table class="tabela-4">
+        <div id="linha">
+            <hr class="linha">
+            <tr>
+                <td>
+                    <div class="texto3">Produto: '.$row['nome'].'</div>
+                </td>
+                <td>
+                    <div class="texto3">Unidade: '.$row['und'].'</div>
+                </td>
+                <td>
+                    <div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div>
+                </td>
+                <td>
+                    <div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div>
+                </td>
+                <td>
+                    <div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div>
+                </td>
+            </tr>
+        </div>
+    </table>
+    ';}}
+    echo '<form method="POST" action="action_qualitativo.php">
+        <input class="botao-2" type="submit" value="Enviar" left=5px>
+    </form>';
+    ?>
