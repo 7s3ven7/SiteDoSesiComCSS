@@ -13,11 +13,12 @@ $name = "root";
 $password = "root";
 $DB = "dados";
 
-
+$n_pedido ="544";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+    header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
     $SQL = 'SELECT * FROM `quantitava_expedicao_p_1` 
@@ -31,7 +32,6 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: ../../HTML/Aluno/recebimento.html");
 		exit();
 	}
 }
