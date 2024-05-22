@@ -450,6 +450,16 @@
     position: relative;
 }
 
+.texto5 {
+    font-size: large;
+    width: 15%;
+    border: 1px black solid;
+    border-radius: 7px;
+    position: relative;
+    text-align: left;
+    left: 0.5%;
+}
+
 .botao-2 {
     width: 12.5%;
     height: 75px;

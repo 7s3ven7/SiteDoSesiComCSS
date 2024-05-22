@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="../../CSS/site.css">
+    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+</head>
 
 <body><?php
 $hostname = "127.0.0.1";
@@ -29,16 +34,7 @@ if ($conexao->connect_errno) {
 		exit();
 	}
 }
-echo '<!DOCTYPE html>
-
-<head>
-    <link rel="stylesheet" href="../../CSS/site.css">
-    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-</head>
-
-<body>
+echo '
     <div class="menu">Menu</div>
     <form action="recebimento.html">
         <input id="botao" type="submit" value="Recebimento">
@@ -74,6 +70,13 @@ echo '<!DOCTYPE html>
         <input class="botao" type="submit" value="Controle">
     </form>
     <div class="caixa">
+';
+echo '
+<!DOCTYPE html>
+<body>
+<div class="texto5">Número do pedido:</div>
+<div class="texto5">Número da nota:</div>
+<div class="texto5">Doca:</div>
 </body>
 </html>';
             $n_pedido = 1;
@@ -85,11 +88,6 @@ echo '<!DOCTYPE html>
                 for($i=1;$i<=$resultado->num_rows;$i++){
                     $row = $resultado -> fetch_array();
                     echo '
-                    <!DOCTYPE html>
-                    <head>
-                    <link rel="stylesheet" href="../../CSS/site.css">
-                    </head>
-                    <body>
                     <table class="tabela-4">
                     <div id="linha">
                     <hr class="linha">
@@ -105,8 +103,6 @@ echo '<!DOCTYPE html>
                     </tr>
                     </div>
                     </table>
-</body>
-</html>
 ';}}
 echo '<form method="POST" action="../../PHP/Aluno/qualitativo.php">
 <input class="botao-2" type="submit" value="Enviar" left=5px>
