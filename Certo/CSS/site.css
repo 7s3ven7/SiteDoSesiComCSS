@@ -451,10 +451,12 @@
 
 .texto5 {
     font-size: large;
-    width: 40%;
-    border: 2px black solid;
+    width: 15%;
+    border: 1px black solid;
     border-radius: 7px;
     position: relative;
+    text-align: left;
+    left: 0.5%;
 }
 
 .botao-2 {

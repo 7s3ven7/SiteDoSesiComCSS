@@ -74,9 +74,9 @@ echo '
 echo '
 <!DOCTYPE html>
 <body>
-<div class="texto4">Número do pedido:</div>
-<div class="texto4">Número da nota:</div>
-<div class="texto4">Doca:</div>
+<div class="texto5">Número do pedido:</div>
+<div class="texto5">Número da nota:</div>
+<div class="texto5">Doca:</div>
 </body>
 </html>';
             $n_pedido = 1;
