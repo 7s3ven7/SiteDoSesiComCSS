@@ -14,7 +14,7 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $SQL = 'SELECT * FROM `quantitava_expedicao_p_1` 
+    $SQL = 'SELECT * FROM `quantitava_expedicao_p` 
     WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar

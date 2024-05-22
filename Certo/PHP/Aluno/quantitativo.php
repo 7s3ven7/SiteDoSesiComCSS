@@ -21,7 +21,7 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
-    $SQL = 'SELECT * FROM `quantitava_expedicao_p_1` 
+    $SQL = 'SELECT * FROM `quantitava_expedicao_p` 
     WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
@@ -38,16 +38,16 @@ if ($conexao->connect_errno) {
 echo '
     <div class="menu">Menu</div>
     <form action="../../HTML/Aluno/recebimento.html">
-        <input id="botao" type="submit" value="Recebimento">
+        <input class="botao" type="submit" value="Recebimento">
     </form>
     <div class="caixa-botao-mini">
         <form action="qualitativo.php">
-            <input id="botao-mini" type="submit" value="Qualitativo">
+            <input class="botao-mini" type="submit" value="Qualitativo">
         </form>
     </div>
     <div class="caixa-botao-mini">
     <form action="quantitativo.php">
-        <input class="botao-mini" type="submit" value="Quantitativo">
+        <input id="botao-mini" type="submit" value="Quantitativo">
     </form>
     </div>
     <form action="movimentacao.html">
@@ -86,7 +86,7 @@ Doca: </div>
 </body>
 </html>';
             $n_pedido = 1;
-            $SQL = 'SELECT * FROM `produto_p_1` 
+            $SQL = 'SELECT * FROM `produto_p` 
                 WHERE `n_pedido` = '.$n_pedido.';';
             $resultado = $conexao->query($SQL);
             if($resultado->num_rows != 0)
