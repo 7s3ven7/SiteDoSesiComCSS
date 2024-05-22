@@ -4,18 +4,18 @@
     box-sizing: 0;
 }
 
-.input-1 {
+.input-nota {
     font-size: large;
     text-align: left;
     background-color: white;
     border: 1px solid white;
-    width: 300px;
+    width: 70%;
     padding: 2px;
     padding-left: 5px;
     border-radius: 7.5px;
 }
 
-.input-especial {
+.input-nota-mini {
     font-size: large;
     text-align: left;
     background-color: white;
@@ -26,20 +26,21 @@
     border-radius: 7.5px;
 }
 
-.input-2 {
+.input-nota-mini-mini {
     font-size: large;
     text-align: left;
     background-color: white;
     border: 1px solid white;
     width: 45px;
     padding: 2px;
-    padding-left: 2px;
+    padding-left: 5px;
     border-radius: 7.5px;
     position: absolute;
-    left: 350px;
+    margin-top: 2px;
+    left: 355px;
 }
 
-.input-mini {
+.input-nota-mini {
     font-size: large;
     text-align: left;
     background-color: white;
@@ -51,7 +52,7 @@
     position: absolute;
 }
 
-.texto-1 {
+.texto-nota-medium {
     font-size: x-large;
     color: gray;
     padding: 10px;
@@ -59,7 +60,7 @@
     font-weight: bold;
 }
 
-.texto-2 {
+.texto-nota-small {
     font-size: 20px;
     color: gray;
     padding: 10px;
@@ -67,7 +68,7 @@
     font-weight: bold;
 }
 
-#quadrado-1 {
+#qd1 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -80,7 +81,7 @@
     padding: 5px;
 }
 
-#quadrado-2 {
+#qd2 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -93,7 +94,7 @@
     padding: 5px;
 }
 
-#quadrado-3 {
+#qd3 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -106,7 +107,7 @@
     padding: 5px;
 }
 
-#quadrado-4 {
+#qd4 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -119,7 +120,7 @@
     padding: 5px;
 }
 
-#quadrado-5 {
+#qd5 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -132,7 +133,7 @@
     padding: 5px;
 }
 
-#quadrado-6 {
+#qd6 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -146,7 +147,7 @@
     padding: 5px;
 }
 
-#quadrado-7 {
+#qd7 {
     position: absolute;
     text-align: left;
     align-items: left;
@@ -550,7 +551,7 @@
     color: whitesmoke;
 }
 
-.linha{
+.linha {
     width: 1599px;
     margin-left: auto;
     margin-right: auto;
