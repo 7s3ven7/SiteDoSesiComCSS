@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
--- Generation Time: 22-Maio-2024 às 11:21
-========
--- Generation Time: 21-Maio-2024 às 10:37
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
+-- Generation Time: 22-Maio-2024 às 11:36
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -27,7 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 -- Estrutura da tabela `clientes_p_1`
 --
 
@@ -53,11 +48,6 @@ INSERT INTO `clientes_p_1` (`CNPJ`, `nome_c`, `CEP`, `gmail`, `fone`) VALUES
 -- Estrutura da tabela `controle_a_1`
 --
 
-========
--- Estrutura da tabela `controle_a_1`
---
-
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 CREATE TABLE `controle_a_1` (
   `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -172,7 +162,6 @@ CREATE TABLE `movimenta_a_1` (
   `quant_und` int(11) NOT NULL,
   `quant_prod` double NOT NULL,
   `kg` double NOT NULL
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -202,36 +191,6 @@ INSERT INTO `nossa_empresa_p_1` (`CNPJ_empresa`, `CEP`, `fone`, `gerente`, `gmai
 -- Estrutura da tabela `nota_expedicao_p_1`
 --
 
-========
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `nossa_empresa_p_1`
---
-
-CREATE TABLE `nossa_empresa_p_1` (
-  `CNPJ_empresa` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gerente` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Extraindo dados da tabela `nossa_empresa_p_1`
---
-
-INSERT INTO `nossa_empresa_p_1` (`CNPJ_empresa`, `CEP`, `fone`, `gerente`) VALUES
-('546547564', '5654654', '99995469', 'jonas');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `nota_expedicao_p_1`
---
-
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 CREATE TABLE `nota_expedicao_p_1` (
   `id_expedicao` int(11) NOT NULL,
   `n_nota` int(11) NOT NULL,
@@ -254,11 +213,7 @@ CREATE TABLE `nota_expedicao_p_1` (
 -- Extraindo dados da tabela `nota_expedicao_p_1`
 --
 
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 INSERT INTO `nota_expedicao_p_1` (`id_expedicao`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `fone_desti`, `fone_nossa_empresa`, `CNPJ_remet`, `CNPJ_destina`, `placa_veiculo`, `date_emi`, `CEP_entrega`, `modelo_v`, `eixos`, `PBT`) VALUES
-========
-INSERT INTO `nota_expedicao_p_1` (`id_expedicao`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `fone_desti`, `fone_nossa_empresa`, `CNPJ_remet`, `CPF_destina`, `placa_veiculo`, `date_emi`, `CEP_entrega`, `modelo_v`, `eixos`, `PBT`) VALUES
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 (0, 56546654, 2, '56466', 'matheus empreendimenos', '7575675', '453553553344545', '565645646546', '56465465654546', '566464656', '2024-08-22', '658686657', 'corsa estrada', '6', 3778);
 
 -- --------------------------------------------------------
@@ -294,13 +249,8 @@ CREATE TABLE `nota_recebimento_p_1` (
 -- Extraindo dados da tabela `nota_recebimento_p_1`
 --
 
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 INSERT INTO `nota_recebimento_p_1` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `lote`, `fone_forne`, `CNPJ_dest`, `CNPJ_emit`, `placa_veiculo`, `data_emi`, `CEP_entrega`, `CPF_motorista`, `nome_motoris`, `modelo_v`, `eixos`, `PBT`, `NCM`, `CST`, `CFOP`) VALUES
 (0, 56546654, 2, '456365377', 'matheus', '5354644645', '4554654343356', '463635656563', '4666666653', '23523524355', '2024-05-04', '65465567567', '545656756', 'matheus', 'corsa turbo', '7', 3778, 8532434, 3423455, 3442343);
-========
-INSERT INTO `nota_recebimento_p_1` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `lote`, `fone_forne`, `CNPJ_dest`, `CNPJ_remet`, `placa_veiculo`, `data_emi`, `haver_pedido`, `CEP_entrega`, `CPF_motorista`, `nome_motoris`, `modelo_v`, `eixos`, `PBT`, `NCM`, `CST`, `CFOP`) VALUES
-(0, 56546654, 2, '456365377', 'matheus', '5354644645', '4554654343356', '463635656563', '4666666653', '23523524355', '2024-05-04', 'sim\r\n', '65465567567', '545656756', 'matheus', 'corsa turbo', '7', 3778, 8532434, 3423455, 3442343);
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 
 -- --------------------------------------------------------
 
@@ -309,17 +259,8 @@ INSERT INTO `nota_recebimento_p_1` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `
 --
 
 CREATE TABLE `pedi_clientes_p_1` (
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
   `id_pedido_clien_p_1` int(11) NOT NULL,
   `CNPJ` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-========
-  `CPF` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_c` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CEP` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gmail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nume_pedido` int(11) NOT NULL,
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
   `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `und` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `quant_und` int(11) NOT NULL,
@@ -332,15 +273,9 @@ CREATE TABLE `pedi_clientes_p_1` (
 -- Extraindo dados da tabela `pedi_clientes_p_1`
 --
 
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 INSERT INTO `pedi_clientes_p_1` (`id_pedido_clien_p_1`, `CNPJ`, `nome_prod`, `und`, `quant_und`, `quant_prod`, `valor_und`, `sinop`) VALUES
 (1, '', '342342', '32442', 32434, 86.507, 4.05, '324234'),
 (2, '', '564', '6456', 3, 50.45, 5.058, '678');
-========
-INSERT INTO `pedi_clientes_p_1` (`CPF`, `nome_c`, `CEP`, `gmail`, `fone`, `nume_pedido`, `nome_prod`, `und`, `quant_und`, `quant_prod`, `valor_und`, `NCM`, `CST`, `CFOP`, `sinop`) VALUES
-('342342342', '3424234', '2342342', '3234234', '23234', 23424, '342342', '32442', 32434, 86.507, 4.05, 23424, 23423, 34, '324234'),
-('765757', '546546', '45654', '56456', '54646', 5654, '564', '6456', 3, 50.45, 5.058, 78768, 768778, 678, '678');
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 
 -- --------------------------------------------------------
 
@@ -560,7 +495,6 @@ INSERT INTO `usuario_1` (`id`, `tipo`, `nome`, `senha`, `cod_grupo`, `cargo`, `c
 --
 
 --
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 -- Indexes for table `clientes_p_1`
 --
 ALTER TABLE `clientes_p_1`
@@ -599,40 +533,6 @@ ALTER TABLE `fornecedor_p_1`
 --
 -- Indexes for table `movimenta_a_1`
 --
-========
--- Indexes for table `controle_a_1`
---
-ALTER TABLE `controle_a_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `doca_expedicao_a_1`
---
-ALTER TABLE `doca_expedicao_a_1`
-  ADD PRIMARY KEY (`n_nota`);
-
---
--- Indexes for table `doca_recebimendo_a_1`
---
-ALTER TABLE `doca_recebimendo_a_1`
-  ADD PRIMARY KEY (`n_nota`);
-
---
--- Indexes for table `estoque_a_1`
---
-ALTER TABLE `estoque_a_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `fornecedor_p_1`
---
-ALTER TABLE `fornecedor_p_1`
-  ADD PRIMARY KEY (`CNPJ`);
-
---
--- Indexes for table `movimenta_a_1`
---
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 ALTER TABLE `movimenta_a_1`
   ADD PRIMARY KEY (`cod_inter`);
 
@@ -647,7 +547,6 @@ ALTER TABLE `nossa_empresa_p_1`
 --
 ALTER TABLE `nota_expedicao_p_1`
   ADD PRIMARY KEY (`id_expedicao`);
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 
 --
 -- Indexes for table `nota_recebimento_p_1`
@@ -700,60 +599,6 @@ ALTER TABLE `quantitava_recebimento_p_1`
 --
 -- Indexes for table `usuario_1`
 --
-========
-
---
--- Indexes for table `nota_recebimento_p_1`
---
-ALTER TABLE `nota_recebimento_p_1`
-  ADD PRIMARY KEY (`id_recebimento`);
-
---
--- Indexes for table `pedi_clientes_p_1`
---
-ALTER TABLE `pedi_clientes_p_1`
-  ADD PRIMARY KEY (`CPF`);
-
---
--- Indexes for table `picking_a_1`
---
-ALTER TABLE `picking_a_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `produto_p_1`
---
-ALTER TABLE `produto_p_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `qualitativo_expedicao_a_1`
---
-ALTER TABLE `qualitativo_expedicao_a_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `qualitativo_recebimento_a_1`
---
-ALTER TABLE `qualitativo_recebimento_a_1`
-  ADD PRIMARY KEY (`n_nota`);
-
---
--- Indexes for table `quantitava_expedicao_p_1`
---
-ALTER TABLE `quantitava_expedicao_p_1`
-  ADD PRIMARY KEY (`cod_inter`);
-
---
--- Indexes for table `quantitava_recebimento_p_1`
---
-ALTER TABLE `quantitava_recebimento_p_1`
-  ADD PRIMARY KEY (`n_nota`);
-
---
--- Indexes for table `usuario_1`
---
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 ALTER TABLE `usuario_1`
   ADD PRIMARY KEY (`id`);
 
@@ -762,7 +607,6 @@ ALTER TABLE `usuario_1`
 --
 
 --
-<<<<<<<< HEAD:Certo/BANCO_DE_DADOS/dados_1 (1).sql
 -- AUTO_INCREMENT for table `pedi_clientes_p_1`
 --
 ALTER TABLE `pedi_clientes_p_1`
@@ -770,10 +614,6 @@ ALTER TABLE `pedi_clientes_p_1`
 --
 -- AUTO_INCREMENT for table `usuario_1`
 --
-========
--- AUTO_INCREMENT for table `usuario_1`
---
->>>>>>>> 19ef3be9d1cda55cdd2f3cc1c490ccdda3e4b38b:Certo/BANCO_DE_DADOS/dados_1.sql
 ALTER TABLE `usuario_1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
