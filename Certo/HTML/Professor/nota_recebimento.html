@@ -12,13 +12,10 @@
     <form action="recebimento.html">
         <input class="botao" type="submit" value="Recebimento">
     </form>
-    <form action="espedicao.html">
-        <input class="botao" type="submit" value="Fornecedor">
+    <form action="fornecedor.html">
+        <input class="botao" type="submit" value="Cadastros">
     </form>
-    <form action="espedicao.html">
-        <input class="botao" type="submit" value="Dados/Empresa">
-    </form>
-    <form action="tela.html">
+    <form action="nota_recebimento.html">
         <input id="botao" type="submit" value="Notas">
     </form>
     <div class=" caixa-botao-mini">
@@ -26,79 +23,50 @@
             <input id="botao-mini" type="submit" value="Expedição">
         </form>
     </div>
-    <form action="espedicao.html">
+    <form action="pedido.html">
         <input class="botao" type="submit" value="Pedido">
     </form>
-    <form action="espedicao.html">
+    <form action="produto.html">
         <input class="botao" type="submit" value="Produto">
+    </form>
+    <form action="reset.html">
+        <input id="reset" type="submit" value="Recomeçar">
     </form>
     <div id="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
-            <table class="tabela">
-                <tr>
-                    <td>Código Interno: </td>
-                    <td><input class="botao-tabela" type="text" name="1" placeholder="00000000001"></td>
-                    <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="2" placeholder="1234"></td>
-                </tr>
-                <tr>
-                    <td>Nome da empresa: </td>
-                    <td><input class="botao-tabela" type="text" name="3" placeholder="Aplle"></td>
-                    <td>CNPJ da empresa: </td>
-                    <td><input class="botao-tabela" type="text" name="4" placeholder="12.345.678/0001-00"></td>
-                </tr>
-                <tr>
-                    <td>Modelo do container: </td>
-                    <td><input class="botao-tabela" type="text" name="5" placeholder="SENU-123456-2"></td>
-                    <td>Navio: </td>
-                    <td><input class="botao-tabela" type="text" name="6" placeholder="Titanaique"></td>
-                </tr>
-                <tr>
-                    <td>Destinatário: </td>
-                    <td><input class="botao-tabela" type="text" name="7" placeholder="Aplle"></td>
-                    <td>Tipo do container: </td>
-                    <td><input class="botao-tabela" type="text" name="8" placeholder="2201"></td>
-                </tr>
-                <tr>
-                    <td>Lacre: </td>
-                    <td><input class="botao-tabela" type="text" name="9" placeholder="Lacre"></td>
-                    <td>Lacre SIF: </td>
-                    <td><input class="botao-tabela" type="text" name="10" placeholder="SIF"></td>
-                </tr>
-                <tr>
-                    <td>Temperatura: </td>
-                    <td><input class="botao-tabela" type="text" name="11" placeholder="Temperatura"></td>
-                    <td>IMO: </td>
-                    <td><input class="botao-tabela" type="text" name="12" placeholder="IMO"></td>
-                </tr>
-                <tr>
-                    <td>Número ONU: </td>
-                    <td><input class="botao-tabela" type="text" name="13" placeholder="Número"></td>
-                    <td>Nome do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="14" placeholder="Nome produto"></td>
-                </tr>
-                <tr>
-                    <td>Unidades: </td>
-                    <td><input class="botao-tabela" type="text" name="15" placeholder="unidade"></td>
-                    <td>Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="16" placeholder="quantidade"></td>
-                </tr>
-                <tr>
-                    <td>Quantidade do unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="17" placeholder="quantidade"></td>
-                    <td>Lotes: </td>
-                    <td><input class="botao-tabela" type="text" name="18" placeholder="A1"></td>
-                </tr>
-                <tr>
-                    <td>CNPJ do destinatário: </td>
-                    <td><input class="botao-tabela" type="text" name="19" placeholder="CNPJ"></td>
-                    <td>Número da nota: </td>
-                    <td><input class="botao-tabela" type="text" name="20" placeholder="pedido"></td>
-                </tr>
-            </table>
-            <input class="botao-2" type="submit" value="Enviar">
+            <div id="qd1">
+                <div class="texto-nota-medium">NOME/RAZÃO_SOCIAL</div>
+                <input class="input-nota" type="text" name="cnpj">
+            </div>
+            <div id="qd2">
+                <div class="texto-nota-medium">CNPJ</div>
+                <input class="input-nota" type="text" name="municipio">
+            </div>
+            <div id="qd3">
+                <div class="texto-nota-small">DATA_DE_EMISSÃO</div>
+                <input class="input-nota" type="date" name="municipio">
+            </div>
+            <div id="qd4">
+                <div class="texto-nota-medium">ENDEREÇO NÚMERO</div>
+                <input class="input-nota" type="text" name="cep">
+                <input class="input-nota-mini-mini" type="number" name="num">
+            </div>
+            <div id="qd5">
+                <div class="texto-nota-medium">BAIRRO/DISTRITO</div>
+                <input class="input-nota" type="text" name="cep">
+            </div>
+            <div id="qd6">
+                <div class="texto-nota-medium">CEP</div>
+                <input class="input-nota" type="text" name="cep">
+            </div>
+            <div id="qd7">
+                <div class="texto-nota-small">DATA_DE_ENTRADA/SAIDA</div>
+                <input class="input-nota" type="date" name="municipio">
+            </div>
         </form>
     </div>
 </body>
 
 </html>
+
+<!--colspan e rowspan html-->

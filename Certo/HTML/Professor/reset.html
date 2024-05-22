@@ -15,27 +15,29 @@
     <form action="cadastro.html">
         <input class="botao" type="submit" value="Cadastros">
     </form>
-    <form action="tela.html">
-        <input id="botao" type="submit" value="Notas">
+    <form action="notas.html">
+        <input class="botao" type="submit" value="Notas">
     </form>
-    <div class="caixa-botao-mini">
-        <form action="nota_recebimento.html">
-            <input class="botao-mini" type="submit" value="Expedição">
-        </form>
-    </div>
     <form action="pedido.html">
         <input class="botao" type="submit" value="Pedido">
     </form>
     <form action="produto.html">
         <input class="botao" type="submit" value="Produto">
     </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
+    <form action="tela.html">
+        <input id="reset-2" type="submit" value="Recomeçar">
     </form>
-    <div id="caixa-info">
-        <div id="informacao">
-            Explicação: .
-        </div>
+    <div id="caixa">
+        <form method="POST" action="../../PHP/reset.php">
+            <div id="informacao">
+                Tem certeza que quer redefinir o banco de dados do site?
+                <br>
+                Confirme com a senha, e no botão de "Enviar" abaixo!
+            </div>
+            <input id="texto-submit" type="number" placeholder="senha" name="senha_secreta">
+            <br>
+            <input id="submit" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 
