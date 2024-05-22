@@ -24,7 +24,6 @@ $SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome 
 		$_SESSION['tipo'] = $row[0];
 		$_SESSION['nome'] = $row[1];
 		$_SSION['senha'] = $row[2];
-		echo "secuss";
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
 			header('Location: ../HTML/Professor/tela.html', true, 301);
