@@ -424,6 +424,15 @@
     margin-left: auto;
 }
 
+.botao-tabela2 {
+    padding: 1%;
+    font-size: large;
+    width: 97%;
+    border: 1px black solid;
+    border-radius: 10px;
+    left: 100%;
+}
+
 .texto2 {
     padding: 1%;
     font-size: large;
