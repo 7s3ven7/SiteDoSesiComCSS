@@ -29,10 +29,9 @@ if ($conexao->connect_errno) {
     $v17 = $_POST['17']; //quant_und
     $v18 = $_POST['18']; //lote
     $v19 = $_POST['19']; //CNPJ_dest
-    $v20 = $_POST['20']; //n_pedido
 
-    $SQL = 'INSERT INTO `quantitava_recebimento_p` (`cod_inter`,`cod_forne`,`nome_empre`,`CNPJ_empre`,`modelo_conta`,`navio`,`nome_dest`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`nome_prod`,`und`,`quant_produto`,`quant_und`,`lote`,`CNPJ_dest`,`n_pedido`) 
-    VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.','.$v17.','.$v18.','.$v19.','.$v20.');';
+    $SQL = 'INSERT INTO `quantitava_recebimento_p` (`cod_inter`,`cod_forne`,`nome_empre`,`CNPJ_empre`,`modelo_conta`,`navio`,`nome_dest`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`nome_prod`,`und`,`quant_produto`,`quant_und`,`lote`,`CNPJ_dest`) 
+    VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.','.$v17.','.$v18.','.$v19.');';
     //Inserir no DB
     $resultado = $conexao->query($SQL);
 
