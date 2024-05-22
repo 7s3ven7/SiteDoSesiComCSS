@@ -13,8 +13,9 @@ $name = "root";
 $password = "root";
 $DB = "dados";
 
+
+
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-$n_pedido = 544;
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
@@ -30,13 +31,13 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: index.php");
+		header("Location: ../../HTML/Aluno/recebimento.html");
 		exit();
 	}
 }
 echo '
     <div class="menu">Menu</div>
-    <form action="recebimento.html">
+    <form action="../../HTML/Aluno/recebimento.html">
         <input id="botao" type="submit" value="Recebimento">
     </form>
     <div class="caixa-botao-mini">
@@ -74,9 +75,9 @@ echo '
 echo '
 <!DOCTYPE html>
 <body>
-<div class="texto5">Número do pedido:</div>
-<div class="texto5">Número da nota:</div>
-<div class="texto5">Doca:</div>
+<div class="texto5">Número do pedido: '.$w.'</div>
+<div class="texto5">Número da nota: '.$w.'</div>
+<div class="texto5">Doca: '.$w.'</div>
 </body>
 </html>';
             $n_pedido = 1;
@@ -104,7 +105,7 @@ echo '
                     </div>
                     </table>
 ';}}
-echo '<form method="POST" action="../../PHP/Aluno/qualitativo.php">
+echo '<form method="POST" action="action_qualitativo.php">
 <input class="botao-2" type="submit" value="Enviar" left=5px>
 </form>';
 ?>
