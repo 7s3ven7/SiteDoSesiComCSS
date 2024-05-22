@@ -79,9 +79,7 @@ echo '
 <form action="controle.html">
 <input class="botao-tabela2" type="text" name="n_pedido">
 </form>
-</div>';
-
-echo '
+</div>
 <div class="texto5">Número da nota: 
 <br>
 Doca: </div>
