@@ -449,6 +449,14 @@
     position: relative;
 }
 
+.texto5 {
+    font-size: large;
+    width: 40%;
+    border: 2px black solid;
+    border-radius: 7px;
+    position: relative;
+}
+
 .botao-2 {
     width: 12.5%;
     height: 75px;

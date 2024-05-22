@@ -75,7 +75,6 @@ echo '<!DOCTYPE html>
     </form>
     <div class="caixa">
         <form method="POST" action="../../PHP/Aluno/qualitativo.php">
-        <div class="texto4">Número do pedido:</div></td>
             <table class="tabela-2">
                 <tr>
                     <td><div class="texto2">Código Interno:</div></td>
