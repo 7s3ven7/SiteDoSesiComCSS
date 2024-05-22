@@ -11,12 +11,12 @@ if ($conexao->connect_errno) {
     exit();
 } else {
     $v1 = $_POST['1']; //CNPJ
-    $v2 = $_POST['2']; //Nome do gerente
+    $v2 = $_POST['2']; //Nome do fornecedor
     $v3 = $_POST['3']; //Email
-    $v4 = $_POST['4']; //Telefone
-    $v5 = $_POST['5']; //CEP
+    $v4 = $_POST['4']; //CEP
+    $v5 = $_POST['5']; //Telefone
 
-    $SQL = 'INSERT INTO `nossa_empresa_p` (`CNPJ_empresa`,`gerente`,`email`,`fone`,`CEP`) 
+    $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ`,`name_fornec`,`email`,`CEP`,`fone`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
     //Inserir no DB
     $resultado = $conexao->query($SQL);
