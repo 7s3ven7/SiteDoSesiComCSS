@@ -75,7 +75,7 @@ echo '
 echo '
 <!DOCTYPE html>
 <body>
-<form method="POST" action="<?php echo $PHP_SELF; ?>">
+<form method="POST" action="quantitativo.php">
     <div class="texto5">Número do pedido:
         <form action="controle.html">
             <input class="botao-tabela2" type="text" name="n_pedido">
@@ -89,7 +89,8 @@ echo '
 </body>
 
 </html>';
-$n_pedido = 1;
+$pesquisar = $_POST['num_pedido'];
+echo $pesquisar;
 $SQL = 'SELECT * FROM `produto_p`
 WHERE `n_pedido` = '.$n_pedido.';';
 $resultado = $conexao->query($SQL);
