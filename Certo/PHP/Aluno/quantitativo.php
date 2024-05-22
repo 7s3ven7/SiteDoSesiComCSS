@@ -2,9 +2,9 @@
 
 <head>
     <link rel="stylesheet" href="../../CSS/site.css">
-    <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" ;charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 </head>
 
 <body><?php
@@ -75,9 +75,16 @@ echo '
 echo '
 <!DOCTYPE html>
 <body>
-<div class="texto5">Número do pedido: '.$w.'</div>
-<div class="texto5">Número da nota: '.$w.'</div>
-<div class="texto5">Doca: '.$w.'</div>
+<div class="texto5">Número do pedido: 
+<form action="controle.html">
+<input class="botao-tabela2" type="text" name="n_pedido">
+</form>
+</div>';
+
+echo '
+<div class="texto5">Número da nota: 
+<br>
+Doca: </div>
 </body>
 </html>';
             $n_pedido = 1;
