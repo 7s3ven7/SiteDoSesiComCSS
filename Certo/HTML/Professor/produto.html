@@ -11,6 +11,15 @@
     <div id="tipo">Professor</div>
     <div class="fundo"></div>
     <details class="details-all">
+        <summary class="details-big">Menus</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Inicio"></div>
+        </form>
+        <form action="reset.html">
+            <input class="details-small" type="submit" value="Resetar"></div>
+        </form>
+    </details>
+    <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form action="fornecedor.html">
             <input class="details-small" type="submit" value="Fornecedor"></div>
@@ -53,19 +62,40 @@
         </form>
     </details>
     <details class="details-all">
-        <summary class="details-big">Pedido</summary>
-        <form action="cadastro1.hmtl">
-            <input class="details-small" type="submit" value="Cadastro"></div>
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">DB</summary>
         <form action="reset.html">
             <input class="details-small" type="submit" value="Resetar">
         </form>
     </details>
     <div class="menu">Menu</div>
-    <div class="caixa-info">
+    <div class="caixa">
+        <form method="POST" action="../PHP/quantitativo.php">
+            <table class="tabela">
+                <tr>
+                    <td>CNPJ: </td>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="000.000.000-00"></td>
+                    <td>Nome do produto: </td>
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="caixa"></td>
+                </tr>
+                <tr>
+                    <td>Unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="nome"></td>
+                    <td>Quantidade de unidades: </td>
+                    <td><input class="botao-tabela" type="text" name="6" placeholder="10"></td>
+                </tr>
+                <tr>
+                    <td>Quantidade de produtos: </td>
+                    <td><input class="botao-tabela" type="text" name="12" placeholder="*"></td>
+                    <td>Valor da unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="13" placeholder="Pasta de dentes"></td>
+                </tr>
+                <tr>
+                    <td>Sinopse do pedido: </td>
+                    <td><input class="botao-tabela" type="text" name="15" placeholder="Observações"></td>
+                </tr>
+            </table>
+            <input class="botao-2" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 
