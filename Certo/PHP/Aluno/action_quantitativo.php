@@ -24,6 +24,7 @@ if ($conexao->connect_errno) {
 		$conexao -> close();
 		exit();
 	}
+
 }
 /*echo '
 <table class="tabela-4">
