@@ -71,25 +71,32 @@ echo '
         <input class="botao" type="submit" value="Controle">
     </form>
     <div class="caixa">
-';
-echo '
-<!DOCTYPE html>
-<body>
-<form method="POST" action="<?php echo $PHP_SELF; ?>">
-    <div class="texto5">Número do pedido:
-        <form action="controle.html">
-            <input class="botao-tabela2" type="text" name="n_pedido">
-        </form>
-        </form>
-    </div>
-    <div class="texto5">Número da nota:
-        <br>
-        Doca:
-    </div>
-</body>
+';?>
 
-</html>';
-$n_pedido = 1;
+    <!DOCTYPE html>
+
+    <body>
+        <form method="POST" action="quantitativo.php">
+            <div class="texto5">Número do pedido:
+                <form action="">
+                    <input class="botao-tabela2" type="text" id="n_pedido">
+                </form>
+        </form>
+        </div>
+        <div class="texto5">Número da nota:
+            <br>
+            Doca:
+        </div>
+    </body>
+
+    </html>
+
+    <?php
+    if($_POST['n_pedido']==''){
+exit();
+}else{
+    $pesquisar = $_POST['n_pedido'];
+    echo $pesquisar;
 $SQL = 'SELECT * FROM `produto_p`
 WHERE `n_pedido` = '.$n_pedido.';';
 $resultado = $conexao->query($SQL);
@@ -129,4 +136,5 @@ for($i=1;$i<=$resultado->num_rows;$i++){
     echo '<form method="POST" action="action_qualitativo.php">
         <input class="botao-2" type="submit" value="Enviar" left=5px>
     </form>';
+}
     ?>
