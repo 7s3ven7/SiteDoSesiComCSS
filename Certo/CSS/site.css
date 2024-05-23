@@ -1287,7 +1287,7 @@
         color: whitesmoke;
         font-size: 25px;
         border: 1px black solid;
-        position: relative;
+        border-bottom: 3px black solid;
         top: 120px;
         padding: 15px;
         padding-right: 5px;
