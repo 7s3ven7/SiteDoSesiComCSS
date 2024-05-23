@@ -4,72 +4,53 @@
     box-sizing: 0;
 }
 
-#caixa {
-    width: 1000px;
-    height: 600px;
-    background-color: lightgray;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin-right: auto;
+.menu {
+    font-size: 375%;
     position: relative;
-    top: 150px;
-    margin-left: 100px;
+    padding-left: 1%;
+    margin: 1.5%;
+    margin-left: 0%;
+    margin-top: 1%;
 }
 
-.input-nota {
-    font-size: large;
-    color: black;
-    border: 1px white solid;
-    width: 90%;
-}
-
-#qd1 {
-    width: 335px;
-    height: 50px;
-    padding: 10px;
-    font-weight: bold;
-    padding-bottom: 0;
-    align-items: left;
+details {
     text-align: left;
-    position: absolute;
-    left: 50px;
-    top: 100px;
-    font-size: 15px;
-    color: darkslategray;
-    background-color: whitesmoke;
-    border: 1px solid black;
+    align-items: left;
+    padding: 10px;
 }
 
-#qd2 {
-    width: 260px;
-    height: 50px;
-    padding: 10px;
-    font-weight: bold;
-    padding-bottom: 0;
-    align-items: left;
-    text-align: left;
-    position: absolute;
-    left: 406px;
-    top: 100px;
-    font-size: 15px;
-    color: darkslategray;
-    background-color: whitesmoke;
-    border: 1px solid black;
+.details-big {
+    width: 200px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 25px;
+    border: 1px black solid;
+    position: relative;
+    padding: 15px;
+    padding-right: 5px;
+    border-radius: 15px;
+    margin-left: 10px;
 }
 
-#qd3 {
-    width: 210px;
-    height: 50px;
-    padding: 10px;
-    font-weight: bold;
-    padding-bottom: 0;
-    align-items: left;
-    text-align: left;
-    position: absolute;
-    left: 687px;
-    top: 100px;
-    font-size: 15px;
-    color: darkslategray;
+.details-big:hover {
     background-color: whitesmoke;
-    border: 1px solid black;
+    color: green;
+}
+
+.details-small {
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 20px;
+    border: 1px black solid;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.details-small:hover {
+    background-color: whitesmoke;
+    color: green;
 }

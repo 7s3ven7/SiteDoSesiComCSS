@@ -8,62 +8,85 @@
 </head>
 
 <body>
-    <div class="menu">Menu</div>
-    <form action="recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
-    </form>
-    <form action="cadastro.html">
-        <input id="botao" type="submit" value="Cadastros">
-    </form>
-    <div class=" caixa-botao-mini">
+    <div id="tipo">Professor</div>
+    <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Cadastros</summary>
         <form action="fornecedor.html">
-            <input class="botao-mini" type="submit" value="Fornecedor">
+            <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-    </div>
-    <div class=" caixa-botao-mini">
         <form action="empresa.html">
-            <input class="botao-mini" type="submit" value="Empresa">
+            <input class="details-small" type="submit" value="Empresa"></div>
         </form>
-    </div>
-    <div class=" caixa-botao-mini">
-        <form action="cadastro.html">
-            <input id="botao-mini" type="submit" value="Cliente">
+        <details>
+            <summary class="details-small-more">Cliente</summary>
+            <form action="cliente.html">
+                <input class="details-small" type="submit" value="Cadastro"></div>
+            </form>
+            <form action="pedido_cadastro.html">
+                <input class="details-small" type="submit" value="Pedido"></div>
+            </form>
+        </details>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Recebimento</summary>
+        <form action="quantitativo.html">
+            <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
-    </div>
-    <form action="notas.html">
-        <input class="botao" type="submit" value="Notas">
-    </form>
-    <form action="pedido.html">
-        <input class="botao" type="submit" value="Pedido">
-    </form>
-    <form action="produto.html">
-        <input class="botao" type="submit" value="Produto">
-    </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
-    </form>
-    <div id="caixa">
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="quantitativo_expedicao.hmtl">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Produto</summary>
+        <form action="pedido_cadastro.html">
+            <input class="details-small" type="submit" value="Cadastro">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Pedido</summary>
+        <form action="cadastro1.hmtl">
+            <input class="details-small" type="submit" value="Cadastro"></div>
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">DB</summary>
+        <form action="reset.html">
+            <input class="details-small" type="submit" value="Resetar">
+        </form>
+    </details>
+    <div class="menu">Menu</div>
+    <div class="caixa">
         <form method="POST" action="../../PHP/Professor/cliente.php">
             <table class="tabela-mini">
                 <tr>
-                    <td>CPF: </td>
+                    <td>CNPJ: </td>
                     <td><input class="botao-tabela" type="text" name="1" placeholder="592.460.749.0001-22"></td>
                 </tr>
                 <tr>
                     <td>Nome do cliente: </td>
-                    <td><input class="botao-tabela" type="text" name="3" placeholder="Nome"></td>
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="Nome"></td>
                 </tr>
                 <tr>
                     <td>Gmail: </td>
-                    <td><input class="botao-tabela" type="text" name="5" placeholder="exemplo@gmail.com"></td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="exemplo@gmail.com"></td>
                 </tr>
                 <tr>
                     <td>Cep: </td>
-                    <td><input class="botao-tabela" type="text" name="7" placeholder="317-454-119"></td>
+                    <td><input class="botao-tabela" type="text" name="4" placeholder="317-454-119"></td>
                 </tr>
                 <tr>
                     <td>Telefone: </td>
-                    <td><input class="botao-tabela" type="text" name="9" placeholder="(47) 99999-9999"></td>
+                    <td><input class="botao-tabela" type="text" name="5" placeholder="(47) 99999-9999"></td>
                 </tr>
             </table>
             <input id="botao-2" type="submit" value="Enviar">

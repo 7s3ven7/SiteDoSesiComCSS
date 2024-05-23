@@ -4,6 +4,16 @@
     box-sizing: 0;
 }
 
+.fundo {
+    top: -10px;
+    left: -4px;
+    width: 227px;
+    border: 3px gray solid;
+    height: 1000px;
+    background-color: whitesmoke;
+    position: fixed;
+}
+
 .input-nota {
     font-size: large;
     text-align: left;
@@ -161,11 +171,11 @@
 }
 
 .caixa {
-    width: 1600px;
-    height: 825px;
+    width: 1615px;
+    height: 880px;
     background-color: whitesmoke;
-    left: 12.5%;
-    top: 10%;
+    left: 240px;
+    top: 75px;
     text-align: center;
     align-items: center;
     line-height: 200%;
@@ -175,7 +185,7 @@
 }
 
 #informacao {
-    width: 90%;
+    width: 80%;
     height: 80%;
     margin: 5%;
     position: fixed;
@@ -186,8 +196,8 @@
 }
 
 #caixa-info {
-    width: 85%;
-    height: 90%;
+    width: 1600px;
+    height: 875px;
     background-color: whitesmoke;
     left: 12.5%;
     top: 5%;
@@ -212,12 +222,75 @@
 }
 
 .menu {
-    font-size: 375%;
-    position: relative;
-    padding-left: 1%;
-    margin: 1.5%;
-    margin-left: 0%;
+    font-size: 70px;
+    left: 2px;
+    top: -20px;
+    height: 70px;
+    width: 185px;
+    position: fixed;
+    display: inline;
+    padding: 1%;
     margin-top: 1%;
+    background-color: whitesmoke;
+}
+
+.details-all {
+    text-align: left;
+    align-items: left;
+    padding: 10px;
+}
+
+.details-big {
+    width: 180px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 25px;
+    border: 1px black solid;
+    position: relative;
+    top: 120px;
+    padding: 15px;
+    padding-right: 5px;
+    border-radius: 15px;
+    margin-left: 2.5px;
+    transition: 0.25s;
+}
+
+.details-big:hover,
+.details-small:hover,
+.details-small-more:hover {
+    background-color: whitesmoke;
+    color: green;
+}
+
+.details-small {
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 20px;
+    border: 1px black solid;
+    top: 120px;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.25s;
+}
+
+.details-small-more {
+    width: 150px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 22.5px;
+    border: 1px black solid;
+    border-radius: 15px;
+    position: relative;
+    top: 120px;
+    padding: 15px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.25s;
 }
 
 .botao {
@@ -494,12 +567,12 @@
     border: 1px solid black;
     border-radius: 5px;
     position: fixed;
-    top: 3%;
-    padding: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    left: 12.5%;
-    width: 6%;
+    top: 7.5px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    left: 240px;
+    width: 1605px;
 }
 
 #texto-submit {
