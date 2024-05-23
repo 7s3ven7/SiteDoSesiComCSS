@@ -45,7 +45,7 @@
     <div class="caixa">
         <form method="POST" action="action_quantitativo.php">
             <div class="texto5">Número do pedido:
-                <input class="botao-tabela2" type="text" id="n_pedido">
+                <input class="botao-tabela2" type="number" name="n_pedido">
         </form>
     </div>
     <div class="texto5">Número da nota:
