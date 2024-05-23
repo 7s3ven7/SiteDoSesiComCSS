@@ -670,11 +670,11 @@
     }
 
     .caixa {
-        width: 85%;
-        height: 85%;
+        width: 1135px;
+        height: 690px;
         background-color: whitesmoke;
-        left: 12.5%;
-        top: 10%;
+        left: 240px;
+        top: 75px;
         text-align: center;
         align-items: center;
         line-height: 200%;
@@ -733,12 +733,15 @@
     }
 
     .menu {
-        font-size: 300%;
-        position: relative;
-        padding-left: 1%;
-        margin: 1%;
-        margin-left: 0%;
+        font-size: 50px;
+        left: 2px;
+        top: -20px;
+        height: 70px;
+        width: 185px;
+        position: fixed;
+        padding: 1%;
         margin-top: 1%;
+        background-color: whitesmoke;
     }
 
     .botao {
@@ -962,17 +965,17 @@
     }
 
     #tipo {
-        font-size: x-large;
+        font-size: xx-large;
         background-color: whitesmoke;
         border: 1px solid black;
         border-radius: 5px;
         position: fixed;
-        top: 3%;
-        padding: 0.5%;
-        padding-left: 1%;
-        padding-right: 1%;
-        left: 12.5%;
-        width: 8%;
+        top: 7.5px;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 0;
+        left: 240px;
+        width: 1125px;
     }
 
     #texto-submit {
@@ -1105,4 +1108,230 @@
         padding: 1%;
         font-size: medium;
     }
+
+    .fundo {
+        top: -10px;
+        left: -4px;
+        width: 227px;
+        border: 3px gray solid;
+        height: 1000px;
+        background-color: whitesmoke;
+        position: fixed;
+    }
+
+    .input-nota {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 70%;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+    }
+
+    .input-nota-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 675px;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+    }
+
+    .input-nota-mini-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 45px;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+        position: absolute;
+        margin-top: 2px;
+        left: 355px;
+    }
+
+    .input-nota-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 200px;
+        padding: 2px;
+        padding-left: 2px;
+        border-radius: 7.5px;
+        position: absolute;
+    }
+
+    .texto-nota-medium {
+        font-size: x-large;
+        color: gray;
+        padding: 10px;
+        word-spacing: 200px;
+        font-weight: bold;
+    }
+
+    .texto-nota-small {
+        font-size: 20px;
+        color: gray;
+        padding: 10px;
+        word-spacing: 200px;
+        font-weight: bold;
+    }
+
+    #qd1 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 750px;
+        height: 90px;
+        left: 80px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd2 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 350px;
+        height: 90px;
+        left: 841px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd3 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 300px;
+        height: 90px;
+        left: 1202px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd4 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 475px;
+        height: 90px;
+        left: 80px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd5 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        width: 350px;
+        height: 90px;
+        background-color: white;
+        left: 566px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd6 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        width: 264px;
+        height: 90px;
+        border: 1px black solid;
+        background-color: white;
+        left: 927px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd7 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 300px;
+        height: 90px;
+        left: 1202px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    .details-all {
+        text-align: left;
+        align-items: left;
+        padding: 10px;
+    }
+
+    .details-big {
+        width: 180px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 25px;
+        border: 1px black solid;
+        position: relative;
+        top: 120px;
+        padding: 15px;
+        padding-right: 5px;
+        border-radius: 15px;
+        margin-left: 2.5px;
+        transition: 0.25s;
+    }
+
+    .details-big:hover,
+    .details-small:hover,
+    .details-small-more:hover {
+        background-color: whitesmoke;
+        color: green;
+    }
+
+    .details-small {
+        width: 150px;
+        height: 50px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 20px;
+        border: 1px black solid;
+        top: 120px;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+        transition: 0.25s;
+    }
+
+    .details-small-more {
+        width: 150px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 22.5px;
+        border: 1px black solid;
+        border-radius: 15px;
+        position: relative;
+        top: 120px;
+        padding: 15px;
+        padding-right: 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        transition: 0.25s;
+    }
+
 }
