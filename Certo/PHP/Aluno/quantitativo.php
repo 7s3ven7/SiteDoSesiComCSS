@@ -71,7 +71,7 @@
 			
 			echo '<hr>';
 			if(mysqli_query($conexao,$sql)){
-                $resultado = mysqli_fetch_array
+                $resultado = mysqli_fetch_array;
 			while($row = mysqli_fetch_array($resultado)){
             echo '
             <table class="tabela-4">
