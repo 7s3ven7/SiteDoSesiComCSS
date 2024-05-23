@@ -1294,6 +1294,7 @@
         border-radius: 15px;
         margin-left: 2.5px;
         transition: 0.25s;
+        cursor: pointer;
     }
 
     .details-big:hover,
@@ -1310,12 +1311,14 @@
         color: whitesmoke;
         font-size: 20px;
         border: 1px black solid;
+        border-bottom: 2px black solid;
         top: 120px;
         position: relative;
         border-radius: 15px;
         margin-top: 10px;
         margin-left: 10px;
         transition: 0.25s;
+        cursor: cell;
     }
 
     .details-small-more {
@@ -1324,6 +1327,7 @@
         color: whitesmoke;
         font-size: 22.5px;
         border: 1px black solid;
+        border-bottom: 3px black solid;
         border-radius: 15px;
         position: relative;
         top: 120px;
@@ -1332,6 +1336,7 @@
         margin-left: 10px;
         margin-top: 10px;
         transition: 0.25s;
+        cursor: pointer;
     }
 
 }
