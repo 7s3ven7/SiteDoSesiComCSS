@@ -10,9 +10,9 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
-    $n_pedido=544;
-    $SQL = 'SELECT * FROM `quantitava_expedicao_p` 
-    WHERE `n_nota` = '.$n_pedido.';';
+    $n_pedido=$_POST['n_pedido'];
+    $SQL = 'SELECT * FROM `produto_p` 
+    WHERE `n_pedido` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
     if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
@@ -25,7 +25,7 @@ if ($conexao->connect_errno) {
 		exit();
 	}
 }
-echo '
+/*echo '
 <table class="tabela-4">
     <div id="linha">
         <hr class="linha">
@@ -57,5 +57,5 @@ echo '
 echo '<form method="POST" action="action_qualitativo.php">
     <input class="botao-2" type="submit" value="Enviar" left=5px>
 </form>';
-
+*/
 ?>
