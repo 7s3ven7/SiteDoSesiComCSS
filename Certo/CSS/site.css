@@ -319,7 +319,7 @@
     width: 11%;
     padding: 1%;
     border: 1px black solid;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: whitesmoke;
     color: green;
     text-align: center;
@@ -382,7 +382,7 @@
     padding: 0.5%;
     top: 15%;
     border: 1px black solid;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: whitesmoke;
     color: green;
     text-align: center;
@@ -592,11 +592,7 @@
     width: 200px;
     height: 30px;
     font-size: x-large;
-    border: 1px solid black;
-    border-radius: 5px;
-    left: 45%;
-    top: 50%;
-    position: absolute;
+    position: fixed;
 }
 
 #submit {
@@ -605,9 +601,7 @@
     font-size: large;
     border: 1px solid black;
     border-radius: 5px;
-    left: 47.5%;
-    top: 60%;
-    position: absolute;
+    position: fixed;
 }
 
 #reset {
@@ -770,7 +764,7 @@
         width: 11%;
         padding: 1%;
         border: 1px black solid;
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: whitesmoke;
         color: green;
         text-align: center;
@@ -833,7 +827,7 @@
         padding: 0.5%;
         top: 15%;
         border: 1px black solid;
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: whitesmoke;
         color: green;
         text-align: center;
@@ -863,7 +857,7 @@
         left: 42.5%;
         font-size: x-large;
         border: 1px black solid;
-        border-radius: 5px;
+        border-radius: 15px;
         color: whitesmoke;
         background-color: green;
     }
@@ -980,24 +974,23 @@
 
     #texto-submit {
         text-align: center;
-        width: 200px;
-        height: 30px;
-        font-size: x-large;
-        border: 1px solid black;
-        border-radius: 5px;
-        position: absolute;
-        ;
+        width: 80%;
+        top: 100px;
+        line-height: 50px;
+        font-size: xx-large;
+        position: fixed;
     }
 
     #submit {
         width: 150px;
         height: 60px;
         font-size: large;
-        background-color: gray;
-        color: red;
+        background-color: green;
+        color: white;
         border: 1px solid black;
         border-radius: 5px;
-        position: absolute;
+        position: relative;
+        top: 400px;
         transition: 0.25s;
     }
 
@@ -1008,105 +1001,24 @@
 
     #reset {
         font-size: large;
-        width: 11%;
-        padding: 1.175%;
+        width: 250px;
+        height: 30px;
+        padding: 5px;
         border: 1px black solid;
         border-radius: 10px;
-        background-color: green;
-        color: whitesmoke;
+        background-color: white;
+        top: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        color: black;
         text-align: center;
         position: relative;
-        margin-left: 1%;
-        margin-bottom: 0.5%;
         transition: 0.25s;
-        position: absolute;
-        top: 88%;
     }
 
     #reset:hover {
         background-color: lightcoral;
-        color: black;
-    }
-
-    #reset-2 {
-        font-size: large;
-        width: 11%;
-        padding: 1.175%;
-        border: 1px black solid;
-        border-radius: 10px;
-        background-color: lightcoral;
-        color: black;
-        text-align: center;
-        position: relative;
-        margin-left: 1%;
-        margin-bottom: 0.5%;
-        transition: 0.25s;
-        position: absolute;
-        top: 88%;
-    }
-
-    #reset-2:hover {
-        background-color: green;
-        color: whitesmoke;
-    }
-
-    #nota-1 {
-        width: 100%;
-        height: 80px;
-        border: 2.5px solid black;
-        padding: 3%;
-        line-height: 250%;
-        margin: -0.5%;
-    }
-
-    #nota-2 {
-        width: 50%;
-        height: 80px;
-        border: 2.5px solid black;
-        padding: 3%;
-        line-height: 250%;
-        margin: -0.5%;
-        margin-left: 6%;
-    }
-
-    #nota-3 {
-        width: 60%;
-        height: 80px;
-        border: 2.5px solid black;
-        padding: 3%;
-        line-height: 250%;
-        margin: -0.5%;
-        margin-left: 6%;
-    }
-
-    #nota-4 {
-        width: 80%;
-        height: 80px;
-        border: 2.5px solid black;
-        padding: 3%;
-        line-height: 250%;
-        margin: -0.5%;
-    }
-
-    #nota-5 {
-        width: 80%;
-        height: 80px;
-        border: 2.5px solid black;
-        padding: 03%;
-        line-height: 250%;
-        margin: -0.5%;
-    }
-
-    .texto-mini-2 {
-        font-size: x-large;
-        color: gray;
-    }
-
-    .submit-1 {
-        border-radius: 15px;
-        width: 95%;
-        padding: 1%;
-        font-size: medium;
+        color: white;
     }
 
     .fundo {
