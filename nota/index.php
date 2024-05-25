@@ -45,8 +45,10 @@
     }
     </style>
 </head>
+''
 
 <body>
+
     <div class="box" onclick="this.classList.toggle('clicked')"></div>
 </body>
 
