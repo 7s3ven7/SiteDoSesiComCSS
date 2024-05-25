@@ -45,11 +45,9 @@
     }
     </style>
 </head>
-''
 
 <body>
-
-    <div class="box" onclick="this.classList.toggle('clicked')"></div>
+    <div>Esse pika ae</div>
 </body>
 
 </html>
