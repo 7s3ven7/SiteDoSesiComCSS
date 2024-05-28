@@ -420,19 +420,22 @@
 
 #texto-submit {
     text-align: center;
-    width: 200px;
-    height: 30px;
-    font-size: x-large;
+    width: 80%;
+    top: 30%;
+    line-height: 50px;
+    font-size: xx-large;
     position: fixed;
 }
 
 #submit {
-    width: 100px;
+    top: 50%;
+    width: 13%;
     height: 40px;
     font-size: large;
     border: 1px solid black;
     border-radius: 5px;
     position: fixed;
+    left: 43.3%;
 }
 
 #reset {
@@ -449,7 +452,8 @@
     margin-bottom: 0.5%;
     transition: 0.15s;
     position: absolute;
-    top: 88%;
+    top: 60%;
+    right: 50%;
 }
 
 #reset:hover {
