@@ -10,7 +10,7 @@
     width: 227px;
     border: 3px gray solid;
     height: 1000px;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
     position: fixed;
 }
 
@@ -171,7 +171,7 @@
     display: inline;
     padding: 1%;
     margin-top: 1%;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
 }
 
 .details-all {
