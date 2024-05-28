@@ -153,3 +153,9 @@ número da solicitação
 Doca
 
 Expedição (Carga) 2 - Aluno
+número da solicitação
+nome do produto
+unidade
+quantidade
+Observações
+Doca
