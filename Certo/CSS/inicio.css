@@ -1,257 +1,97 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: 0;
 }
 
-.caixa {
-    width: 35%;
-    height: 44%;
-    left: 35%;
-    top: 10%;
-    padding-top: 2%;
-    position: fixed;
-    align-items: center;
-    text-align: center;
-    border: 1px black solid;
-    border-radius: 5%;
-    background-color: whitesmoke;
-}
-
-.caixa-2 {
-    width: 35%;
-    height: 25%;
-    left: 35%;
-    top: 58.5%;
-    position: fixed;
-    align-items: center;
-    text-align: center;
-    border: 1px black solid;
-    border-radius: 5%;
-    background-color: whitesmoke;
-}
-
-.caixa-3 {
-    width: 35%;
-    height: 70%;
-    left: 35%;
-    top: 10%;
-    padding-top: 1%;
-    position: fixed;
-    align-items: center;
-    text-align: center;
-    border: 1px black solid;
-    border-radius: 5%;
-    background-color: whitesmoke;
-}
-
-.caixa-mini {
-    width: 80%;
-    height: 35%;
-    padding: 8%;
-    text-align: left;
-    align-items: left;
-    position: relative;
-}
-
-.caixa-mini-mini {
-    padding: 10%;
-    text-align: center;
-    align-items: center;
-}
-
-.caixa-mini-2 {
-    width: 100%;
-    height: 20%;
-    padding-top: 5%;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    line-height: 500%;
-}
-
-.texto {
-    font-size: 50px;
-}
-
-.padding {
-    padding: 15px;
-}
-
-.botao {
-    font-size: 30px;
-    width: 250px;
-    height: 75px;
-    padding: 10px;
-    border: 1px black solid;
-    border-radius: 10px;
-    background-color: green;
-    color: whitesmoke;
-}
-
-.texto-mini {
-    font-size: 32.5px;
-    color: darkslategray;
-}
-
-.caixa-texto {
-    font-size: 22.5px;
-    width: 100%;
-    height: 40px;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding-left: 5px;
-}
-
-#botao-2 {
-    font-size: 30px;
-    position: relative;
-    width: 250px;
-    height: 75px;
-    padding: 10px;
-    border: 1px black solid;
-    border-radius: 10px;
-    background-color: green;
-    color: whitesmoke;
-}
-
-#botao {
-    font-size: 30px;
-    position: relative;
-    width: 250px;
-    height: 75px;
-    padding: 10px;
-    border: 1px black solid;
-    border-radius: 10px;
-    background-color: green;
-    color: whitesmoke;
-}
-
 @media(max-width:1400px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: 0;
+    }
+
     .caixa {
-        width: 35%;
-        height: 44%;
-        left: 35%;
-        top: 10%;
-        padding-top: 2%;
+        width: 500px;
+        height: 600px;
+        margin-left: 450px;
+        margin-right: 450px;
+        top: 100px;
         position: fixed;
-        align-items: center;
-        text-align: center;
-        border: 1px black solid;
-        border-radius: 5%;
+        border: 1px solid black;
+        border-radius: 15px;
         background-color: whitesmoke;
-    }
-
-    .caixa-2 {
-        width: 35%;
-        height: 25%;
-        left: 35%;
-        top: 58.5%;
-        position: fixed;
-        align-items: center;
         text-align: center;
-        border: 1px black solid;
-        border-radius: 5%;
-        background-color: whitesmoke;
-    }
-
-    .caixa-3 {
-        width: 35%;
-        height: 70%;
-        left: 35%;
-        top: 10%;
-        padding-top: 2%;
-        position: fixed;
-        align-items: center;
-        text-align: center;
-        border: 1px black solid;
-        border-radius: 5%;
-        background-color: whitesmoke;
     }
 
     .caixa-mini {
-        width: 80%;
-        height: 35%;
-        padding: 5%;
+        width: 400px;
+        height: 150px;
+        padding-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        background-color: whitesmoke;
         text-align: left;
-        align-items: left;
+    }
+
+    .caixa-mini-cadastro {
+        width: 400px;
+        height: 350px;
+        padding-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
         position: relative;
+        background-color: whitesmoke;
+        text-align: left;
     }
 
-    .caixa-mini-mini {
-        padding: 10%;
-        text-align: center;
-        align-items: center;
-    }
-
-    .caixa-mini-2 {
+    .caixa-texto {
         width: 100%;
-        height: 20%;
-        padding-top: 5%;
-        text-align: center;
-        align-items: center;
-        position: relative;
-        line-height: 500%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 15px;
+        font-size: 18px;
     }
 
     .texto {
-        font-size: 40px;
-    }
-
-    .padding {
-        padding: 15px;
-    }
-
-    .botao {
-        font-size: 25px;
-        position: relative;
-        width: 200px;
-        height: 60px;
-        padding: 7.5px;
-        border: 1px black solid;
-        border-radius: 5px;
-        background-color: green;
-        color: whitesmoke;
-    }
-
-    #botao {
-        font-size: 25px;
-        position: relative;
-        left: 10%;
-        width: 200px;
-        height: 60px;
-        padding: 7.5px;
-        border: 1px black solid;
-        border-radius: 5px;
-        background-color: green;
-        color: whitesmoke;
-    }
-
-    #botao-2 {
-        font-size: 25px;
-        position: relative;
-        top: 10%;
-        width: 200px;
-        height: 60px;
-        padding: 7.5px;
-        border: 1px black solid;
-        border-radius: 5px;
-        background-color: green;
-        color: whitesmoke;
+        padding-top: 50px;
+        font-size: 50px;
+        color: darkgreen;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 50px;
     }
 
     .texto-mini {
         font-size: 25px;
-        color: darkslategray;
+        color: gray;
+
     }
 
-    .caixa-texto {
-        font-size: 20px;
-        width: 110%;
-        height: 35px;
-        border: 1px black solid;
-        border-radius: 5px;
-        padding-left: 2.5px;
+    .botao {
+        width: 200px;
+        padding: 15px;
+        font-size: 25px;
+        border: 1px solid black;
+        border-radius: 15px;
+        background-color: green;
+        color: whitesmoke;
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
     }
 
+    hr {
+        width: 502px;
+        height: 5px;
+        top: 30px;
+        left: -1px;
+        position: relative;
+        background-color: white;
+        border: 0px;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+        margin: auto;
+    }
 }

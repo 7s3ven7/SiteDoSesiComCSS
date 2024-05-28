@@ -10,7 +10,7 @@
     width: 227px;
     border: 3px gray solid;
     height: 1000px;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
     position: fixed;
 }
 
@@ -20,6 +20,17 @@
     background-color: white;
     border: 1px solid white;
     width: 70%;
+    padding: 2px;
+    padding-left: 5px;
+    border-radius: 7.5px;
+}
+
+.input-nota-mini {
+    font-size: large;
+    text-align: left;
+    background-color: white;
+    border: 1px solid white;
+    width: 675px;
     padding: 2px;
     padding-left: 5px;
     border-radius: 7.5px;
@@ -37,6 +48,18 @@
     position: absolute;
     margin-top: 2px;
     left: 355px;
+}
+
+.input-nota-mini {
+    font-size: large;
+    text-align: left;
+    background-color: white;
+    border: 1px solid white;
+    width: 200px;
+    padding: 2px;
+    padding-left: 2px;
+    border-radius: 7.5px;
+    position: absolute;
 }
 
 .texto-nota-medium {
@@ -161,6 +184,43 @@
     border-radius: 10px;
 }
 
+#informacao {
+    width: 80%;
+    height: 80%;
+    margin: 5%;
+    position: fixed;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: xx-large;
+    line-height: 150%;
+}
+
+#caixa-info {
+    width: 1600px;
+    height: 875px;
+    background-color: whitesmoke;
+    left: 12.5%;
+    top: 5%;
+    text-align: center;
+    align-items: center;
+    line-height: 200%;
+    position: fixed;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.caixa-2 {
+    width: 42.5%;
+    height: 90%;
+    left: 55%;
+    top: 5%;
+    line-height: 140%;
+    position: fixed;
+    border: 1px black solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .menu {
     font-size: 70px;
     left: 2px;
@@ -171,7 +231,7 @@
     display: inline;
     padding: 1%;
     margin-top: 1%;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
 }
 
 .details-all {
@@ -218,7 +278,7 @@
 }
 
 .details-small-more {
-    width: 130px;
+    width: 150px;
     background-color: green;
     color: whitesmoke;
     font-size: 22.5px;
@@ -243,8 +303,7 @@
     color: whitesmoke;
     text-align: center;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1%;
     margin-bottom: 0.5%;
     transition: 0.25s;
 }
@@ -253,6 +312,97 @@
     background-color: whitesmoke;
     color: green;
     padding: 1.005%;
+}
+
+#botao {
+    font-size: x-large;
+    width: 11%;
+    padding: 1%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    color: green;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    transition: 0.25s;
+}
+
+#botao:hover {
+    background-color: green;
+    color: whitesmoke;
+    padding: 1.005%;
+}
+
+
+
+.caixa-botao-mini {
+    width: 11%;
+    height: 50px;
+    position: relative;
+    align-items: right;
+    text-align: right;
+    padding-left: 1.1%;
+    margin: -4px;
+    margin-top: -4px;
+}
+
+.botao-mini {
+    font-size: x-large;
+    width: 80%;
+    height: 40px;
+    padding: 0.5%;
+    top: 15%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 5%;
+    transition: 0.25s;
+}
+
+.botao-mini:hover {
+    background-color: whitesmoke;
+    color: green;
+}
+
+#botao-mini:hover {
+    background-color: green;
+    color: whitesmoke;
+}
+
+#botao-mini {
+    font-size: x-large;
+    width: 80%;
+    height: 40px;
+    padding: 0.5%;
+    top: 15%;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    color: green;
+    text-align: center;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 5%;
+    transition: 0.25s;
+}
+
+#nome {
+    font-size: xx-large;
+    width: 50%;
+    height: 4%;
+    padding: 2.5px;
+    background-color: whitesmoke;
+    border: 1px black solid;
+    border-radius: 5px;
+    position: fixed;
+    left: 12.5%;
+    top: 5%;
 }
 
 .tabela {
@@ -292,6 +442,18 @@
     position: fixed;
     border: 1px black solid;
     border-radius: 10px;
+}
+
+.sair {
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    left: 1805px;
+    top: 15px;
+    text-align: center;
 }
 
 #botao-2 {
@@ -392,7 +554,7 @@
     left: 0.5%;
 }
 
-.botao {
+.botao-2 {
     width: 12.5%;
     height: 75px;
     margin: 1%;
@@ -430,7 +592,11 @@
     width: 200px;
     height: 30px;
     font-size: x-large;
-    position: fixed;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 45%;
+    top: 50%;
+    position: absolute;
 }
 
 #submit {
@@ -439,7 +605,9 @@
     font-size: large;
     border: 1px solid black;
     border-radius: 5px;
-    position: fixed;
+    left: 47.5%;
+    top: 60%;
+    position: absolute;
 }
 
 #reset {
@@ -573,7 +741,7 @@
         position: fixed;
         padding: 1%;
         margin-top: 1%;
-        background-color: rgb(220, 220, 220);
+        background-color: whitesmoke;
     }
 
     .botao {
@@ -602,7 +770,7 @@
         width: 11%;
         padding: 1%;
         border: 1px black solid;
-        border-radius: 15px;
+        border-radius: 10px;
         background-color: whitesmoke;
         color: green;
         text-align: center;
@@ -665,7 +833,7 @@
         padding: 0.5%;
         top: 15%;
         border: 1px black solid;
-        border-radius: 15px;
+        border-radius: 10px;
         background-color: whitesmoke;
         color: green;
         text-align: center;
@@ -695,7 +863,7 @@
         left: 42.5%;
         font-size: x-large;
         border: 1px black solid;
-        border-radius: 15px;
+        border-radius: 5px;
         color: whitesmoke;
         background-color: green;
     }
@@ -812,23 +980,24 @@
 
     #texto-submit {
         text-align: center;
-        width: 80%;
-        top: 100px;
-        line-height: 50px;
-        font-size: xx-large;
-        position: fixed;
+        width: 200px;
+        height: 30px;
+        font-size: x-large;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        ;
     }
 
     #submit {
         width: 150px;
         height: 60px;
         font-size: large;
-        background-color: green;
-        color: white;
+        background-color: gray;
+        color: red;
         border: 1px solid black;
         border-radius: 5px;
-        position: relative;
-        top: 400px;
+        position: absolute;
         transition: 0.25s;
     }
 
@@ -839,24 +1008,105 @@
 
     #reset {
         font-size: large;
-        width: 250px;
-        height: 30px;
-        padding: 5px;
+        width: 11%;
+        padding: 1.175%;
         border: 1px black solid;
         border-radius: 10px;
-        background-color: white;
-        top: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        color: black;
+        background-color: green;
+        color: whitesmoke;
         text-align: center;
         position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
         transition: 0.25s;
+        position: absolute;
+        top: 88%;
     }
 
     #reset:hover {
         background-color: lightcoral;
-        color: white;
+        color: black;
+    }
+
+    #reset-2 {
+        font-size: large;
+        width: 11%;
+        padding: 1.175%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: lightcoral;
+        color: black;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+        position: absolute;
+        top: 88%;
+    }
+
+    #reset-2:hover {
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #nota-1 {
+        width: 100%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-2 {
+        width: 50%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-3 {
+        width: 60%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+        margin-left: 6%;
+    }
+
+    #nota-4 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 3%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    #nota-5 {
+        width: 80%;
+        height: 80px;
+        border: 2.5px solid black;
+        padding: 03%;
+        line-height: 250%;
+        margin: -0.5%;
+    }
+
+    .texto-mini-2 {
+        font-size: x-large;
+        color: gray;
+    }
+
+    .submit-1 {
+        border-radius: 15px;
+        width: 95%;
+        padding: 1%;
+        font-size: medium;
     }
 
     .fundo {
@@ -865,7 +1115,7 @@
         width: 227px;
         border: 3px gray solid;
         height: 1000px;
-        background-color: rgb(220, 220, 220);
+        background-color: whitesmoke;
         position: fixed;
     }
 
@@ -1061,7 +1311,6 @@
         color: whitesmoke;
         font-size: 20px;
         border: 1px black solid;
-        border-bottom: 2px black solid;
         top: 120px;
         position: relative;
         border-radius: 15px;
@@ -1072,16 +1321,15 @@
     }
 
     .details-small-more {
-        width: 135px;
+        width: 150px;
         background-color: green;
         color: whitesmoke;
         font-size: 22.5px;
         border: 1px black solid;
-        border-bottom: 3px black solid;
         border-radius: 15px;
         position: relative;
         top: 120px;
-        padding: 7.5px;
+        padding: 15px;
         padding-right: 5px;
         margin-left: 10px;
         margin-top: 10px;
