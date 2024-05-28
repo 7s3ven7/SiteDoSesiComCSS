@@ -308,35 +308,6 @@
     margin-right: auto;
 }
 
-.tabela-2 {
-    line-height: 120%;
-    width: 50%;
-    padding: 1%;
-    font-size: 20px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tabela-3 {
-    top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 100%;
-    width: 80%;
-    padding: 1%;
-    font-size: 20px;
-    position: relative;
-}
-
-.tabela-4 {
-    line-height: 100%;
-    width: 100%;
-    padding: 0.25%;
-    font-size: 20px;
-    position: relative;
-}
-
 .botao-tabela {
     padding: 1%;
     font-size: large;
@@ -347,13 +318,13 @@
     margin-left: auto;
 }
 
-.botao-tabela2 {
-    padding: 1%;
+.botao-tabela-2 {
+    padding: 2px;
+    padding-left: 5px;
     font-size: large;
-    width: 97%;
+    width: 200px;
     border: 1px black solid;
     border-radius: 10px;
-    left: 100%;
 }
 
 .texto2 {
