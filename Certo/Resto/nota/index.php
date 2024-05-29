@@ -46,9 +46,13 @@
                 <input class="input-nota" type="text" name="nota">
             </div>
         </div>
-        <table id="tabela-nota">
+        <table>
             <tr>
-                <td>
+                <td class="tabela-nota">
+                    <div class="text-nota">Código</div>
+                    <input class="input-nota" type="text" name="nota">
+                </td>
+                <td class="tabela-nota">
                     <div class="text-nota">Código</div>
                     <input class="input-nota" type="text" name="nota">
                 </td>

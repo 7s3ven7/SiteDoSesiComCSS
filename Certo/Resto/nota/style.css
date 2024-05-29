@@ -117,7 +117,7 @@
     top: 200px;
 }
 
-#tabela-nota {
+.tabela-nota {
     border: 1px solid black;
     width: 1000px;
     height: 100px;
