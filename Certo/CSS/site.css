@@ -4,6 +4,11 @@
     box-sizing: 0;
 }
 
+.nota-fiscal {
+    border: 1px solid black;
+    width: 200px;
+}
+
 .fundo {
     top: -10px;
     left: -4px;
@@ -235,23 +240,22 @@
 
 .botao {
     font-size: x-large;
-    width: 11%;
-    padding: 1%;
+    width: 200px;
+    padding: 20px;
     border: 1px black solid;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: green;
     color: whitesmoke;
     text-align: center;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.5%;
     transition: 0.25s;
 }
 
 .botao:hover {
-    background-color: whitesmoke;
-    color: green;
+    background-color: blue;
+    color: blue;
     padding: 1.005%;
 }
 
@@ -383,18 +387,6 @@
     position: relative;
     text-align: left;
     left: 0.5%;
-}
-
-.botao {
-    width: 12.5%;
-    height: 75px;
-    margin: 1%;
-    position: relative;
-    font-size: x-large;
-    border: 1px black solid;
-    border-radius: 5px;
-    color: whitesmoke;
-    background-color: green;
 }
 
 .check {
