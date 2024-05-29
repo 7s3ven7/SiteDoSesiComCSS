@@ -5,7 +5,7 @@
 -- Host: localhost
 -- Generation Time: 22-Maio-2024 às 13:24
 -- Versão do servidor: 5.7.11
--- PHP Version: 5.6.18
+-- PHP Version: 5.6.18 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
