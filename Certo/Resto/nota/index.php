@@ -10,57 +10,48 @@
 
 <body>
     <div id="caixa">
-        <form method="POST" action="../PHP/quantitativo.php">
+        <div id="margin">
             <div id="qd-logo">
             </div>
-            <div id="qd-vazio-1"></div>
             <div id="qd-danfe">
                 <div class="text-nota">Danfe</div>
+                <input class="input-nota" type="text" name="danfe">
             </div>
-            <div id="qd-nota-fiscal">Nota Fiscal</div>
-            <!--Proxima linha-->
-            <div id="qd-nome-do-emitente">NOME_DO_EMITENTE</div>
-            <input>
-            <div id="qd-cnpj">CNPJ</div>
-            <input>
-            <div id="qd-fone-emitente">FONE_EMITENTE</div>
-            <div id="qd-cep-emitente">CEP_EMITENTE</div>
-            <input>
-            <div id="qd-data-de-emissao">DATA_DE_EMISSÃO</div>
-            <input>
-    </div>
-
-
-    <div id="qd1">
-        <div class="texto-nota-medium">NOME_DO_EMITENTE</div>
-        <input class="input-nota" type="text" name="cnpj">
-    </div>
-    <div id="qd2">
-        <div class="texto-nota-medium">CNPJ</div>
-        <input class="input-nota" type="text" name="municipio">
-    </div>
-    <div id="qd3">
-        <div class="texto-nota-small">DATA_DE_EMISSÃO</div>
-        <input class="input-nota" type="date" name="municipio">
-    </div>
-    <div id="qd4">
-        <div class="texto-nota-medium">ENDEREÇO NÚMERO</div>
-        <input class="input-nota" type="text" name="cep">
-        <input class="input-nota-mini-mini" type="number" name="num">
-    </div>
-    <div id="qd5">
-        <div class="texto-nota-medium">BAIRRO/DISTRITO</div>
-        <input class="input-nota" type="text" name="cep">
-    </div>
-    <div id="qd6">
-        <div class="texto-nota-medium">CEP</div>
-        <input class="input-nota" type="text" name="cep">
-    </div>
-    <div id="qd7">
-        <div class="texto-nota-small">DATA_DE_ENTRADA/SAIDA</div>
-        <input class="input-nota" type="date" name="municipio">
-    </div>
-    </form>
+            <div id="qd-nota-fiscal">
+                <div class="text-nota">Número Nota</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-cnpj">
+                <div class="text-nota">CNPJ</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-cep-emitente">
+                <div class="text-nota">CEP de emitente</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-data-de-emissao">
+                <div class="text-nota">Data de emissão</div>
+                <input class="input-nota" type="date" name="nota">
+            </div>
+            <div id="qd-horario-de-emissao">
+                <div class="text-nota">Hora da emissão</div>
+                <input class="input-nota" type="time" name="nota">
+            </div>
+            <div id="qd-nome-do-emitente">
+                <div class="text-nota">Nome do emitente</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-fone-emitente">
+                <div class="text-nota">Telefone</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-dados-produto">
+                <div class="text-titulo">Código</div>
+            </div>
+            <div id="qd-descricao">
+                <div class="text-titulo">Descrição dos produtos</div>
+            </div>
+        </div>
     </div>
 </body>
 
