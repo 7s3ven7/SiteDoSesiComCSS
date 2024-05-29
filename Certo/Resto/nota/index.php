@@ -46,7 +46,10 @@
                 <input class="input-nota" type="text" name="nota">
             </div>
             <div id="qd-dados-produto">
-                <div class="text-titulo">Código</div>
+                <div class="text-titulo">
+                    <div class="text-nota">Telefone</div>
+                    <input class="input-nota" type="text" name="nota">
+                </div>
             </div>
             <div id="qd-descricao">
                 <div class="text-titulo">Descrição dos produtos</div>
