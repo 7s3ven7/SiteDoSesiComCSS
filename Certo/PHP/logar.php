@@ -16,7 +16,7 @@ if ($conexao->connect_errno) {
 	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
 	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
 
-$SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario_1` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+$SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
 
 	$result = $conexao->query($SQL);
 	if ($result->num_rows > 0) {
@@ -24,7 +24,6 @@ $SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario_1` WHERE `nome` = '" . $nom
 		$_SESSION['tipo'] = $row[0];
 		$_SESSION['nome'] = $row[1];
 		$_SSION['senha'] = $row[2];
-		echo "secuss";
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
 			header('Location: ../HTML/Professor/tela.html', true, 301);

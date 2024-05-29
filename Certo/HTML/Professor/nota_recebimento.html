@@ -5,34 +5,68 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro nota de recebimento</title>
 </head>
 
 <body>
-    <div class="menu">Menu</div>
-    <form action="recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
-    </form>
-    <form action="fornecedor.html">
-        <input class="botao" type="submit" value="Cadastros">
-    </form>
-    <form action="nota_recebimento.html">
-        <input id="botao" type="submit" value="Notas">
-    </form>
-    <div class=" caixa-botao-mini">
-        <form action="notas.html">
-            <input id="botao-mini" type="submit" value="Expedição">
+    <div id="tipo">Conta: Professor</div>
+    <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Menus</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Inicio"></div>
         </form>
-    </div>
-    <form action="pedido.html">
-        <input class="botao" type="submit" value="Pedido">
-    </form>
-    <form action="produto.html">
-        <input class="botao" type="submit" value="Produto">
-    </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
-    </form>
-    <div id="caixa">
+        <form action="../index.html">
+            <input class="details-small" type="submit" value="Sair"></div>
+        </form>
+        <form action="reset.html">
+            <input class="details-small" type="submit" value="Resetar"></div>
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Cadastros</summary>
+        <form action="fornecedor.html">
+            <input class="details-small" type="submit" value="Fornecedor"></div>
+        </form>
+        <form action="empresa.html">
+            <input class="details-small" type="submit" value="Empresa"></div>
+        </form>
+        <details>
+            <summary class="details-small-more">Cliente</summary>
+            <form action="cliente.html">
+                <input class="details-small" type="submit" value="Cadastro"></div>
+            </form>
+            <form action="pedido.html">
+                <input class="details-small" type="submit" value="Pedido"></div>
+            </form>
+        </details>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Produto</summary>
+        <form action="pedido.html">
+            <input class="details-small" type="submit" value="Cadastro">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Recebimento</summary>
+        <form action="quantitativo_recebimento.html">
+            <input class="details-small" type="submit" value="Quantitativo"></div>
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="quantitativo_expedicao.html">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <div class="menu">Menu</div>
+    <div class="caixa">
         <form method="POST" action="../PHP/quantitativo.php">
             <div id="qd1">
                 <div class="texto-nota-medium">NOME/RAZÃO_SOCIAL</div>

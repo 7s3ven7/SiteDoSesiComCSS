@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 22-Maio-2024 às 11:36
+-- Generation Time: 22-Maio-2024 às 13:24
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18 
 
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `clientes_p_1`
+-- Estrutura da tabela `clientes_p`
 --
 
 CREATE TABLE `clientes_p` (
@@ -48,7 +48,7 @@ INSERT INTO `clientes_p` (`CNPJ`, `nome_c`, `CEP`, `gmail`, `fone`) VALUES
 -- Estrutura da tabela `controle_a`
 --
 
-CREATE TABLE `controle_a_1` (
+CREATE TABLE `controle_a` (
   `cod_inter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_forne` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `n_nota` int(11) NOT NULL,
@@ -191,7 +191,7 @@ INSERT INTO `nossa_empresa_p` (`CNPJ_empresa`, `CEP`, `fone`, `gerente`, `gmail`
 -- Estrutura da tabela `nota_expedicao_p`
 --
 
-CREATE TABLE `nota_expedicao_p_1` (
+CREATE TABLE `nota_expedicao_p` (
   `id_expedicao` int(11) NOT NULL,
   `n_nota` int(11) NOT NULL,
   `danf` int(11) NOT NULL,
@@ -213,7 +213,7 @@ CREATE TABLE `nota_expedicao_p_1` (
 -- Extraindo dados da tabela `nota_expedicao_p`
 --
 
-INSERT INTO `nota_expedicao_p_1` (`id_expedicao`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `fone_desti`, `fone_nossa_empresa`, `CNPJ_remet`, `CNPJ_destina`, `placa_veiculo`, `date_emi`, `CEP_entrega`, `modelo_v`, `eixos`, `PBT`) VALUES
+INSERT INTO `nota_expedicao_p` (`id_expedicao`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `fone_desti`, `fone_nossa_empresa`, `CNPJ_remet`, `CNPJ_destina`, `placa_veiculo`, `date_emi`, `CEP_entrega`, `modelo_v`, `eixos`, `PBT`) VALUES
 (0, 56546654, 2, '56466', 'matheus empreendimenos', '7575675', '453553553344545', '565645646546', '56465465654546', '566464656', '2024-08-22', '658686657', 'corsa estrada', '6', 3778);
 
 -- --------------------------------------------------------
@@ -249,7 +249,7 @@ CREATE TABLE `nota_recebimento_p` (
 -- Extraindo dados da tabela `nota_recebimento_p`
 --
 
-INSERT INTO `nota_recebimento_p_1` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `lote`, `fone_forne`, `CNPJ_dest`, `CNPJ_emit`, `placa_veiculo`, `data_emi`, `CEP_entrega`, `CPF_motorista`, `nome_motoris`, `modelo_v`, `eixos`, `PBT`, `NCM`, `CST`, `CFOP`) VALUES
+INSERT INTO `nota_recebimento_p` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `nome_destinatario`, `lote`, `fone_forne`, `CNPJ_dest`, `CNPJ_emit`, `placa_veiculo`, `data_emi`, `CEP_entrega`, `CPF_motorista`, `nome_motoris`, `modelo_v`, `eixos`, `PBT`, `NCM`, `CST`, `CFOP`) VALUES
 (0, 56546654, 2, '456365377', 'matheus', '5354644645', '4554654343356', '463635656563', '4666666653', '23523524355', '2024-05-04', '65465567567', '545656756', 'matheus', 'corsa turbo', '7', 3778, 8532434, 3423455, 3442343);
 
 -- --------------------------------------------------------
@@ -258,7 +258,7 @@ INSERT INTO `nota_recebimento_p_1` (`id_recebimento`, `n_nota`, `danf`, `CEP`, `
 -- Estrutura da tabela `pedi_clientes_p`
 --
 
-CREATE TABLE `pedi_clientes_p_1` (
+CREATE TABLE `pedi_clientes_p` (
   `id_pedido_clien_p_1` int(11) NOT NULL,
   `CNPJ` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_prod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -273,7 +273,7 @@ CREATE TABLE `pedi_clientes_p_1` (
 -- Extraindo dados da tabela `pedi_clientes_p`
 --
 
-INSERT INTO `pedi_clientes_p_1` (`id_pedido_clien_p_1`, `CNPJ`, `nome_prod`, `und`, `quant_und`, `quant_prod`, `valor_und`, `sinop`) VALUES
+INSERT INTO `pedi_clientes_p` (`id_pedido_clien_p_1`, `CNPJ`, `nome_prod`, `und`, `quant_und`, `quant_prod`, `valor_und`, `sinop`) VALUES
 (1, '', '342342', '32442', 32434, 86.507, 4.05, '324234'),
 (2, '', '564', '6456', 3, 50.45, 5.058, '678');
 
@@ -495,7 +495,7 @@ INSERT INTO `usuario` (`id`, `tipo`, `nome`, `senha`, `cod_grupo`, `cargo`, `cod
 --
 
 --
--- Indexes for table `clientes_p_1`
+-- Indexes for table `clientes_p`
 --
 ALTER TABLE `clientes_p`
   ADD PRIMARY KEY (`CNPJ`);
@@ -533,13 +533,13 @@ ALTER TABLE `fornecedor_p`
 --
 -- Indexes for table `movimenta_a`
 --
-ALTER TABLE `movimenta_a_1`
+ALTER TABLE `movimenta_a`
   ADD PRIMARY KEY (`cod_inter`);
 
 --
--- Indexes for table `nossa_empresa_p_1`
+-- Indexes for table `nossa_empresa_p`
 --
-ALTER TABLE `nossa_empresa_p_1`
+ALTER TABLE `nossa_empresa_p`
   ADD PRIMARY KEY (`CNPJ_empresa`);
 
 --
@@ -599,7 +599,7 @@ ALTER TABLE `quantitava_recebimento_p`
 --
 -- Indexes for table `usuario`
 --
-ALTER TABLE `usuario_1`
+ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -607,14 +607,14 @@ ALTER TABLE `usuario_1`
 --
 
 --
--- AUTO_INCREMENT for table `pedi_clientes_p_1`
+-- AUTO_INCREMENT for table `pedi_clientes_p`
 --
 ALTER TABLE `pedi_clientes_p`
   MODIFY `id_pedido_clien_p_1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
-ALTER TABLE `usuario_1`
+ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -5,29 +5,95 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro produto</title>
 </head>
 
 <body>
+    <div id="tipo">Conta: Professor</div>
+    <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Menus</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Inicio"></div>
+        </form>
+        <form action="../index.html">
+            <input class="details-small" type="submit" value="Sair"></div>
+        </form>
+        <form action="reset.html">
+            <input class="details-small" type="submit" value="Resetar"></div>
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Cadastros</summary>
+        <form action="fornecedor.html">
+            <input class="details-small" type="submit" value="Fornecedor"></div>
+        </form>
+        <form action="empresa.html">
+            <input class="details-small" type="submit" value="Empresa"></div>
+        </form>
+        <details>
+            <summary class="details-small-more">Cliente</summary>
+            <form action="cliente.html">
+                <input class="details-small" type="submit" value="Cadastro"></div>
+            </form>
+            <form action="pedido.html">
+                <input class="details-small" type="submit" value="Pedido"></div>
+            </form>
+        </details>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Produto</summary>
+        <form action="produto.html">
+            <input class="details-small" type="submit" value="Cadastro">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Recebimento</summary>
+        <form action="quantitativo_recebimento.html">
+            <input class="details-small" type="submit" value="Quantitativo"></div>
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="quantitativo_expedicao.html">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
     <div class="menu">Menu</div>
-    <form action="recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
-    </form>
-    <form action="cadastro.html">
-        <input class="botao" type="submit" value="Cadastros">
-    </form>
-    <form action="notas.html">
-        <input class="botao" type="submit" value="Notas">
-    </form>
-    <form action="pedido.html">
-        <input class="botao" type="submit" value="Pedido">
-    </form>
-    <form action="tela.html">
-        <input id="botao" type="submit" value="Produto">
-    </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
-    </form>
-    <div id="caixa-info">
+    <div class="caixa">
+        <form method="POST" action="../PHP/quantitativo.php">
+            <table class="tabela">
+                <tr>
+                    <td>CNPJ: </td>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="000.000.000-00"></td>
+                    <td>Nome do produto: </td>
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="caixa"></td>
+                </tr>
+                <tr>
+                    <td>Unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="nome"></td>
+                    <td>Quantidade de unidades: </td>
+                    <td><input class="botao-tabela" type="text" name="6" placeholder="10"></td>
+                </tr>
+                <tr>
+                    <td>Quantidade de produtos: </td>
+                    <td><input class="botao-tabela" type="text" name="12" placeholder="*"></td>
+                    <td>Valor da unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="13" placeholder="Pasta de dentes"></td>
+                </tr>
+                <tr>
+                    <td>Sinopse do pedido: </td>
+                    <td><input class="botao-tabela" type="text" name="15" placeholder="Observações"></td>
+                </tr>
+            </table>
+            <input class="botao" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 

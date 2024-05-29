@@ -5,35 +5,69 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantitativo</title>
 </head>
 
 <body>
-    <div class="menu">Menu</div>
-    <form action="tela.html">
-        <input id="botao" type="submit" value="Recebimento">
-    </form>
-    <div class=" caixa-botao-mini">
-        <form action="recebimento.html">
-            <input id="botao-mini" type="submit" value="Quantitativo">
+    <div id="tipo">Conta: Professor</div>
+    <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Menus</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Inicio"></div>
         </form>
-    </div>
-    <form action="cadastro.html">
-        <input class="botao" type="submit" value="Cadastros">
-    </form>
-    <form action="notas.html">
-        <input class="botao" type="submit" value="Notas">
-    </form>
-    <form action="pedido.html">
-        <input class="botao" type="submit" value="Pedido">
-    </form>
-    <form action="produto.html">
-        <input class="botao" type="submit" value="Produto">
-    </form>
-    <form action="reset.html">
-        <input id="reset" type="submit" value="Recomeçar">
-    </form>
-    <div id="caixa">
-        <form method="POST" action="../PHP/quantitativo.php">
+        <form action="../index.html">
+            <input class="details-small" type="submit" value="Sair"></div>
+        </form>
+        <form action="reset.html">
+            <input class="details-small" type="submit" value="Resetar"></div>
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Cadastros</summary>
+        <form action="fornecedor.html">
+            <input class="details-small" type="submit" value="Fornecedor"></div>
+        </form>
+        <form action="empresa.html">
+            <input class="details-small" type="submit" value="Empresa"></div>
+        </form>
+        <details>
+            <summary class="details-small-more">Cliente</summary>
+            <form action="cliente.html">
+                <input class="details-small" type="submit" value="Cadastro"></div>
+            </form>
+            <form action="pedido.html">
+                <input class="details-small" type="submit" value="Pedido"></div>
+            </form>
+        </details>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Produto</summary>
+        <form action="produto.html">
+            <input class="details-small" type="submit" value="Cadastro">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Recebimento</summary>
+        <form action="quantitativo_recebimento.html">
+            <input class="details-small" type="submit" value="Quantitativo"></div>
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="quantitativo_expedicao.html">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="nota_recebimento.html">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <div class="menu">Menu</div>
+    <div class="caixa">
+        <form method="POST" action="../../PHP/Professor/quantitativo.php">
             <table class="tabela">
                 <tr>
                     <td>Código Interno: </td>
@@ -54,7 +88,7 @@
                     <td><input class="botao-tabela" type="text" name="6" placeholder="Titanaique"></td>
                 </tr>
                 <tr>
-                    <td>Destinatário: </td>
+                    <td>Nome do destinatário: </td>
                     <td><input class="botao-tabela" type="text" name="7" placeholder="Aplle"></td>
                     <td>Tipo do container: </td>
                     <td><input class="botao-tabela" type="text" name="8" placeholder="2201"></td>
@@ -96,7 +130,7 @@
                     <td><input class="botao-tabela" type="text" name="20" placeholder="pedido"></td>
                 </tr>
             </table>
-            <input class="botao-2" type="submit" value="Enviar">
+            <input class="botao" type="submit" value="Enviar">
         </form>
     </div>
 </body>

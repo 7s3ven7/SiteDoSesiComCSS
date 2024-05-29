@@ -1,0 +1,161 @@
+Tela 1 - Geral
+nome do usuário
+senha do usuário
+código do grupo
+
+Tela 1 - Prof
+nome do usuário
+senha do usuário
+cargo do usuário
+código do grupo
+
+Tela 1 - Aluno
+nome do usuário
+
+Tela cadastro de pedido - Professor
+nome do usuário
+número do pedido
+nome do produto
+descrição do produto
+unidade
+quantidade
+R$/unidade
+NCM
+CST
+CFOP
+Valor Total
+Data
+Nome Cliente
+Email
+Telefone
+
+Recebimento - Aluno
+Nome do usuário
+Placa do Caminhão
+Nome do Motorista
+Container
+Navio
+Cliente
+Tipo
+Lacre
+Lacre SIF
+temperatura
+IMO
+Nº ONU
+Container bem desgastado
+Avaria na lateral direita
+Avaria na lateral esquerda
+Avaria no teto
+Avaria na frente
+Sem Lacre
+Adesivos Avariados
+Excesso de altura
+Excesso na direita
+Excesso na esquerda
+Excesso frontal
+Painel Avariado
+Sem cabo de energia
+Sem lona
+
+Cadastro de nota fiscal - Professor
+Nome do usuário
+Dados da empresa
+Dados do cliente
+Dados do transporte
+Produtos pré cadastrados
+Observações
+
+Recebimento (Carga) - Aluno
+Número da Nota fiscal
+Número do pedido
+Doca
+nome do produto
+unidade
+quantidade
+R$/unit
+valor total
+Produto Faltando
+Produto Avariado
+
+Controle (Doca de Recebimento) - Aluno
+Número do pedido
+Doca
+
+Controle (Doca de Recebimento)2 - Aluno
+Número do pedido
+Doca
+nome do produto
+unidade
+quantidade
+quantidade que será enviada
+posição que será enviada
+
+Movimentação - Aluno
+Nome do produto
+unidade
+quantidade enviada
+posição
+
+Movimentação (Operação) - Aluno
+Nome do produto
+unidade
+quantidade para ser movimentada
+posição que será movimentada
+
+Esoque - Aluno
+Nome do produto
+unidade
+quantidade
+material procurado
+espaço vazio
+espaço cheio
+
+Solicitações (Criar) - Professor
+Número da solicitação
+nome do produto
+unidade
+quantidade de produtos solicitados
+Observações
+
+Controle (Solicitações) - Aluno
+Número da solicitação
+
+Conrole (Solicitações) 2 - Aluno
+Número da solicitação
+nome do produto
+unidade
+quantidade
+quantidade a ser enviada
+posição
+
+Picking - Aluno
+número da solicitação
+
+Picking 2 - Aluno
+número da solicitação
+nome do produto
+unidade
+quantidade
+posição
+
+Expedição/Separação - Aluno
+número da solicitação
+
+Expedição/Separação 2 - Aluno
+número da solicitação
+Nome do produto
+unidade
+quantidade
+Doca
+
+Expedição (Carga) - Aluno
+número da solicitação
+Doca
+
+Expedição (Carga) 2 - Aluno
+número da solicitação
+nome do produto
+unidade
+quantidade
+Observações
+Doca
