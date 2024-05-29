@@ -46,7 +46,7 @@
                 <input class="input-nota" type="text" name="nota">
             </div>
         </div>
-        <table>
+        <table id="tabela-total">
             <tr>
                 <td class="tabela-nota">
                     <div class="text-nota">Código</div>
