@@ -11,14 +11,14 @@
     position: absolute;
     left: 350px;
     top: 50px;
-
 }
-
 
 #qd-logo {
     width: 250px;
     height: 200px;
     border: 1px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
     background-color: white;
     text-align: center;
     position: absolute;
@@ -28,6 +28,7 @@
     width: 500px;
     height: 100px;
     border: 1px solid black;
+    border-top: 2px solid black;
     background-color: white;
     text-align: left;
     position: absolute;
@@ -38,6 +39,8 @@
     width: 500px;
     height: 100px;
     border: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
     background-color: white;
     text-align: left;
     position: absolute;
@@ -81,6 +84,7 @@
     width: 250px;
     height: 100px;
     border: 1px solid black;
+    border-right: 2px solid black;
     background-color: white;
     text-align: left;
     position: absolute;
@@ -92,6 +96,8 @@
     width: 625px;
     height: 100px;
     border: 1px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: white;
     text-align: left;
     position: absolute;
@@ -102,11 +108,42 @@
     width: 625px;
     height: 100px;
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     background-color: white;
     text-align: left;
     position: absolute;
     left: 625px;
     top: 200px;
+}
+
+#qd-dados-produto {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 325px;
+}
+
+#qd-descricao {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    left: 200px;
+    top: 325px;
+}
+
+.text-titulo {
+    font-size: 30px;
+    color: black;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-nota {
