@@ -105,14 +105,6 @@
             echo '<form method="POST" action="action_qualitativo.php">
                 <input class="botao-2" type="submit" value="Enviar" left=5px>
             </form>';
-        
-        
-        
-        
-        
-        
-        
-        
         }}
         }
         ?>
