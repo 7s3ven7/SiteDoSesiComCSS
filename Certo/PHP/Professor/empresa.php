@@ -25,3 +25,5 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Professor/empresa.html"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
+
+<!--header("Location: ../../HTML/Professor/empresa.html?name1=".$v1."value1&name2=value2"); //Envia para a tela de Login ao Cadastrar-->

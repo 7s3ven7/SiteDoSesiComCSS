@@ -4,13 +4,18 @@
     box-sizing: 0;
 }
 
+.nota-fiscal {
+    border: 1px solid black;
+    width: 200px;
+}
+
 .fundo {
     top: -10px;
     left: -4px;
     width: 227px;
     border: 3px gray solid;
     height: 1000px;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
     position: fixed;
 }
 
@@ -171,7 +176,7 @@
     display: inline;
     padding: 1%;
     margin-top: 1%;
-    background-color: rgb(220, 220, 220);
+    background-color: whitesmoke;
 }
 
 .details-all {
@@ -218,7 +223,7 @@
 }
 
 .details-small-more {
-    width: 150px;
+    width: 130px;
     background-color: green;
     color: whitesmoke;
     font-size: 22.5px;
@@ -235,23 +240,22 @@
 
 .botao {
     font-size: x-large;
-    width: 11%;
-    padding: 1%;
+    width: 200px;
+    padding: 20px;
     border: 1px black solid;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: green;
     color: whitesmoke;
     text-align: center;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.5%;
     transition: 0.25s;
 }
 
 .botao:hover {
-    background-color: whitesmoke;
-    color: green;
+    background-color: blue;
+    color: blue;
     padding: 1.005%;
 }
 
@@ -259,6 +263,18 @@
     line-height: 150%;
     width: 80%;
     padding: 3%;
+    font-size: xx-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabela-produto {
+    line-height: 80px;
+    width: 1400px;
+    padding: 100px;
     font-size: xx-large;
     position: relative;
     text-align: left;
@@ -308,35 +324,6 @@
     margin-right: auto;
 }
 
-.tabela-2 {
-    line-height: 120%;
-    width: 50%;
-    padding: 1%;
-    font-size: 20px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tabela-3 {
-    top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 100%;
-    width: 80%;
-    padding: 1%;
-    font-size: 20px;
-    position: relative;
-}
-
-.tabela-4 {
-    line-height: 100%;
-    width: 100%;
-    padding: 0.25%;
-    font-size: 20px;
-    position: relative;
-}
-
 .botao-tabela {
     padding: 1%;
     font-size: large;
@@ -347,13 +334,23 @@
     margin-left: auto;
 }
 
-.botao-tabela2 {
-    padding: 1%;
+.botao-tabela-2 {
+    padding: 5px;
+    padding-left: 7px;
     font-size: large;
-    width: 97%;
+    width: 200px;
     border: 1px black solid;
     border-radius: 10px;
-    left: 100%;
+}
+
+.botao-tabela-sinopse {
+    padding: 2px;
+    padding-left: 5px;
+    font-size: large;
+    width: 1200px;
+    height: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
 }
 
 .texto2 {
@@ -392,18 +389,6 @@
     left: 0.5%;
 }
 
-.botao {
-    width: 12.5%;
-    height: 75px;
-    margin: 1%;
-    position: relative;
-    font-size: x-large;
-    border: 1px black solid;
-    border-radius: 5px;
-    color: whitesmoke;
-    background-color: green;
-}
-
 .check {
     width: 25px;
     height: 25px;
@@ -427,19 +412,22 @@
 
 #texto-submit {
     text-align: center;
-    width: 200px;
-    height: 30px;
-    font-size: x-large;
+    width: 80%;
+    top: 30%;
+    line-height: 50px;
+    font-size: xx-large;
     position: fixed;
 }
 
 #submit {
-    width: 100px;
+    top: 50%;
+    width: 13%;
     height: 40px;
     font-size: large;
     border: 1px solid black;
     border-radius: 5px;
     position: fixed;
+    left: 43.3%;
 }
 
 #reset {
@@ -456,7 +444,8 @@
     margin-bottom: 0.5%;
     transition: 0.15s;
     position: absolute;
-    top: 88%;
+    top: 60%;
+    right: 50%;
 }
 
 #reset:hover {

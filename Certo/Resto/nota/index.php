@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animação de Movimento</title>
-    <style>
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: blue;
-        transition: transform 2s ease;
-    }
-
-    @keyframes giro {
-        to {
-            transform: translateX(0px);
-            transform: translateY(0px);
-        }
-
-        25% {
-            transform: translateX(500px);
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateX(400px);
-            transform: translateY(400px);
-        }
-
-        75% {
-            transform: translateX(0px);
-            transform: translateY(400px);
-        }
-
-        from {
-            transform: translateX(0px);
-            transform: translateY(0px);
-        }
-    }
-
-    .box.clicked {
-        animation: giro 2s forwards;
-    }
-    </style>
+    <title>Cadastro nota de recebimento</title>
 </head>
 
 <body>
-    <div>Esse pika ae</div>
+    <div id="caixa">
+        <div id="margin">
+            <div id="qd-logo">
+            </div>
+            <div id="qd-danfe">
+                <div class="text-nota">Danfe</div>
+                <input class="input-nota" type="text" name="danfe">
+            </div>
+            <div id="qd-nota-fiscal">
+                <div class="text-nota">Número Nota</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-cnpj">
+                <div class="text-nota">CNPJ</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-cep-emitente">
+                <div class="text-nota">CEP de emitente</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-data-de-emissao">
+                <div class="text-nota">Data de emissão</div>
+                <input class="input-nota" type="date" name="nota">
+            </div>
+            <div id="qd-horario-de-emissao">
+                <div class="text-nota">Hora da emissão</div>
+                <input class="input-nota" type="time" name="nota">
+            </div>
+            <div id="qd-nome-do-emitente">
+                <div class="text-nota">Nome do emitente</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+            <div id="qd-fone-emitente">
+                <div class="text-nota">Telefone</div>
+                <input class="input-nota" type="text" name="nota">
+            </div>
+        </div>
+        <table id="tabela-total">
+            <tr>
+                <td class="tabela-nota">
+                    <div class="text-nota">Código</div>
+                    <input class="input-nota" type="text" name="nota">
+                </td>
+                <td class="tabela-nota">
+                    <div class="text-nota">Código</div>
+                    <input class="input-nota" type="text" name="nota">
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
+
+<!--colspan e rowspan html-->
