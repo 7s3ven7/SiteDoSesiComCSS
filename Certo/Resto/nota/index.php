@@ -45,13 +45,19 @@
                 <div class="text-nota">Telefone</div>
                 <input class="input-nota" type="text" name="nota">
             </div>
-            <div id="qd-dados-produto">
-                <div class="text-titulo">Código</div>
-            </div>
-            <div id="qd-descricao">
-                <div class="text-titulo">Descrição dos produtos</div>
-            </div>
         </div>
+        <table id="tabela-total">
+            <tr>
+                <td class="tabela-nota">
+                    <div class="text-nota">Código</div>
+                    <input class="input-nota" type="text" name="nota">
+                </td>
+                <td class="tabela-nota">
+                    <div class="text-nota">Código</div>
+                    <input class="input-nota" type="text" name="nota">
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 
