@@ -9,12 +9,12 @@ $password = "root";
 $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-$n_pedido = 544;
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $SQL = 'SELECT * FROM `quantitava_expedicao_p` 
+    $n_pedido = $_POST["n_pedido"];
+    $SQL = 'SELECT * FROM `quantitativo_recebimento_p` 
     WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
