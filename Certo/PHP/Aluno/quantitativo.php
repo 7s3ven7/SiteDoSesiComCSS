@@ -8,51 +8,83 @@
 </head>
 
 <body>
+    <div id="tipo">Aluno</div>
+    <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Menus</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Inicio">
+        </form>
+        <form action="../index.html">
+            <input class="details-small" type="submit" value="Sair">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Recebimento</summary>
+        <form action="../../PHP/aluno/quantitativo.php">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="../../PHP/aluno/qualitativo.php">
+            <input class="details-small" type="submit" value="Qualitativo">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Movimentação</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP"></summary>
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Estoque</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Picking</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Relatórios</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Controle</summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="Doca">
+        </form>
+    </details>
     <div class="menu">Menu</div>
-    <form action="../../HTML/Aluno/recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
-    </form>
-    <div class="caixa-botao-mini">
-        <form action="qualitativo.php">
-            <input class="botao-mini" type="submit" value="Qualitativo">
-        </form>
-    </div>
-    <div class="caixa-botao-mini">
-        <form action="quantitativo.php">
-            <input id="botao-mini" type="submit" value="Quantitativo">
-        </form>
-    </div>
-    <form action="movimentacao.html">
-        <input class="botao" type="submit" value="Movimentação">
-    </form>
-    <form action="estoque.html">
-        <input class="botao" type="submit" value="Estoque">
-    </form>
-    <form action="picking.html">
-        <input class="botao" type="submit" value="Picking">
-    </form>
-    <form action="expedicao.html">
-        <input class="botao" type="submit" value="Expedição">
-    </form>
-    <form action="relatorios.html">
-        <input class="botao" type="submit" value="Relatórios">
-    </form>
-    <br>
-    <br>
-    <form action="controle.html">
-        <input class="botao" type="submit" value="Controle">
-    </form>
     <div class="caixa">
-        <form method="POST" action="action_quantitativo.php">
-            <div class="texto5">Número do pedido:
-                <input class="botao-tabela2" type="number" name="n_pedido">
+        <form action="quantitativo.php" method="POST">
+            <input type="text" name="n_pedido">
+            <input type="submit">
         </form>
-    </div>
-    <div class="texto5">Número da nota:
-        <br>
-        Doca:
 
         <?php
+     if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -64,47 +96,56 @@
             header("Location: ../../HTML/Aluno/recebimento.html");
             exit();
         } else {
-
-			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = $s1;";
+                $vl = $_POST['n_pedido'];
+			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = ".$vl.";";
 
 			$resultado = $conexao->query($sql);
-			
-			echo '<hr>';
-			if(mysqli_query($conexao,$sql)){
-                $resultado = mysqli_fetch_array;
-			while($row = mysqli_fetch_array($resultado)){
-            echo '
-            <table class="tabela-4">
-                <div id="linha">
-                    <hr class="linha">
-                    <tr>
-                        <td>
-                            <div class="texto3">Produto: '.$row['nome'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Unidade: '.$row['und'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div>
-                        </td>
-                    </tr>
-                </div>
+            if(mysqli_num_rows($resultado)> 0){
+                $row = mysqli_fetch_array($resultado);
+                $s1 = $row['0'];
+                $s2 = $row['1'];
+                $s3 = $row['2'];
+                $s4 = $row['3'];
+                $s5 = $row['4'];
+                $s6 = $row['5'];
+                $s7 = $row['6'];
+                $s8 = $row['7'];
+                $s9 = $row['8'];
+                $s10 = $row['9'];
+                $s11 = $row['10'];
+                $s12 = $row['11'];
+                $s13 = $row['12'];
+                $s14 = $row['13'];
+                $s15 = $row['14'];
+                $s16 = $row['15'];
+            echo '        
+            <table class="tabela">
+                <tr>
+                    <td>Código Interno: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s1.' name="1" disabled></td>
+                    <td>Código do fornecedor: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s2.'  name="2" disabled></td>
+                </tr>
+                <tr>
+                    <td>Nome da empresa: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s3.'  name="3" disabled></td>
+                    <td>CNPJ da empresa: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s4.'  name="4" disabled></td>
+                </tr>
+                <tr>
+                    <td>Modelo do container: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s5.'  name="5" disabled></td>
+                    <td>Navio: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s6.'  name="6" disabled></td>
+                </tr>
+                <tr>
+                    <td>Nome do destinatário: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s7.'  name="7" disabled></td>
+                    <td>Tipo do container: </td>
+                    <td><input class="botao-tabela" type="text" value='.$s8.'  name="8" disabled></td>
+                </tr>
             </table>
-            ';
-            echo '<form method="POST" action="action_qualitativo.php">
-                <input class="botao-2" type="submit" value="Enviar" left=5px>
-            </form>';
-        }}
-        }
+        ';
+        }}}
         ?>
+    </div>
