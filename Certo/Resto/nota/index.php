@@ -2,63 +2,26 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro nota de recebimento</title>
+
 </head>
 
 <body>
-    <div id="caixa">
-        <div id="margin">
-            <div id="qd-logo">
-            </div>
-            <div id="qd-danfe">
-                <div class="text-nota">Danfe</div>
-                <input class="input-nota" type="text" name="danfe">
-            </div>
-            <div id="qd-nota-fiscal">
-                <div class="text-nota">Número Nota</div>
-                <input class="input-nota" type="text" name="nota">
-            </div>
-            <div id="qd-cnpj">
-                <div class="text-nota">CNPJ</div>
-                <input class="input-nota" type="text" name="nota">
-            </div>
-            <div id="qd-cep-emitente">
-                <div class="text-nota">CEP de emitente</div>
-                <input class="input-nota" type="text" name="nota">
-            </div>
-            <div id="qd-data-de-emissao">
-                <div class="text-nota">Data de emissão</div>
-                <input class="input-nota" type="date" name="nota">
-            </div>
-            <div id="qd-horario-de-emissao">
-                <div class="text-nota">Hora da emissão</div>
-                <input class="input-nota" type="time" name="nota">
-            </div>
-            <div id="qd-nome-do-emitente">
-                <div class="text-nota">Nome do emitente</div>
-                <input class="input-nota" type="text" name="nota">
-            </div>
-            <div id="qd-fone-emitente">
-                <div class="text-nota">Telefone</div>
-                <input class="input-nota" type="text" name="nota">
-            </div>
-        </div>
-        <table id="tabela-total">
-            <tr>
-                <td class="tabela-nota">
-                    <div class="text-nota">Código</div>
-                    <input class="input-nota" type="text" name="nota">
-                </td>
-                <td class="tabela-nota">
-                    <div class="text-nota">Código</div>
-                    <input class="input-nota" type="text" name="nota">
-                </td>
-            </tr>
-        </table>
-    </div>
+    <img src="/assets/icons/bootstrap.svg" alt="Bootstrap" width="32" height="32">
+    <svg class="bi" ... role="img" aria-label="Tools">
+        <use xlink:href="bootstrap-icons.svg#tools" />
+    </svg>
+    <i class="bi-alarm"></i>
+    <!-- aria-label="..." on the control -->
+    <button ... aria-label="Mute">
+        <svg class="bi bi-volume-mute-fill" aria-hidden="true" ...>
+            ...
+        </svg>
+    </button>
 </body>
 
 </html>
