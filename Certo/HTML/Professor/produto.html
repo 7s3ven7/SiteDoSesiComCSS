@@ -67,29 +67,59 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="../../PHP/Professor/quantitativo.php">
+        <form method="POST" action="../../PHP/Professor/quantitativo_expedicao.php">
             <table class="tabela">
                 <tr>
-                    <td>CNPJ: </td>
-                    <td><input class="botao-tabela" type="text" name="1" placeholder="000.000.000-00"></td>
-                    <td>Nome do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="2" placeholder="caixa"></td>
+                    <td>Código Interno: </td>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="00000000001"></td>
+                    <td>Código do fornecedor: </td>
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="1234"></td>
+                </tr>
+                <tr>
+                    <td>Tipo: </td>
+                    <td><input class="botao-tabela" type="text" name="3" placeholder="Aplle"></td>
+                    <td>Validade: </td>
+                    <td><input class="botao-tabela" type="date" name="4" placeholder="12.345.678/0001-00"></td>
+                </tr>
+                <tr>
+                    <td>Lote: </td>
+                    <td><input class="botao-tabela" type="text" name="5" placeholder="SENU-123456-2"></td>
+                    <td>Nome: </td>
+                    <td><input class="botao-tabela" type="text" name="6" placeholder="Titanaique"></td>
+                </tr>
+                <tr>
+                    <td>Marca do produto: </td>
+                    <td><input class="botao-tabela" type="text" name="7" placeholder="Aplle"></td>
+                    <td>Embalagem: </td>
+                    <td><input class="botao-tabela" type="text" name="8" placeholder="2201"></td>
                 </tr>
                 <tr>
                     <td>Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="3" placeholder="nome"></td>
-                    <td>Quantidade de unidades: </td>
-                    <td><input class="botao-tabela" type="text" name="4" placeholder="10"></td>
+                    <td><input class="botao-tabela" type="text" name="9" placeholder="Lacre"></td>
+                    <td>Quantidade de unidade: </td>
+                    <td><input class="botao-tabela" type="text" name="10" placeholder="SIF"></td>
                 </tr>
                 <tr>
-                    <td>Quantidade de produtos: </td>
-                    <td><input class="botao-tabela" type="text" name="5" placeholder="*"></td>
+                    <td>Quantidade de produto: </td>
+                    <td><input class="botao-tabela" type="text" name="11" placeholder="Temperatura"></td>
                     <td>Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="6" placeholder="Pasta de dentes"></td>
+                    <td><input class="botao-tabela" type="text" name="12" placeholder="IMO"></td>
                 </tr>
                 <tr>
-                    <td>Sinopse do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="7" placeholder="Observações"></td>
+                    <td>Valor total: </td>
+                    <td><input class="botao-tabela" type="text" name="13" placeholder="Número"></td>
+                    <td>Peso em kilo grama: </td>
+                    <td><input class="botao-tabela" type="text" name="14" placeholder="Nome produto"></td>
+                </tr>
+                <tr>
+                    <td>Número do pedido: </td>
+                    <td><input class="botao-tabela" type="text" name="15" placeholder="unidade"></td>
+                    <td>Faltando: </td>
+                    <td><input class="botao-tabela" type="text" name="16" placeholder="quantidade"></td>
+                </tr>
+                <tr>
+                    <td>Avariado: </td>
+                    <td><input class="botao-tabela" type="text" name="17" placeholder="quantidade"></td>
                 </tr>
             </table>
             <input class="botao" type="submit" value="Enviar">
