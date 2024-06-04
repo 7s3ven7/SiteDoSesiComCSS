@@ -144,8 +144,38 @@
                     <td>Tipo do container: </td>
                     <td><input class="botao-tabela" type="text" value='.$s8.'  name="8" disabled></td>
                 </tr>
+                <tr>
+                <td>Nome do destinatário: </td>
+                <td><input class="botao-tabela" type="text" value='.$s9.'  name="7" disabled></td>
+                <td>Tipo do container: </td>
+                <td><input class="botao-tabela" type="text" value='.$s10.'  name="8" disabled></td>
+                <tr>
+                <td>Nome do destinatário: </td>
+                <td><input class="botao-tabela" type="text" value='.$s11.'  name="7" disabled></td>
+                <td>Tipo do container: </td>
+                <td><input class="botao-tabela" type="text" value='.$s12.'  name="8" disabled></td>
+            </tr>
+            <tr>
+            <td>Nome do destinatário: </td>
+            <td><input class="botao-tabela" type="text" value='.$s13.'  name="7" disabled></td>
+            <td>Tipo do container: </td>
+            <td><input class="botao-tabela" type="text" value='.$s14.'  name="8" disabled></td>
+            <tr>
+            <td>Nome do destinatário: </td>
+            <td><input class="botao-tabela" type="text" value='.$s15.'  name="7" disabled></td>
+        </tr>
+        </tr>
+            </tr>
             </table>
         ';
-        }}}
+        }else{
+            ?>
+        <script>
+        alert('Código não encontrado no Banco de Dados', 301, true);
+        </script>
+        <?php
+        }
+    
+    }}
         ?>
     </div>
