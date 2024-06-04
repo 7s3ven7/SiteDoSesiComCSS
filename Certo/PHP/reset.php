@@ -14,7 +14,7 @@ if ($conexao->connect_errno) {
     exit();
 } else {
   $senha = $conexao->real_escape_string($_POST["senha_secreta"]);
-  $SQL1 = "DROP TABLE `cliente`;";
+  $SQL1 = "DROP TABLE ``;";
   $SQL2 = "CREATE TABLE `cliente` (
     `id` int(255) NOT NULL,
     `nome` varchar(255) NOT NULL
