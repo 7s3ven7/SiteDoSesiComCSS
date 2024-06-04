@@ -8,51 +8,16 @@
 </head>
 
 <body>
-    <div class="menu">Menu</div>
-    <form action="../../HTML/Aluno/recebimento.html">
-        <input class="botao" type="submit" value="Recebimento">
+    <form action="quantitativo.php" method="POST">
+        <div>aaaaaaaaaaaa</div>
+        <input type="number" name="n_pedido">
+        <input type="submit">
     </form>
-    <div class="caixa-botao-mini">
-        <form action="qualitativo.php">
-            <input class="botao-mini" type="submit" value="Qualitativo">
-        </form>
-    </div>
-    <div class="caixa-botao-mini">
-        <form action="quantitativo.php">
-            <input id="botao-mini" type="submit" value="Quantitativo">
-        </form>
-    </div>
-    <form action="movimentacao.html">
-        <input class="botao" type="submit" value="Movimentação">
-    </form>
-    <form action="estoque.html">
-        <input class="botao" type="submit" value="Estoque">
-    </form>
-    <form action="picking.html">
-        <input class="botao" type="submit" value="Picking">
-    </form>
-    <form action="expedicao.html">
-        <input class="botao" type="submit" value="Expedição">
-    </form>
-    <form action="relatorios.html">
-        <input class="botao" type="submit" value="Relatórios">
-    </form>
-    <br>
-    <br>
-    <form action="controle.html">
-        <input class="botao" type="submit" value="Controle">
-    </form>
-    <div class="caixa">
-        <form method="POST" action="action_quantitativo.php">
-            <div class="texto5">Número do pedido:
-                <input class="botao-tabela2" type="number" name="n_pedido">
-        </form>
-    </div>
-    <div class="texto5">Número da nota:
-        <br>
-        Doca:
-
-        <?php
+    <?php
+        if(isset($cod)){
+            echo $cod;
+        } 
+     if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -64,47 +29,28 @@
             header("Location: ../../HTML/Aluno/recebimento.html");
             exit();
         } else {
-
-			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = $s1;";
+                $vl = $_POST['n_pedido'];
+			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = ".$vl.";";
 
 			$resultado = $conexao->query($sql);
-			
-			echo '<hr>';
-			if(mysqli_query($conexao,$sql)){
-                $resultado = mysqli_fetch_array;
-			while($row = mysqli_fetch_array($resultado)){
-            echo '
-            <table class="tabela-4">
-                <div id="linha">
-                    <hr class="linha">
-                    <tr>
-                        <td>
-                            <div class="texto3">Produto: '.$row['nome'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Unidade: '.$row['und'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div>
-                        </td>
-                        <td>
-                            <div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div>
-                        </td>
-                    </tr>
-                </div>
-            </table>
-            ';
-            echo '<form method="POST" action="action_qualitativo.php">
-                <input class="botao-2" type="submit" value="Enviar" left=5px>
-            </form>';
-        }}
-        }
+            if(mysqli_num_rows($resultado)> 0){
+                $row = mysqli_fetch_array($resultado);
+                $s1 = $row['0'];
+                $s2 = $row['1'];
+                $s3 = $row['2'];
+                $s4 = $row['3'];
+                $s5 = $row['4'];
+                $s6 = $row['5'];
+                $s7 = $row['6'];
+                $s8 = $row['7'];
+                $s9 = $row['8'];
+                $s10 = $row['9'];
+                $s11 = $row['10'];
+                $s12 = $row['11'];
+                $s13 = $row['12'];
+                $s14 = $row['13'];
+                $s15 = $row['14'];
+                $s16 = $row['15'];
+            echo $s1;
+        }}}
         ?>
