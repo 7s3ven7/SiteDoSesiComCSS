@@ -154,7 +154,7 @@
 }
 
 #qd-NCM {
-    width: 190px;
+    width: 381px;
     height: 100px;
     border: 1px solid black;
     border-top: 2px solid black;
@@ -167,16 +167,16 @@
 }
 
 #qd-CST {
-    width: 190px;
+    width: 200px;
     height: 100px;
     border: 1px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: white;
     text-align: left;
     align-items: left;
     position: absolute;
-    top: 375px;
-    left: 933px;
+    top: 477px;
+    left: 452px;
 }
 
 #qd-CFOP {
@@ -184,6 +184,7 @@
     height: 100px;
     border: 1px solid black;
     border-top: 2px solid black;
+    border-right: 2px solid black;
     background-color: white;
     text-align: left;
     align-items: left;
@@ -193,10 +194,11 @@
 }
 
 #qd-UN {
-    width: 170px;
+    width: 200px;
     height: 100px;
     border: 1px solid black;
-    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: white;
     text-align: left;
     align-items: left;
@@ -206,42 +208,43 @@
 }
 
 #qd-quantidade {
-    width: 170px;
-    height: 100px;
-    border: 1px solid black;
-    border-top: 2px solid black;
-    background-color: white;
-    text-align: left;
-    align-items: left;
-    position: absolute;
-    top: 477px;
-    left: 221px;
-}
-
-#qd-valor_unit {
     width: 200px;
     height: 100px;
     border: 1px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: white;
     text-align: left;
     align-items: left;
     position: absolute;
     top: 477px;
-    left: 392px;
+    left: 251px;
+}
+
+#qd-valor_unit {
+    width: 347px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 653px;
 }
 
 #qd-valor_total {
-    width: 170px;
+    width: 300px;
     height: 100px;
     border: 1px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     background-color: white;
     text-align: left;
     align-items: left;
     position: absolute;
     top: 477px;
-    left: 593px;
+    left: 1001px;
 }
 
 #qd-nome_remetente {
