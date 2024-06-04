@@ -284,11 +284,11 @@
 }
 
 .tabela-mini {
-    line-height: 150%;
-    width: 45%;
-    padding: 3%;
+    line-height: 800%;
+    width: 800px;
+    padding: 500px;
     margin: 1%;
-    font-size: 40px;
+    font-size: 400px;
     position: relative;
     text-align: left;
     align-items: left;
