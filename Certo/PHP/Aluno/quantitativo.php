@@ -65,7 +65,7 @@
             exit();
         } else {
 
-			$sql="SELECT * FROM `produto_p` ORDER BY;";
+			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = $s1;";
 
 			$resultado = $conexao->query($sql);
 			
