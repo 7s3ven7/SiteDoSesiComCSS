@@ -105,14 +105,19 @@
             if(mysqli_num_rows($resultado)> 0){
                 $row = mysqli_fetch_array($resultado);
                 $s1 = $row['0'];
+                $s6 = $row['5'];
                 $s8 = $row['7'];
                 $s10 = $row['9'];
                 $s11 = $row['10'];
                 $s12 = $row['11'];
-            echo '                <div class="quantitativo-texto">Número da Nota Fiscal</div>
+            echo '                
+                <div class="quantitativo-texto">Número da Nota Fiscal</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'">
+                <div class="quantitativo-texto">Nome do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'">
             </div>
             <div class="quadrado-quantitativo-2">
+
                 <table class="quantitativo-margin">
                     <tr>
                         <td>
