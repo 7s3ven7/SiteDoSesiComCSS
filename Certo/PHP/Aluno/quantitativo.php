@@ -12,7 +12,7 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
         <form action="../index.html">
@@ -79,8 +79,11 @@
     <div class="menu">Menu</div>
     <div class="caixa">
         <form action="quantitativo.php" method="POST">
-            <input type="text" name="n_pedido">
-            <input type="submit">
+            <div class="quadrado-quantitativo">
+                <div class="quantitativo-texto">Digite o Código do produto</div>
+                <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
+                <input class="quantitativo-enviar-pedido" type="submit">
+
         </form>
 
         <?php
@@ -98,82 +101,60 @@
         } else {
                 $vl = $_POST['n_pedido'];
 			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = ".$vl.";";
-
 			$resultado = $conexao->query($sql);
             if(mysqli_num_rows($resultado)> 0){
                 $row = mysqli_fetch_array($resultado);
                 $s1 = $row['0'];
-                $s2 = $row['1'];
-                $s3 = $row['2'];
-                $s4 = $row['3'];
-                $s5 = $row['4'];
-                $s6 = $row['5'];
-                $s7 = $row['6'];
                 $s8 = $row['7'];
-                $s9 = $row['8'];
                 $s10 = $row['9'];
                 $s11 = $row['10'];
                 $s12 = $row['11'];
-                $s13 = $row['12'];
-                $s14 = $row['13'];
-                $s15 = $row['14'];
-                $s16 = $row['15'];
-            echo '        
-            <table class="tabela">
-                <tr>
-                    <td>Código Interno: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s1.' name="1" disabled></td>
-                    <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s2.'  name="2" disabled></td>
-                </tr>
-                <tr>
-                    <td>Nome da empresa: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s3.'  name="3" disabled></td>
-                    <td>CNPJ da empresa: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s4.'  name="4" disabled></td>
-                </tr>
-                <tr>
-                    <td>Modelo do container: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s5.'  name="5" disabled></td>
-                    <td>Navio: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s6.'  name="6" disabled></td>
-                </tr>
-                <tr>
-                    <td>Nome do destinatário: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s7.'  name="7" disabled></td>
-                    <td>Tipo do container: </td>
-                    <td><input class="botao-tabela" type="text" value='.$s8.'  name="8" disabled></td>
-                </tr>
-                <tr>
-                <td>Nome do destinatário: </td>
-                <td><input class="botao-tabela" type="text" value='.$s9.'  name="7" disabled></td>
-                <td>Tipo do container: </td>
-                <td><input class="botao-tabela" type="text" value='.$s10.'  name="8" disabled></td>
-                <tr>
-                <td>Nome do destinatário: </td>
-                <td><input class="botao-tabela" type="text" value='.$s11.'  name="7" disabled></td>
-                <td>Tipo do container: </td>
-                <td><input class="botao-tabela" type="text" value='.$s12.'  name="8" disabled></td>
-            </tr>
-            <tr>
-            <td>Nome do destinatário: </td>
-            <td><input class="botao-tabela" type="text" value='.$s13.'  name="7" disabled></td>
-            <td>Tipo do container: </td>
-            <td><input class="botao-tabela" type="text" value='.$s14.'  name="8" disabled></td>
-            <tr>
-            <td>Nome do destinatário: </td>
-            <td><input class="botao-tabela" type="text" value='.$s15.'  name="7" disabled></td>
-        </tr>
-        </tr>
-            </tr>
-            </table>
+            echo '                <div class="quantitativo-texto">Número da Nota Fiscal</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'">
+            </div>
+            <div class="quadrado-quantitativo-2">
+                <table class="quantitativo-margin">
+                    <tr>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">UN</div>
+                        </td>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">QTD</div>
+                        </td>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">R$/unit</div>
+                        </td>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">R$Total</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s8.'" name="un"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s10.'" name="qtd"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s11.'" name="unit"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s12.'" name="total"></td>
+                        <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
+                    </tr>
+                </table>
+                <table class="quantitativo-margin-mini">
+                    <tr>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">Faltando</div>
+                        </td>
+                        <td>
+                            <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
+                        </td>
+                        <td>
+                            <div class="quantitativo-input-valor-texto">Avariado</div>
+                        </td>
+                        <td>
+                            <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
+                        </td>
+                    </tr>
+                </table>
+                </div>
         ';
         }else{
-            ?>
-        <script>
-        alert('Código não encontrado no Banco de Dados', 301, true);
-        </script>
-        <?php
         }
     
     }}

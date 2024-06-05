@@ -4,6 +4,135 @@
     box-sizing: 0;
 }
 
+.quadrado-quantitativo {
+    width: 400px;
+    height: 100px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    align-items: left;
+}
+
+.quadrado-quantitativo-2 {
+    width: 600px;
+    height: 700px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    left: -25px;
+}
+
+.quantitativo-texto {
+    font-size: 20px;
+    color: gray;
+}
+
+.quantitativo-input-pedido {
+    width: 250px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quantitativo-input-pedido-nota {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quantitativo-enviar-pedido {
+    width: 80px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+.quantitativo-enviar-pedido:hover {
+    background-color: white;
+    color: green;
+}
+
+.quantitativo-enviar {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+.quantitativo-enviar:hover {
+    background-color: white;
+    color: green;
+}
+
+.quantitativo-input-valor {
+    width: 70px;
+    height: 40px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: white;
+    margin-right: -2px;
+    text-align: center;
+}
+
+.quantitativo-input-valor-texto {
+    font-size: 20px;
+}
+
+.quantativo-input-valor-submit {
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: green;
+    color: green;
+    margin-top: 7.5px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.quantativo-input-valor-submit-mini {
+    width: 30px;
+    height: 30px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: green;
+    color: green;
+    margin-top: 7.5px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.quantitativo-margin {
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quantitativo-margin-mini {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #qd-logo {
     width: 250px;
     height: 200px;
@@ -337,7 +466,7 @@
 
 .caixa {
     width: 1615px;
-    height: 880px;
+    height: 835px;
     background-color: whitesmoke;
     left: 240px;
     top: 75px;
