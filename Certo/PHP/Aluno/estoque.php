@@ -36,8 +36,8 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="estoque.php">
-            <input class="details-small" type="submit" value="Estoque">
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
         </form>
         <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
@@ -78,7 +78,7 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form action="quantitativo.php" method="POST">
+        <form action="estoque.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
@@ -112,9 +112,11 @@
             echo '
             <div class="quadrado-quantitativo-2">
             <div class="quadrado-produto">
-                <div class="quantitativo-texto">Número da Nota Fiscal</div>
+                <div class="quantitativo-texto">Nome do produto</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
                 <div class="quantitativo-texto">Número do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
+                <div class="quantitativo-texto">Código do fornecedor</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
             </div>
                 <table class="quantitativo-margin">
@@ -165,4 +167,3 @@
         ?>
     </div>
     </div>
-</body>

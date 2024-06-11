@@ -7,8 +7,8 @@
 .quadrado-quantitativo {
     width: 400px;
     height: 100px;
+    top: 25px;
     position: relative;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -16,27 +16,20 @@
 }
 
 .quadrado-quantitativo-2 {
-    width: 600px;
+    width: 400px;
     height: 700px;
-    top: 100px;
     position: relative;
-    background-color: blue;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     align-items: center;
-    left: -25px;
 }
 
 .quadrado-produto {
-    width: 200px;
-    height: 50px;
+    width: 400px;
     align-items: left;
     text-align: left;
     position: relative;
-    left: 125px;
-    margin-bottom: 40px;
 }
 
 .quantitativo-texto {
@@ -57,6 +50,7 @@
     width: 100px;
     height: 30px;
     border: 1px solid black;
+    background-color: white;
     border-radius: 10px;
     padding: 1px;
     padding-left: 5px;
@@ -135,14 +129,13 @@
 }
 
 .quantitativo-margin {
+    width: 200px;
     padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .quantitativo-margin-mini {
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    padding-top: 10px;
 }
 
 #qd-logo {
