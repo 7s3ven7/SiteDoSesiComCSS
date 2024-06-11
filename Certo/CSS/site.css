@@ -27,6 +27,16 @@
     left: -25px;
 }
 
+.quadrado-produto {
+    width: 200px;
+    height: 50px;
+    align-items: left;
+    text-align: left;
+    position: relative;
+    left: 125px;
+    margin-bottom: 40px;
+}
+
 .quantitativo-texto {
     font-size: 20px;
     color: gray;
@@ -566,9 +576,9 @@
 }
 
 .botao:hover {
-    background-color: blue;
-    color: blue;
-    padding: 1.005%;
+    background-color: white;
+    color: green;
+    padding: 20.1px;
 }
 
 .tabela {

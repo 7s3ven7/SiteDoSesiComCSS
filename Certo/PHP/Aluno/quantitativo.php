@@ -12,10 +12,10 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/index.html">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
@@ -100,24 +100,25 @@
             exit();
         } else {
                 $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `produto_p` WHERE `n_pedido` = ".$vl.";";
+			$sql="SELECT * FROM `pedi_clientes_p` WHERE `id_pedido_clien_p_1` = ".$vl.";";
 			$resultado = $conexao->query($sql);
             if(mysqli_num_rows($resultado)> 0){
                 $row = mysqli_fetch_array($resultado);
                 $s1 = $row['0'];
-                $s6 = $row['5'];
-                $s8 = $row['7'];
-                $s10 = $row['9'];
-                $s11 = $row['10'];
-                $s12 = $row['11'];
-            echo '                
-                <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'">
-                <div class="quantitativo-texto">Nome do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'">
+                $s6 = $row['1'];
+                $s8 = $row['2'];
+                $s10 = $row['3'];
+                $s11 = $row['4'];
+                $s12 = $row['5'];
+            echo '
             </div>
             <div class="quadrado-quantitativo-2">
-
+            <div class="quadrado-produto">
+                <div class="quantitativo-texto">Número da Nota Fiscal</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'">
+                <div class="quantitativo-texto">Número do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'">
+            </div>
                 <table class="quantitativo-margin">
                     <tr>
                         <td>
