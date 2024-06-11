@@ -101,14 +101,17 @@
                 $vl = $_POST['n_pedido'];
 			$sql="SELECT * FROM `pedi_clientes_p` WHERE `id_pedido_clien_p_1` = ".$vl.";";
 			$resultado = $conexao->query($sql);
-            if(mysqli_num_rows($resultado)> 0){
-                $row = mysqli_fetch_array($resultado);
+            while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
                 $s6 = $row['1'];
                 $s8 = $row['2'];
                 $s10 = $row['3'];
                 $s11 = $row['4'];
                 $s12 = $row['5'];
+                echo'
+
+                ';
+			}
             echo '
             <div class="quadrado-quantitativo-2">
             <div class="quadrado-produto">
@@ -151,7 +154,7 @@
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
                         </td>
                         <td>
-                            <div class="quantitativo-input-valor-texto">Avariado</div>
+                            <div class="quantitativo-input-valor-texto" name="avariado">Avariado</div>
                         </td>
                         <td>
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">

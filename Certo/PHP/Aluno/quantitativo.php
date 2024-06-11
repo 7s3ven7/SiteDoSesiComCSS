@@ -83,8 +83,8 @@
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
+                <div class="quadrado-quantitativo-2"></div>
         </form>
-
         <?php
      if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
@@ -99,21 +99,24 @@
             exit();
         } else {
                 $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `pedi_clientes_p` WHERE `id_pedido_clien_p_1` = ".$vl.";";
+			$sql="SELECT * FROM `pedi_clientes_p` WHERE `CNPj` = ".$vl.";";
 			$resultado = $conexao->query($sql);
-            if(mysqli_num_rows($resultado)> 0){
-                $row = mysqli_fetch_array($resultado);
-                $s1 = $row['0'];
-                $s6 = $row['1'];
-                $s8 = $row['2'];
-                $s10 = $row['3'];
-                $s11 = $row['4'];
-                $s12 = $row['5'];
+            $s1 = $row['0'];
             echo '
-            <div class="quadrado-quantitativo-2">
-            <div class="quadrado-produto">
-                <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
+        <div class="quadrado-produto">
+            <div class="quantitativo-texto">Número da Nota Fiscal</div>
+            <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
+        </div>';
+        if(mysqli_num_rows($resultado) > 0){
+            while($row = mysqli_fetch_array($resultado)){
+                $s1 = $row['0'];
+                $s2 = $row['1'];
+                $s3 = $row['2'];
+                $s4 = $row['3'];
+                $s5 = $row['4'];
+                $s6 = $row['5'];
+                echo'
+                <div class="quadrado-produto">
                 <div class="quantitativo-texto">Número do produto</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
             </div>
@@ -157,11 +160,8 @@
                     </tr>
                 </table>
                 </div>
-        ';
-        }else{
-        }
-    
-    }}
+                ';
+        }}}}
         ?>
     </div>
     </div>
