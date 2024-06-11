@@ -72,7 +72,7 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Controle</summary>
-        <form action="tela.html">
+        <form action="../../PHP/aluno/docas_receb.php">
             <input class="details-small" type="submit" value="Doca">
         </form>
     </details>

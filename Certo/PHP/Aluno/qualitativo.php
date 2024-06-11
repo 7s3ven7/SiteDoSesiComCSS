@@ -13,7 +13,6 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $n_pedido = $_POST["n_pedido"];
     $SQL = 'SELECT * FROM `quantitativo_recebimento_p` 
     WHERE `n_nota` = '.$n_pedido.';';
     //Inserir no DB
@@ -25,7 +24,7 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: ../../HTML/Aluno/recebimento.html");
+		header("Location: ../../PHP/Aluno/qualitativo.php");
 		exit();
 	}
 }
@@ -103,7 +102,7 @@ echo '<!DOCTYPE html>
 </details>
 <details class="details-all">
     <summary class="details-big">Controle</summary>
-    <form action="tela.html">
+    <form action="../../PHP/aluno/docas_receb.php">
         <input class="details-small" type="submit" value="Doca">
     </form>
 </details>

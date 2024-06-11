@@ -126,6 +126,6 @@ $SQL = 'INSERT INTO `qualitativo_recebimento_a_1` (`container_desgas`,`avari_lat
 $resultado = $conexao -> query($SQL);
 
 $conexao->close();
-header('Location: ../../HTML/Aluno/qualitativo.php', true, 301);
+header('Location: ../../PHP/Aluno/qualitativo.php', true, 301);
 exit();
 ?>
