@@ -30,14 +30,14 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Movimentação</summary>
-        <form action="../../PHP/aluno/movimentacao.php">
-            <input class="details-small" type="submit" value="Movimentação"></summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP"></summary>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="estoque.php">
-            <input class="details-small" type="submit" value="Estoque">
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
         </form>
         <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
@@ -78,13 +78,13 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form action="quantitativo.php" method="POST">
+        <form action="estoque.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
-                <div class="quadrado-quantitativo-2"></div>
         </form>
+
         <?php
      if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
@@ -99,25 +99,27 @@
             exit();
         } else {
                 $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `pedi_clientes_p` WHERE `CNPj` = ".$vl.";";
+			$sql="SELECT * FROM `pedi_clientes_p` WHERE `id_pedido_clien_p_1` = ".$vl.";";
 			$resultado = $conexao->query($sql);
-            $s1 = $row['0'];
-            echo '
-        <div class="quadrado-produto">
-            <div class="quantitativo-texto">Número da Nota Fiscal</div>
-            <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-        </div>';
-        if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
-                $s2 = $row['1'];
-                $s3 = $row['2'];
-                $s4 = $row['3'];
-                $s5 = $row['4'];
-                $s6 = $row['5'];
+                $s6 = $row['1'];
+                $s8 = $row['2'];
+                $s10 = $row['3'];
+                $s11 = $row['4'];
+                $s12 = $row['5'];
                 echo'
-                <div class="quadrado-produto">
+
+                ';
+			}
+            echo '
+            <div class="quadrado-quantitativo-2">
+            <div class="quadrado-produto">
+                <div class="quantitativo-texto">Nome do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
                 <div class="quantitativo-texto">Número do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
+                <div class="quantitativo-texto">Código do fornecedor</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
             </div>
                 <table class="quantitativo-margin">
@@ -152,7 +154,7 @@
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
                         </td>
                         <td>
-                            <div class="quantitativo-input-valor-texto">Avariado</div>
+                            <div class="quantitativo-input-valor-texto" name="avariado">Avariado</div>
                         </td>
                         <td>
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
@@ -160,9 +162,11 @@
                     </tr>
                 </table>
                 </div>
-                ';
-        }}}}
+        ';
+        }else{
+        }
+    
+    }}
         ?>
     </div>
     </div>
-</body>
