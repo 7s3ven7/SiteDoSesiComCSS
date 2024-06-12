@@ -67,21 +67,40 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="../../PHP/Professor/quantitativo_expedicao.php">
-            <table class="tabela">
+        <form method="POST" action="produto.php">
+            <div>Digite um número: </div>
+            <input type="number" name="vezes" placeholder="Digite um número">
+            <input type="submit">
+        </form>
+        <?php
+            if(isset($_POST['vezes'])){
+                $hostname = "127.0.0.1";
+                $name = "root";
+                $password = "root";
+                $DB = "dados";
+                
+                $conexao = new mysqli($hostname, $name, $password, $DB);
+                if ($conexao->connect_errno) {
+                    echo "Failed connection: " . $conexao->connect_error;
+                    header("Location: ../../HTML/Aluno/recebimento.html");
+                    exit();
+                } else {
+                    $i = $_POST['vezes'];
+                    for($i;$i>0;$i){
+                    $i = $i-1;
+                    echo'
+                <table class="tabela">
                 <tr>
                     <td>Código do fornecedor: </td>
                     <td><input class="botao-tabela" type="text" name="1" placeholder="1234"></td>
                     <td>Tipo: </td>
                     <td><input class="botao-tabela" type="text" name="2" placeholder="Aplle"></td>
-                </tr>
-                <tr>
                     <td>Validade: </td>
                     <td><input class="botao-tabela" type="date" name="3" placeholder="12.345.678/0001-00"></td>
-                    <td>Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="4" placeholder="SENU-123456-2"></td>
                 </tr>
                 <tr>
+                    <td>Lote: </td>
+                    <td><input class="botao-tabela" type="text" name="4" placeholder="SENU-123456-2"></td>
                     <td>Nome: </td>
                     <td><input class="botao-tabela" type="text" name="5" placeholder="Titanaique"></td>
                     <td>Marca do produto: </td>
@@ -92,28 +111,20 @@
                     <td><input class="botao-tabela" type="text" name="7" placeholder="2201"></td>
                     <td>Unidade: </td>
                     <td><input class="botao-tabela" type="text" name="8" placeholder="Lacre"></td>
-                </tr>
-                <tr>
                     <td>Quantidade de unidade: </td>
                     <td><input class="botao-tabela" type="text" name="9" placeholder="SIF"></td>
+                </tr>
+                <tr>
                     <td>Quantidade de produto: </td>
                     <td><input class="botao-tabela" type="text" name="10" placeholder="Temperatura"></td>
-                </tr>
-                <tr>
                     <td>Valor da unidade: </td>
                     <td><input class="botao-tabela" type="text" name="11" placeholder="IMO"></td>
-                    <td>Valor total: </td>
-                    <td><input class="botao-tabela" type="text" name="12" placeholder="Número"></td>
-                </tr>
-                <tr>
                     <td>Peso em kilo grama: </td>
                     <td><input class="botao-tabela" type="text" name="13" placeholder="Nome produto"></td>
-                    <td>Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="14" placeholder="unidade"></td>
                 </tr>
-            </table>
-            <input class="botao" type="submit" value="Enviar">
-        </form>
+            </table>';
+                    }}}
+            ?>
     </div>
 </body>
 
