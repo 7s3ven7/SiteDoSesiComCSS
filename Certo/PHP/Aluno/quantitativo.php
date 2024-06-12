@@ -77,13 +77,16 @@
         </form>
     </details>
     <div class="menu">Menu</div>
+    <div class="">
+
+    </div>
     <div class="caixa">
         <form action="quantitativo.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
-                <div class="quadrado-quantitativo-2"></div>
+                <div class="quadrado-quantitativo-2">
         </form>
         <?php
      if(isset($_POST['n_pedido'])){
@@ -98,15 +101,17 @@
             header("Location: ../../HTML/Aluno/recebimento.html");
             exit();
         } else {
-                $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `pedi_clientes_p` WHERE `CNPj` = ".$vl.";";
+            $vl = $_POST['n_pedido'];
+			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$vl.";";
 			$resultado = $conexao->query($sql);
+            $row = mysqli_fetch_array($resultado);
             $s1 = $row['0'];
+            if(isset($s1)){
             echo '
         <div class="quadrado-produto">
             <div class="quantitativo-texto">Número da Nota Fiscal</div>
             <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-        </div>';
+        </div>';}
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
@@ -116,9 +121,9 @@
                 $s5 = $row['4'];
                 $s6 = $row['5'];
                 echo'
-                <div class="quadrado-produto">
+            <div class="quadrado-produto">
                 <div class="quantitativo-texto">Número do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
             </div>
                 <table class="quantitativo-margin">
                     <tr>
@@ -136,10 +141,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s8.'" name="un"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s10.'" name="qtd"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s11.'" name="unit"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s12.'" name="total"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s3.'" name="un"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s4.'" name="qtd"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s5.'" name="unit"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s6.'" name="total"></td>
                         <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
                     </tr>
                 </table>
@@ -159,7 +164,6 @@
                         </td>
                     </tr>
                 </table>
-                </div>
                 ';
         }}}}
         ?>
