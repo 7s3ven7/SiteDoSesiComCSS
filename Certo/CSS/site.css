@@ -5,8 +5,49 @@
 }
 
 hr {
-    height: 2.5px;
-    background-color: black;
+    height: 1px;
+    background-color: darkgray;
+}
+
+.enviar-numero-produto {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: green;
+    color: whitesmoke;
+    transition: 0.4s;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.enviar-numero-produto:hover {
+    background-color: white;
+    color: green;
+}
+
+.numero-produto {
+    padding: 2px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: white;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-produto {
+    font-size: 25px;
+}
+
+.botao-produto {
+    height: 25px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
 }
 
 .quadrado-select-produto {
@@ -484,7 +525,7 @@ hr {
     width: 1500px;
     height: 200px;
     left: 325px;
-    top: 155px;
+    top: 50px;
     text-align: center;
     align-items: center;
     position: absolute;
@@ -624,6 +665,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .tabela-produto {
@@ -685,6 +727,7 @@ hr {
     font-size: medium;
     width: 200px;
     border: 1px black solid;
+    border-radius: 5px;
     margin-right: -55px;
 }
 
