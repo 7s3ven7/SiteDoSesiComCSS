@@ -66,14 +66,15 @@
         </form>
     </details>
     <div class="details-caixa"></div>
-    <div class="menu">Menu</div>
+
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
         <form method="POST" action="produto.php">
-            <div>Digite um número: </div>
-            <input type="number" name="vezes" placeholder="Digite um número">
-            <input type="submit">
+            <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
+                    name="vezes" placeholder="Número de vezes*"></div>
+            <input class="enviar-numero-produto" type="submit">
+
         </form>
         <?php
             if(isset($_POST['vezes'])){
@@ -89,10 +90,13 @@
                     exit();
                 } else {
                     $i = $_POST['vezes'];
+                    $t = 1;
                     for($i;$i>0;$i){
                     $i = $i-1;
                     echo'
-            <hr>
+
+            <br>
+            <div class="numero-produto">Produto Número: '.$t.'</div>
             <br>
             <table class="tabela">
                 <tr>
@@ -128,10 +132,12 @@
                     <td><input class="botao-tabela" type="text" name="13" placeholder="Nome produto"></td>
                 </tr>
             </table>';
+            $t = $t+1;
                     }
                 echo'<div class="details-caixa-2"></div>';}}
             ?>
     </div>
+    <div class="menu">Menu</div>
     <div id="tipo">Conta: Professor</div>
 
 </body>
