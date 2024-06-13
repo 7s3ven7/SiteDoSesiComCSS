@@ -4,6 +4,11 @@
     box-sizing: 0;
 }
 
+hr {
+    height: 2.5px;
+    background-color: black;
+}
+
 .quadrado-select-produto {
     width: 500px;
     height: 1000px;
@@ -475,9 +480,20 @@
     position: fixed;
 }
 
+.caixa-fixa {
+    width: 1500px;
+    height: 200px;
+    left: 325px;
+    top: 155px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+}
+
 .caixa {
-    width: 1665px;
-    height: 835px;
+    width: 1700px;
+    height: 850px;
     background-color: whitesmoke;
     left: 240px;
     top: 75px;
@@ -485,7 +501,7 @@
     align-items: center;
     line-height: 200%;
     position: fixed;
-    border: 1px black solid;
+    border: 2px black solid;
     border-radius: 10px;
 }
 
@@ -583,8 +599,8 @@
 }
 
 .tabela {
-    column-gap: 12px;
     width: 1500px;
+    margin-bottom: 10px;
     font-size: x-large;
     position: relative;
     text-align: left;
@@ -651,10 +667,9 @@
     padding: 10px;
     padding-left: 5px;
     font-size: medium;
-    width: 150px;
+    width: 200px;
     border: 1px black solid;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: -55px;
 }
 
 .botao-tabela-2 {
@@ -722,15 +737,30 @@
 #tipo {
     font-size: xx-large;
     background-color: whitesmoke;
-    border: 1px solid black;
+    border: 2px black solid;
     border-radius: 5px;
+    top: 10px;
     position: fixed;
-    top: 7.5px;
-    padding: 10px;
+    padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 0;
     left: 240px;
-    width: 1655px;
+    height: 50px;
+    width: 1700px;
+}
+
+.fundo-2 {
+    background-color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    width: 1650px;
+    height: 75px;
+    position: fixed;
+    top: 50px;
+    left: 240px;
+    border-left: 2px solid black;
+
 }
 
 #texto-submit {

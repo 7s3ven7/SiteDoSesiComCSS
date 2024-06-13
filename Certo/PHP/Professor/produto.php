@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="tipo">Conta: Professor</div>
+
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
@@ -67,11 +67,8 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="produto.php">
-            <div>Digite um número: </div>
-            <input type="number" name="vezes" placeholder="Digite um número">
-            <input type="submit">
-        </form>
+    </div>
+    <div class="caixa-fixa">
         <?php
             if(isset($_POST['vezes'])){
                 $hostname = "127.0.0.1";
@@ -89,7 +86,9 @@
                     for($i;$i>0;$i){
                     $i = $i-1;
                     echo'
-                <table class="tabela">
+            <hr>
+            <br>
+            <table class="tabela">
                 <tr>
                     <td>Código do fornecedor: </td>
                     <td><input class="botao-tabela" type="text" name="1" placeholder="1234"></td>
@@ -125,6 +124,15 @@
             </table>';
                     }}}
             ?>
+    </div>
+
+    <div id="tipo">Conta: Professor</div>
+    <div class="fundo-2">
+        <form method="POST" action="produto.php">
+            <div>Digite um número: </div>
+            <input type="number" name="vezes" placeholder="Digite um número">
+            <input type="submit">
+        </form>
     </div>
 </body>
 
