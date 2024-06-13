@@ -103,8 +103,9 @@ if ($conexao->connect_errno) {
     $sql='SELECT `n_nota`, `doca` FROM `doca_recebimento_a` LIMIT 0, 10';
 
     $resultado = $conexao->query($sql);
-    $row = $resultado->fetch_array;
-    for($resultado != 0){
-    echo $row[0];
+
+    while($resultado->num_rows != 0){
+        $row = $result->fetch_array();
+        echo $row[0];
 }}
 ?>
