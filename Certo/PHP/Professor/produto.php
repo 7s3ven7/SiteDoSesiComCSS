@@ -65,10 +65,16 @@
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
+    <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
+        <form method="POST" action="produto.php">
+            <div>Digite um número: </div>
+            <input type="number" name="vezes" placeholder="Digite um número">
+            <input type="submit">
+        </form>
         <?php
             if(isset($_POST['vezes'])){
                 $hostname = "127.0.0.1";
@@ -122,18 +128,12 @@
                     <td><input class="botao-tabela" type="text" name="13" placeholder="Nome produto"></td>
                 </tr>
             </table>';
-                    }}}
+                    }
+                echo'<div class="details-caixa-2"></div>';}}
             ?>
     </div>
-
     <div id="tipo">Conta: Professor</div>
-    <div class="fundo-2">
-        <form method="POST" action="produto.php">
-            <div>Digite um número: </div>
-            <input type="number" name="vezes" placeholder="Digite um número">
-            <input type="submit">
-        </form>
-    </div>
+
 </body>
 
 </html>

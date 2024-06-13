@@ -493,16 +493,16 @@ hr {
 
 .caixa {
     width: 1700px;
-    height: 850px;
+    height: 1000px;
     background-color: whitesmoke;
-    left: 240px;
-    top: 75px;
+    left: 230px;
+    top: -5px;
     text-align: center;
     align-items: center;
     line-height: 200%;
     position: fixed;
-    border: 2px black solid;
-    border-radius: 10px;
+    padding-top: 50px;
+    border: 2px darkgray solid;
 }
 
 .menu {
@@ -516,6 +516,22 @@ hr {
     padding: 1%;
     margin-top: 1%;
     background-color: rgb(220, 220, 220);
+}
+
+.details-caixa {
+    height: 100px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+}
+
+.details-caixa-2 {
+    height: 25px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 50px;
 }
 
 .details-all {
@@ -746,17 +762,16 @@ hr {
 
 #tipo {
     font-size: xx-large;
-    background-color: whitesmoke;
-    border: 2px black solid;
-    border-radius: 5px;
-    top: 10px;
+    background-color: white;
+    border-top: 2px solid darkgray;
+    top: 875px;
     position: fixed;
     padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 0;
-    left: 240px;
+    left: -1px;
     height: 50px;
-    width: 1700px;
+    width: 1924px;
 }
 
 .fundo-2 {
