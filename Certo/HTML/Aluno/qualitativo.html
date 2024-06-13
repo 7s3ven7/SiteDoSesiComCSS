@@ -5,17 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro pedido</title>
 </head>
 
 <body>
-    <div id="tipo">Aluno</div>
+    <div id="tipo">Conta: Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+    <summary class="details-big">Menus</summary>
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/index.html">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
@@ -24,14 +25,14 @@
         <form action="../../PHP/aluno/quantitativo.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="qualitativo.html">
+        <form action="../../PHP/aluno/qualitativo.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Movimentação</summary>
-        <form action="movimentacao">
-            <input class="details-small" type="submit" value="Movimentação"></summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP"></summary>
         </form>
     </details>
     <details class="details-all">
@@ -78,6 +79,18 @@
     </details>
     <div class="menu">Menu</div>
     <div class="caixa">
+        <form method="POST" action="../../PHP/Aluno/qualitativo.php">
+            <table class="tabela">
+                <tr>
+                    <td>Número do pedido:</td>
+                <tr>
+                    <td colspan="4"><input class="qualit-cod-prod" type="number" placeholder="01234" name="n_pedido"
+                            name="sinopse">
+                    </td>
+                </tr>
+            </table>
+            <input class="botao" type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 
