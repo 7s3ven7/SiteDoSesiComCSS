@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);
+
 if (empty($_SESSION['nome'])){
     header('Location: sair.php');
     exit();
@@ -89,23 +97,20 @@ echo '<!DOCTYPE html>
 
 </html>';
 }
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
-$conexao = new mysqli($hostname, $name, $password, $DB);
 
 if ($conexao->connect_errno) {
 	echo "Failed conection :" . $conexao->connect_error;
 	exit();
 } else {
-    $sql='SELECT `n_nota`, `doca` FROM `doca_recebimento_a` LIMIT 0, 10';
+    $SQL='SELECT `n_nota`, `doca` FROM `doca_recebimento_a` LIMIT 0, 10';
 
-    $resultado = $conexao->query($sql);
+    $resultado = $conexao->query($SQL);
+    if(mysqli_num_rows($resultado)>0)
+        while($row = mysqli_fetch_array($resultado)){;
+            $s1 = $row['0'];
+            $s2 = $row['1'];
+            echo '<div class="texto">'.$row['0'].'"</div>"';
 
-    while($resultado->num_rows != 0){
-        $row = $result->fetch_array();
-        echo $row[0];
-}}
+        }   
+}
 ?>
