@@ -30,14 +30,14 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Movimentação</summary>
-        <form action="../../PHP/aluno/movimentacao.php">
-            <input class="details-small" type="submit" value="Movimentação"></summary>
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP"></summary>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="estoque.php">
-            <input class="details-small" type="submit" value="Estoque">
+        <form action="tela.html">
+            <input class="details-small" type="submit" value="WIP">
         </form>
         <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
@@ -77,20 +77,14 @@
         </form>
     </details>
     <div class="menu">Menu</div>
-    <div class="">
-
-    </div>
     <div class="caixa">
-        <form action="quantitativo.php" method="POST">
+        <form action="estoque.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
-<<<<<<< HEAD
-=======
-                <div class="quadrado-quantitativo-2">
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3
         </form>
+
         <?php
      if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
@@ -104,45 +98,30 @@
             header("Location: ../../HTML/Aluno/recebimento.html");
             exit();
         } else {
-            $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$vl.";";
+                $vl = $_POST['n_pedido'];
+			$sql="SELECT * FROM `pedi_clientes_p` WHERE `id_pedido_clien_p_1` = ".$vl.";";
 			$resultado = $conexao->query($sql);
-            $row = mysqli_fetch_array($resultado);
-            $s1 = $row['0'];
-            if(isset($s1)){
-            echo '
-        <div class="quadrado-produto">
-            <div class="quantitativo-texto">Número da Nota Fiscal</div>
-            <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-        </div>';}
-        if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
-                $s2 = $row['1'];
-                $s3 = $row['2'];
-                $s4 = $row['3'];
-                $s5 = $row['4'];
-                $s6 = $row['5'];
-<<<<<<< HEAD
-                $s8 = $row['7'];
-                $s10 = $row['9'];
-                $s11 = $row['10'];
-                $s12 = $row['11'];
-            echo '                
-                <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-                <div class="quantitativo-texto">Nome do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
-                </div>
-            <div class="quadrado-quantitativo-2">
-
-=======
+                $s6 = $row['1'];
+                $s8 = $row['2'];
+                $s10 = $row['3'];
+                $s11 = $row['4'];
+                $s12 = $row['5'];
                 echo'
+
+                ';
+			}
+            echo '
+            <div class="quadrado-quantitativo-2">
             <div class="quadrado-produto">
+                <div class="quantitativo-texto">Nome do produto</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
                 <div class="quantitativo-texto">Número do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
+                <div class="quantitativo-texto">Código do fornecedor</div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
             </div>
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3
                 <table class="quantitativo-margin">
                     <tr>
                         <td>
@@ -159,10 +138,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s3.'" name="un"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s4.'" name="qtd"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s5.'" name="unit"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s6.'" name="total"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s8.'" name="un"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s10.'" name="qtd"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s11.'" name="unit"></td>
+                        <td><input class="quantitativo-input-valor" type="text" value="'.$s12.'" name="total"></td>
                         <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
                     </tr>
                 </table>
@@ -175,16 +154,17 @@
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
                         </td>
                         <td>
-                            <div class="quantitativo-input-valor-texto">Avariado</div>
+                            <div class="quantitativo-input-valor-texto" name="avariado">Avariado</div>
                         </td>
                         <td>
                             <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
                         </td>
                     </tr>
                 </table>
-                ';
-        }}}}
+                </div>
+        ';
+        }
+    }
         ?>
     </div>
     </div>
-</body>

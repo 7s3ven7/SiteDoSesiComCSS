@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="tipo">Conta: Professor</div>
+
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
@@ -43,7 +43,7 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Produto</summary>
-        <form action="produto.html">
+        <form action="produto.php">
             <input class="details-small" type="submit" value="Cadastro">
         </form>
     </details>
@@ -65,66 +65,93 @@
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <div class="menu">Menu</div>
+    <div class="details-caixa"></div>
+
     <div class="caixa">
-        <form method="POST" action="../../PHP/Professor/quantitativo_expedicao.php">
+    </div>
+    <div class="caixa-fixa">
+        <form method="POST" action="produto.php">
+            <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
+                    name="vezes" placeholder="Número de vezes*"></div>
+            <input class="enviar-numero-produto" type="submit">
+
+        </form>
+        <?php
+            if(isset($_POST['vezes'])){
+                $hostname = "127.0.0.1";
+                $name = "root";
+                $password = "root";
+                $DB = "dados";
+                
+                $conexao = new mysqli($hostname, $name, $password, $DB);
+                if ($conexao->connect_errno) {
+                    echo "Failed connection: " . $conexao->connect_error;
+                    header("Location: ../../HTML/Aluno/recebimento.html");
+                    exit();
+                } else {
+                    $i = $_POST['vezes'];
+                    $t = 1;
+                    for($i;$i>0;$i){
+                    $i = $i-1;
+                    echo'
+
+            <br>
+            <div class="numero-produto">Produto Número: '.$t.'</div>
+            <br>
             <table class="tabela">
                 <tr>
-                    <td>Código Interno: </td>
-                    <td><input class="botao-tabela" type="text" name="1" placeholder="00000000001"></td>
                     <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="2" placeholder="1234"></td>
-                </tr>
-                <tr>
+                    <td><input class="botao-tabela" type="text" name="1" placeholder="1234"></td>
                     <td>Tipo: </td>
+<<<<<<< HEAD:Certo/HTML/Professor/produto.html
                     <td><input class="botao-tabela" type="text" name="3" placeholder="SENU-123456-2"></td>
+=======
+                    <td><input class="botao-tabela" type="text" name="2" placeholder="Aplle"></td>
+>>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3:Certo/PHP/Professor/produto.php
                     <td>Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="4" placeholder="12.345.678/0001-00"></td>
+                    <td><input class="botao-tabela" type="date" name="3" placeholder="12.345.678/0001-00"></td>
                 </tr>
                 <tr>
                     <td>Lote: </td>
+<<<<<<< HEAD:Certo/HTML/Professor/produto.html
                     <td><input class="botao-tabela" type="text" name="5" placeholder="*"></td>
                     <td>Nome: </td>
                     <td><input class="botao-tabela" type="text" name="6" placeholder="*"></td>
                 </tr>
                 <tr>
+=======
+                    <td><input class="botao-tabela" type="text" name="4" placeholder="SENU-123456-2"></td>
+                    <td>Nome: </td>
+                    <td><input class="botao-tabela" type="text" name="5" placeholder="Titanaique"></td>
+>>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3:Certo/PHP/Professor/produto.php
                     <td>Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="7" placeholder="Aplle"></td>
-                    <td>Embalagem: </td>
-                    <td><input class="botao-tabela" type="text" name="8" placeholder="2201"></td>
+                    <td><input class="botao-tabela" type="text" name="6" placeholder="Aplle"></td>
                 </tr>
                 <tr>
+                    <td>Embalagem: </td>
+                    <td><input class="botao-tabela" type="text" name="7" placeholder="2201"></td>
                     <td>Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="9" placeholder="Lacre"></td>
+                    <td><input class="botao-tabela" type="text" name="8" placeholder="Lacre"></td>
                     <td>Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="10" placeholder="SIF"></td>
+                    <td><input class="botao-tabela" type="text" name="9" placeholder="SIF"></td>
                 </tr>
                 <tr>
                     <td>Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="11" placeholder="Temperatura"></td>
+                    <td><input class="botao-tabela" type="text" name="10" placeholder="Temperatura"></td>
                     <td>Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="12" placeholder="IMO"></td>
-                </tr>
-                <tr>
-                    <td>Valor total: </td>
-                    <td><input class="botao-tabela" type="text" name="13" placeholder="Número"></td>
+                    <td><input class="botao-tabela" type="text" name="11" placeholder="IMO"></td>
                     <td>Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="14" placeholder="Nome produto"></td>
+                    <td><input class="botao-tabela" type="text" name="13" placeholder="Nome produto"></td>
                 </tr>
-                <tr>
-                    <td>Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="15" placeholder="unidade"></td>
-                    <td>Faltando: </td>
-                    <td><input class="botao-tabela" type="text" name="16" placeholder="quantidade"></td>
-                </tr>
-                <tr>
-                    <td>Avariado: </td>
-                    <td><input class="botao-tabela" type="text" name="17" placeholder="quantidade"></td>
-                </tr>
-            </table>
-            <input class="botao" type="submit" value="Enviar">
-        </form>
+            </table>';
+            $t = $t+1;
+                    }
+                echo'<div class="details-caixa-2"></div>';}}
+            ?>
     </div>
+    <div class="menu">Menu</div>
+    <div id="tipo">Conta: Professor</div>
+
 </body>
 
 </html>

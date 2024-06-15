@@ -4,11 +4,63 @@
     box-sizing: 0;
 }
 
+hr {
+    height: 1px;
+    background-color: darkgray;
+}
+
+.enviar-numero-produto {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: green;
+    color: whitesmoke;
+    transition: 0.4s;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.enviar-numero-produto:hover {
+    background-color: white;
+    color: green;
+}
+
+.numero-produto {
+    padding: 2px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: white;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-produto {
+    font-size: 25px;
+}
+
+.botao-produto {
+    height: 25px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quadrado-select-produto {
+    width: 500px;
+    height: 1000px;
+    background-color: blue;
+}
+
 .quadrado-quantitativo {
     width: 400px;
     height: 100px;
+    top: 25px;
     position: relative;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -16,16 +68,20 @@
 }
 
 .quadrado-quantitativo-2 {
-    width: 600px;
+    width: 400px;
     height: 700px;
-    top: 100px;
     position: relative;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     align-items: center;
-    left: -25px;
+}
+
+.quadrado-produto {
+    width: 400px;
+    align-items: left;
+    text-align: left;
+    position: relative;
 }
 
 .quantitativo-texto {
@@ -125,14 +181,13 @@
 }
 
 .quantitativo-margin {
+    width: 200px;
     padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .quantitativo-margin-mini {
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    padding-top: 10px;
 }
 
 #qd-logo {
@@ -468,18 +523,29 @@
     position: fixed;
 }
 
+.caixa-fixa {
+    width: 1500px;
+    height: 200px;
+    left: 325px;
+    top: 50px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+}
+
 .caixa {
-    width: 1615px;
-    height: 835px;
+    width: 1700px;
+    height: 1000px;
     background-color: whitesmoke;
-    left: 240px;
-    top: 75px;
+    left: 230px;
+    top: -5px;
     text-align: center;
     align-items: center;
     line-height: 200%;
     position: fixed;
-    border: 1px black solid;
-    border-radius: 10px;
+    padding-top: 50px;
+    border: 2px darkgray solid;
 }
 
 .menu {
@@ -493,6 +559,22 @@
     padding: 1%;
     margin-top: 1%;
     background-color: rgb(220, 220, 220);
+}
+
+.details-caixa {
+    height: 100px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+}
+
+.details-caixa-2 {
+    height: 25px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 50px;
 }
 
 .details-all {
@@ -514,6 +596,7 @@
     border-radius: 10px;
     margin-left: 2.5px;
     transition: 0.25s;
+    cursor: cell;
 }
 
 .details-big:hover,
@@ -536,6 +619,7 @@
     margin-top: 10px;
     margin-left: 10px;
     transition: 0.25s;
+    cursor: pointer;
 }
 
 .details-small-more {
@@ -552,6 +636,7 @@
     margin-left: 10px;
     margin-top: 10px;
     transition: 0.25s;
+    cursor: cell;
 }
 
 .botao {
@@ -570,21 +655,22 @@
 }
 
 .botao:hover {
-    background-color: blue;
-    color: blue;
-    padding: 1.005%;
+    background-color: white;
+    color: green;
+    padding: 20.1px;
 }
 
 .tabela {
-    line-height: 200%;
-    width: 80%;
-    padding: 3%;
-    font-size: xx-large;
+    width: 1500px;
+    margin-bottom: 10px;
+    font-size: x-large;
     position: relative;
     text-align: left;
     align-items: left;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .tabela-produto {
@@ -641,13 +727,13 @@
 }
 
 .botao-tabela {
-    padding: 1%;
-    font-size: large;
-    width: 90%;
+    padding: 10px;
+    padding-left: 5px;
+    font-size: medium;
+    width: 200px;
     border: 1px black solid;
-    border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    border-radius: 5px;
+    margin-right: -55px;
 }
 
 .botao-tabela-2 {
@@ -664,6 +750,16 @@
     padding-left: 5px;
     font-size: large;
     width: 1200px;
+    height: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.qualit-cod-prod {
+    padding: 2px;
+    padding-left: 5px;
+    font-size: large;
+    width: 70px;
     height: 50px;
     border: 1px black solid;
     border-radius: 10px;
@@ -714,16 +810,30 @@
 
 #tipo {
     font-size: xx-large;
-    background-color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 5px;
+    background-color: white;
+    border-top: 2px solid darkgray;
+    top: 875px;
     position: fixed;
-    top: 7.5px;
-    padding: 10px;
+    padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 0;
+    left: -1px;
+    height: 50px;
+    width: 1924px;
+}
+
+.fundo-2 {
+    background-color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    width: 1650px;
+    height: 75px;
+    position: fixed;
+    top: 50px;
     left: 240px;
-    width: 1605px;
+    border-left: 2px solid black;
+
 }
 
 #texto-submit {

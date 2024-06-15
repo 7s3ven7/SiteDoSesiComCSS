@@ -19,11 +19,11 @@ if ($conexao->connect_errno) {
 $SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
 
 	$result = $conexao->query($SQL);
-	if ($result->num_rows > 0) {
+	if ($result->num_rows != 0) {
 		$row = $result->fetch_array();
 		$_SESSION['tipo'] = $row[0];
 		$_SESSION['nome'] = $row[1];
-		$_SSION['senha'] = $row[2];
+		$_SESSION['senha'] = $row[2];
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
 			header('Location: ../HTML/Professor/atividade.html', true, 301);
