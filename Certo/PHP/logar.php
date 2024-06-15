@@ -26,11 +26,11 @@ $SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome 
 		$_SSION['senha'] = $row[2];
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/Professor/tela.html', true, 301);
+			header('Location: ../HTML/Professor/atividade.html', true, 301);
 			exit();
 		}elseif ($row[0] != 'Professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/Aluno/tela.html', true, 301);
+			header('Location: ../HTML/Aluno/atividade.html', true, 301);
 			exit();
 		}
 }else{

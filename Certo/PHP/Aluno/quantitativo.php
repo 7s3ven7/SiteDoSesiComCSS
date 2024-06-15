@@ -83,7 +83,6 @@
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
-
         </form>
 
         <?php
@@ -112,10 +111,10 @@
                 $s12 = $row['11'];
             echo '                
                 <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'">
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
                 <div class="quantitativo-texto">Nome do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'">
-            </div>
+                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
+                </div>
             <div class="quadrado-quantitativo-2">
 
                 <table class="quantitativo-margin">
