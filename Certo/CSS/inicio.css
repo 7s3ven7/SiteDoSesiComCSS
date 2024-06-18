@@ -39,6 +39,31 @@
     text-align: left;
 }
 
+.caixa-mini-atividade {
+    width: 300px;
+    height: 150px;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: whitesmoke;
+    text-align: left;
+    line-height: 400%;
+}
+
+.caixa-mini-atividade-toda {
+    width: 400px;
+    height: 400px;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
 .caixa-texto {
     width: 100%;
     padding: 10px;
@@ -59,7 +84,11 @@
 .texto-mini {
     font-size: 25px;
     color: gray;
+}
 
+.texto-atividade {
+    font-size: 30px;
+    color: green;
 }
 
 .botao {
