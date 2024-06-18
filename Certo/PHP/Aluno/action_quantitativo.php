@@ -26,37 +26,4 @@ if ($conexao->connect_errno) {
 	}
 
 }
-/*echo '
-<table class="tabela-4">
-    <div id="linha">
-        <hr class="linha">
-        <tr>
-            <td>
-                <div class="texto3">Produto: '.$row['nome'].'</div>
-            </td>
-            <td>
-                <div class="texto3">Unidade: '.$row['und'].'</div>
-            </td>
-            <td>
-                <div class="texto3">Quantidade de Unidades: '.$row['quantidade_und'].'</div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="texto3">Valor por Unidade: '.$row['valor_und'].'</div>
-            </td>
-            <td>
-                <div class="texto3">Quantidade de Produtos: '.$row['quant_prod'].'</div>
-            </td>
-            <td>
-                <div class="texto3">Valor total: '.$row['quantidade_und']*$row['valor_und'].'</div>
-            </td>
-        </tr>
-    </div>
-</table>
-';
-echo '<form method="POST" action="action_qualitativo.php">
-    <input class="botao-2" type="submit" value="Enviar" left=5px>
-</form>';
-*/
 ?>

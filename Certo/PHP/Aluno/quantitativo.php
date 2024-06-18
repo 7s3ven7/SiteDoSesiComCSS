@@ -89,7 +89,9 @@
                 <div class="quadrado-quantitativo-2">
         </form>
         <?php
-     if(isset($_POST['n_pedido'])){
+        session_start();
+        
+    if(isset($_POST['n_pedido'])){
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -101,17 +103,10 @@
             header("Location: ../../HTML/Aluno/recebimento.html");
             exit();
         } else {
-            $vl = $_POST['n_pedido'];
-			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$vl.";";
+            $v1 = $_POST['n_pedido'];
+			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$v1.";";
 			$resultado = $conexao->query($sql);
-            $row = mysqli_fetch_array($resultado);
-            $s1 = $row['0'];
-            if(isset($s1)){
-            echo '
-        <div class="quadrado-produto">
-            <div class="quantitativo-texto">Número da Nota Fiscal</div>
-            <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-        </div>';}
+
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
@@ -120,52 +115,60 @@
                 $s4 = $row['3'];
                 $s5 = $row['4'];
                 $s6 = $row['5'];
+                echo '
+                <div class="quadrado-produto">
+                    <div class="quantitativo-texto">Número da Nota Fiscal</div>
+                    <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
+                </div>';
+                
                 echo'
-            <div class="quadrado-produto">
-                <div class="quantitativo-texto">Número do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
-            </div>
-                <table class="quantitativo-margin">
-                    <tr>
-                        <td>
-                            <div class="quantitativo-input-valor-texto">UN</div>
-                        </td>
-                        <td>
-                            <div class="quantitativo-input-valor-texto">QTD</div>
-                        </td>
-                        <td>
-                            <div class="quantitativo-input-valor-texto">R$/unit</div>
-                        </td>
-                        <td>
-                            <div class="quantitativo-input-valor-texto">R$Total</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s3.'" name="un"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s4.'" name="qtd"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s5.'" name="unit"></td>
-                        <td><input class="quantitativo-input-valor" type="text" value="'.$s6.'" name="total"></td>
-                        <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
-                    </tr>
-                </table>
-                <table class="quantitativo-margin-mini">
-                    <tr>
-                        <td>
+                <div class="quadrado-produto">
+                    <div class="quantitativo-texto">Número do produto</div>
+                    <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
+                </div>
+                    <table class="quantitativo-margin">
+                        <tr>
+                            <td>
+                                <div class="quantitativo-input-valor-texto">UN</div>
+                            </td>
+                            <td>
+                                <div class="quantitativo-input-valor-texto">QTD</div>
+                            </td>
+                            <td>
+                                <div class="quantitativo-input-valor-texto">R$/unit</div>
+                            </td>
+                            <td>
+                                <div class="quantitativo-input-valor-texto">R$Total</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="quantitativo-input-valor" type="text" value="'.$s3.'" name="un"></td>
+                            <td><input class="quantitativo-input-valor" type="text" value="'.$s4.'" name="qtd"></td>
+                            <td><input class="quantitativo-input-valor" type="text" value="'.$s5.'" name="unit"></td>
+                            <td><input class="quantitativo-input-valor" type="text" value="'.$s6.'" name="total"></td>
+                            <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
+                        </tr>
+                    </table>
+                    <table class="quantitativo-margin-mini">
+                        <tr>
+                            <td>
                             <div class="quantitativo-input-valor-texto">Faltando</div>
-                        </td>
-                        <td>
-                            <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
-                        </td>
-                        <td>
-                            <div class="quantitativo-input-valor-texto">Avariado</div>
-                        </td>
-                        <td>
-                            <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
-                        </td>
-                    </tr>
-                </table>
+                            </td>
+                            <td>
+                                <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
+                            </td>
+                            <td>
+                                <div class="quantitativo-input-valor-texto">Avariado</div>
+                            </td>
+                            <td>
+                                <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
+                            </td>
+                        </tr>
+                    </table>
                 ';
-        }}}}
+            }
+            }
+        }}
         ?>
     </div>
     </div>
