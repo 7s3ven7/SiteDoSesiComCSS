@@ -86,10 +86,7 @@
                 <div class="quantitativo-texto">Digite o Código do produto</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
-<<<<<<< HEAD
-=======
                 <div class="quadrado-quantitativo-2">
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3
         </form>
         <?php
      if(isset($_POST['n_pedido'])){
@@ -123,26 +120,11 @@
                 $s4 = $row['3'];
                 $s5 = $row['4'];
                 $s6 = $row['5'];
-<<<<<<< HEAD
-                $s8 = $row['7'];
-                $s10 = $row['9'];
-                $s11 = $row['10'];
-                $s12 = $row['11'];
-            echo '                
-                <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-                <div class="quantitativo-texto">Nome do produto</div>
-                <input class="quantitativo-input-pedido-nota" type="text" value="'.$s6.'" disabled>
-                </div>
-            <div class="quadrado-quantitativo-2">
-
-=======
                 echo'
             <div class="quadrado-produto">
                 <div class="quantitativo-texto">Número do produto</div>
                 <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
             </div>
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3
                 <table class="quantitativo-margin">
                     <tr>
                         <td>
