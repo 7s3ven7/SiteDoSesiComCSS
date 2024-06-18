@@ -172,55 +172,61 @@ echo '<!DOCTYPE html>
                     <td>'.$row['n_nota'].'</td>
                 </tr>          
                 <tr>
-                    <td>Container bem desgastado: </td>
+                    <td>Container Bem Desgastado: </td>
                     <td><input class="check" type="checkbox" name="1"</td>
-                    <td>Avaria na lateral direita: </td>
+                    <td>Avaria na Lateral Direita: </td>
                     <td><input class="check" type="checkbox" name="2"</td>
                 </tr>
                     <tr>
-                    <td>Avaria na lateral esquerda: </td>
+                    <td>Avaria na Lateral Esquerda: </td>
                     <td><input class="check" type="checkbox" name="3"</td>
-                    <td>Avaria no teto: </td>
+                    <td>Avaria no Teto: </td>
                     <td><input class="check" type="checkbox" name="4"</td>
                 </tr>
                 <tr>
-                    <td>Avaria na frente: </td>
+                    <td>Avaria na Frente: </td>
                     <td><input class="check" type="checkbox" name="5"</td>
-                    <td>Sem lacre </td>
+                    <td>Sem Lacre </td>
                     <td><input class="check" type="checkbox" name="6"</td>
                 </tr>
                 <tr>
-                    <td>Adesivos avariados: </td>
+                    <td>Adesivos Avariados: </td>
                     <td><input class="check" type="checkbox" name="7"</td>
-                    <td>Excesso de altura: </td>
+                    <td>Excesso de Altura: </td>
                     <td><input class="check" type="checkbox" name="8"</td>
                 </tr>
                 <tr>
-                    <td>Excesso na direita: </td>
+                    <td>Excesso na Direita: </td>
                     <td><input class="check" type="checkbox" name="9"</td>
-                    <td>Excesso na esquerda: </td>
+                    <td>Excesso na Esquerda: </td>
                     <td><input class="check" type="checkbox" name="10"</td>
                 </tr>
                 <tr>
-                    <td>Excesso frontal: </td>
+                    <td>Excesso Frontal: </td>
                     <td><input class="check" type="checkbox" name="11"</td>
-                    <td>Painel avariado: </td>
+                    <td>Painel Avariado: </td>
                     <td><input class="check" type="checkbox" name="12"</td>
                 </tr>
                 <tr>
-                    <td>Sem cabo de energia: </td>
+                    <td>Sem Cabo de Energia: </td>
                     <td><input class="check" type="checkbox" name="13"</td>
-                    <td>Sem lona: </td>
+                    <td>Sem Lona: </td>
                     <td><input class="check" type="checkbox" name="14"</td>
                 </tr>
                 <tr>
-                    <td>canhoto assinado: </td>
+                    <td>Canhoto Assinado: </td>
                     <td><input class="check" type="checkbox" name="15"</td>
-                    <td>volume_correto: </td>
+                    <td>Volume Correto: </td>
                     <td><input class="check" type="checkbox" name="16"</td>
                 </tr>
                 <tr>
                     <td>Atraso: </td>
+                    <td><input class="check" type="checkbox" name="17"</td>
+                    <td>Código Avariado: </td>
+                    <td><input class="check" type="text" name="18"</td>
+                </tr>
+                <tr>
+                    <td>Item Lacrado: </td>
                     <td><input class="check" type="checkbox" name="17"</td>
                     <td>Observações: </td>
                     <td><input class="check" type="text" name="18"</td>
