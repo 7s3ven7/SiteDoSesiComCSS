@@ -102,27 +102,15 @@
                     <td>Código do fornecedor: </td>
                     <td><input class="botao-tabela" type="text" name="1" placeholder="1234"></td>
                     <td>Tipo: </td>
-<<<<<<< HEAD:Certo/HTML/Professor/produto.html
-                    <td><input class="botao-tabela" type="text" name="3" placeholder="SENU-123456-2"></td>
-=======
                     <td><input class="botao-tabela" type="text" name="2" placeholder="Aplle"></td>
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3:Certo/PHP/Professor/produto.php
                     <td>Validade: </td>
                     <td><input class="botao-tabela" type="date" name="3" placeholder="12.345.678/0001-00"></td>
                 </tr>
                 <tr>
                     <td>Lote: </td>
-<<<<<<< HEAD:Certo/HTML/Professor/produto.html
-                    <td><input class="botao-tabela" type="text" name="5" placeholder="*"></td>
-                    <td>Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="6" placeholder="*"></td>
-                </tr>
-                <tr>
-=======
                     <td><input class="botao-tabela" type="text" name="4" placeholder="SENU-123456-2"></td>
                     <td>Nome: </td>
                     <td><input class="botao-tabela" type="text" name="5" placeholder="Titanaique"></td>
->>>>>>> 813088702c6bf0886c76c6a098ab152bc56a22b3:Certo/PHP/Professor/produto.php
                     <td>Marca do produto: </td>
                     <td><input class="botao-tabela" type="text" name="6" placeholder="Aplle"></td>
                 </tr>
