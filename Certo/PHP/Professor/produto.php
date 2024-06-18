@@ -74,7 +74,6 @@
             <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
                     name="vezes" placeholder="Número de vezes*"></div>
             <input class="enviar-numero-produto" type="submit">
-
         </form>
         <?php
             if(isset($_POST['vezes'])){
