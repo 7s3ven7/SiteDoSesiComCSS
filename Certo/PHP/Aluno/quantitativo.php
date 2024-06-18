@@ -83,7 +83,7 @@
     <div class="caixa">
         <form action="quantitativo.php" method="POST">
             <div class="quadrado-quantitativo">
-                <div class="quantitativo-texto">Digite o Código do produto</div>
+                <div class="quantitativo-texto">Digite o Código do fornecedor</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
                 <input class="quantitativo-enviar-pedido" type="submit">
                 <div class="quadrado-quantitativo-2">

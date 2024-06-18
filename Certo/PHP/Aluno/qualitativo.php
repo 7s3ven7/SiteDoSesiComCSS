@@ -112,10 +112,10 @@ echo '<!DOCTYPE html>
         <form method="POST" action="../../PHP/Aluno/action_qualitativo.php">
             <table class="tabela-2">
                 <tr>
-                    <td><div class="texto2">Código Interno:</div></td>
-                    <td>'.$row['cod_inter'].'</td>
-                    <td><div class="texto2">Código do fornecedor: </div></td>
-                    <td>'.$row['cod_forne'].'</td>
+                    <td><div class="texto2">Código Interno:</td>
+                    <td><div class="espaco">'.$row['cod_inter'].'</div></td>
+                    <td><div class="texto2">Código do fornecedor:</td>
+                    <td><div class="espaco">'.$row['cod_forne'].'</div></td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Nome da empresa: </div></td>
@@ -223,11 +223,11 @@ echo '<!DOCTYPE html>
                     <td>Atraso: </td>
                     <td><input class="check" type="checkbox" name="17"</td>
                     <td>Observações: </td>
-                    <td><input class="botao-tabela" type="text" name="18"</td>
+                    <td><input class="check" type="text" name="18"</td>
                 </tr>
 
             </table>
-            <input class="botao-2" type="submit" value="Enviar" left=5px>
+            <input class="botao-qualitat" type="submit" value="Enviar" left=5px>
         </form>
     </div>
 </body>

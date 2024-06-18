@@ -673,6 +673,29 @@ hr {
     border-radius: 10px;
 }
 
+.tabela-2 {
+    line-height: 140%;
+    width: 50%;
+    padding-top: 2%;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    left: 18%;
+}
+
+.tabela-qualitativo {
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
 .tabela-produto {
     line-height: 80px;
     width: 1400px;
@@ -710,6 +733,19 @@ hr {
     position: fixed;
     border: 1px black solid;
     border-radius: 10px;
+}
+
+.botao-qualitat {
+    width: 10%;
+    height: 45px;
+    margin: 1%;
+    left: 35%;
+    position: absolute;
+    font-size: large;
+    border: 1px black solid;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: green;
 }
 
 #botao-2 {
@@ -755,11 +791,11 @@ hr {
     border-radius: 10px;
 }
 
-.qualit-cod-prod {
+.qualitativo-botao {
     padding: 2px;
     padding-left: 5px;
     font-size: large;
-    width: 70px;
+    width: 184px;
     height: 50px;
     border: 1px black solid;
     border-radius: 10px;
@@ -772,8 +808,11 @@ hr {
     border: 1px black solid;
     border-radius: 10px;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
+}
+
+.espaco {
+    width: 100%;
+    border: 100%;
 }
 
 .texto3 {
