@@ -89,18 +89,17 @@ if ($conexao->connect_errno) {
         echo '
         ';
         while($row = mysqli_fetch_array($resultado)){
-            $s1 = $row['0'];
-            $s2 = $row['1'];
-            $s3 = $row['2'];
-            $s4 = $row['3'];
-            $s5 = $row['4'];
-            $s6 = $row['5'];
-            $s7 = $row['6'];
-            $s8 = $row['7'];
-            $s9 = $row['8'];
-            $s10 = $row['9'];
-            $s11 = $row['10'];
-            $s12 = $row['11'];
+            $s1 = $row['0'];//código do fornecedor
+            $s2 = $row['1'];//Tipo do produto
+            $s3 = $row['2'];//Validade
+            $s4 = $row['3'];//Lote
+            $s5 = $row['4'];//Nome do produto
+            $s6 = $row['5'];//Marca do produto
+            $s7 = $row['6'];//Unidade
+            $s8 = $row['7'];//Quantidade
+            $s9 = $row['8'];//Quantidade unidade
+            $s10 = $row['9'];//Valor unitário
+            $s11 = $row['10'];//Peso
             echo '
             <table>
                 <tr>
@@ -109,33 +108,23 @@ if ($conexao->connect_errno) {
                     <td>Tipo do produto
                     <input class="" type="text" value="'.$s2.'" disabled></td>
                     <td>Validade
-                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <input class="" type="text" value="'.$s3.'" disabled></td>
                     <td>Lote
-                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <input class="" type="text" value="'.$s4.'" disabled></td>
                     <td>Marca do Produto
-                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <input class="" type="text" value="'.$s6.'" disabled></td>
                     <td>Peso
-                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <input class="" type="text" value="'.$s11.'" disabled></td>
                 </tr>
                 <tr>
-                    <td>
-                        UN
-                    </td>
-                    <td>
-                        QTD
-                    </td>
-                    <td>
-                        R$/unit
-                    </td>
-                    <td>
-                        R$Total
-                    </td>
-                </tr>
-                <tr>
-                    <td><input class="" type="text" value="'.$s8.'" name="un" disabled></td>
-                    <td><input class="" type="text" value="'.$s10.'" name="qtd" disabled></td>
-                    <td><input class="" type="text" value="'.$s11.'" name="unit" disabled></td>
-                    <td><input class="" type="text" value="'.$s12.'" name="total" disabled></td>
+                    <td>Unidade
+                    <input class="" type="text" value="'.$s7.'" name="qtd" disabled></td>
+                    <td>Quantidade
+                    <input class="" type="text" value="'.$s8.'" name="qtd" disabled></td>
+                    <td>R$/unit
+                    <input class="" type="text" value="'.$s10.'" name="unit" disabled></td>
+                    <td>R$/Total
+                    <input class="" type="text" value="'.$s10*$s8.'" name="total" disabled></td>
                 </tr>
             </table>
             <hr>
