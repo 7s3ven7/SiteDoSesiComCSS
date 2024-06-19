@@ -26,7 +26,7 @@ echo '<!DOCTYPE html>
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
         <form action="../../HTML/index.html">
@@ -35,61 +35,63 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="../../PHP/aluno/quantitativo.php">
-            <input class="details-small" type="submit" value="Quantitativo">
+        <form action="nota_receb.php">
+            <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="../../PHP/aluno/qualitativo.php">
+        <form action="../../HTML/aluno/qualitativo.html">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
-    </details>
+        <form action="quantitativo.php">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+    </details>    
     <details class="details-all">
-        <summary class="details-big">Movimentação</summary>
-        <form action="../../PHP/aluno/movimentacao.php">
-            <input class="details-small" type="submit" value="Movimentação"></summary>
+        <summary class="details-big">Controle</summary>
+        <form action="docas_receb.php">
+            <input class="details-small" type="submit" value="Doca">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="tela.html">
-            <input class="details-small" type="submit" value="WIP">
+                <form action="nota_exped.php">
+            <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="tela.html">
-            <input class="details-small" type="submit" value="WIP">
+        <form action="../../HTML/aluno/tela.html">
+            <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
+        <form action="../../HTML/aluno/tela.html">
+            <input class="details-small" type="submit" value="Quantitativo (WIP)">
+        </form>
+
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Controle</summary>
-        <form action="../../PHP/aluno/docas_receb.php">
-            <input class="details-small" type="submit" value="Doca">
-        </form>
-    </details>
+
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
