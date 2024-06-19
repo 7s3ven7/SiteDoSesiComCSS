@@ -115,9 +115,9 @@
                     <td>Código do fornecedor: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1234"></td>
                     <td>Tipo: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Aplle"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
                     <td>Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="'.$v3.'" placeholder="12.345.678/0001-00"></td>
+                    <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
                     <td>Lote: </td>
