@@ -170,3 +170,11 @@
 </body>
 
 </html>
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+<form action="tela.html">
+    <input class="botao-grande" type="submit" value="Controle">
+</form>
+<form action="tela.html">
+    <input class="botao-grande" type="submit" value="Estoque">
+</form>
