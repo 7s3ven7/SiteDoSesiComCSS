@@ -13,30 +13,30 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Professor/tela.html">
             <input class="details-small" type="submit" value="Inicio"></div>
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/index.html">
             <input class="details-small" type="submit" value="Sair"></div>
         </form>
-        <form action="reset.html">
+        <form action="../../HTML/Professor/reset.html">
             <input class="details-small" type="submit" value="Resetar"></div>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form action="fornecedor.html">
+        <form action="../../HTML/Professor/fornecedor.html">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form action="empresa.html">
+        <form action="../../HTML/Professor/empresa.html">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form action="cliente.html">
+            <form action="../../HTML/Professor/cliente.html">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form action="pedido.html">
+            <form action="../../HTML/Professor/pedido.html">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
@@ -49,19 +49,19 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="quantitativo_recebimento.html">
+        <form action="../../HTML/Professor/quantitativo_recebimento.html">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
-        <form action="nota_recebimento.html">
+        <form action="../../HTML/Professor/nota_recebimento.html">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="quantitativo_expedicao.html">
+        <form action="../../HTML/Professor/quantitativo_expedicao.html">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="nota_recebimento.html">
+        <form action="../../HTML/Professor/nota_recebimento.html">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>

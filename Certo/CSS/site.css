@@ -853,6 +853,7 @@ hr {
     border-top: 2px solid darkgray;
     top: 875px;
     position: fixed;
+    text-align: center;
     padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 0;
