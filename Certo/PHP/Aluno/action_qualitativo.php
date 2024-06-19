@@ -12,115 +12,121 @@ if ($conexao->connect_errno){
 }else{
 
 if(isset($_POST['1'])){
-    $v1 = 'v';
+    $v1 = 'V';
 } else {
-    $v1 = 'f';
+    $v1 = 'F';
 }
 
 if(isset($_POST['2'])){
-    $v2 = 'v';
+    $v2 = 'V';
 } else {
-    $v2 = 'f';
+    $v2 = 'F';
 }
 
 if(isset($_POST['3'])){
-    $v3 = 'v';
+    $v3 = 'V';
 } else {
-    $v3 = 'f';
+    $v3 = 'F';
 }
 
 if(isset($_POST['4'])){
-    $v4 = 'v';
+    $v4 = 'V';
 } else {
-    $v4 = 'f';
+    $v4 = 'F';
 }
 
 if(isset($_POST['5'])){
-    $v5 = 'v';
+    $v5 = 'V';
 } else {
-    $v5 = 'f';
+    $v5 = 'F';
 }
 
 if(isset($_POST['6'])){
-    $v6 = 'v';
+    $v6 = 'V';
 } else {
-    $v6 = 'f';
+    $v6 = 'F';
 }
 
 if(isset($_POST['7'])){
-    $v7 = 'v';
+    $v7 = 'V';
 } else {
-    $v7 = 'f';
+    $v7 = 'F';
 }
 
 if(isset($_POST['8'])){
-    $v8 = 'v';
+    $v8 = 'V';
 } else {
-    $v8 = 'f';
+    $v8 = 'F';
 }
 
 if(isset($_POST['9'])){
-    $v9 = 'v';
+    $v9 = 'V';
 } else {
-    $v9 = 'f';
+    $v9 = 'F';
 }
 
 if(isset($_POST['10'])){
-    $v10 = 'v';
+    $v10 = 'V';
 } else {
-    $v10 = 'f';
+    $v10 = 'F';
 }
 
 if(isset($_POST['11'])){
-    $v11 = 'v';
+    $v11 = 'V';
 } else {
-    $v11 = 'f';
+    $v11 = 'F';
 }
 
 if(isset($_POST['12'])){
-    $v12 = 'v';
+    $v12 = 'V';
 } else {
-    $v12 = 'f';
+    $v12 = 'F';
 }
 
 if(isset($_POST['13'])){
-    $v13 = 'v';
+    $v13 = 'V';
 } else {
-    $v13 = 'f';
+    $v13 = 'F';
 }
 
 if(isset($_POST['14'])){
-    $v14 = 'v';
+    $v14 = 'V';
 } else {
-    $v14 = 'f';
+    $v14 = 'F';
 }
 
 if(isset($_POST['15'])){
-    $v15 = 'v';
+    $v15 = 'V';
 } else {
-    $v15 = 'f';
+    $v15 = 'F';
 }
 
 if(isset($_POST['16'])){
-    $v16 = 'v';
+    $v16 = 'V';
 } else {
-    $v16 = 'f';
+    $v16 = 'F';
 }
 
 if(isset($_POST['17'])){
-    $v17 = 'v';
+    $v17 = 'V';
 } else {
-    $v17 = 'f';
+    $v17 = 'F';
 }
 
 if(isset($_POST['18'])){
-    $v18 = 'v';
+    $v18 = 'V';
 } else {
-    $v18 = 'f';
+    $v18 = 'F';
 }
 
-$SQL = 'INSERT INTO `qualitativo_recebimento_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`) 
-    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'");';
+if(isset($_POST['19'])){
+    $v19 = 'V';
+} else {
+    $v19 = 'F';
+}
+
+$SQL = 'INSERT INTO `qualitativo_recebimento_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`) 
+    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'");';
 }
 
 $resultado = $conexao -> query($SQL);

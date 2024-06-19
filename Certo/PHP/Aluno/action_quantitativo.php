@@ -24,6 +24,5 @@ if ($conexao->connect_errno) {
 		$conexao -> close();
 		exit();
 	}
-
 }
 ?>

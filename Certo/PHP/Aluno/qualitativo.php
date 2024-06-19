@@ -223,13 +223,11 @@ echo '<!DOCTYPE html>
                     <td>Atraso: </td>
                     <td><input class="check" type="checkbox" name="17"</td>
                     <td>Código Avariado: </td>
-                    <td><input class="check" type="text" name="18"</td>
+                    <td><input class="check" type="checkbox" name="18"</td>
                 </tr>
                 <tr>
                     <td>Item Lacrado: </td>
-                    <td><input class="check" type="checkbox" name="17"</td>
-                    <td>Observações: </td>
-                    <td><input class="check" type="text" name="18"</td>
+                    <td><input class="check" type="checkbox" name="19"</td>
                 </tr>
 
             </table>
