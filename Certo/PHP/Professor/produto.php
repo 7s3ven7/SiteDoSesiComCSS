@@ -113,7 +113,7 @@
             <table class="tabela">
                 <tr>
                     <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1234"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
                     <td>Tipo: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
                     <td>Validade: </td>
@@ -121,27 +121,27 @@
                 </tr>
                 <tr>
                     <td>Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="SENU-123456-2"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
                     <td>Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="Titanaique"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="empresa"></td>
                     <td>Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="Aplle"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
                     <td>Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="2201"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
                     <td>Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="Lacre"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
                     <td>Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="SIF"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
                     <td>Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="Temperatura"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
                     <td>Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="IMO"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
                     <td>Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="Nome produto"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
             $numero += 1;
