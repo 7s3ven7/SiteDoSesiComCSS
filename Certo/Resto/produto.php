@@ -200,7 +200,7 @@
                         }elseif($b5 == "celular"){
                             $b6 = "aplee";
                         }
-                    $b7 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9); 
+                    $b7 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
                     if(isset($array5_2)){           
                         if($b5 == $array5_2[2] or $b5 == $array5_2[3]){
                             $b8 = "pallet";
