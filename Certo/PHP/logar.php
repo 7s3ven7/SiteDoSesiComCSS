@@ -16,13 +16,13 @@ if ($conexao->connect_errno) {
 	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
 	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
 
-$SQL = "SELECT `tipo`, `nome`, `senha` FROM `usuario` WHERE `nome` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+$SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . $nome . "' AND `senha` = '" . $senha . "'";
 
 	$result = $conexao->query($SQL);
 	if ($result->num_rows != 0) {
 		$row = $result->fetch_array();
-		$_SESSION['tipo'] = $row[0];
-		$_SESSION['nome'] = $row[1];
+		$_SESSION['tipo_u'] = $row[0];
+		$_SESSION['nome_u'] = $row[1];
 		$_SESSION['senha'] = $row[2];
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
