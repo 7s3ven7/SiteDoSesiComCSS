@@ -544,7 +544,7 @@ hr {
     align-items: center;
     line-height: 200%;
     position: fixed;
-    padding-top: 150px;
+    padding-top: 100px;
     border: 2px darkgray solid;
 }
 
@@ -730,14 +730,15 @@ hr {
 }
 
 .tabela-mini {
-    line-height: 150%;
-    width: 45%;
-    padding: 3%;
-    margin: 1%;
-    font-size: 40px;
-    position: relative;
+    border-spacing: 10px 10px;
+    width: 1000px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
     text-align: left;
     align-items: left;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -786,18 +787,18 @@ hr {
 .botao-tabela {
     padding: 10px;
     padding-left: 5px;
-    font-size: medium;
-    width: 200px;
+    font-size: 15px;
+    width: 300px;
     border: 1px black solid;
     border-radius: 5px;
-    margin-right: -55px;
 }
 
 .botao-tabela-2 {
     padding: 5px;
-    padding-left: 7px;
+    padding-left: 10px;
     font-size: large;
-    width: 200px;
+    width: 250px;
+    margin-left: 20px;
     border: 1px black solid;
     border-radius: 10px;
 }
@@ -806,7 +807,7 @@ hr {
     padding: 2px;
     padding-left: 5px;
     font-size: large;
-    width: 1200px;
+    width: 800px;
     height: 50px;
     border: 1px black solid;
     border-radius: 10px;
@@ -905,6 +906,12 @@ hr {
     border-radius: 500%;
 }
 
+.caixa-texto-secreto {
+    width: 1px;
+    height: 150px;
+    background-color: transparent;
+}
+
 .texto-secreto {
     font-size: x-large;
     margin-left: auto;
@@ -942,6 +949,26 @@ hr {
 .submit-secreto:hover {
     background-color: lightcoral;
     color: darkred;
+}
+
+.texto-titulo {
+    font-size: 45px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-tabela-medium {
+    font-size: 40px;
+    padding-right: 100px;
+}
+
+.texto-tabela-mini {
+    font-size: 20px;
+}
+
+.texto-tabela-large {
+    font-size: 50px;
 }
 
 @media(max-width:1400px) {

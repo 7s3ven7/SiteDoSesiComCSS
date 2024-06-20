@@ -89,6 +89,11 @@
                     exit();
                 } else {
                     $i = $_POST['vezes'];
+                    if($i <= 0){
+                        echo '
+                        <br><br>
+                        <div class="texto-produto">Digite um número superior!</div>';
+                    }else{
                     $l = $i;
                     $numero = 1;
                     $v1 = 'cod_fone';
@@ -104,43 +109,43 @@
                     $v11 = 'valor_unidade';
                     $v12 = 'peso';
                 echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
+                echo'<br>';
                     for($i;$i>0;$i){
                     $i -= 1;
                     echo'
-            <br>
             <div class="numero-produto">Produto Número: '.$numero.'</div>
             <br>
-            <table class="tabela">
+            <table class="tabela-mini">
                 <tr>
-                    <td>Código do fornecedor: </td>
+                    <td class="texto-tabela-mini">Código do fornecedor: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
-                    <td>Tipo: </td>
+                    <td class="texto-tabela-mini">Tipo: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td>Validade: </td>
+                    <td class="texto-tabela-mini">Validade: </td>
                     <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
-                    <td>Lote: </td>
+                    <td class="texto-tabela-mini">Lote: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td>Nome: </td>
+                    <td class="texto-tabela-mini">Nome: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td>Marca do produto: </td>
+                    <td class="texto-tabela-mini">Marca do produto: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
-                    <td>Número do pedido: </td>
+                    <td class="texto-tabela-mini">Número do pedido: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td>Unidade: </td>
+                    <td class="texto-tabela-mini">Unidade: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td>Quantidade de unidade: </td>
+                    <td class="texto-tabela-mini">Quantidade de unidade: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
-                    <td>Quantidade de produto: </td>
+                    <td class="texto-tabela-mini">Quantidade de produto: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td>Valor da unidade: </td>
+                    <td class="texto-tabela-mini">Valor da unidade: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td>Peso em kilo grama: </td>
+                    <td class="texto-tabela-mini">Peso em kilo grama: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
@@ -160,7 +165,7 @@
                     }              
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';}}
+                echo'<div class="details-caixa-2"></div>';}}}
                 echo'</form>';
             ?>
     </div>
