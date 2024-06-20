@@ -25,18 +25,18 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form action="../../HTML/Professor/fornecedor.html">
+        <form action="fornecedor.php">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form action="../../HTML/Professor/empresa.html">
+        <form action="empresa.php">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form action="../../HTML/Professor/cliente.html">
+            <form action="cliente.php">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form action="../../HTML/Professor/pedido.html">
+            <form action="pedido.php">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
@@ -77,17 +77,6 @@
         </form>
         <?php
             if(isset($_POST['vezes'])){
-                $hostname = "127.0.0.1";
-                $name = "root";
-                $password = "root";
-                $DB = "dados";
-                
-                $conexao = new mysqli($hostname, $name, $password, $DB);
-                if ($conexao->connect_errno) {
-                    echo "Failed connection: " . $conexao->connect_error;
-                    header("Location: ../../HTML/Aluno/recebimento.html");
-                    exit();
-                } else {
                     $i = $_POST['vezes'];
                     if($i <= 0){
                         echo '
@@ -113,7 +102,7 @@
                     for($i;$i>0;$i){
                     $i -= 1;
                     echo'
-            <div class="numero-produto">Produto Número: '.$numero.'</div>
+            <div class="numero-produto">'.$numero.'° Produto</div>
             <br>
             <table class="tabela-mini">
                 <tr>
@@ -165,7 +154,7 @@
                     }              
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';}}}
+                echo'<div class="details-caixa-2"></div>';}}
                 echo'</form>';
             ?>
     </div>
