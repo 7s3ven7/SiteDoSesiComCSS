@@ -82,49 +82,65 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
-	$sql="SELECT * FROM `produto_p`;";
+	$sql="SELECT produto.tipo,produto.validade,produto.lote,produto.nome,produto.marca,produto.und,produto.quantidade_und,produto.quant_prod,produto.valor_und,produto.Kg,estoque.hangar,estoque.rua,estoque.coluna,estoque.andar,estoque.ap FROM produto_p produto
+    JOIN estoque_a estoque ON produto.id = estoque.cod;";
 	$resultado = $conexao->query($sql);
-
     if($resultado->num_rows != 0){
         echo '
         ';
         while($row = mysqli_fetch_array($resultado)){
-            $s1 = $row['0'];//código do fornecedor
-            $s2 = $row['1'];//Tipo do produto
-            $s3 = $row['2'];//Validade
-            $s4 = $row['3'];//Lote
-            $s5 = $row['4'];//Nome do produto
-            $s6 = $row['5'];//Marca do produto
-            $s7 = $row['6'];//Unidade
-            $s8 = $row['7'];//Quantidade
-            $s9 = $row['8'];//Quantidade unidade
-            $s10 = $row['9'];//Valor unitário
-            $s11 = $row['10'];//Peso
+            $s1 = $row['0'];//Tipo do produto
+            $s2 = $row['1'];//Validade
+            $s3 = $row['2'];//Lote
+            $s4 = $row['3'];//Nome do produto
+            $s5 = $row['4'];//Marca do produto
+            $s6 = $row['5'];//Unidade
+            $s7 = $row['6'];//Quantidade
+            $s8 = $row['7'];//Quantidade unidade
+            $s9 = $row['8'];//Valor unitário
+            $s10 = $row['9'];//Peso
+            $s11 = $row['10'];//Hangar
+            $s12 = $row['11'];//Rua
+            $s13 = $row['12'];//Coluna
+            $s14 = $row['13'];//Andar
+            $s15 = $row['14'];//Ap
             echo '
             <table>
                 <tr>
                     <td>Nome do produto
-                    <input class="" type="text" value="'.$s5.'" disabled></td>
-                    <td>Tipo do produto
-                    <input class="" type="text" value="'.$s2.'" disabled></td>
-                    <td>Validade
-                    <input class="" type="text" value="'.$s3.'" disabled></td>
-                    <td>Lote
                     <input class="" type="text" value="'.$s4.'" disabled></td>
+                    <td>Tipo do produto
+                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <td>Validade
+                    <input class="" type="text" value="'.$s2.'" disabled></td>
+                    <td>Lote
+                    <input class="" type="text" value="'.$s3.'" disabled></td>
                     <td>Marca do Produto
-                    <input class="" type="text" value="'.$s6.'" disabled></td>
+                    <input class="" type="text" value="'.$s5.'" disabled></td>
                     <td>Peso
-                    <input class="" type="text" value="'.$s11.'" disabled></td>
+                    <input class="" type="text" value="'.$s10.'" disabled></td>
                 </tr>
                 <tr>
                     <td>Unidade
-                    <input class="" type="text" value="'.$s7.'" name="qtd" disabled></td>
+                    <input class="" type="text" value="'.$s6.'" name="qtd" disabled></td>
                     <td>Quantidade
-                    <input class="" type="text" value="'.$s8.'" name="qtd" disabled></td>
+                    <input class="" type="text" value="'.$s7.'" name="qtd" disabled></td>
                     <td>R$/unit
-                    <input class="" type="text" value="'.$s10.'" name="unit" disabled></td>
+                    <input class="" type="text" value="'.$s9.'" name="unit" disabled></td>
                     <td>R$/Total
-                    <input class="" type="text" value="'.$s10*$s8.'" name="total" disabled></td>
+                    <input class="" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
+                </tr>
+                <tr>
+                    <td>Hangar
+                    <input class="" type="text" value="'.$s11.'" name="" disabled></td>
+                    <td>Rua
+                    <input class="" type="text" value="'.$s12.'" name="" disabled></td>
+                    <td>Coluna
+                    <input class="" type="text" value="'.$s13.'" name="" disabled></td>
+                    <td>Andar
+                    <input class="" type="text" value="'.$s14.'" name="" disabled></td>
+                    <td>Apartamento
+                    <input class="" type="text" value="'.$s15.'" name="" disabled></td>
                 </tr>
             </table>
             <hr>
