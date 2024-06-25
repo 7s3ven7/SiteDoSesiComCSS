@@ -42,7 +42,7 @@ if ($conexao->connect_errno) {
         $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_p`,`marca_p`,`id_atividade'.esse_aqui_tem_problema.'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'.esse_aqui_tem_problema.'`) 
     VALUES ("' . $v1 . '","' . $v2 . '","' . $v3 . '","' . $v4 . '","' . $v5 . '","'.$v6.'","' . $v7 . '","' . $v8 . '","' . $v9 . '","' . $v10 . '","' . $v11 . '","'.$v12.'","'.$vtotal.'")';
     $resultado = $conexao->query($SQL);
-    $zz -= 1;
+    $zz -= 1;0
         }
         $zz = 1;
     $a = $a.'p';
