@@ -26,16 +26,16 @@ $SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . 
 		$_SESSION['senha'] = $row[2];
 		if ($row[0] == 'Professor' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/Professor/atividade.html', true, 301);
+			header('Location: t_atividade_p.php', true, 301);
 			exit();
 		}elseif ($row[0] == 'Aluno' and $senha == $row[2]) {
 			$conexao->close();
-			header('Location: ../HTML/Aluno/tela.html', true, 301);
+			header('Location: t_a.php', true, 301);
 			exit();
 		}
 }else{
 	$conexao->close();
-	header('Location: ../HTML/index.html', true, 301);
+	header('Location: index.php', true, 301);
 	exit();
 }
 }

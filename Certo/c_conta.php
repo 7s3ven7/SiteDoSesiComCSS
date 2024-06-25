@@ -22,12 +22,12 @@ if ($conexao->connect_errno) {
         $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_grupo`,`cargo_u`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
         $resultado = $conexao->query($SQL);
         $conexao->close();
-        header("Location: ../HTML/index.html");
+        header("Location: index.php");
     }else{
 
     $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_grupo`,`cargo_u`,`cod_prof`) VALUES ("' . $nome . '","Aluno","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
     $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location: ../HTML/index.html");
+    header("Location: index.php");
 }}
 ?>

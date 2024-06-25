@@ -23,6 +23,6 @@ if ($conexao->connect_errno) {
     //Inserir no DB
     $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location: t_pedido.html"); //Envia para a tela de Login ao Cadastrar
+    header("Location: t_pedido.php"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
