@@ -51,6 +51,6 @@ if ($conexao->connect_errno) {
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
     $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location:fornecedor.php"); //Envia para a tela de Login ao Cadastrar
+    header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
 }
 ?>

@@ -12,7 +12,7 @@
     <div class="caixa">
         <div class="texto">Cadastre-se!</div>
         <div class="caixa-mini-cadastro">
-            <form method="POST" action="../PHP/cadastro.php">
+            <form method="POST" action="action_cadastro_geral.php">
                 <div class="texto-mini">Nome da conta</div>
                 <input class="caixa-texto" type="text" placeholder="Nome" name="nome_criado">
                 <div class="texto-mini">Crie sua senha</div>

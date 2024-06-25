@@ -22,6 +22,6 @@ if ($conexao->connect_errno) {
     $resultado = $conexao->query($SQL);
 
     $conexao->close();
-    header("Location: ../../HTML/Professor/cliente.html"); //Envia para a tela de Login ao Cadastrar
+    header("Location: t_cliente_p.php"); //Envia para a tela de Login ao Cadastrar
 }
 ?>

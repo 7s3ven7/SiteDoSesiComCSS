@@ -11,7 +11,7 @@
 <body>
     <div class="caixa-mini-atividade-toda">
         <div class="caixa-mini-atividade">
-            <form method="GET" action="tela.html">
+            <form method="GET" action="tela_p.php">
                 <div class="texto-atividade">Selecione a atividade!</div>
                 <input class="caixa-texto" type="text" placeholder="nome" name="nome_atividade">
         </div>
