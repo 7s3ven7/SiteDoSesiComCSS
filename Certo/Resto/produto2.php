@@ -78,6 +78,14 @@
         <?php
             if(isset($_POST['vezes'])){
                     $i = $_POST['vezes'];
+                $sql_list = "SELECT `nome` FROM `fornecedor;";
+                echo '<select id="fornecedores">';
+                if(mysqli_num_rows($sql_list) > 0){
+                    while($row = mysqli_fetch_array($sql_list)){
+                        $valor = $row[1];
+                        echo '<option value="'.$valor.'">'.$valor.'</option>';
+                    }}
+                    echo '</select>';
                     if($i <= 0){
                         echo '
                         <br><br>
@@ -99,18 +107,6 @@
                     $v12 = 'peso';
                 echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
                 echo'<br>';
-                    $sql_list = "SELECT `nome` FROM `fornecedor;";
-                echo '<select id="fornecedores">';
-                if(mysqli_num_rows($sql_list) > 0){
-                    while($row = mysqli_fetch_array($sql_list)){
-                        $valor = $row[1];
-                        echo '<option value="'.$valor.'">'.$valor.'</option>';
-                    }}
-                    echo '</select>';
-                while(mysqli_fetch_array($sql_list) > 0){}
-
-
-
 
                     for($i;$i>0;$i){
                     $i -= 1;
