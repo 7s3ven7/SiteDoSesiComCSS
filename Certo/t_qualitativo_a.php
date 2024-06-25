@@ -32,7 +32,7 @@ if ($conexao->connect_errno) {
 echo '<!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="../../CSS/site.css">
+    <link rel="stylesheet" href="a_site.css">
     <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
