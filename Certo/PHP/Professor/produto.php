@@ -66,7 +66,7 @@
         </form>
     </details>
     <div class="details-caixa"></div>
-
+    <div class="menu">Menu</div>
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
@@ -158,7 +158,7 @@
                 echo'</form>';
             ?>
     </div>
-    <div class="menu">Menu</div>
+
     <div id="tipo">Conta: Professor</div>
 
 </body>
