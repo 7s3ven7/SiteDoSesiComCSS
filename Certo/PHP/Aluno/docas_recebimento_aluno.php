@@ -26,10 +26,10 @@ echo '<!DOCTYPE html>
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/Aluno/index.html">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
@@ -38,7 +38,7 @@ echo '<!DOCTYPE html>
         <form action="nota_receb.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="qualitativo.html">
+        <form action="../../HTML/Aluno/qualitativo.html">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="quantitativo.php">
@@ -59,10 +59,10 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
@@ -71,20 +71,20 @@ echo '<!DOCTYPE html>
         <form action="nota_exped.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>

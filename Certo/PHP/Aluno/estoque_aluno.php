@@ -12,10 +12,10 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/Aluno/index.html">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
@@ -24,7 +24,7 @@
         <form action="nota_receb.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="qualitativo.html">
+        <form action="../../HTML/Aluno/qualitativo.html">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="quantitativo.php">
@@ -45,10 +45,10 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
@@ -57,20 +57,20 @@
         <form action="nota_exped.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="../../HTML/Aluno/tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
@@ -90,12 +90,11 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
-	$sql="SELECT produto.tipo,produto.validade,produto.lote,produto.nome,produto.marca,produto.und,produto.quantidade_und,produto.quant_prod,produto.valor_und,produto.Kg,estoque.hangar,estoque.rua,estoque.coluna,estoque.andar,estoque.ap FROM produto_p produto
-    JOIN estoque_a estoque ON produto.id = estoque.cod;";
+	$sql="SELECT produto.tipo,produto.data_v,produto.lote,produto.nome_p,produto.marca,produto.und,produto.quant_und,produto.quant_prod,produto.valor_und,produto.kg,estoque.anguar,estoque.rua,estoque.coluna,estoque.andar,estoque.ap 
+    FROM `produto_p` produto
+    JOIN `estoque_a` estoque ON produto.cod_inter = estoque.lote;";
 	$resultado = $conexao->query($sql);
     if($resultado->num_rows != 0){
-        echo '
-        ';
         while($row = mysqli_fetch_array($resultado)){
             $s1 = $row['0'];//Tipo do produto
             $s2 = $row['1'];//Validade
@@ -113,42 +112,46 @@ if ($conexao->connect_errno) {
             $s14 = $row['13'];//Andar
             $s15 = $row['14'];//Ap
             echo '
-            <table>
+            <table class="tabela-mini2">
                 <tr>
-                    <td>Nome do produto
-                    <input class="" type="text" value="'.$s4.'" disabled></td>
-                    <td>Tipo do produto
-                    <input class="" type="text" value="'.$s1.'" disabled></td>
-                    <td>Validade
-                    <input class="" type="text" value="'.$s2.'" disabled></td>
-                    <td>Lote
-                    <input class="" type="text" value="'.$s3.'" disabled></td>
-                    <td>Marca do Produto
-                    <input class="" type="text" value="'.$s5.'" disabled></td>
-                    <td>Peso
-                    <input class="" type="text" value="'.$s10.'" disabled></td>
+                    <td class="texto-tabela-mini2">Nome do produto
+                    <input class="botao-tabela-3" type="text" value="'.$s4.'" disabled></td>
+                    <td class="texto-tabela-mini2">Tipo do produto
+                    <input class="botao-tabela-3" type="text" value="'.$s1.'" disabled></td>
+                    <td class="texto-tabela-mini2">Validade
+                    <input class="botao-tabela-3" type="text" value="'.$s2.'" disabled></td>
                 </tr>
                 <tr>
-                    <td>Unidade
-                    <input class="" type="text" value="'.$s6.'" name="qtd" disabled></td>
-                    <td>Quantidade
-                    <input class="" type="text" value="'.$s7.'" name="qtd" disabled></td>
-                    <td>R$/unit
-                    <input class="" type="text" value="'.$s9.'" name="unit" disabled></td>
-                    <td>R$/Total
-                    <input class="" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
+                    <td class="texto-tabela-mini2">Lote
+                    <input class="botao-tabela-3" type="text" value="'.$s3.'" disabled></td>
+                    <td class="texto-tabela-mini2">Marca do Produto
+                    <input class="botao-tabela-3" type="text" value="'.$s5.'" disabled></td>
+                    <td class="texto-tabela-mini2">Peso
+                    <input class="botao-tabela-3" type="text" value="'.$s10.'" disabled></td>
                 </tr>
                 <tr>
-                    <td>Hangar
-                    <input class="" type="text" value="'.$s11.'" name="" disabled></td>
-                    <td>Rua
-                    <input class="" type="text" value="'.$s12.'" name="" disabled></td>
-                    <td>Coluna
-                    <input class="" type="text" value="'.$s13.'" name="" disabled></td>
-                    <td>Andar
-                    <input class="" type="text" value="'.$s14.'" name="" disabled></td>
-                    <td>Apartamento
-                    <input class="" type="text" value="'.$s15.'" name="" disabled></td>
+                    <td class="texto-tabela-mini2">Unidade
+                    <input class="botao-tabela-3" type="text" value="'.$s6.'" name="qtd" disabled></td>
+                    <td class="texto-tabela-mini2">Quantidade
+                    <input class="botao-tabela-3" type="text" value="'.$s7.'" name="qtd" disabled></td>
+                    <td class="texto-tabela-mini2">R$/unit
+                    <input class="botao-tabela-3" type="text" value="'.$s9.'" name="unit" disabled></td>
+                </tr>
+                <tr>
+                    <td class="texto-tabela-mini2">R$/Total
+                    <input class="botao-tabela-3" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
+                    <td class="texto-tabela-mini2">Hangar
+                    <input class="botao-tabela-3" type="text" value="'.$s11.'" name="" disabled></td>
+                    <td class="texto-tabela-mini2">Rua
+                    <input class="botao-tabela-3" type="text" value="'.$s12.'" name="" disabled></td>
+                </tr>
+                <tr>
+                    <td class="texto-tabela-mini2">Coluna
+                    <input class="botao-tabela-3" type="text" value="'.$s13.'" name="" disabled></td>
+                    <td class="texto-tabela-mini2">Andar
+                    <input class="botao-tabela-3" type="text" value="'.$s14.'" name="" disabled></td>
+                    <td class="texto-tabela-mini2">Apartamento
+                    <input class="botao-tabela-3" type="text" value="'.$s15.'" name="" disabled></td>
                 </tr>
             </table>
             <hr>
