@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="../../CSS/site.css">
+    <link rel="stylesheet" href="site.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
         <form action="../../PHP/aluno/quantitativo.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-    </details>    
+    </details>
     <details class="details-all">
         <summary class="details-big">Controle</summary>
         <form action="../../PHP/aluno/docas_receb.php">
@@ -54,7 +54,7 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-                <form action="../../PHP/aluno/nota_exped.php">
+        <form action="../../PHP/aluno/nota_exped.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
         <form action="tela.html">

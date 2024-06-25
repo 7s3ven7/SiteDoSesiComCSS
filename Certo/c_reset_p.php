@@ -26,9 +26,9 @@ if ($conexao->connect_errno) {
     $resultado1 = $conexao->query($SQL1);
     $resultado2 = $conexao->query($SQL2);
     $resultado3 = $conexao->query($SQL3);
-    header('location: index.html');
+    header('location: index.php');
   }else{
-    header('location: tela.html');
+    header('location: t_p.php');
   }
 }
 ?>

@@ -1,4 +1,4 @@
-<form method="POST" action="senha_nova.php">
+<form method="POST" action="t_senhanova_p.php">
     <input type="number" name="valor">
     <div>Trocar de senha</div>
     <?php
