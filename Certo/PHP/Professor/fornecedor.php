@@ -90,7 +90,7 @@
                     $v3 = 'gmail';
                     $v4 = 'cep';
                     $v5 = 'telefone';
-                echo'<form method="POST" action="cadastro_empresa.php?$l='.$l.'">';
+                echo'<form method="POST" action="cadastro_fornecedor.php?$l='.$l.'">';
                 echo'<br>';
                     for($i;$i>0;$i){
                     $i -= 1;
