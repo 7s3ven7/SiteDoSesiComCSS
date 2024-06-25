@@ -60,7 +60,7 @@ if ($conexao->connect_errno) {
         $z -= 1;
     }
     $conexao->close();
-    header("Location: produto.php?vv=1");
+    header("Location: t_produto_p.php");
 }
 ?>
 
