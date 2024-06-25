@@ -76,13 +76,25 @@
             <input class="enviar-numero-produto" type="submit">
         </form>
         <?php
-            if(isset($_POST['vezes'])){
-                    $i = $_POST['vezes'];
-                $sql_list = "SELECT nome FROM `fornecedor;";
+        if(isset($_POST['vezes'])){        
+        $hostname = "127.0.0.1";
+        $name = "root";
+        $password = "root";
+        $DB = "dados";
+        
+        $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+        
+        if ($conexao->connect_errno) {
+            echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+            exit();
+        }else{
+                $i = $_POST['vezes'];
+                $sql_list = 'SELECT `nome` FROM `fornecedor`_p;';
+                $resultado = $conexao ->query($sql_list);
                 echo '<select id="fornecedores">';
-                if(mysqli_num_rows($sql_list) > 0){
-                    while($row = mysqli_fetch_array($sql_list)){
-                        $valor = $row[1];
+                if(mysqli_num_rows($resultado) > 0){
+                    while($row = mysqli_fetch_array($resultado)){
+                        $valor = $row['1'];
                         echo '<option value="'.$valor.'">'.$valor.'</option>';
                     }}
                     echo '</select>';
@@ -116,7 +128,7 @@
             <table class="tabela-mini">
                 <tr>
                     <td class="texto-tabela-mini">Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1" for="fornecedor"></td>
                     <td class="texto-tabela-mini">Tipo: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
                     <td class="texto-tabela-mini">Validade: </td>
@@ -164,7 +176,7 @@
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';
                 echo'<div class="details-caixa-2"></div>';}}
-                echo'</form>';
+                echo'</form>';}
             ?>
     </div>
     <div class="menu">Menu</div>
