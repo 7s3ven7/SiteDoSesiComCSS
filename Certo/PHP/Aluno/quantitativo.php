@@ -12,10 +12,10 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../../HTML/index.html">
+        <form action="../index.html">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
@@ -24,7 +24,7 @@
         <form action="nota_receb.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="../../HTML/aluno/qualitativo.html">
+        <form action="qualitativo.html">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="quantitativo.php">
@@ -34,24 +34,21 @@
     <details class="details-all">
         <summary class="details-big">Controle</summary>
         <form action="docas_receb.php">
-            <input class="details-small" type="submit" value="Doca">
+            <input class="details-small" type="submit" value="Controle">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="../../HTML/aluno/tela.html">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="../../HTML/aluno/tela.html">
-            <input class="details-small" type="submit" value="WIP">
+        <form action="estoque.php">
+            <input class="details-small" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
@@ -60,20 +57,20 @@
         <form action="nota_exped.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="../../HTML/aluno/tela.html">
+        <form action="tela.html">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
