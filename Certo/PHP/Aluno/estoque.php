@@ -115,43 +115,43 @@ if ($conexao->connect_errno) {
             <table class="tabela-mini2">
                 <tr>
                     <td class="texto-tabela-mini2">Nome do produto
-                    <input class="botao-tabela2" type="text" value="'.$s4.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s4.'" disabled></td>
                     <td class="texto-tabela-mini2">Tipo do produto
-                    <input class="botao-tabela2" type="text" value="'.$s1.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s1.'" disabled></td>
                     <td class="texto-tabela-mini2">Validade
-                    <input class="botao-tabela2" type="text" value="'.$s2.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s2.'" disabled></td>
                 </tr>
                 <tr>
                     <td class="texto-tabela-mini2">Lote
-                    <input class="botao-tabela2" type="text" value="'.$s3.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s3.'" disabled></td>
                     <td class="texto-tabela-mini2">Marca do Produto
-                    <input class="botao-tabela2" type="text" value="'.$s5.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s5.'" disabled></td>
                     <td class="texto-tabela-mini2">Peso
-                    <input class="botao-tabela2" type="text" value="'.$s10.'" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s10.'" disabled></td>
                 </tr>
                 <tr>
                     <td class="texto-tabela-mini2">Unidade
-                    <input class="botao-tabela2" type="text" value="'.$s6.'" name="qtd" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s6.'" name="qtd" disabled></td>
                     <td class="texto-tabela-mini2">Quantidade
-                    <input class="botao-tabela2" type="text" value="'.$s7.'" name="qtd" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s7.'" name="qtd" disabled></td>
                     <td class="texto-tabela-mini2">R$/unit
-                    <input class="botao-tabela2" type="text" value="'.$s9.'" name="unit" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s9.'" name="unit" disabled></td>
                 </tr>
                 <tr>
                     <td class="texto-tabela-mini2">R$/Total
-                    <input class="botao-tabela2" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
                     <td class="texto-tabela-mini2">Hangar
-                    <input class="botao-tabela2" type="text" value="'.$s11.'" name="" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s11.'" name="" disabled></td>
                     <td class="texto-tabela-mini2">Rua
-                    <input class="botao-tabela2" type="text" value="'.$s12.'" name="" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s12.'" name="" disabled></td>
                 </tr>
                 <tr>
                     <td class="texto-tabela-mini2">Coluna
-                    <input class="botao-tabela2" type="text" value="'.$s13.'" name="" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s13.'" name="" disabled></td>
                     <td class="texto-tabela-mini2">Andar
-                    <input class="botao-tabela2" type="text" value="'.$s14.'" name="" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s14.'" name="" disabled></td>
                     <td class="texto-tabela-mini2">Apartamento
-                    <input class="botao-tabela2" type="text" value="'.$s15.'" name="" disabled></td>
+                    <input class="botao-tabela-3" type="text" value="'.$s15.'" name="" disabled></td>
                 </tr>
             </table>
             <hr>

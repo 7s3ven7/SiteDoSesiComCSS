@@ -796,6 +796,16 @@ hr {
 .botao-tabela-2 {
     padding: 5px;
     padding-left: 10px;
+    font-size: 15px;
+    width: 300px;
+    margin-left: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.botao-tabela-3 {
+    padding: 5px;
+    padding-left: 10px;
     font-size: large;
     width: 250px;
     margin-left: 20px;
@@ -964,6 +974,10 @@ hr {
 }
 
 .texto-tabela-mini {
+    font-size: 20px;
+}
+
+.texto-tabela-mini2 {
     font-size: 20px;
 }
 
@@ -1176,6 +1190,18 @@ hr {
     }
 
     .tabela-mini {
+        line-height: 150%;
+        width: 100%;
+        padding: 25%;
+        padding-top: 7.5%;
+        padding-bottom: 3%;
+        font-size: xx-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela-mini2 {
         line-height: 150%;
         width: 100%;
         padding: 25%;
