@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="a_site.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,16 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../index.html">
+        <form action="index.php">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="../../PHP/aluno/nota_receb.php">
+        <form action="nota_receb.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
         <form action="qualitativo.html">
