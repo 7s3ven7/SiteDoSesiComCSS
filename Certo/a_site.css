@@ -1,0 +1,1593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+hr {
+    height: 1px;
+    background-color: darkgray;
+}
+
+.enviar-numero-produto {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: green;
+    color: whitesmoke;
+    transition: 0.4s;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.enviar-numero-produto:hover {
+    background-color: white;
+    color: green;
+}
+
+.numero-produto {
+    padding: 2px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: white;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-produto {
+    font-size: 25px;
+}
+
+.botao-produto {
+    height: 25px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quadrado-select-produto {
+    width: 500px;
+    height: 1000px;
+    background-color: blue;
+}
+
+.quadrado-quantitativo {
+    width: 400px;
+    height: 100px;
+    top: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    align-items: left;
+}
+
+.quadrado-quantitativo-2 {
+    width: 400px;
+    height: 700px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.quadrado-produto {
+    width: 400px;
+    align-items: left;
+    text-align: left;
+    position: relative;
+}
+
+.quantitativo-texto {
+    font-size: 20px;
+    color: gray;
+}
+
+.quantitativo-input-pedido {
+    width: 250px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quantitativo-input-pedido-nota {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 5px;
+}
+
+.quantitativo-enviar-pedido {
+    width: 80px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+.quantitativo-enviar-pedido:hover {
+    background-color: white;
+    color: green;
+}
+
+.quantitativo-enviar {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+.quantitativo-enviar:hover {
+    background-color: white;
+    color: green;
+}
+
+.quantitativo-input-valor {
+    width: 70px;
+    height: 40px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: white;
+    margin-right: -2px;
+    text-align: center;
+}
+
+.quantitativo-input-valor-texto {
+    font-size: 20px;
+}
+
+.quantativo-input-valor-submit {
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: green;
+    color: green;
+    margin-top: 7.5px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.quantativo-input-valor-submit-mini {
+    width: 30px;
+    height: 30px;
+    font-size: medium;
+    border: 1px solid black;
+    background-color: green;
+    color: green;
+    margin-top: 7.5px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.quantitativo-margin {
+    width: 200px;
+    padding-top: 10px;
+}
+
+.quantitativo-margin-mini {
+    width: 300px;
+    padding-top: 10px;
+}
+
+#qd-logo {
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#qd-danfe {
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 300px;
+    top: 50px;
+}
+
+#qd-nota-fiscal {
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 800px;
+    top: 50px;
+}
+
+#qd-cnpj {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+
+#qd-cep-emitente {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 550px;
+    top: 150px;
+}
+
+#qd-data-de-emissao {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 800px;
+    top: 150px;
+}
+
+#qd-horario-de-emissao {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    border-right: 2px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 1050px;
+    top: 150px;
+}
+
+#qd-nome-do-emitente {
+    width: 625px;
+    height: 100px;
+    border: 1px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 50px;
+    top: 250px;
+}
+
+#qd-fone-emitente {
+    width: 625px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    background-color: white;
+    text-align: left;
+    position: absolute;
+    left: 675px;
+    top: 250px;
+}
+
+#qd-cod {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 50px;
+}
+
+#qd-desc-produto {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 250px;
+}
+
+#qd-lote {
+    width: 191px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 550px;
+}
+
+#qd-NCM {
+    width: 381px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 742px;
+}
+
+#qd-CST {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 452px;
+}
+
+#qd-CFOP {
+    width: 177px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 1124px;
+}
+
+#qd-UN {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 50px;
+}
+
+#qd-quantidade {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 251px;
+}
+
+#qd-valor_unit {
+    width: 347px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 653px;
+}
+
+#qd-valor_total {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 477px;
+    left: 1001px;
+}
+
+#qd-nome_remetente {
+    width: 625px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 602px;
+    left: 50px;
+}
+
+#qd-fone_remetente {
+    width: 380px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 602px;
+    left: 676px;
+}
+
+#qd-CNPJ_remetente {
+    width: 244px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 602px;
+    left: 1056px;
+}
+
+#qd-PBT {
+    width: 190px;
+    height: 100px;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    background-color: white;
+    text-align: left;
+    align-items: left;
+    position: absolute;
+    top: 375px;
+    left: 551px;
+}
+
+.text-titulo {
+    font-size: 30px;
+    color: gray;
+    padding-bottom: 110px;
+}
+
+.text-nota {
+    font-size: xx-large;
+    color: gray;
+    padding: 10px;
+}
+
+.input-nota {
+    width: 90%;
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px white solid;
+    border-bottom: 1px black solid;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.input-nota:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.fundo {
+    top: -10px;
+    left: -4px;
+    width: 232px;
+    border: 3px gray solid;
+    height: 1000px;
+    background-color: rgb(220, 220, 220);
+    position: fixed;
+}
+
+.caixa-fixa {
+    width: 1500px;
+    height: 200px;
+    left: 325px;
+    top: 50px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.caixa {
+    width: 1700px;
+    height: 1000px;
+    background-color: whitesmoke;
+    left: 230px;
+    top: -5px;
+    text-align: center;
+    align-items: center;
+    line-height: 200%;
+    position: fixed;
+    padding-top: 100px;
+    border: 2px darkgray solid;
+}
+
+.menu {
+    font-size: 70px;
+    left: 2px;
+    top: -20px;
+    height: 70px;
+    width: 185px;
+    position: fixed;
+    display: inline;
+    padding: 1%;
+    margin-top: 1%;
+    background-color: rgb(220, 220, 220);
+}
+
+.details-caixa {
+    height: 100px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+}
+
+.details-caixa-2 {
+    height: 25px;
+    width: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 50px;
+}
+
+.details-all {
+    text-align: left;
+    align-items: left;
+    padding: 10px;
+}
+
+.details-big {
+    width: 180px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 25px;
+    border: 1px black solid;
+    position: relative;
+    top: 120px;
+    padding: 15px;
+    padding-right: 5px;
+    border-radius: 10px;
+    margin-left: 2.5px;
+    transition: 0.25s;
+    cursor: cell;
+}
+
+.details-big:hover,
+.details-small:hover,
+.details-small-more:hover {
+    background-color: whitesmoke;
+    color: green;
+}
+
+.details-small {
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 20px;
+    border: 1px black solid;
+    top: 120px;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.details-small-more {
+    width: 130px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 22.5px;
+    border: 1px black solid;
+    border-radius: 15px;
+    position: relative;
+    top: 120px;
+    padding: 15px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.25s;
+    cursor: cell;
+}
+
+.botao {
+    font-size: x-large;
+    width: 200px;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 20px;
+    background-color: green;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+.botao:hover {
+    background-color: white;
+    color: green;
+    padding: 20.1px;
+}
+
+.botao-grande {
+    left: 10px;
+    margin-left: 2.5px;
+    top: 120px;
+    font-size: 25px;
+    width: 202px;
+    padding: 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+    position: relative;
+    transition: 0.25s;
+    margin-top: 50px;
+}
+
+.botao-grande:hover {
+    background-color: white;
+    color: green;
+}
+
+.tabela {
+    width: 1500px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.tabela-2 {
+    line-height: 140%;
+    width: 50%;
+    padding-top: 2%;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    left: 18%;
+}
+
+.tabela-qualitativo {
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.tabela-produto {
+    line-height: 80px;
+    width: 1400px;
+    padding: 100px;
+    font-size: xx-large;
+    position: relative;
+    text-align: left;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabela-mini {
+    border-spacing: 10px 10px;
+    width: 1000px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    text-align: left;
+    align-items: left;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#caixa {
+    width: 1580px;
+    height: 875px;
+    background-color: whitesmoke;
+    left: 12.5%;
+    top: 5%;
+    align-items: center;
+    text-align: center;
+    line-height: 200%;
+    position: fixed;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.botao-qualitat {
+    width: 10%;
+    height: 45px;
+    margin: 1%;
+    left: 35%;
+    position: absolute;
+    font-size: large;
+    border: 1px black solid;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: green;
+}
+
+#botao-2 {
+    width: 200px;
+    height: 75px;
+    position: relative;
+    font-size: x-large;
+    border: 1px black solid;
+    border-radius: 15px;
+    color: whitesmoke;
+    background-color: green;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botao-tabela {
+    padding: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+    width: 300px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.botao-tabela-2 {
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    width: 300px;
+    margin-left: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.botao-tabela-3 {
+    padding: 5px;
+    padding-left: 10px;
+    font-size: large;
+    width: 250px;
+    margin-left: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.botao-tabela-sinopse {
+    padding: 2px;
+    padding-left: 5px;
+    font-size: large;
+    width: 800px;
+    height: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.qualitativo-botao {
+    padding: 2px;
+    padding-left: 5px;
+    font-size: large;
+    width: 184px;
+    height: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.texto2 {
+    padding: 1%;
+    font-size: large;
+    width: 100%;
+    border: 1px black solid;
+    border-radius: 10px;
+    position: relative;
+}
+
+.espaco {
+    width: 100%;
+    border: 100%;
+}
+
+.texto3 {
+    width: 60%;
+    border: 1px black solid;
+    border-radius: 7px;
+    position: relative;
+}
+
+.texto4 {
+    font-size: large;
+    width: 40%;
+    border: 1px black solid;
+    border-radius: 7px;
+    position: relative;
+}
+
+.texto5 {
+    font-size: large;
+    width: 15%;
+    border: 1px black solid;
+    border-radius: 7px;
+    position: relative;
+    text-align: left;
+    left: 0.5%;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 100%;
+}
+
+#tipo {
+    font-size: xx-large;
+    background-color: white;
+    border-top: 2px solid darkgray;
+    top: 905px;
+    position: fixed;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 0;
+    left: -1px;
+    height: 50px;
+    width: 1924px;
+}
+
+.fundo-2 {
+    background-color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    width: 1650px;
+    height: 75px;
+    position: fixed;
+    top: 50px;
+    left: 240px;
+    border-left: 2px solid black;
+
+}
+
+.linha {
+    width: 1599px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 500%;
+}
+
+.caixa-texto-secreto {
+    width: 1px;
+    height: 150px;
+    background-color: transparent;
+}
+
+.texto-secreto {
+    font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.senha-secreta {
+    width: 300px;
+    height: 30px;
+    font-size: medium;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-secreto {
+    width: 200px;
+    height: 60px;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: green;
+    color: whitesmoke;
+    transition: 0.25s;
+}
+
+.submit-secreto:hover {
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.texto-titulo {
+    font-size: 45px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-tabela-medium {
+    font-size: 40px;
+    padding-right: 100px;
+}
+
+.texto-tabela-mini {
+    font-size: 20px;
+}
+
+.texto-tabela-mini2 {
+    font-size: 20px;
+}
+
+.texto-tabela-large {
+    font-size: 50px;
+}
+
+@media(max-width:1400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+
+    .caixa {
+        width: 1135px;
+        height: 690px;
+        background-color: whitesmoke;
+        left: 240px;
+        top: 75px;
+        text-align: center;
+        align-items: center;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    #informacao {
+        width: 75%;
+        height: 80%;
+        margin: 5%;
+        position: fixed;
+        align-items: left;
+        text-align: left;
+        font-size: x-large;
+        line-height: 150%;
+    }
+
+    #caixa-info {
+        width: 85%;
+        height: 90%;
+        background-color: whitesmoke;
+        left: 12.5%;
+        top: 5%;
+        text-align: center;
+        align-items: center;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    #caixa {
+        width: 85%;
+        height: 90%;
+        background-color: whitesmoke;
+        left: 12.5%;
+        top: 5%;
+        line-height: 200%;
+        position: fixed;
+        border: 1px black solid;
+        border-radius: 10px;
+    }
+
+    .caixa-2 {
+        width: 42.5%;
+        height: 90%;
+        left: 55%;
+        top: 5%;
+        line-height: 140%;
+        position: fixed;
+        border: 1px black solid;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .menu {
+        font-size: 50px;
+        left: 2px;
+        top: -20px;
+        height: 70px;
+        width: 185px;
+        position: fixed;
+        padding: 1%;
+        margin-top: 1%;
+        background-color: rgb(220, 220, 220);
+    }
+
+    .botao {
+        font-size: large;
+        width: 11%;
+        padding: 1%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: green;
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+    }
+
+    .botao:hover {
+        background-color: whitesmoke;
+        color: green;
+        padding: 1.005%;
+    }
+
+    #botao {
+        font-size: large;
+        width: 11%;
+        padding: 1%;
+        border: 1px black solid;
+        border-radius: 15px;
+        background-color: whitesmoke;
+        color: green;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 0.5%;
+        transition: 0.25s;
+    }
+
+    #botao:hover {
+        background-color: green;
+        color: whitesmoke;
+        padding: 1.005%;
+    }
+
+    .caixa-botao-mini {
+        width: 11%;
+        height: 50px;
+        position: relative;
+        align-items: right;
+        text-align: right;
+        padding-left: 1.1%;
+        margin: -4px;
+        margin-top: -4px;
+    }
+
+    .botao-mini {
+        font-size: large;
+        width: 80%;
+        height: 40px;
+        padding: 0.5%;
+        top: 15%;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: green;
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 5%;
+        transition: 0.25s;
+    }
+
+    .botao-mini:hover {
+        background-color: whitesmoke;
+        color: green;
+    }
+
+    #botao-mini:hover {
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    #botao-mini {
+        font-size: large;
+        width: 80%;
+        height: 40px;
+        padding: 0.5%;
+        top: 15%;
+        border: 1px black solid;
+        border-radius: 15px;
+        background-color: whitesmoke;
+        color: green;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        margin-bottom: 5%;
+        transition: 0.25s;
+    }
+
+    #nome {
+        font-size: xx-large;
+        width: 50%;
+        height: 4%;
+        padding: 2.5px;
+        background-color: whitesmoke;
+        border: 1px black solid;
+        border-radius: 5px;
+        position: fixed;
+        left: 12.5%;
+        top: 5%;
+    }
+
+    #botao-2 {
+        width: 12.5%;
+        height: 75px;
+        position: absolute;
+        left: 42.5%;
+        font-size: x-large;
+        border: 1px black solid;
+        border-radius: 15px;
+        color: whitesmoke;
+        background-color: green;
+    }
+
+    .tabela-mini {
+        line-height: 150%;
+        width: 100%;
+        padding: 25%;
+        padding-top: 7.5%;
+        padding-bottom: 3%;
+        font-size: xx-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela-mini2 {
+        line-height: 150%;
+        width: 100%;
+        padding: 25%;
+        padding-top: 7.5%;
+        padding-bottom: 3%;
+        font-size: xx-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela {
+        line-height: 175%;
+        width: 100%;
+        padding: 10%;
+        padding-bottom: 3%;
+        padding-top: 5%;
+        font-size: x-large;
+        position: relative;
+        text-align: left;
+        align-items: left;
+    }
+
+    .tabela-2 {
+        line-height: 120%;
+        width: 50%;
+        padding: 1%;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+    }
+
+    .tabela-3 {
+        top: 5%;
+        right: 10%;
+        line-height: 100%;
+        width: 80%;
+        padding: 1%;
+        font-size: 20px;
+        position: fixed;
+    }
+
+    .tabela-4 {
+        top: 5%;
+        left: 0%;
+        line-height: 100%;
+        width: 100%;
+        padding: 1%;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .botao-tabela {
+        padding: 1%;
+        font-size: large;
+        width: 90%;
+        border: 1px black solid;
+        border-radius: 10px;
+        margin-right: 50%;
+    }
+
+    .texto2 {
+        padding: 1%;
+        font-size: large;
+        width: 100%;
+        border: 1px black solid;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .texto3 {
+        width: 60%;
+        border: 1px black solid;
+        border-radius: 7px;
+        position: relative;
+    }
+
+    .botao-2 {
+        width: 12%;
+        height: 60px;
+        margin: 1%;
+        left: 40%;
+        position: absolute;
+        font-size: large;
+        border: 1px black solid;
+        border-radius: 5px;
+        color: whitesmoke;
+        background-color: green;
+    }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    #tipo {
+        font-size: xx-large;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: fixed;
+        top: 7.5px;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 0;
+        left: 240px;
+        width: 1125px;
+    }
+
+    #texto-submit {
+        text-align: center;
+        width: 80%;
+        top: 100px;
+        line-height: 50px;
+        font-size: xx-large;
+        position: fixed;
+    }
+
+    #submit {
+        width: 150px;
+        height: 60px;
+        font-size: large;
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: relative;
+        top: 400px;
+        transition: 0.25s;
+    }
+
+    #submit:hover {
+        background-color: lightcoral;
+        color: black;
+    }
+
+    #reset {
+        font-size: large;
+        width: 250px;
+        height: 30px;
+        padding: 5px;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: white;
+        top: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        color: black;
+        text-align: center;
+        position: relative;
+        transition: 0.25s;
+    }
+
+    #reset:hover {
+        background-color: lightcoral;
+        color: white;
+    }
+
+    .fundo {
+        top: -10px;
+        left: -4px;
+        width: 227px;
+        border: 3px gray solid;
+        height: 1000px;
+        background-color: rgb(220, 220, 220);
+        position: fixed;
+    }
+
+    .input-nota {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 70%;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+    }
+
+    .input-nota-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 675px;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+    }
+
+    .input-nota-mini-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 45px;
+        padding: 2px;
+        padding-left: 5px;
+        border-radius: 7.5px;
+        position: absolute;
+        margin-top: 2px;
+        left: 355px;
+    }
+
+    .input-nota-mini {
+        font-size: large;
+        text-align: left;
+        background-color: white;
+        border: 1px solid white;
+        width: 200px;
+        padding: 2px;
+        padding-left: 2px;
+        border-radius: 7.5px;
+        position: absolute;
+    }
+
+    .texto-nota-medium {
+        font-size: x-large;
+        color: gray;
+        padding: 10px;
+        word-spacing: 200px;
+        font-weight: bold;
+    }
+
+    .texto-nota-small {
+        font-size: 20px;
+        color: gray;
+        padding: 10px;
+        word-spacing: 200px;
+        font-weight: bold;
+    }
+
+    #qd1 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 750px;
+        height: 90px;
+        left: 80px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd2 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 350px;
+        height: 90px;
+        left: 841px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd3 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 300px;
+        height: 90px;
+        left: 1202px;
+        top: 100px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd4 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 475px;
+        height: 90px;
+        left: 80px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd5 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        width: 350px;
+        height: 90px;
+        background-color: white;
+        left: 566px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd6 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        width: 264px;
+        height: 90px;
+        border: 1px black solid;
+        background-color: white;
+        left: 927px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    #qd7 {
+        position: absolute;
+        text-align: left;
+        align-items: left;
+        background-color: white;
+        width: 300px;
+        height: 90px;
+        left: 1202px;
+        top: 201px;
+        border: 1px black solid;
+        padding: 5px;
+    }
+
+    .details-all {
+        text-align: left;
+        align-items: left;
+        padding: 10px;
+    }
+
+    .details-big {
+        width: 180px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 25px;
+        border: 1px black solid;
+        border-bottom: 3px black solid;
+        top: 120px;
+        padding: 15px;
+        padding-right: 5px;
+        border-radius: 15px;
+        margin-left: 2.5px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .details-big:hover,
+    .details-small:hover,
+    .details-small-more:hover {
+        background-color: whitesmoke;
+        color: green;
+    }
+
+    .details-small {
+        width: 150px;
+        height: 50px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 20px;
+        border: 1px black solid;
+        border-bottom: 2px black solid;
+        top: 120px;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+        transition: 0.25s;
+        cursor: cell;
+    }
+
+    .details-small-more {
+        width: 135px;
+        background-color: green;
+        color: whitesmoke;
+        font-size: 22.5px;
+        border: 1px black solid;
+        border-bottom: 3px black solid;
+        border-radius: 15px;
+        position: relative;
+        top: 120px;
+        padding: 7.5px;
+        padding-right: 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+}
