@@ -25,6 +25,9 @@
         <form action="cadastro.html">
             <input class="botao" value="Cadastrar-se" type="submit">
         </form>
+        <form method="POST" action="../PHP/senha_nova.php">
+            <input type="submit" value="trocar senha">
+        </form>
     </div>
 </body>
 

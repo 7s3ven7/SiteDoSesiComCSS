@@ -66,7 +66,7 @@
     </details>
     <div class="caixa">
         <div class="texto-titulo">Cadastre teus pedidos</div>
-        <form method="POST" action="../../PHP/Professor/pedido.php">
+        <form method="POST" action="pedido.php">
             <table class="tabela-mini">
                 <tr>
                     <td class="texto-tabela-mini">CNPJ:</td>

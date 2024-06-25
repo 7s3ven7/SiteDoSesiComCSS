@@ -31,7 +31,7 @@
         <form action="../../PHP/aluno/quantitativo.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-    </details>    
+    </details>
     <details class="details-all">
         <summary class="details-big">Controle</summary>
         <form action="../../PHP/aluno/docas_receb.php">
@@ -55,7 +55,7 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-                <form action="../../PHP/aluno/nota_exped.php">
+        <form action="../../PHP/aluno/nota_exped.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
         <form action="tela.html">
