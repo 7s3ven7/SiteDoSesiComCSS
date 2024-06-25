@@ -5,95 +5,131 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro do fornecedor</title>
+    <title>Cadastro produto</title>
 </head>
 
 <body>
+
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="tela.html">
+        <form action="../../HTML/Professor/tela.html">
             <input class="details-small" type="submit" value="Inicio"></div>
         </form>
-        <form action="../index.html">
+        <form action="../../HTML/index.html">
             <input class="details-small" type="submit" value="Sair"></div>
         </form>
-        <form action="reset.html">
+        <form action="../../HTML/Professor/reset.html">
             <input class="details-small" type="submit" value="Resetar"></div>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form action="../../PHP/Professor/fornecedor.php">
+        <form action="fornecedor.php">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form action="../../PHP/Professor/empresa.php">
+        <form action="empresa.php">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form action="../../PHP/Professor/cliente.php">
+            <form action="cliente.php">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form action="../../PHP/Professor/pedido.php">
+            <form action="pedido.php">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
     <details class="details-all">
         <summary class="details-big">Produto</summary>
-        <form action="../../PHP/Professor/produto.php">
+        <form action="produto.php">
             <input class="details-small" type="submit" value="Cadastro">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="quantitativo_recebimento.html">
+        <form action="../../HTML/Professor/quantitativo_recebimento.html">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
-        <form action="nota_recebimento.html">
+        <form action="../../HTML/Professor/nota_recebimento.html">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="quantitativo_expedicao.html">
+        <form action="../../HTML/Professor/quantitativo_expedicao.html">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="nota_recebimento.html">
+        <form action="../../HTML/Professor/nota_recebimento.html">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
+    <div class="details-caixa"></div>
+    <div class="menu">Menu</div>
     <div class="caixa">
-        <div class="texto-titulo">Cadastre teus fornecedores</div>
-        <form method="POST" action="../../PHP/Professor/fornecedor.php">
+    </div>
+    <div class="caixa-fixa">
+        <form method="POST" action="fornecedor.php">
+            <div class="texto-produto">Quantos fornecedores irás registrar: <input class="botao-produto" type="number"
+                    name="vezes" placeholder="Número de vezes*"></div>
+            <input class="enviar-numero-produto" type="submit">
+        </form>
+        <?php
+            if(isset($_POST['vezes'])){
+                    $i = $_POST['vezes'];
+                    if($i <= 0){
+                        echo '
+                        <br><br>
+                        <div class="texto-produto">Digite um número superior!</div>';
+                    }else{
+                    $l = $i;
+                    $numero = 1;
+                    $v1 = 'cnpj';
+                    $v2 = 'nome_fornecedor';
+                    $v3 = 'gmail';
+                    $v4 = 'cep';
+                    $v5 = 'telefone';
+                echo'<form method="POST" action="cadastro_fornecedor.php?$l='.$l.'">';
+                echo'<br>';
+                    for($i;$i>0;$i){
+                    $i -= 1;
+                    echo'
+            <div class="numero-produto">'.$numero.'° Fornecedor</div>
+            <br>
             <table class="tabela-mini">
                 <tr>
-                    <td class="texto-tabela-medium">CNPJ: </td>
-                    <td><input class="botao-tabela" type="text" name="1" placeholder="000.000.000.0000-00"></td>
+                    <td class="texto-tabela-mini">CNPJ: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
+                    <td class="texto-tabela-mini">Nome do fornecedor: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Nome"></td>
+                <tr>
+                    <td class="texto-tabela-mini">Gmail: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                    <td class="texto-tabela-mini">CEP: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="0000-000"></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-medium">Nome do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="2" placeholder="Nome"></td>
+                    <td class="texto-tabela-mini">Telefone: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
                 </tr>
-                <tr>
-                    <td class="texto-tabela-medium">Gmail: </td>
-                    <td><input class="botao-tabela" type="text" name="3" placeholder="exemplo@gmail.com"></td>
-                </tr>
-                <tr>
-                    <td class="texto-tabela-medium">CEP: </td>
-                    <td><input class="botao-tabela" type="text" name="4" placeholder="000-000-000"></td>
-                </tr>
-                <tr>
-                    <td class="texto-tabela-medium">Telefone: </td>
-                    <td><input class="botao-tabela" type="text" name="5" placeholder="(00) 00000-0000"></td>
-                </tr>
-            </table>
-            <input class="botao" type="submit" value="Enviar">
-        </form>
+            </table>';
+            $numero += 1;
+            $v1 = $v1.'p';
+            $v2 = $v2.'p';
+            $v3 = $v3.'p';
+            $v4 = $v4.'p';
+            $v5 = $v5.'p';
+                    }              
+                echo '<table class="table">';
+                echo '<input class="botao" type="submit">';
+                echo'<div class="details-caixa-2"></div>';}}
+                echo'</form>';
+            ?>
     </div>
-    <div class="menu">Menu</div>
+
     <div id="tipo">Conta: Professor</div>
+
 </body>
 
 </html>
