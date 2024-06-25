@@ -21,7 +21,7 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="nota_receb.php">
+        <form action="t_nota_r_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
         <form action="qualitativo.html">

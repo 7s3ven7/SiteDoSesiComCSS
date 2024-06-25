@@ -22,7 +22,7 @@
         <hr>
         </form>
         <div class="texto">Novo aqui?</div>
-        <form action="cadastro.html">
+        <form action="t_conta.php">
             <input class="botao" value="Cadastrar-se" type="submit">
         </form>
         <form method="POST" action="t_senhanova_p.php">
