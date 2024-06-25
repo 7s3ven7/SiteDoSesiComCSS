@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="../../CSS/inicio.css">
+    <link rel="stylesheet" href="a_inicio.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
     <div class="caixa-mini-atividade-toda">
         <div class="caixa-mini-atividade">
-            <form method="GET" action="tela_p.php">
+            <form method="GET" action="t_p.php">
                 <div class="texto-atividade">Selecione a atividade!</div>
                 <input class="caixa-texto" type="text" placeholder="nome" name="nome_atividade">
         </div>

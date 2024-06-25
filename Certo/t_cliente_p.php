@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="../../CSS/site.css">
+    <link rel="stylesheet" href="a_site.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +13,30 @@
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="../../HTML/Professor/tela.html">
+        <form action="t_p.php">
             <input class="details-small" type="submit" value="Inicio"></div>
         </form>
-        <form action="../../HTML/index.html">
+        <form action="index.php">
             <input class="details-small" type="submit" value="Sair"></div>
         </form>
-        <form action="../../HTML/Professor/reset.html">
+        <form action="t_reset_p.php">
             <input class="details-small" type="submit" value="Resetar"></div>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form action="fornecedor.php">
+        <form action="t_fornecedor_p.php">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form action="empresa.php">
+        <form action="t_empresa_p.php">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form action="cliente.php">
+            <form action="t_cliente_p.php">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form action="pedido.php">
+            <form action="c_pedido_p.php">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>

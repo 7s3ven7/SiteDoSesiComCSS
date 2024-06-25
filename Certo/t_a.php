@@ -21,56 +21,56 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="t_nota_r_a.php">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="qualitativo.html">
+        <form action="t_qualitativo_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
-        <form action="../../PHP/aluno/quantitativo.php">
+        <form action="t_quantitativo_a.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Controle</summary>
-        <form action="../../PHP/aluno/docas_receb.php">
+        <form action="t_docas_r_a.php">
             <input class="details-small" type="submit" value="Controle">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="../../PHP/aluno/estoque.php">
+        <form action="t_estoque_a.php">
             <input class="details-small" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="../../PHP/aluno/nota_exped.php">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
