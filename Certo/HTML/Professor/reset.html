@@ -66,14 +66,12 @@
     </details>
     <div class="caixa">
         <form method="POST" action="../../PHP/reset.php">
-            <div id="texto-submit">
-                Tem certeza que quer redefinir o banco de dados do site?
-                <br>
-                Confirme com a senha, e no botão de "Enviar" abaixo!
-            </div>
+            <div class="caixa-texto-secreto"></div>
+            <div class="texto-secreto">Tens certeza de tua ação?</div>
+            <div class="texto-secreto">Você irá extinguir teus dados!</div>
+            <input class="senha-secreta" type="password" name="senha_secreta" placeholder="Senha*">
             <br>
-            <input id="reset" type="submit" value="Enviar">
-            <input id="submit" type="password" placeholder="senha" name="senha_secreta">
+            <input class="submit-secreto" type="submit" value="Excluir BD">
         </form>
     </div>
     <div class="menu">Menu</div>
