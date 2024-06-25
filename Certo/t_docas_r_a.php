@@ -9,7 +9,7 @@ $DB = "dados";
 $conexao = new mysqli($hostname, $name, $password, $DB);
 
 if (empty($_SESSION['nome'])){
-    header('Location: sair.php');
+    header('Location: index.php');
     exit();
 } else {
 echo '<!DOCTYPE html>
@@ -26,65 +26,65 @@ echo '<!DOCTYPE html>
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Inicio">
         </form>
-        <form action="../../HTML/Aluno/index.html">
+        <form action="index.php">
             <input class="details-small" type="submit" value="Sair">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="nota_receb.php">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="../../HTML/Aluno/qualitativo.html">
+        <form action="t_qualitativo_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
-        <form action="quantitativo.php">
+        <form action="t_quantitativo_a.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Controle</summary>
-        <form action="docas_receb.php">
+        <form action="t_docas_r_a.php">
             <input class="details-small" type="submit" value="Controle">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Estoque</summary>
-        <form action="estoque.php">
+        <form action="t_estoque_a.php">
             <input class="details-small" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="nota_exped.php">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
-        <form action="../../HTML/Aluno/tela.html">
+        <form action="t_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
