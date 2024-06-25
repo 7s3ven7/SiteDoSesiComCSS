@@ -78,7 +78,7 @@
         <?php
             if(isset($_POST['vezes'])){
                     $i = $_POST['vezes'];
-                $sql_list = "SELECT `nome` FROM `fornecedor;";
+                $sql_list = "SELECT nome FROM `fornecedor;";
                 echo '<select id="fornecedores">';
                 if(mysqli_num_rows($sql_list) > 0){
                     while($row = mysqli_fetch_array($sql_list)){
