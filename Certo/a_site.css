@@ -884,7 +884,7 @@ hr {
     font-size: xx-large;
     background-color: white;
     border-top: 2px solid darkgray;
-    top: 905px;
+    top: 0;
     position: fixed;
     text-align: center;
     padding-bottom: 0px;
