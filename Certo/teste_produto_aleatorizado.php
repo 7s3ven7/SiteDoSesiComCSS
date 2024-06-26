@@ -7,71 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro produto</title>
 </head>
-<?php
-    $nome_atividade = $_GET('nome_atividade')
-?>
 
 <body>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
-        </form>
-        <form action="t_reset_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
-        </form>
-    </details>
-    <details class="details-all">
-        <summary class="details-big">Cadastros</summary>
-        <form action="t_fornecedor_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Fornecedor"></div>
-        </form>
-        <form action="t_empresa_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Empresa"></div>
-        </form>
-        <details>
-            <summary class="details-small-more">Cliente</summary>
-            <form action="t_cliente_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="details-small" type="submit" value="Cadastro"></div>
-            </form>
-            <form action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="details-small" type="submit" value="Pedido"></div>
-            </form>
-        </details>
-    </details>
-    <details class="details-all">
-        <summary class="details-big">Produto</summary>
-        <form action="t_produto_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Cadastro">
-        </form>
-    </details>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
-        <form action="t_quantitativo_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Quantitativo"></div>
-        </form>
-        <form action="t_nota_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
-        <form action="t_quantitativo_e_p.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Quantitativo">
-        </form>
-        <form action="t_nota_e_pr.php?nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
     <div class="details-caixa"></div>
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
-        <form method="POST" action="produto.php">
+        <form method="POST" action="teste_produto_aleatorizado.php">
             <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
                     name="vezes" placeholder="Número de vezes*"></div>
             <br>
@@ -109,7 +51,7 @@
                     $v10 = 'quantidade_produto';
                     $v11 = 'valor_unidade';
                     $v12 = 'peso';
-                echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
+                echo'<form method="POST" action="teste_produto_aleatorizado.php?$l='.$l.'">';
                     for($ii;$ii>0;$ii){    
                     $array1 = array("1-213A56-23C123","H-234P25-213S90","7-2386K2-2962V3","0-O23I12-73T937","7-JS26D7-82M6V4");              
                     $n1 = rand(0,4);
