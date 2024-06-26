@@ -45,10 +45,10 @@ if ($conexao->connect_errno) {
         $l = $l.'p';
         $z -= 1;
     }
-    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
+    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
     $id_atividade = 1;
     $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
-    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
+    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
     $resultado = $conexao->query($SQL);
     $conexao->close();
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
