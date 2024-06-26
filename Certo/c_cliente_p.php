@@ -31,11 +31,11 @@ $v3 = $v3.'p';
 $v4 = $v4.'p';
 $v5 = $v5.'p';
         }
-    $v1 = $_POST['1']; //CPF
-    $v2 = $_POST['2']; //Nome do Cliente
-    $v3 = $_POST['3']; //Gmail
-    $v4 = $_POST['4']; //CEP
-    $v5 = $_POST['5']; //Telefone
+    $v1 = $_POST['1'];
+    $v2 = $_POST['2'];
+    $v3 = $_POST['3'];
+    $v4 = $_POST['4'];
+    $v5 = $_POST['5'];
 
     $SQL = 'INSERT INTO `clientes_p` (`CNPJ_c`,`nome_c`,`gmail_c`,`CEP_c`,`fone_c`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
