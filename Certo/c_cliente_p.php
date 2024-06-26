@@ -10,13 +10,43 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-
-    if(isset($_POST['vezes'])){
-        $i = $_POST['vezes'];
-        if($i <= 0){
-        }else{
-        $l = $i;
-        $numero = 1;
+    $a = $_POST['cnpj']; //CNPJ
+    $b = $_POST['nome_fornecedor']; //Nome do fornecedor
+    $c = $_POST['gmail']; //Email
+    $d = $_POST['cep']; //CEP
+    $e = $_POST['telefone']; //Telefone
+    $id_atividade = $_GET['id_atividade'];
+    $l = $_GET['$l'];
+    
+    while($l>0){
+        $v1 = $_POST[$a];
+        $v2 = $_POST[$b];
+        $v3 = $_POST[$c];
+        $v4 = $_POST[$d];
+        $v5 = $_POST[$e];
+        $v6 = $_POST[$f];
+        $vtotal = $v11 * ($v9*$v10);
+        for($z = 1;$z>0;$z){
+            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`id_atividade`) 
+            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$id_atividade.');';
+            $resultado = $conexao->query($SQL);
+            $z -= 1;
+            }
+        $z = 1;
+        $a = $a.'p';
+        $b = $b.'p';
+        $c = $c.'p';
+        $d = $d.'p';
+        $e = $e.'p';
+        $f = $f.'p';
+        $g = $g.'p';
+        $h = $h.'p';
+        $i = $i.'p';
+        $j = $j.'p';
+        $k = $k.'p';
+        $l = $l.'p';
+        $l -= 1;
+    }
         $v1 = 'cnpj';
         $v2 = 'nome_cliente';
         $v3 = 'gmail';
