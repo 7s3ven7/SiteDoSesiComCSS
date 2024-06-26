@@ -99,7 +99,7 @@ if(isset($_POST['vezes'])){
         $v3 = 'gmail';
         $v4 = 'cep';
         $v5 = 'telefone';
-        echo '<form method="POST" action="t_cliente_p.php?$l='.$l.' name="cadastro">';
+        echo '<form method="POST" action="t_cliente_p.php" name="cadastro">';
         echo '<br>';
         for($i;$i>0;$i){
             $i -= 1;
@@ -129,13 +129,15 @@ if(isset($_POST['vezes'])){
             $v3 = $v3.'p';
             $v4 = $v4.'p';
             $v5 = $v5.'p';
-                    }              
+                    }         
+            echo '</form>';     
             echo '<table class="table">';
             echo '<input class="botao" type="submit">';
             echo'<div class="details-caixa-2"></div>';
             if(isset($_POST['cadastro'])){
+            echo 'oi';
                 $a = $_POST['cnpj']; //CNPJ
-                $b = $_POST['nome_fornecedor']; //Nome do fornecedor
+                $b = $_POST['nome_cliente']; //Nome do fornecedor
                 $c = $_POST['gmail']; //Email
                 $d = $_POST['cep']; //CEP
                 $e = $_POST['telefone']; //Telefone
@@ -171,19 +173,19 @@ if(isset($_POST['vezes'])){
                     $l = $l.'p';
                     $l -= 1;
                 }
-                    $v1 = 'cnpj';
-                    $v2 = 'nome_cliente';
-                    $v3 = 'gmail';
-                    $v4 = 'cep';
-                    $v5 = 'telefone';
-                    for($i;$i>0;$i){
+                $v1 = 'cnpj';
+                $v2 = 'nome_cliente';
+                $v3 = 'gmail';
+                $v4 = 'cep';
+                $v5 = 'telefone';
+                for($i;$i>0;$i){
                     $i -= 1;
-            $numero += 1;
-            $v1 = $v1.'p';
-            $v2 = $v2.'p';
-            $v3 = $v3.'p';
-            $v4 = $v4.'p';
-            $v5 = $v5.'p';
+                    $numero += 1;
+                    $v1 = $v1.'p';
+                    $v2 = $v2.'p';
+                    $v3 = $v3.'p';
+                    $v4 = $v4.'p';
+                    $v5 = $v5.'p';
                     }
                 $v1 = $_POST['1'];
                 $v2 = $_POST['2'];
@@ -191,7 +193,7 @@ if(isset($_POST['vezes'])){
                 $v4 = $_POST['4'];
                 $v5 = $_POST['5'];
 
-                $SQL = 'INSERT INTO `clientes_p` (`CNPJ_c`,`nome_c`,`gmail_c`,`CEP_c`,`fone_c`) 
+                $SQL = 'INSERT INTO `cliente_p` (`CNPJ_c`,`nome_c`,`gmail_c`,`CEP_c`,`fone_c`) 
                 VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
                     
                 $resultado = $conexao->query($SQL);
