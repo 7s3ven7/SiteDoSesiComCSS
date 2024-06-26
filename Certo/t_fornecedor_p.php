@@ -99,7 +99,7 @@
             <input class="enviar-numero-produto" type="submit">
         </form>
         <!--Aparecer na Tela--><?php
-            if(isset($_POST['vezes'])){
+            if(isset($_POST['vezes']))
                     $i = $_POST['vezes'];
                     if($i <= 0){
                         echo '
