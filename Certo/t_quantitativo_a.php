@@ -77,29 +77,29 @@
 
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form action="c_quantitativo_a.php" method="POST">
+        <form action="t_quantitativo_a.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do fornecedor</div>
-                <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
+                <input class="quantitativo-input-pedido" type="number" value="0" name="cod_forne">
                 <input class="quantitativo-enviar-pedido" type="submit">
                 <div class="quadrado-quantitativo-2">
         </form>
         <?php
-        session_start();
+    session_start();
         
-    if(isset($_POST['n_pedido'])){
+    if(isset($_POST['cod_forne'])){
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
         $DB = "dados";
-        
+
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
             echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-            header("Location: t_a.php");
+            header("Location: t_quantitativo_a.php");
             exit();
         } else {
-            $v1 = $_POST['n_pedido'];
+            $v1 = $_POST['cod_forne'];
 			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$v1.";";
 			$resultado = $conexao->query($sql);
 
@@ -115,9 +115,7 @@
                 <div class="quadrado-produto">
                     <div class="quantitativo-texto">Número da Nota Fiscal</div>
                     <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
-                </div>';
-                
-                echo'
+                </div>
                 <div class="quadrado-produto">
                     <div class="quantitativo-texto">Nome do produto</div>
                     <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
@@ -165,7 +163,7 @@
             }
             }
         }}
-        ?>
+?>
     </div>
     </div>
 </body>
