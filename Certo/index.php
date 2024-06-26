@@ -32,3 +32,91 @@
 </body>
 
 </html>
+<!--Cadastro de usuario--><?php
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);
+if ($conexao->connect_errno) {
+    echo "Failes conection: " . $conexao->connect_error;
+    exit();
+} else {
+    $nome = $conexao->real_escape_string($_POST["nome_criado"]);
+    $senha = $conexao->real_escape_string($_POST["senha_criada"]);
+    $cargo = $conexao->real_escape_string($_POST["cargo_criado"]);
+    $codg = $conexao->real_escape_string($_POST["codigo_sala_criado"]);
+    $codp = $conexao->real_escape_string($_POST["codigo_interno_criado"]);
+
+    if($senha == $codp){
+        $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_grupo`,`cargo_u`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
+        $resultado = $conexao->query($SQL);
+        $conexao->close();
+        header("Location: index.php");
+    }else{
+
+    $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_grupo`,`cargo_u`,`cod_prof`) VALUES ("' . $nome . '","Aluno","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
+    $resultado = $conexao->query($SQL);
+    $conexao->close();
+    header("Location: index.php");
+}}
+?>
+
+
+<!--Logar conta de usuario--><?php
+session_start();
+
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+$conexao = new mysqli($hostname, $name, $password, $DB);
+if ($conexao->connect_errno) {
+	echo "Failes conection :" . $conexao->connect_error;
+	exit();
+} else {
+	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
+	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
+
+$SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+
+	$result = $conexao->query($SQL);
+	if ($result->num_rows != 0) {
+		$row = $result->fetch_array();
+		$_SESSION['tipo_u'] = $row[0];
+		$_SESSION['nome_u'] = $row[1];
+		$_SESSION['senha'] = $row[2];
+		if ($row[0] == 'Professor' and $senha == $row[2]) {
+			$conexao->close();
+			header('Location: t_atividade_p.php', true, 301);
+			exit();
+		}elseif ($row[0] == 'Aluno' and $senha == $row[2]) {
+			$conexao->close();
+			header('Location: t_a.php', true, 301);
+			exit();
+		}
+}else{
+	$conexao->close();
+	header('Location: index.php', true, 301);
+	exit();
+}
+}
+
+?>
+
+
+<!--Trocar de senha--><?php
+                if(isset($_POST['valor'])){
+                $senha = '';
+                $senha1 = '';
+                $i = rand(4,10);
+                for($i;0<=$i;$i){
+                $digito = array('A','a','B','b','C','c','D','d','E','e','F','f','G','g','H','h','I','i','J','j','K','k','L','l','M','m','N','n','O','o','P','p','Q','q','R','r','S','s','T','t','U','u','V','v','W','w','X','x','Y','y','Z','z','0','1','2','3','4','5','6','7','8','9','_','-');
+                $numero = rand(0,63);
+                $senha = $digito[$numero];
+                $i -= 1;
+                $senha1 = $senha1.$senha;
+                }
+                echo $senha1;}
+                ?>
