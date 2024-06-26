@@ -70,7 +70,7 @@
     <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="../../PHP/Professor/quantitativo_expedicao.php">
+        <form method="POST" action="c_quantitativo_e_p.php">
             <table class="tabela">
                 <tr>
                     <td>Código do fornecedor: </td>
