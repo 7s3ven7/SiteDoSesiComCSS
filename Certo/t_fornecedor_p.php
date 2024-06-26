@@ -9,49 +9,55 @@
 </head>
 <?php
     $nome_atividade = $_GET['nome_atividade'];
+    $nome = $_GET['nome'];
 ?>
 
 <body>
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Inicio"></div>
         </form>
         <form method="POST" action="index.php">
             <input class="details-small" type="submit" value="Sair"></div>
         </form>
-        <form method="POST" action="t_reset_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST" action="t_reset_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Resetar"></div>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form method="POST" action="t_fornecedor_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_fornecedor_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form method="POST" action="t_empresa_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_empresa_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form method="POST" action="t_cliente_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST"
+                action="t_cliente_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form method="POST" action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST" action="t_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
     <details class="details-all">
         <summary class="details-big">Produto</summary>
-        <form method="POST" action="t_produto_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_produto_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Cadastro">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form method="POST" action="t_quantitativo_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_quantitativo_r_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
         <form method="POST" action="t_nota_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
@@ -60,10 +66,21 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form method="POST" action="t_quantitativo_e_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form method="POST" action="t_nota_e_pr.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_nota_e_pr.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="t_nota_e_pr.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
@@ -71,6 +88,7 @@
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
+
     <div class="caixa-fixa">
         <form method="POST" action="t_fornecedor_p.php?nome_atividade=<?php echo $nome_atividade;?>">
             <div class="texto-produto">Quantos fornecedores irás registrar: <input class="botao-produto" type="number"
@@ -128,62 +146,120 @@
                 echo '<input class="botao" type="submit">';
                 echo'<div class="details-caixa-2"></div>';}
 
-                $hostname = "127.0.0.1";
-                $name = "root";
-                $password = "root";
-                $DB = "dados";
-                
-                $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-                
-                    if (isset($_POST['cadastro'])){
-                    $v1 = $_POST['cnpj']; //CNPJ
-                    $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
-                    $v3 = $_POST['gmail']; //Email
-                    $v4 = $_POST['cep']; //CEP
-                    $v5 = $_POST['telefone']; //Telefone
-                    $z = $_GET['$l'];
-                    
-                    while($z>0){
-                        $v1 = $_POST[$a];
-                        $v2 = $_POST[$b];
-                        $v3 = $_POST[$c];
-                        $v4 = $_POST[$d];
-                        $v5 = $_POST[$e];
-                        $vtotal = $v11 * ($v9*$v10);
-                        for($zz = 1;$zz>0;$zz){
-                            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
-                            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
-                            $resultado = $conexao->query($SQL);
-                            $zz -= 1;
-                            }
-                        $zz = 1;
-                        $a = $a.'p';
-                        $b = $b.'p';
-                        $c = $c.'p';
-                        $d = $d.'p';
-                        $e = $e.'p';
-                        $f = $f.'p';
-                        $g = $g.'p';
-                        $h = $h.'p';
-                        $i = $i.'p';
-                        $j = $j.'p';
-                        $k = $k.'p';
-                        $l = $l.'p';
-                        $z -= 1;
-                    }
-                    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-                    $id_atividade = 1;
-                    $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
-                    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
-                    $resultado = $conexao->query($SQL);
-                    $conexao->close();
-                    header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
-                }}
-        ?>
+        <?php
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+
+if ($conexao->connect_errno) {
+    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+    exit();
+} else {
+    $v1 = $_POST['cnpj']; //CNPJ
+    $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
+    $v3 = $_POST['gmail']; //Email
+    $v4 = $_POST['cep']; //CEP
+    $v5 = $_POST['telefone']; //Telefone
+    $z = $_GET['$l'];
+    
+    while($z>0){
+        $v1 = $_POST[$a];
+        $v2 = $_POST[$b];
+        $v3 = $_POST[$c];
+        $v4 = $_POST[$d];
+        $v5 = $_POST[$e];
+        $vtotal = $v11 * ($v9*$v10);
+        for($zz = 1;$zz>0;$zz){
+            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
+            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
+            $resultado = $conexao->query($SQL);
+            $zz -= 1;
+            }
+        $zz = 1;
+        $a = $a.'p';
+        $b = $b.'p';
+        $c = $c.'p';
+        $d = $d.'p';
+        $e = $e.'p';
+        $f = $f.'p';
+        $g = $g.'p';
+        $h = $h.'p';
+        $i = $i.'p';
+        $j = $j.'p';
+        $k = $k.'p';
+        $l = $l.'p';
+        $z -= 1;
+    }
+    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
+    $id_atividade = 1;
+    $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
+    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
+    $resultado = $conexao->query($SQL);
+    $conexao->close();
+    header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
+}
+?>
+        <?php
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+
+if ($conexao->connect_errno) {
+    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+    exit();
+} else {
+    $v1 = $_POST['cnpj']; //CNPJ
+    $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
+    $v3 = $_POST['gmail']; //Email
+    $v4 = $_POST['cep']; //CEP
+    $v5 = $_POST['telefone']; //Telefone
+    $z = $_GET['$l'];
+    
+    while($z>0){
+        $v1 = $_POST[$a];
+        $v2 = $_POST[$b];
+        $v3 = $_POST[$c];
+        $v4 = $_POST[$d];
+        $v5 = $_POST[$e];
+        $vtotal = $v11 * ($v9*$v10);
+        for($zz = 1;$zz>0;$zz){
+            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
+            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
+            $resultado = $conexao->query($SQL);
+            $zz -= 1;
+            }
+        $zz = 1;
+        $a = $a.'p';
+        $b = $b.'p';
+        $c = $c.'p';
+        $d = $d.'p';
+        $e = $e.'p';
+        $f = $f.'p';
+        $g = $g.'p';
+        $h = $h.'p';
+        $i = $i.'p';
+        $j = $j.'p';
+        $k = $k.'p';
+        $l = $l.'p';
+        $z -= 1;
+    }
+    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
+    $id_atividade = 1;
+    $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
+    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
+    $resultado = $conexao->query($SQL);
+    $conexao->close();
+    header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
+}
+?>
     </div>
-
-    <div id="tipo">Conta: Professor</div>
-
+    <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>

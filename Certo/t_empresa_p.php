@@ -9,49 +9,55 @@
 </head>
 <?php
     $nome_atividade = $_GET['nome_atividade'];
+    $nome = $_GET['nome'];
 ?>
 
 <body>
     <div class="fundo"></div>
     <details class="details-all">
         <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Inicio"></div>
         </form>
         <form method="POST" action="index.php">
             <input class="details-small" type="submit" value="Sair"></div>
         </form>
-        <form method="POST" action="t_reset_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST" action="t_reset_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Resetar"></div>
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
-        <form method="POST" action="t_fornecedor_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_fornecedor_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Fornecedor"></div>
         </form>
-        <form method="POST" action="t_empresa_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_empresa_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Empresa"></div>
         </form>
         <details>
             <summary class="details-small-more">Cliente</summary>
-            <form method="POST" action="t_cliente_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST"
+                action="t_cliente_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form method="POST" action="t_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST" action="t_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
     <details class="details-all">
         <summary class="details-big">Produto</summary>
-        <form method="POST" action="t_produto_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_produto_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Cadastro">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form method="POST" action="t_quantitativo_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_quantitativo_r_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
         <form method="POST" action="t_nota_r_p.php?nome_atividade=<?php echo $nome_atividade;?>">
@@ -60,10 +66,21 @@
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form method="POST" action="t_quantitativo_e_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form method="POST" action="t_nota_e_pr.php?nome_atividade=<?php echo $nome_atividade;?>">
+        <form method="POST"
+            action="t_nota_e_pr.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Nota Fiscal">
+        </form>
+    </details>
+    <details class="details-all">
+        <summary class="details-big">Expedição</summary>
+        <form action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Quantitativo">
+        </form>
+        <form action="t_nota_e_pr.php?nome=<?php echo $nome;?>nome_atividade=<?php echo $nome_atividade;?>">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
@@ -71,6 +88,7 @@
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
+
     <div class="caixa-fixa">
         <form method="POST" action="t_empresa_p.php">
             <div class="texto-produto">Quantas empresas irás registrar: <input class="botao-produto" type="number"
@@ -131,10 +149,36 @@
                 echo'<div class="details-caixa-2"></div>';}}
                 echo'</form>';
             ?>
+            <?php
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+
+if ($conexao->connect_errno) {
+    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+    exit();
+} else {
+    $v1 = $_POST['1']; //CNPJ
+    $v2 = $_POST['2']; //Nome do gerente
+    $v3 = $_POST['3']; //Email
+    $v4 = $_POST['4']; //Telefone
+    $v5 = $_POST['5']; //CEP
+
+    $SQL = 'INSERT INTO `nossa_empresa_p` (`CNPJ_e`,`gmail_e`,`fone_e`,`CEP_e`,`nome_e`) 
+    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
+    //Inserir no DB
+    $resultado = $conexao->query($SQL);
+
+    $conexao->close();
+    header("Location: t_empresa_p.php"); //Envia para a tela de Login ao Cadastrar
+}
+?>
+
     </div>
-
-    <div id="tipo">Conta: Professor</div>
-
+    <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>

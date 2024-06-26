@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+<?php
+$nome = $_GET['nome'];?>
 
 <body>
     <div class="caixa-mini-atividade-toda">
         <div class="caixa-mini-atividade">
-            <form method="GET" action="t_p.php">
+            <form method="POST" action="t_atividade.php?nome=<?php echo $nome;?>">
                 <div class="texto-atividade">Selecione a atividade!</div>
                 <input class="caixa-texto" type="text" placeholder="nome" name="nome_atividade">
         </div>
@@ -21,8 +23,7 @@
 
 </html>
 <?php
-$nome = $_GET['nome'];
-if(isset($_GET['nome_atividade'])){
+if(isset($_POST['nome_atividade'])){
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root"; 
@@ -32,7 +33,7 @@ if ($conexao->connect_errno) {
 	echo "Failes conection :" . $conexao->connect_error;
 	exit();
 } else {
-
+$nome_atividade = $_POST['nome_atividade'];
 $SQL = "SELECT `tipo_u` FROM `usuario` WHERE `nome_u` = '" . $nome . "'";
 
 	$result = $conexao->query($SQL);
@@ -40,9 +41,9 @@ $SQL = "SELECT `tipo_u` FROM `usuario` WHERE `nome_u` = '" . $nome . "'";
 		$row = $result->fetch_array();
 		$tipo = $row[0];
         if($tipo == 'Aluno'){
-            header('location:t_a.php?nome='.$nome.'');
-        }elseif($tipo == 'Professor'){
-            header('location:t_p.php?nome='.$nome.'');
+            header('location:t_a.php?nome='.$nome.'&nome_atividade='.$nome_atividade.'');
+        }if($tipo == 'Professor'){
+            header('location:t_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade.'');
         }
     }}}
 ?>
