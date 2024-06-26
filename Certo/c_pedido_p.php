@@ -16,10 +16,13 @@ if ($conexao->connect_errno) {
     $v4 = $_POST['4']; //quantidade de unidade
     $v5 = $_POST['5']; //quantidade de produto
     $v6 = $_POST['6']; //valor_und
-    $v7 = $_POST['sinopse']; //sinopse
+    $v7 = $_POST['7']; //
+    $v8 = $_POST['8']; //
+    $v9 = $_POST['9']; //
+    $v10 = $_POST['sinopse']; //sinopse
 
-    $SQL = 'INSERT INTO `pedi_clientes_p` (`CNPJ`,`nome_prod`,`und`,`quant_und`,`quant_prod`,`valor_und`,`sinop`) 
-    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ',' . $v6 . ',' . $v7 . ');';
+    $SQL = 'INSERT INTO `pedi_clientes_p` (`CNPJ_c`,`nome_prod`,`und`,`quant_und`,`quant_prod`,`valor_und`,`nome_c`,`fone_c`,`gmail_c`,`CEP_c`,`sinop`) 
+    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ',' . $v6 . ',' . $v7 . ',' . $v8 . ',' . $v9 . ',' . $v10 . ');';
     //Inserir no DB
     $resultado = $conexao->query($SQL);
     $conexao->close();

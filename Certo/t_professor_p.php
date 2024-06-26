@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="../../CSS/site.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,9 +70,9 @@
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
-        <form method="POST" action="produto.php">
-            <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
-                    name="vezes" placeholder="Número de vezes*"></div>
+        <form method="POST" action="empresa.php">
+            <div class="texto-produto">WIP: <input class="botao-produto" type="number" name="vezes"
+                    placeholder="Número de vezes*"></div>
             <input class="enviar-numero-produto" type="submit">
         </form>
         <?php
@@ -85,57 +85,36 @@
                     }else{
                     $l = $i;
                     $numero = 1;
-                    $v1 = 'cod_fone';
-                    $v2 = 'tipo';
-                    $v3 = 'validade';
-                    $v4 = 'lote';
-                    $v5 = 'nome';
-                    $v6 = 'marca';
-                    $v7 = 'numero';
-                    $v8 = 'unidade';
-                    $v9 = 'quantidade_unidade';
-                    $v10 = 'quantidade_produto';
-                    $v11 = 'valor_unidade';
-                    $v12 = 'peso';
-                echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
+                    $v1 = 'cnpj';
+                    $v2 = 'nome_empresa';
+                    $v3 = 'nome_gerente';
+                    $v4 = 'gmail';
+                    $v5 = 'cep';
+                    $v6 = 'telefone';
+                echo'<form method="POST" action="cadastro_empresa.php?$l='.$l.'">';
                 echo'<br>';
                     for($i;$i>0;$i){
                     $i -= 1;
                     echo'
-            <div class="numero-produto">'.$numero.'° Produto</div>
+            <div class="numero-produto">'.$numero.'° Pedido</div>
             <br>
             <table class="tabela-mini">
                 <tr>
-                    <td class="texto-tabela-mini">Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Tipo: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td class="texto-tabela-mini">Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
+                    <td class="texto-tabela-mini">CNPJ: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
+                    <td class="texto-tabela-mini">Nome da produto: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Nome"></td>
+                <tr>
+                    <td class="texto-tabela-mini">Nome do gerente: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="Nome"></td>                
+                    <td class="texto-tabela-mini">Gmail: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="exemplo@gmail.com"></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini">Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td class="texto-tabela-mini">Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
-                </tr>
-                <tr>
-                    <td class="texto-tabela-mini">Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
-                </tr>
-                <tr>
-                    <td class="texto-tabela-mini">Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
+                    <td class="texto-tabela-mini">CEP: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="0000-000"></td>
+                    <td class="texto-tabela-mini">Telefone: </td>
+                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="(00) 00000-0000 "></td>
                 </tr>
             </table>';
             $numero += 1;
@@ -144,13 +123,6 @@
             $v3 = $v3.'p';
             $v4 = $v4.'p';
             $v5 = $v5.'p';
-            $v6 = $v6.'p';
-            $v7 = $v7.'p';
-            $v8 = $v8.'p';
-            $v9 = $v9.'p';
-            $v10 = $v10.'p';
-            $v11 = $v11.'p';
-            $v12 = $v12.'p';
                     }              
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';

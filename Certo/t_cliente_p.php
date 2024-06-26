@@ -36,32 +36,32 @@
             <form action="t_cliente_p.php">
                 <input class="details-small" type="submit" value="Cadastro"></div>
             </form>
-            <form action="c_pedido_p.php">
+            <form action="t_p.php">
                 <input class="details-small" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
     <details class="details-all">
         <summary class="details-big">Produto</summary>
-        <form action="produto.php">
+        <form action="t_produto_p.php">
             <input class="details-small" type="submit" value="Cadastro">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="../../HTML/Professor/quantitativo_recebimento.html">
+        <form action="t_quantitativo_r_p.php">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
-        <form action="../../HTML/Professor/nota_recebimento.html">
+        <form action="t_nota_r_p.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="../../HTML/Professor/quantitativo_expedicao.html">
+        <form action="t_quantitativo_e_p.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="../../HTML/Professor/nota_recebimento.html">
+        <form action="t_nota_r_p.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
@@ -70,7 +70,7 @@
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
-        <form method="POST" action="cliente.php">
+        <form method="POST" action="c_cliente_p.php">
             <div class="texto-produto">Quantos clientes irás registrar: <input class="botao-produto" type="number"
                     name="vezes" placeholder="Número de vezes*"></div>
             <input class="enviar-numero-produto" type="submit">
@@ -90,7 +90,7 @@
                     $v3 = 'gmail';
                     $v4 = 'cep';
                     $v5 = 'telefone';
-                echo'<form method="POST" action="cadastro_cliente.php?$l='.$l.'">';
+                echo'<form method="POST" action="c_cliente_p.php?$l='.$l.'">';
                 echo'<br>';
                     for($i;$i>0;$i){
                     $i -= 1;

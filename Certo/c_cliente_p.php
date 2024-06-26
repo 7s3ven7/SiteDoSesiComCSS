@@ -16,7 +16,7 @@ if ($conexao->connect_errno) {
     $v4 = $_POST['4']; //CEP
     $v5 = $_POST['5']; //Telefone
 
-    $SQL = 'INSERT INTO `clientes_p` (`CNPJ`,`nome_c`,`gmail`,`CEP`,`fone`) 
+    $SQL = 'INSERT INTO `clientes_p` (`CNPJ_c`,`nome_c`,`gmail_c`,`CEP_c`,`fone_c`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
     //Inserir no DB
     $resultado = $conexao->query($SQL);
