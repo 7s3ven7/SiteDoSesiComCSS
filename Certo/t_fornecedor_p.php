@@ -259,7 +259,7 @@ if ($conexao->connect_errno) {
     $resultado = $conexao->query($SQL);
     $conexao->close();
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
-}}?>
+}?>
     </div>
     <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
