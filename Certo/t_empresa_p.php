@@ -70,7 +70,7 @@
     <div class="caixa">
     </div>
     <div class="caixa-fixa">
-        <form method="POST" action="empresa.php">
+        <form method="POST" action="t_empresa_p.php">
             <div class="texto-produto">Quantas empresas irás registrar: <input class="botao-produto" type="number"
                     name="vezes" placeholder="Número de vezes*"></div>
             <input class="enviar-numero-produto" type="submit">
