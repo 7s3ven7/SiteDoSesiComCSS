@@ -25,8 +25,6 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: t_qualitativo_r_a.php");
-		exit();
 	}
 }
 echo '<!DOCTYPE html>
