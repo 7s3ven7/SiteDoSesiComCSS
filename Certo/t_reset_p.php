@@ -67,7 +67,7 @@
     <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="../../PHP/reset.php">
+        <form method="POST" action="c_reset_p.php">
             <div class="caixa-texto-secreto"></div>
             <div class="texto-secreto">Tens certeza de tua ação?</div>
             <div class="texto-secreto">Você irá extinguir teus dados!</div>
