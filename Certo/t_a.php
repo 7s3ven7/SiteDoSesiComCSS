@@ -24,7 +24,7 @@
         <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">

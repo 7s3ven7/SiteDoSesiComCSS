@@ -41,12 +41,6 @@ if(isset($_POST['5'])){
     $v5 = 'F';
 }
 
-if(isset($_POST['6'])){
-    $v6 = 'V';
-} else {
-    $v6 = 'F';
-}
-
 if(isset($_POST['7'])){
     $v7 = 'V';
 } else {
@@ -107,22 +101,10 @@ if(isset($_POST['16'])){
     $v16 = 'F';
 }
 
-if(isset($_POST['17'])){
-    $v17 = 'V';
-} else {
-    $v17 = 'F';
-}
-
 if(isset($_POST['18'])){
     $v18 = 'V';
 } else {
     $v18 = 'F';
-}
-
-if(isset($_POST['19'])){
-    $v19 = 'V';
-} else {
-    $v19 = 'F';
 }
 
 if(isset($_POST['20'])){
@@ -131,13 +113,13 @@ if(isset($_POST['20'])){
     $v20 = 'F';
 }
 
-$SQL = 'INSERT INTO `qualitativo_expedição_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
-    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'");';
+$SQL = 'INSERT INTO `qualitativo_recebimento_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`cod_avariado`,`doca_2`) 
+    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v18.'","'.$v20.'");';
 }
 
 $resultado = $conexao -> query($SQL);
 
 $conexao->close();
-header('Location: t_qualitativo_a.php', true, 301);
+header('Location: t_qualitativo_e_a.php', true, 301);
 exit();
 ?>
