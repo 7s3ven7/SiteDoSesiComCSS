@@ -28,7 +28,7 @@ if ($conexao->connect_errno) {
     $resultado3 = $conexao->query($SQL3);
     header('location: index.php');
   }else{
-    header('location: t_p.php');
+    header('location: t_reset_p.php');
   }
 }
 ?>

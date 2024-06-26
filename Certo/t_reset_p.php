@@ -60,14 +60,14 @@
         <form action="t_quantitativo_e_p.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="t_nota_r_pr.php">
+        <form action="t_nota_e_pr.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
     <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="../../PHP/reset.php">
+        <form method="POST" action="c_reset_p.php">
             <div class="caixa-texto-secreto"></div>
             <div class="texto-secreto">Tens certeza de tua ação?</div>
             <div class="texto-secreto">Você irá extinguir teus dados!</div>
