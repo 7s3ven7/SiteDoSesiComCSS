@@ -12,7 +12,7 @@
     <div class="caixa">
         <div class="texto">Bem Vindo!</div>
         <div class="caixa-mini">
-            <form method="POST" action="c_logar_conta.php">
+            <form method="POST" action="index.php">
                 <div class="texto-mini">Nome da conta</div>
                 <input class="caixa-texto" type="text" placeholder="Nome" name="nome_conta">
                 <div class="texto-mini">Sua senha</div>
@@ -22,17 +22,15 @@
         <hr>
         </form>
         <div class="texto">Novo aqui?</div>
-        <form action="t_conta.php">
+        <form action="t_cadastro_conta.php">
             <input class="botao" value="Cadastrar-se" type="submit">
-        </form>
-        <form method="POST" action="t_senhanova_p.php">
-            <input type="submit" value="trocar senha">
         </form>
     </div>
 </body>
 
 </html>
 <!--Logar conta de usuario--><?php
+                if(isset($_POST['nome_conta']) and isset($_POST['senha_conta'])){
 session_start();
 
 $hostname = "127.0.0.1";
@@ -83,5 +81,5 @@ $SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . 
                 $i -= 1;
                 $senha1 = $senha1.$senha;
                 }
-                echo $senha1;}
+                echo $senha1;}}
                 ?>
