@@ -99,7 +99,7 @@ if(isset($_POST['vezes'])){
         $v3 = 'gmail';
         $v4 = 'cep';
         $v5 = 'telefone';
-        echo '<form method="POST" action="c_cliente_p.php?$l='.$l.'">';
+        echo '<form method="POST" action="t_cliente_p.php?$l='.$l.'">';
         echo '<br>';
         for($i;$i>0;$i){
             $i -= 1;
@@ -136,7 +136,7 @@ if(isset($_POST['vezes'])){
     }
 }
                 echo'</form>';
-if(isset($_POST['vezes'])){
+if(isset($_POST['vezesas'])){
     
 }
             ?>
