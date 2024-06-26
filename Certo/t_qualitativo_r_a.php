@@ -13,7 +13,7 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $n_pedido = $_POST['n_pedido'];
+    $n_pedido = 1;
     $SQL = 'SELECT * FROM `quantitativo_r_p` 
     WHERE `id_quanti_r` = '.$n_pedido.';';
     //Inserir no DB

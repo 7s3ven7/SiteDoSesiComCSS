@@ -8,8 +8,8 @@ $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);
 
-if (empty($_SESSION['nome'])){
-    header('Location: index.php');
+if (empty($_SESSION['nome_u'])){
+    header('Location: t_a.php');
     exit();
 } else {
 echo '<!DOCTYPE html>
@@ -35,10 +35,10 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="t_a.php">
+        <form action="t_nota_r_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
@@ -59,36 +59,28 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_picking_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="t_a.php">
+        <form action="t_nota_e_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_qualitativo_e_a.php">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_quantitativo_e_a.php">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
-
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_relatorios_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
