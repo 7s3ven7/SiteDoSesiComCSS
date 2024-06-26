@@ -18,7 +18,7 @@ if ($conexao->connect_errno) {
     $codg = $conexao->real_escape_string($_POST["codigo_sala_criado"]);
     $codp = $conexao->real_escape_string($_POST["codigo_interno_criado"]);
 
-    if($senha == $codi){
+    if($senha == $codp){
         $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_grupo`,`cargo_u`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codg . '","' . $cargo . '","' . $codi . '");';
         $resultado = $conexao->query($SQL);
         $conexao->close();
