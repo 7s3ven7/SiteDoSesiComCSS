@@ -96,7 +96,7 @@
             <input class="enviar-numero-produto" type="submit">
         </form>
         <!--Aparecer na Tela--><?php
-            if(isset($_POST['vezes'])){
+            if(isset($_POST['vezes']))
                     $i = $_POST['vezes'];
                     if($i <= 0){
                         echo '
@@ -146,7 +146,6 @@
                 echo '<input class="botao" type="submit">';
                 echo'<div class="details-caixa-2"></div>';}
 
-        <?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
