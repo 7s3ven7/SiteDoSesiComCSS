@@ -52,7 +52,7 @@
         <form action="t_quantitativo_r_p.php">
             <input class="details-small" type="submit" value="Quantitativo"></div>
         </form>
-        <form action="t_nota_r_p.php">
+        <form action="t_nota_r_pr.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
@@ -61,7 +61,7 @@
         <form action="t_quantitativo_e_p.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="t_nota_r_p.php">
+        <form action="t_nota_e_pr.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
