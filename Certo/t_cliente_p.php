@@ -76,44 +76,53 @@
             <input class="enviar-numero-produto" type="submit">
         </form>
         <?php
-            if(isset($_POST['vezes'])){
-                    $i = $_POST['vezes'];
-                    if($i <= 0){
-                        echo '
-                        <br><br>
-                        <div class="texto-produto">Digite um número superior!</div>';
-                    }else{
-                    $l = $i;
-                    $numero = 1;
-                    $v1 = 'cnpj';
-                    $v2 = 'nome_cliente';
-                    $v3 = 'gmail';
-                    $v4 = 'cep';
-                    $v5 = 'telefone';
-                echo'<form method="POST" action="c_cliente_p.php?$l='.$l.'">';
-                echo'<br>';
-                    for($i;$i>0;$i){
-                    $i -= 1;
-                    echo'
-            <div class="numero-produto">'.$numero.'° Cliente</div>
-            <br>
-            <table class="tabela-mini">
-                <tr>
-                    <td class="texto-tabela-mini">CNPJ/CPF: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00 ou 000.000.000-00"></td>
-                    <td class="texto-tabela-mini">Nome do cliente: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Nome"></td>
-                <tr>
-                    <td class="texto-tabela-mini">Gmail: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
-                    <td class="texto-tabela-mini">CEP: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="0000-000"></td>
-                </tr>
-                <tr>
-                    <td class="texto-tabela-mini">Telefone: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
-                </tr>
-            </table>';
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+session_start();
+
+$conexao = new mysqli($hostname, $name, $password, $DB);
+
+if(isset($_POST['vezes'])){
+    $i = $_POST['vezes'];
+    if($i <= 0){
+        echo '
+            <br><br>
+            <div class="texto-produto">Digite um número superior!</div>';
+    }else{
+        $l = $i;
+        $numero = 1;
+        $v1 = 'cnpj';
+        $v2 = 'nome_cliente';
+        $v3 = 'gmail';
+        $v4 = 'cep';
+        $v5 = 'telefone';
+        echo '<form method="POST" action="c_cliente_p.php?$l='.$l.'">';
+        echo '<br>';
+        for($i;$i>0;$i){
+            $i -= 1;
+            echo'
+                <div class="numero-produto">'.$numero.'° Cliente</div>
+                <br>
+                <table class="tabela-mini">
+                    <tr>
+                        <td class="texto-tabela-mini">CNPJ/CPF: </td>
+                        <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00 ou 000.000.000-00"></td>
+                        <td class="texto-tabela-mini">Nome do cliente: </td>
+                        <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Nome"></td>
+                    <tr>
+                        <td class="texto-tabela-mini">Gmail: </td>
+                        <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                        <td class="texto-tabela-mini">CEP: </td>
+                        <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="0000-000"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-tabela-mini">Telefone: </td>
+                        <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
+                    </tr>
+                </table>';
             $numero += 1;
             $v1 = $v1.'p';
             $v2 = $v2.'p';
@@ -121,10 +130,15 @@
             $v4 = $v4.'p';
             $v5 = $v5.'p';
                     }              
-                echo '<table class="table">';
-                echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';}}
+            echo '<table class="table">';
+            echo '<input class="botao" type="submit">';
+            echo'<div class="details-caixa-2"></div>';
+    }
+}
                 echo'</form>';
+if(isset($_POST['vezes'])){
+    
+}
             ?>
     </div>
 
