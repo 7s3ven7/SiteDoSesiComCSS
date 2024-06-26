@@ -60,7 +60,7 @@
         <form action="t_quantitativo_e_p.php">
             <input class="details-small" type="submit" value="Quantitativo">
         </form>
-        <form action="t_nota_r_pr.php">
+        <form action="t_nota_e_pr.php">
             <input class="details-small" type="submit" value="Nota Fiscal">
         </form>
     </details>
