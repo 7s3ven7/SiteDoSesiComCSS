@@ -21,6 +21,7 @@
 
 </html>
 <?php
+$nome = $_GET['nome'];
 if(isset($_GET['nome_atividade'])){
 $hostname = "127.0.0.1";
 $name = "root";
@@ -31,18 +32,17 @@ if ($conexao->connect_errno) {
 	echo "Failes conection :" . $conexao->connect_error;
 	exit();
 } else {
-	$nome = $conexao->real_escape_string($_POST["nome_conta"]);
-	$senha = $conexao->real_escape_string($_POST["senha_conta"]);
 
-$SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . $nome . "' AND `senha` = '" . $senha . "'";
+$SQL = "SELECT `tipo_u` FROM `usuario` WHERE `nome_u` = '" . $nome . "'";
 
 	$result = $conexao->query($SQL);
 	if ($result->num_rows != 0) {
 		$row = $result->fetch_array();
-		$_SESSION['tipo_u'] = $row[0];
-		$_SESSION['nome_u'] = $row[1];
-		$_SESSION['senha'] = $row[2];
-
-
+		$tipo = $row[0];
+        if($tipo == 'Aluno'){
+            header('location:t_a.php?nome='.$nome.'');
+        }elseif($tipo == 'Professor'){
+            header('location:t_p.php?nome='.$nome.'');
+        }
     }}}
 ?>
