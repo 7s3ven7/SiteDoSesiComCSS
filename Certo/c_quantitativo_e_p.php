@@ -16,22 +16,22 @@ if ($conexao->connect_errno) {
     $v4 = $_POST['4']; //CNPJ_empre
     $v5 = $_POST['5']; //modelo_conta
     $v6 = $_POST['6']; //navio
-    $v7 = $_POST['7']; //nome_dest
+    $v7 = $_POST['7']; //nome_cliente
     $v8 = $_POST['8']; //tipo_container
     $v9 = $_POST['9']; //lacre
     $v10 = $_POST['10']; //lacre_SIF
     $v11 = $_POST['11']; //temperatura
     $v12 = $_POST['12']; //IMO
     $v13 = $_POST['13']; //n_ONU
-    $v14 = $_POST['14']; //nome_prod
+    $v14 = $_POST['14']; //nome_produto
     $v15 = $_POST['15']; //und
     $v16 = $_POST['16']; //quant_produto
     $v17 = $_POST['17']; //quant_und
     $v18 = $_POST['18']; //lote
-    $v19 = $_POST['19']; //CNPJ_dest
-    $v20 = $_POST['20']; //código nota
+    $v19 = $_POST['19']; //CNPJ_cliente
+    $v20 = $_POST['20']; //código_nota
 
-    $SQL = 'INSERT INTO `quantitativo_r_p` (`cod_forne`,`nome_e`,`CNPJ_e`,`modelo_contai`,`navio`,`nome_forne`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`nome_p`,`und`,`quant_prod`,`quant_und`,`lote`,`CNPJ_f`) 
+    $SQL = 'INSERT INTO `quantitativo_r_p` (`cod_forne`,`nome_e`,`CNPJ_e`,`modelo_contai`,`navio`,`nome_c`,`tipo_container`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`nome_p`,`und`,`quant_prod`,`quant_und`,`lote`,`CNPJ_c`) 
     VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.','.$v14.','.$v15.','.$v16.','.$v17.','.$v18.','.$v19.','.$v20.');';
     //Inserir no DB
     $resultado = $conexao->query($SQL);
