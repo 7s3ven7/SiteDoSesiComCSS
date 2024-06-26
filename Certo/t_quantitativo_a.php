@@ -77,7 +77,7 @@
 
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form action="quantitativo.php" method="POST">
+        <form action="c_quantitativo_a.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do fornecedor</div>
                 <input class="quantitativo-input-pedido" type="number" value="0" name="n_pedido">
@@ -96,7 +96,7 @@
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
             echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-            header("Location: ../../HTML/Aluno/recebimento.html");
+            header("Location: t_a.php");
             exit();
         } else {
             $v1 = $_POST['n_pedido'];

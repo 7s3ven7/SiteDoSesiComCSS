@@ -16,7 +16,6 @@ if ($conexao->connect_errno) {
     $n_pedido = 1;
     $SQL = 'SELECT * FROM `quantitativo_r_p` 
     WHERE `id_quanti_r` = '.$n_pedido.';';
-    //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
     if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
 	{
