@@ -14,8 +14,8 @@ if ($conexao->connect_errno) {
     exit();
 } else {
     $n_pedido = $_POST['n_pedido'];
-    $SQL = 'SELECT * FROM `quantitativo_recebimento_p` 
-    WHERE `n_nota` = '.$n_pedido.';';
+    $SQL = 'SELECT * FROM `quantitativo_r_p` 
+    WHERE `id_quanti_r` = '.$n_pedido.';';
     //Inserir no DB
     $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
     if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
@@ -25,8 +25,6 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: ../../HTML/Aluno/qualitativo.html");
-		exit();
 	}
 }
 echo '<!DOCTYPE html>
@@ -108,7 +106,7 @@ echo '<!DOCTYPE html>
 
     <div class="menu">Menu</div>
 <div class="caixa">
-        <form method="POST" action="../../PHP/Aluno/action_qualitativo.php">
+        <form method="POST" action="c_qualitativo_r_a.php">
             <table class="tabela-2">
                 <tr>
                     <td><div class="texto2">Código Interno:</td>
