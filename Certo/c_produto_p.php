@@ -37,9 +37,9 @@ if ($conexao->connect_errno) {
         $v10 = $_POST[$j];
         $v11 = $_POST[$k];
         $v12 = $_POST[$l];
-        $vtotal = $v11 * ($v9*$v10); cod inter id atividade
+        $vtotal = $v11 * ($v9*$v10); //cod inter id atividade
         for($zz = 1;$zz>0;$zz){
-        $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_prod`/*,`marca_p`*/,`id_atividade'.esse_aqui_tem_problema.'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'.esse_aqui_tem_problema.'`) 
+        $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_p`,`marca_p`,`id_atividade'./*.esse_aqui_tem_problema.*/'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'./*.esse_aqui_tem_problema.*/'`) 
     VALUES ("' . $v1 . '","' . $v2 . '","' . $v3 . '","' . $v4 . '","' . $v5 . '","'.$v6.'","' . $v7 . '","' . $v8 . '","' . $v9 . '","' . $v10 . '","' . $v11 . '","'.$v12.'","'.$vtotal.'")';
     $resultado = $conexao->query($SQL);
     $zz -= 1;
