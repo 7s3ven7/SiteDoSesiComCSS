@@ -1,15 +1,4 @@
 <?php
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-
-if ($conexao->connect_errno) {
-    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    exit();
-} else {
     $a = $_POST['cnpj']; //CNPJ
     $b = $_POST['nome_fornecedor']; //Nome do fornecedor
     $c = $_POST['gmail']; //Email
@@ -69,10 +58,10 @@ $v5 = $v5.'p';
 
     $SQL = 'INSERT INTO `clientes_p` (`CNPJ_c`,`nome_c`,`gmail_c`,`CEP_c`,`fone_c`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
-        }}
+        
     $resultado = $conexao->query($SQL);
 
     $conexao->close();
     header("Location: t_cliente_p.php"); //Envia para a tela de Login ao Cadastrar
-}
+
 ?>
