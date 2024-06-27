@@ -86,16 +86,19 @@
     <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <div class="texto">Crie sua Turma</div>
+        <div class="texto-produto">Crie sua Turma</div>
         <div class="caixa-mini">
             <form method="POST" action="t_turma.php">
-                <div class="texto-mini">Nome do grupo</div>
-                <input class="caixa-texto" type="text" placeholder="Nome" name="nome_grupo">
-                <div class="texto-mini">Quantidade de alunos</div>
-                <input class="caixa-texto" type="text" placeholder="Alunos" name="qnt_aluno">
+                <table class="tabela-mini">
+                    <tr>
+                        <td class="texto-tabela-mini">Nome do grupo: </td>
+                        <td><input class="botao-tabela" type="text" placeholder="Nome" name="nome_grupo"></td>
+                        <td class="texto-tabela-mini">Quantidade de alunos: </td>
+                        <td><input class="botao-tabela" type="text" placeholder="Alunos" name="qnt_aluno"></td>
+                    <tr>
+                </table>
                 <br>
-                <br>
-                <input type="submit">
+                <input class="botao" type="submit" value="Cadastrar turma">
             </form>
             <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno'])){
                     $hostname = "127.0.0.1";
@@ -108,14 +111,15 @@
                         exit();
                     } else
                     {
-                        $nome = $conexao->real_escape_string($_POST["nome_grupo"]);
+                        $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
                         $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
-                        $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome."'";
+                        $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
                         $resultado_1 = $conexao->query($sql);
                         if($resultado_1->num_rows != 0){
-                            echo '<div class="texto-mini">Este nome já esta em uso, tente outro</div>';
+                            echo '<div class="numero-produto"><div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
+                            echo '<div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div>';
                         }else{
-                        $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome . '","' . $qnt . '");';
+                        $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
                         $resultado = $conexao->query($SQL);
                         $conexao->close();
                         //header("Location: t_atividade.php");
