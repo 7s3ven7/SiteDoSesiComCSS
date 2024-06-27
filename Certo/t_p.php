@@ -15,6 +15,16 @@
 <body>
     <div class="fundo"></div>
     <details class="details-all">
+        <summary class="details-big">Criações</summary>
+        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Turmas"></div>
+        </form>
+        <form method="POST"
+            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Atividade"></div>
+        </form>
+    </details>
+    <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">

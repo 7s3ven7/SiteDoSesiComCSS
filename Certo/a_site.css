@@ -641,45 +641,13 @@ hr {
 }
 
 .botao {
-    font-size: x-large;
     width: 200px;
-    padding: 20px;
-    border: 1px black solid;
-    border-radius: 20px;
-    background-color: green;
-    color: whitesmoke;
-    text-align: center;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.25s;
-}
-
-.botao:hover {
-    background-color: white;
-    color: green;
-    padding: 20.1px;
-}
-
-.botao-grande {
-    left: 10px;
-    margin-left: 2.5px;
-    top: 120px;
-    font-size: 25px;
-    width: 202px;
+    height: 20px;
     padding: 15px;
-    border: 1px black solid;
-    border-radius: 10px;
-    background-color: green;
-    color: whitesmoke;
-    position: relative;
-    transition: 0.25s;
-    margin-top: 50px;
-}
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
 
-.botao-grande:hover {
-    background-color: white;
-    color: green;
 }
 
 .tabela {
