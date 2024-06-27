@@ -33,10 +33,10 @@ if ($conexao->connect_errno) {
 	echo "Failes conection :" . $conexao->connect_error;
 	exit();
 }else{
-    $select = 'SELECT `turma` FROM `atividade`;';
+    $select = 'SELECT `turma` FROM `turma`;';
     $select_completo = $conexao->query($select);
     if($select_completo->num_rows != 0){
-        echo '<select id="grupos">';
+        echo '<select id="turmas">';
         $n = 1;
     while($row = mysqli_fetch_array($select_completo)){
         $grupo = $row['0'];
