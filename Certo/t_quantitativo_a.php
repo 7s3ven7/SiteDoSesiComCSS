@@ -91,9 +91,9 @@
             exit();
         } else {
             $v1 = $_POST['cod_forne'];
-			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$v1.";";
+			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = '".$v1."';";
 			$resultado = $conexao->query($sql);
-
+        if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
@@ -153,31 +153,7 @@
                 ';
             }
             }
-        }}
-        ?>
-        <?php
-        session_start()
-
-if ($conexao->connect_errno) {
-    echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    header("Location: t_a.php");
-    exit();
-} else {
-    $n_pedido=$_POST['cod_forne'];
-    $SQL = 'SELECT * FROM `produto_p` 
-    WHERE `n_pedido` = '.$n_pedido.';';
-    //Inserir no DB
-    $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
-    if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
-	{
-		for($i=1;$i<=$resultado->num_rows;$i++){
-			$row = $resultado -> fetch_array();
-		}
-	} else {
-		$conexao -> close();
-		exit();
-	}
-}
+        }}}
 ?>
     </div>
     </div>
