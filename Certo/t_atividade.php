@@ -19,11 +19,8 @@ $nome = $_GET['nome'];?>
                 <input class="caixa-texto" type="text" placeholder="nome" name="nome_atividade">
                 <div class="texto-atividade">Selecione para qual grupo será a atividade!</div>
                 <input class="botao" type="submit" value="Logar">
-        </div>
-</body>
 
-</html>
-<?php
+                <?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root"; 
@@ -52,3 +49,7 @@ if ($conexao->connect_errno) {
             header('location:t_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade.'&grupo_atividade='.$grupo_atividade.'');
     }}
 ?>
+        </div>
+</body>
+
+</html>
