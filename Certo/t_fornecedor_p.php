@@ -99,7 +99,7 @@
             <input class="enviar-numero-produto" type="submit">
         </form>
         <!--Aparecer na Tela--><?php
-            if(isset($_POST['vezes']))
+            if(isset($_POST['vezes'])){
                     $i = $_POST['vezes'];
                     if($i <= 0){
                         echo '
@@ -139,15 +139,11 @@
                 </tr>
             </table>';
             $numero += 1;
-            $v1 = $v1.'p';
-            $v2 = $v2.'p';
-            $v3 = $v3.'p';
-            $v4 = $v4.'p';
-            $v5 = $v5.'p';
                     }              
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';
                 echo'<div class="details-caixa-2"></div>';}
+            }
 ?>
         <?php
 $hostname = "127.0.0.1";
@@ -167,23 +163,20 @@ if ($conexao->connect_errno) {
     $v3 = $_POST['gmail']; //Email
     $v4 = $_POST['cep']; //CEP
     $v5 = $_POST['telefone']; //Telefone
+    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
     $z = $_GET['$l'];
     
     while($z>0){
-        $v1 = $_POST[$a];
-        $v2 = $_POST[$b];
-        $v3 = $_POST[$c];
-        $v4 = $_POST[$d];
-        $v5 = $_POST[$e];
+        
         $vtotal = $v11 * ($v9*$v10);
         for($zz = 1;$zz>0;$zz){
-            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
-            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$id_atividade.');';
+            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`) 
+            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.');';
             $resultado = $conexao->query($SQL);
             $zz -= 1;
             }
         $zz = 1;
-        $a = $a.'p';
+/*        $a = $a.'p';
         $b = $b.'p';
         $c = $c.'p';
         $d = $d.'p';
@@ -195,13 +188,13 @@ if ($conexao->connect_errno) {
         $j = $j.'p';
         $k = $k.'p';
         $l = $l.'p';
-        $z -= 1;
+        $z -= 1;*/
     }
-    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-    $id_atividade = 1;
+
+    /*$id_atividade = 1;
     $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
-    $resultado = $conexao->query($SQL);
+    $resultado = $conexao->query($SQL);*/
     $conexao->close();
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
 }
