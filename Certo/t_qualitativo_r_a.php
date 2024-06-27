@@ -210,11 +210,6 @@ echo '<!DOCTYPE html>
 ?>
 <?php
 
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 if ($conexao->connect_errno){
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
