@@ -157,6 +157,7 @@ $DB = "dados";
 
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
+if(isset($_POST['cadastro'])){
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
@@ -203,6 +204,7 @@ if ($conexao->connect_errno) {
     $resultado = $conexao->query($SQL);
     $conexao->close();
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
+}
 }?>
     </div>
     <div id="tipo">Conta: <?php echo $nome;?></div>
