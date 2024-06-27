@@ -601,7 +601,8 @@ hr {
 
 .details-big:hover,
 .details-small:hover,
-.details-small-more:hover {
+.details-small-more:hover,
+.botao-qualitat:hover{
     background-color: whitesmoke;
     color: green;
 }

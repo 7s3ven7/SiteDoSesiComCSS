@@ -8,22 +8,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
-} else {
-    $n_pedido = 1;
-    $SQL = 'SELECT * FROM `quantitativo_r_p` 
-    WHERE `id_quanti_r` = '.$n_pedido.';';
-    $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
-    if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
-	{
-		for($i=1;$i<=$resultado->num_rows;$i++){
-			$row = $resultado -> fetch_array();
-		}
-	} else {
-		$conexao -> close();
-		header("Location: t_a.php");
-		exit();
-	}
-}
+} else{
 echo '<!DOCTYPE html>
 
 <head>
@@ -86,6 +71,28 @@ echo '<!DOCTYPE html>
     </details>
     <div class="menu">Menu</div>
 <div class="caixa">
+        <form action="t_qualitativo_r_a.php" method="POST">
+            <div class="">
+                <div class="">Digite o Código do fornecedor</div>
+                <input class="" type="number" name="cod_forne">
+                <input class="" type="submit">
+                <div class="">
+        </form>';
+        if(isset($_POST['cod_forne'])){            
+            $v1 = $_POST['cod_forne'];
+			$sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+			$resultado = $conexao->query($sql);
+            if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
+            {
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                }
+            } else {
+                $conexao -> close();
+                header("Location: t_qualitativo_r_a.php");
+                exit();
+            }
+echo '
         <form method="POST" action="t_qualitativo_r_a.php">
             <table class="tabela-2">
                 <tr>
@@ -206,10 +213,11 @@ echo '<!DOCTYPE html>
         </form>
     </div>
 </body>
-</html>';
+</html>';}}
 ?>
 <?php
 
+if(isset($_POST['cod_forne'])){
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -341,7 +349,7 @@ if(isset($_POST['20'])){
     $v20 = 'F';
 }
 
-$SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
+$SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
     VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'");';
 }
 
@@ -349,4 +357,5 @@ $resultado = $conexao -> query($SQL);
 
 $conexao->close();
 exit();
+}
 ?>
