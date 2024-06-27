@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-
-<head></head>
-
-<body><?php
+<?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -24,7 +20,7 @@ if ($conexao->connect_errno) {
 		}
 	} else {
 		$conexao -> close();
-		header("Location: c_qualitativo_r_a.php");
+		header("Location: t_a.php");
 		exit();
 	}
 }
@@ -41,20 +37,11 @@ echo '<!DOCTYPE html>
     <div id="tipo">Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="Inicio">
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair">
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="t_a.php">
+        <form action="t_nota_r_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
@@ -75,63 +62,55 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_picking_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="t_a.php">
+        <form action="t_nota_e_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_qualitativo_e_a.php">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_quantitativo_e_a.php">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
-
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_relatorios_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="menu">Menu</div>
 <div class="caixa">
         <form method="POST" action="c_qualitativo_r_a.php">
             <table class="tabela-2">
                 <tr>
-                    <td><div class="texto2">Código Interno:</td>
-                    <td><div class="espaco">'.$row['cod_inter'].'</div></td>
                     <td><div class="texto2">Código do fornecedor:</td>
-                    <td><div class="espaco">'.$row['cod_forne'].'</div></td>
+                    <td>'.$row['cod_forne'].'</div></td>
+                    <td><div class="texto2">Lotes: </div></td>
+                    <td>'.$row['lote'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Nome da empresa: </div></td>
-                    <td>'.$row['nome_empre'].'</td>
+                    <td>'.$row['nome_e'].'</td>
                     <td><div class="texto2">CNPJ da empresa: </div></td>
-                    <td>'.$row['CNPJ_empre'].'</td>
+                    <td>'.$row['CNPJ_e'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Modelo do container: </div></td>
-                    <td>'.$row['modelo_conta'].'</td>
+                    <td>'.$row['modelo_contai'].'</td>
                     <td><div class="texto2">Navio: </div></td>
                     <td>'.$row['navio'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Destinatário: </div></td>
-                    <td>'.$row['CNPJ_dest'].'</td>
+                    <td>'.$row['CNPJ_f'].'</td>
                     <td><div class="texto2">Tipo do container: </div></td>
-                    <td>'.$row['tipo_container'].'</td>
+                    <td>'.$row['tipo_contai'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Lacre: </div></td>
@@ -149,26 +128,18 @@ echo '<!DOCTYPE html>
                     <td><div class="texto2">Número ONU: </div></td>
                     <td>'.$row['n_ONU'].'</td>
                     <td><div class="texto2">Nome do produto: </div></td>
-                    <td>'.$row['nome_prod'].'</td>
+                    <td>'.$row['nome_p'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Unidades: </td>
                     <td>'.$row['und'].'</td>
                     <td><div class="texto2">Quantidade de produto: </div></td>
-                    <td>'.$row['quant_produto'].'</td>
+                    <td>'.$row['quant_prod'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Quantidade do unidade: </div></td>
                     <td>'.$row['quant_und'].'</td>
-                    <td><div class="texto2">Lotes: </div></td>
-                    <td>'.$row['lote'].'</td>
-                </tr>
-                <tr>
-                    <td><div class="texto2">CNPJ do destinatário: </div></td>
-                    <td>'.$row['CNPJ_dest'].'</td>
-                    <td><div class="texto2">Número do pedido: </div></td>
-                    <td>'.$row['n_nota'].'</td>
-                </tr>          
+                </tr>         
                 <tr>
                     <td>Container Bem Desgastado: </td>
                     <td><input class="check" type="checkbox" name="1"</td>
@@ -375,6 +346,5 @@ $SQL = 'INSERT INTO `qualitativo_recebimento_a` (`container_desgas`,`avari_late_
 $resultado = $conexao -> query($SQL);
 
 $conexao->close();
-header('Location: t_qualitativo_r_a.php', true, 301);
 exit();
 ?>

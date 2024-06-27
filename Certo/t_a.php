@@ -11,15 +11,6 @@
     <div id="tipo">Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="Inicio">
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair">
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Recebimento</summary>
         <form action="t_nota_r_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
