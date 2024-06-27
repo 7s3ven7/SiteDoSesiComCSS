@@ -17,6 +17,19 @@
     text-align: center;
 }
 
+.caixa-cadastro {
+    width: 500px;
+    height: 450px;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
 .caixa-mini {
     width: 400px;
     height: 150px;
@@ -30,7 +43,7 @@
 
 .caixa-mini-cadastro {
     width: 400px;
-    height: 350px;
+    height: 200px;
     padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
