@@ -100,7 +100,7 @@
                 <br>
                 <input class="botao" type="submit" value="Cadastrar turma">
             </form>
-            <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno'])){
+            <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
                     $hostname = "127.0.0.1";
                     $name = "root";
                     $password = "root";
@@ -116,8 +116,7 @@
                         $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
                         $resultado_1 = $conexao->query($sql);
                         if($resultado_1->num_rows != 0){
-                            echo '<div class="numero-produto"><div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
-                            echo '<div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div>';
+                            echo '<div class="msg-turma"><div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
                         }else{
                         $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
                         $resultado = $conexao->query($SQL);
