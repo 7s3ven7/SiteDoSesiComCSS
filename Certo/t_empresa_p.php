@@ -15,19 +15,6 @@
 <body>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form method="POST" action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
-        </form>
-        <form method="POST"
-            action="t_reset_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
@@ -109,11 +96,10 @@
                     $numero = 1;
                     $v1 = 'cnpj';
                     $v2 = 'nome_empresa';
-                    $v3 = 'nome_gerente';
-                    $v4 = 'gmail';
-                    $v5 = 'cep';
-                    $v6 = 'telefone';
-                echo'<form method="POST" action="cadastro_empresa.php?$l='.$l.'">';
+                    $v3 = 'gmail';
+                    $v4 = 'cep';
+                    $v5 = 'telefone';
+                echo'<form method="POST" action="t_empresa_p.php?$l='.$l.'">';
                 echo'<br>';
                     for($i;$i>0;$i){
                     $i -= 1;
@@ -126,17 +112,15 @@
                     <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
                     <td class="texto-tabela-mini">Nome da empresa: </td>
                     <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="Nome"></td>
-                <tr>
-                    <td class="texto-tabela-mini">Nome do gerente: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="Nome"></td>                
+                <tr>           
                     <td class="texto-tabela-mini">Gmail: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="exemplo@gmail.com"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
                 </tr>
                 <tr>
                     <td class="texto-tabela-mini">CEP: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="0000-000"></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="0000-000"></td>
                     <td class="texto-tabela-mini">Telefone: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="(00) 00000-0000 "></td>
+                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
                 </tr>
             </table>';
             $numero += 1;
@@ -145,6 +129,7 @@
             $v3 = $v3.'p';
             $v4 = $v4.'p';
             $v5 = $v5.'p';
+<<<<<<< HEAD
                     }              
                 echo '<table class="table">';
                 echo '<input class="botao" type="submit">';
@@ -152,6 +137,11 @@
                 echo'</form>';
             ?>
         <?php
+=======
+                    }   
+    if(isset($_POST['cnpj' and 'nome_empresa' and 'nome_gerente' and 'gmail' and 'cep' and 'telefone'])){
+    echo 'oi'; 
+>>>>>>> 8cec7033dbdb47354f5eb152201f3e9446b16671
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -163,11 +153,11 @@ if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
 } else {
-    $v1 = $_POST['1']; //CNPJ
-    $v2 = $_POST['2']; //Nome do gerente
-    $v3 = $_POST['3']; //Email
-    $v4 = $_POST['4']; //Telefone
-    $v5 = $_POST['5']; //CEP
+    $v1 = $_POST['cnpj']; //CNPJ
+    $v2 = $_POST['nome_empresa']; //Nome do gerente
+    $v3 = $_POST['gmail']; //Telefone
+    $v4 = $_POST['cep']; //CEP
+    $v5 = $_POST['telefone'];
 
     $SQL = 'INSERT INTO `nossa_empresa_p` (`CNPJ_e`,`gmail_e`,`fone_e`,`CEP_e`,`nome_e`) 
     VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ');';
@@ -177,7 +167,11 @@ if ($conexao->connect_errno) {
     $conexao->close();
     header("Location: t_empresa_p.php"); //Envia para a tela de Login ao Cadastrar
 }
-?>
+                echo '<table class="table">';}
+                echo '<input class="botao" type="submit">';}}
+                echo'<div class="details-caixa-2"></div>';
+                echo'</form>';
+            ?>
 
     </div>
     <div id="tipo">Professor - <?php echo $nome;?></div>

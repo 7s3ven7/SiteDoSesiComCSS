@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-
-<head></head>
-
-<body><?php
+<?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -12,22 +8,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 if ($conexao->connect_errno) {
     echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
     exit();
-} else {
-    $n_pedido = 1;
-    $SQL = 'SELECT * FROM `quantitativo_r_p` 
-    WHERE `id_quanti_r` = '.$n_pedido.';';
-    $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
-    if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
-	{
-		for($i=1;$i<=$resultado->num_rows;$i++){
-			$row = $resultado -> fetch_array();
-		}
-	} else {
-		$conexao -> close();
-		header("Location: c_qualitativo_r_a.php");
-		exit();
-	}
-}
+} else{
 echo '<!DOCTYPE html>
 
 <head>
@@ -41,20 +22,11 @@ echo '<!DOCTYPE html>
     <div id="tipo">Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="Inicio">
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair">
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Recebimento</summary>
-        <form action="t_a.php">
+        <form action="t_nota_r_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="details-small" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
@@ -75,63 +47,77 @@ echo '<!DOCTYPE html>
     </details>
     <details class="details-all">
         <summary class="details-big">Picking</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_picking_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
     <details class="details-all">
         <summary class="details-big">Expedição</summary>
-        <form action="t_a.php">
+        <form action="t_nota_e_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_qualitativo_e_a.php">
             <input class="details-small" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_quantitativo_e_a.php">
             <input class="details-small" type="submit" value="Quantitativo (WIP)">
         </form>
-
     </details>
     <details class="details-all">
         <summary class="details-big">Relatórios</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_relatorios_a.php">
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="menu">Menu</div>
 <div class="caixa">
-        <form method="POST" action="c_qualitativo_r_a.php">
+        <form action="t_qualitativo_r_a.php" method="POST">
+            <div class="">
+                <div class="">Digite o Código do fornecedor</div>
+                <input class="" type="number" name="cod_forne">
+                <input class="" type="submit">
+                <div class="">
+        </form>';
+        if(isset($_POST['cod_forne'])){            
+            $v1 = $_POST['cod_forne'];
+			$sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+			$resultado = $conexao->query($sql);
+            if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
+            {
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                }
+            } else {
+                $conexao -> close();
+                header("Location: t_qualitativo_r_a.php");
+                exit();
+            }
+echo '
+        <form method="POST" action="t_qualitativo_r_a.php">
             <table class="tabela-2">
                 <tr>
-                    <td><div class="texto2">Código Interno:</td>
-                    <td><div class="espaco">'.$row['cod_inter'].'</div></td>
                     <td><div class="texto2">Código do fornecedor:</td>
-                    <td><div class="espaco">'.$row['cod_forne'].'</div></td>
+                    <td>'.$row['cod_forne'].'</div></td>
+                    <td><div class="texto2">Lotes: </div></td>
+                    <td>'.$row['lote'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Nome da empresa: </div></td>
-                    <td>'.$row['nome_empre'].'</td>
+                    <td>'.$row['nome_e'].'</td>
                     <td><div class="texto2">CNPJ da empresa: </div></td>
-                    <td>'.$row['CNPJ_empre'].'</td>
+                    <td>'.$row['CNPJ_e'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Modelo do container: </div></td>
-                    <td>'.$row['modelo_conta'].'</td>
+                    <td>'.$row['modelo_contai'].'</td>
                     <td><div class="texto2">Navio: </div></td>
                     <td>'.$row['navio'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Destinatário: </div></td>
-                    <td>'.$row['CNPJ_dest'].'</td>
+                    <td>'.$row['CNPJ_f'].'</td>
                     <td><div class="texto2">Tipo do container: </div></td>
-                    <td>'.$row['tipo_container'].'</td>
+                    <td>'.$row['tipo_contai'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Lacre: </div></td>
@@ -149,26 +135,18 @@ echo '<!DOCTYPE html>
                     <td><div class="texto2">Número ONU: </div></td>
                     <td>'.$row['n_ONU'].'</td>
                     <td><div class="texto2">Nome do produto: </div></td>
-                    <td>'.$row['nome_prod'].'</td>
+                    <td>'.$row['nome_p'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Unidades: </td>
                     <td>'.$row['und'].'</td>
                     <td><div class="texto2">Quantidade de produto: </div></td>
-                    <td>'.$row['quant_produto'].'</td>
+                    <td>'.$row['quant_prod'].'</td>
                 </tr>
                 <tr>
                     <td><div class="texto2">Quantidade do unidade: </div></td>
                     <td>'.$row['quant_und'].'</td>
-                    <td><div class="texto2">Lotes: </div></td>
-                    <td>'.$row['lote'].'</td>
-                </tr>
-                <tr>
-                    <td><div class="texto2">CNPJ do destinatário: </div></td>
-                    <td>'.$row['CNPJ_dest'].'</td>
-                    <td><div class="texto2">Número do pedido: </div></td>
-                    <td>'.$row['n_nota'].'</td>
-                </tr>          
+                </tr>         
                 <tr>
                     <td>Container Bem Desgastado: </td>
                     <td><input class="check" type="checkbox" name="1"</td>
@@ -226,6 +204,8 @@ echo '<!DOCTYPE html>
                 <tr>
                     <td>Item Lacrado: </td>
                     <td><input class="check" type="checkbox" name="19"</td>
+                    <td>Doca 1: </td>
+                    <td><input class="check" type="checkbox" name="20"</td>
                 </tr>
 
             </table>
@@ -233,10 +213,11 @@ echo '<!DOCTYPE html>
         </form>
     </div>
 </body>
-</html>';
+</html>';}}
 ?>
 <?php
 
+if(isset($_POST['cod_forne'])){
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -368,13 +349,13 @@ if(isset($_POST['20'])){
     $v20 = 'F';
 }
 
-$SQL = 'INSERT INTO `qualitativo_recebimento_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avaria_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
+$SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
     VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'");';
 }
 
 $resultado = $conexao -> query($SQL);
 
 $conexao->close();
-header('Location: t_qualitativo_r_a.php', true, 301);
 exit();
+}
 ?>

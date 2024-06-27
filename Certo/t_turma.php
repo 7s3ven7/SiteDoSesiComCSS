@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resetar</title>
+    <title>Tela Inicial</title>
 </head>
 <?php
     $nome_atividade = $_GET['nome_atividade'];
@@ -14,6 +14,16 @@
 
 <body>
     <div class="fundo"></div>
+    <details class="details-all">
+        <summary class="details-big">Criações</summary>
+        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Turmas"></div>
+        </form>
+        <form method="POST"
+            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Atividade"></div>
+        </form>
+    </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
@@ -76,16 +86,48 @@
     <div class="details-caixa"></div>
     <div class="menu">Menu</div>
     <div class="caixa">
-        <form method="POST" action="c_reset_p.php">
-            <div class="caixa-texto-secreto"></div>
-            <div class="texto-secreto">Tens certeza de tua ação?</div>
-            <div class="texto-secreto">Você irá extinguir teus dados!</div>
-            <input class="senha-secreta" type="password" name="senha_secreta" placeholder="Senha*">
-            <br>
-            <input class="submit-secreto" type="submit" value="Excluir BD">
-        </form>
+        <div class="texto-produto">Crie sua Turma</div>
+        <div class="caixa-mini">
+            <form method="POST" action="t_turma.php">
+                <table class="tabela-mini">
+                    <tr>
+                        <td class="texto-tabela-mini">Nome do grupo: </td>
+                        <td><input class="botao-tabela" type="text" placeholder="Nome" name="nome_grupo"></td>
+                        <td class="texto-tabela-mini">Quantidade de alunos: </td>
+                        <td><input class="botao-tabela" type="text" placeholder="Alunos" name="qnt_aluno"></td>
+                    <tr>
+                </table>
+                <br>
+                <input class="botao" type="submit" value="Cadastrar turma">
+            </form>
+            <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
+                    $hostname = "127.0.0.1";
+                    $name = "root";
+                    $password = "root";
+                    $DB = "dados";
+                    $conexao = new mysqli($hostname, $name, $password, $DB);
+                    if ($conexao->connect_errno) {
+                        echo "Failes conection: " . $conexao->connect_error;
+                        exit();
+                    } else
+                    {
+                        $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
+                        $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
+                        $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
+                        $resultado_1 = $conexao->query($sql);
+                        if($resultado_1->num_rows != 0){
+                            echo '<div class="msg-turma"><div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
+                        }else{
+                        $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
+                        $resultado = $conexao->query($SQL);
+                        $conexao->close();
+                        //header("Location: t_atividade.php");
+                    }
+                }}
+                ?>
+        </div>
     </div>
-    <div id="tipo">Professor - <?php echo $nome;?></div>
+    <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>

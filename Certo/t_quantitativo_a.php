@@ -11,15 +11,6 @@
     <div id="tipo">Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="Inicio">
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair">
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Recebimento</summary>
         <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
@@ -74,13 +65,12 @@
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="menu">Menu</div>
     <div class="caixa">
         <form action="t_quantitativo_a.php" method="POST">
             <div class="quadrado-quantitativo">
                 <div class="quantitativo-texto">Digite o Código do fornecedor</div>
-                <input class="quantitativo-input-pedido" type="number" value="0" name="cod_forne">
+                <input class="quantitativo-input-pedido" type="number" name="cod_forne">
                 <input class="quantitativo-enviar-pedido" type="submit">
                 <div class="quadrado-quantitativo-2">
         </form>
@@ -100,9 +90,9 @@
             exit();
         } else {
             $v1 = $_POST['cod_forne'];
-			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = ".$v1.";";
+			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = '".$v1."';";
 			$resultado = $conexao->query($sql);
-
+        if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
@@ -160,23 +150,8 @@
                         </tr>
                     </table>
                 ';
-            }
-            }
-        }}
-        ?>
-        <?php
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-if ($conexao->connect_errno) {
-    echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    header("Location: t_a.php");
-    exit();
-} else {
-    $n_pedido=$_POST['n_pedido'];
+}
+    $n_pedido=$_POST['cod_forne'];
     $SQL = 'SELECT * FROM `produto_p` 
     WHERE `n_pedido` = '.$n_pedido.';';
     //Inserir no DB
@@ -189,8 +164,9 @@ if ($conexao->connect_errno) {
 	} else {
 		$conexao -> close();
 		exit();
-	}
-}
+	}            
+            }
+        }}}
 ?>
     </div>
     </div>

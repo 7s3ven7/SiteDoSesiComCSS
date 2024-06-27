@@ -15,16 +15,13 @@
 <body>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form method="POST" action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
+        <summary class="details-big">Criações</summary>
+        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Turmas"></div>
         </form>
         <form method="POST"
-            action="t_reset_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
+            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="details-small" type="submit" value="Atividade"></div>
         </form>
     </details>
     <details class="details-all">

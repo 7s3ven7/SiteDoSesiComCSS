@@ -41,15 +41,6 @@ echo '<!DOCTYPE html>
     <div id="tipo">Aluno</div>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form action="t_a.php">
-            <input class="details-small" type="submit" value="Inicio">
-        </form>
-        <form action="index.php">
-            <input class="details-small" type="submit" value="Sair">
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Recebimento</summary>
         <form action="t_a.php">
             <input class="details-small" type="submit" value="Nota (WIP)">
@@ -236,17 +227,6 @@ echo '<!DOCTYPE html>
 </html>';
 ?>
     <?php
-
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-if ($conexao->connect_errno){
-    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    exit();
-}else{
 
 if(isset($_POST['1'])){
     $v1 = 'V';

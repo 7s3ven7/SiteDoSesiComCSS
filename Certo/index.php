@@ -53,15 +53,19 @@ $SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . 
 		$_SESSION['tipo_u'] = $row[0];
 		$_SESSION['nome_u'] = $row[1];
 		$_SESSION['senha'] = $row[2];
-		if ($row[0] == 'Professor' and $senha == $row[2] or $row[0] == 'Aluno' and $senha == $row[2]) {
-			$conexao->close();
-			header('Location: t_atividade.php?nome='.$nome, true, 301);
+		if ($row[0] == 'Professor' and $senha == $row[2]) {
+            $conexao->close();
+			header('Location: t_p.php?nome='.$nome, true, 301);
 			exit();
-		}
-}else{
-	$conexao->close();
-	header('Location: index.php', true, 301);
-	exit();
+        }elseif($row[0] == 'Aluno' and $senha == $row[2]) {
+			$conexao->close();
+			header('Location: t_a.php?nome='.$nome, true, 301);
+			exit();
+		}       
+        }else{
+	        $conexao->close();
+	        header('Location: index.php', true, 301);
+	        exit();
 }
 }
 ?>
