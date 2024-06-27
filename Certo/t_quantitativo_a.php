@@ -65,7 +65,6 @@
             <input class="details-small" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="menu">Menu</div>
     <div class="caixa">
         <form action="t_quantitativo_a.php" method="POST">
