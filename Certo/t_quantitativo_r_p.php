@@ -53,21 +53,9 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Professor/quantitativo.html"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
+
 <body>
     <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form method="POST" action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
-        </form>
-        <form method="POST"
-            action="t_reset_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
-        </form>
-    </details>
     <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"

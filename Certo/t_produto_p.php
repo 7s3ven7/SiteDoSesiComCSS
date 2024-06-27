@@ -15,19 +15,6 @@
 <body>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form method="POST" action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
-        </form>
-        <form method="POST"
-            action="t_reset_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
@@ -179,8 +166,8 @@
                 echo'<div class="details-caixa-2"></div>';}}
                 echo'</form>';
             ?>
-            <html>
-<?php
+        <html>
+        <?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -245,7 +232,7 @@ if ($conexao->connect_errno) {
 }
 ?>
 
-</html>
+        </html>
     </div>
     <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>

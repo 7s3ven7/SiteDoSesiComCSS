@@ -15,19 +15,6 @@
 <body>
     <div class="fundo"></div>
     <details class="details-all">
-        <summary class="details-big">Menus</summary>
-        <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Inicio"></div>
-        </form>
-        <form method="POST" action="index.php">
-            <input class="details-small" type="submit" value="Sair"></div>
-        </form>
-        <form method="POST"
-            action="t_reset_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Resetar"></div>
-        </form>
-    </details>
-    <details class="details-all">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
@@ -225,7 +212,7 @@ if(isset($_POST['vezes'])){
 }
                 echo'</form>';
             ?>
-            <?php
+        <?php
     $a = $_POST['cnpj']; //CNPJ
     $b = $_POST['nome_fornecedor']; //Nome do fornecedor
     $c = $_POST['gmail']; //Email
