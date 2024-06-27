@@ -144,8 +144,7 @@
                 echo '<input class="botao" type="submit">';
                 echo'<div class="details-caixa-2"></div>';}
             }
-?>
-        <?php
+
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -154,28 +153,23 @@ $DB = "dados";
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
 if(isset($_POST['cadastro'])){
-if ($conexao->connect_errno) {
-    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    exit();
-} else {
+    echo 'oi';
     $v1 = $_POST['cnpj']; //CNPJ
     $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
     $v3 = $_POST['gmail']; //Email
     $v4 = $_POST['cep']; //CEP
     $v5 = $_POST['telefone']; //Telefone
     $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-    $z = $_GET['$l'];
+    $z = $_GET[$l];
     
     while($z>0){
-        
-        $vtotal = $v11 * ($v9*$v10);
         for($zz = 1;$zz>0;$zz){
             $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`) 
             VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.');';
             $resultado = $conexao->query($SQL);
             $zz -= 1;
             }
-        $zz = 1;
+        
 /*        $a = $a.'p';
         $b = $b.'p';
         $c = $c.'p';
@@ -198,7 +192,7 @@ if ($conexao->connect_errno) {
     $conexao->close();
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
 }
-}?>
+?>
     </div>
     <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
