@@ -17,10 +17,6 @@
                 <input class="caixa-texto" type="text" placeholder="Nome" name="nome_criado">
                 <div class="texto-mini">Crie sua senha</div>
                 <input class="caixa-texto" type="password" placeholder="Senha" name="senha_criada">
-                <div class="texto-mini">Seu cargo</div>
-                <input class="caixa-texto" type="text" placeholder="Cargo" name="cargo_criado">
-                <div class="texto-mini">Código da Sala</div>
-                <input class="caixa-texto" type="text" placeholder="PT-0001" name="codigo_sala_criado">
                 <div class="texto-mini">Código Interno</div>
                 <input class="caixa-texto" type="text" placeholder="*Opicional" name="codigo_interno_criado">
         </div>
