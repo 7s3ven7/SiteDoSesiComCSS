@@ -225,7 +225,7 @@ if(isset($_POST['vezes'])){
 }
                 echo'</form>';
             ?>
-            <?php
+        <?php
     $a = $_POST['cnpj']; //CNPJ
     $b = $_POST['nome_fornecedor']; //Nome do fornecedor
     $c = $_POST['gmail']; //Email
@@ -293,7 +293,7 @@ $v5 = $v5.'p';
 
 ?>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

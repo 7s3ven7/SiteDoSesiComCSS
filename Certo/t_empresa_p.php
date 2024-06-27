@@ -151,7 +151,7 @@
                 echo'<div class="details-caixa-2"></div>';}}
                 echo'</form>';
             ?>
-            <?php
+        <?php
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -180,7 +180,7 @@ if ($conexao->connect_errno) {
 ?>
 
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

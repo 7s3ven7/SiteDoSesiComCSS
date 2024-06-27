@@ -98,7 +98,7 @@
             <input class="submit-secreto" type="submit" value="Excluir BD">
         </form>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

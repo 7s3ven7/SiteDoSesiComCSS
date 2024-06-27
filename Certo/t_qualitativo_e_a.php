@@ -235,7 +235,7 @@ echo '<!DOCTYPE html>
 </body>
 </html>';
 ?>
-<?php
+    <?php
 
 $hostname = "127.0.0.1";
 $name = "root";

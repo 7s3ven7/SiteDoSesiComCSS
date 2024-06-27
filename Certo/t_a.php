@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<?php
+    $nome = $_GET['nome'];
+    $nome_atividade = $_GET['nome_atividade'];
+?>
 
 <body>
     <div id="tipo">Aluno</div>
@@ -70,6 +74,7 @@
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
+    <div id="tipo">Aluno - <?php echo $nome;?></div>
 </body>
 
 </html>

@@ -53,6 +53,7 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Professor/quantitativo.html"); //Envia para a tela de Login ao Cadastrar
 }
 ?>
+
 <body>
     <div class="fundo"></div>
     <details class="details-all">
@@ -177,7 +178,7 @@ if ($conexao->connect_errno) {
             <input class="botao" type="submit" value="Enviar">
         </form>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

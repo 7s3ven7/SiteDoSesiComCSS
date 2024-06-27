@@ -261,7 +261,7 @@ if ($conexao->connect_errno) {
     header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
 }?>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>
