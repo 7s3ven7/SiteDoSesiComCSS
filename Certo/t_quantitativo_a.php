@@ -151,18 +151,7 @@
                         </tr>
                     </table>
                 ';
-            }
-            }
-        }}
-        ?>
-        <?php
-        session_start()
-
-if ($conexao->connect_errno) {
-    echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    header("Location: t_a.php");
-    exit();
-} else {
+}
     $n_pedido=$_POST['cod_forne'];
     $SQL = 'SELECT * FROM `produto_p` 
     WHERE `n_pedido` = '.$n_pedido.';';
@@ -176,8 +165,9 @@ if ($conexao->connect_errno) {
 	} else {
 		$conexao -> close();
 		exit();
-	}
-}
+	}            
+            }
+        }}
 ?>
     </div>
     </div>
