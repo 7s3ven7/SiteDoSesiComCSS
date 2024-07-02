@@ -87,100 +87,82 @@
                     placeholder="Número de vezes*"></div>
             <input class="" type="submit">
         </form>
-        <!--Aparecer na Tela--><?php
-            if(isset($_POST['vezes'])){
-                    $i = $_POST['vezes'];
-                    if($i <= 0){
-                        echo '
-                        <br><br>
-                        <div class="">Digite um número superior!</div>';
-                    }else{
-                    $l = $i;
-                    $numero = 1;
-                    $v1 = 'cnpj';
-                    $v2 = 'nome_fornecedor';
-                    $v3 = 'gmail';
-                    $v4 = 'cep';
-                    $v5 = 'telefone';
-                echo'<form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'">';
-                echo'<br>';
-                    for($i;$i>0;$i){
-                    $i -= 1;
-                    echo'
-            <div class="">'.$numero.'° Fornecedor</div>
-            <br>
-            <form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'" name="cadastro">
-            <table class="">
-                <tr>
-                    <td class="">CNPJ: </td>
-                    <td><input class="" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
-                    <td class="">Nome do fornecedor: </td>
-                    <td><input class="" type="text" name="'.$v2.'" placeholder="Nome"></td>
-                <tr>
-                    <td class="">Gmail: </td>
-                    <td><input class="" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
-                    <td class="">CEP: </td>
-                    <td><input class="" type="text" name="'.$v4.'" placeholder="0000-000"></td>
-                </tr>
-                <tr>
-                    <td class="">Telefone: </td>
-                    <td><input class="" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
-                </tr>
-            </table>';
-            $numero += 1;
-                    }              
-                echo '<table class="">';
-                echo '<input class="" type="submit">';
-                echo'<div class=""></div>';}
-            }
+        <!--Aparecer na Tela-->
+<?php
+    $hostname = "127.0.0.1";
+    $name = "root";
+    $password = "root";
+    $DB = "dados";
 
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
+    $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-
-if(isset($_POST['cadastro'])){
-    echo 'oi';
-    $v1 = $_POST['cnpj']; //CNPJ
-    $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
-    $v3 = $_POST['gmail']; //Email
-    $v4 = $_POST['cep']; //CEP
-    $v5 = $_POST['telefone']; //Telefone
-    $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-    $z = $_GET[$l];
-    
-    while($z>0){
-        for($zz = 1;$zz>0;$zz){
-            $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`) 
-            VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.');';
-            $resultado = $conexao->query($SQL);
-            $zz -= 1;
-            }
-        
-/*        $a = $a.'p';
-        $b = $b.'p';
-        $c = $c.'p';
-        $d = $d.'p';
-        $e = $e.'p';
-        $f = $f.'p';
-        $g = $g.'p';
-        $h = $h.'p';
-        $i = $i.'p';
-        $j = $j.'p';
-        $k = $k.'p';
-        $l = $l.'p';
-        $z -= 1;*/
+    if(isset($_POST['vezes'])){
+        $i = $_POST['vezes'];
+        if($i <= 0){
+            echo '
+            <br><br>
+            <div class="">Digite um número superior!</div>';
+        }else{
+            $l = $i;
+            $numero = 1;
+            $v1 = 'cnpj';
+            $v2 = 'nome_fornecedor';
+            $v3 = 'gmail';
+            $v4 = 'cep';
+            $v5 = 'telefone';
+            echo'<form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'">';
+            echo'<br>';
+            for($i;$i>0;$i){
+                $i -= 1;
+                echo'
+                <div class="">'.$numero.'° Fornecedor</div>
+                <br>
+                <form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'" name="cadastro">
+                <table class="">
+                    <tr>
+                        <td class="">CNPJ: </td>
+                        <td><input class="" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
+                        <td class="">Nome do fornecedor: </td>
+                        <td><input class="" type="text" name="'.$v2.'" placeholder="Nome"></td>
+                    <tr>    
+                        <td class="">Gmail: </td>
+                        <td><input class="" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                        <td class="">CEP: </td>
+                        <td><input class="" type="text" name="'.$v4.'" placeholder="0000-000"></td>
+                    </tr>
+                    <tr>
+                        <td class="">Telefone: </td>
+                        <td><input class="" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
+                    </tr>
+                </table>';
+                $numero += 1;
+            }              
+            echo '<table class="">';
+            echo '<input class="" type="submit">';
+            echo'<div class=""></div>';
+        }
     }
-
-    /*$id_atividade = 1;
-    $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`,`id_atividade`) 
-    VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.','.$nome_atividade.');';
-    $resultado = $conexao->query($SQL);*/
-    $conexao->close();
-    header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
-}
+    if(isset($_POST['cadastro'])){
+        echo 'oi';
+        $v1 = $_POST['cnpj']; //CNPJ
+        $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
+        $v3 = $_POST['gmail']; //Email
+        $v4 = $_POST['cep']; //CEP
+        $v5 = $_POST['telefone']; //Telefone
+        $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
+        $z = $_GET[$l];
+    
+        while($z>0){
+            for($zz = 1;$zz>0;$zz){
+                $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`) 
+                VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.');';
+                $resultado = $conexao->query($SQL);
+                $zz -= 1;
+            }       
+        }
+        $conexao->close();
+        header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
+    }
 ?>
     </div>
     <div id="">Professor - <?php echo $nome;?></div>

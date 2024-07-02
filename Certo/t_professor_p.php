@@ -85,60 +85,62 @@
             <div class="">WIP: <input class="" type="number" name="vezes" placeholder="Número de vezes*"></div>
             <input class="" type="submit">
         </form>
-        <?php
-            if(isset($_POST['vezes'])){
-                    $i = $_POST['vezes'];
-                    if($i <= 0){
-                        echo '
-                        <br><br>
-                        <div class="">Digite um número superior!</div>';
-                    }else{
-                    $l = $i;
-                    $numero = 1;
-                    $v1 = 'cnpj';
-                    $v2 = 'nome_empresa';
-                    $v3 = 'nome_gerente';
-                    $v4 = 'gmail';
-                    $v5 = 'cep';
-                    $v6 = 'telefone';
-                echo'<form method="POST" action="cadastro_empresa.php?$l='.$l.'">';
-                echo'<br>';
-                    for($i;$i>0;$i){
-                    $i -= 1;
-                    echo'
-            <div class="">'.$numero.'° Pedido</div>
-            <br>
-            <table class="">
-                <tr>
-                    <td class="">CNPJ: </td>
-                    <td><input class="" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
-                    <td class="">Nome da produto: </td>
-                    <td><input class="" type="text" name="'.$v2.'" placeholder="Nome"></td>
-                <tr>
-                    <td class="">Nome do gerente: </td>
-                    <td><input class="" type="text" name="'.$v3.'" placeholder="Nome"></td>                
-                    <td class="">Gmail: </td>
-                    <td><input class="" type="text" name="'.$v4.'" placeholder="exemplo@gmail.com"></td>
-                </tr>
-                <tr>
-                    <td class="">CEP: </td>
-                    <td><input class="" type="text" name="'.$v5.'" placeholder="0000-000"></td>
-                    <td class="">Telefone: </td>
-                    <td><input class="" type="text" name="'.$v6.'" placeholder="(00) 00000-0000 "></td>
-                </tr>
-            </table>';
-            $numero += 1;
-            $v1 = $v1.'p';
-            $v2 = $v2.'p';
-            $v3 = $v3.'p';
-            $v4 = $v4.'p';
-            $v5 = $v5.'p';
-                    }              
-                echo '<table class="">';
-                echo '<input class="" type="submit">';
-                echo'<div class=""></div>';}}
-                echo'</form>';
-            ?>
+<?php
+    if(isset($_POST['vezes'])){
+        $i = $_POST['vezes'];
+        if($i <= 0){
+            echo '
+            <br><br>
+            <div class="">Digite um número superior!</div>';
+        }else{
+            $l = $i;
+            $numero = 1;
+            $v1 = 'cnpj';
+            $v2 = 'nome_empresa';
+            $v3 = 'nome_gerente';
+            $v4 = 'gmail';
+            $v5 = 'cep';
+            $v6 = 'telefone';
+            echo'<form method="POST" action="cadastro_empresa.php?$l='.$l.'">';
+            echo'<br>';
+            for($i;$i>0;$i){
+                $i -= 1;
+                echo'
+                <div class="">'.$numero.'° Pedido</div>
+                <br>
+                <table class="">
+                    <tr>
+                        <td class="">CNPJ: </td>
+                        <td><input class="" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
+                        <td class="">Nome da produto: </td>
+                        <td><input class="" type="text" name="'.$v2.'" placeholder="Nome"></td>
+                    <tr>
+                        <td class="">Nome do gerente: </td>
+                        <td><input class="" type="text" name="'.$v3.'" placeholder="Nome"></td>                
+                        <td class="">Gmail: </td>
+                        <td><input class="" type="text" name="'.$v4.'" placeholder="exemplo@gmail.com"></td>
+                    </tr>
+                    <tr>
+                        <td class="">CEP: </td>
+                        <td><input class="" type="text" name="'.$v5.'" placeholder="0000-000"></td>
+                        <td class="">Telefone: </td>
+                        <td><input class="" type="text" name="'.$v6.'" placeholder="(00) 00000-0000 "></td>
+                    </tr>
+                </table>';
+                $numero += 1;
+                $v1 = $v1.'p';
+                $v2 = $v2.'p';
+                $v3 = $v3.'p';
+                $v4 = $v4.'p';
+                $v5 = $v5.'p';
+            }              
+            echo '<table class="">';
+            echo '<input class="" type="submit">';
+            echo'<div class=""></div>';
+        }
+    }
+    echo'</form>';
+?>
     </div>
     <div id="">Professor - <?php echo $nome;?></div>
 </body>
