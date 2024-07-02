@@ -16,6 +16,16 @@
 <body>
     <div class=""></div>
     <details class="">
+        <summary class="">Criações</summary>
+        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="" type="submit" value="Turmas"></div>
+        </form>
+        <form method="POST"
+            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="" type="submit" value="Atividade"></div>
+        </form>
+    </details>
+    <details class="">
         <summary class="">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
