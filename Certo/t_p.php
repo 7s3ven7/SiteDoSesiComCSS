@@ -87,7 +87,7 @@
     <div class="menu">Menu</div>
     <div class="caixa">
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

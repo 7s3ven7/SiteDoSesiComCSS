@@ -209,15 +209,13 @@ echo '
                 </tr>
 
             </table>
-            <input class="botao-qualitat" type="submit" value="Enviar" left=5px>
+            <input class="botao-qualitat" type="submit" value="Enviar" left=5px name="21">
         </form>
     </div>
 </body>
-</html>';}}
-?>
-<?php
-
-if(isset($_POST['cod_forne'])){
+</html>';
+}}
+if(isset($_POST['21'])){
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";

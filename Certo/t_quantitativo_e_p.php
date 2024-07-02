@@ -165,7 +165,7 @@ if ($conexao->connect_errno) {
             <input class="botao" type="submit" value="Enviar">
         </form>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="tipo">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>
