@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_inicio.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <div class="caixa">
-        <div class="texto">Crie sua atividade</div>
-        <div class="caixa-mini">
+    <div class="">
+        <div class="">Crie sua atividade</div>
+        <div class="">
             <form method="POST" action="index.php">
-                <div class="texto-mini">Nome da atividade</div>
-                <input class="caixa-texto" type="text" placeholder="Nome" name="nome_atividade">
-                <div class="texto-mini">Grupo da atividade</div>
+                <div class="">Nome da atividade</div>
+                <input class="" type="text" placeholder="Nome" name="nome_atividade">
+                <div class="">Grupo da atividade</div>
                 <?php
 $hostname = "127.0.0.1";
 $name = "root";
@@ -29,7 +29,7 @@ if ($conexao->connect_errno) {
     $select = 'SELECT DISTINCT `cod_grupo` FROM `usuario`;';
     $select_completo = $conexao->query($select);
     if($select_completo->num_rows != 0){
-        echo '<select class="caixa-texto-2" id="turmas">';
+        echo '<select class="" id="turmas">';
         $n = 1;
     while($row = mysqli_fetch_array($select_completo)){
         $grupo = $row['0'];
