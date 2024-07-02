@@ -87,14 +87,6 @@ hr {
     align-items: center;
 }
 
-/*
-.
-.
-.
-.
-.
-*/
-
 /*Logar,Cadastro*/
 .caixa-logar-cadastro {
     background-color: whitesmoke;
@@ -128,6 +120,17 @@ hr {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*Layot*/
+
+.caixa-tela-geral {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    align-items: center;
+    text-align: center;
+
 }
 
 /*

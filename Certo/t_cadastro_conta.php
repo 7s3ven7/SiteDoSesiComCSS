@@ -48,10 +48,10 @@
             $nome = $conexao->real_escape_string($_POST["nome_criado"]);
             $senha = $conexao->real_escape_string($_POST["senha_criada"]);
             $codp = $conexao->real_escape_string($_POST["codigo_interno_criado"]);
-                $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
-                $resultado = $conexao->query($SQL);
-                $conexao->close();
-                header("Location: index.php");
+            $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
+            $resultado = $conexao->query($SQL);
+            $conexao->close();
+            header("Location: index.php");
         }
     }
 ?>
