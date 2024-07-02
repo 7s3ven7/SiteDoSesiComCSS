@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro produto</title>
 </head>
 
 <body>
-    <div class="details-caixa"></div>
-    <div class="caixa">
+    <div class=""></div>
+    <div class="">
     </div>
-    <div class="caixa-fixa">
+    <div class="">
         <form method="POST" action="teste_produto_aleatorizado.php">
-            <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
-                    name="vezes" placeholder="Número de vezes*"></div>
+            <div class="">Quantos produtos você irá registrar: <input class="" type="number" name="vezes"
+                    placeholder="Número de vezes*"></div>
             <br>
-            <div class="texto-produto">Quantos produtos irão ser aleatórios: <input class="botao-produto" type="number"
-                    name="vezes_aleatorio" placeholder="opcional*"></div>
-            <input class="enviar-numero-produto" type="submit">
+            <div class="">Quantos produtos irão ser aleatórios: <input class="" type="number" name="vezes_aleatorio"
+                    placeholder="opcional*"></div>
+            <input class="" type="submit">
         </form>
         <?php
                 $hostname = "127.0.0.1";
@@ -159,40 +158,40 @@
                     $b12 = $b9 * $$b5;
                     echo'
             <br>
-            <div class="numero-produto">Produto Número: '.$numero.'</div>
+            <div class="">Produto Número: '.$numero.'</div>
             <br>
-            <table class="tabela">
+            <table class="">
                 <tr>
                     <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" value="'.$b1.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v1.'" value="'.$b1.'" placeholder="1"></td>
                     <td>Tipo: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" value="'.$b2.'" placeholder="caixa"></td>
+                    <td><input class="" type="text" name="'.$v2.'" value="'.$b2.'" placeholder="caixa"></td>
                     <td>Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="'.$v3.'" value="'.$b3.'"></td>
+                    <td><input class="" type="date" name="'.$v3.'" value="'.$b3.'"></td>
                 </tr>
                 <tr>
                     <td>Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" value="'.$b4.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v4.'" value="'.$b4.'" placeholder="1"></td>
                     <td>Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto"></td>
+                    <td><input class="" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto"></td>
                     <td>Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" value="'.$b6.'" placeholder="marca"></td>
+                    <td><input class="" type="text" name="'.$v6.'" value="'.$b6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
                     <td>Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v7.'" value="'.$b7.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v7.'" value="'.$b7.'" placeholder="1"></td>
                     <td>Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v8.'" value="'.$b8.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v8.'" value="'.$b8.'" placeholder="1"></td>
                     <td>Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v9.'" value="'.$b9.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v9.'" value="'.$b9.'" placeholder="1"></td>
                 </tr>
                 <tr>
                     <td>Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v10.'" value="'.$b10.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v10.'" value="'.$b10.'" placeholder="1"></td>
                     <td>Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v11.'" value="'.$b11.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v11.'" value="'.$b11.'" placeholder="1"></td>
                     <td>Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v12.'" value="'.$b12.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v12.'" value="'.$b12.'" placeholder="1"></td>
                 </tr>
             </table>';
             $numero += 1;
@@ -213,40 +212,40 @@
                     for ($li;$li>0;$li) {
                         echo'
                         <br>
-                        <div class="numero-produto">Produto Número: '.$numero.'</div>
+                        <div class="">Produto Número: '.$numero.'</div>
                         <br>
-                        <table class="tabela">
+                        <table class="">
                             <tr>
                                 <td>Código do fornecedor: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v1.'" placeholder="1"></td>
                                 <td>Tipo: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                                <td><input class="" type="text" name="'.$v2.'" placeholder="caixa"></td>
                                 <td>Validade: </td>
-                                <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
+                                <td><input class="" type="date" name="'.$v3.'"></td>
                             </tr>
                             <tr>
                                 <td>Lote: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v4.'" placeholder="1"></td>
                                 <td>Nome: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="produto"></td>
+                                <td><input class="" type="text" name="'.$v5.'" placeholder="produto"></td>
                                 <td>Marca do produto: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
+                                <td><input class="" type="text" name="'.$v6.'" placeholder="marca"></td>
                             </tr>
                             <tr>
                                 <td>Número do pedido: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v7.'" placeholder="1"></td>
                                 <td>Unidade: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v8.'" placeholder="1"></td>
                                 <td>Quantidade de unidade: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v9.'" placeholder="1"></td>
                             </tr>
                             <tr>
                                 <td>Quantidade de produto: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v10.'" placeholder="1"></td>
                                 <td>Valor da unidade: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v11.'" placeholder="1"></td>
                                 <td>Peso em kilo grama: </td>
-                                <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
+                                <td><input class="" type="text" name="'.$v12.'" placeholder="1"></td>
                             </tr>
                         </table>';
                     $numero += 1;
@@ -282,40 +281,40 @@
                 echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
                     echo'
             <br>
-            <div class="numero-produto">Produto Número: '.$numero.'</div>
+            <div class="">Produto Número: '.$numero.'</div>
             <br>
-            <table class="tabela">
+            <table class="">
                 <tr>
                     <td>Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v1.'" placeholder="1"></td>
                     <td>Tipo: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                    <td><input class="" type="text" name="'.$v2.'" placeholder="caixa"></td>
                     <td>Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
+                    <td><input class="" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
                     <td>Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v4.'" placeholder="1"></td>
                     <td>Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="produto"></td>
+                    <td><input class="" type="text" name="'.$v5.'" placeholder="produto"></td>
                     <td>Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
+                    <td><input class="" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
                     <td>Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v7.'" placeholder="1"></td>
                     <td>Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v8.'" placeholder="1"></td>
                     <td>Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
                     <td>Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v10.'" placeholder="1"></td>
                     <td>Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v11.'" placeholder="1"></td>
                     <td>Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
+                    <td><input class="" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
             $numero += 1;
@@ -333,14 +332,14 @@
             $v12 = $v12.'p';
             $i -= 1;
                     }              
-                echo '<table class="table">';
-                echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';
+                echo '<table class="">';
+                echo '<input class="" type="submit">';
+                echo'<div class=""></div>';
                 echo'</form>';
             ?>
     </div>
-    <div class="menu">Menu</div>
-    <div id="tipo">Conta: Professor</div>
+    <div class="">Menu</div>
+    <div id="">Conta: Professor</div>
 
 </body>
 
