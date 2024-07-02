@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 02-Jul-2024 às 13:24
+-- Generation Time: 02-Jul-2024 às 14:02
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -402,17 +402,18 @@ CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `nome_u` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cod_prof` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `cod_prof` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tipo_u` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome_u`, `senha`, `cod_prof`) VALUES
-(1, 'matheus', '123', '123'),
-(2, 'a', 'b', 'e'),
-(3, 'matheus', '1234', '');
+INSERT INTO `usuario` (`id_usuario`, `nome_u`, `senha`, `cod_prof`, `tipo_u`) VALUES
+(1, 'matheus', '123', '123', ''),
+(2, 'a', 'b', 'e', ''),
+(3, 'matheus', '1234', '', '');
 
 --
 -- Indexes for dumped tables
