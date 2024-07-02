@@ -10,9 +10,9 @@
 
 <body>
     <div class="caixa-centralizador">
-        <div id="caixa-logar">
+        <div class="caixa-logar-cadastro">
             <div CLASS="texto-grande-logar">Bem Vindo!</div>
-            <div id="caixa-logar-dentro">
+            <div class="caixa-logar-dentro">
                 <form method="POST" action="index.php">
                     <div class="texto-logar">Nome da conta</div>
                     <input class="botao-logar-input" type="text" placeholder="Nome" name="nome_conta">
@@ -29,7 +29,7 @@
         </div>
     </div>
 </body>
-    <!--Logar conta de usuario--><?php
+<!--Logar conta de usuario--><?php
                 if(isset($_POST['nome_conta']) and isset($_POST['senha_conta'])){
 session_start();
 
@@ -80,7 +80,7 @@ session_start();
             $senha = $digito[$numero];
             $i -= 1;
             $senha1 = $senha1.$senha;
-         }
+        }
         echo $senha1;
     }
 ?>
