@@ -31,7 +31,8 @@
                 action="t_cliente_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="" type="submit" value="Cadastro"></div>
             </form>
-            <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST"
+                action="t_pedido_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="" type="submit" value="Pedido"></div>
             </form>
         </details>
@@ -61,16 +62,7 @@
             <input class="" type="submit" value="Quantitativo">
         </form>
         <form method="POST"
-            action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
-    <details class="">
-        <summary class="">Expedição</summary>
-        <form action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Quantitativo">
-        </form>
-        <form action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            action="t_nota_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
             <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>

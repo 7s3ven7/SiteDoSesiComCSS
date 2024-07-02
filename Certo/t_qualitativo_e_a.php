@@ -31,7 +31,7 @@ if ($conexao->connect_errno) {
 echo '<!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
@@ -42,10 +42,10 @@ echo '<!DOCTYPE html>
     <div class=""></div>
     <details class="">
         <summary class="">Recebimento</summary>
-        <form action="t_a.php">
+        <form action="t_nota_r_a.php">
             <input class="" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
@@ -66,22 +66,19 @@ echo '<!DOCTYPE html>
     </details>
     <details class="">
         <summary class="">Picking</summary>
-        <form action="t_a.php">
-            <input class="" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_picking_a.php">
             <input class="" type="submit" value="WIP">
         </form>
     </details>
     <details class="">
         <summary class="">Expedição</summary>
-        <form action="t_a.php">
+        <form action="t_nota_e_a.php">
             <input class="" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_qualitativo_e_a.php">
             <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_quantitativo_e_a.php">
             <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
 

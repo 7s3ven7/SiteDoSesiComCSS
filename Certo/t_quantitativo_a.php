@@ -151,20 +151,6 @@
                     </table>
                 ';
 }
-    $n_pedido=$_POST['cod_forne'];
-    $SQL = 'SELECT * FROM `produto_p` 
-    WHERE `n_pedido` = '.$n_pedido.';';
-    //Inserir no DB
-    $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
-    if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
-	{
-		for($i=1;$i<=$resultado->num_rows;$i++){
-			$row = $resultado -> fetch_array();
-		}
-	} else {
-		$conexao -> close();
-		exit();
-	}            
             }
         }}}
 ?>
