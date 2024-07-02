@@ -5,8 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Tela Inicial</title>
 </head>
+<?php
+    $nome_atividade = $_GET['nome_atividade'];
+    $nome = $_GET['nome'];
+?>
 
 <body>
     <div class="">
@@ -33,7 +37,7 @@ if ($conexao->connect_errno) {
         $n = 1;
     while($row = mysqli_fetch_array($select_completo)){
         $grupo = $row['0'];
-        echo '<option value="'.$n.'">'.$grupo.'</option>';
+        echo '<option name="grupo" value="'.$n.'">'.$grupo.'</option>';
         $n += 1;
     }
     echo '<options value"primeira_opcao">server</option>';
@@ -46,6 +50,7 @@ if ($conexao->connect_errno) {
     }}
 ?>
         </div>
+        <div id="tipo">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>
