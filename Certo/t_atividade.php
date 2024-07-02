@@ -33,7 +33,7 @@ if ($conexao->connect_errno) {
     $select = 'SELECT DISTINCT `cod_grupo` FROM `usuario`;';
     $select_completo = $conexao->query($select);
     if($select_completo->num_rows != 0){
-        echo '<select class="" id="turmas">';
+        echo '<select class="" id="">';
         $n = 1;
     while($row = mysqli_fetch_array($select_completo)){
         $grupo = $row['0'];
@@ -50,7 +50,7 @@ if ($conexao->connect_errno) {
     }}
 ?>
         </div>
-        <div id="tipo">Conta: <?php echo $nome;?></div>
+        <div id="">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>

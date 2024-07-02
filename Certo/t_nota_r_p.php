@@ -79,104 +79,104 @@
         <div id="">
             <img src="../../img/logo.png" width="250px" height="200px">
         </div>
-        <div id="qd-danfe">
+        <div id="">
             <div class="">Número da Danfe</div>
             <input class="" type="text" name="danfe">
         </div>
-        <div id="qd-nota-fiscal">
+        <div id="">
             <div class="">Número Nota</div>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-cnpj">
+        <div id="">
             <div class="">CNPJ Empresa</div>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-cep-emitente">
+        <div id="">
             <div class="">CEP do Empresa</div>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-data-de-emissao">
+        <div id="">
             <div class="">Data de emissão</div>
             <input class="" type="date" name="nota">
         </div>
-        <div id="qd-horario-de-emissao">
+        <div id="">
             <div class="">Hora da emissão</div>
             <input class="" type="time" name="nota">
         </div>
-        <div id="qd-nome-do-emitente">
+        <div id="">
             <div class="">Nome Empresa</div>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-fone-emitente">
+        <div id="">
             <div class="">Telefone Empresa</div>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-cod">
+        <div id="">
             <div class="">Código</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-desc-produto">
+        <div id="">
             <div class="">Descrição do Produto</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-lote">
+        <div id="">
             <div class="">Lote</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-NCM">
+        <div id="">
             <div class="">NCM</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-CST">
+        <div id="">
             <div class="">CST</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-CFOP">
+        <div id="">
             <div class="">CFOP</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-UN">
+        <div id="">
             <div class="">Unidade</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-quantidade">
+        <div id="">
             <div class="">Quantidade</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-valor_unit">
+        <div id="">
             <div class="">Valor unitário</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-valor_total">
+        <div id="">
             <div class="">Valor total</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-nome_remetente">
+        <div id="">
             <div class="">Nome Remetente</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-fone_remetente">
+        <div id="">
             <div class="">Telefone Remetente</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="qd-CNPJ_remetente">
+        <div id="">
             <div class="">CNPJ Remetente</div>
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="tipo">Professor - <?php echo $nome;?></div>
+        <div id="">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

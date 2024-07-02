@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,92 +13,92 @@
 ?>
 
 <body>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Criações</summary>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Criações</summary>
         <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Turmas"></div>
+            <input class="" type="submit" value="Turmas"></div>
         </form>
         <form method="POST"
             action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Atividade"></div>
+            <input class="" type="submit" value="Atividade"></div>
         </form>
     </details>
-    <details class="details-all">
+    <details class="">
         <summary class="details-big">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Fornecedor"></div>
+            <input class="" type="submit" value="Fornecedor"></div>
         </form>
         <form method="POST"
             action="t_empresa_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Empresa"></div>
+            <input class="" type="submit" value="Empresa"></div>
         </form>
         <details>
-            <summary class="details-small-more">Cliente</summary>
+            <summary class="">Cliente</summary>
             <form method="POST"
                 action="t_cliente_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="details-small" type="submit" value="Cadastro"></div>
+                <input class="" type="submit" value="Cadastro"></div>
             </form>
             <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="details-small" type="submit" value="Pedido"></div>
+                <input class="" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Produto</summary>
+    <details class="">
+        <summary class="">Produto</summary>
         <form method="POST"
             action="t_produto_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Cadastro">
+            <input class="" type="submit" value="Cadastro">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form method="POST"
             action="t_quantitativo_r_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Quantitativo"></div>
+            <input class="" type="submit" value="Quantitativo"></div>
         </form>
         <form method="POST"
             action="t_nota_r_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Nota Fiscal">
+            <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form method="POST"
             action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
         <form method="POST"
             action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Nota Fiscal">
+            <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
         <form action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="details-small" type="submit" value="Nota Fiscal">
+            <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <div class="details-caixa"></div>
-    <div class="menu">Menu</div>
-    <div class="caixa">
-        <div class="texto-produto">Crie sua Turma</div>
-        <div class="caixa-mini">
+    <div class=""></div>
+    <div class="">Menu</div>
+    <div class="">
+        <div class="">Crie sua Turma</div>
+        <div class="">
             <form method="POST" action="t_turma.php">
-                <table class="tabela-mini">
+                <table class="">
                     <tr>
-                        <td class="texto-tabela-mini">Nome do grupo: </td>
-                        <td><input class="botao-tabela" type="text" placeholder="Nome" name="nome_grupo"></td>
-                        <td class="texto-tabela-mini">Quantidade de alunos: </td>
-                        <td><input class="botao-tabela" type="text" placeholder="Alunos" name="qnt_aluno"></td>
+                        <td class="">Nome do grupo: </td>
+                        <td><input class="" type="text" placeholder="Nome" name="nome_grupo"></td>
+                        <td class="">Quantidade de alunos: </td>
+                        <td><input class="" type="text" placeholder="Alunos" name="qnt_aluno"></td>
                     <tr>
                 </table>
                 <br>
-                <input class="botao" type="submit" value="Cadastrar turma">
+                <input class="" type="submit" value="Cadastrar turma">
             </form>
             <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
                     $hostname = "127.0.0.1";
@@ -116,7 +116,7 @@
                         $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
                         $resultado_1 = $conexao->query($sql);
                         if($resultado_1->num_rows != 0){
-                            echo '<div class="msg-turma"><div class="texto-mini">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
+                            echo '<div class=""><div class="">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
                         }else{
                         $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
                         $resultado = $conexao->query($SQL);
@@ -127,7 +127,7 @@
                 ?>
         </div>
     </div>
-    <div id="tipo">Conta: <?php echo $nome;?></div>
+    <div id="">Conta: <?php echo $nome;?></div>
 </body>
 
 </html>

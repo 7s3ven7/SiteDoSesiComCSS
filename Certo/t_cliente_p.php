@@ -280,7 +280,7 @@ $v5 = $v5.'p';
 
 ?>
     </div>
-    <div id="tipo">Professor - <?php echo $nome;?></div>
+    <div id="">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

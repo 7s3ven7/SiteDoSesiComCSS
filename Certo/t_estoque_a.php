@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="tipo">Aluno</div>
+    <div id="">Aluno</div>
     <div class=""></div>
     <details class="">
         <summary class="">Recebimento</summary>
