@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_inicio.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <div class="caixa-cadastro">
-        <div class="texto">Cadastre-se!</div>
-        <div class="caixa-mini-cadastro">
+    <div class="">
+        <div class="">Cadastre-se!</div>
+        <div class="">
             <form method="POST" action="t_cadastro_conta.php">
-                <div class="texto-mini">Nome da conta</div>
-                <input class="caixa-texto" type="text" placeholder="Nome" name="nome_criado">
-                <div class="texto-mini">Crie sua senha</div>
-                <input class="caixa-texto" type="password" placeholder="Senha" name="senha_criada">
-                <div class="texto-mini">Código Interno</div>
-                <input class="caixa-texto" type="text" placeholder="*Opicional" name="codigo_interno_criado">
+                <div class="">Nome da conta</div>
+                <input class="" type="text" placeholder="Nome" name="nome_criado">
+                <div class="">Crie sua senha</div>
+                <input class="" type="password" placeholder="Senha" name="senha_criada">
+                <div class="">Código Interno</div>
+                <input class="" type="text" placeholder="*Opicional" name="codigo_interno_criado">
         </div>
-        <input class="botao" type="submit" value="Cadastrar-se">
+        <input class="" type="submit" value="Cadastrar-se">
         </form>
     </div>
 </body>

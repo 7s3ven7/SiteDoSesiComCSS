@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,57 +13,57 @@
 
 <body>
     <div id="tipo">Aluno</div>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form action="t_nota_r_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_r_a.php">
-            <input class="details-small" type="submit" value="Qualitativo">
+            <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Controle</summary>
+    <details class="">
+        <summary class="">Controle</summary>
         <form action="t_docas_r_a.php">
-            <input class="details-small" type="submit" value="Controle">
+            <input class="" type="submit" value="Controle">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Estoque</summary>
+    <details class="">
+        <summary class="">Estoque</summary>
         <form action="t_estoque_a.php">
-            <input class="details-small" type="submit" value="Estoque">
+            <input class="" type="submit" value="Estoque">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Picking</summary>
+    <details class="">
+        <summary class="">Picking</summary>
         <form action="t_picking_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="t_nota_e_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_e_a.php">
-            <input class="details-small" type="submit" value="Qualitativo (WIP)">
+            <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
         <form action="t_quantitativo_e_a.php">
-            <input class="details-small" type="submit" value="Quantitativo (WIP)">
+            <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Relatórios</summary>
+    <details class="">
+        <summary class="">Relatórios</summary>
         <form action="t_relatorios_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <div class="menu">Menu</div>
-    <div class="caixa">
+    <div class="">Menu</div>
+    <div class="">
     </div>
     <div id="tipo">Aluno - <?php echo $nome;?></div>
 </body>
