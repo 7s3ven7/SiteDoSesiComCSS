@@ -12,65 +12,65 @@ if ($conexao->connect_errno) {
 echo '<!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
 </head>
 
 <body>
-    <div id="tipo">Aluno</div>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <div id="">Aluno</div>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form action="t_nota_r_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_r_a.php">
-            <input class="details-small" type="submit" value="Qualitativo">
+            <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Controle</summary>
+    <details class="">
+        <summary class="">Controle</summary>
         <form action="t_docas_r_a.php">
-            <input class="details-small" type="submit" value="Controle">
+            <input class="" type="submit" value="Controle">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Estoque</summary>
+    <details class="">
+        <summary class="">Estoque</summary>
         <form action="t_estoque_a.php">
-            <input class="details-small" type="submit" value="Estoque">
+            <input class="" type="submit" value="Estoque">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Picking</summary>
+    <details class="">
+        <summary class="">Picking</summary>
         <form action="t_picking_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="t_nota_e_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_e_a.php">
-            <input class="details-small" type="submit" value="Qualitativo (WIP)">
+            <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
         <form action="t_quantitativo_e_a.php">
-            <input class="details-small" type="submit" value="Quantitativo (WIP)">
+            <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Relatórios</summary>
+    <details class="">
+        <summary class="">Relatórios</summary>
         <form action="t_relatorios_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <div class="menu">Menu</div>
-<div class="caixa">
+    <div class="">Menu</div>
+<div class="">
         <form action="t_qualitativo_r_a.php" method="POST">
             <div class="">
                 <div class="">Digite o Código do fornecedor</div>
@@ -94,122 +94,122 @@ echo '<!DOCTYPE html>
             }
 echo '
         <form method="POST" action="t_qualitativo_r_a.php">
-            <table class="tabela-2">
+            <table class="">
                 <tr>
-                    <td><div class="texto2">Código do fornecedor:</td>
+                    <td><div class="">Código do fornecedor:</td>
                     <td>'.$row['cod_forne'].'</div></td>
-                    <td><div class="texto2">Lotes: </div></td>
+                    <td><div class="">Lotes: </div></td>
                     <td>'.$row['lote'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Nome da empresa: </div></td>
+                    <td><div class="">Nome da empresa: </div></td>
                     <td>'.$row['nome_e'].'</td>
-                    <td><div class="texto2">CNPJ da empresa: </div></td>
+                    <td><div class="">CNPJ da empresa: </div></td>
                     <td>'.$row['CNPJ_e'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Modelo do container: </div></td>
+                    <td><div class="">Modelo do container: </div></td>
                     <td>'.$row['modelo_contai'].'</td>
-                    <td><div class="texto2">Navio: </div></td>
+                    <td><div class="">Navio: </div></td>
                     <td>'.$row['navio'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Destinatário: </div></td>
+                    <td><div class="">Destinatário: </div></td>
                     <td>'.$row['CNPJ_f'].'</td>
-                    <td><div class="texto2">Tipo do container: </div></td>
+                    <td><div class="">Tipo do container: </div></td>
                     <td>'.$row['tipo_contai'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Lacre: </div></td>
+                    <td><div class="">Lacre: </div></td>
                     <td>'.$row['lacre'].'</td>
-                    <td><div class="texto2">Lacre SIF: </div></td>
+                    <td><div class="">Lacre SIF: </div></td>
                     <td>'.$row['lacre_SIF'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Temperatura: </div></td>
+                    <td><div class="">Temperatura: </div></td>
                     <td>'.$row['temperatura'].'</td>
-                    <td><div class="texto2">IMO: </div></td>
+                    <td><div class="">IMO: </div></td>
                     <td>'.$row['IMO'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Número ONU: </div></td>
+                    <td><div class="">Número ONU: </div></td>
                     <td>'.$row['n_ONU'].'</td>
-                    <td><div class="texto2">Nome do produto: </div></td>
+                    <td><div class="">Nome do produto: </div></td>
                     <td>'.$row['nome_p'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Unidades: </td>
+                    <td><div class="">Unidades: </td>
                     <td>'.$row['und'].'</td>
-                    <td><div class="texto2">Quantidade de produto: </div></td>
+                    <td><div class="">Quantidade de produto: </div></td>
                     <td>'.$row['quant_prod'].'</td>
                 </tr>
                 <tr>
-                    <td><div class="texto2">Quantidade do unidade: </div></td>
+                    <td><div class="">Quantidade do unidade: </div></td>
                     <td>'.$row['quant_und'].'</td>
                 </tr>         
                 <tr>
                     <td>Container Bem Desgastado: </td>
-                    <td><input class="check" type="checkbox" name="1"</td>
+                    <td><input class="" type="checkbox" name="1"</td>
                     <td>Avaria na Lateral Direita: </td>
-                    <td><input class="check" type="checkbox" name="2"</td>
+                    <td><input class="" type="checkbox" name="2"</td>
                 </tr>
                     <tr>
                     <td>Avaria na Lateral Esquerda: </td>
-                    <td><input class="check" type="checkbox" name="3"</td>
+                    <td><input class="" type="checkbox" name="3"</td>
                     <td>Avaria no Teto: </td>
-                    <td><input class="check" type="checkbox" name="4"</td>
+                    <td><input class="" type="checkbox" name="4"</td>
                 </tr>
                 <tr>
                     <td>Avaria na Frente: </td>
-                    <td><input class="check" type="checkbox" name="5"</td>
+                    <td><input class="" type="checkbox" name="5"</td>
                     <td>Sem Lacre </td>
-                    <td><input class="check" type="checkbox" name="6"</td>
+                    <td><input class="" type="checkbox" name="6"</td>
                 </tr>
                 <tr>
                     <td>Adesivos Avariados: </td>
-                    <td><input class="check" type="checkbox" name="7"</td>
+                    <td><input class="" type="checkbox" name="7"</td>
                     <td>Excesso de Altura: </td>
-                    <td><input class="check" type="checkbox" name="8"</td>
+                    <td><input class="" type="checkbox" name="8"</td>
                 </tr>
                 <tr>
                     <td>Excesso na Direita: </td>
-                    <td><input class="check" type="checkbox" name="9"</td>
+                    <td><input class="" type="checkbox" name="9"</td>
                     <td>Excesso na Esquerda: </td>
-                    <td><input class="check" type="checkbox" name="10"</td>
+                    <td><input class="" type="checkbox" name="10"</td>
                 </tr>
                 <tr>
                     <td>Excesso Frontal: </td>
-                    <td><input class="check" type="checkbox" name="11"</td>
+                    <td><input class="" type="checkbox" name="11"</td>
                     <td>Painel Avariado: </td>
-                    <td><input class="check" type="checkbox" name="12"</td>
+                    <td><input class="" type="checkbox" name="12"</td>
                 </tr>
                 <tr>
                     <td>Sem Cabo de Energia: </td>
-                    <td><input class="check" type="checkbox" name="13"</td>
+                    <td><input class="" type="checkbox" name="13"</td>
                     <td>Sem Lona: </td>
-                    <td><input class="check" type="checkbox" name="14"</td>
+                    <td><input class="" type="checkbox" name="14"</td>
                 </tr>
                 <tr>
                     <td>Canhoto Assinado: </td>
-                    <td><input class="check" type="checkbox" name="15"</td>
+                    <td><input class="" type="checkbox" name="15"</td>
                     <td>Volume Correto: </td>
-                    <td><input class="check" type="checkbox" name="16"</td>
+                    <td><input class="" type="checkbox" name="16"</td>
                 </tr>
                 <tr>
                     <td>Atraso: </td>
-                    <td><input class="check" type="checkbox" name="17"</td>
+                    <td><input class="" type="checkbox" name="17"</td>
                     <td>Código Avariado: </td>
-                    <td><input class="check" type="checkbox" name="18"</td>
+                    <td><input class="" type="checkbox" name="18"</td>
                 </tr>
                 <tr>
                     <td>Item Lacrado: </td>
-                    <td><input class="check" type="checkbox" name="19"</td>
+                    <td><input class="" type="checkbox" name="19"</td>
                     <td>Doca 1: </td>
-                    <td><input class="check" type="checkbox" name="20"</td>
+                    <td><input class="" type="checkbox" name="20"</td>
                 </tr>
 
             </table>
-            <input class="botao-qualitat" type="submit" value="Enviar" left=5px name="21">
+            <input class="" type="submit" value="Enviar" left=5px name="21">
         </form>
     </div>
 </body>

@@ -12,7 +12,7 @@
 ?>
 
 <body>
-    <div id="tipo">Aluno</div>
+    <div id="">Aluno</div>
     <div class=""></div>
     <details class="">
         <summary class="">Recebimento</summary>
@@ -65,7 +65,7 @@
     <div class="">Menu</div>
     <div class="">
     </div>
-    <div id="tipo">Aluno - <?php echo $nome;?></div>
+    <div id="">Aluno - <?php echo $nome;?></div>
 </body>
 
 </html>

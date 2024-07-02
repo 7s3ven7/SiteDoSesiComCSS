@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,70 +10,70 @@
 
 <body>
 
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Menus</summary>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Menus</summary>
         <form action="../../HTML/Professor/tela.html">
-            <input class="details-small" type="submit" value="Inicio"></div>
+            <input class="" type="submit" value="Inicio"></div>
         </form>
         <form action="../../HTML/index.html">
-            <input class="details-small" type="submit" value="Sair"></div>
+            <input class="" type="submit" value="Sair"></div>
         </form>
         <form action="../../HTML/Professor/reset.html">
-            <input class="details-small" type="submit" value="Resetar"></div>
+            <input class="" type="submit" value="Resetar"></div>
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Cadastros</summary>
+    <details class="">
+        <summary class="">Cadastros</summary>
         <form action="fornecedor.php">
-            <input class="details-small" type="submit" value="Fornecedor"></div>
+            <input class="" type="submit" value="Fornecedor"></div>
         </form>
         <form action="empresa.php">
-            <input class="details-small" type="submit" value="Empresa"></div>
+            <input class="" type="submit" value="Empresa"></div>
         </form>
         <details>
-            <summary class="details-small-more">Cliente</summary>
+            <summary class="">Cliente</summary>
             <form action="cliente.php">
-                <input class="details-small" type="submit" value="Cadastro"></div>
+                <input class="" type="submit" value="Cadastro"></div>
             </form>
             <form action="pedido.php">
-                <input class="details-small" type="submit" value="Pedido"></div>
+                <input class="" type="submit" value="Pedido"></div>
             </form>
         </details>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Produto</summary>
+    <details class="">
+        <summary class="">Produto</summary>
         <form action="produto.php">
-            <input class="details-small" type="submit" value="Cadastro">
+            <input class="" type="submit" value="Cadastro">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form action="../../HTML/Professor/quantitativo_recebimento.html">
-            <input class="details-small" type="submit" value="Quantitativo"></div>
+            <input class="" type="submit" value="Quantitativo"></div>
         </form>
         <form action="../../HTML/Professor/nota_recebimento.html">
-            <input class="details-small" type="submit" value="Nota Fiscal">
+            <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="../../HTML/Professor/quantitativo_expedicao.html">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
         <form action="../../HTML/Professor/nota_recebimento.html">
-            <input class="details-small" type="submit" value="Nota Fiscal">
+            <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
-    <div class="details-caixa"></div>
+    <div class=""></div>
 
-    <div class="caixa">
+    <div class="">
     </div>
-    <div class="caixa-fixa">
+    <div class="">
         <form method="POST" action="produto2.php">
-            <div class="texto-produto">Quantos produtos você irá registrar: <input class="botao-produto" type="number"
-                    name="vezes" placeholder="Número de vezes*"></div>
-            <input class="enviar-numero-produto" type="submit">
+            <div class="">Quantos produtos você irá registrar: <input class="" type="number" name="vezes"
+                    placeholder="Número de vezes*"></div>
+            <input class="" type="submit">
         </form>
         <?php
         if(isset($_POST['vezes'])){        
@@ -91,7 +91,7 @@
                 $i = $_POST['vezes'];
                 $sql_list = 'SELECT `nome` FROM `fornecedor`_p;';
                 $resultado = $conexao ->query($sql_list);
-                echo '<select id="fornecedores">';
+                echo '<select id="">';
                 if(mysqli_num_rows($resultado) > 0){
                     while($row = mysqli_fetch_array($resultado)){
                         $valor = $row['1'];
@@ -101,7 +101,7 @@
                     if($i <= 0){
                         echo '
                         <br><br>
-                        <div class="texto-produto">Digite um número superior!</div>';
+                        <div class="">Digite um número superior!</div>';
                     }else{
                     $l = $i;
                     $numero = 1;
@@ -123,40 +123,40 @@
                     for($i;$i>0;$i){
                     $i -= 1;
                     echo'
-            <div class="numero-produto">'.$numero.'° Produto</div>
+            <div class="">'.$numero.'° Produto</div>
             <br>
-            <table class="tabela-mini">
+            <table class="">
                 <tr>
-                    <td class="texto-tabela-mini">Código do fornecedor: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v1.'" placeholder="1" for="fornecedor"></td>
-                    <td class="texto-tabela-mini">Tipo: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td class="texto-tabela-mini">Validade: </td>
-                    <td><input class="botao-tabela" type="date" name="'.$v3.'"></td>
+                    <td class="">Código do fornecedor: </td>
+                    <td><input class="" type="text" name="'.$v1.'" placeholder="1" for="fornecedor"></td>
+                    <td class="">Tipo: </td>
+                    <td><input class="" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                    <td class="">Validade: </td>
+                    <td><input class="" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini">Lote: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Nome: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td class="texto-tabela-mini">Marca do produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v6.'" placeholder="marca"></td>
+                    <td class="">Lote: </td>
+                    <td><input class="" type="text" name="'.$v4.'" placeholder="1"></td>
+                    <td class="">Nome: </td>
+                    <td><input class="" type="text" name="'.$v5.'" placeholder="empresa"></td>
+                    <td class="">Marca do produto: </td>
+                    <td><input class="" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini">Número do pedido: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Quantidade de unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v9.'" placeholder="1"></td>
+                    <td class="">Número do pedido: </td>
+                    <td><input class="" type="text" name="'.$v7.'" placeholder="1"></td>
+                    <td class="">Unidade: </td>
+                    <td><input class="" type="text" name="'.$v8.'" placeholder="1"></td>
+                    <td class="">Quantidade de unidade: </td>
+                    <td><input class="" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini">Quantidade de produto: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Valor da unidade: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td class="texto-tabela-mini">Peso em kilo grama: </td>
-                    <td><input class="botao-tabela" type="text" name="'.$v12.'" placeholder="1"></td>
+                    <td class="">Quantidade de produto: </td>
+                    <td><input class="" type="text" name="'.$v10.'" placeholder="1"></td>
+                    <td class="">Valor da unidade: </td>
+                    <td><input class="" type="text" name="'.$v11.'" placeholder="1"></td>
+                    <td class="">Peso em kilo grama: </td>
+                    <td><input class="" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
             $numero += 1;
@@ -173,14 +173,14 @@
             $v11 = $v11.'p';
             $v12 = $v12.'p';
                     }              
-                echo '<table class="table">';
-                echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';}}
+                echo '<table class="">';
+                echo '<input class="" type="submit">';
+                echo'<div class=""></div>';}}
                 echo'</form>';}
             ?>
     </div>
-    <div class="menu">Menu</div>
-    <div id="tipo">Conta: Professor</div>
+    <div class="">Menu</div>
+    <div id="">Conta: Professor</div>
 
 </body>
 

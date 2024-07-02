@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html" ;charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 </head>
 
 <body>
-    <div id="tipo">Aluno</div>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <div id="">Aluno</div>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form action="t_nota_r_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_r_a.php">
-            <input class="details-small" type="submit" value="Qualitativo">
+            <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Controle</summary>
+    <details class="">
+        <summary class="">Controle</summary>
         <form action="t_docas_r_a.php">
-            <input class="details-small" type="submit" value="Controle">
+            <input class="" type="submit" value="Controle">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Estoque</summary>
+    <details class="">
+        <summary class="">Estoque</summary>
         <form action="t_estoque_a.php">
-            <input class="details-small" type="submit" value="Estoque">
+            <input class="" type="submit" value="Estoque">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Picking</summary>
+    <details class="">
+        <summary class="">Picking</summary>
         <form action="t_picking_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="t_nota_e_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_e_a.php">
-            <input class="details-small" type="submit" value="Qualitativo (WIP)">
+            <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
         <form action="t_quantitativo_e_a.php">
-            <input class="details-small" type="submit" value="Quantitativo (WIP)">
+            <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Relatórios</summary>
+    <details class="">
+        <summary class="">Relatórios</summary>
         <form action="t_relatorios_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <div class="menu">Menu</div>
-    <div class="caixa">
+    <div class="">Menu</div>
+    <div class="">
 
         <?php
 $hostname = "127.0.0.1";
@@ -95,46 +95,46 @@ if ($conexao->connect_errno) {
             $s14 = $row['13'];//Andar
             $s15 = $row['14'];//Ap
             echo '
-            <table class="tabela-mini2">
+            <table class="">
                 <tr>
-                    <td class="texto-tabela-mini2">Nome do produto
-                    <input class="botao-tabela-3" type="text" value="'.$s4.'" disabled></td>
-                    <td class="texto-tabela-mini2">Tipo do produto
-                    <input class="botao-tabela-3" type="text" value="'.$s1.'" disabled></td>
-                    <td class="texto-tabela-mini2">Validade
-                    <input class="botao-tabela-3" type="text" value="'.$s2.'" disabled></td>
+                    <td class="">Nome do produto
+                    <input class="" type="text" value="'.$s4.'" disabled></td>
+                    <td class="">Tipo do produto
+                    <input class="" type="text" value="'.$s1.'" disabled></td>
+                    <td class="">Validade
+                    <input class="" type="text" value="'.$s2.'" disabled></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini2">Lote
-                    <input class="botao-tabela-3" type="text" value="'.$s3.'" disabled></td>
-                    <td class="texto-tabela-mini2">Marca do Produto
-                    <input class="botao-tabela-3" type="text" value="'.$s5.'" disabled></td>
-                    <td class="texto-tabela-mini2">Peso
-                    <input class="botao-tabela-3" type="text" value="'.$s10.'" disabled></td>
+                    <td class="">Lote
+                    <input class="" type="text" value="'.$s3.'" disabled></td>
+                    <td class="">Marca do Produto
+                    <input class="" type="text" value="'.$s5.'" disabled></td>
+                    <td class="">Peso
+                    <input class="" type="text" value="'.$s10.'" disabled></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini2">Unidade
-                    <input class="botao-tabela-3" type="text" value="'.$s6.'" name="qtd" disabled></td>
-                    <td class="texto-tabela-mini2">Quantidade
-                    <input class="botao-tabela-3" type="text" value="'.$s7.'" name="qtd" disabled></td>
-                    <td class="texto-tabela-mini2">R$/unit
-                    <input class="botao-tabela-3" type="text" value="'.$s9.'" name="unit" disabled></td>
+                    <td class="">Unidade
+                    <input class="" type="text" value="'.$s6.'" name="qtd" disabled></td>
+                    <td class="">Quantidade
+                    <input class="" type="text" value="'.$s7.'" name="qtd" disabled></td>
+                    <td class="">R$/unit
+                    <input class="" type="text" value="'.$s9.'" name="unit" disabled></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini2">R$/Total
-                    <input class="botao-tabela-3" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
-                    <td class="texto-tabela-mini2">Hangar
-                    <input class="botao-tabela-3" type="text" value="'.$s11.'" name="" disabled></td>
-                    <td class="texto-tabela-mini2">Rua
-                    <input class="botao-tabela-3" type="text" value="'.$s12.'" name="" disabled></td>
+                    <td class="">R$/Total
+                    <input class="" type="text" value="'.$s9*$s7.'" name="total" disabled></td>
+                    <td class="">Hangar
+                    <input class="" type="text" value="'.$s11.'" name="" disabled></td>
+                    <td class="">Rua
+                    <input class="" type="text" value="'.$s12.'" name="" disabled></td>
                 </tr>
                 <tr>
-                    <td class="texto-tabela-mini2">Coluna
-                    <input class="botao-tabela-3" type="text" value="'.$s13.'" name="" disabled></td>
-                    <td class="texto-tabela-mini2">Andar
-                    <input class="botao-tabela-3" type="text" value="'.$s14.'" name="" disabled></td>
-                    <td class="texto-tabela-mini2">Apartamento
-                    <input class="botao-tabela-3" type="text" value="'.$s15.'" name="" disabled></td>
+                    <td class="">Coluna
+                    <input class="" type="text" value="'.$s13.'" name="" disabled></td>
+                    <td class="">Andar
+                    <input class="" type="text" value="'.$s14.'" name="" disabled></td>
+                    <td class="">Apartamento
+                    <input class="" type="text" value="'.$s15.'" name="" disabled></td>
                 </tr>
             </table>
             <hr>

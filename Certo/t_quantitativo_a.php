@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="a_site.css">
+    <link rel="stylesheet" href="">
     <meta http-equiv="Content-Type" content="text/html" ;charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 </head>
 
 <body>
-    <div id="tipo">Aluno</div>
-    <div class="fundo"></div>
-    <details class="details-all">
-        <summary class="details-big">Recebimento</summary>
+    <div id="">Aluno</div>
+    <div class=""></div>
+    <details class="">
+        <summary class="">Recebimento</summary>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_qualitativo_a.php">
-            <input class="details-small" type="submit" value="Qualitativo">
+            <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
-            <input class="details-small" type="submit" value="Quantitativo">
+            <input class="" type="submit" value="Quantitativo">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Controle</summary>
+    <details class="">
+        <summary class="">Controle</summary>
         <form action="t_docas_r_a.php">
-            <input class="details-small" type="submit" value="Controle">
+            <input class="" type="submit" value="Controle">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Estoque</summary>
+    <details class="">
+        <summary class="">Estoque</summary>
         <form action="t_estoque_a.php">
-            <input class="details-small" type="submit" value="Estoque">
+            <input class="" type="submit" value="Estoque">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Picking</summary>
+    <details class="">
+        <summary class="">Picking</summary>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details-all">
-        <summary class="details-big">Expedição</summary>
+    <details class="">
+        <summary class="">Expedição</summary>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="Nota (WIP)">
+            <input class="" type="submit" value="Nota (WIP)">
         </form>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="Qualitativo (WIP)">
+            <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="Quantitativo (WIP)">
+            <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
-    <details class="details-all">
-        <summary class="details-big">Relatórios</summary>
+    <details class="">
+        <summary class="">Relatórios</summary>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
         <form action="t_a.php">
-            <input class="details-small" type="submit" value="WIP">
+            <input class="" type="submit" value="WIP">
         </form>
     </details>
-    <div class="menu">Menu</div>
-    <div class="caixa">
+    <div class="">Menu</div>
+    <div class="">
         <form action="t_quantitativo_a.php" method="POST">
-            <div class="quadrado-quantitativo">
-                <div class="quantitativo-texto">Digite o Código do fornecedor</div>
-                <input class="quantitativo-input-pedido" type="number" name="cod_forne">
-                <input class="quantitativo-enviar-pedido" type="submit">
-                <div class="quadrado-quantitativo-2">
+            <div class="">
+                <div class="">Digite o Código do fornecedor</div>
+                <input class="" type="number" name="cod_forne">
+                <input class="" type="submit">
+                <div class="">
         </form>
         <?php
     session_start();
@@ -102,69 +102,55 @@
                 $s5 = $row['4'];
                 $s6 = $row['5'];
                 echo '
-                <div class="quadrado-produto">
-                    <div class="quantitativo-texto">Número da Nota Fiscal</div>
-                    <input class="quantitativo-input-pedido-nota" type="text" value="'.$s1.'" disabled>
+                <div class="">
+                    <div class="">Número da Nota Fiscal</div>
+                    <input class="" type="text" value="'.$s1.'" disabled>
                 </div>
-                <div class="quadrado-produto">
-                    <div class="quantitativo-texto">Nome do produto</div>
-                    <input class="quantitativo-input-pedido-nota" type="text" value="'.$s2.'" disabled>
+                <div class="">
+                    <div class="">Nome do produto</div>
+                    <input class="" type="text" value="'.$s2.'" disabled>
                 </div>
-                    <table class="quantitativo-margin">
+                    <table class="">
                         <tr>
                             <td>
-                                <div class="quantitativo-input-valor-texto">UN</div>
+                                <div class="">UN</div>
                             </td>
                             <td>
-                                <div class="quantitativo-input-valor-texto">QTD</div>
+                                <div class="">QTD</div>
                             </td>
                             <td>
-                                <div class="quantitativo-input-valor-texto">R$/unit</div>
+                                <div class="">R$/unit</div>
                             </td>
                             <td>
-                                <div class="quantitativo-input-valor-texto">R$Total</div>
+                                <div class="">R$Total</div>
                             </td>
                         </tr>
                         <tr>
-                            <td><input class="quantitativo-input-valor" type="text" value="'.$s3.'" name="un"></td>
-                            <td><input class="quantitativo-input-valor" type="text" value="'.$s4.'" name="qtd"></td>
-                            <td><input class="quantitativo-input-valor" type="text" value="'.$s5.'" name="unit"></td>
-                            <td><input class="quantitativo-input-valor" type="text" value="'.$s6.'" name="total"></td>
-                            <td><input class="quantativo-input-valor-submit" type="checkbox" name="produto"></td>
+                            <td><input class="" type="text" value="'.$s3.'" name="un"></td>
+                            <td><input class="" type="text" value="'.$s4.'" name="qtd"></td>
+                            <td><input class="" type="text" value="'.$s5.'" name="unit"></td>
+                            <td><input class="" type="text" value="'.$s6.'" name="total"></td>
+                            <td><input class="" type="checkbox" name="produto"></td>
                         </tr>
                     </table>
-                    <table class="quantitativo-margin-mini">
+                    <table class="">
                         <tr>
                             <td>
-                            <div class="quantitativo-input-valor-texto">Faltando</div>
+                            <div class="">Faltando</div>
                             </td>
                             <td>
-                                <input class="quantativo-input-valor-submit-mini" type="checkbox" name="falta">
+                                <input class="" type="checkbox" name="falta">
                             </td>
                             <td>
-                                <div class="quantitativo-input-valor-texto">Avariado</div>
+                                <div class="">Avariado</div>
                             </td>
                             <td>
-                                <input class="quantativo-input-valor-submit-mini" type="checkbox" name="avariado">
+                                <input class="" type="checkbox" name="avariado">
                             </td>
                         </tr>
                     </table>
                 ';
 }
-    $n_pedido=$_POST['cod_forne'];
-    $SQL = 'SELECT * FROM `produto_p` 
-    WHERE `n_pedido` = '.$n_pedido.';';
-    //Inserir no DB
-    $resultado = $conexao->query($SQL); //Envia para a tela de Login ao Cadastrar
-    if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
-	{
-		for($i=1;$i<=$resultado->num_rows;$i++){
-			$row = $resultado -> fetch_array();
-		}
-	} else {
-		$conexao -> close();
-		exit();
-	}            
             }
         }}}
 ?>
