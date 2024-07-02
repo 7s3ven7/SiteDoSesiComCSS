@@ -73,9 +73,9 @@ if ($conexao->connect_errno) {
     header("Location: ../../HTML/Aluno/recebimento.html");
     exit();
 } else {
-	$sql="SELECT produto.tipo,produto.data_v,produto.lote,produto.nome_p,produto.marca,produto.und,produto.quant_und,produto.quant_prod,produto.valor_und,produto.kg,estoque.anguar,estoque.rua,estoque.coluna,estoque.andar,estoque.ap 
-    FROM `produto_p` produto
-    JOIN `estoque_a` estoque ON produto.cod_inter = estoque.lote;";
+	$sql="SELECT p.tipo,p.data_v,p.lote,p.nome_prod,p.marca_prod,p.und,p.quant_und,p.quant_prod,p.valor_und,p.kg,e.anguar,e.rua,e.coluna,e.andar,e.ap 
+    FROM `produto_p` p
+    JOIN `estoque` e ON produto.cod_inter = estoque.lote;";
 	$resultado = $conexao->query($sql);
     if($resultado->num_rows != 0){
         while($row = mysqli_fetch_array($resultado)){
@@ -140,6 +140,8 @@ if ($conexao->connect_errno) {
             <hr>
             ';
         }
+    }else{
+        echo 'Sem produtos cadastrados no momento.';
     }
 }
         ?>
