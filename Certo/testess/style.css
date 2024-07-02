@@ -22,12 +22,40 @@ Exemplo-de-estrutura {
     transition: 0.25s;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Geral*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+hr {
+    width: 100.25%;
+    height: 1em;
+    background-color: white;
+    border: 0.01em solid white;
+    border-top: 0.01em solid black;
+    border-bottom: 0.01em solid black;
+    position: relative;
+    left: -0.125%;
+    margin-bottom: 1em;
+}
+
+/*
+.
+.
+.
+.
+.
+*/
 
 /*Textos*/
 .texto-grande-logar {
@@ -41,6 +69,14 @@ Exemplo-de-estrutura {
     color: gray;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Caixas*/
 .caixa-centralizador {
     width: 100vw;
@@ -51,13 +87,21 @@ Exemplo-de-estrutura {
     align-items: center;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Logar,Cadastro*/
-#caixa-logar {
+.caixa-logar-cadastro {
     background-color: whitesmoke;
     border: 0.05em solid black;
     border-radius: 1em;
     width: 30em;
-    height: 35em;
+    height: 40em;
     align-items: center;
     text-align: center;
     padding-top: 2.5em;
@@ -66,17 +110,43 @@ Exemplo-de-estrutura {
     margin-right: auto;
 }
 
-#caixa-logar-dentro {
+.caixa-logar-dentro {
     background-color: whitesmoke;
     width: 25em;
-    height: 10em;
+    height: 15em;
     align-items: left;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
 
+.caixa-cadastro-dentro {
+    background-color: whitesmoke;
+    width: 25em;
+    height: 15em;
+    align-items: left;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Tebelas*/
+
+/*
+.
+.
+.
+.
+.
+*/
 
 /*Botões*/
 .botao-logar-input {
