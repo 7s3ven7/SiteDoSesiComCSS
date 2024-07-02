@@ -86,29 +86,29 @@
         </form>
         <?php
             if(isset($_POST['vezes'])){
-                    $i = $_POST['vezes'];
+                $i = $_POST['vezes'];
                     if($i <= 0){
                         echo '
                         <br><br>
                         <div class="texto-produto">Digite um número superior!</div>';
                     }else{
-                    $l = $i;
-                    $numero = 1;
-                    $v1 = 'cod_fone';
-                    $v2 = 'tipo';
-                    $v3 = 'validade';
-                    $v4 = 'lote';
-                    $v5 = 'nome';
-                    $v6 = 'marca';
-                    $v7 = 'numero';
-                    $v8 = 'unidade';
-                    $v9 = 'quantidade_unidade';
-                    $v10 = 'quantidade_produto';
-                    $v11 = 'valor_unidade';
-                    $v12 = 'peso';
-                echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
-                echo'<br>';
-                    for($i;$i>0;$i){
+                        $l = $i;
+                        $numero = 1;
+                        $v1 = 'cod_fone';
+                        $v2 = 'tipo';
+                        $v3 = 'validade';
+                        $v4 = 'lote';
+                        $v5 = 'nome';
+                        $v6 = 'marca';
+                        $v7 = 'numero';
+                        $v8 = 'unidade';
+                        $v9 = 'quantidade_unidade';
+                        $v10 = 'quantidade_produto';
+                        $v11 = 'valor_unidade';
+                        $v12 = 'peso';
+                        echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
+                        echo'<br>';
+                            for($i;$i>0;$i){
                     $i -= 1;
                     echo'
             <div class="numero-produto">'.$numero.'° Produto</div>
