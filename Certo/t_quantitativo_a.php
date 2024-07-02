@@ -12,10 +12,10 @@
     <div class=""></div>
     <details class="">
         <summary class="">Recebimento</summary>
-        <form action="t_a.php">
+        <form action="t_nota_r_a.php">
             <input class="" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_a.php">
+        <form action="t_qualitativo_r_a.php">
             <input class="" type="submit" value="Qualitativo">
         </form>
         <form action="t_quantitativo_a.php">
@@ -36,32 +36,26 @@
     </details>
     <details class="">
         <summary class="">Picking</summary>
-        <form action="t_a.php">
-            <input class="" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_picking_a.php">
             <input class="" type="submit" value="WIP">
         </form>
     </details>
     <details class="">
         <summary class="">Expedição</summary>
-        <form action="t_a.php">
+        <form action="t_nota_e_a.php">
             <input class="" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_qualitativo_e_a.php">
             <input class="" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_a.php">
+        <form action="t_quantitativo_e_a.php">
             <input class="" type="submit" value="Quantitativo (WIP)">
         </form>
 
     </details>
     <details class="">
         <summary class="">Relatórios</summary>
-        <form action="t_a.php">
-            <input class="" type="submit" value="WIP">
-        </form>
-        <form action="t_a.php">
+        <form action="t_relatorios_a.php">
             <input class="" type="submit" value="WIP">
         </form>
     </details>

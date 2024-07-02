@@ -57,6 +57,16 @@ if ($conexao->connect_errno) {
 <body>
     <div class=""></div>
     <details class="">
+        <summary class="">Criações</summary>
+        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="" type="submit" value="Turmas"></div>
+        </form>
+        <form method="POST"
+            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <input class="" type="submit" value="Atividade"></div>
+        </form>
+    </details>
+    <details class="">
         <summary class="">Cadastros</summary>
         <form method="POST"
             action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
@@ -72,7 +82,8 @@ if ($conexao->connect_errno) {
                 action="t_cliente_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="" type="submit" value="Cadastro"></div>
             </form>
-            <form method="POST" action="t_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            <form method="POST"
+                action="t_pedido_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
                 <input class="" type="submit" value="Pedido"></div>
             </form>
         </details>
@@ -102,16 +113,7 @@ if ($conexao->connect_errno) {
             <input class="" type="submit" value="Quantitativo">
         </form>
         <form method="POST"
-            action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
-    <details class="">
-        <summary class="">Expedição</summary>
-        <form action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Quantitativo">
-        </form>
-        <form action="t_nota_e_pr.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
+            action="t_nota_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
             <input class="" type="submit" value="Nota Fiscal">
         </form>
     </details>
@@ -119,7 +121,7 @@ if ($conexao->connect_errno) {
     <div class="">Menu</div>
     <div class="">
 
-        <form method="POST" action="c_quantitativo_e_p.php">
+        <form method="POST" action="t_quantitativo_e_p.php">
             <table class="">
                 <tr>
                     <td>Código do fornecedor: </td>

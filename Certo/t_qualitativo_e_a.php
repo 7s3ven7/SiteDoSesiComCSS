@@ -85,14 +85,14 @@ echo '<!DOCTYPE html>
     </details>
     <details class="">
         <summary class="">Relatórios</summary>
-        <form action="t_a.php">
+        <form action="t_relatorios_a.php">
             <input class="" type="submit" value="WIP">
         </form>
     </details>
 
     <div class="">Menu</div>
 <div class="">
-        <form method="POST" action="c_qualitativo_r_a.php">
+        <form method="POST" action="t_qualitativo_e_a.php">
             <table class="">
                 <tr>
                     <td><div class="">Código Interno:</td>
@@ -214,19 +214,29 @@ echo '<!DOCTYPE html>
                 </tr>
 
             </table>
-            <input class="" type="submit" value="Enviar" left=5px>
+            <input class="" type="submit" value="Enviar" left=5px name="21">
         </form>
     </div>
 </body>
 </html>';
-?>
-    <?php
 
-if(isset($_POST['1'])){
-    $v1 = 'V';
-} else {
-    $v1 = 'F';
-}
+if(isset($_POST['21'])){
+    $hostname = "127.0.0.1";
+    $name = "root";
+    $password = "root";
+    $DB = "dados";
+    
+    $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+    if ($conexao->connect_errno){
+        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+        exit();
+    }else{
+    
+    if(isset($_POST['1'])){
+        $v1 = 'V';
+    } else {
+        $v1 = 'F';
+    }
 
 if(isset($_POST['2'])){
     $v2 = 'V';
@@ -332,4 +342,5 @@ $resultado = $conexao -> query($SQL);
 $conexao->close();
 header('Location: t_qualitativo_e_a.php', true, 301);
 exit();
+}}
 ?>
