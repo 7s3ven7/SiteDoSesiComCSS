@@ -80,7 +80,7 @@ session_start();
             $senha = $digito[$numero];
             $i -= 1;
             $senha1 = $senha1.$senha;
-         }
+        }
         echo $senha1;
     }
 ?>
