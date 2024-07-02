@@ -9,27 +9,26 @@
 </head>
 
 <body>
-    <div class="">
-        <div class="">Bem Vindo!</div>
-        <div class="">
-            <form method="POST" action="index.php">
-                <div class="">Nome da conta</div>
-                <input class="" type="text" placeholder="Nome" name="nome_conta">
-                <div class="">Sua senha</div>
-                <input class="" type="password" placeholder="Senha" name="senha_conta">
+    <div class="caixa-centralizador">
+        <div id="caixa-logar">
+            <div class="">Bem Vindo!</div>
+            <div class="">
+                <form method="POST" action="index.php">
+                    <div class="">Nome da conta</div>
+                    <input class="" type="text" placeholder="Nome" name="nome_conta">
+                    <div class="">Sua senha</div>
+                    <input class="" type="password" placeholder="Senha" name="senha_conta">
+            </div>
+            <input class="" type="submit" value="Logar">
+            <hr>
+            </form>
+            <div class="">Novo aqui?</div>
+            <form action="t_cadastro_conta.php">
+                <input class="botao" value="Cadastrar-se" type="submit">
+            </form>
         </div>
-        <input class="" type="submit" value="Logar">
-        <hr>
-        </form>
-        <div class="">Novo aqui?</div>
-        <form action="t_cadastro_conta.php">
-            <input class="botao" value="Cadastrar-se" type="submit">
-        </form>
     </div>
-</body>
-
-</html>
-<!--Logar conta de usuario--><?php
+    <!--Logar conta de usuario--><?php
                 if(isset($_POST['nome_conta']) and isset($_POST['senha_conta'])){
 session_start();
 
@@ -69,7 +68,7 @@ $SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . 
 }
 }
 ?>
-<!--Trocar de senha--><?php
+    <!--Trocar de senha--><?php
                 if(isset($_POST['valor'])){
                 $senha = '';
                 $senha1 = '';
@@ -83,3 +82,7 @@ $SQL = "SELECT `tipo_u`, `nome_u`, `senha` FROM `usuario` WHERE `nome_u` = '" . 
                 }
                 echo $senha1;}}
                 ?>
+
+</body>
+
+</html>

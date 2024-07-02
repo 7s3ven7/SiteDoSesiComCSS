@@ -1,3 +1,22 @@
+/*Exemplo de estrutura*/
+Exemplo-de-estrutura {
+    background-color: white;
+    color: white;
+    border: 0.05em solid black;
+    width: 10em;
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 1em;
+    right: 1em;
+    top: 1em;
+    bottom: 1em;
+    transition: 0.25s;
+}
+
 /*Geral*/
 * {
     margin: 0;
@@ -6,9 +25,31 @@
 }
 
 /*Caixas*/
+.caixa-centralizador {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Logar,Cadastro*/
 #caixa-logar {
-    width: 10em;
+    background-color: whitesmoke;
+    border: 0.05em solid black;
+    width: 45em;
+    height: 45em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#caixa-logar-dentro {
+    background-color: whitesmoke;
+    border: 0.05em solid black;
+    width: 35em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Tebelas*/
