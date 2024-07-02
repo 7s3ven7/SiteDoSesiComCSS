@@ -22,6 +22,14 @@ Exemplo-de-estrutura {
     transition: 0.25s;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Geral*/
 * {
     margin: 0;
@@ -41,6 +49,14 @@ hr {
     margin-bottom: 1em;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Textos*/
 .texto-grande-logar {
     font-size: 3em;
@@ -53,6 +69,14 @@ hr {
     color: gray;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Caixas*/
 .caixa-centralizador {
     width: 100vw;
@@ -62,6 +86,14 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+/*
+.
+.
+.
+.
+.
+*/
 
 /*Logar,Cadastro*/
 .caixa-logar-cadastro {
@@ -98,7 +130,23 @@ hr {
     margin-right: auto;
 }
 
+/*
+.
+.
+.
+.
+.
+*/
+
 /*Tebelas*/
+
+/*
+.
+.
+.
+.
+.
+*/
 
 /*Botões*/
 .botao-logar-input {
