@@ -88,9 +88,6 @@ echo '<!DOCTYPE html>
         <form action="t_a.php">
             <input class="" type="submit" value="WIP">
         </form>
-        <form action="t_a.php">
-            <input class="" type="submit" value="WIP">
-        </form>
     </details>
 
     <div class="">Menu</div>
