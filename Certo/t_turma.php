@@ -108,7 +108,7 @@
                         $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
                         $resultado_1 = $conexao->query($sql);
                         if($resultado_1->num_rows != 0){
-                            echo '<div class=""><div class="">O nome: "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
+                            echo '<div class=""><div class="">O nome "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
                         }else{
                         $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
                         $resultado = $conexao->query($SQL);
