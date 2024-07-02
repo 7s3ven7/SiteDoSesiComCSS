@@ -12,7 +12,7 @@
 ?>
 
 <body>
-    <div class=""></div>
+    <div class="caixa-tela-geral"></div>
     <details class="">
         <summary class="">Criações</summary>
         <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
