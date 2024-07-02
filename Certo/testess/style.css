@@ -1,19 +1,24 @@
 /*Exemplo de estrutura*/
 Exemplo-de-estrutura {
+    font-size: 1em;
     background-color: white;
     color: white;
     border: 0.05em solid black;
+    border-radius: 15em;
     width: 10em;
     height: 10em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     left: 1em;
     right: 1em;
     top: 1em;
     bottom: 1em;
+    padding: 1em;
+    margin: 1em;
     transition: 0.25s;
 }
 
@@ -22,6 +27,18 @@ Exemplo-de-estrutura {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/*Textos*/
+.texto-grande-logar {
+    font-size: 3em;
+    color: green;
+    padding-bottom: 0.5em;
+}
+
+.texto-logar {
+    font-size: 1.5em;
+    color: gray;
 }
 
 /*Caixas*/
@@ -38,16 +55,23 @@ Exemplo-de-estrutura {
 #caixa-logar {
     background-color: whitesmoke;
     border: 0.05em solid black;
-    width: 45em;
-    height: 45em;
+    border-radius: 1em;
+    width: 30em;
+    height: 35em;
+    align-items: center;
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
     margin-left: auto;
     margin-right: auto;
 }
 
 #caixa-logar-dentro {
     background-color: whitesmoke;
-    border: 0.05em solid black;
-    width: 35em;
+    width: 25em;
+    height: 10em;
+    align-items: left;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,3 +79,22 @@ Exemplo-de-estrutura {
 /*Tebelas*/
 
 /*Botões*/
+.botao-logar-input {
+    width: 100%;
+    height: 3em;
+    border: 0.01em solid black;
+    border-radius: 1em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.botao-logar-submit {
+    font-size: 1.5em;
+    background-color: green;
+    color: whitesmoke;
+    width: 6.5em;
+    height: 2.5em;
+    border: 0.01em solid black;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}
