@@ -129,19 +129,9 @@
             $v3 = $v3.'p';
             $v4 = $v4.'p';
             $v5 = $v5.'p';
-<<<<<<< HEAD
-                    }              
-                echo '<table class="table">';
-                echo '<input class="botao" type="submit">';
-                echo'<div class="details-caixa-2"></div>';}}
-                echo'</form>';
-            ?>
-        <?php
-=======
                     }   
     if(isset($_POST['cnpj' and 'nome_empresa' and 'nome_gerente' and 'gmail' and 'cep' and 'telefone'])){
     echo 'oi'; 
->>>>>>> 8cec7033dbdb47354f5eb152201f3e9446b16671
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
