@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <div class="caixa-centralizador">
-        <div class="caixa-logar-cadastro">
-            <div CLASS="texto-grande-logar">Bem Vindo!</div>
+    <div class="caixa-fundo">
+        <div class="caixa-meio">
+            <div CLASS="texto-grande">Bem Vindo!</div>
+
+
             <div class="caixa-logar-dentro">
                 <form method="POST" action="index.php">
                     <div class="texto-logar">Nome da conta</div>

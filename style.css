@@ -22,53 +22,40 @@
     box-sizing: border-box;
 }
 
-hr {
-    width: 30vw;
-    left: -0.120vw;
-    position: absolute;
+body {
+    background-color: #adc0ff;
 }
 
 /*-----------------------------------------------------------------------------------------Layot-----------------------------------------------------------------------------------------*/
-/*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
-.caixa-fundo {
+.header {
+    background-color: #090836;
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    height: 8vh;
 }
 
-.caixa-meio {
-    background-color: whitesmoke;
-    border: 0.01em solid black;
-    width: 30vw;
-    height: 60vh;
+.icon1 {
+    background-color: white;
+    border-radius: 0.5em;
+    width: 2.5vw;
+    height: 5vh;
     position: fixed;
+    left: 2.5vw;
+    top: 1.5vh;
+}
+
+.texto-topo {
+    font-size: 1.5em;
+    color: #38528a;
+    background-color: #090836;
+    border-left: 0.01em solid #38528a;
+    width: 10vw;
+    height: 8vh;
     text-align: center;
-    align-items: center;
-    padding-top:
+    position: relative;
+    left: 10vw;
+    padding-top: 2vh;
 }
 
+/*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
-.texto-grande {
-    font-size: 4em;
-    color: darkgreen;
-}
-
-.texto-medio {
-    font-size: 2.5em;
-    color: darkgreen;
-}
-
-.texto-pequeno {
-    font-size: 1em;
-    color: darkgreen;
-}
-
-.texto-cinza {
-    font-size: 2.5em;
-    color: gray;
-}
-
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
