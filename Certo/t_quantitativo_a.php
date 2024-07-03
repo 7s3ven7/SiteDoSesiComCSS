@@ -70,7 +70,7 @@
         </form>
         <?php
     session_start();
-        
+            
     if(isset($_POST['cod_forne'])){
         $hostname = "127.0.0.1";
         $name = "root";
@@ -84,17 +84,17 @@
             exit();
         } else {
             $v1 = $_POST['cod_forne'];
-			$sql="SELECT * FROM `produto_p` WHERE `cod_forne` = '".$v1."';";
-			$resultado = $conexao->query($sql);
+            $sql="SELECT * FROM `produto_p` WHERE `cod_forne` = '".$v1."';";
+            $resultado = $conexao->query($sql);
         if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
-                $s2 = $row['1'];
+                $s2 = $row['7'];
                 $s3 = $row['2'];
                 $s4 = $row['3'];
-                $s5 = $row['4'];
-                $s6 = $row['5'];
+                $s5 = $row['8'];
+                $s6 = $s5*$s4;
                 echo '
                 <div class="">
                     <div class="">Número da Nota Fiscal</div>
@@ -144,9 +144,10 @@
                         </tr>
                     </table>
                 ';
-}
             }
-        }}}
+        }
+        }
+        }}
 ?>
     </div>
     </div>

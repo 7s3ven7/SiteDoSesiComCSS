@@ -86,31 +86,32 @@
                 <br>
                 <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
             </form>
-            <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
-                    $hostname = "127.0.0.1";
-                    $name = "root";
-                    $password = "root";
-                    $DB = "dados";
-                    $conexao = new mysqli($hostname, $name, $password, $DB);
-                    if ($conexao->connect_errno) {
-                        echo "Failes conection: " . $conexao->connect_error;
-                        exit();
-                    } else
-                    {
-                        $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
-                        $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
-                        $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
-                        $resultado_1 = $conexao->query($sql);
-                        if($resultado_1->num_rows != 0){
-                            echo '<div class=""><div class="">O nome "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
-                        }else{
-                        $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
-                        $resultado = $conexao->query($SQL);
-                        $conexao->close();
-                        //header("Location: t_atividade.php");
-                    }
-                }}
-                ?>
+<?php 
+    if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
+        $hostname = "127.0.0.1";
+        $name = "root";
+        $password = "root";
+        $DB = "dados";
+        $conexao = new mysqli($hostname, $name, $password, $DB);
+        if ($conexao->connect_errno) {
+            echo "Failes conection: " . $conexao->connect_error;
+            exit();
+        } else {
+            $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
+            $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
+            $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
+            $resultado_1 = $conexao->query($sql);
+            if($resultado_1->num_rows != 0){
+                 echo '<div class=""><div class="">O nome "'.$nome_turma.'" já esta em uso, tente outro</div></div>';
+            }else{
+            $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
+            $resultado = $conexao->query($SQL);
+            $conexao->close();
+            //header("Location: t_atividade.php");
+            }
+        }
+    }
+?>
         </div>
     </div>
     <div class="menu">Menu</div>
