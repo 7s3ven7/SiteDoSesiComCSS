@@ -88,8 +88,7 @@ echo '<!DOCTYPE html>
                     $row = $resultado -> fetch_array();
                 }
             } else {
-                $conexao -> close();
-                header("Location: t_qualitativo_r_a.php");
+                echo 'Nenhum produto encontrado';
                 exit();
             }
 echo '

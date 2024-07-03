@@ -77,7 +77,7 @@ $DB = "dados";
 $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 if ($conexao->connect_errno) {
     echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    header("Location: ../../HTML/Aluno/recebimento.html");
+    header("Location: t_a.php");
     exit();
 } else {
 
