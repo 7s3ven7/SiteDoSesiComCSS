@@ -20,133 +20,133 @@
                     placeholder="opcional*"></div>
             <input class="" type="submit">
         </form>
-        <?php
-                $hostname = "127.0.0.1";
-                $name = "root";
-                $password = "root";
-                $DB = "dados";
+<?php
+    $hostname = "127.0.0.1";
+    $name = "root";
+    $password = "root";
+    $DB = "dados";
                 
-                $conexao = new mysqli($hostname, $name, $password, $DB);
-                if ($conexao->connect_errno) {
-                    echo "Failed connection: " . $conexao->connect_error;
-                    header("Location: ../../HTML/Aluno/recebimento.html");
-                    exit();
-                }elseif(isset($_POST['vezes_aleatorio'])) {
-                    $i = $_POST['vezes'];
-                    $ii = $_POST['vezes_aleatorio'];
-                    $ll = $ii;
-                    $l = $i;
-                    $li = $l - $ll;
-                    $numero = 1;
-                    $v1 = 'cod_fone';
-                    $v2 = 'tipo';
-                    $v3 = 'validade';
-                    $v4 = 'lote';
-                    $v5 = 'nome';
-                    $v6 = 'marca';
-                    $v7 = 'numero';
-                    $v8 = 'unidade';
-                    $v9 = 'quantidade_unidade';
-                    $v10 = 'quantidade_produto';
-                    $v11 = 'valor_unidade';
-                    $v12 = 'peso';
-                echo'<form method="POST" action="teste_produto_aleatorizado.php?$l='.$l.'">';
-                    for($ii;$ii>0;$ii){    
-                    $array1 = array("1-213A56-23C123","H-234P25-213S90","7-2386K2-2962V3","0-O23I12-73T937","7-JS26D7-82M6V4");              
-                    $n1 = rand(0,4);
-                    $b1 = $array1[$n1];
-                    $array2 = array("pereciveis","não precesiveis","químicos","seca");              
-                    $n2 = rand(0,3);
-                    $b2 = $array2[$n2];
-                    $array3 = array("2028-03-09","2030-05-02","2027-10-01","2029-08-19","2028-10-29");              
-                    $n3 = rand(0,4);
-                    $b3 = $array3[$n3];
-                        if($b3 == $array3[0]){
-                            $array4_1 = array('0903202801','0903202802','0903202803');
-                            $n4_1 = rand(0,2);
-                            $b4 = $array4_1[$n4_1];
-                        }elseif($b3 == $array3[1]){
-                            $array4_2 = array('0205203001','0205203002','0205203003');
-                            $n4_2 = rand(0,2);
-                            $b4 = $array4_2[$n4_2];
-                        }elseif($b3 == $array3[2]){
-                            $array4_3 = array('0110202701','0110202702','0110202703');
-                            $n4_3 = rand(0,2);
-                            $b4 = $array4_3[$n4_3];
-                        }elseif($b3 == $array3[3]){
-                            $array4_4 = array('1908202901','1908202902','1908202903');
-                            $n4_4 = rand(0,2);
-                            $b4 = $array4_4[$n4_4];
-                        }elseif($b3 == $array3[4]){
-                            $array4_5 = array('2910202801','2910202802','2910202803');
-                            $n4_5 = rand(0,2);
-                            $b4 = $array4_5[$n4_5];};
-                        $bolacha = 0.5;
-                        $maça = 0.5;
-                        $banana = 0.5;
-                        $aveia = 0.25;
-                        $iogurt = 0.5;
-                        $borracha = 0.25;
-                        $lápis = 0.25;
-                        $carteira = 10;
-                        $cadeira = 5;
-                        $apontador = 0.5;
-                        $alcool = 1.5;
-                        $soda = 2.5;
-                        $inxofre = 1;
-                        $tinta = 25;
-                        $thinner = 3.5;
-                        $poliestireno = 0.05;
-                        $plástico = 0.25;
-                        $tecido = 2.5;
-                        $fio = 1;
-                        $celular = 0.5;
-                        if($b2 == $array2[0]){
-                            $array5_1 = array("bolacha","maça","banana","aveia","iogurt");
-                            $n5_1 = rand(0,4);
-                            $b5 = $array5_1[$n5_1];
-                        }elseif($b2 == $array2[1]){
-                            $array5_2 = array("borracha","lápis","carteira","cadeira","apontador");
-                            $n5_2 = rand(0,4);
-                            $b5 = $array5_2[$n5_2];
-                        }elseif($b2 == $array2[2]){
-                            $array5_3 = array("alcool","soda","inxofre","tinta","thinner");
-                            $n5_3 = rand(0,4);
-                            $b5 = $array5_3[$n5_3];
-                        }elseif($b2 == $array2[3]){
-                            $array5_4 = array("poliestireno","plástico","tecido","fio","celular");
-                            $n5_4 = rand(0,4);
-                            $b5 = $array5_4[$n5_4];};
-                        if($b5 == "balacha"){
-                            $b6 = "bolachock";
-                        }elseif($b5 == "maça" or $b5 == "banana" or $b5 == "aveia"){
-                            $b6 = "frutas fresca";
-                        }elseif($b5 == "iogurt"){
-                            $b6 = "dinone";
-                        }elseif($b5 == "borracha" or $b5 == "lápis" or $b5 == "apontador"){
-                            $b6 = "castelo do faber";
-                        }elseif($b5 == "carteira" or $b5 == "cadeira"){
-                            $b6 = "moveis do max";
-                        }elseif($b5 == "alcool" or $b5 == "soda" or $b5 == "inxofre"){
-                            $b6 = "MSC";
-                        }elseif($b5 == "tinta"){
-                            $b6 = "Tinturas do josué";
-                        }elseif($b5 == "thinner"){
-                            $b6 = "trienalli";
-                        }elseif($b5 == "poliestireno"){
-                            $b6 = "isorpo";
-                        }elseif($b5 == "plástico"){
-                            $b6 = "plastic tecidos";
-                        }elseif($b5 == "tecido" or $b5 == "fio"){
-                            $b6 = "mahala";
-                        }elseif($b5 == "celular"){
-                            $b6 = "aplee";
-                        }
-                    $b7 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9); 
-                    if(isset($array5_2)){           
-                        if($b5 == $array5_2[2] or $b5 == $array5_2[3]){
-                            $b8 = "pallet";
-                        }}else{
+    $conexao = new mysqli($hostname, $name, $password, $DB);
+    if ($conexao->connect_errno) {
+        echo "Failed connection: " . $conexao->connect_error;
+        header("Location: ../../HTML/Aluno/recebimento.html");
+        exit();
+    }elseif(isset($_POST['vezes_aleatorio'])) {
+        $i = $_POST['vezes'];
+        $ii = $_POST['vezes_aleatorio'];
+        $ll = $ii;
+        $l = $i;
+        $li = $l - $ll;
+        $numero = 1;
+        $v1 = 'cod_fone';
+        $v2 = 'tipo';
+        $v3 = 'validade';
+        $v4 = 'lote';
+        $v5 = 'nome';
+        $v6 = 'marca';
+        $v7 = 'numero';
+        $v8 = 'unidade';
+        $v9 = 'quantidade_unidade';
+        $v10 = 'quantidade_produto';
+        $v11 = 'valor_unidade';
+        $v12 = 'peso';
+        echo'<form method="POST" action="teste_produto_aleatorizado.php?$l='.$l.'">';
+            for($ii;$ii>0;$ii){    
+                $array1 = array("1-213A56-23C123","H-234P25-213S90","7-2386K2-2962V3","0-O23I12-73T937","7-JS26D7-82M6V4");              
+                $n1 = rand(0,4);
+                $b1 = $array1[$n1];
+                $array2 = array("pereciveis","não precesiveis","químicos","seca");              
+                $n2 = rand(0,3);
+                $b2 = $array2[$n2];
+                $array3 = array("2028-03-09","2030-05-02","2027-10-01","2029-08-19","2028-10-29");              
+                $n3 = rand(0,4);
+                $b3 = $array3[$n3];
+                if($b3 == $array3[0]){
+                    $array4_1 = array('0903202801','0903202802','0903202803');
+                    $n4_1 = rand(0,2);
+                    $b4 = $array4_1[$n4_1];
+                }elseif($b3 == $array3[1]){
+                    $array4_2 = array('0205203001','0205203002','0205203003');
+                    $n4_2 = rand(0,2);
+                    $b4 = $array4_2[$n4_2];
+                }elseif($b3 == $array3[2]){
+                    $array4_3 = array('0110202701','0110202702','0110202703');
+                    $n4_3 = rand(0,2);
+                    $b4 = $array4_3[$n4_3];
+                }elseif($b3 == $array3[3]){
+                    $array4_4 = array('1908202901','1908202902','1908202903');
+                    $n4_4 = rand(0,2);
+                    $b4 = $array4_4[$n4_4];
+                }elseif($b3 == $array3[4]){
+                    $array4_5 = array('2910202801','2910202802','2910202803');
+                    $n4_5 = rand(0,2);
+                    $b4 = $array4_5[$n4_5];};
+                $bolacha = 0.5;
+                $maça = 0.5;
+                $banana = 0.5;
+                $aveia = 0.25;
+                $iogurt = 0.5;
+                $borracha = 0.25;
+                $lápis = 0.25;
+                $carteira = 10;
+                $cadeira = 5;
+                $apontador = 0.5;
+                $alcool = 1.5;
+                $soda = 2.5;
+                $inxofre = 1;
+                $tinta = 25;
+                $thinner = 3.5;
+                $poliestireno = 0.05;
+                $plástico = 0.25;
+                $tecido = 2.5;
+                $fio = 1;
+                $celular = 0.5;
+                if($b2 == $array2[0]){
+                    $array5_1 = array("bolacha","maça","banana","aveia","iogurt");
+                    $n5_1 = rand(0,4);
+                    $b5 = $array5_1[$n5_1];
+                }elseif($b2 == $array2[1]){
+                    $array5_2 = array("borracha","lápis","carteira","cadeira","apontador");
+                    $n5_2 = rand(0,4);
+                    $b5 = $array5_2[$n5_2];
+                }elseif($b2 == $array2[2]){
+                    $array5_3 = array("alcool","soda","inxofre","tinta","thinner");
+                    $n5_3 = rand(0,4);
+                    $b5 = $array5_3[$n5_3];
+                }elseif($b2 == $array2[3]){
+                    $array5_4 = array("poliestireno","plástico","tecido","fio","celular");
+                    $n5_4 = rand(0,4);
+                    $b5 = $array5_4[$n5_4];};
+                if($b5 == "balacha"){
+                    $b6 = "bolachock";
+                }elseif($b5 == "maça" or $b5 == "banana" or $b5 == "aveia"){
+                    $b6 = "frutas fresca";
+                }elseif($b5 == "iogurt"){
+                    $b6 = "dinone";
+                }elseif($b5 == "borracha" or $b5 == "lápis" or $b5 == "apontador"){
+                    $b6 = "castelo do faber";
+                }elseif($b5 == "carteira" or $b5 == "cadeira"){
+                    $b6 = "moveis do max";
+                }elseif($b5 == "alcool" or $b5 == "soda" or $b5 == "inxofre"){
+                    $b6 = "MSC";
+                }elseif($b5 == "tinta"){
+                    $b6 = "Tinturas do josué";
+                }elseif($b5 == "thinner"){
+                    $b6 = "trienalli";
+                }elseif($b5 == "poliestireno"){
+                    $b6 = "isorpo";
+                }elseif($b5 == "plástico"){
+                    $b6 = "plastic tecidos";
+                }elseif($b5 == "tecido" or $b5 == "fio"){
+                    $b6 = "mahala";
+                }elseif($b5 == "celular"){
+                    $b6 = "aplee";
+                }
+                $b7 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9); 
+                if(isset($array5_2)){           
+                    if($b5 == $array5_2[2] or $b5 == $array5_2[3]){
+                        $b8 = "pallet";
+                    }}else{
                             $array8_1 = array("caixa","pallet");
                             $n8 = rand(0,1);
                             $b8 = $array8_1[$n8];}
@@ -173,7 +173,7 @@
                     <td>Lote: </td>
                     <td><input class="" type="text" name="'.$v4.'" value="'.$b4.'" placeholder="1"></td>
                     <td>Nome: </td>
-                    <td><input class="" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto"></td>
+                    <td><input class="" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto "></td>
                     <td>Marca do produto: </td>
                     <td><input class="" type="text" name="'.$v6.'" value="'.$b6.'" placeholder="marca"></td>
                 </tr>
