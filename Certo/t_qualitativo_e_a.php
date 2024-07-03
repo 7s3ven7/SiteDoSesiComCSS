@@ -56,12 +56,6 @@
                 </form>
             </details>
             <details class="">
-                <summary class="">Controle</summary>
-                <form action="t_docas_r_a.php">
-                    <input class="" type="submit" value="Controle">
-                </form>
-            </details>
-            <details class="">
                 <summary class="">Estoque</summary>
                 <form action="t_estoque_a.php">
                     <input class="" type="submit" value="Estoque">

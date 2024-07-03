@@ -92,17 +92,17 @@
                 <br>
                 <input class="" type="submit" value="Cadastrar turma">
             </form>
-            <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
-                    $hostname = "127.0.0.1";
-                    $name = "root";
-                    $password = "root";
-                    $DB = "dados";
-                    $conexao = new mysqli($hostname, $name, $password, $DB);
-                    if ($conexao->connect_errno) {
-                        echo "Failes conection: " . $conexao->connect_error;
-                        exit();
-                    } else
-                    {
+<?php 
+    if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
+        $hostname = "127.0.0.1";
+        $name = "root";
+        $password = "root";
+        $DB = "dados";
+        $conexao = new mysqli($hostname, $name, $password, $DB);
+        if ($conexao->connect_errno) {
+            echo "Failes conection: " . $conexao->connect_error;
+            exit();
+        } else {
                         $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
                         $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
                         $sql = "SELECT `turma` FROM `turma` WHERE `turma` = '".$nome_turma."'";
