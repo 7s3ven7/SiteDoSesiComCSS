@@ -67,7 +67,7 @@
                 <input class="" type="submit">
                 <div class="">
         </form>
-<?php
+        <?php
     if (isset($_POST['nome_p'])){
         $hostname = "127.0.0.1";
         $name = "root";

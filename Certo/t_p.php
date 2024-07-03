@@ -79,6 +79,7 @@
     </div>
     <div class="caixa-tela-informacao-geral"></div>
     <div class="menu">Menu</div>
+    <div id="conta-geral">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

@@ -167,7 +167,6 @@
             <input class="" type="submit" value="Enviar">
         </form>
     </div>
-    <div id="">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

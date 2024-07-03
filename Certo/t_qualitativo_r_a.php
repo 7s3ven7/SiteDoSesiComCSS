@@ -212,6 +212,139 @@
         $name = "root";
         $password = "root";
         $DB = "dados";
+                <div class="">Digite o Código do fornecedor</div>
+                <input class="" type="number" name="cod_forne">
+                <input class="" type="submit">
+                <div class="">
+        </form>';
+        if(isset($_POST['cod_forne'])){            
+            $v1 = $_POST['cod_forne'];
+			$sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+			$resultado = $conexao->query($sql);
+            if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
+            {
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                }
+            } else {
+                echo 'Nenhum produto encontrado';
+                exit();
+            }
+echo '
+        <form method="POST" action="t_qualitativo_r_a.php">
+            <table class="">
+                <tr>
+                    <td><div class="">Código do fornecedor:</td>
+                    <td>'.$row['cod_forne'].'</div></td>
+                    <td><div class="">Lotes: </div></td>
+                    <td>'.$row['lote'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Nome da empresa: </div></td>
+                    <td>'.$row['nome_e'].'</td>
+                    <td><div class="">CNPJ da empresa: </div></td>
+                    <td>'.$row['CNPJ_e'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Modelo do container: </div></td>
+                    <td>'.$row['modelo_contai'].'</td>
+                    <td><div class="">Navio: </div></td>
+                    <td>'.$row['navio'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Destinatário: </div></td>
+                    <td>'.$row['CNPJ_f'].'</td>
+                    <td><div class="">Tipo do container: </div></td>
+                    <td>'.$row['tipo_contai'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Lacre: </div></td>
+                    <td>'.$row['lacre'].'</td>
+                    <td><div class="">Lacre SIF: </div></td>
+                    <td>'.$row['lacre_SIF'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Temperatura: </div></td>
+                    <td>'.$row['temperatura'].'</td>
+                    <td><div class="">IMO: </div></td>
+                    <td>'.$row['IMO'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Número ONU: </div></td>
+                    <td>'.$row['n_ONU'].'</td>
+                    <td><div class="">Nome do produto: </div></td>
+                    <td>'.$row['nome_p'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Unidades: </td>
+                    <td>'.$row['und'].'</td>
+                    <td><div class="">Quantidade de produto: </div></td>
+                    <td>'.$row['quant_prod'].'</td>
+                </tr>
+                <tr>
+                    <td><div class="">Quantidade do unidade: </div></td>
+                    <td>'.$row['quant_und'].'</td>
+                </tr>         
+                <tr>
+                    <td>Container Bem Desgastado: </td>
+                    <td><input class="" type="checkbox" name="1"</td>
+                    <td>Avaria na Lateral Direita: </td>
+                    <td><input class="" type="checkbox" name="2"</td>
+                </tr>
+                    <tr>
+                    <td>Avaria na Lateral Esquerda: </td>
+                    <td><input class="" type="checkbox" name="3"</td>
+                    <td>Avaria no Teto: </td>
+                    <td><input class="" type="checkbox" name="4"</td>
+                </tr>
+                <tr>
+                    <td>Avaria na Frente: </td>
+                    <td><input class="" type="checkbox" name="5"</td>
+                    <td>Sem Lacre </td>
+                    <td><input class="" type="checkbox" name="6"</td>
+                </tr>
+                <tr>
+                    <td>Adesivos Avariados: </td>
+                    <td><input class="" type="checkbox" name="7"</td>
+                    <td>Excesso de Altura: </td>
+                    <td><input class="" type="checkbox" name="8"</td>
+                </tr>
+                <tr>
+                    <td>Excesso na Direita: </td>
+                    <td><input class="" type="checkbox" name="9"</td>
+                    <td>Excesso na Esquerda: </td>
+                    <td><input class="" type="checkbox" name="10"</td>
+                </tr>
+                <tr>
+                    <td>Excesso Frontal: </td>
+                    <td><input class="" type="checkbox" name="11"</td>
+                    <td>Painel Avariado: </td>
+                    <td><input class="" type="checkbox" name="12"</td>
+                </tr>
+                <tr>
+                    <td>Sem Cabo de Energia: </td>
+                    <td><input class="" type="checkbox" name="13"</td>
+                    <td>Sem Lona: </td>
+                    <td><input class="" type="checkbox" name="14"</td>
+                </tr>
+                <tr>
+                    <td>Canhoto Assinado: </td>
+                    <td><input class="" type="checkbox" name="15"</td>
+                    <td>Volume Correto: </td>
+                    <td><input class="" type="checkbox" name="16"</td>
+                </tr>
+                <tr>
+                    <td>Atraso: </td>
+                    <td><input class="" type="checkbox" name="17"</td>
+                    <td>Código Avariado: </td>
+                    <td><input class="" type="checkbox" name="18"</td>
+                </tr>
+                <tr>
+                    <td>Item Lacrado: </td>
+                    <td><input class="" type="checkbox" name="19"</td>
+                    <td>Doca 1: </td>
+                    <td><input class="" type="checkbox" name="20"</td>
+                </tr>
 
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno){
