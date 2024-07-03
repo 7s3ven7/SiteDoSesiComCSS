@@ -173,7 +173,7 @@
                     <td>Lote: </td>
                     <td><input class="" type="text" name="'.$v4.'" value="'.$b4.'" placeholder="1"></td>
                     <td>Nome: </td>
-                    <td><input class="" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto"></td>
+                    <td><input class="" type="text" name="'.$v5.'" value="'.$b5.'" placeholder="produto "></td>
                     <td>Marca do produto: </td>
                     <td><input class="" type="text" name="'.$v6.'" value="'.$b6.'" placeholder="marca"></td>
                 </tr>
