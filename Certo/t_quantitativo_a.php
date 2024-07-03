@@ -144,69 +144,10 @@
                         </tr>
                     </table>
                 ';
-}
-            if(mysqli_num_rows($resultado) > 0){
-                while($row = mysqli_fetch_array($resultado)){
-                    $s1 = $row['0'];
-                    $s2 = $row['1'];
-                    $s3 = $row['2'];
-                    $s4 = $row['3'];
-                    $s5 = $row['4'];
-                    $s6 = $row['5'];
-                    echo '
-                        <div class="">
-                            <div class="">Número da Nota Fiscal</div>
-                            <input class="" type="text" value="'.$s1.'" disabled>
-                        </div>
-                        <div class="">
-                            <div class="">Nome do produto</div>
-                            <input class="" type="text" value="'.$s2.'" disabled>
-                        </div>
-                        <table class="">
-                            <tr>
-                                <td>
-                                    <div class="">UN</div>
-                                </td>
-                                <td>
-                                    <div class="">QTD</div>
-                                </td>
-                                <td>
-                                    <div class="">R$/unit</div>
-                                </td>
-                                <td>
-                                    <div class="">R$Total</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input class="" type="text" value="'.$s3.'" name="un"></td>
-                                <td><input class="" type="text" value="'.$s4.'" name="qtd"></td>
-                                <td><input class="" type="text" value="'.$s5.'" name="unit"></td>
-                                <td><input class="" type="text" value="'.$s6.'" name="total"></td>
-                                <td><input class="" type="checkbox" name="produto"></td>
-                            </tr>
-                        </table>
-                        <table class="">
-                            <tr>
-                                <td>
-                                    <div class="">Faltando</div>
-                                </td>
-                                <td>
-                                    <input class="" type="checkbox" name="falta">
-                                </td>
-                                <td>
-                                    <div class="">Avariado</div>
-                                </td>
-                                <td>
-                                    <input class="" type="checkbox" name="avariado">
-                                </td>
-                            </tr>
-                        </table>
-                    ';
-                }
             }
         }
         }
-    }}
+        }}
 ?>
     </div>
     </div>
