@@ -191,7 +191,7 @@
                     $s13 = $row['12'];//Coluna
                     $s14 = $row['13'];//Andar
                     $s15 = $row['14'];//Ap
-                    $_SESSION['doca'];
+                    $s16 = $_SESSION['doca'];
                     echo '
                     <hr>
                     <table class="">
