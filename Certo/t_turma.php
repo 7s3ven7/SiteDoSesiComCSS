@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
 </head>
-<?php
-    $nome_atividade = $_GET['nome_atividade'];
-    $nome = $_GET['nome'];
-?>
+<?php $nome_atividade=$_GET['nome_atividade']; $nome=$_GET['nome']; ?>
 
 <body>
     <div class="caixa-menu-geral"></div>
@@ -79,19 +76,15 @@
         </details>
     </div>
     <div class="caixa-tela-informacao-geral">
-        <div class="">Crie sua Turma</div>
-        <div class="">
+        <div class="texto-grande-turma">Crie sua Turma</div>
+        <div class="caixa-turma">
             <form method="POST" action="t_turma.php">
-                <table class="">
-                    <tr>
-                        <td class="">Nome do grupo: </td>
-                        <td><input class="" type="text" placeholder="Nome" name="nome_grupo"></td>
-                        <td class="">Quantidade de alunos: </td>
-                        <td><input class="" type="text" placeholder="Alunos" name="qnt_aluno"></td>
-                    <tr>
-                </table>
+                <div class="texto-cinza-turma">Nome do grupo:</div>
+                <input class="botao-turma-input" type="text" value="Nome" name="nome_grupo">
+                <div class="texto-cinza-turma">Quantidade de alunos: </div>
+                <input class="botao-turma-input" type="text" value="qtn. alunos" name="qnt_aluno">
                 <br>
-                <input class="" type="submit" value="Cadastrar turma">
+                <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
             </form>
             <?php if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
                     $hostname = "127.0.0.1";
