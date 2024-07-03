@@ -1,4 +1,5 @@
 <?php
+session_start();
 $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
@@ -78,9 +79,10 @@ echo '<!DOCTYPE html>
                 <input class="" type="submit">
                 <div class="">
         </form>';
-        if(isset($_POST['cod_forne'])){            
-            $v1 = $_POST['cod_forne'];
-			$sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+        if(isset($_POST['cod_forne'])){           
+            $v = $_POST['cod_forne'];
+            $_SESSION['cod_forne'] = $v;
+			$sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v."';";
 			$resultado = $conexao->query($sql);
             if($resultado->num_rows != 0) //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
             {
@@ -215,17 +217,7 @@ echo '
 </html>';
 }}
 if(isset($_POST['21'])){
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
-
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-if ($conexao->connect_errno){
-    echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-    exit();
-}else{
-
+    
 if(isset($_POST['1'])){
     $v1 = 'V';
 } else {
@@ -346,9 +338,11 @@ if(isset($_POST['20'])){
     $v20 = 'F';
 }
 
-$SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`) 
-    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'");';
-}
+$_SESSION['doca'] = $v20;
+
+$SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`, `cod_forne`) 
+    VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
+
 
 $resultado = $conexao -> query($SQL);
 

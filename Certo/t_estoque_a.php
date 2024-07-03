@@ -68,6 +68,7 @@
                 <div class="">
         </form>
         <?php
+    session_start();
     if (isset($_POST['nome_p'])){
         $hostname = "127.0.0.1";
         $name = "root";
@@ -105,6 +106,7 @@
                 $s13 = $row['12'];//Coluna
                 $s14 = $row['13'];//Andar
                 $s15 = $row['14'];//Ap
+                $_SESSION['doca'];
                 echo '
                 <hr>
                 <table class="">
@@ -189,6 +191,7 @@
                     $s13 = $row['12'];//Coluna
                     $s14 = $row['13'];//Andar
                     $s15 = $row['14'];//Ap
+                    $_SESSION['doca'];
                     echo '
                     <hr>
                     <table class="">

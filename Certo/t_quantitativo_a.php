@@ -90,11 +90,11 @@
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
                 $s1 = $row['0'];
-                $s2 = $row['1'];
+                $s2 = $row['7'];
                 $s3 = $row['2'];
                 $s4 = $row['3'];
-                $s5 = $row['4'];
-                $s6 = $row['5'];
+                $s5 = $row['8'];
+                $s6 = $s5*$s4;
                 echo '
                 <div class="">
                     <div class="">Número da Nota Fiscal</div>
