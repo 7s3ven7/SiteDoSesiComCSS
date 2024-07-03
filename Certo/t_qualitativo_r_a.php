@@ -19,7 +19,7 @@ $DB = "dados";
         <head>
             <link rel="stylesheet" href="">
             <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
-            meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta name="viewport" content="width=device-width", initial-scale="1.0">
         </head>
 
@@ -217,6 +217,7 @@ $DB = "dados";
         $name = "root";
         $password = "root";
         $DB = "dados";
+        echo '
                 <div class="">Digite o Código do fornecedor</div>
                 <input class="" type="number" name="cod_forne">
                 <input class="" type="submit">
