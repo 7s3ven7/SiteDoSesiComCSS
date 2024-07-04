@@ -12,15 +12,14 @@
     $nome = $_GET['nome'];
 ?>
 
-<body>
+<div class="">
+    <div class="">Crie sua atividade</div>
     <div class="">
-        <div class="">Crie sua atividade</div>
-        <div class="">
-            <form method="POST" action="index.php">
-                <div class="">Nome da atividade</div>
-                <input class="" type="text" placeholder="Nome" name="nome_atividade">
-                <div class="">Grupo da atividade</div>
-<?php
+        <form method="POST" action="index.php">
+            <div class="">Nome da atividade</div>
+            <input class="" type="text" placeholder="Nome" name="nome_atividade">
+            <div class="">Grupo da atividade</div>
+            <?php
     $hostname = "127.0.0.1";
     $name = "root";
     $password = "root"; 
@@ -50,8 +49,7 @@
         }
     }
 ?>
-        </div>
-        <div id="">Conta: <?php echo $nome;?></div>
-</body>
+    </div>
+    <div id="">Conta: <?php echo $nome;?></div>
 
-</html>
+    </html>
