@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 04-Jul-2024 às 11:37
+-- Generation Time: 04-Jul-2024 às 12:44
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -213,7 +213,8 @@ CREATE TABLE `pedido_cliente_p` (
   `nome_prod` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `valor_und` double DEFAULT NULL,
   `sinop` varchar(1550) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `solici` int(11) DEFAULT NULL
+  `solici` int(11) DEFAULT NULL,
+  `cod_forne` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
