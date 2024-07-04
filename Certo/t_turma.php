@@ -86,7 +86,7 @@
                 <br>
                 <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
             </form>
-<?php 
+            <?php 
     if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
         $hostname = "127.0.0.1";
         $name = "root";
@@ -107,7 +107,7 @@
             $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
             $resultado = $conexao->query($SQL);
             $conexao->close();
-            //header("Location: t_atividade.php");
+            header("location:t_atividade.php");
             }
         }
     }
