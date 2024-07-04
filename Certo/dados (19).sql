@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 02-Jul-2024 às 14:02
+-- Generation Time: 04-Jul-2024 às 11:07
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -403,17 +403,18 @@ CREATE TABLE `usuario` (
   `nome_u` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_prof` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tipo_u` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `tipo_u` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cod_grupo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome_u`, `senha`, `cod_prof`, `tipo_u`) VALUES
-(1, 'matheus', '123', '123', ''),
-(2, 'a', 'b', 'e', ''),
-(3, 'matheus', '1234', '', '');
+INSERT INTO `usuario` (`id_usuario`, `nome_u`, `senha`, `cod_prof`, `tipo_u`, `cod_grupo`) VALUES
+(2, 'a', 'b', 'e', '', ''),
+(3, 'matheus', '1234', '', '', ''),
+(4, 'matheus', '123', '123', 'Professor', '');
 
 --
 -- Indexes for dumped tables
@@ -568,7 +569,7 @@ ALTER TABLE `quantitativo_r_p`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
