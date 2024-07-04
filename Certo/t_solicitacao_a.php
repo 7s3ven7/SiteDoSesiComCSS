@@ -60,13 +60,6 @@
     </details>
     <div class="">Menu</div>
     <div class="">
-        <form action="t_picking_a.php" method="POST">
-            <div class="">
-                <div class="">Digite o nome do produto</div>
-                <input class="" type="text" name="nome_p">
-                <input class="" type="submit">
-                <div class="">
-        </form>
         <?php
     session_start();
         $hostname = "127.0.0.1";
@@ -81,31 +74,58 @@
             exit();
         } else {
             
-            $sql = "SELECT solici FROM 
-            `pedido_cliente_p` 
-            ORDER BY id_pedido;";            
+            $n_solici = $_POST['n_soli'];
+
+            $sql = "SELECT p.und, p.quant_und, p.quant_prod, p.nome_prod, e.anguar,e.rua,e.coluna,e.andar,e.ap
+            FROM `pedido_cliente_p` p
+            JOIN `estoque` e
+            ON p.cod_forne = e.cod_forne
+            WHERE solici = $n_solici
+            LIMIT 1;";            
 
 	        $resultado = $conexao->query($sql);
 
             if($resultado->num_rows != 0){
                 while($row = mysqli_fetch_array($resultado)){
-                $n_solici = $row['0'];
-                
-
+                $UND = $row['0'];
+                $Quant_und = $row['1'];
+                $Quant_prod = $row['2'];
+                $Nome_prod = $row['3'];
+                $Hangar = $row['4'];
+                $Rua = $row['5'];
+                $Coluna = $row['6'];
+                $Andar = $row['7'];
+                $Ap = $row['8'];
                 echo '
                 <table class="">
                     <tr>
-                        <form action="t_solicitacao_a.php" method="POST">
-                        <td class="">Nº Pedido: 
-                        <input class="" type="number" value="'.$n_solici.'" name="n_soli" disabled>
-                        <input class="" type="submit" value="abrir"</td>
-                        </form>
+                        <td class="">Nome do produto: 
+                        <input class="" type="number" value="'.$Nome_prod.'" disabled></td>
+                        <td class="">Unidade: 
+                        <input class="" type="number" value="'.$UND.'" disabled></td>
+                        <td class="">Quantidade de unidades: 
+                        <input class="" type="number" value="'.$Quant_und.'" disabled></td>
+                        <td class="">Quantidade de produtos: 
+                        <input class="" type="number" value="'.$Quant_prod.'" disabled><td>
+                    </tr>
+                    <tr>
+                        <td class="">Hangar: 
+                        <input class="" type="number" value="'.$Hangar.'" disabled></td>
+                        <td class="">Rua: 
+                        <input class="" type="number" value="'.$Rua.'" disabled></td>
+                        <td class="">Coluna: 
+                        <input class="" type="number" value="'.$Coluna.'" disabled></td>
+                        <td class="">Andar: 
+                        <input class="" type="number" value="'.$Andar.'" disabled></td>
+                        <td class="">Ap: 
+                        <input class="" type="number" value="'.$Ap.'" disabled></td>
+                        <td><input class="" type="submit" value="pegar" name="pegar"</td>
                     </tr>
                 <hr>
                 ';
                 }
             }else{
-                echo 'Produto não encontrado';
+                echo 'Produtos não encontrados';
             }
         }
 ?>
