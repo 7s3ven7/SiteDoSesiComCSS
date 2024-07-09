@@ -47,7 +47,6 @@
         } else {
             if(isset($_POST['nome_criado']) and isset($_POST['senha_criada']) and (isset($_POST['codigo_professor_criado'])) and $_POST['codigo_professor_criado']!=''){
                 $nome = $conexao->real_escape_string($_POST["nome_criado"]);
-                var_dump($_POST['codigo_professor_criado']);
                 $senha = $conexao->real_escape_string($_POST["senha_criada"]);
                 $codp = $conexao->real_escape_string($_POST["codigo_professor_criado"]);
                 $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
