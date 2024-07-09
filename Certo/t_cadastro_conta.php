@@ -19,7 +19,7 @@
                     <div class="texto-logar">Crie sua senha</div>
                     <input class="botao-logar-input" type="password" placeholder="Senha" name="senha_criada">
                     <div class="texto-logar">Código Interno</div>
-                    <input class="botao-logar-input" type="text" placeholder="*Opicional" name="codigo_interno_criado">
+                    <input class="botao-logar-input" type="text" placeholder="*Opcional" name="codigo_professor_criado">
                 </div>
                 <input class="botao-logar-submit" type="submit" value="Cadastrar-se">
                 <hr>
@@ -35,7 +35,7 @@
 </html>
 <!--Cadastro de usuario-->
 <?php
-    if(isset($_POST['nome_criado']) and isset($_POST['senha_criada'])and isset($_POST['codigo_interno_criado'])){
+    if(isset($_POST['nome_criado'])!='' and isset($_POST['senha_criada'])){
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -45,13 +45,23 @@
             echo "Failes conection: " . $conexao->connect_error;
             exit();
         } else {
-            $nome = $conexao->real_escape_string($_POST["nome_criado"]);
-            $senha = $conexao->real_escape_string($_POST["senha_criada"]);
-            $codp = $conexao->real_escape_string($_POST["codigo_interno_criado"]);
-            $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
-            $resultado = $conexao->query($SQL);
-            $conexao->close();
-            header("Location: index.php");
-        }
+            if(isset($_POST['nome_criado']) and isset($_POST['senha_criada']) and (isset($_POST['codigo_professor_criado'])) and $_POST['codigo_professor_criado']!=''){
+                $nome = $conexao->real_escape_string($_POST["nome_criado"]);
+                var_dump($_POST['codigo_professor_criado']);
+                $senha = $conexao->real_escape_string($_POST["senha_criada"]);
+                $codp = $conexao->real_escape_string($_POST["codigo_professor_criado"]);
+                $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
+                $resultado = $conexao->query($SQL);
+                $conexao->close();
+                //header("Location: index.php");
+            }else{
+                $nome = $conexao->real_escape_string($_POST["nome_criado"]);
+                $senha = $conexao->real_escape_string($_POST["senha_criada"]);
+                $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`) VALUES ("' . $nome . '","Aluno","' . $senha . '");';
+                $resultado = $conexao->query($SQL);
+                $conexao->close();
+                //header("Location: index.php");
+            }
+        }  
     }
 ?>

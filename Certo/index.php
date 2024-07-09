@@ -31,8 +31,9 @@
         </div>
     </div>
 </body>
-<!--Logar conta de usuario--><?php
-                if(isset($_POST['nome_conta']) and isset($_POST['senha_conta'])){
+<!--Logar conta de usuario-->
+<?php
+if(isset($_POST['nome_conta']) and isset($_POST['senha_conta'])){
 session_start();
 
     $hostname = "127.0.0.1";
