@@ -47,7 +47,9 @@ hr {
     position: fixed;
     text-align: center;
     align-items: center;
-    padding-top:
+    padding-top: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/

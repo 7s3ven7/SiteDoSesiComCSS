@@ -12,6 +12,7 @@
     <header>
         <div class="header">
             <img class="icon1" src="imagem/lar.png" />
+
             <div class="texto-topo">Informações</div>
             <div class="texto-topo ">Mais</div>
         </div>
