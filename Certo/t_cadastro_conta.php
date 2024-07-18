@@ -9,25 +9,29 @@
 </head>
 
 <body>
-    <div class="caixa-centralizador">
-        <div class="caixa-logar-cadastro">
-            <div class="texto-grande-logar">Cadastre-se</div>
+    <div class="caixa-fundo">
+        <div class="caixa-meio-cadastro">
+            <div class="texto-grande">Cadastre-se</div>
             <form method="POST" action="t_cadastro_conta.php">
                 <div class="caixa-cadastro-dentro">
-                    <div class="texto-logar">Nome da conta</div>
-                    <input class="botao-logar-input" type="text" placeholder="Nome" name="nome_criado">
-                    <div class="texto-logar">Crie sua senha</div>
-                    <input class="botao-logar-input" type="password" placeholder="Senha" name="senha_criada">
-                    <div class="texto-logar">Código Interno</div>
-                    <input class="botao-logar-input" type="text" placeholder="*Opcional" name="codigo_professor_criado">
+                    <div class="texto-medio">Nome da conta</div>
+                    <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado">
+                    <div class="texto-medio">Crie sua senha</div>
+                    <input class="botao-cadastro-input" type="password" placeholder="escolha uma senha forte"
+                        name="senha_criada">
+                    <div class="texto-medio">Código Interno</div>
+                    <input class="botao-cadastro-input" type="text" placeholder="código do seu crachá"
+                        name="codigo_professor_criado">
                 </div>
-                <input class="botao-logar-submit" type="submit" value="Cadastrar-se">
+                <input class="botao-cadastro-submit" type="submit" value="Cadastrar-se">
                 <hr>
             </form>
-            <div class="texto-grande-logar">Já tem conta?</div>
-            <form action="index.php">
-                <input class="botao-logar-submit" value="Logue-se" type="submit">
-            </form>
+            <div class="caixa-cadastro-dentro-baixo">
+                <div class="texto-grande-mini">Logar-se</div>
+                <form action="index.php">
+                    <input class="botao-cadastro-submit" value="Logue-se" type="submit">
+                </form>
+            </div>
         </div>
     </div>
 </body>

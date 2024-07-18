@@ -11,23 +11,23 @@
 <body>
     <div class="caixa-fundo">
         <div class="caixa-meio">
-            <div CLASS="texto-grande">Bem Vindo!</div>
-
-
+            <div class="texto-grande">Bem Vindo!</div>
             <div class="caixa-logar-dentro">
                 <form method="POST" action="index.php">
-                    <div class="texto-logar">Nome da conta</div>
-                    <input class="botao-logar-input" type="text" placeholder="Nome" name="nome_conta">
-                    <div class="texto-logar">Sua senha</div>
-                    <input class="botao-logar-input" type="password" placeholder="Senha" name="senha_conta">
+                    <div class="texto-medio">Nome da Conta</div>
+                    <input class="botao-logar-input" type="text" placeholder="Aluno 1" name="nome_conta">
+                    <div class="texto-medio">Senha da Conta</div>
+                    <input class="botao-logar-input" type="password" placeholder="SeNh@_SegUr@123" name="senha_conta">
             </div>
             <input class="botao-logar-submit" type="submit" value="Logar">
             <hr>
             </form>
-            <div class="texto-grande-logar">Novo aqui?</div>
-            <form action="t_cadastro_conta.php">
-                <input class="botao-logar-submit" value="Cadastrar-se" type="submit">
-            </form>
+            <div class="caixa-logar-dentro-baixo">
+                <div class="texto-grande-mini">Cadastrar-se</div>
+                <form action="t_cadastro_conta.php">
+                    <input class="botao-logar-submit" value="Cadastrar-se" type="submit">
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -23,12 +23,19 @@
 }
 
 hr {
-    width: 30vw;
-    left: -0.120vw;
+    width: 25vw;
+    height: 1vh;
+    background-color: white;
+    left: -1px;
     position: absolute;
+    border: 0.01em solid black;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
 }
 
-/*-----------------------------------------------------------------------------------------Layot-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------Logar/Cadastro-----------------------------------------------------------------------------------------*/
 /*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
 .caixa-fundo {
     width: 100vw;
@@ -42,14 +49,61 @@ hr {
 .caixa-meio {
     background-color: whitesmoke;
     border: 0.01em solid black;
-    width: 30vw;
+    border-radius: 1em;
+    width: 25vw;
     height: 60vh;
     position: fixed;
     text-align: center;
     align-items: center;
     padding-top: 3vh;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.caixa-logar-dentro {
+    height: 20vh;
+    padding-top: 1vh;
+    text-align: left;
+    align-items: left;
+    line-height: 250%;
+}
+
+.caixa-logar-dentro-baixo {
+    height: 10vh;
+    padding-top: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 150%;
+}
+
+.caixa-meio-cadastro {
+    background-color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 1em;
+    width: 25vw;
+    height: 60vh;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.caixa-cadastro-dentro {
+    height: 25vh;
+    padding-top: 0.5vh;
+    text-align: left;
+    align-items: left;
+    line-height: 225%;
+}
+
+.caixa-cadastro-dentro-baixo {
+    height: 10vh;
+    padding-top: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 75%;
 }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
@@ -58,9 +112,14 @@ hr {
     color: darkgreen;
 }
 
-.texto-medio {
+.texto-grande-mini {
     font-size: 2.5em;
     color: darkgreen;
+}
+
+.texto-medio {
+    font-size: 1.75em;
+    color: rgb(94, 94, 94);
 }
 
 .texto-pequeno {
@@ -74,3 +133,50 @@ hr {
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
+.botao-logar-input {
+    width: 100%;
+    height: 4vh;
+    color: rgb(99, 99, 99);
+    border: 0.01em;
+    border-radius: 1em;
+    border-bottom: 0.01em solid black;
+    text-align: center;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.botao-logar-submit {
+    width: 75%;
+    height: 5vh;
+    background-color: green;
+    color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-top: 2.5vh;
+    position: relative;
+}
+
+.botao-cadastro-input {
+    width: 100%;
+    height: 3.25vh;
+    color: rgb(99, 99, 99);
+    border: 0.01em;
+    border-radius: 1em;
+    border-bottom: 0.01em solid black;
+    text-align: center;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.botao-cadastro-submit {
+    width: 75%;
+    height: 4.5vh;
+    background-color: green;
+    color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-top: 2.5vh;
+    position: relative;
+}
