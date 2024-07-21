@@ -12,8 +12,8 @@
     $nome = $_GET['nome'];
 
     echo "<body>
-    <div class='caixa-menu-geral'></div>
-    <div class='espaco'>
+    <div class='caixa-menu-geral'>
+        <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
             <form method='POST'
@@ -73,13 +73,14 @@
     </div>
     <div class='caixa-tela-informacao-geral'></div>
     <div class='menu'>Menu</div>
-    <div id='conta-geral'>Professor - <?php echo $nome;?></div>
+    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>";
 }else{ $nome = $_GET['nome'];
 echo "
 
 <body>
     <div class='caixa-menu-geral'>
+        <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
             <form method='POST' action='t_turma.php?nome='".$nome."'>
@@ -134,7 +135,7 @@ echo "
     </div>
     <div class='caixa-tela-informacao-geral'></div>
     <div class='menu'>Menu</div>
-    <div id='conta-geral'>Professor - <?php echo $nome;?></div>
+    <div class='conta-geral'>Professor - ".$nome."</div>
 </body>";}
 ?>
 

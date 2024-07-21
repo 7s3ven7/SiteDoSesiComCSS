@@ -25,7 +25,7 @@
 hr {
     width: 25vw;
     height: 1vh;
-    background-color: white;
+    background-color: whitesmoke;
     left: -1px;
     position: absolute;
     border: 0.01em solid black;
@@ -60,10 +60,11 @@ summary {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
 }
 
 .caixa-meio {
-    background-color: whitesmoke;
+    background-color: rgb(222, 222, 222);
     border: 0.01em solid black;
     border-radius: 1em;
     width: 25vw;
@@ -93,7 +94,7 @@ summary {
 }
 
 .caixa-meio-cadastro {
-    background-color: whitesmoke;
+    background-color: rgb(222, 222, 222);
     border: 0.01em solid black;
     border-radius: 1em;
     width: 25vw;
@@ -197,16 +198,71 @@ summary {
     position: relative;
 }
 
-/*-----------------------------------------------------------------------------------------Tela_Professor-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------Telas_Professor/Aluno-----------------------------------------------------------------------------------------*/
 /*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
 .caixa-menu-geral {
     width: 15vw;
-    height: 100vh;
-    background-color: lightgray;
-    border-right: 0.5em solid gray;
+    min-height: 100%;
+    background-color: rgb(222, 222, 222);
+    border-right: 1vh solid gray;
+    position: absolute;
+    padding-bottom: 2.5vh;
+}
+
+.espaco {
+    width: 1vw;
+    height: 10vh;
+    background-color: transparent;
+}
+
+.caixa-tela-informacao-geral {
+    width: 85vw;
+    height: 92.5vh;
+    background-color: whitesmoke;
     position: fixed;
+    left: 15vw;
+    top: 7.5vh;
+}
+
+.conta-geral {
+    font-size: 3.5vh;
+    width: 85vw;
+    height: 7.5vh;
+    background-color: rgb(222, 222, 222);
+    border-bottom: 1vh solid gray;
+    position: fixed;
+    left: 15vw;
+    top: 0;
+    text-align: center;
+    padding-top: 1.5vh;
+    padding-bottom: 2vh;
 }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
+.menu {
+    width: 14vw;
+    height: 10vh;
+    font-size: 8vh;
+    position: fixed;
+    color: rgb(0, 50, 0);
+    background-color: rgb(222, 222, 222);
+    padding-left: 2.5vw;
+}
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
+.botao-sumario {
+    font-size: 1.25em;
+    width: 9.5vw;
+    height: 5vh;
+    background-color: green;
+    color: white;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    left: 3.5vw;
+    position: relative;
+    padding-left: 0.5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-top: 0.5vh;
+    text-align: left;
+}
