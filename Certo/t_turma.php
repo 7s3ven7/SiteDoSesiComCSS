@@ -8,11 +8,23 @@
     <title>Tela Inicial</title>
 </head>
 <?php
-    if(isset($_GET['nome_atividade'])){
-        $nome_atividade = $_GET['nome_atividade'];
-        $nome = $_GET['nome'];}
-    else{
-        $nome = $_GET['nome'];}
+    $nome = $_GET['nome'];
+    function redirect(){
+        global $nome;
+        if(isset($_GET['nome_atividade']) and isset($_GET['turma'])){
+            $nome_atividade = $_GET['nome_atividade'];
+            $turma = $_GET['turma'];
+            echo $nome.'&nome_atividade='.$nome_atividade.'&turma='.$turma;
+        }elseif(isset($_GET['nome_atividade'])){
+            $nome_atividade = $_GET['nome_atividade'];
+            echo $nome.'&nome_atividade='.$nome_atividade;
+        }elseif(isset($_GET['turma'])){
+            $turma = $_GET['turma'];
+            echo $nome.'&turma='.$turma;
+        }else{
+            echo $nome;
+        }
+    }
         ?>
 
 <body>
@@ -20,87 +32,61 @@
         <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_turma.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_turma.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_atividade.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_atividade.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Cadastros</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_fornecedor_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_fornecedor_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Fornecedor'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_empresa_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_empresa_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Empresa'>
             </form>
             <details class='details'>
                 <summary class='sumario'>Cliente</summary>
-                <form method='POST'
-                    action='
-                    <?php if(isset($_GET['nome_atividade'])){echo 't_cliente_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_cliente_p.php?nome='.$nome;}?>'>
+                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Cadastro'>
                 </form>
-                <form method='POST'
-                    action='
-                    <?php if(isset($_GET['nome_atividade'])){echo 't_pedido_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_pedido_p.php?nome='.$nome;}?>'>
+                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Pedido'>
                 </form>
             </details>
         </details>
         <details class='details'>
             <summary class='sumario'>Produto</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_produto_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_produto_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Recebimento</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_quantitativo_r_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_quantitativo_r_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_nota_r_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_nota_r_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Expedição</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_quantitativo_e_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_quantitativo_e_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_nota_e_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_nota_e_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
     </div>
-
-
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-esquerda-turma">
             <div class="texto-grande-turma">Crie sua Turma</div>
             <div class="caixa-esquerda-turma-dentro">
-                <form method="POST"
-                    action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_turma.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_turma.php?nome='.$nome;}?>'>
+                <form method="POST" action='t_turma.php?nome=<?php redirect()?>'>
                     <div class="texto-cinza-turma">Nome do grupo:</div>
                     <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
                     <div class="texto-cinza-turma">Quantidade de alunos: </div>
@@ -136,10 +122,10 @@
             <div class="caixa-direita-turma-dentro">
                 <table class="tabela-turma">
                     <tr>
-                        <td class="linha-topo">Nome</td>
-                        <td class="linha-topo">Qnt. Alunos</td>
-                        <td class="linha-topo">Ativo</td>
-                        <td class="linha-topo">Excluir</td>
+                        <td class="linha-topo-2">Nome</td>
+                        <td class="linha-topo-2">Qnt. Alunos</td>
+                        <td class="linha-ex-select-num-2">Ativo</td>
+                        <td class="linha-ex-select-num-2">Excluir</td>
                     </tr>
                     <?php
                     function verdadeiro(){
@@ -155,10 +141,10 @@
                         <tr>
                         <td class="linha-topo">'.$turma2.'</td>
                         <td class="linha-topo">'.$alunos.'</td>
-                        <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
+                        <td class="linha-ex-select-num"><input id="botao-select-turma" type="submit"></td>
                         </form>
                         <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
-                        <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                        <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                         </form>
                         </tr>';
                         }elseif(isset($_GET['turma'])){
@@ -173,10 +159,10 @@
                             <tr>
                             <td class="linha-topo">'.$turma2.'</td>
                             <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
+                            <td class="linha-ex-select-num"><input id="botao-select-turma" type="submit"></td>
                             </form>
                             <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
                         }else{
@@ -205,10 +191,10 @@
                             <tr>
                             <td class="linha-topo">'.$turma.'</td>
                             <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                            <td class="linha-ex-select-num"><input class="botao-select-turma" type="submit"></td>
                             </form>
                             <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
                     }}}else{
@@ -224,10 +210,10 @@
                             <tr>
                             <td class="linha-topo">'.$turma.'</td>
                             <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                            <td class="linha-ex-select-num"><input class="botao-select-turma" type="submit"></td>
                             </form>
                             <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
                     }}}}elseif(isset($_GET['nome_atividade'])){
@@ -243,10 +229,10 @@
                             <tr>
                             <td class="linha-topo">'.$turma.'</td>
                             <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                            <td class="linha-ex-select-num"><input class="botao-select-turma" type="submit"></td>
                             </form>
                             <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
                     }}else{
@@ -261,10 +247,10 @@
                             <tr>
                             <td class="linha-topo">'.$turma.'</td>
                             <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                            <td class="linha-ex-select-num"><input class="botao-select-turma" type="submit"></td>
                             </form>
                             <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
                     }}

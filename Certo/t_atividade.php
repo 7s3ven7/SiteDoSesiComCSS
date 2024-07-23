@@ -8,11 +8,23 @@
     <title>Tela Inicial</title>
 </head>
 <?php
-    if(isset($_GET['nome_atividade'])){
+    $nome = $_GET['nome'];
+function redirect(){
+    global $nome;
+    if(isset($_GET['nome_atividade']) and isset($_GET['turma'])){
         $nome_atividade = $_GET['nome_atividade'];
-        $nome = $_GET['nome'];}
-    else{
-        $nome = $_GET['nome'];}
+        $turma = $_GET['turma'];
+        echo $nome.'&nome_atividade='.$nome_atividade.'&turma='.$turma;
+    }elseif(isset($_GET['nome_atividade'])){
+        $nome_atividade = $_GET['nome_atividade'];
+        echo $nome.'&nome_atividade='.$nome_atividade;
+    }elseif(isset($_GET['turma'])){
+        $turma = $_GET['turma'];
+        echo $nome.'&turma='.$turma;
+    }else{
+        echo $nome;
+    }
+}
         ?>
 
 <body>
@@ -20,74 +32,52 @@
         <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_turma.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_turma.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_atividade.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_atividade.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Cadastros</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_fornecedor_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_fornecedor_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Fornecedor'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_empresa_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_empresa_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Empresa'>
             </form>
             <details class='details'>
                 <summary class='sumario'>Cliente</summary>
-                <form method='POST'
-                    action='
-                    <?php if(isset($_GET['nome_atividade'])){echo 't_cliente_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_cliente_p.php?nome='.$nome;}?>'>
+                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Cadastro'>
                 </form>
-                <form method='POST'
-                    action='
-                    <?php if(isset($_GET['nome_atividade'])){echo 't_pedido_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_pedido_p.php?nome='.$nome;}?>'>
+                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Pedido'>
                 </form>
             </details>
         </details>
         <details class='details'>
             <summary class='sumario'>Produto</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_produto_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_produto_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Recebimento</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_quantitativo_r_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_quantitativo_r_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_nota_r_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_nota_r_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
         <details class='details'>
             <summary class='sumario'>Expedição</summary>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_quantitativo_e_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_quantitativo_e_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
-            <form method='POST'
-                action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_nota_e_p.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_nota_e_p.php?nome='.$nome;}?>'>
+            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
@@ -96,8 +86,7 @@
         <div class="caixa-esquerda-turma">
             <div class="texto-grande-turma">Crie sua Atividade</div>
             <div class="caixa-esquerda-turma-dentro">
-                <form method="POST" action="
-                <?php echo 't_atividade.php?nome='.$nome?>">
+                <form method="POST" action="t_atividade.php?nome=<?php redirect()?>">
                     <div class="texto-cinza-turma">Nome da Atividade:</div>
                     <input class="botao-turma-input" type="text" placeholder="atividade" name="nome_atividade">
                     <div class="texto-cinza-turma">Turma destinada: </div>
@@ -137,12 +126,12 @@
             <div class="caixa-direita-turma-dentro">
                 <table class="tabela-turma">
                     <tr>
-                        <td class="linha-topo">Nome</td>
-                        <td class="linha-topo">Proprietario</td>
-                        <td class="linha-topo">Turma</td>
-                        <td class="linha-topo">Data</td>
-                        <td class="linha-topo">Ativo</td>
-                        <td class="linha-topo">Excluir</td>
+                        <td class="linha-topo-2">Nome</td>
+                        <td class="linha-topo-2">Proprietario</td>
+                        <td class="linha-topo-2">Turma</td>
+                        <td class="linha-topo-2">Data</td>
+                        <td class="linha-topo-2">Ativo</td>
+                        <td class="linha-topo-2">Excluir</td>
                     </tr>
                     <?php
                     global $conexao;
@@ -156,17 +145,18 @@
                     }
                     echo'</datalist>';
                     function usado(){
-                        if(isset($_GET['nome_atividade']) and isset($_GET['turma'])){
-                            global $conexao;
-                            global $nome;
-                            $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
-                            $resultado = $conexao->query($sql);
-                            $row = mysqli_fetch_array($resultado);
-                            $id_atividade = $row['0'];
-                            $id_usuario = $row['1'];
-                            $data_atividade = $row['2'];
-                            $turma = $row['3'];
-                            echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'&turma='.$_GET['turma'].'">
+                        if(isset($_GET['nome_atividade'])){
+                        global $conexao;
+                        global $nome;
+                        $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
+                        $resultado = $conexao->query($sql);
+                        $row = mysqli_fetch_array($resultado);
+                        $id_atividade = $row['0'];
+                        $id_usuario = $row['1'];
+                        $data_atividade = $row['2'];
+                        $turma = $row['3'];
+                        if(isset($_GET['turma'])){
+                            echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&turma='.$_GET['turma'].'">
                             <tr>
                                 <td class="linha-topo">'.$id_atividade.'</td>
                                 <td class="linha-topo">'.$id_usuario.'</td>
@@ -178,17 +168,8 @@
                                 <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                                 </form>
                             </tr>';
-                            }elseif(isset($_GET['nome_atividade'])){
-                                global $conexao;
-                                global $nome;
-                                $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
-                                $resultado = $conexao->query($sql);
-                                $row = mysqli_fetch_array($resultado);
-                                $id_atividade = $row['0'];
-                                $id_usuario = $row['1'];
-                                $data_atividade = $row['2'];
-                                $turma = $row['3'];
-                                echo  '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                            }else{
+                                echo  '<form method="POST" action="t_atividade.php?nome='.$nome.'">
                                 <tr>
                                     <td class="linha-topo">'.$id_atividade.'</td>
                                     <td class="linha-topo">'.$id_usuario.'</td>
@@ -200,21 +181,19 @@
                                     <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                                     </form>
                                 </tr>';
-                            }else{
+                            }}else{
                                 return 1;
                             }
                     }
                     
                     function desusado(){
+                        global $conexao;
+                        global $nome;
+                        $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
+                        $resultado = $conexao->query($sql);
+                        if(mysqli_num_rows($resultado) != null){
                         if(isset($_GET['turma'])){
-                            global $conexao;
-                            global $nome;
-                            $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
-                            $resultado = $conexao->query($sql);
-                            if(mysqli_num_rows($resultado) == null){
-                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
-                            }
-                            $row = mysqli_fetch_array($resultado);
+                            while($row = mysqli_fetch_array($resultado)){
                             $id_atividade = $row['0'];
                             $id_usuario = $row['1'];
                             $data_atividade = $row['2'];
@@ -231,11 +210,8 @@
                                 <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                                 </form>
                             </tr>';
-                            }else{
-                                global $conexao;
-                                global $nome;
-                                $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
-                                $resultado = $conexao->query($sql);
+                            }}
+                            elseif(mysqli_num_rows($resultado) > 0){
                                 while($row = mysqli_fetch_array($resultado)){
                                     $id_atividade = $row['0'];
                                     $id_usuario = $row['1'];
@@ -253,6 +229,9 @@
                                     <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                                     </form>
                                 </tr>';
+                            }}}else{ 
+                            if(mysqli_num_rows($resultado) == null){
+                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
                             }
                     }}
                     usado();

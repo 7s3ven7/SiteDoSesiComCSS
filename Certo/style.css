@@ -336,16 +336,39 @@ summary {
 
 .tabela-turma {
     width: 100%;
+    max-width: 35vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .linha-topo {
-    min-width: 90px;
-    width: 45%;
-    height: 10%;
+    min-width: 4.5vw;
+    max-width: 15vw;
+    max-height: 3vh;
     border: 0.01em solid black;
 }
+
+.linha-ex-select-num {
+    width: 5vw;
+    max-height: 3vh;
+    border: 0.01em solid black;
+}
+
+.linha-topo-2 {
+    font-size: 1.5em;
+    min-width: 4.5vw;
+    max-width: 15vw;
+    height: 4vh;
+    border: 0.01em solid black;
+}
+
+.linha-ex-select-num-2 {
+    font-size: 1.5em;
+    width: 5vw;
+    height: 4vh;
+    border: 0.01em solid black;
+}
+
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
@@ -392,19 +415,26 @@ summary {
 }
 
 .botao-select-turma {
-    width: 100%;
+    width: 2vh;
+    height: 2vh;
+    margin: 0.3vh;
     background-color: rgb(255, 80, 80);
     color: rgb(255, 80, 80);
 }
 
 #botao-select-turma {
-    width: 100%;
+    width: 2vh;
+    height: 2vh;
+    margin: 0.3vh;
     background-color: lightgreen;
     color: lightgreen;
 }
 
 .botao-exclusao-turma {
-    width: 100%;
-    color: black;
-    background-color: rgb(255, 173, 173);
+    width: 1vw;
+    height: 1vw;
+    border: 0.2em solid black;
+    border-radius: 50px;
+    color: red;
+    background-color: red;
 }
