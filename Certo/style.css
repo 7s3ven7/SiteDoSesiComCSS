@@ -341,8 +341,9 @@ summary {
 }
 
 .linha-topo {
+    min-width: 90px;
     width: 45%;
-    height: 2.5vh;
+    height: 10%;
     border: 0.01em solid black;
 }
 

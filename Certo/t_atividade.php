@@ -94,17 +94,19 @@
     </div>
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-esquerda-turma">
-            <div class="texto-grande-turma">Crie sua Turma</div>
+            <div class="texto-grande-turma">Crie sua Atividade</div>
             <div class="caixa-esquerda-turma-dentro">
-                <form method="POST"
-                    action='
-                <?php if(isset($_GET['nome_atividade'])){echo 't_turma.php?nome='.$nome.'&nome_atividade='.$nome_atividade;}else{echo 't_turma.php?nome='.$nome;}?>'>
-                    <div class="texto-cinza-turma">Nome do grupo:</div>
-                    <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
-                    <div class="texto-cinza-turma">Quantidade de alunos: </div>
-                    <input class="botao-turma-input" type="text" placeholder="qtn. alunos" name="qnt_aluno">
+                <form method="POST" action="
+                <?php echo 't_atividade.php?nome='.$nome?>">
+                    <div class="texto-cinza-turma">Nome da Atividade:</div>
+                    <input class="botao-turma-input" type="text" placeholder="atividade" name="nome_atividade">
+                    <div class="texto-cinza-turma">Turma destinada: </div>
+                    <input class="botao-turma-input" type="text" placeholder="turma" name="turma_destinada"
+                        list="turmas">
+                    <div class="texto-cinza-turma">Data máxida de entrega: </div>
+                    <input class="botao-turma-input" type="date" name="data">
                     <br>
-                    <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
+                    <input class="botao-turma-submit" type="submit" value="Criar Atividade">
                 </form>
             </div>
             <?php 
@@ -117,158 +119,144 @@
                     echo "Failes conection: " . $conexao->connect_error;
                     exit();
                 } else {
-                    if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
-                    $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
-                    $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
-                    $sql = 'SELECT `turma` FROM `turma` WHERE `turma` = "'.$nome_turma.'"';
+                    if(isset($_POST['nome_atividade']) != '' and isset($_POST['turma_destinada']) and $_POST['data'] and $_POST['turma_destinada'] != ''){
+                    $nome_atividade = $conexao->real_escape_string($_POST["nome_atividade"]);
+                    $turma_destinada = $conexao->real_escape_string($_POST["turma_destinada"]);
+                    $data = $conexao->real_escape_string($_POST["data"]);
+                    $sql = 'SELECT `id_atividade` FROM `atividade` WHERE `id_atividade` = "'.$nome_atividade.'"';
                     $resultado_1 = $conexao->query($sql);
                         if($resultado_1->num_rows != 0){
-                            echo '<div class="texto-aviso-turma">O nome '.$nome_turma.' já esta em uso, tente outro</div>';
+                            echo '<div class="texto-aviso-turma">O nome '.$nome_atividade.' já esta em uso, tente outro</div>';
                         }else{
-                            $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
+                            $SQL = 'INSERT INTO `atividade` (`id_atividade`,`id_usuario`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
                             $resultado = $conexao->query($SQL);
                             }}}?>
         </div>
         <div class="caixa-direita-turma">
-            <div class="texto-grande-turma">Lista das Turmas</div>
+            <div class="texto-grande-turma">Lista das Atividades</div>
             <div class="caixa-direita-turma-dentro">
                 <table class="tabela-turma">
                     <tr>
                         <td class="linha-topo">Nome</td>
-                        <td class="linha-topo">Qnt. Alunos</td>
+                        <td class="linha-topo">Proprietario</td>
+                        <td class="linha-topo">Turma</td>
+                        <td class="linha-topo">Data</td>
                         <td class="linha-topo">Ativo</td>
                         <td class="linha-topo">Excluir</td>
                     </tr>
                     <?php
-                    function verdadeiro(){
+                    global $conexao;
+                    global $nome;
+                    $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
+                    $resultado = $conexao->query($sql);
+                    echo '<datalist id="turmas">';
+                    while($row = mysqli_fetch_array($resultado)){
+                        $turma = $row['0'];
+                        echo'<option name="'.$turma.'">'.$turma.'</option>';
+                    }
+                    echo'</datalist>';
+                    function usado(){
                         if(isset($_GET['nome_atividade']) and isset($_GET['turma'])){
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma` WHERE `turma` = '".$_GET['turma']."';";
-                        $resultado = $conexao->query($sql);
-                        $row = mysqli_fetch_array($resultado);
-                        $turma2 = $row['0'];
-                        $alunos = $row['1'];
-                        echo '<form method="POST" action="t_turma.php?nome='.$nome.'&nome_atividade='.$_GET['nome_atividade'].'">
-                        <tr>
-                        <td class="linha-topo">'.$turma2.'</td>
-                        <td class="linha-topo">'.$alunos.'</td>
-                        <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
-                        </form>
-                        <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
-                        <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                        </form>
-                        </tr>';
-                        }elseif(isset($_GET['turma'])){
                             global $conexao;
                             global $nome;
-                            $sql = "SELECT `turma`,`quant_alu` FROM `turma` WHERE `turma` = '".$_GET['turma']."';";
+                            $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
                             $resultado = $conexao->query($sql);
                             $row = mysqli_fetch_array($resultado);
-                            $turma2 = $row['0'];
-                            $alunos = $row['1'];
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'">
+                            $id_atividade = $row['0'];
+                            $id_usuario = $row['1'];
+                            $data_atividade = $row['2'];
+                            $turma = $row['3'];
+                            echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'&turma='.$_GET['turma'].'">
                             <tr>
-                            <td class="linha-topo">'.$turma2.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
+                                <td class="linha-topo">'.$id_atividade.'</td>
+                                <td class="linha-topo">'.$id_usuario.'</td>
+                                <td class="linha-topo">'.$turma.'</td>
+                                <td class="linha-topo">'.$data_atividade.'</td>
+                                <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
+                                </form>
+                                <form method="POST" action="t_exclusao_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                                </form>
                             </tr>';
-                        }else{
-                            return 1;
-                        }
+                            }elseif(isset($_GET['nome_atividade'])){
+                                global $conexao;
+                                global $nome;
+                                $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
+                                $resultado = $conexao->query($sql);
+                                $row = mysqli_fetch_array($resultado);
+                                $id_atividade = $row['0'];
+                                $id_usuario = $row['1'];
+                                $data_atividade = $row['2'];
+                                $turma = $row['3'];
+                                echo  '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                <tr>
+                                    <td class="linha-topo">'.$id_atividade.'</td>
+                                    <td class="linha-topo">'.$id_usuario.'</td>
+                                    <td class="linha-topo">'.$turma.'</td>
+                                    <td class="linha-topo">'.$data_atividade.'</td>
+                                    <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
+                                    </form>
+                                    <form method="POST" action="t_exclusao_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                    <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                                    </form>
+                                </tr>';
+                            }else{
+                                return 1;
+                            }
                     }
-                    function falso(){
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        if(mysqli_num_rows($resultado) == null){
-                            echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
-                        }
-                        if(isset($turma2)){
-                        if(isset($_GET['nome_atividade'])){
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        while($row = mysqli_fetch_array($resultado)){
-                            $turma = $row['0'];
-                            $alunos = $row['1'];
-                            if($turma != $turma2){
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'&nome_atividade='.$_GET['nome_atividade'].'">
+                    
+                    function desusado(){
+                        if(isset($_GET['turma'])){
+                            global $conexao;
+                            global $nome;
+                            $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
+                            $resultado = $conexao->query($sql);
+                            if(mysqli_num_rows($resultado) == null){
+                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
+                            }
+                            $row = mysqli_fetch_array($resultado);
+                            $id_atividade = $row['0'];
+                            $id_usuario = $row['1'];
+                            $data_atividade = $row['2'];
+                            $turma = $row['3'];
+                            echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'&turma='.$_GET['turma'].'">
                             <tr>
-                            <td class="linha-topo">'.$turma.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
+                                <td class="linha-topo">'.$id_atividade.'</td>
+                                <td class="linha-topo">'.$id_usuario.'</td>
+                                <td class="linha-topo">'.$turma.'</td>
+                                <td class="linha-topo">'.$data_atividade.'</td>
+                                <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                                </form>
+                                <form method="POST" action="t_exclusao_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                                </form>
                             </tr>';
-                    }}}else{
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        while($row = mysqli_fetch_array($resultado)){
-                            $turma = $row['0'];
-                            $alunos = $row['1'];
-                            if($turma != $turma2){
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <tr>
-                            <td class="linha-topo">'.$turma.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
-                            </tr>';
-                    }}}}elseif(isset($_GET['nome_atividade'])){
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        
-                        while($row = mysqli_fetch_array($resultado)){
-                            $turma = $row['0'];
-                            $alunos = $row['1'];
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'&nome_atividade='.$_GET['nome_atividade'].'">
-                            <tr>
-                            <td class="linha-topo">'.$turma.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
-                            </tr>';
-                    }}else{
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        while($row = mysqli_fetch_array($resultado)){
-                            $turma = $row['0'];
-                            $alunos = $row['1'];
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <tr>
-                            <td class="linha-topo">'.$turma.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
-                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
-                            </tr>';
+                            }else{
+                                global $conexao;
+                                global $nome;
+                                $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
+                                $resultado = $conexao->query($sql);
+                                while($row = mysqli_fetch_array($resultado)){
+                                    $id_atividade = $row['0'];
+                                    $id_usuario = $row['1'];
+                                    $data_atividade = $row['2'];
+                                    $turma = $row['3'];
+                                echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                <tr>
+                                    <td class="linha-topo">'.$id_atividade.'</td>
+                                    <td class="linha-topo">'.$id_usuario.'</td>
+                                    <td class="linha-topo">'.$turma.'</td>
+                                    <td class="linha-topo">'.$data_atividade.'</td>
+                                    <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
+                                    </form>
+                                    <form method="POST" action="t_exclusao_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
+                                    <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                                    </form>
+                                </tr>';
+                            }
                     }}
-                }
-                verdadeiro();
-                    falso();
+                    usado();
+                    desusado();
                     ?>
                 </table>
             </div>
