@@ -157,7 +157,7 @@
                         <td class="linha-topo">'.$alunos.'</td>
                         <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
                         </form>
-                        <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma2.'">
+                        <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
                         <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                         </form>
                         </tr>';
@@ -175,7 +175,7 @@
                             <td class="linha-topo">'.$alunos.'</td>
                             <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
                             </form>
-                            <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma2.'">
+                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma2.'">
                             <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
@@ -207,7 +207,7 @@
                             <td class="linha-topo">'.$alunos.'</td>
                             <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
                             </form>
-                            <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
+                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
                             <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
@@ -226,7 +226,7 @@
                             <td class="linha-topo">'.$alunos.'</td>
                             <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
                             </form>
-                            <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
+                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
                             <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
@@ -245,7 +245,7 @@
                             <td class="linha-topo">'.$alunos.'</td>
                             <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
                             </form>
-                            <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
+                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
                             <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
@@ -263,7 +263,7 @@
                             <td class="linha-topo">'.$alunos.'</td>
                             <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
                             </form>
-                            <form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
+                            <form method="POST" action="t_exclusao_turma.php?nome='.$nome.'&turma='.$turma.'">
                             <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                             </form>
                             </tr>';
@@ -271,62 +271,6 @@
                 }
                 verdadeiro();
                     falso();
-                        /*$sql = 'SELECT DISTINCT `turma`,`quant_alu` FROM `turma`;';
-                        $resultado = $conexao->query($sql);
-                        if(mysqli_num_rows($resultado) > 0){
-                            while($row = mysqli_fetch_array($resultado)){
-                                $turma = $row['0'];
-                                $alunos = $row['1'];
-                                if(isset($_GET['turma'])){
-                                    $turma_get = $_GET['turma'];
-                                    if($turma == $turma_get){
-                                        if(isset($_GET['nome_atividade'])){
-                                            $nome_atividade = $_GET['nome_atividade'];
-                                        echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'&nome_atividade='.$nome_atividade.'">
-                                            <tr>
-                                            <td class="linha-topo">'.$turma.'</td>
-                                            <td class="linha-topo">'.$alunos.'</td>
-                                            <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
-                                            </form>
-                                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                                            </tr>';
-                                        }else{
-                                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
-                                            <tr>
-                                            <td class="linha-topo">'.$turma.'</td>
-                                            <td class="linha-topo">'.$alunos.'</td>
-                                            <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
-                                            </form>
-                                            <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                                            </tr>';
-                                        }
-                                    }
-                            }
-                            if(isset($_GET['nome_atividade'])){
-                                $nome_atividade = $_GET['nome_atividade'];
-                            echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'&nome_atividade='.$nome_atividade.'">
-                                <tr>
-                                <td class="linha-topo">'.$turma.'</td>
-                                <td class="linha-topo">'.$alunos.'</td>
-                                <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                                </form>
-                                <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                                </tr>';
-                            }else{
-                                echo '<form method="POST" action="t_turma.php?nome='.$nome.'&turma='.$turma.'">
-                                <tr>
-                                <td class="linha-topo">'.$turma.'</td>
-                                <td class="linha-topo">'.$alunos.'</td>
-                                <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                                </form>
-                                <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                                </tr>';
-                            }
-                        
-                        
-                        }if(mysqli_num_rows($resultado) == null){
-                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
-                            }}*/
                     ?>
                 </table>
             </div>
