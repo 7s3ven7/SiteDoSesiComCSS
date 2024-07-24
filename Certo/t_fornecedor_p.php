@@ -2,93 +2,88 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro produto</title>
 </head>
 <?php
-    $nome_atividade = $_GET['nome_atividade'];
     $nome = $_GET['nome'];
-?>
+    function redirect(){
+        global $nome;
+        if(isset($_GET['nome_atividade'])){
+            $nome_atividade = $_GET['nome_atividade'];
+            echo $nome.'&nome_atividade='.$nome_atividade;
+        }else{
+            echo $nome;
+        }
+    }
+        ?>
 
 <body>
-    <div class=""></div>
-    <details class="">
-        <summary class="">Criações</summary>
-        <form method="POST" action="t_turma.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Turmas"></div>
-        </form>
-        <form method="POST"
-            action="t_atividade.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Atividade"></div>
-        </form>
-    </details>
-    <details class="">
-        <summary class="">Cadastros</summary>
-        <form method="POST"
-            action="t_fornecedor_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Fornecedor"></div>
-        </form>
-        <form method="POST"
-            action="t_empresa_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Empresa"></div>
-        </form>
-        <details>
-            <summary class="">Cliente</summary>
-            <form method="POST"
-                action="t_cliente_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="" type="submit" value="Cadastro"></div>
+    <div class='caixa-menu-geral'>
+        <div class='espaco'></div>
+        <details class='details'>
+            <summary class='sumario'>Criações</summary>
+            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
+                <input class='botao-sumario' type='submit' value='Turmas'>
             </form>
-            <form method="POST"
-                action="t_pedido_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-                <input class="" type="submit" value="Pedido"></div>
+            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
-    </details>
-    <details class="">
-        <summary class="">Produto</summary>
-        <form method="POST"
-            action="t_produto_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Cadastro">
-        </form>
-    </details>
-    <details class="">
-        <summary class="">Recebimento</summary>
-        <form method="POST"
-            action="t_quantitativo_r_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Quantitativo"></div>
-        </form>
-        <form method="POST"
-            action="t_nota_r_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
-    <details class="">
-        <summary class="">Expedição</summary>
-        <form method="POST"
-            action="t_quantitativo_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Quantitativo">
-        </form>
-        <form method="POST"
-            action="t_nota_e_p.php?nome=<?php echo $nome;?>&nome_atividade=<?php echo $nome_atividade;?>">
-            <input class="" type="submit" value="Nota Fiscal">
-        </form>
-    </details>
-    <div class=""></div>
-    <div class="">Menu</div>
-    <div class="">
+        <details class='details'>
+            <summary class='sumario'>Cadastros</summary>
+            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Fornecedor'>
+            </form>
+            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Empresa'>
+            </form>
+            <details class='details'>
+                <summary class='sumario'>Cliente</summary>
+                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Cadastro'>
+                </form>
+                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Pedido'>
+                </form>
+            </details>
+        </details>
+        <details class='details'>
+            <summary class='sumario'>Produto</summary>
+            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Cadastro'>
+            </form>
+        </details>
+        <details class='details'>
+            <summary class='sumario'>Recebimento</summary>
+            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Quantitativo'>
+            </form>
+            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+            </form>
+        </details>
+        <details class='details'>
+            <summary class='sumario'>Expedição</summary>
+            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Quantitativo'>
+            </form>
+            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+            </form>
+        </details>
     </div>
-
-    <div class="">
-        <form method="POST" action="t_fornecedor_p.php?nome_atividade=<?php echo $nome_atividade;?>">
+    <div class='caixa-tela-informacao-geral'>
+        <form method="POST" action="t_fornecedor_p.php?nome=<?php redirect()?>">
             <div class="">Quantos fornecedores irás registrar: <input class="" type="number" name="vezes"
                     placeholder="Número de vezes*"></div>
             <input class="" type="submit">
         </form>
         <!--Aparecer na Tela-->
-<?php
+        <?php
     $hostname = "127.0.0.1";
     $name = "root";
     $password = "root";
@@ -165,7 +160,8 @@
     }
 ?>
     </div>
-    <div id="">Professor - <?php echo $nome;?></div>
+    <div class='menu'>Menu</div>
+    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

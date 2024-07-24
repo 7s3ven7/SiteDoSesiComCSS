@@ -296,6 +296,14 @@ summary {
     margin-top: 2.5vh;
 }
 
+.texto-medio-turma {
+    font-size: 4em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
 .texto-cinza-turma {
     font-size: 2em;
     color: rgb(100, 100, 100);
@@ -369,6 +377,22 @@ summary {
     border: 0.01em solid black;
 }
 
+.linha-topo-modificacao {
+    width: 30%;
+    height: 3.5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.linha-topo-modificacao-mini {
+    height: 3.5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.text-topo-turma-modificacao {
+    font-size: 1.5em;
+}
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
@@ -435,6 +459,47 @@ summary {
     height: 1vw;
     border: 0.2em solid black;
     border-radius: 50px;
-    color: red;
-    background-color: red;
+    color: rgb(255, 77, 77);
+    background-color: rgb(255, 77, 77);
+    transition: 0.15s;
+}
+
+.botao-exclusao-turma:hover {
+    color: rgb(206, 0, 0);
+    background-color: rgb(206, 0, 0);
+}
+
+.botao-modificacao-turma {
+    width: 100%;
+    height: 2vh;
+    background-color: white;
+    border: 0;
+    transition: 0.15s;
+    border: 0.01em solid black;
+    border-radius: 10px;
+}
+
+.botao-modificacao-turma:hover {
+    background-color: rgb(0, 161, 0);
+    color: white;
+    border: 0;
+}
+
+.botao-senha-turma {
+    width: 1vw;
+    height: 1vw;
+    background-color: salmon;
+    color: salmon;
+    top: -0.2vh;
+    position: relative;
+}
+
+.botao-modificar-turma {
+    width: 100%;
+    height: 3vh;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    border: white;
 }

@@ -10,6 +10,8 @@
         } else {
             $sql = "DELETE FROM `turma` WHERE `turma` = '".$_GET['turma']."'";
             $resultado = $conexao->query($sql);
+            $sql = "DELETE FROM `usuario` WHERE `cod_grupo` = '".$_GET['turma']."' ";
+            $resultado = $conexao->query($sql);
             header("location:t_turma.php?nome=".$_GET['nome']."");
         }
 ?>

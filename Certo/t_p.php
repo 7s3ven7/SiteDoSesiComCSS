@@ -10,16 +10,9 @@
     $nome = $_GET['nome'];
     function redirect(){
         global $nome;
-        if(isset($_GET['nome_atividade']) and isset($_GET['turma'])){
-            $nome_atividade = $_GET['nome_atividade'];
-            $turma = $_GET['turma'];
-            echo $nome.'&nome_atividade='.$nome_atividade.'&turma='.$turma;
-        }elseif(isset($_GET['nome_atividade'])){
+        if(isset($_GET['nome_atividade'])){
             $nome_atividade = $_GET['nome_atividade'];
             echo $nome.'&nome_atividade='.$nome_atividade;
-        }elseif(isset($_GET['turma'])){
-            $turma = $_GET['turma'];
-            echo $nome.'&turma='.$turma;
         }else{
             echo $nome;
         }
