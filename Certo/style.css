@@ -408,6 +408,20 @@ summary {
     font-size: 1.5em;
 }
 
+.linha-topo-modificacao-top {
+    width: 20%;
+    height: 5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.linha-topo-modificacao-mini-top {
+    width: 10%;
+    height: 5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
     font-size: 1.25em;

@@ -120,9 +120,9 @@
                 <table class="tabela-turma">
                     <tr>
                         <td class="linha-topo-2">Nome</td>
-                        <td class="linha-topo-2">Proprietario</td>
+                        <td class="linha-topo-2">Proprietário</td>
                         <td class="linha-topo-2">Turma</td>
-                        <td class="linha-topo-2">Data</td>
+                        <td class="linha-topo-2">Data M.</td>
                         <td class="linha-topo-2">Ativo</td>
                         <td class="linha-topo-2">Excluir</td>
                     </tr>
