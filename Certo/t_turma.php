@@ -114,11 +114,7 @@
                             $row2 = rand(0,49);
                             $row3 = rand(0,49);
                             $row4 = rand(0,49);
-                            $row5 = rand(0,49);
-                            $row6 = rand(0,49);
-                            $row7 = rand(0,49);
-                            $row8 = rand(0,49);
-                            $aleatorio = $array[$row1].$array[$row2].$array[$row3].$array[$row4].$array[$row5].$array[$row6].$array[$row7].$array[$row8];
+                            $aleatorio = $array[$row1].$array[$row2].$array[$row3].$array[$row4].rand(0,9).rand(0,9).rand(0,9).rand(0,9);
                             $ii = 8;
                             $sql = 'INSERT INTO `usuario` (`nome_u`,`senha`,`tipo_u`,`cod_grupo`) VALUES ("Aluno '.$i.'","'.$aleatorio.'","Aluno","'.$nome_turma.'")';
                             $resultado = $conexao->query($sql);
@@ -180,39 +176,60 @@
                         $resultado = $conexao->query($sql);
                         if(mysqli_num_rows($resultado) > 0){
                             if(isset($_GET['pagina'])){
-                                $i = $_GET['pagina'];
+                                $qnt_alu_pagina = $_GET['pagina'];
+                                $pagina = $qnt_alu_pagina;
                             }else{
-                                $i = 1;
+                                $qnt_alu_pagina = 1;
+                                $pagina = $qnt_alu_pagina;
                             }
-                            $i *= 5;
+                            $qnt_alu_pagina *= 15;
                             echo '
                             <div class="texto-medio-turma">Modificação dos Alunos</div>
                             <div class="caixa-direita-turma-dentro">
                             <table class="tabela-turma">
                             <tr>
                                 <td class="linha-topo-modificacao"><div class="text-topo-turma-modificacao">Nome</div></td>
-                                <td class="linha-topo-modificacao"><div class="text-topo-turma-modificacao">Senha</div></td>
+                                <td class="linha-topo-modificacao-mini"><div class="text-topo-turma-modificacao">Senha</div></td>
                                 <td class="linha-topo-modificacao-mini"><div class="text-topo-turma-modificacao">Conta</div></td>
-                                <td class="linha-topo-modificacao-mini"><div class="text-topo-turma-modificacao">Turma</div></td>
+                                <td class="linha-topo-modificacao"><div class="text-topo-turma-modificacao">Turma</div></td>
                                 <td class="linha-topo-modificacao-mini"><div class="text-topo-turma-modificacao">ID</div></td>
                                 <td class="linha-topo-modificacao-mini"><div class="text-topo-turma-modificacao">Excluir</div></td>
                             </tr>';
-                            while($row = mysqli_fetch_array($resultado) and $i > 0){
+                            if($qnt_alu_pagina > 0){
+                                echo '<form method="POST" action="">';
+                            while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                                 $id = $row[0];
-                                $nome = $row[1];
+                                $aluno = $row[1];
                                 $senha = $row[2];
                                 $tipo_conta = $row[4];
                                 $turma = $row[5];
-                                $i -= 1;
+                                $qnt_alu_pagina -= 1;
                                 echo '<tr>
-                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" value="'.$nome.'""></td>
+                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" value="'.$aluno.'""></td>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" value="'.$senha.'""></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" value="'.$tipo_conta.'""></td>
-                                    <td class="linha-topo-modificacao-mini"><input class="botao-modificar-turma" type="text" value="'.$turma.'""></td>
-                                    <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" value="'.$id.'""></td>
+                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" value="'.$turma.'""></td>
+                                    <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" value="'.$id.'"></td>
+                                    <form method="POST" action="t_exclusao_turma.php?nome=';redirect();echo'&id='.$id.'&turma2='.$turma.'&pagina='.$pagina.'">
+                                    <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                                    </form>
                                 </tr>';
+                                
                             }
-                        }
+                            echo '</table>
+                            <table class="caixa-config-turma-aluno">
+                            <tr>
+                            <td><input class="passar-pagina" type="submit" value="<"></td>
+                            <td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>
+                            <td><input class="salvar-alteracao" type="submit" value="Mostrar senhas"></td>
+                            <td><input class="passar-pagina" type="submit" value=">"></td>
+                            </tr>
+                            </table>
+                            </form>';}
+                        }else{
+                                inicio();
+                                falso();
+                            }
 
                     }else{
                         inicio();

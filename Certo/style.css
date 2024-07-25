@@ -277,6 +277,15 @@ summary {
     border: 0.01em solid black;
 }
 
+.caixa-config-turma-aluno {
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border: 0.01em solid black;
+    bottom: 0;
+    position: absolute;
+}
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -352,14 +361,16 @@ summary {
 .linha-topo {
     min-width: 4.5vw;
     max-width: 15vw;
-    max-height: 3vh;
+    max-height: 3.5vh;
     border: 0.01em solid black;
+    background-color: white;
 }
 
 .linha-ex-select-num {
     width: 5vw;
     max-height: 3vh;
     border: 0.01em solid black;
+    background-color: white;
 }
 
 .linha-topo-2 {
@@ -368,24 +379,27 @@ summary {
     max-width: 15vw;
     height: 4vh;
     border: 0.01em solid black;
+    background-color: white;
 }
 
 .linha-ex-select-num-2 {
     font-size: 1.5em;
     width: 5vw;
-    height: 4vh;
+    height: 3.6vh;
     border: 0.01em solid black;
+    background-color: white;
 }
 
 .linha-topo-modificacao {
-    width: 30%;
-    height: 3.5vh;
+    width: 20%;
+    height: 3.6vh;
     background-color: white;
     border: 0.01em solid black;
 }
 
 .linha-topo-modificacao-mini {
-    height: 3.5vh;
+    height: 3.6vh;
+    width: 10%;
     background-color: white;
     border: 0.01em solid black;
 }
@@ -502,4 +516,30 @@ summary {
     color: black;
     background-color: white;
     border: white;
+}
+
+.salvar-alteracao {
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.salvar-alteracao:hover {
+    background-color: green;
+    color: white;
+}
+
+.passar-pagina {
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.passar-pagina:hover {
+    background-color: green;
+    color: white;
 }
