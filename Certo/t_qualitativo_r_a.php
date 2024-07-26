@@ -215,11 +215,6 @@ $DB = "dados";
     }
 if(isset($_POST['21'])){
     
-if(isset($_POST['1'])){
-    $v1 = 'V';
-} else {
-    $v1 = 'F';
-}
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno){
             echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
