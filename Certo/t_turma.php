@@ -167,22 +167,49 @@
                             </tr>';
                     }}
                 }
+                function enviar(){
+                    global $redirect_save;
+                    echo $redirect_save;
+                }
                 function funcionar(){
-                    if(isset($_GET['pagina'])){
+                    if(isset($_GET['pagina']) or isset($_GET['paginaMais']) or isset($_GET['paginaMenos'])){
+                        if(isset($_GET['paginaMenos']) or isset($_GET['paginaMais'])){
+                        if(isset($_GET['paginaMenos'])){
+                            $qnt_alu_pagina = $_GET['paginaMenos'];
+                            if($qnt_alu_pagina > 1){
+                                $qnt_alu_pagina -= 1;
+                                $pagina = $qnt_alu_pagina;
+                            }else{
+                            $qnt_alu_pagina = $_GET['paginaMenos'];
+                            $pagina = $qnt_alu_pagina;
+                            }
+                            }
+                        if(isset($_GET['paginaMais'])){
+                            $qnt_alu_pagina = $_GET['paginaMais'];
+                            if($qnt_alu_pagina > 0){
+                                $qnt_alu_pagina += 1;
+                                $pagina = $qnt_alu_pagina;
+                            }else{
+                            $qnt_alu_pagina = $_GET['paginaMais'];
+                            $pagina = $qnt_alu_pagina;
+                            }
+                            }
+                        }else{
+                            $qnt_alu_pagina = $_GET['pagina'];
+                            $pagina = $qnt_alu_pagina;
+                        }
+                        $inicio = $qnt_alu_pagina;
+                        $qnt_alu_pagina = 1;
+                        $qnt_alu_pagina *= 15;
+                        $inicio -= 1;
+                        $inicio *= 15;  
                         global $conexao;
                         global $nome;
                         $turma = $_GET['turma'];
-                        $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'"';
+                        $turma_global = $turma;
+                        $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.','.$qnt_alu_pagina.';';
                         $resultado = $conexao->query($sql);
                         if(mysqli_num_rows($resultado) > 0){
-                            if(isset($_GET['pagina'])){
-                                $qnt_alu_pagina = $_GET['pagina'];
-                                $pagina = $qnt_alu_pagina;
-                            }else{
-                                $qnt_alu_pagina = 1;
-                                $pagina = $qnt_alu_pagina;
-                            }
-                            $qnt_alu_pagina *= 15;
                             echo '
                             <div class="texto-medio-turma">Modificação dos Alunos</div>
                             <div class="caixa-direita-turma-dentro">
@@ -201,7 +228,6 @@
                                 $senha2 = 'senha';
                                 $tipo_conta2 = 'tipo_conta';
                                 $turma2 = 'turma';
-
                             while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                                 $id = $row[0];
                                 $aluno = $row[1];
@@ -212,7 +238,7 @@
 
                                 echo '<tr>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>
-                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>
+                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
@@ -229,16 +255,24 @@
                             echo '</table>
                             <table class="caixa-config-turma-aluno">
                             <tr>
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&turma='.$turma_global.'&verificacao=v">
                             <td><input class="passar-pagina" type="submit" value="<"></td>
+                            </form>
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'">
                             <td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>
+                            </form>
                             <td><input class="salvar-alteracao" type="submit" value="Mostrar senhas"></td>
-                            <td><input class="passar-pagina" type="submit" value=">"></td>
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&verificacao=v">
+                            <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
+                            </form>
                             </tr>
-                            </table>
-                            </form>';}
-                        }else{
-                                inicio();
-                                falso();
+                            </table>';}
+                        }elseif($_GET['verificacao']){
+                            $pagina = 1;
+                            header('Location:t_turma.php?&nome'.redirect().'&pagina='.$pagina.'&turma='.$turma_global.'');
+                            }else{
+                            inicio();
+                            falso();
                             }
 
                     }else{
