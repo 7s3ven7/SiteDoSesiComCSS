@@ -53,10 +53,21 @@
                 $nome = $conexao->real_escape_string($_POST["nome_criado"]);
                 $senha = $conexao->real_escape_string($_POST["senha_criada"]);
                 $codp = $conexao->real_escape_string($_POST["codigo_professor_criado"]);
-                $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
-                $resultado = $conexao->query($SQL);
-                $conexao->close();
-                header("Location: index.php");
+
+                $SQL = 'SELECT * FROM `usuario` WHERE `senha_u` = '.$senha.'';
+
+                $result = $conexao->query($SQL);
+                    if ($result->num_rows != 0) {
+                        echo 'function alerta() {
+                        alert ("Senha já está em uso!");
+                        };';
+                    }
+                else{
+                    $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`,`cod_prof`) VALUES ("' . $nome . '","Professor","' . $senha . '","' . $codp . '");';
+                    $resultado = $conexao->query($SQL);
+                    $conexao->close();
+                    header("Location: index.php");
+                }
             }
         }  
     }
