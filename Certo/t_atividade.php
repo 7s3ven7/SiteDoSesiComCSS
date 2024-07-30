@@ -110,8 +110,8 @@
                         if($resultado_1->num_rows != 0){
                             echo '<div class="texto-aviso-turma">O nome '.$nome_atividade.' já esta em uso, tente outro</div>';
                         }else{
-                            $SQL = 'INSERT INTO `atividade` (`id_atividade`,`id_usuario`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
-                            $resultado = $conexao->query($SQL);
+                            $SQL = 'INSERT INTO `atividade` (`id_atividade`,`nome_criador`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
+                            $resultado = $conexao->query($SQL); 
                             }}}?>
         </div>
         <div class="caixa-direita-turma">
@@ -141,7 +141,7 @@
                         if(isset($_GET['nome_atividade'])){
                         global $conexao;
                         global $nome;
-                        $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
+                        $sql = "SELECT `id_atividade`,`nome_criador`,`data_atividade`,`turma` FROM `atividade` WHERE `id_atividade` = '".$_GET['nome_atividade']."';";
                         $resultado = $conexao->query($sql);
                         $row = mysqli_fetch_array($resultado);
                         $id_atividade = $row['0'];
@@ -182,7 +182,7 @@
                     function desusado(){
                         global $conexao;
                         global $nome;
-                        $sql = "SELECT `id_atividade`,`id_usuario`,`data_atividade`,`turma` FROM `atividade`;";
+                        $sql = "SELECT `id_atividade`,`nome_criador`,`data_atividade`,`turma` FROM `atividade`;";
                         $resultado = $conexao->query($sql);
                         if(mysqli_num_rows($resultado) != null){
                         if(isset($_GET['turma'])){
