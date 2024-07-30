@@ -108,7 +108,7 @@
             $v10 = 'quantidade_produto';
             $v11 = 'valor_unidade';
             $v12 = 'peso';
-            echo'<form method="POST" action="cadastro_produto.php?$l='.$l.'">';
+            echo'<form method="POST" action="c_produto_p.php?$l='.$l.'">';
             echo'<br>';
             for($i;$i>0;$i){
                 $i -= 1;
