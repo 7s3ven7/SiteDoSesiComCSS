@@ -266,6 +266,10 @@
                                 echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                                 <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
                                 </form>';
+                            }else{
+                                echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=mostra">
+                                <td><input class="salvar-alteracao" type="submit" value="Mostra a senha"></td>
+                                </form>';
                             }
                             echo'
                             <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&verificacao=v">
