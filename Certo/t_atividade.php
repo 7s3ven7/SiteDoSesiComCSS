@@ -178,8 +178,43 @@
                                 return 1;
                             }
                     }
-                    
+                    function setpag(){
+                        if(isset($_GET['pagina']) or isset($_GET['paginaMais']) or isset($_GET['paginaMenos'])){
+                        if(isset($_GET['paginaMenos']) or isset($_GET['paginaMais'])){
+                            if(isset($_GET['paginaMenos'])){
+                                $qnt_alu_pagina = $_GET['paginaMenos'];
+                                if($qnt_alu_pagina > 1){
+                                    $qnt_alu_pagina -= 1;
+                                    $pagina = $qnt_alu_pagina;
+                                }else{
+                                $qnt_alu_pagina = $_GET['paginaMenos'];
+                                $pagina = $qnt_alu_pagina;
+                                }
+                                }
+                            if(isset($_GET['paginaMais'])){
+                                $qnt_alu_pagina = $_GET['paginaMais'];
+                                if($qnt_alu_pagina > 0){
+                                    $qnt_alu_pagina += 1;
+                                    $pagina = $qnt_alu_pagina;
+                                }else{
+                                $qnt_alu_pagina = $_GET['paginaMais'];
+                                $pagina = $qnt_alu_pagina;
+                                }
+                                }
+                            }else{
+                                $qnt_alu_pagina = $_GET['pagina'];
+                                $pagina = $qnt_alu_pagina;
+                            }
+                    }}
                     function desusado(){
+                        setpag();
+                        global $qnt_alu_pagina;
+                        global $pagina;
+                        $inicio = $qnt_alu_pagina;
+                        $qnt_alu_pagina = 1;
+                        $qnt_alu_pagina *= 15;
+                        $inicio -= 1;
+                        $inicio *= 15;  
                         global $conexao;
                         global $nome;
                         $sql = "SELECT `id_atividade`,`nome_criador`,`data_atividade`,`turma` FROM `atividade`;";
@@ -203,7 +238,22 @@
                                     <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
                                     </form>
                                 </tr>';
-                            }}}else{ 
+                            }
+                            echo '</table>
+                            <table class="caixa-config-turma-aluno">
+                            <tr>
+                            <form method="POST" action="t_atividade.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&verificacao=v">
+                            <td><input class="passar-pagina" type="submit" value="<"></td>
+                            </form>
+                            <td></td>
+                            <td></td>
+                            <form method="POST" action="t_atividade.php?nome=';redirect();echo'&paginaMais='.$pagina.'&verificacao=v">
+                            <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
+                            </form>
+                            </tr>
+                            </table>';
+                        }
+                        }else{
                             if(mysqli_num_rows($resultado) == null){
                                 echo '<div class="texto-aviso-turma-tabela">Nenhuma Atividade Encontrada</div>';
                             }
