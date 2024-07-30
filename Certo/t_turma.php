@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script src="exclusao.js">
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -105,7 +104,7 @@
                     $sql = 'SELECT `turma` FROM `turma` WHERE `turma` = "'.$nome_turma.'"';
             $resultado_1 = $conexao->query($sql);
             if($resultado_1->num_rows != 0){
-                            echo '<div class="texto-aviso-turma">O nome '.$nome_turma.' já esta em uso, tente outro</div>';
+                echo '<div class="texto-aviso-turma">O nome '.$nome_turma.' já esta em uso, tente outro</div>';
             }else{
             $SQL = 'INSERT INTO `turma` (`turma`,`quant_alu`) VALUES ("' . $nome_turma . '","' . $qnt . '");';
             $resultado = $conexao->query($SQL);
@@ -244,7 +243,7 @@
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                                    <td class="linha-ex-select-num"><button type="submit" class="botao-exclusao-turma" id="'.$botao.'" value="'.$botao.'"></td>
+                                    <td class="linha-ex-select-num"><button type="submit" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
                                 </tr>';
                                 $id2 .= 'p';
                                 $aluno2 .= 'p';
