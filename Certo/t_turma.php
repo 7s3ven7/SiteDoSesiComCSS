@@ -280,8 +280,10 @@
                         falso();
                     }
                 }
-                function exclusao(){};
-                exclusao();
+                function exclusao(){
+
+
+                };
                 funcionar();
                     ?>
             </table>
