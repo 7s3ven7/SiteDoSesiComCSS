@@ -45,7 +45,7 @@
         $v19 = $_POST['19']; //CNPJ_fonecedor
         $v20 = $_POST['20']; //código_nota
 */
-        $SQL = 'INSERT INTO `quantitativo_r_p` (`cod_forne`,`nome_e`,`CNPJ_d`,`modelo_contai`,`navio`,`nome_f`,`tipo_contai`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`lote`) 
+        $SQL = 'INSERT INTO `quantitativo_r_p` (`cod_forne`,`nome_e`,`modelo_contai`,`navio`,`nome_f`,`tipo_contai`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`lote`,`CNPJ_d`) 
         VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.');';
         //Inserir no DB
         $resultado = $conexao->query($SQL);
@@ -136,7 +136,7 @@
                     <td><input class="" type="text" name="4" placeholder="Titanaique"></td>
                 </tr>
                 <tr>
-                    <td>Nome do destinatário: </td>
+                    <td>Nome do fornecedor: </td>
                     <td><input class="" type="text" name="5" placeholder="Aplle"></td>
                     <td>Tipo do container: </td>
                     <td><input class="" type="text" name="6" placeholder="2201"></td>
