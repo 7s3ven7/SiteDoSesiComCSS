@@ -223,6 +223,7 @@
                                 <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">ID</div></td>
                                 <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Excluir</div></td>
                             </tr>';
+
                             if($qnt_alu_pagina > 0){
                                 $id2 = 'id';
                                 $aluno2 = 'aluno';
@@ -237,11 +238,15 @@
                                 $tipo_conta = $row[4];
                                 $turma = $row[5];
                                 $qnt_alu_pagina -= 1;
-
-                                echo '<tr>
-                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>
-                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>
-                                    <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
+                                if(){
+                                echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
+                                    if(isset($_GET['']) and ){
+                                        echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
+                                    }else{
+                                        echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
+                                    }
+                                }    
+                                    echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
                                     <td class="linha-ex-select-num"><button type="submit" class="botao-exclusao-turma" id="'.$botao.'" value="'.$botao.'"></td>
@@ -256,7 +261,10 @@
                             echo '</table>
                             <table class="caixa-config-turma-aluno">
                             <tr>
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&turma='.$turma_global.'&verificacao=v">
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&turma='.$turma_global.'&verificacao=S">
+                            <td><input class="passar-pagina" type="submit" value="<"></td>
+                            </form>
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMaisMenos='.$pagina.'&turma='.$turma_global.'&verificacao=M">
                             <td><input class="passar-pagina" type="submit" value="<"></td>
                             </form>
                             <form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'">
