@@ -57,13 +57,6 @@
                 $resultado = $conexao->query($SQL);
                 $conexao->close();
                 header("Location: index.php");
-            }else{
-                $nome = $conexao->real_escape_string($_POST["nome_criado"]);
-                $senha = $conexao->real_escape_string($_POST["senha_criada"]);
-                $SQL = 'INSERT INTO `usuario` (`nome_u`,`tipo_u`,`senha`) VALUES ("' . $nome . '","Aluno","' . $senha . '");';
-                $resultado = $conexao->query($SQL);
-                $conexao->close();
-                header("Location: index.php");
             }
         }  
     }
