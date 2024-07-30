@@ -15,13 +15,13 @@
             <form method="POST" action="t_cadastro_conta.php"?nome;redirect();>
                 <div class="caixa-cadastro-dentro">
                     <div class="texto-medio">Nome da conta</div>
-                    <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado">
+                    <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado" required>
                     <div class="texto-medio">Crie sua senha</div>
                     <input class="botao-cadastro-input" type="password" placeholder="escolha uma senha forte"
-                        name="senha_criada">
+                        name="senha_criada" required>
                     <div class="texto-medio">Código Interno</div>
                     <input class="botao-cadastro-input" type="text" placeholder="código do seu crachá"
-                        name="codigo_professor_criado">
+                        name="codigo_professor_criado" required>
                 </div>
                 <input class="botao-cadastro-submit" type="submit" value="Cadastrar-se">
                 <hr>
