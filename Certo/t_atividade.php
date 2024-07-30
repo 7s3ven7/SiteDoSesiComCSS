@@ -185,26 +185,7 @@
                         $sql = "SELECT `id_atividade`,`nome_criador`,`data_atividade`,`turma` FROM `atividade`;";
                         $resultado = $conexao->query($sql);
                         if(mysqli_num_rows($resultado) != null){
-                        if(isset($_GET['turma'])){
-                            while($row = mysqli_fetch_array($resultado)){
-                            $id_atividade = $row['0'];
-                            $id_usuario = $row['1'];
-                            $data_atividade = $row['2'];
-                            $turma = $row['3'];
-                            echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'&turma='.$_GET['turma'].'">
-                            <tr>
-                                <td class="linha-topo">'.$id_atividade.'</td>
-                                <td class="linha-topo">'.$id_usuario.'</td>
-                                <td class="linha-topo">'.$turma.'</td>
-                                <td class="linha-topo">'.$data_atividade.'</td>
-                                <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
-                                </form>
-                                <form method="POST" action="t_exclusao_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
-                                <td class="linha-topo"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                                </form>
-                            </tr>';
-                            }}
-                            elseif(mysqli_num_rows($resultado) > 0){
+                            if(mysqli_num_rows($resultado) > 0){
                                 while($row = mysqli_fetch_array($resultado)){
                                     $id_atividade = $row['0'];
                                     $id_usuario = $row['1'];
