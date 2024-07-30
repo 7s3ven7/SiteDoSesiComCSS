@@ -1,6 +1,0 @@
-var button = document.querySelector("");
-
-button.onclick = function () {
-    var nome = prompt("Qual é o seu nome?");
-    alert("Olá " + nome + ", é um prazer te ver!");
-};

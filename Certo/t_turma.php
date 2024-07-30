@@ -246,7 +246,7 @@
                                     echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                                     <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                                     <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                                    <td class="linha-ex-select-num"><button type="submit" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
+                                    <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
                                 </tr>';
                                 $id2 .= 'p';
                                 $aluno2 .= 'p';
@@ -272,7 +272,7 @@
                                 </form>';
                             }
                             echo'
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&verificacao=v">
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&salvar=v">
                             <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
                             </form>
                             </tr>
@@ -289,14 +289,17 @@
                         inicio();
                         falso();
                     }
-                }
-                function exclusao(){
+                }   
+                function salvar(){
 
-                    
                 };
-                exclusao();
                 funcionar();
+                if(isset($_GET['salvar'])){
+                    salvar();
+                }
+                
                     ?>
+                    <script src="js.js"></script>
             </table>
         </div>
         </div>
