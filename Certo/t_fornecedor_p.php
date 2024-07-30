@@ -98,7 +98,7 @@
         if($i <= 0){
             echo '
             <br><br>
-            <div class="">Digite um número superior!</div>';
+            <div class=".caixa-tela-informacao-geral">Digite um número superior!</div>';
         }else{
             $l = $i;
             $numero = 1;
