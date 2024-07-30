@@ -224,7 +224,7 @@
                                 </tr>';
                             }}}else{ 
                             if(mysqli_num_rows($resultado) == null){
-                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
+                                echo '<div class="texto-aviso-turma-tabela">Nenhuma Atividade Encontrada</div>';
                             }
                     }}
                     usado();
