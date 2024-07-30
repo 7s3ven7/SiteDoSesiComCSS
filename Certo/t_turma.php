@@ -262,11 +262,7 @@
                             <td><input class="passar-pagina" type="submit" value="<"></td>
                             </form>
                             <td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
-                            if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'n_mostra'){
-                                echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=mostra">
-                                <td><input class="salvar-alteracao" type="submit" value="Mostra a senha"></td>
-                                </form>';
-                            }else{
+                            if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                                 echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                                 <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
                                 </form>';
