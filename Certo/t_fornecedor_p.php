@@ -21,8 +21,10 @@
     }
         ?>
 
-<body>
+<body>    
+
     <div class='caixa-menu-geral'>
+        <div class='menu'>Menu</div>
         <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
@@ -105,14 +107,14 @@
             $v3 = 'gmail';
             $v4 = 'cep';
             $v5 = 'telefone';
-            echo'<form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'">';
+            echo'<form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'">';
             echo'<br>';
             for($i;$i>0;$i){
                 $i -= 1;
                 echo'
                 <div class="">'.$numero.'° Fornecedor</div>
                 <br>
-                <form method="POST" action="t_fornecedor_p.php?$l='.$l.'&nome_atividade='.$nome_atividade.'" name="cadastro">
+                <form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'" name="cadastro">
                 <table class="">
                     <tr>
                         <td class="">CNPJ: </td>
@@ -160,7 +162,7 @@
     }
 ?>
     </div>
-    <div class='menu'>Menu</div>
+
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 

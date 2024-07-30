@@ -8,8 +8,8 @@
     <title>Cadastro produto</title>
 </head>
 <?php
-    $nome_atividade = $_GET['nome_atividade'];
-    $nome = $_GET['nome'];
+    /*$nome_atividade = $_GET['nome_atividade'];
+    $nome = $_GET['nome'];*/
 ?>
 
 <body>
