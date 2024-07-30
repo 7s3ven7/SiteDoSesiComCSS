@@ -12,7 +12,7 @@
     <div class="caixa-fundo">
         <div class="caixa-meio-cadastro">
             <div class="texto-grande">Cadastre-se</div>
-            <form method="POST" action="t_cadastro_conta.php">
+            <form method="POST" action="t_cadastro_conta.php"?nome;redirect();>
                 <div class="caixa-cadastro-dentro">
                     <div class="texto-medio">Nome da conta</div>
                     <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado">

@@ -83,7 +83,7 @@
                     <div class="texto-cinza-turma">Nome do grupo:</div>
                     <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
                     <div class="texto-cinza-turma">Quantidade de alunos: </div>
-                    <input class="botao-turma-input" type="text" placeholder="qtn. alunos" name="qnt_aluno">
+                    <input class="botao-turma-input" type="number" placeholder="qtn. alunos" name="qnt_aluno">
                     <br>
                     <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
                 </form>
