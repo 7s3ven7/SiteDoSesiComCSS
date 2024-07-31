@@ -22,8 +22,8 @@
 
 <body>
     <div class='caixa-menu-geral'>
-    <div class="menu">Menu</div>
-    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+        <div class="menu">Menu</div>
+        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
         <div class='espaco'></div>
         <details class='details'>
             <summary class='sumario'>Criações</summary>
@@ -108,20 +108,20 @@
                 echo'
                 <div class="texto-cinza-empresa">'.$numero.'° Empresa</div>
                 <br>
-                <table class="">
+                <table class="tabela-empresa">
                     <tr>
-                        <td class="">CNPJ: </td>
+                        <td class="texto-pequeno-empresa">CNPJ: </td>
                         <td><input class="" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
-                        <td class="">Nome da empresa: </td>
+                        <td class="texto-pequeno-empresa">Nome da empresa: </td>
                         <td><input class="" type="text" name="'.$v2.'" placeholder="Nome"></td>
                     <tr>           
-                        <td class="">Gmail: </td>
+                        <td class="texto-pequeno-empresa">Gmail: </td>
                         <td><input class="" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                        <td class="texto-pequeno-empresa">CEP: </td>
+                        <td><input class="" type="text" name="'.$v4.'" placeholder="0000-000"></td>
                     </tr>
                     <tr>
-                        <td class="">CEP: </td>
-                        <td><input class="" type="text" name="'.$v4.'" placeholder="0000-000"></td>
-                        <td class="">Telefone: </td>
+                        <td class="texto-pequeno-empresa">Telefone: </td>
                         <td><input class="" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
                     </tr>
                 </table>';
@@ -161,7 +161,7 @@
             }
             echo '<table class="">';
         }
-        echo '<input class="" type="submit">';
+        echo '<input class="botao-empresa-submit" type="submit">';
     }
     }
     echo'<div class=""></div>';
