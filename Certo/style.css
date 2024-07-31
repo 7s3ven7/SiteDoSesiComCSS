@@ -541,8 +541,29 @@ summary {
 }
 
 .texto-grande-qualitat {
-    font-size: 4em;
-    color: darkgreen;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
+.tabela-qualitat{
+    width: 50em;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat{
+    width: 50em;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.th-qualitat{
+    width: 50em;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
@@ -740,4 +761,17 @@ summary {
     transition: 0.5s;
     border: 0.01em solid black;
     border-radius: 10px;
+}
+
+.botao-qualitat-submit {
+    margin-top:1% ;
+    right: 45.5%;
+    position: absolute;
+    width: 10%;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
 }
