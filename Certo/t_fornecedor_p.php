@@ -79,6 +79,7 @@
         </details>
     </div>
     <div class='caixa-tela-informacao-geral'>
+    <div class='caixa-centro-fornecedor'>
         <form method="POST" action="t_fornecedor_p.php?nome=<?php redirect()?>">
             <div class="texto-pequeno-forne">Quantos fornecedores irás registrar:
                 <br>
@@ -116,21 +117,20 @@
                 <div class="texto-pequeno2-forne">'.$numero.'° Fornecedor</div>
                 <br>
                 <form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'" name="cadastro">
-                <table class="">
+                <table class="caixa-centro-menor-fornecedor">
                     <tr>
-                        <td class="texto-pequeno2-forne">CNPJ: </td>
-                        <td><input class="botao-forne-input " type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
-                        <td class="texto-pequeno2-forne">Nome do fornecedor: </td>
-                        <td><input class="botao-modificar-turma " type="text" name="'.$v2.'" placeholder="Nome"></td>
-                    <tr>    
-                        <td class="texto-pequeno2-forne">Gmail: </td>
-                        <td><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
-                        <td class="texto-pequeno2-forne">CEP: </td>
-                        <td><input class="botao-forne-input" type="text" name="'.$v4.'" placeholder="0000-000"></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CNPJ:</div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input " type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"><div class="texto-pequeno2-forne">Nome do fornecedor:</div></td>
+                        <td class="td-fornecedor"><input class="botao-modificar-turma " type="text" name="'.$v2.'" placeholder="Nome"></td>
                     </tr>
                     <tr>
-                        <td class="texto-pequeno2-forne">Telefone: </td>
-                        <td><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Gmail:</div><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CEP:</div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v4.'" placeholder="0000-000"></td>
+                    </tr>
+                    <tr>                    
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
                     </tr>
                 </table>';
                 $numero += 1;
@@ -163,7 +163,7 @@
     }
 ?>
     </div>
-
+</div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
