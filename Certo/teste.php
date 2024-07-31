@@ -1,20 +1,26 @@
 <?php
-//isset($_POST[$i])
-
-
-
-    for($i = 1;$i<=20;$i+= 1){
-        $numero='v' .$i;
-            if(isset($_POST[$i])){
-            $valor ='$'.$numero;
-            $$valor='V';
-            echo $valor.' = '.$$valor.'<br>';
-            $numero='';
-            }else { 
-                $valor ='$'.$numero;
-                $$valor='F';
-                $numero='' ;
-                echo $valor.' = '.$$valor.'<br>';
-            }
-    }
     ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .botao{
+            width:5vw;
+            height:5vh;
+            font-size:10px;
+            color:black;
+        }
+        </style>
+</head>
+<body>
+<button type="submit" class="botao" onclick="exclusao(this.value);" value="1">
+<button type="submit" class="botao" onclick="exclusao(this.value);" value="2">
+<button type="submit" class="botao" onclick="exclusao(this.value);" value="3">
+<button type="submit" class="botao" onclick="exclusao(this.value);" value="4">
+<button type="submit" class="botao" onclick="exclusao(this.value);" value="5">
+        <script src="teste.js"></script>
+</body>
+</html>
