@@ -172,42 +172,33 @@
                     echo $redirect_save;
                 }
                 function funcionar(){
-                    if(isset($_GET['pagina']) or isset($_GET['paginaMais']) or isset($_GET['paginaMenos'])){
-                        if(isset($_GET['paginaMenos']) or isset($_GET['paginaMais'])){
-                        if(isset($_GET['paginaMenos'])){
-                            $qnt_alu_pagina = $_GET['paginaMenos'];
-                            if($qnt_alu_pagina > 1){
-                                $qnt_alu_pagina -= 1;
-                                $pagina = $qnt_alu_pagina;
-                            }else{
-                            $qnt_alu_pagina = $_GET['paginaMenos'];
-                            $pagina = $qnt_alu_pagina;
-                            }
-                            }
-                        if(isset($_GET['paginaMais'])){
-                            $qnt_alu_pagina = $_GET['paginaMais'];
-                            if($qnt_alu_pagina > 0){
-                                $qnt_alu_pagina += 1;
-                                $pagina = $qnt_alu_pagina;
-                            }else{
-                            $qnt_alu_pagina = $_GET['paginaMais'];
-                            $pagina = $qnt_alu_pagina;
-                            }
-                            }
-                        }else{
-                            $qnt_alu_pagina = $_GET['pagina'];
-                            $pagina = $qnt_alu_pagina;
-                        }
+                    if(isset($_GET['pagina'])){
+                    if($_GET['pagina']<= 0){
+                        $pagina = 1;
+                        $qnt_alu_pagina = $pagina; 
+                    }else{
+                        $pagina = $_GET['pagina'];
+                        $qnt_alu_pagina = $pagina; 
+                    }}else{
+                        $pagina = 1;
+                        $qnt_alu_pagina = $pagina; 
+                    }
+                        $paginaMenos = $pagina-1;
+                        $paginaMais = $pagina+1;
                         $inicio = $qnt_alu_pagina;
                         $qnt_alu_pagina = 1;
                         $qnt_alu_pagina *= 15;
                         $inicio -= 1;
-                        $inicio *= 15;  
+                        $inicio *= 15;
+                        if($inicio < 0 ){
+                            $inicio *= -1;
+                        }
                         global $conexao;
                         global $nome;
+                        if(isset($_GET['turma'])){
                         $turma = $_GET['turma'];
                         $turma_global = $turma;
-                        $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.','.$qnt_alu_pagina.';';
+                        $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.',15;';
                         $resultado = $conexao->query($sql);
                         if(mysqli_num_rows($resultado) > 0){
                             echo '
@@ -258,10 +249,10 @@
                             echo '</table>
                             <table class="caixa-config-turma-aluno">
                             <tr>
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&turma='.$turma_global.'&verificacao=v">
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMenos.'&turma='.$turma_global.'">
                             <td><input class="passar-pagina" type="submit" value="<"></td>
-                            </form>
-                            <td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
+                            </form>';
+                            echo '<td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
                             if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                                 echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                                 <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
@@ -272,24 +263,19 @@
                                 </form>';
                             }
                             echo'
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&salvar=v">
+                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMais.'&turma='.$turma_global.'&verificacao=v">
                             <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
                             </form>
                             </tr>
                             </table>';}
-                        }elseif($_GET['verificacao']){
+                        }elseif(mysqli_fetch_array($resultado) < 1){
                             $pagina = 1;
-                            header('Location:t_turma.php?&nome'.redirect().'&pagina='.$pagina.'&turma='.$turma_global.'');
-                            }else{
-                            inicio();
-                            falso();
+                            header('Location:t_turma.php?&nome='.$nome.'&pagina='.$pagina.'&turma='.$turma_global.'');
+                            }}else{
+                                inicio();
+                                falso();
                             }
-
-                    }else{
-                        inicio();
-                        falso();
-                    }
-                }   
+                        }
                 function salvar(){
 
                 };
@@ -309,6 +295,3 @@
 </body>
 
 </html>
-
-
-

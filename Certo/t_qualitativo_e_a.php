@@ -31,64 +31,81 @@
 		    exit();
 	    }
     }
-    echo '<!DOCTYPE html>
+    
+    $nome = $_GET['nome'];
+    function redirect(){
+        global $nome;
+        if(isset($_GET['nome_atividade'])){
+            $nome_atividade = $_GET['nome_atividade'];
+            echo $nome.'&nome_atividade='.$nome_atividade;
+        }else{
+            echo $nome;
+        }
+    }
+    echo '
+     <!DOCTYPE html>
 
-        <head>
-            <link rel="stylesheet" href="">
-            <meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        </head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="caixa-menu-geral"></div>
+    <div class="menu">Menu</div>
+    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class="espaco"></div>
+    <details class="details">
+        <summary class="sumario">Recebimento</summary>
+        <form action="t_nota_r_a.php">
+            <input class="botao-sumario" type="submit" value="Nota (WIP)">
+        </form>
+        <form action="t_qualitativo_r_a.php">
+            <input class="botao-sumario" type="submit" value="Qualitativo">
+        </form>
+        <form action="t_quantitativo_a.php">
+            <input class="botao-sumario" type="submit" value="Quantitativo">
+        </form>
+    </details>
+    <details class="details">
+        <summary class="sumario">Controle</summary>
+        <form action="t_docas_r_a.php">
+            <input class="botao-sumario" type="submit" value="Controle">
+        </form>
+    </details>
+    <details class="details">
+        <summary class="sumario">Estoque</summary>
+        <form action="t_estoque_a.php">
+            <input class="botao-sumario" type="submit" value="Estoque">
+        </form>
+    </details>
+    <details class="details">
+        <summary class="sumario">Picking</summary>
+        <form action="t_picking_a.php">
+            <input class="botao-sumario" type="submit" value="WIP">
+        </form>
+    </details>
+    <details class="details">
+        <summary class="sumario">Expedição</summary>
+        <form action="t_nota_e_a.php">
+            <input class="botao-sumario" type="submit" value="Nota (WIP)">
+        </form>
+        <form action="t_qualitativo_e_a.php">
+            <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
+        </form>
+        <form action="t_quantitativo_e_a.php">
+            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
+        </form>
+    </details>
+    <details class="details">
+        <summary class="sumario">Relatórios</summary>
+        <form action="t_relatorios_a.php">
+            <input class="botao-sumario" type="submit" value="WIP">
+        </form>
+    </details>
 
-        <body>
-            <div id="">Aluno</div>
-            <div class=""></div>
-            <details class="">
-                <summary class="">Recebimento</summary>
-                <form action="t_nota_r_a.php">
-                    <input class="" type="submit" value="Nota (WIP)">
-                </form>
-                <form action="t_qualitativo_r_a.php">
-                    <input class="" type="submit" value="Qualitativo">
-                </form>
-                <form action="t_quantitativo_a.php">
-                    <input class="" type="submit" value="Quantitativo">
-                </form>
-            </details>
-            <details class="">
-                <summary class="">Estoque</summary>
-                <form action="t_estoque_a.php">
-                    <input class="" type="submit" value="Estoque">
-                </form>
-            </details>
-            <details class="">
-                <summary class="">Picking</summary>
-                <form action="t_picking_a.php">
-                    <input class="" type="submit" value="WIP">
-                </form>
-            </details>
-            <details class="">
-                <summary class="">Expedição</summary>
-                <form action="t_nota_e_a.php">
-                    <input class="" type="submit" value="Nota (WIP)">
-                </form>
-                <form action="t_qualitativo_e_a.php">
-                    <input class="" type="submit" value="Qualitativo (WIP)">
-                </form>
-                <form action="t_quantitativo_e_a.php">
-                    <input class="" type="submit" value="Quantitativo (WIP)">
-                </form>
-
-            </details>
-            <details class="">
-                <summary class="">Relatórios</summary>
-                <form action="t_relatorios_a.php">
-                    <input class="" type="submit" value="WIP">
-                </form>
-            </details>
-
-            <div class="">Menu</div>
-            <div class="">
+    <div class="caixa-tela-informacao-geral">
                 <form method="POST" action="t_qualitativo_e_a.php">
                     <table class="">
                         <tr>
