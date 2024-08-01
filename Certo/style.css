@@ -54,8 +54,8 @@ summary {
 /*-----------------------------------------------------------------------------------------Logar/Cadastro-----------------------------------------------------------------------------------------*/
 /*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
 .caixa-fundo {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -217,9 +217,9 @@ summary {
 
 .caixa-tela-informacao-geral {
     width: 85vw;
-    height: 92.5vh;
+    min-height: 92.5%;
     background-color: whitesmoke;
-    position: fixed;
+    position: absolute;
     left: 15vw;
     top: 7.5vh;
 }
@@ -287,9 +287,9 @@ summary {
 }
 
 .caixa-centro-fornecedor {
-    background-color: blue;
+    background-color: white;
     width: 80vw;
-    height: 90vh;
+    min-height: 90%;
     text-align: center;
     align-items: center;
     margin-left: auto;
@@ -299,10 +299,9 @@ summary {
 
 .caixa-centro-menor-fornecedor {
     background-color: white;
-    width: 65vw;
-    height: 40vh;
-    text-align: center;
-    align-items: center;
+    width: 60vw;
+    max-height: 40vh;
+    align-items: left;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -310,10 +309,13 @@ summary {
 }
 
 .td-fornecedor {
-    width: 10%;
-    height: 3vh;
+    align-items: left;
+    text-align: left;
+    width: 50%;
+    height: 15vh;
+    padding: 2.5vw;
     border: 0.01em solid black;
-    border-radius: 20px;
+
 }
 
 .caixa-esquerda-empresa {
@@ -528,16 +530,24 @@ summary {
 }
 
 .texto-pequeno-forne {
-    font-size: x-large;
+    font-size: 1.8em;
     color: rgb(0, 0, 0);
     width: 100%;
     text-align: center;
 }
 
 .texto-pequeno2-forne {
-    font-size: xx-large;
+    font-size: 2em;
     color: rgb(0, 0, 0);
-    width: 50%;
+    width: 100%;
+    position: relative;
+
+}
+
+.texto-pequeno3-forne {
+    font-size: 2.5em;
+    color: rgb(0, 0, 0);
+    width: 20%;
 }
 
 .texto-grande-qualitat {
@@ -742,22 +752,30 @@ summary {
 }
 
 .botao-forne-input {
-    font-size: 1.5em;
-    width: 6vw;
-    height: 4vh;
-    background-color: white;
-    border-bottom: 0.01em solid black;
-    border-radius: 5px;
-    text-align: center;
-    padding: 1vw;
-}
-
-.passar-enviar-forne {
-    font-size: 1.5em;
     width: 9vw;
     height: 4vh;
-    background-color: white;
-    margin-top: 4vh;
+    color: black;
+    position: relative;
+    border: 0.07em solid black;
+    border-radius: 15px;
+}
+
+.botao-forne-input2 {
+    width: 9vw;
+    height: 4vh;
+    color: black;
+    position: relative;
+    border: 0.07em solid black;
+    border-radius: 15px;
+}
+
+.botao-enviar-forne {
+    font-size: 1.5em;
+    width: 7vw;
+    height: 4vh;
+    background-color: green;
+    color: white;
+    margin-top: 2vh;
     transition: 0.5s;
     border: 0.01em solid black;
     border-radius: 10px;

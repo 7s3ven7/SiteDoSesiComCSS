@@ -26,8 +26,8 @@
     <div class='caixa-menu-geral'>
         <div class='menu'>Menu</div>
         <div class='espaco'></div>
-        <details class='details'>
-            <summary class='sumario'>Criações</summary>
+        <details>
+            <summary>Criações</summary>
             <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
             </form>
@@ -35,16 +35,16 @@
                 <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Cadastros</summary>
+        <details >
+            <summary >Cadastros</summary>
             <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Fornecedor'>
             </form>
             <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Empresa'>
             </form>
-            <details class='details'>
-                <summary class='sumario'>Cliente</summary>
+            <details >
+                <summary >Cliente</summary>
                 <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Cadastro'>
                 </form>
@@ -53,14 +53,14 @@
                 </form>
             </details>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Produto</summary>
+        <details >
+            <summary >Produto</summary>
             <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
         <details class='details'>
-            <summary class='sumario'>Recebimento</summary>
+            <summary>Recebimento</summary>
             <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
@@ -68,8 +68,8 @@
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Expedição</summary>
+        <details>
+            <summary>Expedição</summary>
             <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
@@ -77,14 +77,15 @@
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
+
     </div>
     <div class='caixa-tela-informacao-geral'>
     <div class='caixa-centro-fornecedor'>
         <form method="POST" action="t_fornecedor_p.php?nome=<?php redirect()?>">
             <div class="texto-pequeno-forne">Quantos fornecedores irás registrar:
                 <br>
-                <input class="" type="number" name="vezes"placeholder="Número de vezes*"></div>
-            <input class="passar-enviar-forne" type="submit">
+                <input class="botao-forne-input2" type="number" name="vezes"placeholder="Número de vezes*"></div>
+            <input class="botao-enviar-forne" type="submit">
         </form>
         <!--Aparecer na Tela-->
         <?php
@@ -114,29 +115,34 @@
             for($i;$i>0;$i){
                 $i -= 1;
                 echo'
-                <div class="texto-pequeno2-forne">'.$numero.'° Fornecedor</div>
+                <div class="texto-pequeno3-forne">'.$numero.'° Fornecedor</div>
                 <br>
                 <form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'" name="cadastro">
                 <table class="caixa-centro-menor-fornecedor">
-                    <tr>
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CNPJ:</div></td>
-                        <td class="td-fornecedor"><input class="botao-forne-input " type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"><div class="texto-pequeno2-forne">Nome do fornecedor:</div></td>
-                        <td class="td-fornecedor"><input class="botao-modificar-turma " type="text" name="'.$v2.'" placeholder="Nome"></td>
+                    <tr class="tr">
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CNPJ: </td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></div></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Nome do fornecedor: </td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v2.'" placeholder="Nome"></div></td>
                     </tr>
-                    <tr>
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Gmail:</div><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                    <tr class="tr">
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Gmail:</td>
+                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
                         <td class="td-fornecedor"><div class="texto-pequeno2-forne">CEP:</div></td>
                         <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v4.'" placeholder="0000-000"></td>
                     </tr>
-                    <tr>                    
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </div></td>
-                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td>
+                    <tr class="tr">                    
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </td>
+                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </td>
+                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
                     </tr>
+                        </tr>
                 </table>';
                 $numero += 1;
             }              
             echo '<table class="">';
-            echo '<input class="" type="submit">';
+            echo '<input class="botao-enviar-forne " type="submit">';
             echo'<div class=""></div>';
         }
     }

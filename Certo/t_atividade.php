@@ -56,8 +56,8 @@
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Recebimento</summary>
+        <details>
+            <summary>Recebimento</summary>
             <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
@@ -65,8 +65,8 @@
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Expedição</summary>
+        <details>
+            <summary>Expedição</summary>
             <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
