@@ -22,9 +22,7 @@
         ?>
 
 <body>    
-
-    <div class='caixa-menu-geral'>
-        <div class='menu'>Menu</div>
+<div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -35,16 +33,16 @@
                 <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
-        <details >
-            <summary >Cadastros</summary>
+        <details>
+            <summary>Cadastros</summary>
             <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Fornecedor'>
             </form>
             <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Empresa'>
             </form>
-            <details >
-                <summary >Cliente</summary>
+            <details>
+                <summary>Cliente</summary>
                 <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Cadastro'>
                 </form>
@@ -53,13 +51,13 @@
                 </form>
             </details>
         </details>
-        <details >
-            <summary >Produto</summary>
+        <details>
+            <summary>Produto</summary>
             <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
-        <details class='details'>
+        <details>
             <summary>Recebimento</summary>
             <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
@@ -77,8 +75,8 @@
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
-
     </div>
+    <div class="menu">Menu</div>
     <div class='caixa-tela-informacao-geral'>
     <div class='caixa-centro-fornecedor'>
         <form method="POST" action="t_fornecedor_p.php?nome=<?php redirect()?>">
