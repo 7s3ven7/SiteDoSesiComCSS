@@ -22,9 +22,9 @@
         ?>
 
 <body>    
-<div class='caixa-menu-geral'></div>
-        <div class="caixa-sumario-geral">
-            <details>
+<div class='caixa-menu-geral'>
+        <div class='espaco'></div>
+        <details>
             <summary>Criações</summary>
             <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
