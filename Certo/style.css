@@ -202,7 +202,7 @@ summary {
 /*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
 .caixa-menu-geral {
     width: 15vw;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: rgb(222, 222, 222);
     border-right: 1vh solid gray;
     position: absolute;
@@ -555,21 +555,21 @@ summary {
     color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat{
+.tabela-qualitat {
     width: 50em;
     max-width: 35vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.td-qualitat{
+.td-qualitat {
     width: 50em;
     max-width: 35vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.th-qualitat{
+.th-qualitat {
     width: 50em;
     max-width: 35vw;
     border: 0.01em solid black;
@@ -782,7 +782,7 @@ summary {
 }
 
 .botao-qualitat-submit {
-    margin-top:1% ;
+    margin-top: 1%;
     right: 45.5%;
     position: absolute;
     width: 10%;
