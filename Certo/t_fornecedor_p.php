@@ -118,30 +118,30 @@
                 <form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'" name="cadastro">
                 <table class="caixa-centro-menor-fornecedor">
                     <tr class="tr">
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CNPJ: </td>
-                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></div></td>
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Nome do fornecedor: </td>
-                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v2.'" placeholder="Nome"></div></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">CNPJ: </div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v1.'" placeholder="00.000.000/0000-00"></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Nome do fornecedor: </div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v2.'" placeholder="Nome"></td>
                     </tr>
                     <tr class="tr">
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Gmail:</td>
-                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Gmail:</div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v3.'" placeholder="exemplo@gmail.com"></td>
                         <td class="td-fornecedor"><div class="texto-pequeno2-forne">CEP:</div></td>
                         <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v4.'" placeholder="0000-000"></td>
                     </tr>
                     <tr class="tr">                    
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </td>
-                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
-                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </td>
-                        <td class="td-fornecedor"></div><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
+                        <td class="td-fornecedor"><div class="texto-pequeno2-forne">Telefone: </div></td>
+                        <td class="td-fornecedor"><input class="botao-forne-input" type="text" name="'.$v5.'" placeholder="(00) 00000-0000 "></td> 
                     </tr>
-                        </tr>
                 </table>';
                 $numero += 1;
             }              
             echo '<table class="">';
             echo '<input class="botao-enviar-forne " type="submit">';
             echo'<div class=""></div>';
+            echo'</table>';
         }
     }
     if(isset($_POST['cadastro'])){
@@ -168,6 +168,7 @@
 ?>
     </div>
 </div>
+<div class='menu'>Menu</div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
