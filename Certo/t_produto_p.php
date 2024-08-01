@@ -76,7 +76,7 @@
         </details>
     </div>
     <div class="menu">Menu</div>
-    <div class='caixa-tela-informacao-geral'>
+    <div class="caixa-tela-informacao-geral">
         <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
             <div class="">Quantos produtos você irá registrar: <input class="botao-produto" type="number" name="vezes"
                     placeholder="Número de vezes*"></div>
@@ -108,7 +108,7 @@ if(isset($_POST['vezes'])){
     if($i <= 0){
         echo '
         <br><br>
-        <div class="">Digite um número superior!</div>';
+        <div class="texto-pequeno-produto">Digite um número superior!</div>';
     }else{
         $l = $i;
         $numero = 1;
