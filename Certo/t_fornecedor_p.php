@@ -23,8 +23,8 @@
 
 <body>    
 <div class='caixa-menu-geral'></div>
-        <div class='espaco'></div>
-        <details>
+        <div class="caixa-sumario-geral">
+            <details>
             <summary>Criações</summary>
             <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
@@ -113,7 +113,7 @@
             for($i;$i>0;$i){
                 $i -= 1;
                 echo'
-                <div class="texto-pequeno3-forne">'.$numero.'° Fornecedor</div>
+                <div class="numero_fornecedor">'.$numero.'° Fornecedor</div>
                 <br>
                 <form method="POST" action="t_fornecedor_p.php?$l='.$l./*.'&nome_atividade='.$nome_atividade.'*/'" name="cadastro">
                 <table class="caixa-centro-menor-fornecedor">
