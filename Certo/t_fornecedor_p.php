@@ -22,7 +22,7 @@
         ?>
 
 <body>    
-<div class='caixa-menu-geral'>
+<div class='caixa-menu-geral'></div>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -77,8 +77,8 @@
         </details>
     </div>
     <div class="menu">Menu</div>
-    <div class='caixa-tela-informacao-geral'>
-    <div class='caixa-centro-fornecedor'>
+    <div class='caixa-tela-informacao-geral'></div>
+        <div class='caixa-centro-fornecedor'>
         <form method="POST" action="t_fornecedor_p.php?nome=<?php redirect()?>">
             <div class="texto-pequeno-forne">Quantos fornecedores irás registrar:
                 <br>
@@ -166,7 +166,6 @@
         header("Location: t_fornecedor_p.php"); //Envia para a tela de Login ao Cadastrar
     }
 ?>
-    </div>
 </div>
 <div class='menu'>Menu</div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
