@@ -77,11 +77,13 @@
     </div>
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
+        <div class="caixa-inicial-prduto">
         <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
             <div class="">Quantos produtos você irá registrar: <input class="botao-produto" type="number" name="vezes"
                     placeholder="Número de vezes*"></div>
             <input class="" type="submit">
         </form>
+        </div>
         <?php
             $hostname = "127.0.0.1";
             $name = "root";
@@ -133,35 +135,35 @@ if(isset($_POST['vezes'])){
             <br>
             <table class="">
                 <tr>
-                    <td class="">Código do fornecedor: </td>
-                    <td><input class="texto-pequeno-produto" type="text" name="'.$v1.'" placeholder="1"></td>
-                    <td class="">Tipo: </td>
+                    <td class="texto-principal-produto">Código do fornecedor: </td>
+                    <td><input class="" type="text" name="'.$v1.'" placeholder="1"></td>
+                    <td class="texto-principal-produto">Tipo: </td>
                     <td><input class="" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td class="">Validade: </td>
+                    <td class="texto-principal-produto">Validade: </td>
                     <td><input class="" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
-                    <td class="">Lote: </td>
+                    <td class="texto-principal-produto">Lote: </td>
                     <td><input class="" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td class="">Nome: </td>
+                    <td class="texto-principal-produto">Nome: </td>
                     <td><input class="" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td class="">Marca do produto: </td>
+                    <td class="texto-principal-produto">Marca do produto: </td>
                     <td><input class="" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
-                    <td class="">Número do pedido: </td>
+                    <td class="texto-principal-produto">Número do pedido: </td>
                     <td><input class="" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td class="">Unidade: </td>
+                    <td class="texto-principal-produto">Unidade: </td>
                     <td><input class="" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td class="">Quantidade de unidade: </td>
+                    <td class="texto-principal-produto">Quantidade de unidade: </td>
                     <td><input class="" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
-                    <td class="">Quantidade de produto: </td>
+                    <td class="texto-principal-produto">Quantidade de produto: </td>
                     <td><input class="" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td class="">Valor da unidade: </td>
+                    <td class="texto-principal-produto">Valor da unidade: </td>
                     <td><input class="" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td class="">Peso em kilo grama: </td>
+                    <td class="texto-principal-produto">Peso em kilo grama: </td>
                     <td><input class="" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
