@@ -208,13 +208,15 @@ summary {
     position: fixed;
     padding-bottom: 2.5vh;
 }
-.caixa-sumario-geral{
-    top:15vh;
+
+.caixa-sumario-geral {
+    top: 15vh;
     width: 15vw;
     min-height: 100vh;
     position: absolute;
     padding-bottom: 2.5vh;
 }
+
 .espaco {
     width: 1vw;
     height: 10vh;
@@ -294,8 +296,8 @@ summary {
 
 .caixa-centro-fornecedor {
     background-color: whitesmoke;
-    top:10vh;
-    left:15vw;
+    top: 10vh;
+    left: 15vw;
     width: 79vw;
     min-height: 100%;
     text-align: center;
@@ -559,11 +561,11 @@ summary {
     background-color: white;
     color: rgb(0, 0, 0);
     width: 15vw;
-    border:0.01em solid black;
-    border-radius:100px;
-    margin-top:5vh;
-    margin-bottom:2.5vh;
-    margin-left:auto;
+    border: 0.01em solid black;
+    border-radius: 100px;
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -604,7 +606,7 @@ summary {
     width: 40vw;
     text-align: center;
     border-radius: 20px;
-    border: ;
+    border: 0.06;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
