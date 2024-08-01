@@ -245,6 +245,9 @@
                                 $tipo_conta2 .= 'p';
                                 $turma2 .= 'p';
                                 $botao += '1';
+                                if($qnt_alu_pagina == 0){
+                                    $qnt_alu_pagina = -1;
+                                }
                             }
                             echo '</table>
                             <table class="caixa-config-turma-aluno">
@@ -268,21 +271,15 @@
                             </form>
                             </tr>
                             </table>';}
-                        }elseif(mysqli_fetch_array($resultado) < 1){
-                            $pagina = 1;
-                            header('Location:t_turma.php?&nome='.$nome.'&pagina='.$pagina.'&turma='.$turma_global.'');
-                            }}else{
-                                inicio();
-                                falso();
-                            }
+                        }else{
+                            inicio();
+                            falso();
+                        }}else{
+                            inicio();
+                            falso();
                         }
-                function salvar(){
-
-                };
-                funcionar();
-                if(isset($_GET['salvar'])){
-                    salvar();
-                }
+                        }
+             funcionar();
                 
                     ?>
                     <script src="js.js"></script>
