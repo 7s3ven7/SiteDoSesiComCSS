@@ -217,7 +217,7 @@ summary {
 
 .caixa-tela-informacao-geral {
     width: 85vw;
-    min-height: 92.5%;
+    min-height: 100%;
     background-color: whitesmoke;
     position: absolute;
     left: 15vw;

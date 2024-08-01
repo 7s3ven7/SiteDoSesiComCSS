@@ -80,7 +80,7 @@
     </div>
 
     <div class="">
-        <form method="POST" action="t_produto_p.php">
+        <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
             <div class="">Quantos produtos você irá registrar: <input class="botao-produto" type="number" name="vezes"
                     placeholder="Número de vezes*"></div>
             <input class="" type="submit">
@@ -107,7 +107,7 @@
             $v10 = 'quantidade_produto';
             $v11 = 'valor_unidade';
             $v12 = 'peso';
-            echo'<form method="POST" action="c_produto_p.php?$l='.$l.'">';
+            echo'<form method="POST" action="c_produto_p.php?l='.$l.'&nome=';redirect();echo'">';
             echo'<br>';
             for($i;$i>0;$i){
                 $i -= 1;
