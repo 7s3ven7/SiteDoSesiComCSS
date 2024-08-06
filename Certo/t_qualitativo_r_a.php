@@ -14,7 +14,7 @@ $DB = "dados";
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
     } else{
-
+/*
         $nome = $_GET['nome'];
     function redirect(){
         global $nome;
@@ -25,7 +25,7 @@ $DB = "dados";
             echo $nome;
         }
     }
-
+*/
     echo '<!DOCTYPE html>
 
 <head>
@@ -91,10 +91,13 @@ $DB = "dados";
     <div class="caixa-tela-informacao-geral">
                 <form action="t_qualitativo_r_a.php" method="POST">
                     <center><div class="texto-grande-qualitat">
-                        <div class="">Digite o Código do fornecedor</div>
-                        <input class="" type="number" name="cod_forne">
-                        <input class="" type="submit">
+                        Digite o Código do fornecedor
+                        <input class="botao-input-qualitat" type="number" name="cod_forne">
+                        <br>
+                        <input class="botao-qualitat-submit" type="submit">
+                        <br>
                         <div class="">
+                        </div></center>
                 </form>';
                 if(isset($_POST['cod_forne'])){            
                     $v1 = $_POST['cod_forne'];
@@ -112,52 +115,69 @@ $DB = "dados";
                     }
                 echo '
                 <form method="POST" action="t_qualitativo_r_a.php">
+                <div class="caixa-qualitat-1">
                     <table class="tabela-qualitat">
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Código do fornecedor:</td>
                             <td class="td-qualitat">'.$row['cod_forne'].'</div></td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Lotes: </div></td>
                             <td class="td-qualitat">'.$row['lote'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Nome da empresa: </div></td>
                             <td class="td-qualitat">'.$row['nome_e'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">CNPJ da empresa: </div></td>
-                            <td class="td-qualitat">'.$row['CNPJ_d'].'</td>
+                            <td class="td-qualitat">'.$row['CNPJ_f'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Modelo do container: </div></td>
                             <td class="td-qualitat">'.$row['modelo_contai'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Navio: </div></td>
                             <td class="td-qualitat">'.$row['navio'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Destinatário: </div></td>
                             <td class="td-qualitat">'.$row['CNPJ_f'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Tipo do container: </div></td>
                             <td class="td-qualitat">'.$row['tipo_contai'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Lacre: </div></td>
                             <td class="td-qualitat">'.$row['lacre'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Lacre SIF: </div></td>
                             <td class="td-qualitat">'.$row['lacre_SIF'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Temperatura: </div></td>
                             <td class="td-qualitat">'.$row['temperatura'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">IMO: </div></td>
                             <td class="td-qualitat">'.$row['IMO'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Número ONU: </div></td>
                             <td class="td-qualitat">'.$row['n_ONU'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Nome do produto: </div></td>
                             <td class="td-qualitat">'.$row['nome_p'].'</td>
                         </tr>
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Unidades: </td>
                             <td class="td-qualitat">'.$row['und'].'</td>
+                            </tr>
+                            <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Quantidade de produto: </div></td>
                             <td class="td-qualitat">'.$row['quant_prod'].'</td>
                         </tr>
@@ -165,8 +185,10 @@ $DB = "dados";
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Quantidade de unidade: </div></td>
                             <td class="td-qualitat">'.$row['quant_und'].'</td>
                         </tr>     
-                        <th>
-                        </th>    
+                    </table> 
+                    </div>
+                    <div class="caixa-qualitat-2">
+                    <table class="tabela-qualitat2">
                         <tr>
                             <td class="td-qualitat"><div class="texto-pequeno-qualitat">Container Bem Desgastado: </div></td>
                             <td class="td-qualitat">
@@ -308,6 +330,7 @@ $DB = "dados";
                             </td>
                         </tr>
                     </table>
+                    </div>
                     <input class="botao-qualitat-submit" type="submit" value="Enviar" left=5px name="21">
                 </form>
                 </center>

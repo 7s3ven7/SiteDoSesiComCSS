@@ -377,6 +377,20 @@ summary {
     border-radius: 75px;
 }
 
+.caixa-tabela-qualitat {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  .caixa-qualitat-1{
+    width: 30.9vw;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid rgb(0, 0, 0);
+    position: relative;
+  }
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -583,39 +597,40 @@ summary {
 }
 
 .texto-pequeno-qualitat {
-    font-size: 1.5em;
-    color: darkgreen;
+    font-size: 1.3vw;
+    color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat{
-    width: 90em;
-    max-width: 100em;
-}
 .tabela-qualitat {
-    width: 50em;
-    max-width: 35vw;
+    width: 30vw;
+    max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
+    margin-top: 4%;
 }
 
-.td-qualitat{
-    width: 100em;
-    max-width: 100em;
+.tabela-qualitat2 {
+    position: absolute;
+    left: 40%;
+    top: 9.5vh;
+    width: 50vw;
+    max-width: 80vw;
+    border: 0.01em solid black;
+    text-align: center;
+    margin-top: 4%;
 }
+
 .td-qualitat {
-    width: 50em;
-    max-width: 35vw;
+    width: 5%;
+    max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
+    left: 2%;
 }
 
-.th-qualitat{
-    width: 100em;
-    max-width: 200em;
-}
 .th-qualitat {
-    width: 50em;
-    max-width: 35vw;
+    width: 100em;
+    max-width: 200vw;
     border: 0.01em solid black;
     text-align: center;
 }
@@ -832,10 +847,13 @@ summary {
     background-color: #eee;
 }
 
-.caixa-qualitat {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    padding-left: 100vw;
-  }
+.botao-input-qualitat{
+    width: 30%;
+    height: 5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1.7vh;
+    margin-right: 10%;
+}
