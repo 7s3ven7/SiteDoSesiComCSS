@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
 </head>
+<script src="js.js"></script>
 <?php
     $nome = $_GET['nome'];
     function redirect(){
@@ -18,77 +19,158 @@
             echo $nome;
         }
     }
-        ?>
+    function enviar(){
+        global $redirect_save;
+        echo $redirect_save;
+        }
+    function inicio(){
+        echo '
+            <div class="texto-grande-turma">Lista das Turmas</div>
+            <div class="caixa-direita-turma-dentro">
+            <table class="tabela-turma">
+            <tr>
+            <td class="linha-topo-2">Nome</td>
+            <td class="linha-topo-2">Qnt. Alunos</td>
+            <td class="linha-ex-select-num-2">Modificar</td>
+            <td class="linha-ex-select-num-2">Excluir</td>
+        </tr>';
+        }
+        function falso(){
+            global $conexao;
+            global $nome;
+            $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
+            $resultado = $conexao->query($sql);
+            if(mysqli_num_rows($resultado) == null){
+                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
+            }else{
+            global $conexao;
+            global $nome;
+            $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
+            $resultado = $conexao->query($sql);
+            while($row = mysqli_fetch_array($resultado)){
+                $turma = $row['0'];
+                $alunos = $row['1'];
+                echo '
+                <tr>
+                <td class="linha-topo">'.$turma.'</td>
+                <td class="linha-topo">'.$alunos.'</td>
+                <form method="POST" action="t_turma.php?nome=';redirect();echo'&turma='.$turma.'&pagina=1">
+                <td class="linha-ex-select-num"><input type="submit" class="botao-modificacao-turma" value="modificar"></td>
+                </form>
+                <form method="POST" action="t_exclusao_turma.php?nome=';redirect();echo'&turma='.$turma.'">
+                <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
+                </form>
+                </tr>';
+        }}
+    }
+    function funcionar(){
+        if(isset($_GET['pagina'])){
+        if($_GET['pagina']<= 0){
+            $pagina = 1;
+            $qnt_alu_pagina = $pagina; 
+        }else{
+            $pagina = $_GET['pagina'];
+            $qnt_alu_pagina = $pagina; 
+        }}else{
+            $pagina = 1;
+            $qnt_alu_pagina = $pagina; 
+        }
+            $paginaMenos = $pagina-1;
+            $paginaMais = $pagina+1;
+            $inicio = $qnt_alu_pagina;
+            $qnt_alu_pagina = 1;
+            $qnt_alu_pagina *= 15;
+            $inicio -= 1;
+            $inicio *= 15;
+            if($inicio < 0 ){
+                $inicio *= -1;
+            }
+            global $conexao;
+            global $nome;
+            if(isset($_GET['turma'])){
+            $turma = $_GET['turma'];
+            $turma_global = $turma;
+            $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.',15;';
+            $resultado = $conexao->query($sql);
+            if(mysqli_num_rows($resultado) > 0){
+                echo '
+                <div class="texto-medio-turma">Modificação dos Alunos</div>
+                <div class="caixa-direita-turma-dentro">
+                <table class="tabela-turma">
+                <tr>
+                    <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Nome</div></td>
+                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Senha</div></td>
+                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Conta</div></td>
+                    <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Turma</div></td>
+                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">ID</div></td>
+                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Excluir</div></td>
+                </tr>';
 
-<body>
-    <div class='caixa-menu-geral'>
-        <div class='espaco'></div>
-        <details class='details'>
-            <summary class='sumario'>Criações</summary>
-            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
-                <input class='botao-sumario' type='submit' value='Turmas'>
-            </form>
-            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Atividade'>
-            </form>
-        </details>
-        <details class='details'>
-            <summary class='sumario'>Cadastros</summary>
-            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Fornecedor'>
-            </form>
-            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Empresa'>
-            </form>
-            <details class='details'>
-                <summary class='sumario'>Cliente</summary>
-                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
-                    <input class=' botao-sumario' type='submit' value='Cadastro'>
+                if($qnt_alu_pagina > 0){
+                    $id2 = 'id';
+                    $aluno2 = 'aluno';
+                    $senha2 = 'senha';
+                    $tipo_conta2 = 'tipo_conta';
+                    $turma2 = 'turma';
+                    $botao = '1';
+                while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
+                    $id = $row[0];
+                    $aluno = $row[1];
+                    $senha = $row[2];
+                    $tipo_conta = $row[4];
+                    $turma = $row[5];
+                    $qnt_alu_pagina -= 1;
+                    echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
+                    if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
+                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
+                        }else{
+                            echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
+                        }    
+                        echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
+                        <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
+                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
+                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
+                    </tr>';
+                    $id2 .= 'p';
+                    $aluno2 .= 'p';
+                    $senha2 .= 'p';
+                    $tipo_conta2 .= 'p';
+                    $turma2 .= 'p';
+                    $botao += '1';
+                    if($qnt_alu_pagina == 0){
+                        $qnt_alu_pagina = -1;
+                    }
+                }
+                echo '</table>
+                <table class="caixa-config-turma-aluno">
+                <tr>
+                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMenos.'&turma='.$turma_global.'">
+                <td><input class="passar-pagina" type="submit" value="<"></td>
+                </form>';
+                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
+                if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
+                    echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
+                    <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
+                    </form>';
+                }else{
+                    echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=mostra">
+                    <td><input class="salvar-alteracao" type="submit" value="Mostra a senha"></td>
+                    </form>';
+                   }
+                echo'
+                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMais.'&turma='.$turma_global.'&verificacao=v">
+                <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
                 </form>
-                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
-                    <input class=' botao-sumario' type='submit' value='Pedido'>
-                </form>
-            </details>
-        </details>
-        <details class='details'>
-            <summary class='sumario'>Produto</summary>
-            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Cadastro'>
-            </form>
-        </details>
-        <details class='details'>
-            <summary class='sumario'>Recebimento</summary>
-            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Quantitativo'>
-            </form>
-            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
-            </form>
-        </details>
-        <details class='details'>
-            <summary class='sumario'>Expedição</summary>
-            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Quantitativo'>
-            </form>
-            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
-            </form>
-        </details>
-    </div>
-    <div class="caixa-tela-informacao-geral">
-        <div class="caixa-esquerda-turma">
-        <div class="texto-grande-turma">Crie sua Turma</div>
-            <div class="caixa-esquerda-turma-dentro">
-                <form method="POST" action='t_turma.php?nome=<?php redirect()?>'>
-                <div class="texto-cinza-turma">Nome do grupo:</div>
-                    <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
-                <div class="texto-cinza-turma">Quantidade de alunos: </div>
-                    <input class="botao-turma-input" type="number" placeholder="qtn. alunos" name="qnt_aluno">
-                <br>
-                <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
-            </form>
-            </div>
-            <?php 
+                </tr>
+                </table>';}
+            }else{
+                   inicio();
+                falso();
+            }}else{
+                inicio();
+                falso();
+            }
+            }
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -124,191 +206,81 @@
 
 
                             }}}?>
-        </div>
-        <div class="caixa-direita-turma">
-            <?php
-                    function inicio(){
-                    echo '
-                        <div class="texto-grande-turma">Lista das Turmas</div>
-                        <div class="caixa-direita-turma-dentro">
-                        <table class="tabela-turma">
-                        <tr>
-                        <td class="linha-topo-2">Nome</td>
-                        <td class="linha-topo-2">Qnt. Alunos</td>
-                        <td class="linha-ex-select-num-2">Modificar</td>
-                        <td class="linha-ex-select-num-2">Excluir</td>
-                    </tr>';
-                    }
-                    function falso(){
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        if(mysqli_num_rows($resultado) == null){
-                            echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
-                        }else{
-                        global $conexao;
-                        global $nome;
-                        $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-                        $resultado = $conexao->query($sql);
-                        while($row = mysqli_fetch_array($resultado)){
-                            $turma = $row['0'];
-                            $alunos = $row['1'];
-                            echo '
-                            <tr>
-                            <td class="linha-topo">'.$turma.'</td>
-                            <td class="linha-topo">'.$alunos.'</td>
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&turma='.$turma.'&pagina=1">
-                            <td class="linha-ex-select-num"><input type="submit" class="botao-modificacao-turma" value="modificar"></td>
-                            </form>
-                            <form method="POST" action="t_exclusao_turma.php?nome=';redirect();echo'&turma='.$turma.'">
-                            <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                            </form>
-                            </tr>';
-                    }}
-                }
-                function enviar(){
-                    global $redirect_save;
-                    echo $redirect_save;
-                }
-                function funcionar(){
-                    if(isset($_GET['pagina']) or isset($_GET['paginaMais']) or isset($_GET['paginaMenos'])){
-                        if(isset($_GET['paginaMenos']) or isset($_GET['paginaMais'])){
-                        if(isset($_GET['paginaMenos'])){
-                            $qnt_alu_pagina = $_GET['paginaMenos'];
-                            if($qnt_alu_pagina > 1){
-                                $qnt_alu_pagina -= 1;
-                                $pagina = $qnt_alu_pagina;
-                            }else{
-                            $qnt_alu_pagina = $_GET['paginaMenos'];
-                            $pagina = $qnt_alu_pagina;
-                            }
-                            }
-                        if(isset($_GET['paginaMais'])){
-                            $qnt_alu_pagina = $_GET['paginaMais'];
-                            if($qnt_alu_pagina > 0){
-                                $qnt_alu_pagina += 1;
-                                $pagina = $qnt_alu_pagina;
-                            }else{
-                            $qnt_alu_pagina = $_GET['paginaMais'];
-                            $pagina = $qnt_alu_pagina;
-                            }
-                            }
-                        }else{
-                            $qnt_alu_pagina = $_GET['pagina'];
-                            $pagina = $qnt_alu_pagina;
-                        }
-                        $inicio = $qnt_alu_pagina;
-                        $qnt_alu_pagina = 1;
-                        $qnt_alu_pagina *= 15;
-                        $inicio -= 1;
-                        $inicio *= 15;  
-                        global $conexao;
-                        global $nome;
-                        $turma = $_GET['turma'];
-                        $turma_global = $turma;
-                        $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.','.$qnt_alu_pagina.';';
-                        $resultado = $conexao->query($sql);
-                        if(mysqli_num_rows($resultado) > 0){
-                            echo '
-                            <div class="texto-medio-turma">Modificação dos Alunos</div>
-                            <div class="caixa-direita-turma-dentro">
-                            <table class="tabela-turma">
-                            <tr>
-                                <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Nome</div></td>
-                                <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Senha</div></td>
-                                <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Conta</div></td>
-                                <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Turma</div></td>
-                                <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">ID</div></td>
-                                <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Excluir</div></td>
-                            </tr>';
 
-                            if($qnt_alu_pagina > 0){
-                                $id2 = 'id';
-                                $aluno2 = 'aluno';
-                                $senha2 = 'senha';
-                                $tipo_conta2 = 'tipo_conta';
-                                $turma2 = 'turma';
-                                $botao = '1';
-                            while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
-                                $id = $row[0];
-                                $aluno = $row[1];
-                                $senha = $row[2];
-                                $tipo_conta = $row[4];
-                                $turma = $row[5];
-                                $qnt_alu_pagina -= 1;
-                                echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
-                                    if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
-                                        echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
-                                    }else{
-                                        echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
-                                    }    
-                                    echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
-                                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
-                                    <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                                    <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
-                                </tr>';
-                                $id2 .= 'p';
-                                $aluno2 .= 'p';
-                                $senha2 .= 'p';
-                                $tipo_conta2 .= 'p';
-                                $turma2 .= 'p';
-                                $botao += '1';
-                            }
-                            echo '</table>
-                            <table class="caixa-config-turma-aluno">
-                            <tr>
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMenos='.$pagina.'&turma='.$turma_global.'&verificacao=v">
-                            <td><input class="passar-pagina" type="submit" value="<"></td>
-                            </form>
-                            <td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
-                            if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
-                                echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
-                                <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
-                                </form>';
-                            }else{
-                                echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=mostra">
-                                <td><input class="salvar-alteracao" type="submit" value="Mostra a senha"></td>
-                                </form>';
-                            }
-                            echo'
-                            <form method="POST" action="t_turma.php?nome=';redirect();echo'&paginaMais='.$pagina.'&turma='.$turma_global.'&salvar=v">
-                            <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
-                            </form>
-                            </tr>
-                            </table>';}
-                        }elseif($_GET['verificacao']){
-                            $pagina = 1;
-                            header('Location:t_turma.php?&nome'.redirect().'&pagina='.$pagina.'&turma='.$turma_global.'');
-                            }else{
-                            inicio();
-                            falso();
-                            }
-
-                    }else{
-                        inicio();
-                        falso();
-                    }
-                }   
-                function salvar(){
-
-                };
-                funcionar();
-                if(isset($_GET['salvar'])){
-                    salvar();
-                }
-                
-                    ?>
-                    <script src="js.js"></script>
-            </table>
-        </div>
-        </div>
+<body>
+    <div class='caixa-menu-geral'>
+        <div class='espaco'></div>
+        <details>
+            <summary>Criações</summary>
+            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
+                <input class='botao-sumario' type='submit' value='Turmas'>
+            </form>
+            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Atividade'>
+            </form>
+        </details>
+        <details>
+            <summary>Cadastros</summary>
+            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Fornecedor'>
+            </form>
+            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Empresa'>
+            </form>
+            <details>
+                <summary>Cliente</summary>
+                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Cadastro'>
+                </form>
+                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Pedido'>
+                </form>
+            </details>
+        </details>
+        <details>
+            <summary>Produto</summary>
+            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Cadastro'>
+            </form>
+        </details>
+        <details>
+            <summary>Recebimento</summary>
+            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Quantitativo'>
+            </form>
+            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+            </form>
+        </details>
+        <details>
+            <summary>Expedição</summary>
+            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Quantitativo'>
+            </form>
+            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
+                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+            </form>
+        </details>
     </div>
     <div class="menu">Menu</div>
-    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+    <div class="caixa-tela-informacao-geral">
+        <div class="caixa-esquerda-turma">
+            <div class="texto-grande-turma">Crie sua Turma</div>
+            <div class="caixa-esquerda-turma-dentro">
+                <form method="POST" action='t_turma.php?nome=<?php redirect()?>'>
+                    <div class="texto-cinza-turma">Nome do grupo:</div>
+                    <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
+                    <div class="texto-cinza-turma">Quantidade de alunos: </div>
+                    <input class="botao-turma-input" type="number" placeholder="qtn. alunos" name="qnt_aluno">
+                    <br>
+                    <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
+                </form>
+            </div>
+        </div>
+        <div class="caixa-direita-turma">
+            <?php funcionar(); ?>
+        </div>
+        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
 </html>
-
-
-

@@ -21,10 +21,11 @@
         ?>
 
 <body>
+<body>
     <div class='caixa-menu-geral'>
         <div class='espaco'></div>
-        <details class='details'>
-            <summary class='sumario'>Criações</summary>
+        <details>
+            <summary>Criações</summary>
             <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
                 <input class='botao-sumario' type='submit' value='Turmas'>
             </form>
@@ -32,16 +33,16 @@
                 <input class=' botao-sumario' type='submit' value='Atividade'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Cadastros</summary>
+        <details>
+            <summary>Cadastros</summary>
             <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Fornecedor'>
             </form>
             <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Empresa'>
             </form>
-            <details class='details'>
-                <summary class='sumario'>Cliente</summary>
+            <details>
+                <summary>Cliente</summary>
                 <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
                     <input class=' botao-sumario' type='submit' value='Cadastro'>
                 </form>
@@ -50,14 +51,14 @@
                 </form>
             </details>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Produto</summary>
+        <details>
+            <summary>Produto</summary>
             <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Cadastro'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Recebimento</summary>
+        <details>
+            <summary>Recebimento</summary>
             <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
@@ -65,8 +66,8 @@
                 <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
             </form>
         </details>
-        <details class='details'>
-            <summary class='sumario'>Expedição</summary>
+        <details>
+            <summary>Expedição</summary>
             <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
                 <input class=' botao-sumario' type='submit' value='Quantitativo'>
             </form>
@@ -75,6 +76,7 @@
             </form>
         </details>
     </div>
+    <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-esquerda-turma">
             <div class="texto-grande-turma">Crie sua Atividade</div>
@@ -265,7 +267,6 @@
             </div>
         </div>
     </div>
-    <div class="menu">Menu</div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 

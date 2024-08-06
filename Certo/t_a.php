@@ -20,7 +20,7 @@
         ?>
 <body>
     <div class="caixa-menu-geral"></div>
-    <div class="menu">Menu</div>
+
     <div class="conta-geral">Aluno - <?php echo $nome;?></div>
     <div class='espaco'></div>
     <details class='details'>
@@ -71,8 +71,8 @@
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="caixa-tela-informacao-geral">
+    <div class="menu">Menu</div>
     </div>
 </body>
 
