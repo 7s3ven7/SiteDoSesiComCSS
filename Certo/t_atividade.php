@@ -21,79 +21,80 @@
         ?>
 
 <body>
-<body>
-    <div class='caixa-menu-geral'>
-        <div class='espaco'></div>
-        <details>
-            <summary>Criações</summary>
-            <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
-                <input class='botao-sumario' type='submit' value='Turmas'>
-            </form>
-            <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Atividade'>
-            </form>
-        </details>
-        <details>
-            <summary>Cadastros</summary>
-            <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Fornecedor'>
-            </form>
-            <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Empresa'>
-            </form>
+
+    <body>
+        <div class='caixa-menu-geral'>
+            <div class='espaco'></div>
             <details>
-                <summary>Cliente</summary>
-                <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
-                    <input class=' botao-sumario' type='submit' value='Cadastro'>
+                <summary>Criações</summary>
+                <form method='POST' action='t_turma.php?nome=<?php redirect()?>'>
+                    <input class='botao-sumario' type='submit' value='Turmas'>
                 </form>
-                <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
-                    <input class=' botao-sumario' type='submit' value='Pedido'>
+                <form method='POST' action='t_atividade.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Atividade'>
                 </form>
             </details>
-        </details>
-        <details>
-            <summary>Produto</summary>
-            <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Cadastro'>
-            </form>
-        </details>
-        <details>
-            <summary>Recebimento</summary>
-            <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Quantitativo'>
-            </form>
-            <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
-            </form>
-        </details>
-        <details>
-            <summary>Expedição</summary>
-            <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Quantitativo'>
-            </form>
-            <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
-                <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
-            </form>
-        </details>
-    </div>
-    <div class="menu">Menu</div>
-    <div class="caixa-tela-informacao-geral">
-        <div class="caixa-esquerda-turma">
-            <div class="texto-grande-turma">Crie sua Atividade</div>
-            <div class="caixa-esquerda-turma-dentro">
-                <form method="POST" action="t_atividade.php?nome=<?php redirect()?>">
-                    <div class="texto-cinza-turma">Nome da Atividade:</div>
-                    <input class="botao-turma-input" type="text" placeholder="atividade" name="nome_atividade">
-                    <div class="texto-cinza-turma">Turma destinada: </div>
-                    <input class="botao-turma-input" type="text" placeholder="turma" name="turma_destinada"
-                        list="turmas">
-                    <div class="texto-cinza-turma">Data máxida de entrega: </div>
-                    <input class="botao-turma-input" type="date" name="data">
-                    <br>
-                    <input class="botao-turma-submit" type="submit" value="Criar Atividade">
+            <details>
+                <summary>Cadastros</summary>
+                <form method='POST' action='t_fornecedor_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Fornecedor'>
                 </form>
-            </div>
-            <?php 
+                <form method='POST' action='t_empresa_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Empresa'>
+                </form>
+                <details>
+                    <summary>Cliente</summary>
+                    <form method='POST' action='t_cliente_p.php?nome=<?php redirect()?>'>
+                        <input class=' botao-sumario' type='submit' value='Cadastro'>
+                    </form>
+                    <form method='POST' action='t_pedido_p.php?nome=<?php redirect()?>'>
+                        <input class=' botao-sumario' type='submit' value='Pedido'>
+                    </form>
+                </details>
+            </details>
+            <details>
+                <summary>Produto</summary>
+                <form method='POST' action='t_produto_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Cadastro'>
+                </form>
+            </details>
+            <details>
+                <summary>Recebimento</summary>
+                <form method='POST' action='t_quantitativo_r_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Quantitativo'>
+                </form>
+                <form method='POST' action='t_nota_r_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+                </form>
+            </details>
+            <details>
+                <summary>Expedição</summary>
+                <form method='POST' action='t_quantitativo_e_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Quantitativo'>
+                </form>
+                <form method='POST' action='t_nota_e_p.php?nome=<?php redirect()?>'>
+                    <input class=' botao-sumario' type='submit' value='Nota Fiscal'>
+                </form>
+            </details>
+        </div>
+        <div class="menu">Menu</div>
+        <div class="caixa-tela-informacao-geral">
+            <div class="caixa-esquerda-turma">
+                <div class="texto-grande-turma">Crie sua Atividade</div>
+                <div class="caixa-esquerda-turma-dentro">
+                    <form method="POST" action="t_atividade.php?nome=<?php redirect()?>">
+                        <div class="texto-cinza-turma">Nome da Atividade:</div>
+                        <input class="botao-turma-input" type="text" placeholder="atividade" name="nome_atividade">
+                        <div class="texto-cinza-turma">Turma destinada: </div>
+                        <input class="botao-turma-input" type="text" placeholder="turma" name="turma_destinada"
+                            list="turmas">
+                        <div class="texto-cinza-turma">Data máxida de entrega: </div>
+                        <input class="botao-turma-input" type="date" name="data">
+                        <br>
+                        <input class="botao-turma-submit" type="submit" value="Criar Atividade">
+                    </form>
+                </div>
+                <?php 
             $hostname = "127.0.0.1";
             $name = "root";
             $password = "root";
@@ -112,23 +113,23 @@
                         if($resultado_1->num_rows != 0){
                             echo '<div class="texto-aviso-turma">O nome '.$nome_atividade.' já esta em uso, tente outro</div>';
                         }else{
-                            $SQL = 'INSERT INTO `atividade` (`id_atividade`,`nome_criador`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
-                            $resultado = $conexao->query($SQL); 
+                            $sql = 'INSERT INTO `atividade` (`id_atividade`,`nome_criador`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
+                            $resultado = $conexao->query($sql); 
                             }}}?>
-        </div>
-        <div class="caixa-direita-turma">
-            <div class="texto-grande-turma">Lista das Atividades</div>
-            <div class="caixa-direita-turma-dentro">
-                <table class="tabela-turma">
-                    <tr>
-                        <td class="linha-topo-2">Nome</td>
-                        <td class="linha-topo-2">Proprietário</td>
-                        <td class="linha-topo-2">Turma</td>
-                        <td class="linha-topo-2">Data M.</td>
-                        <td class="linha-topo-2">Ativo</td>
-                        <td class="linha-topo-2">Excluir</td>
-                    </tr>
-                    <?php
+            </div>
+            <div class="caixa-direita-turma">
+                <div class="texto-grande-turma">Lista das Atividades</div>
+                <div class="caixa-direita-turma-dentro">
+                    <table class="tabela-turma">
+                        <tr>
+                            <td class="linha-topo-2">Nome</td>
+                            <td class="linha-topo-2">Proprietário</td>
+                            <td class="linha-topo-2">Turma</td>
+                            <td class="linha-topo-2">Data M.</td>
+                            <td class="linha-topo-2">Ativo</td>
+                            <td class="linha-topo-2">Excluir</td>
+                        </tr>
+                        <?php
                     global $conexao;
                     global $nome;
                     $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
@@ -263,11 +264,11 @@
                     usado();
                     desusado();
                     ?>
-                </table>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
-</body>
+        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+    </body>
 
-</html>
+    </html>

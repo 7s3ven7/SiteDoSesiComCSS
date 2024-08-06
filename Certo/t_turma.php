@@ -112,7 +112,6 @@
                     $senha2 = 'senha';
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
-                    $botao = '1';
                 while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
@@ -129,14 +128,13 @@
                         echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                         <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                         <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
+                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
                     $id2 .= 'p';
                     $aluno2 .= 'p';
                     $senha2 .= 'p';
                     $tipo_conta2 .= 'p';
                     $turma2 .= 'p';
-                    $botao += '1';
                     if($qnt_alu_pagina == 0){
                         $qnt_alu_pagina = -1;
                     }
