@@ -79,9 +79,9 @@
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-inicial-prduto">
         <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
-            <div class="">Quantos produtos você irá registrar: <input class="botao-produto" type="number" name="vezes"
+            <div class="texto-principal-produto ">Quantos produtos você irá registrar: <input class="" type="number" name="vezes"
                     placeholder="Número de vezes*"></div>
-            <input class="" type="submit">
+            <input class="botao-enviar-produto" :houver type="submit">
         </form>
         </div>
         <?php
