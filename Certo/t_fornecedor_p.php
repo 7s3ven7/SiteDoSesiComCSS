@@ -25,7 +25,7 @@
         }
     function inicio(){
         echo '
-            <div class="texto-grande-turma">Lista das Turmas</div>
+            <div class="texto-grande-fornecedor">Lista dos fornecedores</div>
             <div class="caixa-direita-turma-dentro">
             <table class="tabela-turma">
             <tr>
@@ -41,7 +41,7 @@
             $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
             $resultado = $conexao->query($sql);
             if(mysqli_num_rows($resultado) == null){
-                echo '<div class="texto-aviso-turma-tabela">Nenhuma Turma Encontrada</div>';
+                echo '<div class="texto-aviso-turma-tabela">Nenhum fornecedor Encontrado</div>';
             }else{
             global $conexao;
             global $nome;
@@ -63,20 +63,6 @@
                 </tr>';
         }}
     }
-    function cadastro(){
-        global $conexao;
-        $v1 = $_POST['cnpj']; //CNPJ
-        $v2 = $_POST['nome_fornecedor']; //Nome do fornecedor
-        $v3 = $_POST['gmail']; //Email
-        $v4 = $_POST['cep']; //CEP
-        $v5 = $_POST['telefone']; //Telefone
-        $v6 = rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-        $SQL = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`nome_f`,`gmail_f`,`CEP_f`,`fone_f`,`cod_forne`) 
-        VALUES (' . $v1 . ',' . $v2 . ',' . $v3 . ',' . $v4 . ',' . $v5 . ','.$v6.');';
-        $resultado = $conexao->query($SQL);  
-        $conexao->close();
-        header("Location: t_fornecedor_p.php");
-        }
     function funcionar(){
         if(isset($_GET['pagina'])){
         if($_GET['pagina']<= 0){
@@ -126,7 +112,6 @@
                     $senha2 = 'senha';
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
-                    $botao = '1';
                 while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
@@ -135,22 +120,17 @@
                     $turma = $row[5];
                     $qnt_alu_pagina -= 1;
                     echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
-                    if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
-                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
-                        }else{
-                            echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
-                        }    
-                        echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
+                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td> 
+                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                         <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                         <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" id="'.$botao.'" value="'.$id.'"></td>
+                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" " value="'.$id.'"></td>
                     </tr>';
                     $id2 .= 'p';
                     $aluno2 .= 'p';
                     $senha2 .= 'p';
                     $tipo_conta2 .= 'p';
                     $turma2 .= 'p';
-                    $botao += '1';
                     if($qnt_alu_pagina == 0){
                         $qnt_alu_pagina = -1;
                     }
@@ -194,28 +174,21 @@
             echo "Failes conection: " . $conexao->connect_error;
             exit();
         } else {
-            if(isset($_POST['cnpj_fornecedor']) and isset($_POST['nome_fornecedor']) and isset($_POST['gmail_fornecedor']) and  isset($_POST['cep_fornecedro']) and  isset($_POST['telefone_fornecedor'])){
+            if(isset($_POST['cnpj_fornecedor']) and isset($_POST['nome_fornecedor']) and isset($_POST['gmail_fornecedor']) and  isset($_POST['cep_fornecedro']) and  isset($_POST['telefone_fornecedor']) and isset($_GET['nome_atividade'])){
             $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
             $nome_f = $conexao->real_escape_string($_POST["nome_fornecedor"]);
             $gmail_f = $conexao->real_escape_string($_POST["gmail_fornecedor"]);
             $cep_f = $conexao->real_escape_string($_POST["cep_fornecedro"]);
             $telefone_f = $conexao->real_escape_string($_POST["telefone_fornecedor"]);
-            $id_atividade =
+            $id_atividade = $_GET['nome_atividade'];
             $sql = 'SELECT `nome_f` FROM `fornecedor_p` WHERE `nome_f` = "'.$nome_f.'"';
             $resultado_1 = $conexao->query($sql);
             if($resultado_1->num_rows != 0){
                 echo '<div class="texto-aviso-turma">O fornecedor '.$nome_f.' já esta existe, tente outro</div>';
             }else{
-            $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ;';
+            $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ("'.$cnpj_f.'","'.$id_atividade.'","'.$nome_f.'","'.$telefone_f.'","'.$gmail_f.'","'.$cep_f.'");';
             $resultado = $conexao->query($sql);
             }
-
-
-
-
-        if(isset($_POST['']) and isset($_POST['']) and isset($_POST['']) and isset($_POST[''])){
-        cadastro();
-    }
     }
                             }?>
 
@@ -283,12 +256,12 @@
                     <div class="texto-cinza-turma">CNPJ:</div>
                     <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cnpj_fornecedor">
                     <div class="texto-cinza-turma">Fornecedor: </div>
-                    <input class="botao-turma-input" type="number" placeholder="nome" name="nome_fornecedor">
+                    <input class="botao-turma-input" type="text" placeholder="nome" name="nome_fornecedor">
                     <div class="texto-cinza-turma">Gmail:</div>
                     <input class="botao-turma-input" type="text" placeholder="fornecedor@gmail.com"
                         name="gmail_fornecedor">
                     <div class="texto-cinza-turma">CEP: </div>
-                    <input class="botao-turma-input" type="number" placeholder="000.000.000-00" name="cep_fornecedro">
+                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cep_fornecedro">
                     <div class="texto-cinza-turma">Telefone:</div>
                     <input class="botao-turma-input" type="text" placeholder="(00) 00000-0000"
                         name="telefone_fornecedor">
