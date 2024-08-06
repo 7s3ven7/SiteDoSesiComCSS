@@ -206,8 +206,9 @@
 
 
                             }}}?>
+
 <body>
-<div class='caixa-menu-geral'>
+    <div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -264,22 +265,22 @@
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-esquerda-turma">
-        <div class="texto-grande-turma">Crie sua Turma</div>
+            <div class="texto-grande-turma">Crie sua Turma</div>
             <div class="caixa-esquerda-turma-dentro">
                 <form method="POST" action='t_turma.php?nome=<?php redirect()?>'>
-                <div class="texto-cinza-turma">Nome do grupo:</div>
+                    <div class="texto-cinza-turma">Nome do grupo:</div>
                     <input class="botao-turma-input" type="text" placeholder="Nome" name="nome_grupo">
-                <div class="texto-cinza-turma">Quantidade de alunos: </div>
+                    <div class="texto-cinza-turma">Quantidade de alunos: </div>
                     <input class="botao-turma-input" type="number" placeholder="qtn. alunos" name="qnt_aluno">
-                <br>
-                <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
-            </form>
+                    <br>
+                    <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
+                </form>
             </div>
         </div>
         <div class="caixa-direita-turma">
             <?php funcionar(); ?>
-    </div>
-    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+        </div>
+        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

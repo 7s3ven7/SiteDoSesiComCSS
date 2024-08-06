@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 30-Jul-2024 às 11:11
+-- Generation Time: 06-Ago-2024 às 11:03
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `atividade` (
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `data_atividade` date NOT NULL,
   `turma` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
@@ -41,7 +41,7 @@ CREATE TABLE `atividade` (
 
 CREATE TABLE `cliente_p` (
   `CNPJ_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `nome_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `fone_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `gmail_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE `controle_a` (
   `cod_forne` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `rua` int(11) NOT NULL,
   `kg` double NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `marca` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -76,7 +76,7 @@ CREATE TABLE `controle_a` (
 
 CREATE TABLE `empresa_p` (
   `CNPJ_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `nome_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `fone_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `gmail_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE `estoque` (
   `cod_inter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `kg` double NOT NULL,
   `ap` int(11) NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `id_controle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -116,7 +116,7 @@ CREATE TABLE `estoque` (
 
 CREATE TABLE `fornecedor_p` (
   `CNPJ_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `nome_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `fone_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `gmail_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE `nota_e_p` (
   `id_pedido` int(11) NOT NULL,
   `CNPJ_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `eixos` int(11) NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `CEP` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `lote` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE `nota_r_p` (
   `n_nota_r` int(50) NOT NULL,
   `CNPJ_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `eixos` int(11) NOT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `CEP_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `lote` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -201,7 +201,7 @@ CREATE TABLE `nota_r_p` (
 
 CREATE TABLE `pedido_cliente_p` (
   `id_pedido` int(11) NOT NULL,
-  `id_atividade` int(11) DEFAULT NULL,
+  `id_atividade` varchar(255) DEFAULT NULL,
   `nome_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fone_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `gmail_c` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -238,7 +238,7 @@ CREATE TABLE `picking_a` (
   `und` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_forne` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `rua` int(11) NOT NULL,
-  `id_atividade` int(11) NOT NULL
+  `id_atividade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -260,7 +260,7 @@ CREATE TABLE `produto_p` (
   `marca_prod` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_forne` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_v` date DEFAULT NULL,
-  `id_atividade` int(11) NOT NULL
+  `id_atividade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -289,7 +289,7 @@ CREATE TABLE `qualitativo_e_a` (
   `excesso_d` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `excesso_altu` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `painel_avariado` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `id_atividade` int(11) NOT NULL
+  `id_atividade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -321,7 +321,7 @@ CREATE TABLE `qualitativo_r_a` (
   `excesso_altu` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `item_lacrado` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `painel_avariado` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `id_atividade` int(11) NOT NULL
+  `id_atividade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -349,7 +349,7 @@ CREATE TABLE `quantitativo_e_p` (
   `modelo_contai` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cod_inter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `temperatura` double DEFAULT NULL,
-  `id_atividade` int(11) NOT NULL,
+  `id_atividade` varchar(255) NOT NULL,
   `quant_prod` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -379,7 +379,7 @@ CREATE TABLE `quantitativo_r_p` (
   `nome_p` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `CNPJ_e` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `n_ONU` int(11) NOT NULL,
-  `id_atividade` int(11) NOT NULL
+  `id_atividade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
