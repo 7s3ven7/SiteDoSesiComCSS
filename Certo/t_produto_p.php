@@ -77,13 +77,6 @@
     </div>
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
-        <div class="caixa-inicial-prduto">
-        <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
-            <div class="texto-principal-produto ">Quantos produtos você irá registrar: <input class="" type="number" name="vezes"
-                    placeholder="Número de vezes*"></div>
-            <input class="botao-enviar-produto" :houver type="submit">
-        </form>
-        </div>
         <?php
             $hostname = "127.0.0.1";
             $name = "root";
@@ -91,12 +84,23 @@
             $DB = "dados";
         
             $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-        
+
+           
             if ($conexao->connect_errno) {
                 echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
                 exit();
             } else {
-                if(isset($_POST['vezes'])){ exibir();}
+                if(isset($_POST['vezes'])){ exibir();}else{
+                    echo' <div class="caixa-inicial-prduto">
+        <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
+            <div class="texto-principal-produto ">Quantos produtos você irá registrar: 
+                <br>
+                <input class="botao-numero-produto" type="number" name="vezes"
+                    placeholder="Número de vezes"></div>
+            <input class="botao-enviar-produto"type="submit">
+        </form>
+        </div>';
+                }
                 if(isset($_POST['$l'])){ salvar();}
             }
             ?>
@@ -136,35 +140,35 @@ if(isset($_POST['vezes'])){
             <table class="">
                 <tr>
                     <td class="texto-principal-produto">Código do fornecedor: </td>
-                    <td><input class="" type="text" name="'.$v1.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v1.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Tipo: </td>
-                    <td><input class="" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v2.'" placeholder="caixa"></td>
                     <td class="texto-principal-produto">Validade: </td>
-                    <td><input class="" type="date" name="'.$v3.'"></td>
+                    <td><input class="botao-numero1-produto" type="date" name="'.$v3.'"></td>
                 </tr>
                 <tr>
                     <td class="texto-principal-produto">Lote: </td>
-                    <td><input class="" type="text" name="'.$v4.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v4.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Nome: </td>
-                    <td><input class="" type="text" name="'.$v5.'" placeholder="empresa"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v5.'" placeholder="empresa"></td>
                     <td class="texto-principal-produto">Marca do produto: </td>
-                    <td><input class="" type="text" name="'.$v6.'" placeholder="marca"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v6.'" placeholder="marca"></td>
                 </tr>
                 <tr>
                     <td class="texto-principal-produto">Número do pedido: </td>
-                    <td><input class="" type="text" name="'.$v7.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v7.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Unidade: </td>
-                    <td><input class="" type="text" name="'.$v8.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v8.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Quantidade de unidade: </td>
-                    <td><input class="" type="text" name="'.$v9.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v9.'" placeholder="1"></td>
                 </tr>
                 <tr>
                     <td class="texto-principal-produto">Quantidade de produto: </td>
-                    <td><input class="" type="text" name="'.$v10.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v10.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Valor da unidade: </td>
-                    <td><input class="" type="text" name="'.$v11.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v11.'" placeholder="1"></td>
                     <td class="texto-principal-produto">Peso em kilo grama: </td>
-                    <td><input class="" type="text" name="'.$v12.'" placeholder="1"></td>
+                    <td><input class="botao-numero1-produto" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
             </table>';
             $numero += 1;
