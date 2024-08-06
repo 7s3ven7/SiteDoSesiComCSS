@@ -397,6 +397,14 @@ summary {
     text-align: center;
     margin-top: 2.5vh;
 }
+.texto-grande-fornecedor{
+    font-size: 4em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
 
 .texto-medio-turma {
     font-size: 4em;
