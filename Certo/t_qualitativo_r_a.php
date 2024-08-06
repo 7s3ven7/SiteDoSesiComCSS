@@ -114,7 +114,7 @@ $DB = "dados";
                         exit();
                     }
                 echo '
-                <form method="POST" action="t_qualitativo_r_a.php">
+                <form me-2od="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1">
                     <table class="tabela-qualitat">
                         <tr>
@@ -190,140 +190,140 @@ $DB = "dados";
                     <div class="caixa-qualitat-2">
                     <table class="tabela-qualitat2">
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Container Bem Desgastado: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Container Bem Desgastado: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="1">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Avaria na Lateral Direita: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Lateral Direita: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="2">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Avaria na Lateral Esquerda: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Lateral Esquerda: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="3">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Avaria no Teto: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria no Teto: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="4">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Avaria na Frente: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Frente: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="5">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Sem Lacre </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Lacre </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="6">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Adesivos Avariados: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Adesivos Avariados: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="7">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Excesso de Altura: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso de Altura: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="8">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Excesso na Direita: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso na Direita: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="9">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Excesso na Esquerda: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso na Esquerda: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="10">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Excesso Frontal: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso Frontal: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="11">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Painel Avariado: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Painel Avariado: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="12">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Sem Cabo de Energia: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Cabo de Energia: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="13">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Sem Lona: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Lona: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="14">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Canhoto Assinado: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Canhoto Assinado: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="15">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Volume Correto: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Volume Correto: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="16">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Atraso: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Atraso: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="17">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Código Avariado: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Código Avariado: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="18">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Item Lacrado: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Item Lacrado: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="19">
                                 </label>
                             </td>
-                            <td class="td-qualitat"><div class="texto-pequeno-qualitat">Doca 1: </div></td>
-                            <td class="td-qualitat">
+                            <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Doca 1: </div></td>
+                            <td class="td-qualitat-2">
                                 <label class="container-qualitat">
                                     <input class="check-qualitat" type="checkbox" name="20">
                                 </label>
