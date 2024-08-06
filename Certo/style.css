@@ -545,23 +545,28 @@ summary {
     color: rgb(0, 0, 0);
 }
 
+.texto-pequeno-qualitat {
+    font-size: 1.5em;
+    color: darkgreen;
+}
+
 .tabela-qualitat{
-    width: 50em;
-    max-width: 35vw;
+    width: 90em;
+    max-width: 100em;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .td-qualitat{
-    width: 50em;
-    max-width: 35vw;
+    width: 100em;
+    max-width: 100em;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .th-qualitat{
-    width: 50em;
-    max-width: 35vw;
+    width: 100em;
+    max-width: 200em;
     border: 0.01em solid black;
     text-align: center;
 }
@@ -775,3 +780,18 @@ summary {
     border: 0.01em solid black;
     border-radius: 20px;
 }
+
+.check-qualitat{
+    position: relative;
+    height: 1.7vh;
+    width: 1.7vw;
+    background-color: #eee;
+}
+
+.caixa-qualitat {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 100vw;
+  }
