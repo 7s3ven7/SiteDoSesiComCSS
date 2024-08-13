@@ -113,7 +113,7 @@ $DB = "dados";
                         exit();
                     }
                 echo '
-                <form me-2od="POST" action="t_qualitativo_r_a.php">
+                <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1">
                     <table class="tabela-qualitat">
                         <tr>
@@ -334,39 +334,43 @@ $DB = "dados";
                 </form>
                 </center>
             </div>
-        </body>
-    </html>';}
-    }
+            </td>
+<input class="botao-qualitat-submit" type="submit" value="Enviar" left=5px name="21">
+</form>
+</body>
+
+</html>';}
+}
+
 if(isset($_POST['21'])){
-    
-        $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-        if ($conexao->connect_errno){
-            echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-            exit();
-        }else{
-            for($i = 1;$i<=20;$i+= 1){
-                $numero='v'.$i;
-                    if(isset($_POST[$i])){
-                    $valor ='$'.$numero;
-                    $$valor='V';
-                    echo $valor.' = '.$$valor.'<br>';
-                    $numero='';
-                    
-                    }else { 
-                        $valor ='$'.$numero;
-                        $$valor='F';
-                        $numero='' ;
-                        echo $valor.' = '.$$valor.'<br>';
-                    }
-            }
-            $SQL = 'INSERT INTO `qualitativo_r_a` (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`, `cod_forne`) 
-            VALUES ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
-            $_SESSION['doca'] = $v20;
-            $resultado = $conexao -> query($SQL);
-        
-            $conexao->close();
-            exit();
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+if ($conexao->connect_errno){
+echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+exit();
+}else{
+for($i = 1;$i<=20;$i+= 1){ $numero='v' .$i; if(isset($_POST[$i])){ $valor='$' .$numero; $$valor='V' ; echo
+    $valor.'='.$$valor.' <br>';
+    $numero='';
+
+    }else {
+    $valor ='$'.$numero;
+    $$valor='F';
+    $numero='' ;
+    echo $valor.' = '.$$valor.'<br>';
     }
     }
-    
-?>
+    $SQL = 'INSERT INTO `qualitativo_r_a`
+    (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`,
+    `cod_forne`)
+    VALUES
+    ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
+    $_SESSION['doca'] = $v20;
+    $resultado = $conexao -> query($SQL);
+
+    $conexao->close();
+    exit();
+    }
+    }
+
+    ?>
