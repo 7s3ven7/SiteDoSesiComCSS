@@ -146,7 +146,7 @@
                 <table class="caixa-config-turma-aluno">
                 <tr>
                 <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>';
-                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar"></td>';
+                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>';
                 if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                     echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                     <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
