@@ -224,15 +224,9 @@ summary {
 }
 
 .caixa-tela-informacao-geral {
-<<<<<<< HEAD
-    width: 84vw;
-    min-height: 92.5%;
-    background-color: white;
-=======
     width: 85vw;
     height: 92.7%;
     background-color: whitesmoke;
->>>>>>> 47e33dded1d76cbba8d690797b3973b07f0898d0
     position: fixed;
     left: 15vw;
     top: 7.25vh;
@@ -429,9 +423,9 @@ summary {
     position: relative;
     cursor: pointer;
     font-size: 22px;
-  }
+}
 
-  .caixa-qualitat-1{
+.caixa-qualitat-1 {
     width: 49%;
     height: 65vh;
     background-color: rgb(250, 250, 250);
@@ -443,9 +437,9 @@ summary {
     top: 10vh;
     padding: 2.5vh;
     margin-bottom: 11.3vh;
-  }
+}
 
-  .caixa-qualitat-2{
+.caixa-qualitat-2 {
     width: 51%;
     height: 65.1vh;
     background-color: rgb(250, 250, 250);
@@ -458,7 +452,7 @@ summary {
     left: 49%;
     padding: 2.5vh;
     padding-top: 2.6vh;
-  }
+}
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
