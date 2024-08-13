@@ -113,7 +113,7 @@
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
                     $redirect_save = "?"; 
-                    echo "<form action='t_turma.php?nome=";redirect();echo"' method='POST'>";
+                    echo "<form action='t_turma.php?salvar=true&nome=";redirect();echo"' method='POST'>";
                     while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
@@ -129,7 +129,7 @@
                         }    
                         echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                         <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
-                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
+                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="text" name="'.$id2.'" value="'.$id.'"></td>
                         <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
                     $id2 .= 'p';
@@ -177,7 +177,35 @@
             echo "Failes conection: " . $conexao->connect_error;
             exit();
         } else {
-                    if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
+            if(isset($_GET['salvar'])){
+                global $conexao;
+
+                $id2 = 'id';
+                $aluno2 = 'aluno';
+                $senha2 = 'senha';
+                $turma2 = 'turma';
+                for($i = 1;$i<=15;$i++){
+
+                $id = $_POST[$id2];
+                echo $id;
+                $aluno = $_POST[$aluno2];
+                $senha = $_POST[$senha2];
+                $turma = $_POST[$turma2];
+                $sql = 'SELECT `id` FROM `usuario` WHERE `id` = "'.$id.'";';
+                echo $sql;
+                $result = $conexao -> query($sql);
+                if(mysqli_num_rows($result) > 0){
+                $sql = "UPDATE `usuario` SET `nome_alu` = '".$aluno."',`senha` = '".$senha."',`turma` = '".$turma."' WHERE `id` = '".$id."';";
+                echo $sql;
+                $result = $conexao->query($sql);    
+                }
+                $id2 .= 'p';
+                $aluno2 .= 'p';
+                $senha2 .= 'p';
+                $turma2 .= 'p';
+            }
+        }
+            if(isset($_POST['nome_grupo']) and isset($_POST['qnt_aluno']) and $_POST['qnt_aluno'] != '' and $_POST['nome_grupo'] != ''){
             $nome_turma = $conexao->real_escape_string($_POST["nome_grupo"]);
             $qnt = $conexao->real_escape_string($_POST["qnt_aluno"]);
                     $sql = 'SELECT `turma` FROM `turma` WHERE `turma` = "'.$nome_turma.'"';
