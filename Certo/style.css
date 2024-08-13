@@ -224,12 +224,18 @@ summary {
 }
 
 .caixa-tela-informacao-geral {
+<<<<<<< HEAD
     width: 84vw;
     min-height: 92.5%;
     background-color: white;
+=======
+    width: 85vw;
+    height: 92.7%;
+    background-color: whitesmoke;
+>>>>>>> 47e33dded1d76cbba8d690797b3973b07f0898d0
     position: fixed;
     left: 15vw;
-    top: 7.5vh;
+    top: 7.25vh;
 }
 
 .conta-geral {
@@ -417,6 +423,42 @@ summary {
     height: 5vh;
     background-color: black;
 }
+
+.caixa-tabela-qualitat {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  .caixa-qualitat-1{
+    width: 49%;
+    height: 65vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid rgb(0, 0, 0);
+    border-left: 0;
+    border-top: 1vh solid black;
+    border-bottom: 1vh solid black;
+    position: relative;
+    top: 10vh;
+    padding: 2.5vh;
+    margin-bottom: 11.3vh;
+  }
+
+  .caixa-qualitat-2{
+    width: 51%;
+    height: 65.1vh;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid rgb(0, 0, 0);
+    border-right: 0;
+    border-left: 0.5vh solid black;
+    position: absolute;
+    margin-top: 9.9vh;
+    top: 5.7vh;
+    left: 49%;
+    padding: 2.5vh;
+    padding-top: 2.6vh;
+  }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
@@ -633,42 +675,36 @@ summary {
 }
 
 .texto-pequeno-qualitat {
-    font-size: 1.5em;
-    color: darkgreen;
+    font-size: 1.3vw;
+    color: rgb(0, 0, 0);
 }
 
 .tabela-qualitat {
-    width: 90em;
-    max-width: 100em;
+    width: 38.5vw;
+    max-width: 50vw;
+    border: 0.01em solid black;
+    text-align: center;
 }
 
-.tabela-qualitat {
-    width: 50em;
-    max-width: 35vw;
+.tabela-qualitat2 {
+    position: absolute;
+    width: 40vw;
+    max-width: 80vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .td-qualitat {
-    width: 100em;
-    max-width: 100em;
-}
-
-.td-qualitat {
-    width: 50em;
-    max-width: 35vw;
+    width: 5%;
+    max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.th-qualitat {
-    width: 100em;
-    max-width: 200em;
-}
-
-.th-qualitat {
-    width: 50em;
-    max-width: 35vw;
+.td-qualitat-2 {
+    width: 5%;
+    height: 10;
+    max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
@@ -885,7 +921,7 @@ summary {
 
 .botao-qualitat-submit {
     margin-top: 1%;
-    right: 45.5%;
+    right: 46%;
     position: absolute;
     width: 10%;
     height: 5vh;
@@ -898,8 +934,8 @@ summary {
 
 .check-qualitat {
     position: relative;
-    height: 1.7vh;
-    width: 1.7vw;
+    height: 1.5vh;
+    width: 100%;
     background-color: #eee;
 }
 
@@ -908,7 +944,7 @@ summary {
     position: relative;
     cursor: pointer;
     font-size: 22px;
-    padding-left: 100vw;
+    padding: 100vw;
 }
 
 .botao-enviar-produto {
@@ -950,5 +986,12 @@ summary {
     border-radius: 10px;
     border: 0.05em solid black;
     text-align: center;
+}
 
+.caixa-qualitat {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 100vw;
 }
