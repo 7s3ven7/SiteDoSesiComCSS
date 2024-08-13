@@ -335,7 +335,6 @@ $DB = "dados";
                 </center>
             </div>
             </td>
-<input class="botao-qualitat-submit" type="submit" value="Enviar" left=5px name="21">
 </form>
 </body>
 
