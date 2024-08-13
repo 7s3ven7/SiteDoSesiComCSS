@@ -426,6 +426,14 @@ summary {
     font-size: 22px;
 }
 
+  .caixa-qualitat {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 100vw;
+    }
+
 .caixa-qualitat-1 {
     width: 49%;
     height: 65vh;
@@ -453,6 +461,27 @@ summary {
     left: 49%;
     padding: 2.5vh;
     padding-top: 2.6vh;
+}
+
+  .caixa-qualitat-3{
+    width: 51%;
+    height: 65.1vh;
+    border-right: 0;
+    background-color: aqua;
+    border-left: 0.5vh solid black;
+    margin-top: 9.9vh;
+    padding: 2.5vh;
+    padding-top: 2.6vh;
+  }
+
+.caixa-quant-1{
+    width: 40vh;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 40%;
+    text-align: center;
 }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
@@ -731,6 +760,11 @@ summary {
 
 }
 
+.texto-medio-quant {
+    font-size: 1.5vw;
+    color: black;
+}
+
 .texto-central-produto {
     font-size: 3em;
     text-align: center;
@@ -930,16 +964,8 @@ summary {
 .check-qualitat {
     position: relative;
     height: 1.5vh;
-    width: 100%;
-    background-color: #eee;
-}
 
-.caixa-qualitat {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    padding: 100vw;
+    background-color: #eee;
 }
 
 .botao-enviar-produto {
@@ -983,10 +1009,24 @@ summary {
     text-align: center;
 }
 
-.caixa-qualitat {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    padding-left: 100vw;
+.botao-input-quant{
+    width: 11.5vw;
+    height: 2vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: absolute;
+    left: 3%;
 }
+
+.botao-submit-quant{
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: center;
+    text-align: center;
+    position: absolute;
+    right: 3%;
+}
+
