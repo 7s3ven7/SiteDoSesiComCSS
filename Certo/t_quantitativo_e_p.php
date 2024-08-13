@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,7 @@
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
     } else {
+        if(isset($_GET['enviar'])){
         $v1 = $_POST['1']; //cod_inter
         $v2 = $_POST['2']; //cod_forne
         $v3 = $_POST['3']; //nome_empre
@@ -59,6 +60,7 @@
 
         $conexao->close();
         header("Location: t_p"); //Envia para a tela de Login ao Cadastrar
+        }
     }
 ?>
 
@@ -123,50 +125,50 @@
         <form method="POST" action="t_quantitativo_e_p.php">
             <table class="">
                 <tr>
-                    <td>Código do fornecedor: </td>
+                    <td class="">Código do fornecedor: </td>
                     <td><input class="" type="text" name="1" placeholder="1234"></td>
-                    <td>Nome da empresa: </td>
+                    <td class="">Nome da empresa: </td>
                     <td><input class="" type="text" name="2" placeholder="Aplle"></td>
                 </tr>
                 <tr>
-                    <td>Modelo do container: </td>
+                    <td class="">Modelo do container: </td>
                     <td><input class="" type="text" name="3" placeholder="SENU-123456-2"></td>
-                    <td>Navio: </td>
+                    <td class="">Navio: </td>
                     <td><input class="" type="text" name="4" placeholder="Titanaique"></td>
                 </tr>
                 <tr>
-                    <td>Nome do destinatário: </td>
+                    <td class="">Nome do destinatário: </td>
                     <td><input class="" type="text" name="5" placeholder="Aplle"></td>
-                    <td>Tipo do container: </td>
+                    <td class="">Tipo do container: </td>
                     <td><input class="" type="text" name="6" placeholder="2201"></td>
                 </tr>
                 <tr>
-                    <td>Lacre: </td>
+                    <td class="">Lacre: </td>
                     <td><input class="" type="text" name="7" placeholder="Lacre"></td>
-                    <td>Lacre SIF: </td>
+                    <td class="">Lacre SIF: </td>
                     <td><input class="" type="text" name="8" placeholder="SIF"></td>
                 </tr>
                 <tr>
-                    <td>Temperatura: </td>
+                    <td class="">Temperatura: </td>
                     <td><input class="" type="text" name="9" placeholder="Temperatura"></td>
-                    <td>IMO: </td>
+                    <td class="">IMO: </td>
                     <td><input class="" type="text" name="10" placeholder="IMO"></td>
                 </tr>
                 <tr>
-                    <td>Número ONU: </td>
+                    <td class="">Número ONU: </td>
                     <td><input class="" type="text" name="11" placeholder="Número"></td>
-                    <td>Lotes: </td>
+                    <td class="">Lotes: </td>
                     <td><input class="" type="text" name="12" placeholder="A1"></td>
                 </tr>
                 <tr>
-                    <td>CNPJ do destinatário: </td>
+                    <td class="">CNPJ do destinatário: </td>
                     <td><input class="" type="text" name="13" placeholder="CNPJ"></td>
                 </tr>
             </table>
             <input class="" type="submit" value="Enviar">
         </form>
     </div>
-    <div id="">Professor - <?php echo $nome;?></div>
+    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

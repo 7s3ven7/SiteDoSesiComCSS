@@ -21,7 +21,7 @@
         ?>
 
 <body>
-    <div class='caixa-menu-geral'>
+<div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
