@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 06-Ago-2024 às 11:03
+-- Generation Time: 13-Ago-2024 às 11:52
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -27,10 +27,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `atividade` (
-  `id_atividade` varchar(255) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
+  `id_atividade` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
   `data_atividade` date NOT NULL,
-  `turma` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `turma` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_criador` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -122,6 +123,14 @@ CREATE TABLE `fornecedor_p` (
   `gmail_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `CEP_f` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `fornecedor_p`
+--
+
+INSERT INTO `fornecedor_p` (`CNPJ_f`, `id_atividade`, `nome_f`, `fone_f`, `gmail_f`, `CEP_f`) VALUES
+('111.111.111-11', 'miraculo', 'Apple', '(11) 11111-1111', 'apple@gmail.com', '111.111.111.11'),
+('a', '', 'a', 'a', 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -394,6 +403,13 @@ CREATE TABLE `turma` (
   `bota_pra_cada_turma` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `turma`
+--
+
+INSERT INTO `turma` (`turma`, `quant_alu`, `bota_pra_cada_turma`) VALUES
+('50', 25, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -418,7 +434,33 @@ INSERT INTO `usuario` (`id_usuario`, `nome_u`, `senha`, `cod_prof`, `tipo_u`, `c
 (4, 'matheus', '123', '123', 'Professor', ''),
 (5, 'a', 'b', 'c', 'Professor', NULL),
 (10, 'd', 'e', NULL, 'Aluno', NULL),
-(12, 'a', 'b', 'c', 'Professor', NULL);
+(12, 'a', 'b', 'c', 'Professor', NULL),
+(13, 'Wesley', '123', '123', 'Professor', NULL),
+(319, 'Aluno 1', 'KwdF7207', NULL, 'Aluno', '50'),
+(320, 'Aluno 2', 'faig1804', NULL, 'Aluno', '50'),
+(321, 'Aluno 3', 'HHnK8187', NULL, 'Aluno', '50'),
+(322, 'Aluno 4', 'lOLM4632', NULL, 'Aluno', '50'),
+(323, 'Aluno 5', 'kOwF6218', NULL, 'Aluno', '50'),
+(324, 'Aluno 6', 'WAoI3702', NULL, 'Aluno', '50'),
+(325, 'Aluno 7', 'srFp2790', NULL, 'Aluno', '50'),
+(326, 'Aluno 8', 'OHPt0132', NULL, 'Aluno', '50'),
+(327, 'Aluno 9', 'GqnO5614', NULL, 'Aluno', '50'),
+(328, 'Aluno 10', 'mlQu4903', NULL, 'Aluno', '50'),
+(329, 'Aluno 11', 'AlTe5888', NULL, 'Aluno', '50'),
+(330, 'Aluno 12', 'pkQK5025', NULL, 'Aluno', '50'),
+(331, 'Aluno 13', 'acAi2303', NULL, 'Aluno', '50'),
+(332, 'Aluno 14', 'XFPq3588', NULL, 'Aluno', '50'),
+(333, 'Aluno 15', 'EoFC6269', NULL, 'Aluno', '50'),
+(334, 'Aluno 16', 'Mwol9302', NULL, 'Aluno', '50'),
+(335, 'Aluno 17', 'pWkl8476', NULL, 'Aluno', '50'),
+(336, 'Aluno 18', 'GJmv1467', NULL, 'Aluno', '50'),
+(337, 'Aluno 19', 'gcNk7034', NULL, 'Aluno', '50'),
+(338, 'Aluno 20', 'Gsjv1963', NULL, 'Aluno', '50'),
+(339, 'Aluno 21', 'ccQX2932', NULL, 'Aluno', '50'),
+(340, 'Aluno 22', 'Lxfl8810', NULL, 'Aluno', '50'),
+(341, 'Aluno 23', 'eXSc6282', NULL, 'Aluno', '50'),
+(342, 'Aluno 24', 'WXAP2917', NULL, 'Aluno', '50'),
+(343, 'Aluno 25', 'lQuU6883', NULL, 'Aluno', '50');
 
 --
 -- Indexes for dumped tables
@@ -573,7 +615,7 @@ ALTER TABLE `quantitativo_r_p`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=344;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
