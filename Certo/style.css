@@ -468,7 +468,7 @@ summary {
     width: 51%;
     height: 65.1vh;
     border-right: 0;
-    background-color: aqua;
+    background-color: white;
     border-left: 0.5vh solid black;
     margin-top: 9.9vh;
     padding: 2.5vh;
@@ -728,7 +728,7 @@ summary {
 
 .td-qualitat-2 {
     width: 5%;
-    height: 10;
+    height: 10px;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
