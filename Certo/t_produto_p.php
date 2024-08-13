@@ -93,7 +93,7 @@
                 if(isset($_POST['vezes'])){ exibir();}else{
                     echo' <div class="caixa-inicial-prduto">
         <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
-            <div class="texto-principal-produto ">Quantos produtos você irá registrar: 
+            <div class="texto-principal1-produto">Quantos produtos você irá registrar: 
                 <br>
                 <input class="botao-numero-produto" type="number" name="vezes"
                     placeholder="Número de vezes"></div>
@@ -135,9 +135,9 @@ if(isset($_POST['vezes'])){
         for($i;$i>0;$i){
             $i -= 1;
             echo'
-            <div class="">'.$numero.'° Produto</div>
+            <div class="texto-central-produto">'.$numero.'° Produto</div>
             <br>
-            <table class="">
+            <table class="caixa-principal-superior-prduto">
                 <tr>
                     <td class="texto-principal-produto">Código do fornecedor: </td>
                     <td><input class="botao-numero1-produto" type="text" name="'.$v1.'" placeholder="1"></td>
@@ -170,7 +170,9 @@ if(isset($_POST['vezes'])){
                     <td class="texto-principal-produto">Peso em kilo grama: </td>
                     <td><input class="botao-numero1-produto" type="text" name="'.$v12.'" placeholder="1"></td>
                 </tr>
-            </table>';
+            </table>
+            
+            ';
             $numero += 1;
             $v1 = $v1.'p';
             $v2 = $v2.'p';
@@ -189,6 +191,7 @@ if(isset($_POST['vezes'])){
         echo '<input class="" type="submit">';
         echo'<div class=""></div>';
         echo'</form>';
+        echo '<div class="linha"></div>';
     }
 }
 }
