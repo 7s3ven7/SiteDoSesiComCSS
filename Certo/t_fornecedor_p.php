@@ -19,51 +19,7 @@
             echo $nome;
         }
     }
-        function enviar(){
-        global $redirect_save;
-        echo $redirect_save;
-        }
-    function inicio(){
-        echo '
-            <div class="texto-grande-fornecedor">Lista dos fornecedores</div>
-            <div class="caixa-direita-turma-dentro">
-            <table class="tabela-turma">
-            <tr>
-            <td class="linha-topo-2">Nome</td>
-            <td class="linha-topo-2">Qnt. Alunos</td>
-            <td class="linha-ex-select-num-2">Modificar</td>
-            <td class="linha-ex-select-num-2">Excluir</td>
-        </tr>';
-        }
-        function falso(){
-            global $conexao;
-            global $nome;
-            $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-            $resultado = $conexao->query($sql);
-            if(mysqli_num_rows($resultado) == null){
-                echo '<div class="texto-aviso-turma-tabela">Nenhum fornecedor Encontrado</div>';
-            }else{
-            global $conexao;
-            global $nome;
-            $sql = "SELECT `turma`,`quant_alu` FROM `turma`;";
-            $resultado = $conexao->query($sql);
-            while($row = mysqli_fetch_array($resultado)){
-                $turma = $row['0'];
-                $alunos = $row['1'];
-                echo '
-                <tr>
-                <td class="linha-topo">'.$turma.'</td>
-                <td class="linha-topo">'.$alunos.'</td>
-                <form method="POST" action="t_turma.php?nome=';redirect();echo'&turma='.$turma.'&pagina=1">
-                <td class="linha-ex-select-num"><input type="submit" class="botao-modificacao-turma" value="modificar"></td>
-                </form>
-                <form method="POST" action="t_exclusao_turma.php?nome=';redirect();echo'&turma='.$turma.'">
-                <td class="linha-ex-select-num"><input type="submit" class="botao-exclusao-turma" value="X"></td>
-                </form>
-                </tr>';
-        }}
-    }
-    function funcionar(){
+    function exibir(){
         if(isset($_GET['pagina'])){
         if($_GET['pagina']<= 0){
             $pagina = 1;
@@ -120,11 +76,15 @@
                     $turma = $row[5];
                     $qnt_alu_pagina -= 1;
                     echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
-                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td> 
-                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
+                    if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
+                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
+                        }else{
+                            echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
+                        }    
+                        echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                         <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
                         <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma" " value="'.$id.'"></td>
+                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
                     $id2 .= 'p';
                     $aluno2 .= 'p';
@@ -165,6 +125,24 @@
                 falso();
             }
             }
+    function cadastrar(){
+        global $conexao;
+        $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
+        $nome_f = $conexao->real_escape_string($_POST["nome_fornecedor"]);
+        $gmail_f = $conexao->real_escape_string($_POST["gmail_fornecedor"]);
+        $cep_f = $conexao->real_escape_string($_POST["cep_fornecedro"]);
+        $telefone_f = $conexao->real_escape_string($_POST["telefone_fornecedor"]);
+        $id_atividade = $_GET['nome_atividade'];
+        $sql = 'SELECT `nome_f` FROM `fornecedor_p` WHERE `nome_f` = "'.$nome_f.'"';
+        $resultado_1 = $conexao->query($sql);
+        if($resultado_1->num_rows != 0){
+            echo '<div class="texto-aviso-turma">O fornecedor '.$nome_f.' já esta existe, tente outro</div>';
+        }else{
+            $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ("'.$cnpj_f.'","'.$id_atividade.'","'.$nome_f.'","'.$telefone_f.'","'.$gmail_f.'","'.$cep_f.'");';
+            $resultado = $conexao->query($sql);
+        }
+
+    }
         $hostname = "127.0.0.1";
         $name = "root";
         $password = "root";
@@ -175,21 +153,10 @@
             exit();
         } else {
             if(isset($_POST['cnpj_fornecedor']) and isset($_POST['nome_fornecedor']) and isset($_POST['gmail_fornecedor']) and  isset($_POST['cep_fornecedro']) and  isset($_POST['telefone_fornecedor']) and isset($_GET['nome_atividade'])){
-            $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
-            $nome_f = $conexao->real_escape_string($_POST["nome_fornecedor"]);
-            $gmail_f = $conexao->real_escape_string($_POST["gmail_fornecedor"]);
-            $cep_f = $conexao->real_escape_string($_POST["cep_fornecedro"]);
-            $telefone_f = $conexao->real_escape_string($_POST["telefone_fornecedor"]);
-            $id_atividade = $_GET['nome_atividade'];
-            $sql = 'SELECT `nome_f` FROM `fornecedor_p` WHERE `nome_f` = "'.$nome_f.'"';
-            $resultado_1 = $conexao->query($sql);
-            if($resultado_1->num_rows != 0){
-                echo '<div class="texto-aviso-turma">O fornecedor '.$nome_f.' já esta existe, tente outro</div>';
-            }else{
-            $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ("'.$cnpj_f.'","'.$id_atividade.'","'.$nome_f.'","'.$telefone_f.'","'.$gmail_f.'","'.$cep_f.'");';
-            $resultado = $conexao->query($sql);
+            cadastrar();
             }
-    }
+        
+            
                             }?>
 
 <body>
@@ -271,9 +238,8 @@
             </div>
         </div>
         <div class="caixa-direita-turma">
-            <?php funcionar(); ?>
+            <?php exibir(); ?>
         </div>
-        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
