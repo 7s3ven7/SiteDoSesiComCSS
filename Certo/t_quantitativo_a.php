@@ -18,7 +18,7 @@
         }
     }
         ?>
-<body>
+<body class="scrollbar-quant">
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
     <div class="conta-geral">Aluno - <?php echo $nome;?></div>
@@ -80,6 +80,8 @@
                 <input class="botao-submit-quant" type="submit">
             </div>
         </form>
+        <div class="caixa-quant">
+        <table>
         <?php
     session_start();
             
@@ -98,9 +100,15 @@
             $v1 = $_POST['cod_forne'];
             $sql="SELECT * FROM `produto_p` WHERE `cod_forne` = '".$v1."';";
             $resultado = $conexao->query($sql);
+            $rep = -1;
         if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
+                $rep = $rep + 1;
+                if ($rep / 4 == 1){
+                $rep=0;
+                echo '<tr>';
+                }
                 $s1 = $row['0'];
                 $s2 = $row['7'];
                 $s3 = $row['2'];
@@ -108,53 +116,56 @@
                 $s5 = $row['8'];
                 $s6 = $s5*$s4;
                 echo '
-                <div class="">
-                    <div class="">Número da Nota Fiscal</div>
-                    <input class="" type="text" value="'.$s1.'" disabled>
+                <td>
+                <div class="caixa-quant-2">
+                    <div class="texto-medio-quant">Número da Nota Fiscal</div>
+                    <input class="botao-input-quant-2" type="text" value="'.$s1.'" disabled>
+                    <div class="texto-medio-quant">Nome do produto</div>
+                    <input class="botao-input-quant-2" type="text" value="'.$s2.'" disabled>
                 </div>
-                <div class="">
-                    <div class="">Nome do produto</div>
-                    <input class="" type="text" value="'.$s2.'" disabled>
-                </div>
+                <div class="caixa-quant-3">
                     <table class="">
                         <tr>
                             <td>
-                                <div class="">UN</div>
+                                <div class="texto-medio-quant">UN</div>
                             </td>
                             <td>
-                                <div class="">QTD</div>
-                            </td>
-                            <td>
-                                <div class="">R$/unit</div>
-                            </td>
-                            <td>
-                                <div class="">R$Total</div>
+                                <input class="botao-input-quant-3" type="text" value="'.$s3.'" name="un">
                             </td>
                         </tr>
                         <tr>
-                            <td><input class="" type="text" value="'.$s3.'" name="un"></td>
-                            <td><input class="" type="text" value="'.$s4.'" name="qtd"></td>
-                            <td><input class="" type="text" value="'.$s5.'" name="unit"></td>
-                            <td><input class="" type="text" value="'.$s6.'" name="total"></td>
-                            <td><input class="" type="checkbox" name="produto"></td>
+                            <td>
+                                <div class="texto-medio-quant">QTD</div>
+                            </td>
+                            <td><input class="botao-input-quant-3" type="text" value="'.$s4.'" name="qtd"></td>
                         </tr>
-                    </table>
-                    <table class="">
                         <tr>
                             <td>
-                            <div class="">Faltando</div>
+                                <div class="texto-medio-quant">R$/unit</div>
+                            </td>
+                            <td><input class="botao-input-quant-3" type="text" value="'.$s5.'" name="unit"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="texto-medio-quant">R$Total</div>
+                            </td>
+                            <td><input class="botao-input-quant-3" type="text" value="'.$s6.'" name="total"></td>
+                        </tr>
+                    </table>
+                </div>
+                    <table class="caixa-quant-4">
+                        <tr>
+                            <td>
+                            <div class="texto-medio-quant">Faltando</div>
+                            <input class="check-quant" type="checkbox" name="falta">
                             </td>
                             <td>
-                                <input class="" type="checkbox" name="falta">
-                            </td>
-                            <td>
-                                <div class="">Avariado</div>
-                            </td>
-                            <td>
-                                <input class="" type="checkbox" name="avariado">
+                                <div class="texto-medio-quant">Avariado</div>
+                                <input class="check-quant" type="checkbox" name="avariado">
                             </td>
                         </tr>
                     </table>
+                    <br>
                 ';
             }
         }

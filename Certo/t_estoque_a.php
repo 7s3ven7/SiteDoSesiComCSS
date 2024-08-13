@@ -75,7 +75,7 @@
     <div class="caixa-tela-informacao-geral">
         <form action="t_estoque_a.php" method="POST">
             <div class="">
-                <div class="">Digite o nome do produto</div>
+                <div class="texto-medio-estoque">Digite o nome do produto</div>
                 <input class="" type="text" name="nome_p">
                 <input class="" type="submit">
                 <div class="">
@@ -126,7 +126,6 @@
                         $s16 = 2;
                     }
                 echo '
-                <hr>
                 <table class="">
                     <tr>
                         <td class="">Doca:
@@ -173,7 +172,6 @@
                         <input class="" type="text" value="'.$s15.'" name=""></td>
                     </tr>
                 </table>
-                </hr>
                 ';
                 }
             }else{
