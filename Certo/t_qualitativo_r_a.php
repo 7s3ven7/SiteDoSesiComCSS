@@ -14,19 +14,17 @@ $DB = "dados";
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
     } else{
-/*
         $nome = $_GET['nome'];
-    function redirect(){
-        global $nome;
-        if(isset($_GET['nome_atividade'])){
-            $nome_atividade = $_GET['nome_atividade'];
-            echo $nome.'&nome_atividade='.$nome_atividade;
-        }else{
-            echo $nome;
-        }
-    }
-*/
-    echo '<!DOCTYPE html>
+        function redirect(){
+            global $nome;
+            if(isset($_GET['nome_atividade'])){
+                $nome_atividade = $_GET['nome_atividade'];
+                echo $nome.'&nome_atividade='.$nome_atividade;
+            }else{
+                echo $nome;
+            }
+        }?>
+    <!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -41,49 +39,49 @@ $DB = "dados";
     <div class="espaco"></div>
     <details class="details">
         <summary class="sumario">Recebimento</summary>
-        <form action="t_nota_r_a.php">
+        <form action="t_nota_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_r_a.php">
+        <form action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form action="t_quantitativo_a.php">
+        <form action="t_quantitativo_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form action="t_docas_r_a.php">
+        <form action="t_docas_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form action="t_estoque_a.php">
+        <form action="t_estoque_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form action="t_picking_a.php">
+        <form action="t_picking_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form action="t_nota_e_a.php">
+        <form action="t_nota_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_e_a.php">
+        <form action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_quantitativo_e_a.php">
+        <form action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form action="t_relatorios_a.php">
+        <form action="t_relatorios_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
@@ -99,6 +97,7 @@ $DB = "dados";
                         <div class="">
                         </div></center>
                 </form>';
+                <?php
                 if(isset($_POST['cod_forne'])){            
                     $v1 = $_POST['cod_forne'];
                     $_SESSION['cod_forne'] = $v1;
@@ -192,13 +191,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Container Bem Desgastado: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="1">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Lateral Direita: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="2">
                                 </label>
                             </td>
@@ -206,13 +205,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Lateral Esquerda: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="3">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria no Teto: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="4">
                                 </label>
                             </td>
@@ -220,13 +219,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Avaria na Frente: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="5">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Lacre </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="6">
                                 </label>
                             </td>
@@ -234,13 +233,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Adesivos Avariados: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="7">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso de Altura: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="8">
                                 </label>
                             </td>
@@ -248,13 +247,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso na Direita: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="9">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso na Esquerda: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="10">
                                 </label>
                             </td>
@@ -262,13 +261,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Excesso Frontal: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="11">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Painel Avariado: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="12">
                                 </label>
                             </td>
@@ -276,13 +275,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Cabo de Energia: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="13">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Sem Lona: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="14">
                                 </label>
                             </td>
@@ -290,13 +289,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Canhoto Assinado: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="15">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Volume Correto: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="16">
                                 </label>
                             </td>
@@ -304,13 +303,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Atraso: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="17">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Código Avariado: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="18">
                                 </label>
                             </td>
@@ -318,13 +317,13 @@ $DB = "dados";
                         <tr>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Item Lacrado: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="19">
                                 </label>
                             </td>
                             <td class="td-qualitat-2"><div class="texto-pequeno-qualitat">Doca 1: </div></td>
                             <td class="td-qualitat-2">
-                                <label class="container-qualitat">
+                                <label class="caixa-qualitat-3">
                                     <input class="check-qualitat" type="checkbox" name="20">
                                 </label>
                             </td>

@@ -74,11 +74,11 @@
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_quantitativo_a.php" method="POST">
-            <div class="">
-                <div class="">Digite o Código do fornecedor</div>
-                <input class="" type="number" name="cod_forne">
-                <input class="" type="submit">
-                <div class="">
+            <div class="caixa-quant-1">
+                <div class="texto-medio-quant">Digite o Código do fornecedor</div>
+                <input class="botao-input-quant" type="number" name="cod_forne">
+                <input class="botao-submit-quant" type="submit">
+            </div>
         </form>
         <?php
     session_start();
