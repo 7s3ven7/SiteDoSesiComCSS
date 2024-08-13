@@ -188,10 +188,10 @@ if(isset($_POST['vezes'])){
             $v12 = $v12.'p';
         }              
         echo '<table class="">';
-        echo '<input class="" type="submit">';
+        echo '<input class="botao-enviar2-produto" type="submit">';
         echo'<div class=""></div>';
         echo'</form>';
-        echo '<div class="linha"></div>';
+        echo '<div class="linha-central"></div>';
     }
 }
 }
