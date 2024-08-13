@@ -224,12 +224,12 @@ summary {
 }
 
 .caixa-tela-informacao-geral {
-    width: 84vw;
-    min-height: 92.5%;
+    width: 85vw;
+    height: 92.7%;
     background-color: whitesmoke;
     position: fixed;
     left: 15vw;
-    top: 7.5vh;
+    top: 7.25vh;
 }
 
 .conta-geral {
@@ -387,10 +387,32 @@ summary {
   }
 
   .caixa-qualitat-1{
-    width: 30.9vw;
+    width: 49%;
+    height: 65vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid rgb(0, 0, 0);
+    border-left: 0;
+    border-top: 1vh solid black;
+    border-bottom: 1vh solid black;
+    position: relative;
+    top: 10vh;
+    padding: 2.5vh;
+    margin-bottom: 11.3vh;
+  }
+
+  .caixa-qualitat-2{
+    width: 51%;
+    height: 65.1vh;
     background-color: rgb(250, 250, 250);
     border: 1vh solid rgb(0, 0, 0);
-    position: relative;
+    border-right: 0;
+    border-left: 0.5vh solid black;
+    position: absolute;
+    margin-top: 9.9vh;
+    top: 5.7vh;
+    left: 49%;
+    padding: 2.5vh;
+    padding-top: 2.6vh;
   }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
@@ -612,22 +634,18 @@ summary {
 }
 
 .tabela-qualitat {
-    width: 30vw;
+    width: 38.5vw;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
-    margin-top: 4%;
 }
 
 .tabela-qualitat2 {
     position: absolute;
-    left: 40%;
-    top: 9.5vh;
-    width: 50vw;
+    width: 40vw;
     max-width: 80vw;
     border: 0.01em solid black;
     text-align: center;
-    margin-top: 4%;
 }
 
 .td-qualitat {
@@ -635,12 +653,12 @@ summary {
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
-    left: 2%;
 }
 
-.th-qualitat {
-    width: 100em;
-    max-width: 200vw;
+.td-qualitat-2 {
+    width: 5%;
+    height: 10;
+    max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
@@ -841,7 +859,7 @@ summary {
 
 .botao-qualitat-submit {
     margin-top: 1%;
-    right: 45.5%;
+    right: 46%;
     position: absolute;
     width: 10%;
     height: 5vh;
@@ -854,8 +872,8 @@ summary {
 
 .check-qualitat {
     position: relative;
-    height: 1.7vh;
-    width: 1.7vw;
+    height: 1.5vh;
+    width: 100%;
     background-color: #eee;
 }
 
@@ -864,7 +882,7 @@ summary {
     position: relative;
     cursor: pointer;
     font-size: 22px;
-    padding-left: 100vw;
+    padding: 100vw;
 }
 
 .botao-enviar-produto {
