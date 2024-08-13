@@ -206,7 +206,7 @@ summary {
     background-color: rgb(222, 222, 222);
     border-right: 1vh solid gray;
     position: fixed;
-    padding-top:7.5vh;
+    padding-top: 7.5vh;
     padding-bottom: 2.5vh;
 }
 
@@ -415,8 +415,8 @@ summary {
 
 .linha-central {
     width: 100%;
-    height: 2vh;
-    background-color: black;
+    height: 1.5vh;
+    background-color: grey;
     position: relative;
 }
 
@@ -427,13 +427,13 @@ summary {
     font-size: 22px;
 }
 
-  .caixa-qualitat {
+.caixa-qualitat {
     display: block;
     position: relative;
     cursor: pointer;
     font-size: 22px;
     padding-left: 100vw;
-    }
+}
 
 .caixa-qualitat-1 {
     width: 49%;
@@ -464,7 +464,7 @@ summary {
     padding-top: 2.6vh;
 }
 
-  .caixa-qualitat-3{
+.caixa-qualitat-3 {
     width: 51%;
     height: 65.1vh;
     border-right: 0;
@@ -473,9 +473,9 @@ summary {
     margin-top: 9.9vh;
     padding: 2.5vh;
     padding-top: 2.6vh;
-  }
+}
 
-.caixa-quant-1{
+.caixa-quant-1 {
     width: 40vh;
     height: 10vh;
     background-color: rgb(250, 250, 250);
@@ -484,6 +484,24 @@ summary {
     left: 40%;
     text-align: center;
 }
+
+.caixa-principal-quantitativo-r-p {
+    width: 50vw;
+    height: 35vh;
+    background-color: whitesmoke;
+    position: absolute;
+    margin-left: 34vw;
+    margin-right: 35vw;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+    padding-top: 1.25vh;
+    margin-top: 25vh;
+    border: 0.1em solid black;
+    border-radius: 10px;
+
+}
+
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
@@ -770,8 +788,16 @@ summary {
     font-size: 3em;
     text-align: center;
     color: black;
-    text-align: center;
     position: relative;
+}
+
+.texto-central-quantitativo-r-p {
+    width: 15vw;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 4%;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
@@ -987,12 +1013,15 @@ summary {
     width: 7vw;
     height: 4vh;
     font: 1em;
-    margin-top: 2.5%;
+    margin-top: 3vh;
+    margin-left: 38vw;
+    margin-right: 45vw;
+    margin-bottom: 2vh;
     color: white;
     background-color: green;
     border-radius: 15px;
     border: 0.07em solid black;
-    position: center;
+    position: relative;
     transition: 0.05s;
     text-align: center;
 }
@@ -1024,7 +1053,7 @@ summary {
     text-align: center;
 }
 
-.botao-input-quant{
+.botao-input-quant {
     width: 11.5vw;
     height: 2vw;
     border-radius: 10px;
@@ -1033,7 +1062,7 @@ summary {
     left: 3%;
 }
 
-.botao-submit-quant{
+.botao-submit-quant {
     width: 6.3vw;
     height: 2vw;
     font: 1em;
@@ -1044,4 +1073,3 @@ summary {
     position: absolute;
     right: 3%;
 }
-
