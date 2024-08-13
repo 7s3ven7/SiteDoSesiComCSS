@@ -206,6 +206,7 @@ summary {
     background-color: rgb(222, 222, 222);
     border-right: 1vh solid gray;
     position: fixed;
+    padding-top:7.5vh;
     padding-bottom: 2.5vh;
 }
 

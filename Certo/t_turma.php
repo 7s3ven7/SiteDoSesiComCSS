@@ -113,6 +113,7 @@
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
                     $redirect_save = "?"; 
+                    echo "<form action='t_turma.php?nome=";redirect();echo"' method='POST'>";
                 while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
@@ -131,13 +132,11 @@
                         <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
                         <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
-                    $complemento = $id2."=".$id."&".$aluno2."=".$aluno;
                     $id2 .= 'p';
                     $aluno2 .= 'p';
                     $senha2 .= 'p';
                     $tipo_conta2 .= 'p';
                     $turma2 .= 'p';
-                    $redirect_save .= $complemento;
                     if($qnt_alu_pagina == 0){
                         $qnt_alu_pagina = -1;
                     }
@@ -145,8 +144,9 @@
                 echo '</table>
                 <table class="caixa-config-turma-aluno">
                 <tr>
-                <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>';
-                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>';
+                <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>
+                <td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>
+                </form>';
                 if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                     echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                     <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
