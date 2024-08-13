@@ -112,6 +112,7 @@
                     $senha2 = 'senha';
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
+                    $redirect_save = "?"; 
                 while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
@@ -130,11 +131,13 @@
                         <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
                         <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
+                    $complemento = $id2."=".$id."&".$aluno2."=".$aluno;
                     $id2 .= 'p';
                     $aluno2 .= 'p';
                     $senha2 .= 'p';
                     $tipo_conta2 .= 'p';
                     $turma2 .= 'p';
+                    $redirect_save .= $complemento;
                     if($qnt_alu_pagina == 0){
                         $qnt_alu_pagina = -1;
                     }
@@ -142,10 +145,8 @@
                 echo '</table>
                 <table class="caixa-config-turma-aluno">
                 <tr>
-                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMenos.'&turma='.$turma_global.'">
-                <td><input class="passar-pagina" type="submit" value="<"></td>
-                </form>';
-                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
+                <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>';
+                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar"></td>';
                 if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                     echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
                     <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
@@ -156,9 +157,7 @@
                     </form>';
                    }
                 echo'
-                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMais.'&turma='.$turma_global.'&verificacao=v">
-                <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
-                </form>
+                <td><button onclick="passarmais();" class="passar-pagina" value="true">></button></td>
                 </tr>
                 </table>';}
             }else{
