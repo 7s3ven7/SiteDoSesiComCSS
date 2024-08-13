@@ -114,7 +114,7 @@
                     $turma2 = 'turma';
                     $redirect_save = "?"; 
                     echo "<form action='t_turma.php?nome=";redirect();echo"' method='POST'>";
-                while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
+                    while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
                     $aluno = $row[1];
                     $senha = $row[2];
