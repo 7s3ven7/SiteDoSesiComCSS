@@ -4,16 +4,12 @@ $hostname = "127.0.0.1";
 $name = "root";
 $password = "root";
 $DB = "dados";
-    $hostname = "127.0.0.1";
-    $name = "root";
-    $password = "root";
-    $DB = "dados";
 
-    $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
     if ($conexao->connect_errno) {
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
-    } else{
+    } else{/*
         $nome = $_GET['nome'];
         function redirect(){
             global $nome;
@@ -23,7 +19,7 @@ $DB = "dados";
             }else{
                 echo $nome;
             }
-        }?>
+        }*/?>
     <!DOCTYPE html>
 
 <head>
@@ -35,53 +31,53 @@ $DB = "dados";
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class="conta-geral">Aluno - <?php //echo $nome;?></div>
     <div class="espaco"></div>
     <details class="details">
         <summary class="sumario">Recebimento</summary>
-        <form action="t_nota_r_a.php?nome=<?php redirect()?>">
+        <form action="t_nota_r_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
+        <form action="t_qualitativo_r_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form action="t_quantitativo_a.php?nome=<?php redirect()?>">
+        <form action="t_quantitativo_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form action="t_docas_r_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form action="t_estoque_a.php?nome=<?php redirect()?>">
+        <form action="t_estoque_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form action="t_picking_a.php?nome=<?php redirect()?>">
+        <form action="t_picking_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form action="t_nota_e_a.php?nome=<?php redirect()?>">
+        <form action="t_nota_e_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
+        <form action="t_qualitativo_e_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
+        <form action="t_quantitativo_e_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form action="t_relatorios_a.php?nome=<?php redirect()?>">
+        <form action="t_relatorios_a.php?nome=<?php //redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
@@ -96,7 +92,7 @@ $DB = "dados";
                         <br>
                         <div class="">
                         </div></center>
-                </form>';
+                </form>
                 <?php
                 if(isset($_POST['cod_forne'])){            
                     $v1 = $_POST['cod_forne'];

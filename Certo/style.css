@@ -517,10 +517,6 @@ summary {
     text-align: center;
 }
 
-.scrollbar-quant{
-    overflow-y: scroll;
-}
-
 .caixa-principal-quantitativo-r-p {
     width: 50vw;
     height: 35vh;
@@ -538,12 +534,21 @@ summary {
 
 }
 
+.caixa-estoque{
+    width: 20vw;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
     height: 10vh;
     font-size: 8vh;
-    position: fixed;
+    position: relative;
     color: rgb(0, 50, 0);
     background-color: rgb(222, 222, 222);
     padding-left: 2.5vw;
@@ -1102,8 +1107,8 @@ summary {
     height: 2vw;
     border-radius: 10px;
     font-size: 1.3em;
-    position: absolute;
-    left: 3%;
+    position: relative;
+    margin-top: 1%;
 }
 
 .botao-input-quant-2{
@@ -1131,6 +1136,27 @@ summary {
     border: 0.1em solid black;
     position: center;
     text-align: center;
-    position: absolute;
-    right: 3%;
+    position: relative;
+    margin-left: 4%;
+}
+
+.botao-input-estoque {
+    width: 11.5vw;
+    height: 2vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    margin-top: 1%;
+}
+
+.botao-submit-estoque{
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: center;
+    text-align: center;
+    position: relative;
+    margin-left: 4%;
 }
