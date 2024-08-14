@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <?php
-    $nome = $_GET['nome'];
+    /*$nome = $_GET['nome'];
     function redirect(){
         global $nome;
         if(isset($_GET['nome_atividade'])){
@@ -16,15 +16,15 @@
         }else{
             echo $nome;
         }
-    }
+    }*/
         ?>
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class="conta-geral">Aluno - <?php //echo $nome;?></div>
     <div class='espaco'></div>
-    <details class='details'>
-        <summary class="sumario">Recebimento</summary>
+    <details>
+        <summary>Recebimento</summary>
         <form action="t_nota_r_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
@@ -35,26 +35,26 @@
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
-    <details class="details">
-        <summary class="sumario">Controle</summary>
+    <details>
+        <summary>Controle</summary>
         <form action="t_docas_r_a.php">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
-    <details class="details">
-        <summary class="sumario">Estoque</summary>
+    <details>
+        <summary>Estoque</summary>
         <form action="t_estoque_a.php">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
-    <details class="details">
-        <summary class="sumario">Picking</summary>
+    <details>
+        <summary>Picking</summary>
         <form action="t_picking_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
-    <details class="details">
-        <summary class="sumario">Expedição</summary>
+    <details>
+        <summary>Expedição</summary>
         <form action="t_nota_e_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
@@ -65,8 +65,8 @@
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
-    <details class="details">
-        <summary class="sumario">Relatórios</summary>
+    <details>
+        <summary>Relatórios</summary>
         <form action="t_relatorios_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
@@ -74,11 +74,12 @@
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_estoque_a.php" method="POST">
-            <div class="">
+            <center>
+            <div class="caixa-estoque">
                 <div class="texto-medio-estoque">Digite o nome do produto</div>
-                <input class="" type="text" name="nome_p">
-                <input class="" type="submit">
-                <div class="">
+                <input class="botao-input-estoque" type="text" name="nome_p">
+                <input class="botao-submit-estoque" type="submit">
+            </center>
         </form>
         <?php
     session_start();

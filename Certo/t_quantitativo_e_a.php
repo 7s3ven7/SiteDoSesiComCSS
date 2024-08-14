@@ -61,7 +61,7 @@
     </details>
 
     <div class="caixa-tela-informacao-geral">
-        <form action="t_quantitativo_a.php" method="POST">
+        <form action="t_quantitativo_e_a.php" method="POST">
             <div class="caixa-quant-1">
                 <div class="texto-medio-quant">Digite o Código do fornecedor</div>
                 <input class="botao-input-quant" type="number" name="cod_forne">
@@ -82,7 +82,7 @@
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
             echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-            header("Location: t_quantitativo_a.php");
+            header("Location: t_quantitativo_e_a.php");
             exit();
         } else {
             $v1 = $_POST['cod_forne'];
