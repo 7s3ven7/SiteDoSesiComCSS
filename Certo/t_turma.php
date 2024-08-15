@@ -121,7 +121,8 @@
                     $tipo_conta = $row[4];
                     $turma = $row[5];
                     $qnt_alu_pagina -= 1;
-                    echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
+                    echo '<form action="t_turma?nome=';redirect();echo'&salvar=true" method="POST">
+                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
                     if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                     echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
                         }else{
@@ -129,7 +130,7 @@
                         }    
                         echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
                         <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
-                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="text" name="'.$id2.'" value="'.$id.'"></td>
+                        <td class="linha-topo-modificacao-mini"><input class="botao-modificar-turma" type="text" name="'.$id2.'" value="'.$id.'"></td>
                         <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
                     </tr>';
                     $id2 .= 'p';
@@ -187,16 +188,13 @@
                 for($i = 1;$i<=15;$i++){
 
                 $id = $_POST[$id2];
-                echo $id;
                 $aluno = $_POST[$aluno2];
                 $senha = $_POST[$senha2];
                 $turma = $_POST[$turma2];
-                $sql = 'SELECT `id` FROM `usuario` WHERE `id` = "'.$id.'";';
-                echo $sql;
+                $sql = 'SELECT `id_usuario` FROM `usuario` WHERE `id_usuario` = "'.$id.'";';
                 $result = $conexao -> query($sql);
                 if(mysqli_num_rows($result) > 0){
-                $sql = "UPDATE `usuario` SET `nome_alu` = '".$aluno."',`senha` = '".$senha."',`turma` = '".$turma."' WHERE `id` = '".$id."';";
-                echo $sql;
+                $sql = "UPDATE `usuario` SET `nome_u` = '".$aluno."',`senha` = '".$senha."',`cod_grupo` = '".$turma."' WHERE `id_usuario` = '".$id."';";
                 $result = $conexao->query($sql);    
                 }
                 $id2 .= 'p';
@@ -222,7 +220,6 @@
                             $row3 = rand(0,49);
                             $row4 = rand(0,49);
                             $aleatorio = $array[$row1].$array[$row2].$array[$row3].$array[$row4].rand(0,9).rand(0,9).rand(0,9).rand(0,9);
-                            $ii = 8;
                             $sql = 'INSERT INTO `usuario` (`nome_u`,`senha`,`tipo_u`,`cod_grupo`) VALUES ("Aluno '.$i.'","'.$aleatorio.'","Aluno","'.$nome_turma.'")';
                             $resultado = $conexao->query($sql);
                             $i += 1;
