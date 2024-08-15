@@ -421,22 +421,7 @@ summary {
     position: relative;
 }
 
-.caixa-tabela-qualitat {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-}
-
-.caixa-qualitat {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    padding-left: 100vw;
-}
-
-.caixa-qualitat-1 {
+.caixa-qualitat-1-r-a {
     width: 49%;
     height: 65vh;
     background-color: rgb(250, 250, 250);
@@ -450,7 +435,7 @@ summary {
     margin-bottom: 11.3vh;
 }
 
-.caixa-qualitat-2 {
+.caixa-qualitat-2-r-a {
     width: 51%;
     height: 65.1vh;
     background-color: rgb(250, 250, 250);
@@ -465,14 +450,14 @@ summary {
     padding-top: 2.6vh;
 }
 
-.caixa-qualitat-3 {
+.caixa-qualitat-3-r-a {
     padding-bottom: 9%;
     padding-top: 7%;
     padding-left: 45%;
     padding-right: 45%;
 }
 
-.caixa-quant {
+.caixa-quant-r-a {
     width: 100%;
     height: 100%;
     background-color: rgb(250, 250, 250);
@@ -480,7 +465,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-1 {
+.caixa-quant-1-r-a {
     width: 20vw;
     height: 10vh;
     background-color: rgb(250, 250, 250);
@@ -490,7 +475,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-2 {
+.caixa-quant-2-r-a {
     width: 20vw;
     height: 15vh;
     background-color: rgb(250, 250, 250);
@@ -499,7 +484,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-3 {
+.caixa-quant-3-r-a {
     width: 20vw;
     height: 16vh;
     background-color: rgb(250, 250, 250);
@@ -508,7 +493,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-4 {
+.caixa-quant-4-r-a {
     width: 20vw;
     height: 9vh;
     background-color: rgb(250, 250, 250);
@@ -519,6 +504,40 @@ summary {
 
 .scrollbar-quant {
     overflow-y: scroll;
+}
+
+.caixa-principal-quantitativo-r-p {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    margin-left: 34vw;
+    margin-right: 35vw;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+    padding-top: 1.25vh;
+    margin-top: 30vh;
+    border-radius: 10px;
+
+}
+
+.caixa-principal2-quantitativo-r-p {
+    width: 50vw;
+    height: 36vh;
+    border: 0.01em solid black;
+    position: relative;
+    border-radius: 20px;
+}
+
+.linha-divisao-caixa-central-quant-r-p {
+    width: 25vw;
+    height: 15vh;
+    margin-bottom: 0;
+    border: 0.1em solid black;
+    position: center;
+    margin-right: 2vw;
+    border-radius: 20px;
 }
 
 .caixa-estoque {
@@ -762,24 +781,24 @@ summary {
     margin-right: auto;
 }
 
-.texto-grande-qualitat {
+.texto-grande-qualitat-r-a {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
 }
 
-.texto-pequeno-qualitat {
+.texto-pequeno-qualitat-r-a {
     font-size: 1.3vw;
     color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat {
+.tabela-qualitat-r-a {
     width: 38.5vw;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.tabela-qualitat2 {
+.tabela-qualitat-2-r-a {
     position: absolute;
     width: 40vw;
     max-width: 80vw;
@@ -787,14 +806,14 @@ summary {
     text-align: center;
 }
 
-.td-qualitat {
+.td-qualitat-r-a {
     width: 5%;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.td-qualitat-2 {
+.td-qualitat-2-r-a {
     width: 3vw;
     height: 3vh;
     border: 0.01em solid black;
@@ -827,7 +846,7 @@ summary {
 
 }
 
-.texto-medio-quant {
+.texto-medio-quant-r-a {
     font-size: 1.5vw;
     color: black;
 }
@@ -1068,7 +1087,7 @@ summary {
     margin-right: 1.5vw;
 }
 
-.botao-qualitat-submit {
+.botao-qualitat-submit-r-a {
     margin-top: 1%;
     right: 46%;
     position: absolute;
@@ -1081,13 +1100,13 @@ summary {
     border-radius: 20px;
 }
 
-.check-qualitat {
+.check-qualitat-r-a {
     position: relative;
     height: 1.5vh;
     background-color: #eee;
 }
 
-.check-quant {
+.check-quant-r-a {
     position: relative;
     width: 2.5vw;
     height: 2.5vh;
@@ -1152,7 +1171,7 @@ summary {
     text-align: center;
 }
 
-.botao-input-quant {
+.botao-input-quant-r-a {
     width: 11.5vw;
     height: 2vw;
     border-radius: 10px;
@@ -1161,7 +1180,7 @@ summary {
     margin-top: 1%;
 }
 
-.botao-input-quant-2 {
+.botao-input-quant-2-r-a {
     width: 13vw;
     height: 3vh;
     border-radius: 10px;
@@ -1169,7 +1188,7 @@ summary {
     position: relative;
 }
 
-.botao-input-quant-3 {
+.botao-input-quant-3-r-a {
     width: 10vw;
     height: 2.6vh;
     border-radius: 5px;
@@ -1178,20 +1197,24 @@ summary {
     padding: 2%;
 }
 
-.botao-submit-quant {
+.botao-submit-quant-r-a {
     width: 6.3vw;
     height: 2vw;
     font: 1em;
     border-radius: 10px;
     border: 0.1em solid black;
     text-align: center;
-    position: absolute;
-    right: 3%;
+    position: relative;
 }
 
 .botao-central-escrever-quant-r-p {
     width: 7.8vw;
     height: 3.5vh;
+}
+
+.botao-central-escrever-quant-r-a {
+    width: 7vw;
+    height: 3.2vh;
     font: 1.5em;
     border-radius: 15px;
     border: 0.08 solid black;

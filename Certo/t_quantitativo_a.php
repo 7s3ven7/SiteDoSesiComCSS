@@ -1,5 +1,27 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+<?php
+session_start();
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+    if ($conexao->connect_errno) {
+        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+        exit();
+    } else{
+        $nome = $_GET['nome'];
+        function redirect(){
+            global $nome;
+            if(isset($_GET['nome_atividade'])){
+                $nome_atividade = $_GET['nome_atividade'];
+                echo $nome.'&nome_atividade='.$nome_atividade;
+            }else{
+                echo $nome;
+            }
+        }}?>
 <head>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -9,70 +31,69 @@
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - </div>
-    <div class="espaco"></div>
-    <details class="details">
+    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class='espaco'></div>
+    <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form action="t_nota_r_a.php">
+        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_r_a.php">
+        <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form action="t_quantitativo_a.php">
+        <form method="POST" action="t_quantitativo_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form action="t_docas_r_a.php">
+        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form action="t_estoque_a.php">
+        <form method="POST" action="t_estoque_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form action="t_picking_a.php">
+        <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form action="t_nota_e_a.php">
+        <form method="POST" action="t_nota_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_e_a.php">
+        <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_quantitativo_e_a.php">
+        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form action="t_relatorios_a.php">
+        <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_quantitativo_a.php" method="POST">
-            <div class="caixa-quant-1">
-                <div class="texto-medio-quant">Digite o Código do fornecedor</div>
-                <input class="botao-input-quant" type="number" name="cod_forne">
-                <input class="botao-submit-quant" type="submit">
+            <div class="caixa-quant-1-r-a">
+                <div class="texto-medio-quant-r-a">Digite o Código do fornecedor</div>
+                <input class="botao-input-quant-r-a" type="number" name="cod_forne">
+                <input class="botao-submit-quant-r-a" type="submit">
             </div>
         </form>
-        <div class="caixa-quant">
+        <div class="caixa-quant-r-a">
         <table>
+        <form action="t_quantitativo_a.php" method="POST">
         <?php
-    session_start();
-            
     if(isset($_POST['cod_forne'])){
         $hostname = "127.0.0.1";
         $name = "root";
@@ -105,51 +126,51 @@
                 $s6 = $s5*$s4;
                 echo '
                 <td>
-                <div class="caixa-quant-2">
-                    <div class="texto-medio-quant">Número da Nota Fiscal</div>
-                    <input class="botao-input-quant-2" type="text" value="'.$s1.'" disabled>
-                    <div class="texto-medio-quant">Nome do produto</div>
-                    <input class="botao-input-quant-2" type="text" value="'.$s2.'" disabled>
+                <div class="caixa-quant-2-r-a">
+                    <div class="texto-medio-quant-r-a">Número da Nota Fiscal</div>
+                    <input class="botao-input-quant-2-r-a" type="text" value="'.$s1.'" disabled>
+                    <div class="texto-medio-quant-r-a">Nome do produto</div>
+                    <input class="botao-input-quant-2-r-a" type="text" value="'.$s2.'" disabled>
                 </div>
-                <div class="caixa-quant-3">
+                <div class="caixa-quant-3-r-a">
                     <table>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">UN</div>
+                                <div class="texto-medio-quant-r-a">UN</div>
                             </td>
                             <td>
-                                <input class="botao-input-quant-3" type="text" value="'.$s3.'" name="un">
+                                <input class="botao-input-quant-3-r-a" type="text" value="'.$s3.'" name="un">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">QTD</div>
+                                <div class="texto-medio-quant-r-a">QTD</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s4.'" name="qtd"></td>
+                            <td><input class="botao-input-quant-3-r-a" type="text" value="'.$s4.'" name="qtd"></td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">R$/unit</div>
+                                <div class="texto-medio-quant-r-a">R$/unit</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s5.'" name="unit"></td>
+                            <td><input class="botao-input-quant-3-r-a" type="text" value="'.$s5.'" name="unit"></td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">R$Total</div>
+                                <div class="texto-medio-quant-r-a">R$Total</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s6.'" name="total"></td>
+                            <td><input class="botao-input-quant-3-r-a" type="text" value="'.$s6.'" name="total"></td>
                         </tr>
                     </table>
                 </div>
-                    <table class="caixa-quant-4">
+                    <table class="caixa-quant-4-r-a">
                         <tr>
                             <td>
-                            <div class="texto-medio-quant">Faltando</div>
-                            <input class="check-quant" type="checkbox" name="falta">
+                            <div class="texto-medio-quant-r-a">Faltando</div>
+                            <input class="check-quant-r-a" type="checkbox" name="falta">
                             </td>
                             <td>
-                                <div class="texto-medio-quant">Avariado</div>
-                                <input class="check-quant" type="checkbox" name="avariado">
+                                <div class="texto-medio-quant-r-a">Avariado</div>
+                                <input class="check-quant-r-a" type="checkbox" name="avariado">
                             </td>
                         </tr>
                     </table>

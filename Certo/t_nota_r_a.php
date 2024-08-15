@@ -18,6 +18,7 @@
         }
     }
         ?>
+
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
@@ -73,54 +74,5 @@
     </details>
 
     <div class="caixa-tela-informacao-geral">
-        <form action="t_picking_a.php" method="POST">
-            <div class="">
-                <div class="">Digite o nome do produto</div>
-                <input class="" type="text" name="nome_p">
-                <input class="" type="submit">
-                <div class="">
-        </form>
-        <?php
-    session_start();
-        $hostname = "127.0.0.1";
-        $name = "root";
-        $password = "root";
-        $DB = "dados";
-
-        $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-        if ($conexao->connect_errno) {
-            echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-            header("Location: t_a.php");
-            exit();
-        } else {
-            
-            $sql = "SELECT solici FROM 
-            `pedido_cliente_p` 
-            ORDER BY id_pedido;";            
-
-	        $resultado = $conexao->query($sql);
-
-            if($resultado->num_rows != 0){
-                while($row = mysqli_fetch_array($resultado)){
-                $n_solici = $row['0'];
-                
-
-                echo '
-                <table class="">
-                    <tr>
-                        <form action="t_solicitacao_a.php" method="POST">
-                        <td class="">Nº Pedido: 
-                        <input class="" type="number" value="'.$n_solici.'" name="n_soli" disabled>
-                        <input class="" type="submit" value="abrir"</td>
-                        </form>
-                    </tr>
-                <hr>
-                ';
-                }
-            }else{
-                echo 'Produto não encontrado';
-            }
-        }
-?>
     </div>
     </div>
