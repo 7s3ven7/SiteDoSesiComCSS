@@ -521,40 +521,6 @@ summary {
     overflow-y: scroll;
 }
 
-.caixa-principal-quantitativo-r-p {
-    width: 50%;
-    height: 50%;
-    background-color: white;
-    position: absolute;
-    margin-left: 34vw;
-    margin-right: 35vw;
-    text-align: center;
-    align-items: center;
-    padding: 5vh;
-    padding-top: 1.25vh;
-    margin-top: 30vh;
-    border-radius: 10px;
-
-}
-
-.caixa-principal2-quantitativo-r-p {
-    width: 50vw;
-    height: 36vh;
-    border: 0.01em solid black;
-    position: relative;
-    border-radius: 20px;
-}
-
-.linha-divisao-caixa-central-quant-r-p {
-    width: 25vw;
-    height: 15vh;
-    margin-bottom: 0;
-    border: 0.1em solid black;
-    position: center;
-    margin-right: 2vw;
-    border-radius: 20px;
-}
-
 .caixa-estoque {
     width: 20vw;
     height: 10vh;
@@ -563,6 +529,29 @@ summary {
     position: relative;
     text-align: center;
 }
+
+.tabela_quantitativo_r_p {
+    width: 55vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 10vh;
+    background-color: whitesmoke;
+    border: 5px solid black;
+}
+
+.tabela_quantitativo_e_p {
+    width: 55vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 10vh;
+    background-color: whitesmoke;
+    border: 5px solid black;
+}
+
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
@@ -856,22 +845,47 @@ summary {
 }
 
 .texto-central-quantitativo-r-p {
-    width: 15vw;
-    font-size: 1.8em;
+    width: 23vw;
+    font-size: 2.1em;
     text-align: center;
+    align-items: center;
     color: black;
     position: relative;
     margin-top: 4%;
 }
 
 .texto-central2-quantitativo-r-p {
-    width: 15vw;
+    width: 25vw;
     font-size: 3em;
     text-align: center;
     color: black;
     position: relative;
-    margin-bottom: 4vh;
-    margin-top: -4em;
+    margin-top: 2.5vh;
+    margin-bottom: -3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-central-quantitativo-e-p {
+    width: 23vw;
+    font-size: 2.1em;
+    text-align: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    margin-top: 4%;
+}
+
+.texto-central2-quantitativo-e-p {
+    width: 25vw;
+    font-size: 3em;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 2.5vh;
+    margin-bottom: -3vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
@@ -1175,37 +1189,38 @@ summary {
     right: 3%;
 }
 
-.botao-central-escrever-quant {
-    width: 7vw;
-    height: 3.2vh;
+.botao-central-escrever-quant-r-p {
+    width: 7.8vw;
+    height: 3.5vh;
     font: 1.5em;
     border-radius: 15px;
     border: 0.08 solid black;
     position: center;
     text-align: center;
-    margin-top: 1.5vh;
+    align-items: center;
 }
 
-.botao-central-enviar-quant {
-    width: 5.5vw;
+.botao-central-enviar-quant-r-p {
+    width: 5vw;
     height: 3.8vh;
     font: 1.5em;
     border-radius: 15px;
-    border: 0.08 solid black;
-    position: center;
+    border: 0.08em solid black;
+    position: relative;
+    align-items: center;
     text-align: center;
     background-color: green;
     color: white;
     margin-top: 10vh;
-    margin-right: 3.5vw;
+    margin-right: 41vw;
+    margin-left: 39vw;
+    transition: 0.5s;
 }
 
-.botao-central-enviar-quant:hover {
+.botao-central-enviar-quant-r-p:hover {
     background-color: white;
     color: black;
-    border: 0;
-    position: relative;
-    margin-left: 4%;
+    border-bottom: 0.01em solid black;
 }
 
 .botao-input-estoque {
@@ -1219,7 +1234,7 @@ summary {
 
 .botao-submit-estoque {
     width: 6.3vw;
-    height: 2vw;
+    height: 2vh;
     font: 1em;
     border-radius: 10px;
     border: 0.1em solid black;
@@ -1227,4 +1242,39 @@ summary {
     text-align: center;
     position: relative;
     margin-left: 4%;
+}
+
+
+.botao-central-escrever-quant-e-p {
+    width: 7.8vw;
+    height: 3.5vh;
+    font: 1.5em;
+    border-radius: 15px;
+    border: 0.08 solid black;
+    position: center;
+    text-align: center;
+    align-items: center;
+}
+
+.botao-central-enviar-quant-e-p {
+    width: 5vw;
+    height: 3.8vh;
+    font: 1.5em;
+    border-radius: 15px;
+    border: 0.08em solid black;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-top: 10vh;
+    margin-right: 41vw;
+    margin-left: 39vw;
+    transition: 0.5s;
+}
+
+.botao-central-enviar-quant-e-p:hover {
+    background-color: white;
+    color: black;
+    border-bottom: 0.01em solid black;
 }
