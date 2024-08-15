@@ -84,14 +84,17 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 
     <div class="caixa-tela-informacao-geral">
                 <form action="t_qualitativo_r_a.php" method="POST">
-                    <center><div class="texto-grande-qualitat-r-a">
-                        Digite o Código do fornecedor
-                        <input class="botao-input-qualitat" type="number" name="cod_forne">
-                        <br>
-                        <input class="botao-qualitat-submit-r-a" type="submit">
-                        <br>
-                        <div class="">
-                        </div></center>
+                    <center>
+                        <div class="dist-qualitat-r-a">
+                            <div class="texto-grande-qualitat-r-a">
+                                Digite o Código do fornecedor
+                                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
+                                <br>
+                                <input class="botao-qualitat-submit-r-a" type="submit">
+                                <br>
+                            </div>
+                        </div>
+                    </center>
                 </form>
                 <?php
                 if(isset($_POST['cod_forne'])){            
@@ -111,7 +114,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                 echo '
                 <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1-r-a">
-                    <table class="tabela-qualitat">
+                    <table class="tabela-qualitat-r-a">
                         <tr>
                             <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Código do fornecedor:</td>
                             <td class="td-qualitat-r-a">'.$row['cod_forne'].'</div></td>
@@ -191,6 +194,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="1">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Lateral Direita: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -205,6 +210,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="3">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria no Teto: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -219,6 +226,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="5">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lacre </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -233,6 +242,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="7">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso de Altura: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -247,6 +258,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="9">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso na Esquerda: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -261,6 +274,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="11">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Painel Avariado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -275,6 +290,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="13">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lona: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -289,6 +306,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="15">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Volume Correto: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -303,6 +322,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="17">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Código Avariado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -317,6 +338,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                                     <input class="check-qualitat-r-a" type="checkbox" name="19">
                                 </label>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Doca 1: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
@@ -326,7 +349,9 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                         </tr>
                     </table>
                     </div>
-                    <input class="botao-qualitat-submit-r-a" type="submit" value="Enviar" left=5px name="21">
+                    <div class="texto-grande-qualitat-r-a">
+                    <input class="botao-qualitat-submit-2-r-a" type="submit" value="Enviar" left=5px name="21">
+                    </div>
                 </form>
                 </center>
             </div>

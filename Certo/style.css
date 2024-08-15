@@ -423,51 +423,42 @@ summary {
 
 .caixa-qualitat-1-r-a {
     width: 49%;
-    height: 65vh;
+    height: 72vh;
     background-color: rgb(250, 250, 250);
-    border: 0.5vh solid rgb(0, 0, 0);
+    border: 1vh solid gray;
     border-left: 0;
-    border-top: 1vh solid black;
-    border-bottom: 1vh solid black;
+    border-right: 0.5vh solid gray;
     position: relative;
-    top: 10vh;
+    top: 6vh;
     padding: 2.5vh;
     margin-bottom: 11.3vh;
 }
 
 .caixa-qualitat-2-r-a {
     width: 51%;
-    height: 65.1vh;
+    height: 72vh;
     background-color: rgb(250, 250, 250);
-    border: 1vh solid rgb(0, 0, 0);
+    border: 1vh solid gray;
     border-right: 0;
-    border-left: 0.5vh solid black;
+    border-left: 0.5vh solid gray;
     position: absolute;
     margin-top: 9.9vh;
-    top: 5.7vh;
+    top: 1.7vh;
     left: 49%;
     padding: 2.5vh;
     padding-top: 2.6vh;
 }
 
 .caixa-qualitat-3-r-a {
-    padding-bottom: 9%;
-    padding-top: 7%;
-    padding-left: 45%;
-    padding-right: 45%;
-}
-
-.caixa-quant-r-a {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(250, 250, 250);
-    position: relative;
-    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 47%;
+    padding-right: 50%;
 }
 
 .caixa-quant-1-r-a {
-    width: 20vw;
-    height: 10vh;
+    width: 19vw;
+    height: 8.7vh;
     background-color: rgb(250, 250, 250);
     border: 0.5vh solid grey;
     position: relative;
@@ -476,8 +467,8 @@ summary {
 }
 
 .caixa-quant-2-r-a {
-    width: 20vw;
-    height: 15vh;
+    width: 15vw;
+    height: 13vh;
     background-color: rgb(250, 250, 250);
     border: 0.5vh solid grey;
     position: relative;
@@ -485,8 +476,8 @@ summary {
 }
 
 .caixa-quant-3-r-a {
-    width: 20vw;
-    height: 16vh;
+    width: 15vw;
+    height: 13.2vh;
     background-color: rgb(250, 250, 250);
     border: 0.5vh solid grey;
     position: relative;
@@ -494,8 +485,8 @@ summary {
 }
 
 .caixa-quant-4-r-a {
-    width: 20vw;
-    height: 9vh;
+    width: 15vw;
+    height: 7vh;
     background-color: rgb(250, 250, 250);
     border: 0.5vh solid grey;
     position: relative;
@@ -760,35 +751,32 @@ summary {
 }
 
 .texto-pequeno-qualitat-r-a {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     color: rgb(0, 0, 0);
 }
 
 .tabela-qualitat-r-a {
-    width: 38.5vw;
-    max-width: 50vw;
+    width: 39vw;
+    height: 65.5vh;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .tabela-qualitat-2-r-a {
-    position: absolute;
     width: 40vw;
-    max-width: 80vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
 .td-qualitat-r-a {
-    width: 5%;
-    max-width: 50vw;
+    width: 25vw;
     border: 0.01em solid black;
     text-align: center;
+    font-size: 28.6px;
 }
 
 .td-qualitat-2-r-a {
-    width: 3vw;
-    height: 3vh;
+    width: 10vw;
     border: 0.01em solid black;
     text-align: center;
 }
@@ -820,7 +808,7 @@ summary {
 }
 
 .texto-medio-quant-r-a {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     color: black;
 }
 
@@ -1035,7 +1023,42 @@ summary {
     margin-right: 1.5vw;
 }
 
+.botao-input-qualitat-r-a{
+    width: 10vw;
+    height: 1.5vw;
+    border-radius: 10px;
+    border-right: black solid 0.01em;
+    margin-right: 1.5vw;
+    font-size: 15px;
+}
+
 .botao-qualitat-submit-r-a {
+    right: 45.2%;
+    top: 5%;
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.botao-qualitat-submit-2-r-a {
+    right: 45.2%;
+    top: 92.5%;
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.botao-qualitat-submit-e-a {
     margin-top: 1%;
     right: 46%;
     position: absolute;
@@ -1121,11 +1144,11 @@ summary {
 
 .botao-input-quant-r-a {
     width: 11.5vw;
-    height: 2vw;
+    height: 1.8vw;
     border-radius: 10px;
     font-size: 1.3em;
     position: relative;
-    margin-top: 1%;
+    top: 3%;
 }
 
 .botao-input-quant-2-r-a {
@@ -1152,6 +1175,15 @@ summary {
     border-radius: 10px;
     border: 0.1em solid black;
     text-align: center;
+    position: relative;
+}
+
+.botao-submit-2-quant-r-a{
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
     position: relative;
 }
 

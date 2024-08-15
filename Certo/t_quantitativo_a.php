@@ -83,14 +83,14 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     </details>
 
     <div class="caixa-tela-informacao-geral">
-        <form action="t_quantitativo_a.php" method="POST">
+        <form action="t_quantitativo_a.php?nome=<?php redirect()?>" method="POST">
             <div class="caixa-quant-1-r-a">
                 <div class="texto-medio-quant-r-a">Digite o Código do fornecedor</div>
                 <input class="botao-input-quant-r-a" type="number" name="cod_forne">
                 <input class="botao-submit-quant-r-a" type="submit">
             </div>
         </form>
-        <div class="caixa-quant-r-a">
+        <center>
         <table>
         <form action="t_quantitativo_a.php" method="POST">
         <?php
@@ -113,8 +113,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
         if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
-                $rep = $rep + 1;
-                if ($rep / 4 == 1){
+                $rep += 1;
+                if ($rep / 5 == 1){
                 $rep=0;
                 echo '<tr>';
                 }
@@ -165,12 +165,19 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                     <table class="caixa-quant-4-r-a">
                         <tr>
                             <td>
-                            <div class="texto-medio-quant-r-a">Faltando</div>
-                            <input class="check-quant-r-a" type="checkbox" name="falta">
+                                <div class="texto-medio-quant-r-a">Faltando</div>
+                                <input class="check-quant-r-a" type="checkbox" name="falta">
                             </td>
                             <td>
                                 <div class="texto-medio-quant-r-a">Avariado</div>
                                 <input class="check-quant-r-a" type="checkbox" name="avariado">
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="caixa-quant-4-r-a">
+                        <tr>
+                            <td>
+                                <input class="botao-submit-2-quant-r-a" type="submit">
                             </td>
                         </tr>
                     </table>
