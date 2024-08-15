@@ -26,49 +26,49 @@
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form action="t_nota_r_a.php">
+        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_r_a.php">
+        <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form action="t_quantitativo_a.php">
+        <form method="POST" action="t_quantitativo_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form action="t_docas_r_a.php">
+        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form action="t_estoque_a.php">
+        <form method="POST" action="t_estoque_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form action="t_picking_a.php">
+        <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form action="t_nota_e_a.php">
+        <form method="POST" action="t_nota_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form action="t_qualitativo_e_a.php">
+        <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form action="t_quantitativo_e_a.php">
+        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form action="t_relatorios_a.php">
+        <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
