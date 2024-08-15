@@ -834,7 +834,7 @@ summary {
 
 }
 
-.texto-medio-quant {
+.texto-medio-quant-r-a {
     font-size: 1.5vw;
     color: black;
 }
@@ -1064,7 +1064,7 @@ summary {
     margin-right: 1.5vw;
 }
 
-.botao-qualitat-submit {
+.botao-qualitat-submit-r-a {
     margin-top: 1%;
     right: 46%;
     position: absolute;
@@ -1077,13 +1077,13 @@ summary {
     border-radius: 20px;
 }
 
-.check-qualitat {
+.check-qualitat-r-a {
     position: relative;
     height: 1.5vh;
     background-color: #eee;
 }
 
-.check-quant {
+.check-quant-r-a {
     position: relative;
     width: 2.5vw;
     height: 2.5vh;
@@ -1148,7 +1148,7 @@ summary {
     text-align: center;
 }
 
-.botao-input-quant {
+.botao-input-quant-r-a {
     width: 11.5vw;
     height: 2vw;
     border-radius: 10px;
@@ -1157,7 +1157,7 @@ summary {
     margin-top: 1%;
 }
 
-.botao-input-quant-2 {
+.botao-input-quant-2-r-a {
     width: 13vw;
     height: 3vh;
     border-radius: 10px;
@@ -1165,7 +1165,7 @@ summary {
     position: relative;
 }
 
-.botao-input-quant-3 {
+.botao-input-quant-3-r-a {
     width: 10vw;
     height: 2.6vh;
     border-radius: 5px;
@@ -1174,7 +1174,7 @@ summary {
     padding: 2%;
 }
 
-.botao-submit-quant {
+.botao-submit-quant-r-a {
     width: 6.3vw;
     height: 2vw;
     font: 1em;
@@ -1184,7 +1184,7 @@ summary {
     position: relative;
 }
 
-.botao-central-escrever-quant {
+.botao-central-escrever-quant-r-a {
     width: 7vw;
     height: 3.2vh;
     font: 1.5em;

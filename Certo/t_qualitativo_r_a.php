@@ -88,7 +88,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                         Digite o Código do fornecedor
                         <input class="botao-input-qualitat" type="number" name="cod_forne">
                         <br>
-                        <input class="botao-qualitat-submit" type="submit">
+                        <input class="botao-qualitat-submit-r-a" type="submit">
                         <br>
                         <div class="">
                         </div></center>
@@ -188,13 +188,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Container Bem Desgastado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="1">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="1">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Lateral Direita: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="2">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="2">
                                 </label>
                             </td>
                         </tr>
@@ -202,13 +202,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Lateral Esquerda: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="3">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="3">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria no Teto: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="4">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="4">
                                 </label>
                             </td>
                         </tr>
@@ -216,13 +216,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Frente: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="5">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="5">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lacre </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="6">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="6">
                                 </label>
                             </td>
                         </tr>
@@ -230,13 +230,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Adesivos Avariados: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="7">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="7">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso de Altura: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="8">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="8">
                                 </label>
                             </td>
                         </tr>
@@ -244,13 +244,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso na Direita: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="9">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="9">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso na Esquerda: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="10">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="10">
                                 </label>
                             </td>
                         </tr>
@@ -258,13 +258,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso Frontal: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="11">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="11">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Painel Avariado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="12">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="12">
                                 </label>
                             </td>
                         </tr>
@@ -272,13 +272,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Cabo de Energia: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="13">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="13">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lona: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="14">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="14">
                                 </label>
                             </td>
                         </tr>
@@ -286,13 +286,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Canhoto Assinado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="15">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="15">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Volume Correto: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="16">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="16">
                                 </label>
                             </td>
                         </tr>
@@ -300,13 +300,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Atraso: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="17">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="17">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Código Avariado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="18">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="18">
                                 </label>
                             </td>
                         </tr>
@@ -314,19 +314,19 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Item Lacrado: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="19">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="19">
                                 </label>
                             </td>
                             <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Doca 1: </div></td>
                             <td class="td-qualitat-2-r-a">
                                 <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat" type="checkbox" name="20">
+                                    <input class="check-qualitat-r-a" type="checkbox" name="20">
                                 </label>
                             </td>
                         </tr>
                     </table>
                     </div>
-                    <input class="botao-qualitat-submit" type="submit" value="Enviar" left=5px name="21">
+                    <input class="botao-qualitat-submit-r-a" type="submit" value="Enviar" left=5px name="21">
                 </form>
                 </center>
             </div>
