@@ -573,21 +573,36 @@ summary {
 
 
 .tabela-t-nota-r-a {
-    max-width: 50vw;
-    min-width: 25vw;
-    min-height: 5vh;
-    max-height: 30vh;
+    width:65vw;
+    height:55vh;
     border: 0.1em solid black;
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 25vh;
+    margin-top: 12.5vh;
     padding: 1vh;
 }
 
 .td-t-nota-r-a {
+    padding:1vh;
     width: 25%;
+    height:4vh;
     border: 0.01em solid black;
+}
+.td-t-nota-r-a-texto{
+    font-size:xx-large;
+    width:100%;
+    color:gray;
+}
+.td-t-nota-r-a-valor{
+    font-size: medium;
+    width:50%;
+    color:black;
+    background-color: whitesmoke;
+    border:0.01em solid black;
+    border-radius: 5px;
+    padding:0.25vh;
+    margin-top:0.25vh;
 }
 
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
@@ -926,7 +941,7 @@ summary {
 }
 
 .error {
-    width: 30vw;
+    width: 30.5vw;
     height: 6vh;
     font-size: xx-large;
     color: black;
@@ -938,7 +953,8 @@ summary {
     margin-right: auto;
     text-align: center;
     align-items: center;
-    padding: 0.5vh;
+    padding: 0.75vh;
+    border-radius:30px;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
