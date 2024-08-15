@@ -68,8 +68,9 @@
                 <input class="botao-submit-quant" type="submit">
             </div>
         </form>
-        <div class="caixa-quant">
+        <div class="caixa-quant-r-a">
         <table>
+        <form action="t_quantitativo_a.php" method="POST">
         <?php
     session_start();
             
