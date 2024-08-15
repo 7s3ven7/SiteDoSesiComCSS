@@ -465,7 +465,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-1 {
+.caixa-quant-1-r-a {
     width: 20vw;
     height: 10vh;
     background-color: rgb(250, 250, 250);
@@ -475,7 +475,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-2 {
+.caixa-quant-2-r-a {
     width: 20vw;
     height: 15vh;
     background-color: rgb(250, 250, 250);
@@ -484,7 +484,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-3 {
+.caixa-quant-3-r-a {
     width: 20vw;
     height: 16vh;
     background-color: rgb(250, 250, 250);
@@ -493,7 +493,7 @@ summary {
     text-align: center;
 }
 
-.caixa-quant-4 {
+.caixa-quant-4-r-a {
     width: 20vw;
     height: 9vh;
     background-color: rgb(250, 250, 250);
@@ -754,24 +754,24 @@ summary {
     margin-right: auto;
 }
 
-.texto-grande-qualitat {
+.texto-grande-qualitat-r-a {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
 }
 
-.texto-pequeno-qualitat {
+.texto-pequeno-qualitat-r-a {
     font-size: 1.3vw;
     color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat {
+.tabela-qualitat-r-a {
     width: 38.5vw;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.tabela-qualitat2 {
+.tabela-qualitat-2-r-a {
     position: absolute;
     width: 40vw;
     max-width: 80vw;
@@ -779,14 +779,14 @@ summary {
     text-align: center;
 }
 
-.td-qualitat {
+.td-qualitat-r-a {
     width: 5%;
     max-width: 50vw;
     border: 0.01em solid black;
     text-align: center;
 }
 
-.td-qualitat-2 {
+.td-qualitat-2-r-a {
     width: 3vw;
     height: 3vh;
     border: 0.01em solid black;

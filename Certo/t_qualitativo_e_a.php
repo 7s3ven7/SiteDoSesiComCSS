@@ -14,7 +14,7 @@ $DB = "dados";
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
     } else{
-        /*$nome = $_GET['nome'];
+        $nome = $_GET['nome'];
         function redirect(){
             global $nome;
             if(isset($_GET['nome_atividade'])){
@@ -23,7 +23,7 @@ $DB = "dados";
             }else{
                 echo $nome;
             }
-        }*/?>
+        }?>
     <!DOCTYPE html>
 
 <head>

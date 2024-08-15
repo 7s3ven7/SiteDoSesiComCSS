@@ -1,5 +1,27 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+<?php
+session_start();
+$hostname = "127.0.0.1";
+$name = "root";
+$password = "root";
+$DB = "dados";
+
+$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+    if ($conexao->connect_errno) {
+        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+        exit();
+    } else{
+        $nome = $_GET['nome'];
+        function redirect(){
+            global $nome;
+            if(isset($_GET['nome_atividade'])){
+                $nome_atividade = $_GET['nome_atividade'];
+                echo $nome.'&nome_atividade='.$nome_atividade;
+            }else{
+                echo $nome;
+            }
+        }}?>
 <head>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -62,7 +84,7 @@
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_quantitativo_a.php" method="POST">
-            <div class="caixa-quant-1">
+            <div class="caixa-quant-1-r-a">
                 <div class="texto-medio-quant">Digite o Código do fornecedor</div>
                 <input class="botao-input-quant" type="number" name="cod_forne">
                 <input class="botao-submit-quant" type="submit">
@@ -72,8 +94,6 @@
         <table>
         <form action="t_quantitativo_a.php" method="POST">
         <?php
-    session_start();
-            
     if(isset($_POST['cod_forne'])){
         $hostname = "127.0.0.1";
         $name = "root";
@@ -106,13 +126,13 @@
                 $s6 = $s5*$s4;
                 echo '
                 <td>
-                <div class="caixa-quant-2">
+                <div class="caixa-quant-2-r-a">
                     <div class="texto-medio-quant">Número da Nota Fiscal</div>
                     <input class="botao-input-quant-2" type="text" value="'.$s1.'" disabled>
                     <div class="texto-medio-quant">Nome do produto</div>
                     <input class="botao-input-quant-2" type="text" value="'.$s2.'" disabled>
                 </div>
-                <div class="caixa-quant-3">
+                <div class="caixa-quant-3-r-a">
                     <table>
                         <tr>
                             <td>
@@ -142,7 +162,7 @@
                         </tr>
                     </table>
                 </div>
-                    <table class="caixa-quant-4">
+                    <table class="caixa-quant-4-r-a">
                         <tr>
                             <td>
                             <div class="texto-medio-quant">Faltando</div>
