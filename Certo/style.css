@@ -544,7 +544,22 @@ summary {
     position: relative;
     text-align: center;
 }
-
+.tabela-t-nota-r-a{
+    max-width:50vw;
+    min-width:25vw;
+    min-height:5vh;
+    max-height:30vh;
+    border:0.1em solid black;
+    position: relative;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top:25vh;
+    padding:1vh;
+}
+.td-t-nota-r-a{
+    width:25%;
+    border:0.01em solid black;
+}
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -854,7 +869,21 @@ summary {
     margin-bottom: 4vh;
     margin-top: -4em;
 }
-
+.error{
+    width:30vw;
+    height:6vh;
+    font-size:xx-large;
+    color:black;
+    background-color: salmon;
+    border:0.01em solid black;
+    position: relative;
+    margin-top:25vh;
+    margin-left:auto;
+    margin-right: auto;   
+    text-align: center;
+    align-items: center; 
+    padding:0.5vh;
+}
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
     font-size: 1.25em;
