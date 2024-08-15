@@ -62,13 +62,13 @@
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_quantitativo_e_a.php" method="POST">
-            <div class="caixa-quant-1">
-                <div class="texto-medio-quant">Digite o Código do fornecedor</div>
-                <input class="botao-input-quant" type="number" name="cod_forne">
-                <input class="botao-submit-quant" type="submit">
+            <div class="caixa-quant-1-r-a">
+                <div class="texto-medio-quant-r-a">Digite o Código do fornecedor</div>
+                <input class="botao-input-quant-r-a" type="number" name="cod_forne">
+                <input class="botao-submit-quant-r-a" type="submit">
             </div>
         </form>
-        <div class="caixa-quant">
+        <div class="caixa-quant-r-a">
         <table>
         <?php
     session_start();

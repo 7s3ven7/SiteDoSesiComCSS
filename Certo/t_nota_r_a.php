@@ -49,40 +49,55 @@
             $valor_und = $row['24'];
             echo'<table class="tabela-t-nota-r-a">
                     <tr>
-                    <td class="td-t-nota-r-a">'.$CNPJ_e.'</td>
-                    <td class="td-t-nota-r-a">'.$eixos.'</td>
-                    <td class="td-t-nota-r-a">'.$id_atividade.'</td>
-                    <td class="td-t-nota-r-a">'.$CEP_f.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Nome/Empresa </div><div class="td-t-nota-r-a-valor">'.$nome_e.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CNPJ/Empresa </div><div class="td-t-nota-r-a-valor">'.$CNPJ_e.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CEP/Empresa </div><div class="td-t-nota-r-a-valor">'.$CEP_e.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CSP</div><div class="td-t-nota-r-a-valor">'.$CSP.'</div></td>    
                     </tr>
                     <tr>
-                    <td class="td-t-nota-r-a">'.$lote.'</td>
-                    <td class="td-t-nota-r-a">'.$nome_e.'</td>
-                    <td class="td-t-nota-r-a">'.$CSP.'</td>
-                    <td class="td-t-nota-r-a">'.$fone_f.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Nome/Motorista </div><div class="td-t-nota-r-a-valor">'.$nome_motorista.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CPF/Motorista </div><div class="td-t-nota-r-a-valor">'.$CPF_motorista.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Placa/Veiculo </div><div class="td-t-nota-r-a-valor">'.$placa_vei.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Modelo/Veiculo </div><div class="td-t-nota-r-a-valor">'.$modelo_vei.'</div></td>
+                    </tr>
+
+
+cep tel cnpj cod
+
+
+                    <tr>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Eixos </div><div class="td-t-nota-r-a-valor">'.$eixos.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Atividade </div><div class="td-t-nota-r-a-valor">'.$id_atividade.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CEP/fornecedor </div><div class="td-t-nota-r-a-valor">'.$CEP_f.'</div></td>
                     </tr>
                     <tr>
-                    <td class="td-t-nota-r-a">'.$nome_motorista.'</td>
-                    <td class="td-t-nota-r-a">'.$CPF_motorista.'</td>
-                    <td class="td-t-nota-r-a">'.$CFOP.'</td>
-                    <td class="td-t-nota-r-a">'.$CNPJ_f.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Lote </div><div class="td-t-nota-r-a-valor">'.$lote.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CSP </div><div class="td-t-nota-r-a-valor">'.$CSP.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Tel/fornecedor </div><div class="td-t-nota-r-a-valor">'.$fone_f.'</div></td>
                     </tr>
                     <tr>
-                    <td class="td-t-nota-r-a">'.$placa_vei.'</td>
-                    <td class="td-t-nota-r-a">'.$PBT.'</td>
-                    <td class="td-t-nota-r-a">'.$dunf.'</td>
-                    <td class="td-t-nota-r-a">'.$modelo_vei.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Motorista </div><div class="td-t-nota-r-a-valor">'.$nome_motorista.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CPF/motorista </div><div class="td-t-nota-r-a-valor">'.$CPF_motorista.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CFOP </div><div class="td-t-nota-r-a-valor">'.$CFOP.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CNPJ/fornecedor </div><div class="td-t-nota-r-a-valor">'.$CNPJ_f.'</div></td>
                     </tr>
                     <tr>
-                    <td class="td-t-nota-r-a">'.$CEP_e.'</td>
-                    <td class="td-t-nota-r-a">'.$NCM.'</td>
-                    <td class="td-t-nota-r-a">'.$data_emi.'</td>
-                    <td class="td-t-nota-r-a">'.$und.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Placa </div><div class="td-t-nota-r-a-valor">'.$placa_vei.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">PBT </div><div class="td-t-nota-r-a-valor">'.$PBT.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">dunf </div><div class="td-t-nota-r-a-valor">'.$dunf.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">modelo veiculo </div><div class="td-t-nota-r-a-valor">'.$modelo_vei.'</div></td>
                     </tr>
                     <tr>
-                    <td class="td-t-nota-r-a">'.$quant_und.'</td>
-                    <td class="td-t-nota-r-a">'.$quant_prod.'</td>
-                    <td class="td-t-nota-r-a">'.$cod_f.'</td>
-                    <td class="td-t-nota-r-a">'.$valor_und.'</td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">CEP </div><div class="td-t-nota-r-a-valor">'.$CEP_e.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">NCM </div><div class="td-t-nota-r-a-valor">'.$NCM.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Data emitida </div><div class="td-t-nota-r-a-valor">'.$data_emi.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Unidade </div><div class="td-t-nota-r-a-valor">'.$und.'</div></td>
+                    </tr>
+                    <tr>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Qnt. da unidade </div><div class="td-t-nota-r-a-valor">'.$quant_und.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Qnt. do produto </div><div class="td-t-nota-r-a-valor">'.$quant_prod.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Código do fornecedor </div><div class="td-t-nota-r-a-valor">'.$cod_f.'</div></td>
+                    <td class="td-t-nota-r-a"><div class="td-t-nota-r-a-texto">Valor unitário </div><div class="td-t-nota-r-a-valor">'.$valor_und.'</div></td>
                     </tr>
             </table>';
         }else{

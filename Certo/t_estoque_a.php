@@ -73,7 +73,7 @@
     </details>
 
     <div class="caixa-tela-informacao-geral">
-        <form action="t_estoque_a.php" method="POST">
+        <form action="t_estoque_a.php?nome=<?php redirect()?>" method="POST">
             <center>
             <div class="caixa-estoque">
                 <div class="texto-medio-estoque">Digite o nome do produto</div>
@@ -129,47 +129,47 @@
                 echo '
                 <table class="">
                     <tr>
-                        <td class="">Doca:
+                        <td class="texto-medio-estoque">Doca:
                         <input class="" type="number" value="'.$s16.'"></td>
                     </tr>
                     <tr>
-                        <td class="">Nome do produto
+                        <td class="texto-medio-estoque">Nome do produto
                         <input class="" type="text" value="'.$s4.'"></td>
-                        <td class="">Tipo do produto
+                        <td class="texto-medio-estoque">Tipo do produto
                         <input class="" type="text" value="'.$s1.'"></td>
-                        <td class="">Validade
+                        <td class="texto-medio-estoque">Validade
                         <input class="" type="text" value="'.$s2.'"></td>
                     </tr>
                     <tr>
-                        <td class="">Lote
+                        <td class="texto-medio-estoque">Lote
                         <input class="" type="text" value="'.$s3.'"></td>
-                        <td class="">Marca do Produto
+                        <td class="texto-medio-estoque">Marca do Produto
                         <input class="" type="text" value="'.$s5.'"></td>
-                        <td class="">Peso
+                        <td class="texto-medio-estoque">Peso
                         <input class="" type="text" value="'.$s10.'"></td>
                     </tr>
                     <tr>
-                        <td class="">Unidade
+                        <td class="texto-medio-estoque">Unidade
                         <input class="" type="text" value="'.$s6.'" name="qtd"></td>
-                        <td class="">Quantidade
+                        <td class="texto-medio-estoque">Quantidade
                         <input class="" type="text" value="'.$s7.'" name="qtd"></td>
-                        <td class="">R$/unit
+                        <td class="texto-medio-estoque">R$/unit
                         <input class="" type="text" value="'.$s9.'" name="unit"></td>
                     </tr>
                     <tr>
-                        <td class="">R$/Total
+                        <td class="texto-medio-estoque">R$/Total
                         <input class="" type="text" value="'.$s9*$s7.'" name="total"></td>
-                        <td class="">Hangar
+                        <td class="texto-medio-estoque">Hangar
                         <input class="" type="text" value="'.$s11.'" name=""></td>
-                        <td class="">Rua
+                        <td class="texto-medio-estoque">Rua
                         <input class="" type="text" value="'.$s12.'" name=""></td>
                     </tr>
                     <tr>
-                        <td class="">Coluna
+                        <td class="texto-medio-estoque">Coluna
                         <input class="" type="text" value="'.$s13.'" name=""></td>
-                        <td class="">Andar
+                        <td class="texto-medio-estoque">Andar
                         <input class="" type="text" value="'.$s14.'" name=""></td>
-                        <td class="">Apartamento
+                        <td class="texto-medio-estoque">Apartamento
                         <input class="" type="text" value="'.$s15.'" name=""></td>
                     </tr>
                 </table>
