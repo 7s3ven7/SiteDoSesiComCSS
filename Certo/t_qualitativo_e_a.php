@@ -1,9 +1,5 @@
 <?php
 session_start();
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
     $hostname = "127.0.0.1";
     $name = "root";
     $password = "root";
