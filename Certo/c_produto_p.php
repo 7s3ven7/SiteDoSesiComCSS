@@ -1,9 +1,9 @@
 <html>
     <?php
-        $hostname = "127.0.0.1";
-        $name = "root";
-        $password = "root";
-        $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
 
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 

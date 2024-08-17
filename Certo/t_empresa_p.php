@@ -133,10 +133,10 @@
             }   
         if(isset($_POST['cnpj' and 'nome_empresa' and 'nome_gerente' and 'gmail' and 'cep' and 'telefone'])){
             echo 'oi'; 
-            $hostname = "127.0.0.1";
-            $name = "root";
-            $password = "root";
-            $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
 
             $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 

@@ -21,7 +21,7 @@
         ?>
 
 <body>
-<div class='caixa-menu-geral'>
+    <div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -79,52 +79,53 @@
     <div class="caixa-tela-informacao-geral">
         <form method="POST" action="t_produto_p.php?nome=<?php redirect() ?>echo">
             <div class="caixa-principal-fundo-superior-produto">
-            <div class="texto-central-produto">Cadastro produto</div>
-            <table class="caixa-principal-superior-prduto">
-                <tr>
-                    <td class="texto-cinza-produto-principal">Código do fornecedor: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal">Tipo: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td class="texto-cinza-produto-principal">Validade: </td>
-                    <td><input class="botao-produto-principal" type="date" name="'.$v3.'"></td>
-                </tr>
-                <tr>
-                    <td class="texto-cinza-produto-principal">Lote: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal">Nome: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td class="texto-cinza-produto-principal">Marca do produto: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v6.'" placeholder="marca"></td>
-                </tr>
-                <tr>
-                    <td class="texto-cinza-produto-principal">Número do pedido: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal">Unidade: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal">Quantidade de unidade: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v9.'" placeholder="1"></td>
-                </tr>
-                <tr>
-                    <td class="texto-cinza-produto-principal ">Quantidade de produto: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal">Valor da unidade: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td class="texto-cinza-produto-principal ">Peso em kilo grama: </td>
-                    <td><input class="botao-produto-principal" type="text" name="'.$v12.'" placeholder="1"></td>
-                </tr>
-            </table>          
-        <table class="">
-        <input class="botao-enviar2-produto" type="submit">
-        <div class=""></div>
+                <div class="texto-central-produto">Cadastro produto</div>
+                <table class="caixa-principal-superior-prduto">
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Código do fornecedor: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Tipo: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                        <td class="texto-cinza-produto-principal">Validade: </td>
+                        <td><input class="botao-produto-principal" type="date" name="'.$v3.'"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Lote: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v4.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Nome: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v5.'" placeholder="empresa">
+                        </td>
+                        <td class="texto-cinza-produto-principal">Marca do produto: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v6.'" placeholder="marca"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Número do pedido: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v7.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v8.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Quantidade de unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v9.'" placeholder="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal ">Quantidade de produto: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v10.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Valor da unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v11.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal ">Peso em kilo grama: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v12.'" placeholder="1"></td>
+                    </tr>
+                </table>
+                <table class="">
+                    <input class="botao-enviar2-produto" type="submit">
+                    <div class=""></div>
             </div>
         </form>
         <div class="linha-central"></div>
         <?php
-            $hostname = "127.0.0.1";
-            $name = "root";
-            $password = "root";
-            $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
         
             $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
@@ -145,12 +146,13 @@
 function exibir(){
     }
 function salvar(){
+    global $conexao;
         $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_p`,`marca_p`,`id_atividade'./*.esse_aqui_tem_problema.*/'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'./*.esse_aqui_tem_problema.*/'`) 
-        VALUES ("' . $v1 . '","' . $v2 . '","' . $v3 . '","' . $v4 . '","' . $v5 . '","'.$v6.'","' . $v7 . '","' . $v8 . '","' . $v9 . '","' . $v10 . '","' . $v11 . '","'.$v12.'","'.$vtotal.'")';
         $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location: t_produto_p.php");
+    header("Location: t_produto_p.php");';
 }
 
 ?>
+
 </html>

@@ -16,7 +16,6 @@
             }else{
                 echo $nome;
             }
-<<<<<<< HEAD
         }
         function exibir(){
             global $conexao;
@@ -29,7 +28,6 @@
             } else {
                 exit();
             }
-=======
         }?>
     <!DOCTYPE html>
 
@@ -122,7 +120,6 @@
                         header("Location: t_qualitativo_r_a.php");
                         exit();
                     }
->>>>>>> 021e8dfc8eea47b09c1bb052831fc9f44c0a2564
                 echo '
                 <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1-r-a">
@@ -444,9 +441,9 @@
         </form>
         <?php
     $hostname = "127.0.0.1";
-    $name = "root";
-    $password = "root";
-    $DB = "dados";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
 
     $conexao = new mysqli($hostname, $name, $password, $DB);
     
