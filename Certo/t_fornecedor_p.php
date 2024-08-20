@@ -20,111 +20,39 @@
         }
     }
     function exibir(){
-        if(isset($_GET['pagina'])){
-        if($_GET['pagina']<= 0){
-            $pagina = 1;
-            $qnt_alu_pagina = $pagina; 
-        }else{
-            $pagina = $_GET['pagina'];
-            $qnt_alu_pagina = $pagina; 
-        }}else{
-            $pagina = 1;
-            $qnt_alu_pagina = $pagina; 
-        }
-            $paginaMenos = $pagina-1;
-            $paginaMais = $pagina+1;
-            $inicio = $qnt_alu_pagina;
-            $qnt_alu_pagina = 1;
-            $qnt_alu_pagina *= 15;
-            $inicio -= 1;
-            $inicio *= 15;
-            if($inicio < 0 ){
-                $inicio *= -1;
-            }
-            global $conexao;
-            global $nome;
-            if(isset($_GET['turma'])){
-            $turma = $_GET['turma'];
-            $turma_global = $turma;
-            $sql = 'SELECT * FROM `usuario` WHERE `cod_grupo` = "'.$turma.'" LIMIT '.$inicio.',15;';
-            $resultado = $conexao->query($sql);
-            if(mysqli_num_rows($resultado) > 0){
-                echo '
-                <div class="texto-medio-turma">Modificação dos Alunos</div>
-                <div class="caixa-direita-turma-dentro">
-                <table class="tabela-turma">
-                <tr>
-                    <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Nome</div></td>
-                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Senha</div></td>
-                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Conta</div></td>
-                    <td class="linha-topo-modificacao-top"><div class="text-topo-turma-modificacao">Turma</div></td>
-                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">ID</div></td>
-                    <td class="linha-topo-modificacao-mini-top"><div class="text-topo-turma-modificacao">Excluir</div></td>
-                </tr>';
-
-                if($qnt_alu_pagina > 0){
-                    $id2 = 'id';
-                    $aluno2 = 'aluno';
-                    $senha2 = 'senha';
-                    $tipo_conta2 = 'tipo_conta';
-                    $turma2 = 'turma';
-                while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
-                    $id = $row[0];
-                    $aluno = $row[1];
-                    $senha = $row[2];
-                    $tipo_conta = $row[4];
-                    $turma = $row[5];
-                    $qnt_alu_pagina -= 1;
-                    echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
-                    if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
-                    echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
-                        }else{
-                            echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="password" name="'.$senha2.'" value="'.$senha.'"></td>';
-                        }    
-                        echo'<td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma"type="text" name="'.$tipo_conta2.'" value="'.$tipo_conta.'"></td>
-                        <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$turma2.'" value="'.$turma.'"></td>
-                        <td class="linha-topo-modificacao-mini"><input disabled class="botao-modificar-turma" type="number" name="'.$id2.'" value="'.$id.'"></td>
-                        <td class="linha-ex-select-num"><button type="submit" onclick="exclusao(this.value);" class="botao-exclusao-turma"" value="'.$id.'"></td>
-                    </tr>';
-                    $id2 .= 'p';
-                    $aluno2 .= 'p';
-                    $senha2 .= 'p';
-                    $tipo_conta2 .= 'p';
-                    $turma2 .= 'p';
-                    if($qnt_alu_pagina == 0){
-                        $qnt_alu_pagina = -1;
-                    }
-                }
-                echo '</table>
-                <table class="caixa-config-turma-aluno">
-                <tr>
-                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMenos.'&turma='.$turma_global.'">
-                <td><input class="passar-pagina" type="submit" value="<"></td>
-                </form>';
-                echo '<td><input class="salvar-alteracao" type="submit" value="Salvar alterações"></td>';
-                if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
-                    echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=n_mostra">
-                    <td><input class="salvar-alteracao" type="submit" value="Esconde a senha"></td>
-                    </form>';
-                }else{
-                    echo '<form method="POST" action="t_turma.php?nome=';redirect();echo '&pagina='.$pagina.'&turma='.$turma_global.'';enviar();echo'&senha_v=mostra">
-                    <td><input class="salvar-alteracao" type="submit" value="Mostra a senha"></td>
-                    </form>';
-                   }
-                echo'
-                <form method="POST" action="t_turma.php?nome=';redirect();echo'&pagina='.$paginaMais.'&turma='.$turma_global.'&verificacao=v">
-                <td><input class="passar-pagina" type="submit" value=">" name="pagina+"></td>
-                </form>
-                </tr>
-                </table>';}
-            }else{
-                   inicio();
-                falso();
-            }}else{
-                inicio();
-                falso();
-            }
-            }
+        global $conexao;
+        $nome_atividade = $_GET['nome_atividade'];
+        $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
+        $resultado = $conexao->query($sql);
+        $row = mysqli_fetch_array($resultado);
+        $cnpj_f = $row['0'];
+        $atividade = $row['1'];
+        $nome_f = $row['2'];
+        $fone_f = $row['3'];
+        $gmail_f = $row['4'];
+        $cep_f = $row['5'];
+        echo '<table class="tabela-fornecedor-usado">
+            <thead>
+            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
+            </thead>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito">'.$nome_f.'</div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito">'.$cnpj_f.'</div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito">'.$cep_f.'</div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito">'.$gmail_f.'</div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$fone_f.'</div></div></td>
+            </tr>        
+        </table>';
+    }
+         
     function cadastrar(){
         global $conexao;
         $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
@@ -141,7 +69,6 @@
             $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ("'.$cnpj_f.'","'.$id_atividade.'","'.$nome_f.'","'.$telefone_f.'","'.$gmail_f.'","'.$cep_f.'");';
             $resultado = $conexao->query($sql);
         }
-
     }
     $hostname = "127.0.0.1";
     $name = "u935055604_wesley";
@@ -155,9 +82,7 @@
             if(isset($_POST['cnpj_fornecedor']) and isset($_POST['nome_fornecedor']) and isset($_POST['gmail_fornecedor']) and  isset($_POST['cep_fornecedro']) and  isset($_POST['telefone_fornecedor']) and isset($_GET['nome_atividade'])){
             cadastrar();
             }
-        
-            
-                            }?>
+    }?>
 
 <body>
     <div class='caixa-menu-geral'>
@@ -220,15 +145,15 @@
             <div class="texto-grande-turma">Crie seu Fornecedor</div>
             <div class="caixa-esquerda-turma-dentro">
                 <form method="POST" action='t_fornecedor_p.php?nome=<?php redirect()?>'>
-                    <div class="texto-cinza-turma">CNPJ:</div>
-                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cnpj_fornecedor">
                     <div class="texto-cinza-turma">Fornecedor: </div>
                     <input class="botao-turma-input" type="text" placeholder="nome" name="nome_fornecedor">
+                    <div class="texto-cinza-turma">CNPJ:</div>
+                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cnpj_fornecedor">
+                    <div class="texto-cinza-turma">CEP: </div>
+                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cep_fornecedro">
                     <div class="texto-cinza-turma">Gmail:</div>
                     <input class="botao-turma-input" type="text" placeholder="fornecedor@gmail.com"
                         name="gmail_fornecedor">
-                    <div class="texto-cinza-turma">CEP: </div>
-                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cep_fornecedro">
                     <div class="texto-cinza-turma">Telefone:</div>
                     <input class="botao-turma-input" type="text" placeholder="(00) 00000-0000"
                         name="telefone_fornecedor">
@@ -238,7 +163,8 @@
             </div>
         </div>
         <div class="caixa-direita-turma">
-            <?php exibir(); ?>
+            <?php
+            exibir(); ?>
         </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>

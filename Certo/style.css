@@ -622,7 +622,34 @@ summary {
     padding:0.25vh;
     margin-top:0.25vh;
 }
-
+.tabela-fornecedor-usado{
+    width:30vw;
+    height:50vh;
+    right:7.5vw;
+    position: absolute;
+    border:2px solid black;
+    top:15vh;
+}
+.td-fornecedor-usado-left{
+    width:100%;
+    height:16.666666666%;
+    border:0.01em solid black;
+    text-align: left;
+    padding:1vh;
+    padding-left:2.5vh;
+    background-color: white;
+    text-align:center;
+}
+.td-fornecedor-usado-topo{
+    width:100%;
+    height:16.666666666%;
+    border:0.01em solid black;
+    text-align: left;
+    padding:1vh;
+    padding-left:2.5vh;
+    background-color: white;
+    text-align: center;
+}
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -997,6 +1024,21 @@ summary {
     align-items: center;
     padding: 0.75vh;
     border-radius:30px;
+}
+.texto-fornecedor-usado{
+    font-size:xx-large;
+    font-weight: bold;
+}
+.fornecedor-negrito{
+    font-weight: normal;
+    font-size:xx-large;
+    background-color: white;
+    border:0.01em solid black;
+    border-radius:10px;
+    padding-bottom:1vh;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/

@@ -113,7 +113,11 @@
                         if($resultado_1->num_rows != 0){
                             echo '<div class="texto-aviso-turma">O nome '.$nome_atividade.' já esta em uso, tente outro</div>';
                         }else{
-                            $sql = 'INSERT INTO `atividade` (`id_atividade`,`id_usuario`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $nome . '","' . $data. '","' . $turma_destinada . '");';
+                            $sql = 'SELECT `id_usuario` FROM `usuario` WHERE `nome_u` = "'.$nome.'"';
+                            $resultado = $conexao->query($sql);
+                            $row = mysqli_fetch_array($resultado);
+                            $id = $row['0'];
+                            $sql = 'INSERT INTO `atividade` (`id_atividade`,`id_usuario`,`data_atividade`,`turma`) VALUES ("' . $nome_atividade . '","' . $id . '","' . $data. '","' . $turma_destinada . '");';
                             $resultado = $conexao->query($sql); 
                             }}}?>
             </div>
@@ -151,11 +155,15 @@
                         $id_usuario = $row['1'];
                         $data_atividade = $row['2'];
                         $turma = $row['3'];
+                        $sql = 'SELECT `nome_u` FROM `usuario` WHERE `id_usuario` = "'.$id_usuario.'"';
+                        $resultado = $conexao->query($sql);
+                        $row = mysqli_fetch_array($resultado);
+                        $id = $row['0'];
                         if(isset($_GET['turma'])){
                             echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&turma='.$_GET['turma'].'">
                             <tr>
                                 <td class="linha-topo">'.$id_atividade.'</td>
-                                <td class="linha-topo">'.$id_usuario.'</td>
+                                <td class="linha-topo">'.$id.'</td>
                                 <td class="linha-topo">'.$turma.'</td>
                                 <td class="linha-topo">'.$data_atividade.'</td>
                                 <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
@@ -168,7 +176,7 @@
                                 echo  '<form method="POST" action="t_atividade.php?nome='.$nome.'">
                                 <tr>
                                     <td class="linha-topo">'.$id_atividade.'</td>
-                                    <td class="linha-topo">'.$id_usuario.'</td>
+                                    <td class="linha-topo">'.$id.'</td>
                                     <td class="linha-topo">'.$turma.'</td>
                                     <td class="linha-topo">'.$data_atividade.'</td>
                                     <td class="linha-topo"><input id="botao-select-turma" type="submit"></td>
@@ -229,10 +237,15 @@
                                     $id_usuario = $row['1'];
                                     $data_atividade = $row['2'];
                                     $turma = $row['3'];
+                                    $sql_2 = 'SELECT `nome_u` FROM `usuario` WHERE `id_usuario` = "'.$id_usuario.'"';
+                                    $resultado_2
+                                     = $conexao->query($sql_2);
+                                    $row = mysqli_fetch_array($resultado_2);
+                                    $id = $row['0'];
                                 echo '<form method="POST" action="t_atividade.php?nome='.$nome.'&nome_atividade='.$id_atividade.'">
                                 <tr>
                                     <td class="linha-topo">'.$id_atividade.'</td>
-                                    <td class="linha-topo">'.$id_usuario.'</td>
+                                    <td class="linha-topo">'.$id.'</td>
                                     <td class="linha-topo">'.$turma.'</td>
                                     <td class="linha-topo">'.$data_atividade.'</td>
                                     <td class="linha-topo"><input class="botao-select-turma" type="submit"></td>
