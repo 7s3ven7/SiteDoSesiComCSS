@@ -448,17 +448,38 @@ summary {
     padding-right: 50%;
 }
 
+.caixa-qualitat-r-a {
+    left: .9%;
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.7vh solid gray;
+    border-top: 0;
+    position: relative;
+    margin-bottom: 11.3vh;
+}
+
+.caixa-qualitat-e-a {
+    left: .9%;
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.7vh solid gray;
+    border-top: 0;
+    position: relative;
+    margin-bottom: 11.3vh;
+}
+
 .caixa-qualitat-1-e-a {
+    top: 11.6vh;
     width: 49%;
     height: 72vh;
     background-color: rgb(250, 250, 250);
     border: 1vh solid gray;
     border-left: 0;
     border-right: 0.5vh solid gray;
-    position: relative;
-    top: 6vh;
+    position: absolute;
     padding: 2.5vh;
-    margin-bottom: 11.3vh;
 }
 
 .caixa-qualitat-2-e-a {
@@ -520,8 +541,41 @@ summary {
     text-align: center;
 }
 
-.scrollbar-quant {
-    overflow-y: scroll;
+.caixa-quant-1-e-a {
+    width: 19vw;
+    height: 8.7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 38.7%;
+    text-align: center;
+}
+
+.caixa-quant-2-e-a {
+    width: 15vw;
+    height: 13vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-3-e-a {
+    width: 15vw;
+    height: 13.2vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-4-e-a {
+    width: 15vw;
+    height: 7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
 }
 
 .caixa-principal-quantitativo-r-p {
@@ -650,6 +704,73 @@ summary {
     background-color: white;
     text-align: center;
 }
+
+.tabela-turma {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-empresa {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-r-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-r-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-r-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-r-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-e-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-e-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-e-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-e-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -722,13 +843,6 @@ summary {
     padding: 0.75vh;
     font-size: 1.5em;
     top: 30vh;
-}
-
-.tabela-turma {
-    width: 100%;
-    max-width: 35vw;
-    border: 0.01em solid black;
-    text-align: center;
 }
 
 .linha-topo {
@@ -824,13 +938,6 @@ summary {
     color: darkgreen;
 }
 
-.tabela-empresa {
-    width: 100%;
-    max-width: 35vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
 .texto-pequeno-forne {
     font-size: 1.8em;
     color: rgb(0, 0, 0);
@@ -869,32 +976,6 @@ summary {
     color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat-r-a {
-    width: 39vw;
-    height: 65.5vh;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.tabela-qualitat-2-r-a {
-    width: 40vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.td-qualitat-r-a {
-    width: 25vw;
-    border: 0.01em solid black;
-    text-align: center;
-    font-size: 28.6px;
-}
-
-.td-qualitat-2-r-a {
-    width: 10vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
 .texto-grande-qualitat-e-a {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
@@ -903,32 +984,6 @@ summary {
 .texto-pequeno-qualitat-e-a {
     font-size: 1.2vw;
     color: rgb(0, 0, 0);
-}
-
-.tabela-qualitat-e-a {
-    width: 39vw;
-    height: 65.5vh;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.tabela-qualitat-2-e-a {
-    width: 40vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.td-qualitat-e-a {
-    width: 25vw;
-    border: 0.01em solid black;
-    text-align: center;
-    font-size: 28.6px;
-}
-
-.td-qualitat-2-e-a {
-    width: 10vw;
-    border: 0.01em solid black;
-    text-align: center;
 }
 
 .texto-central-produto {
@@ -956,6 +1011,11 @@ summary {
 }
 
 .texto-medio-quant-r-a {
+    font-size: 1.25vw;
+    color: black;
+}
+
+.texto-medio-quant-e-a {
     font-size: 1.25vw;
     color: black;
 }
@@ -1230,9 +1290,18 @@ summary {
     font-size: 15px;
 }
 
+.botao-input-qualitat-e-a{
+    width: 10vw;
+    height: 1.5vw;
+    border-radius: 10px;
+    border-right: black solid 0.01em;
+    margin-right: 1.5vw;
+    font-size: 15px;
+}
+
 .botao-submit-qualitat-r-a {
-    right: 45.2%;
-    top: 5%;
+    margin-top: 1%;
+    right: 40%;
     position: absolute;
     width: 10vw;
     height: 5vh;
@@ -1258,24 +1327,15 @@ summary {
 
 .botao-qualitat-submit-e-a {
     margin-top: 1%;
-    right: 46%;
+    right: 40%;
     position: absolute;
-    width: 10%;
+    width: 10vw;
     height: 5vh;
     font-size: 1em;
     color: white;
     background-color: green;
     border: 0.01em solid black;
     border-radius: 20px;
-}
-
-.botao-input-qualitat-r-a{
-    width: 10vw;
-    height: 1.5vw;
-    border-radius: 10px;
-    border-right: black solid 0.01em;
-    margin-right: 1.5vw;
-    font-size: 15px;
 }
 
 .botao-qualitat-submit-2-e-a {
@@ -1310,7 +1370,38 @@ summary {
     background-color: #eee;
 }
 
+.check-quant-e-a {
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vh;
+    background-color: #eee;
+}
 
+.botao-input-quant-e-a {
+    width: 11.5vw;
+    height: 1.8vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    top: 3%;
+}
+
+.botao-input-quant-2-e-a {
+    width: 13vw;
+    height: 3vh;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+}
+
+.botao-input-quant-3-e-a {
+    width: 10vw;
+    height: 2.6vh;
+    border-radius: 5px;
+    font-size: 2vh;
+    position: relative;
+    padding: 2%;
+}
 
 .botao-input-quant-r-a {
     width: 11.5vw;
@@ -1348,7 +1439,26 @@ summary {
     position: relative;
 }
 
-.botao-submit-2-quant-r-a{
+.botao-submit-2-quant-r-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: relative;
+}
+
+.botao-submit-quant-e-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+}
+
+.botao-submit-2-quant-e-a {
     width: 6.3vw;
     height: 2vw;
     font: 1em;
