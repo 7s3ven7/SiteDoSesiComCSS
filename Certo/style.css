@@ -448,17 +448,26 @@ summary {
     padding-right: 50%;
 }
 
+.caixa-qualitat-e-a {
+    width: 49%;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.7vh solid gray;
+    border-top: 0;
+    position: relative;
+    margin-bottom: 11.3vh;
+}
+
 .caixa-qualitat-1-e-a {
+    top: 11.6vh;
     width: 49%;
     height: 72vh;
     background-color: rgb(250, 250, 250);
     border: 1vh solid gray;
     border-left: 0;
     border-right: 0.5vh solid gray;
-    position: relative;
-    top: 6vh;
+    position: absolute;
     padding: 2.5vh;
-    margin-bottom: 11.3vh;
 }
 
 .caixa-qualitat-2-e-a {
@@ -520,8 +529,41 @@ summary {
     text-align: center;
 }
 
-.scrollbar-quant {
-    overflow-y: scroll;
+.caixa-quant-1-e-a {
+    width: 19vw;
+    height: 8.7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 35%;
+    text-align: center;
+}
+
+.caixa-quant-2-e-a {
+    width: 15vw;
+    height: 13vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-3-e-a {
+    width: 15vw;
+    height: 13.2vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-4-e-a {
+    width: 15vw;
+    height: 7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
 }
 
 .caixa-principal-quantitativo-r-p {
@@ -933,6 +975,11 @@ summary {
     color: black;
 }
 
+.texto-medio-quant-e-a {
+    font-size: 1.25vw;
+    color: black;
+}
+
 .texto-medio-estoque {
     font-size: 1.5vw;
     color: black;
@@ -1216,9 +1263,9 @@ summary {
 
 .botao-qualitat-submit-e-a {
     margin-top: 1%;
-    right: 46%;
+    right: 40%;
     position: absolute;
-    width: 10%;
+    width: 10vw;
     height: 5vh;
     font-size: 1em;
     color: white;
@@ -1268,7 +1315,31 @@ summary {
     background-color: #eee;
 }
 
+.botao-input-quant-e-a {
+    width: 11.5vw;
+    height: 1.8vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    top: 3%;
+}
 
+.botao-input-quant-2-e-a {
+    width: 13vw;
+    height: 3vh;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+}
+
+.botao-input-quant-3-e-a {
+    width: 10vw;
+    height: 2.6vh;
+    border-radius: 5px;
+    font-size: 2vh;
+    position: relative;
+    padding: 2%;
+}
 
 .botao-input-quant-r-a {
     width: 11.5vw;

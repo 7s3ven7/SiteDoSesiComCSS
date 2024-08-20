@@ -10,7 +10,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
         echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
         exit();
     } else{
-        $nome = $_GET['nome'];
+/*        $nome = $_GET['nome'];
         function redirect(){
             global $nome;
             if(isset($_GET['nome_atividade'])){
@@ -19,7 +19,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
             }else{
                 echo $nome;
             }
-        }?>
+        }*/?>
     <!DOCTYPE html>
 
 <head>
@@ -31,53 +31,53 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class="conta-geral">Aluno - <?php //echo $nome;?></div>
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_nota_r_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_qualitativo_r_a.php">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form method="POST" action="t_quantitativo_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_quantitativo_a.php">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_docas_r_a.php">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form method="POST" action="t_estoque_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_estoque_a.php">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_picking_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form method="POST" action="t_nota_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_nota_e_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_qualitativo_e_a.php">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_quantitativo_e_a.php">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_relatorios_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
@@ -85,12 +85,12 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     <div class="caixa-tela-informacao-geral">
                 <form action="t_qualitativo_e_a.php" method="POST">
                     <center>
-                        <div class="dist-qualitat-r-a">
-                            <div class="texto-grande-qualitat-r-a">
+                        <div class="caixa-qualitat-e-a">
+                            <div class="texto-grande-qualitat-e-a">
                                 Digite o Código do fornecedor
-                                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
+                                <input class="botao-input-qualitat-e-a" type="number" name="cod_forne">
                                 <br>
-                                <input class="botao-qualitat-submit-r-a" type="submit">
+                                <input class="botao-qualitat-submit-e-a" type="submit">
                                 <br>
                             </div>
                         </div>
@@ -112,246 +112,245 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                         exit();
                     }
                 echo '
-                <div class="caixa-qualitat-1-r-a">
-                    <table class="tabela-qualitat-r-a">
+                <div class="caixa-qualitat-1-e-a">
+                    <table class="tabela-qualitat-e-a">
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Código do fornecedor:</td>
-                            <td class="td-qualitat-r-a">'.$row['cod_forne'].'</div></td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Código do fornecedor:</td>
+                            <td class="td-qualitat-e-a">'.$row['cod_forne'].'</div></td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Lotes: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['lote'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Lotes: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['lote'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Nome da empresa: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['nome_e'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Nome da empresa: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['nome_e'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">CNPJ da empresa: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['CNPJ_f'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">CNPJ da empresa: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['CNPJ_f'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Modelo do container: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['modelo_contai'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Modelo do container: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['modelo_contai'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Navio: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['navio'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Navio: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['navio'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Destinatário: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['CNPJ_f'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Destinatário: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['CNPJ_f'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Tipo do container: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['tipo_contai'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Tipo do container: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['tipo_contai'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Lacre: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['lacre'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Lacre: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['lacre'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Lacre SIF: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['lacre_SIF'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Lacre SIF: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['lacre_SIF'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Temperatura: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['temperatura'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Temperatura: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['temperatura'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">IMO: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['IMO'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">IMO: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['IMO'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Número ONU: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['n_ONU'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Número ONU: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['n_ONU'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Nome do produto: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['nome_p'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Nome do produto: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['nome_p'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Unidades: </td>
-                            <td class="td-qualitat-r-a">'.$row['und'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Unidades: </td>
+                            <td class="td-qualitat-e-a">'.$row['und'].'</td>
                             </tr>
                             <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Quantidade de produto: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['quant_prod'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Quantidade de produto: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['quant_prod'].'</td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Quantidade de unidade: </div></td>
-                            <td class="td-qualitat-r-a">'.$row['quant_und'].'</td>
+                            <td class="td-qualitat-e-a"><div class="texto-pequeno-qualitat-e-a">Quantidade de unidade: </div></td>
+                            <td class="td-qualitat-e-a">'.$row['quant_und'].'</td>
                         </tr>     
-                    </table> ';
-                    }}?>
-                    <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
+                    </table> 
+                    <form method="POST" action="t_qualitativo_e_a.php">
                     </div>
-                    <div class="caixa-qualitat-2-r-a">
-                    <table class="tabela-qualitat-2-r-a">
+                    <div class="caixa-qualitat-2-e-a">
+                    <table class="tabela-qualitat-2-e-a">
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Container Bem Desgastado: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="1">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Container Bem Desgastado: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="1">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Lateral Direita: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="2">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Avaria na Lateral Direita: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="2">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Lateral Esquerda: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="3">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Avaria na Lateral Esquerda: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="3">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria no Teto: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="4">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Avaria no Teto: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="4">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Avaria na Frente: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="5">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Avaria na Frente: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="5">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lacre </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="6">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Sem Lacre </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="6">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Adesivos Avariados: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="7">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Adesivos Avariados: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="7">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso de Altura: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="8">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Excesso de Altura: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="8">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso na Direita: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="9">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Excesso na Direita: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="9">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso na Esquerda: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="10">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Excesso na Esquerda: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="10">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Excesso Frontal: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="11">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Excesso Frontal: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="11">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Painel Avariado: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="12">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Painel Avariado: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="12">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Cabo de Energia: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="13">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Sem Cabo de Energia: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="13">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Sem Lona: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="14">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Sem Lona: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="14">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Canhoto Assinado: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="15">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Canhoto Assinado: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="15">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Volume Correto: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="16">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Volume Correto: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="16">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Atraso: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="17">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Atraso: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="17">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Código Avariado: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="18">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Código Avariado: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="18">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Item Lacrado: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="19">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Item Lacrado: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="19">
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-qualitat-2-r-a"><div class="texto-pequeno-qualitat-r-a">Doca 1: </div></td>
-                            <td class="td-qualitat-2-r-a">
-                                <label class="caixa-qualitat-3-r-a">
-                                    <input class="check-qualitat-r-a" type="checkbox" name="20">
+                            <td class="td-qualitat-2-e-a"><div class="texto-pequeno-qualitat-e-a">Doca 1: </div></td>
+                            <td class="td-qualitat-2-e-a">
+                                <label class="caixa-qualitat-3-e-a">
+                                    <input class="check-qualitat-e-a" type="checkbox" name="20">
                                 </label>
                             </td>
                         </tr>
                     </table>
                     </div>
-                    <div class="texto-grande-qualitat-r-a">
-                    <input class="botao-qualitat-submit-2-r-a" type="submit" value="Enviar" left=5px name="21">
+                    <div class="texto-grande-qualitat-e-a">
+                    <input class="botao-qualitat-submit-2-e-a" type="submit" value="Enviar" left=5px name="21">
                     </div>
                 </form>
                 </center>
@@ -360,8 +359,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 </form>
 </body>
 
-</html>
-<?php
+</html>';}}
 
 if(isset($_POST['21'])){
 

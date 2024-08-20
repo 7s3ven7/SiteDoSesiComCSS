@@ -9,62 +9,62 @@
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
+    <div class="conta-geral">Aluno - <?php //echo $nome;?></div>
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_nota_r_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_qualitativo_r_a.php">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form method="POST" action="t_quantitativo_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_quantitativo_a.php">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_docas_r_a.php">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form method="POST" action="t_estoque_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_estoque_a.php">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_picking_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form method="POST" action="t_nota_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_nota_e_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_qualitativo_e_a.php">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_quantitativo_e_a.php">
             <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_relatorios_a.php">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
 
     <div class="caixa-tela-informacao-geral">
         <form action="t_quantitativo_e_a.php" method="POST">
-            <div class="caixa-quant-1-r-a">
-                <div class="texto-medio-quant-r-a">Digite o Código do fornecedor</div>
-                <input class="botao-input-quant-r-a" type="number" name="cod_forne">
+            <div class="caixa-quant-1-e-a">
+                <div class="texto-medio-quant-e-a">Digite o Código do fornecedor</div>
+                <input class="botao-input-quant-e-a" type="number" name="cod_forne">
                 <input class="botao-submit-quant-r-a" type="submit">
             </div>
         </form>
@@ -75,9 +75,9 @@
             
     if(isset($_POST['cod_forne'])){
     $hostname = "127.0.0.1";
-    $name = "u935055604_wesley";
-    $password = "XwZX1383";
-    $DB = "u935055604_dados";
+    $name = "root";
+    $password = "root";
+    $DB = "dados";
 
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
@@ -105,7 +105,7 @@
                 $s6 = $s5*$s4;
                 echo '
                 <td>
-                <div class="caixa-quant-2">
+                <div class="caixa-quant-2-e-a">
                     <div class="texto-medio-quant">Número da Nota Fiscal</div>
                     <input class="botao-input-quant-2" type="text" value="'.$s1.'" disabled>
                     <div class="texto-medio-quant">Nome do produto</div>
