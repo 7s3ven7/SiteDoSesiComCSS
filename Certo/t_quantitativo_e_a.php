@@ -65,19 +65,19 @@
             <div class="caixa-quant-1-e-a">
                 <div class="texto-medio-quant-e-a">Digite o Código do fornecedor</div>
                 <input class="botao-input-quant-e-a" type="number" name="cod_forne">
-                <input class="botao-submit-quant-r-a" type="submit">
+                <input class="botao-submit-quant-e-a" type="submit">
             </div>
         </form>
-        <div class="caixa-quant-r-a">
+        <center>
         <table>
+        <form action="t_quantitativo_a.php" method="POST">
         <?php
-    session_start();
-            
+        session_start();
     if(isset($_POST['cod_forne'])){
-    $hostname = "127.0.0.1";
-    $name = "root";
-    $password = "root";
-    $DB = "dados";
+        $hostname = "127.0.0.1";
+        $name = "root";
+        $password = "root";
+        $DB = "dados";
 
         $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
@@ -92,8 +92,8 @@
         if(isset($_POST['cod_forne'])){
         if(mysqli_num_rows($resultado) > 0){
             while($row = mysqli_fetch_array($resultado)){
-                $rep = $rep + 1;
-                if ($rep / 4 == 1){
+                $rep += 1;
+                if ($rep / 5 == 1){
                 $rep=0;
                 echo '<tr>';
                 }
@@ -106,50 +106,57 @@
                 echo '
                 <td>
                 <div class="caixa-quant-2-e-a">
-                    <div class="texto-medio-quant">Número da Nota Fiscal</div>
-                    <input class="botao-input-quant-2" type="text" value="'.$s1.'" disabled>
-                    <div class="texto-medio-quant">Nome do produto</div>
-                    <input class="botao-input-quant-2" type="text" value="'.$s2.'" disabled>
+                    <div class="texto-medio-quant-e-a">Número da Nota Fiscal</div>
+                    <input class="botao-input-quant-2-e-a" type="text" value="'.$s1.'" disabled>
+                    <div class="texto-medio-quant-e-a">Nome do produto</div>
+                    <input class="botao-input-quant-2-e-a" type="text" value="'.$s2.'" disabled>
                 </div>
-                <div class="caixa-quant-3">
+                <div class="caixa-quant-3-e-a">
                     <table>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">UN</div>
+                                <div class="texto-medio-quant-e-a">UN</div>
                             </td>
                             <td>
-                                <input class="botao-input-quant-3" type="text" value="'.$s3.'" name="un">
+                                <input class="botao-input-quant-3-e-a" type="text" value="'.$s3.'" name="un">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">QTD</div>
+                                <div class="texto-medio-quant-e-a">QTD</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s4.'" name="qtd"></td>
+                            <td><input class="botao-input-quant-3-e-a" type="text" value="'.$s4.'" name="qtd"></td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">R$/unit</div>
+                                <div class="texto-medio-quant-e-a">R$/unit</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s5.'" name="unit"></td>
+                            <td><input class="botao-input-quant-3-e-a" type="text" value="'.$s5.'" name="unit"></td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="texto-medio-quant">R$Total</div>
+                                <div class="texto-medio-quant-e-a">R$Total</div>
                             </td>
-                            <td><input class="botao-input-quant-3" type="text" value="'.$s6.'" name="total"></td>
+                            <td><input class="botao-input-quant-3-e-a" type="text" value="'.$s6.'" name="total"></td>
                         </tr>
                     </table>
                 </div>
-                    <table class="caixa-quant-4">
+                    <table class="caixa-quant-4-e-a">
                         <tr>
                             <td>
-                            <div class="texto-medio-quant">Faltando</div>
-                            <input class="check-quant" type="checkbox" name="falta">
+                            <div class="texto-medio-quant-e-a">Faltando</div>
+                            <input class="check-quant-e-a" type="checkbox" name="falta">
                             </td>
                             <td>
-                                <div class="texto-medio-quant">Avariado</div>
-                                <input class="check-quant" type="checkbox" name="avariado">
+                                <div class="texto-medio-quant-e-a">Avariado</div>
+                                <input class="check-quant-e-a" type="checkbox" name="avariado">
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="caixa-quant-4-e-a">
+                        <tr>
+                            <td>
+                                <input class="botao-submit-2-quant-e-a" type="submit">
                             </td>
                         </tr>
                     </table>

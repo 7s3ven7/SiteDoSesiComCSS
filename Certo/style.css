@@ -665,6 +665,72 @@ summary {
     margin-top:0.25vh;
 }
 
+.tabela-turma {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-empresa {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-r-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-r-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-r-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-r-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-e-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-e-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-e-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-e-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -737,13 +803,6 @@ summary {
     padding: 0.75vh;
     font-size: 1.5em;
     top: 30vh;
-}
-
-.tabela-turma {
-    width: 100%;
-    max-width: 35vw;
-    border: 0.01em solid black;
-    text-align: center;
 }
 
 .linha-topo {
@@ -839,13 +898,6 @@ summary {
     color: darkgreen;
 }
 
-.tabela-empresa {
-    width: 100%;
-    max-width: 35vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
 .texto-pequeno-forne {
     font-size: 1.8em;
     color: rgb(0, 0, 0);
@@ -884,32 +936,6 @@ summary {
     color: rgb(0, 0, 0);
 }
 
-.tabela-qualitat-r-a {
-    width: 39vw;
-    height: 65.5vh;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.tabela-qualitat-2-r-a {
-    width: 40vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.td-qualitat-r-a {
-    width: 25vw;
-    border: 0.01em solid black;
-    text-align: center;
-    font-size: 28.6px;
-}
-
-.td-qualitat-2-r-a {
-    width: 10vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
 .texto-grande-qualitat-e-a {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
@@ -918,32 +944,6 @@ summary {
 .texto-pequeno-qualitat-e-a {
     font-size: 1.2vw;
     color: rgb(0, 0, 0);
-}
-
-.tabela-qualitat-e-a {
-    width: 39vw;
-    height: 65.5vh;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.tabela-qualitat-2-e-a {
-    width: 40vw;
-    border: 0.01em solid black;
-    text-align: center;
-}
-
-.td-qualitat-e-a {
-    width: 25vw;
-    border: 0.01em solid black;
-    text-align: center;
-    font-size: 28.6px;
-}
-
-.td-qualitat-2-e-a {
-    width: 10vw;
-    border: 0.01em solid black;
-    text-align: center;
 }
 
 .texto-central-produto {
@@ -1315,6 +1315,13 @@ summary {
     background-color: #eee;
 }
 
+.check-quant-e-a {
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vh;
+    background-color: #eee;
+}
+
 .botao-input-quant-e-a {
     width: 11.5vw;
     height: 1.8vw;
@@ -1377,7 +1384,26 @@ summary {
     position: relative;
 }
 
-.botao-submit-2-quant-r-a{
+.botao-submit-2-quant-r-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: relative;
+}
+
+.botao-submit-quant-e-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+}
+
+.botao-submit-2-quant-e-a {
     width: 6.3vw;
     height: 2vw;
     font: 1em;
