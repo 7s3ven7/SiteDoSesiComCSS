@@ -94,7 +94,7 @@
     <div class="caixa-tela-informacao-geral">
                 <form action="t_qualitativo_r_a.php" method="POST">
                     <center>
-                        <div class="dist-qualitat-r-a">
+                        <div class="caixa-qualitat-r-a">
                             <div class="texto-grande-qualitat-r-a">
                                 Digite o Código do fornecedor
                                 <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">

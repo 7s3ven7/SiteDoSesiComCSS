@@ -1247,9 +1247,18 @@ summary {
     font-size: 15px;
 }
 
+.botao-input-qualitat-e-a{
+    width: 10vw;
+    height: 1.5vw;
+    border-radius: 10px;
+    border-right: black solid 0.01em;
+    margin-right: 1.5vw;
+    font-size: 15px;
+}
+
 .botao-submit-qualitat-r-a {
-    right: 45.2%;
-    top: 5%;
+    margin-top: 1%;
+    right: 40%;
     position: absolute;
     width: 10vw;
     height: 5vh;
@@ -1284,15 +1293,6 @@ summary {
     background-color: green;
     border: 0.01em solid black;
     border-radius: 20px;
-}
-
-.botao-input-qualitat-r-a{
-    width: 10vw;
-    height: 1.5vw;
-    border-radius: 10px;
-    border-right: black solid 0.01em;
-    margin-right: 1.5vw;
-    font-size: 15px;
 }
 
 .botao-qualitat-submit-2-e-a {
