@@ -448,8 +448,20 @@ summary {
     padding-right: 50%;
 }
 
+.caixa-qualitat-r-a {
+    left: .9%;
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.7vh solid gray;
+    border-top: 0;
+    position: relative;
+    margin-bottom: 11.3vh;
+}
+
 .caixa-qualitat-e-a {
-    width: 49%;
+    left: .9%;
+    width: 40%;
     height: 10vh;
     background-color: rgb(250, 250, 250);
     border: 0.7vh solid gray;
@@ -535,7 +547,7 @@ summary {
     background-color: rgb(250, 250, 250);
     border: 0.5vh solid grey;
     position: relative;
-    left: 35%;
+    left: 38.7%;
     text-align: center;
 }
 
