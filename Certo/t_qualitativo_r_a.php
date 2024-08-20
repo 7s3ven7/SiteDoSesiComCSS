@@ -1,16 +1,13 @@
-<?php
-session_start();
-$hostname = "127.0.0.1";
-$name = "root";
-$password = "root";
-$DB = "dados";
+<!DOCTYPE html>
 
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-    if ($conexao->connect_errno) {
-        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-        exit();
-    } else{
-        /*$nome = $_GET['nome'];
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<?php
+        $nome = $_GET['nome'];
         function redirect(){
             global $nome;
             if(isset($_GET['nome_atividade'])){
@@ -19,7 +16,19 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
             }else{
                 echo $nome;
             }
-        }*/?>
+        }
+        function exibir(){
+            global $conexao;
+            $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$_POST['cod_forne']."';";
+            $resultado = $conexao->query($sql);
+            if($resultado->num_rows != 0){ //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                }
+            } else {
+                exit();
+            }
+        }?>
     <!DOCTYPE html>
 
 <head>
@@ -359,18 +368,33 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 </form>
 </body>
 
-</html>';}
-}
+</html>';
+        }
+        ?>
+        <?php
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
 
-if(isset($_POST['21'])){
+    $conexao = new mysqli($hostname, $name, $password, $DB);
+    
+        if(isset($_POST['cod_forne'])){       
+            exibir();     
+        }
 
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
+        if(isset($_POST['21'])){
+
 if ($conexao->connect_errno){
 echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
 exit();
 }else{
-for($i = 1;$i<=20;$i+= 1){ $numero='v' .$i; if(isset($_POST[$i])){ $valor='$' .$numero; $$valor='V' ; echo
-    $valor.'='.$$valor.' <br>';
+for($i = 1;$i<=20;$i+= 1){
+    $numero='v' .$i;
+    if(isset($_POST[$i])){
+    $valor='$'.$numero;
+    $$valor='V';
+    echo $valor.'='.$$valor.' <br>';
     $numero='';
 
     }else {
@@ -384,8 +408,7 @@ for($i = 1;$i<=20;$i+= 1){ $numero='v' .$i; if(isset($_POST[$i])){ $valor='$' .$
     (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`,
     `cod_forne`)
     VALUES
-    ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
-    $_SESSION['doca'] = $v20;
+    ("'.$$valor.'","'.$$valor.'","'.$$valor.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
     $resultado = $conexao -> query($SQL);
 
     $conexao->close();

@@ -65,18 +65,16 @@
     }
     function funcionar(){
         if(isset($_GET['pagina'])){
-        if($_GET['pagina']<= 0){
-            $pagina = 1;
+        if($_GET['pagina'] > 0){
+            $pagina = $_GET['pagina'];
             $qnt_alu_pagina = $pagina; 
         }else{
-            $pagina = $_GET['pagina'];
+            $pagina = 1;
             $qnt_alu_pagina = $pagina; 
         }}else{
             $pagina = 1;
             $qnt_alu_pagina = $pagina; 
         }
-            $paginaMenos = $pagina-1;
-            $paginaMais = $pagina+1;
             $inicio = $qnt_alu_pagina;
             $qnt_alu_pagina = 1;
             $qnt_alu_pagina *= 15;
@@ -112,7 +110,6 @@
                     $senha2 = 'senha';
                     $tipo_conta2 = 'tipo_conta';
                     $turma2 = 'turma';
-                    $redirect_save = "?"; 
                     echo "<form action='t_turma.php?salvar=true&nome=";redirect();echo"' method='POST'>";
                     while($row = mysqli_fetch_array($resultado) and $qnt_alu_pagina > 0){
                     $id = $row[0];
@@ -121,8 +118,7 @@
                     $tipo_conta = $row[4];
                     $turma = $row[5];
                     $qnt_alu_pagina -= 1;
-                    echo '<form action="t_turma?nome=';redirect();echo'&salvar=true" method="POST">
-                    <td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
+                    echo '<td class="linha-topo-modificacao"><input class="botao-modificar-turma" type="text" name="'.$aluno2.'" value="'.$aluno.'"></td>';
                     if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
                     echo'<td class="linha-topo-modificacao"><input class="botao-modificar-turma"type="text" name="'.$senha2.'" value="'.$senha.'"></td>';
                         }else{
@@ -138,14 +134,10 @@
                     $senha2 .= 'p';
                     $tipo_conta2 .= 'p';
                     $turma2 .= 'p';
-                    if($qnt_alu_pagina == 0){
-                        $qnt_alu_pagina = -1;
-                    }
                 }
                 echo '</table>
                 <table class="caixa-config-turma-aluno">
                 <tr>
-                <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>
                 <td><input class="salvar-alteracao" type="submit" value="Salvar Alterações"></td>
                 </form>';
                 if(isset($_GET['senha_v']) and $_GET['senha_v'] == 'mostra'){
@@ -158,6 +150,7 @@
                     </form>';
                    }
                 echo'
+                <td><button onclick="passarmenos();" class="passar-pagina" value="true"><</button></td>
                 <td><button onclick="passarmais();" class="passar-pagina" value="true">></button></td>
                 </tr>
                 </table>';}
@@ -169,10 +162,10 @@
                 falso();
             }
             }
-        $hostname = "127.0.0.1";
-        $name = "root";
-        $password = "root";
-        $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
         $conexao = new mysqli($hostname, $name, $password, $DB);
         if ($conexao->connect_errno) {
             echo "Failes conection: " . $conexao->connect_error;

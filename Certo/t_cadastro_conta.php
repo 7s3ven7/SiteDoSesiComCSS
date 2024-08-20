@@ -12,10 +12,11 @@
     <div class="caixa-fundo">
         <div class="caixa-meio-cadastro">
             <div class="texto-grande">Cadastre-se</div>
-            <form method="POST" action="t_cadastro_conta.php"?nome;redirect();>
+            <form method="POST" action="t_cadastro_conta.php" ?nome;redirect();>
                 <div class="caixa-cadastro-dentro">
                     <div class="texto-medio">Nome da conta</div>
-                    <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado" required>
+                    <input class="botao-cadastro-input" type="text" placeholder="Professor 1" name="nome_criado"
+                        required>
                     <div class="texto-medio">Crie sua senha</div>
                     <input class="botao-cadastro-input" type="password" placeholder="escolha uma senha forte"
                         name="senha_criada" required>
@@ -40,10 +41,10 @@
 <!--Cadastro de usuario-->
 <?php
     if(isset($_POST['nome_criado']) and isset($_POST['senha_criada'])){
-        $hostname = "127.0.0.1";
-        $name = "root";
-        $password = "root";
-        $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
         $conexao = new mysqli($hostname, $name, $password, $DB);
         if ($conexao->connect_errno) {
             echo "Failes conection: " . $conexao->connect_error;

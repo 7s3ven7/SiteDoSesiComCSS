@@ -21,7 +21,7 @@
         ?>
 
 <body>
-<div class='caixa-menu-geral'>
+    <div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -77,11 +77,55 @@
     </div>
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
+        <form method="POST" action="t_produto_p.php?nome=<?php redirect() ?>echo">
+            <div class="caixa-principal-fundo-superior-produto">
+                <div class="texto-central-produto">Cadastro produto</div>
+                <table class="caixa-principal-superior-prduto">
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Código do fornecedor: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Tipo: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v2.'" placeholder="caixa"></td>
+                        <td class="texto-cinza-produto-principal">Validade: </td>
+                        <td><input class="botao-produto-principal" type="date" name="'.$v3.'"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Lote: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v4.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Nome: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v5.'" placeholder="empresa">
+                        </td>
+                        <td class="texto-cinza-produto-principal">Marca do produto: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v6.'" placeholder="marca"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Número do pedido: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v7.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v8.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Quantidade de unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v9.'" placeholder="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal ">Quantidade de produto: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v10.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Valor da unidade: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v11.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal ">Peso em kilo grama: </td>
+                        <td><input class="botao-produto-principal" type="text" name="'.$v12.'" placeholder="1"></td>
+                    </tr>
+                </table>
+                <table class="">
+                    <input class="botao-enviar2-produto" type="submit">
+                    <div class=""></div>
+            </div>
+        </form>
+        <div class="linha-central"></div>
         <?php
-            $hostname = "127.0.0.1";
-            $name = "root";
-            $password = "root";
-            $DB = "dados";
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
         
             $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
@@ -91,15 +135,6 @@
                 exit();
             } else {
                 if(isset($_POST['vezes'])){ exibir();}else{
-                    echo' <div class="caixa-inicial-prduto">
-        <form method="POST" action="t_produto_p.php?nome=<?php redirect()?>">
-            <div class="texto-principal1-produto">Quantos produtos você irá registrar: 
-                <br>
-                <input class="botao-numero-produto" type="number" name="vezes"
-                    placeholder="Número de vezes"></div>
-            <input class="botao-enviar-produto"type="submit">
-        </form>
-        </div>';
                 }
                 if(isset($_POST['$l'])){ salvar();}
             }
@@ -109,144 +144,15 @@
 </body>
 <?php
 function exibir(){
-if(isset($_POST['vezes'])){
-    $i = $_POST['vezes'];
-    if($i <= 0){
-        echo '
-        <br><br>
-        <div class="texto-pequeno-produto">Digite um número superior!</div>';
-    }else{
-        $l = $i;
-        $numero = 1;
-        $v1 = 'cod_fone';
-        $v2 = 'tipo';
-        $v3 = 'validade';
-        $v4 = 'lote';
-        $v5 = 'nome';
-        $v6 = 'marca';
-        $v7 = 'numero';
-        $v8 = 'unidade';
-        $v9 = 'quantidade_unidade';
-        $v10 = 'quantidade_produto';
-        $v11 = 'valor_unidade';
-        $v12 = 'peso';
-        echo'<form method="POST" action="t_produto_p.php?$l='.$l.'&nome=';redirect();echo'">';
-        echo'<br>';
-        for($i;$i>0;$i){
-            $i -= 1;
-            echo'
-            <div class="texto-central-produto">'.$numero.'° Produto</div>
-            <br>
-            <table class="caixa-principal-superior-prduto">
-                <tr>
-                    <td class="texto-principal-produto">Código do fornecedor: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v1.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Tipo: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                    <td class="texto-principal-produto">Validade: </td>
-                    <td><input class="botao-numero1-produto" type="date" name="'.$v3.'"></td>
-                </tr>
-                <tr>
-                    <td class="texto-principal-produto">Lote: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v4.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Nome: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v5.'" placeholder="empresa"></td>
-                    <td class="texto-principal-produto">Marca do produto: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v6.'" placeholder="marca"></td>
-                </tr>
-                <tr>
-                    <td class="texto-principal-produto">Número do pedido: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v7.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Unidade: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v8.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Quantidade de unidade: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v9.'" placeholder="1"></td>
-                </tr>
-                <tr>
-                    <td class="texto-principal-produto">Quantidade de produto: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v10.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Valor da unidade: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v11.'" placeholder="1"></td>
-                    <td class="texto-principal-produto">Peso em kilo grama: </td>
-                    <td><input class="botao-numero1-produto" type="text" name="'.$v12.'" placeholder="1"></td>
-                </tr>
-            </table>
-            
-            ';
-            $numero += 1;
-            $v1 = $v1.'p';
-            $v2 = $v2.'p';
-            $v3 = $v3.'p';
-            $v4 = $v4.'p';
-            $v5 = $v5.'p';
-            $v6 = $v6.'p';
-            $v7 = $v7.'p';
-            $v8 = $v8.'p';
-            $v9 = $v9.'p';
-            $v10 = $v10.'p';
-            $v11 = $v11.'p';
-            $v12 = $v12.'p';
-        }              
-        echo '<table class="">';
-        echo '<input class="botao-enviar2-produto" type="submit">';
-        echo'<div class=""></div>';
-        echo'</form>';
-        echo '<div class="linha-central"></div>';
     }
-}
-}
 function salvar(){
-if(isset($_GET['$l'])){
-    $z = $_GET['$l'];
-    $a = 'cod_fone';
-    $b = 'tipo';
-    $c = 'validade';
-    $d = 'lote';
-    $e = 'nome';
-    $f = 'marca';
-    $g = 'numero';
-    $h = 'unidade';
-    $i = 'quantidade_unidade';
-    $j = 'quantidade_produto';
-    $k = 'valor_unidade';
-    $l = 'peso';
-    while($z>0){
-        $v1 = $_POST[$a];
-        $v2 = $_POST[$b];
-        $v3 = $_POST[$c];
-        $v4 = $_POST[$d];
-        $v5 = $_POST[$e];
-        $v6 = $_POST[$f];
-        $v7 = $_POST[$g];
-        $v8 = $_POST[$h];
-        $v9 = $_POST[$i];
-        $v10 = $_POST[$j];
-        $v11 = $_POST[$k];
-        $v12 = $_POST[$l];
-        $vtotal = $v11 * ($v9*$v10); //cod inter id atividade
-        for($zz = 1;$zz>0;$zz){
-            $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_p`,`marca_p`,`id_atividade'./*.esse_aqui_tem_problema.*/'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'./*.esse_aqui_tem_problema.*/'`) 
-            VALUES ("' . $v1 . '","' . $v2 . '","' . $v3 . '","' . $v4 . '","' . $v5 . '","'.$v6.'","' . $v7 . '","' . $v8 . '","' . $v9 . '","' . $v10 . '","' . $v11 . '","'.$v12.'","'.$vtotal.'")';
-            $resultado = $conexao->query($SQL);
-            $zz -= 1;
-        }
-    $zz = 1;
-    $a = $a.'p';
-    $b = $b.'p';
-    $c = $c.'p';
-    $d = $d.'p';
-    $e = $e.'p';
-    $f = $f.'p';
-    $g = $g.'p';
-    $h = $h.'p';
-    $i = $i.'p';
-    $j = $j.'p';
-    $k = $k.'p';
-    $l = $l.'p';
-    $z -= 1;
+    global $conexao;
+        $SQL = 'INSERT INTO `produto_p` (`cod_forne`,`tipo`,`date_v`,`lote`,`nome_p`,`marca_p`,`id_atividade'./*.esse_aqui_tem_problema.*/'`,`und`,`quant_und`,`quant_prod`,`valor_und`,`Kg`,`valor_total'./*.esse_aqui_tem_problema.*/'`) 
+        $resultado = $conexao->query($SQL);
     $conexao->close();
-    header("Location: t_produto_p.php");
+    header("Location: t_produto_p.php");';
 }
-}}
+
 ?>
+
 </html>
