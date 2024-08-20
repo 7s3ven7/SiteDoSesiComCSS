@@ -28,8 +28,8 @@
     $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
     if ($conexao->connect_errno) {
-        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-        exit();
+       echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+       exit();
     } else {
         if(isset($_GET['enviar'])){
         $v1 = $_POST['1']; //cod_inter
@@ -62,8 +62,9 @@
     }
     }
 ?>
+
 <body>
-<div class='caixa-menu-geral'>
+    <div class='caixa-menu-geral'>
         <div class='espaco'></div>
         <details>
             <summary>Criações</summary>
@@ -118,9 +119,9 @@
         </details>
     </div>
     <div class="menu">Menu</div>
-    <div  class='caixa-tela-informacao-geral'>
-        <div class="texto-central2-quantitativo-r-p">Digite a parte quantitativa</div>   
-            <form method="POST" action="t_quantitativo_r_p.php">
+    <div class='caixa-tela-informacao-geral'>
+        <div class="texto-central2-quantitativo-r-p">Digite a parte quantitativa</div>
+        <form method="POST" action="t_quantitativo_r_p.php">
             <table class="tabela_quantitativo_r_p">
                 <tr>
                     <td class="texto-central-quantitativo-r-p">Código do fornecedor: </td>
@@ -130,9 +131,11 @@
                 </tr>
                 <tr>
                     <td class="texto-central-quantitativo-r-p">Modelo do container: </td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="3" placeholder="SENU-123456-2"></td>
+                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="3"
+                            placeholder="SENU-123456-2"></td>
                     <td class="texto-central-quantitativo-r-p">Navio: </td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="4" placeholder="Titanaique"></td>
+                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="4" placeholder="Titanaique">
+                    </td>
                 </tr>
                 <tr>
                     <td class="texto-central-quantitativo-r-p">Nome do fornecedor: </td>
@@ -148,7 +151,8 @@
                 </tr>
                 <tr>
                     <td class="texto-central-quantitativo-r-p">Temperatura: </td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="9" placeholder="Temperatura"></td>
+                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="9" placeholder="Temperatura">
+                    </td>
                     <td class="texto-central-quantitativo-r-p">IMO: </td>
                     <td><input class="botao-central-escrever-quant-r-p" type="text" name="10" placeholder="IMO"></td>
                 </tr>
@@ -164,9 +168,9 @@
                 </tr>
             </table>
         </form>
-    <input class="botao-central-enviar-quant-r-p" type="submit" value="Enviar" name="enviar">
-  
-</div>
+        <input class="botao-central-enviar-quant-r-p" type="submit" value="Enviar" name="enviar">
+
+    </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 

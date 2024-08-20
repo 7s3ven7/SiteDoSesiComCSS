@@ -71,10 +71,10 @@
         <div class="caixa-quant-r-a">
         <table>
         <?php
-    session_start();
+        session_start();
             
     if(isset($_POST['cod_forne'])){
-    $hostname = "127.0.0.1";
+        $hostname = "127.0.0.1";
     $name = "u935055604_wesley";
     $password = "XwZX1383";
     $DB = "u935055604_dados";
