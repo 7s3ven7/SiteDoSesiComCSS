@@ -28,8 +28,8 @@
     $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 
     if ($conexao->connect_errno) {
-        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-        exit();
+       echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
+       exit();
     } else {
         if(isset($_GET['enviar'])){
         $v1 = $_POST['1']; //cod_inter
@@ -45,14 +45,14 @@
         $v11 = $_POST['11']; //temperatura
         $v12 = $_POST['12']; //IMO
         $v13 = $_POST['13']; //n_ONU
-/*      $v14 = $_POST['14']; //nome_produto
+      $v14 = $_POST['14']; //nome_produto
         $v15 = $_POST['15']; //und
         $v16 = $_POST['16']; //quant_produto
         $v17 = $_POST['17']; //quant_und
         $v18 = $_POST['18']; //lote
         $v19 = $_POST['19']; //CNPJ_fonecedor
         $v20 = $_POST['20']; //código_nota
-*/
+
         $SQL = 'INSERT INTO `quantitativo_r_p` (`cod_forne`,`nome_e`,`modelo_contai`,`navio`,`nome_f`,`tipo_contai`,`lacre`,`lacre_SIF`,`temperatura`,`IMO`,`n_ONU`,`lote`,`CNPJ_d`) 
         VALUES ('.$v1.','.$v2.','.$v3.','.$v4.','.$v5.','.$v6.','.$v7.','.$v8.','.$v9.','.$v10.','.$v11.','.$v12.','.$v13.');';
         //Inserir no DB

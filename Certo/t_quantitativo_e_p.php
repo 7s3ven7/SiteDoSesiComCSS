@@ -19,7 +19,7 @@
         }
     }
         ?>
-<?php
+<?php 
     $hostname = "127.0.0.1";
     $name = "u935055604_wesley";
     $password = "XwZX1383";
