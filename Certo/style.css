@@ -415,13 +415,13 @@ summary {
 
 .caixa-qualitat-1-r-a {
     width: 49%;
-    height: 72vh;
+    height: 71.9vh;
     background-color: rgb(250, 250, 250);
     border: 1vh solid gray;
     border-left: 0;
     border-right: 0.5vh solid gray;
     position: relative;
-    top: 6vh;
+    top: 5.7vh;
     padding: 2.5vh;
     margin-bottom: 11.3vh;
 }
@@ -1188,7 +1188,7 @@ summary {
     font-size: 15px;
 }
 
-.botao-qualitat-submit-r-a {
+.botao-submit-qualitat-r-a {
     right: 45.2%;
     top: 5%;
     position: absolute;

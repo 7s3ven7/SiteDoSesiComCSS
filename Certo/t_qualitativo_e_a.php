@@ -83,7 +83,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     </details>
 
     <div class="caixa-tela-informacao-geral">
-                <form action="t_qualitativo_r_a.php" method="POST">
+                <form action="t_qualitativo_e_a.php" method="POST">
                     <center>
                         <div class="dist-qualitat-r-a">
                             <div class="texto-grande-qualitat-r-a">
@@ -108,11 +108,10 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                         }
                     } else {
                         $conexao -> close();
-                        header("Location: t_qualitativo_r_a.php");
+                        header("Location: t_qualitativo_e_a.php");
                         exit();
                     }
                 echo '
-                <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1-r-a">
                     <table class="tabela-qualitat-r-a">
                         <tr>
@@ -183,7 +182,9 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Quantidade de unidade: </div></td>
                             <td class="td-qualitat-r-a">'.$row['quant_und'].'</td>
                         </tr>     
-                    </table> 
+                    </table> ';
+                    }}?>
+                    <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
                     </div>
                     <div class="caixa-qualitat-2-r-a">
                     <table class="tabela-qualitat-2-r-a">
@@ -359,8 +360,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 </form>
 </body>
 
-</html>';}
-}
+</html>
+<?php
 
 if(isset($_POST['21'])){
 
