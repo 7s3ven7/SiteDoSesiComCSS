@@ -17,6 +17,61 @@
         }else{
             echo $nome;
         }}
+    function exibir(){
+            global $conexao;
+            $nome_atividade = $_GET['nome_atividade'];
+            $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
+            $resultado = $conexao->query($sql);
+            $row = mysqli_fetch_array($resultado);
+            $cnpj_f = $row['0'];
+            $atividade = $row['1'];
+            $nome_f = $row['2'];
+            $fone_f = $row['3'];
+            $gmail_f = $row['4'];
+            $cep_f = $row['5'];
+            echo '<table class="tabela-fornecedor-usado">
+                <thead>
+                <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
+                </thead>
+                <tr>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito">'.$nome_f.'</div></div></td>
+                </tr>
+                <tr>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito">'.$cnpj_f.'</div></div></td>
+                </tr>
+                <tr>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito">'.$cep_f.'</div></div></td>
+                </tr>
+                <tr>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito">'.$gmail_f.'</div></div></td>
+                </tr>
+                <tr>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$fone_f.'</div></div></td>
+                </tr>        
+            </table>';
+        }
+    function exibir_erro(){
+        echo '<table class="tabela-fornecedor-usado">
+            <thead>
+               <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Selecione uma Atividade <div class="red">ANTES</div></div></td></tr>
+            </thead>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito"></div></div></td>
+            </tr>        
+        </table>';
+        }
     function cadastro(){
         global $conexao;
         $cnpj = $_POST['cnpj'];
@@ -121,6 +176,16 @@
                     <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
                 </form>
             </div>
+        </div>
+            <div class="caixa-direita-turma">
+            <?php
+                if(isset($_GET['nome_atividade'])){
+                    exibir();
+                }else{
+                    exibir_erro();
+                }
+            ?>
+        </div>
         </div>
         <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>

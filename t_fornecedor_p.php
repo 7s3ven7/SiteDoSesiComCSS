@@ -52,6 +52,28 @@
             </tr>        
         </table>';
     }
+    function exibir_erro(){
+        echo '<table class="tabela-fornecedor-usado">
+            <thead>
+            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Selecione uma Atividade <div class="red">ANTES</div></div></td></tr>
+            </thead>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito"></div></div></td>
+            </tr>        
+        </table>';
+    }
          
     function cadastrar(){
         global $conexao;
@@ -164,7 +186,12 @@
         </div>
         <div class="caixa-direita-turma">
             <?php
-            exibir(); ?>
+                if(isset($_GET['nome_atividade'])){
+                    exibir();
+                }else{
+                    exibir_erro();
+                }
+            ?>
         </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>

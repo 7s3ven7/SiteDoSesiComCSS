@@ -1122,7 +1122,16 @@ summary {
     margin-left: auto;
     margin-right: auto;
 }
-
+.red{
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    border:0.01em solid black;
+    background-color: salmon;
+    color:black;
+    padding-left:1vh;
+    padding-right:1vh;
+}
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
     font-size: 1.25em;
