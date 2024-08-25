@@ -82,42 +82,55 @@
                 <div class="texto-central-produto">Cadastro produto</div>
                 <table class="caixa-principal-superior-prduto">
                     <tr>
-                        <td class="texto-cinza-produto-principal">Código do fornecedor: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$'" placeholder="1"></td>
-                        <td class="texto-cinza-produto-principal">Tipo: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v2.'" placeholder="caixa"></td>
-                        <td class="texto-cinza-produto-principal">Validade: </td>
-                        <td><input class="botao-produto-principal" type="date" name="'.$v3.'"></td>
+                        <td class="texto-cinza-produto-principal">Código do fornecedor</td>
+                        <td class="texto-cinza-produto-principal">Tipo</td>
+                        <td class="texto-cinza-produto-principal">Validade</td>
+                        <td class="texto-cinza-produto-principal">Lote</td>
                     </tr>
                     <tr>
-                        <td class="texto-cinza-produto-principal">Lote: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v4.'" placeholder="1"></td>
-                        <td class="texto-cinza-produto-principal">Nome: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v5.'" placeholder="empresa">
-                        </td>
-                        <td class="texto-cinza-produto-principal">Marca do produto: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v6.'" placeholder="marca"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text" name="'.$'"
+                                placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v2.'" placeholder="caixa"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="date"
+                                name="'.$v3.'"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v4.'" placeholder="1"></td>
                     </tr>
                     <tr>
-                        <td class="texto-cinza-produto-principal">Número do pedido: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v7.'" placeholder="1"></td>
-                        <td class="texto-cinza-produto-principal">Unidade: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v8.'" placeholder="1"></td>
-                        <td class="texto-cinza-produto-principal">Quantidade de unidade: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v9.'" placeholder="1"></td>
+                        <td class="texto-cinza-produto-principal">Nome</td>
+                        <td class="texto-cinza-produto-principal">Marca do produto</td>
+                        <td class="texto-cinza-produto-principal">Número do pedido</td>
+                        <td class="texto-cinza-produto-principal">Unidade</td>
                     </tr>
                     <tr>
-                        <td class="texto-cinza-produto-principal ">Quantidade de produto: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v10.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v6.'" placeholder="marca"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v7.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v8.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v5.'" placeholder="empresa">
+                    </tr>
+                    <tr>
+                        <td class="texto-cinza-produto-principal">Quantidade de unidade</td>
+                        <td class="texto-cinza-produto-principal">Quantidade de produto</td>
                         <td class="texto-cinza-produto-principal">Valor da unidade: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v11.'" placeholder="1"></td>
                         <td class="texto-cinza-produto-principal ">Peso em kilo grama: </td>
-                        <td><input class="botao-produto-principal" type="text" name="'.$v12.'" placeholder="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v9.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v10.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v11.'" placeholder="1"></td>
+                        <td class="td-produto-principal"><input class="botao-produto-principal" type="text"
+                                name="'.$v12.'" placeholder="1"></td>
                     </tr>
                 </table>
-                <table class="">
-                    <input class="botao-enviar2-produto" type="submit">
-                    <div class=""></div>
+                <input class="botao-enviar2-produto" type="submit">
             </div>
         </form>
         <div class="linha-central"></div>

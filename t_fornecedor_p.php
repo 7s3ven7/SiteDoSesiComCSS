@@ -25,12 +25,20 @@
         $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
         $resultado = $conexao->query($sql);
         $row = mysqli_fetch_array($resultado);
-        $cnpj_f = $row['0'];
-        $atividade = $row['1'];
-        $nome_f = $row['2'];
-        $fone_f = $row['3'];
-        $gmail_f = $row['4'];
-        $cep_f = $row['5'];
+
+        for($i= 0;$i<=5; $i++){
+            $valor = $row['"'.$i.'"'];
+            $nome = "valor".$i;
+            if($valor== ''){
+                $$nome = '-';
+            }
+        }
+
+        $cnpj_f = $valor0;
+        $nome_f = $valor2;
+        $fone_f = $valor3;
+        $gmail_f = $valor4;
+        $cep_f = $valor5;
         echo '<table class="tabela-fornecedor-usado">
             <thead>
             <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>

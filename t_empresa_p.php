@@ -23,18 +23,26 @@
             $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
             $resultado = $conexao->query($sql);
             $row = mysqli_fetch_array($resultado);
-            $cnpj_f = $row['0'];
-            $atividade = $row['1'];
-            $nome_f = $row['2'];
-            $fone_f = $row['3'];
-            $gmail_f = $row['4'];
-            $cep_f = $row['5'];
+
+            for($i= 0;$i<=5; $i++){
+                $valor = $row['"'.$i.'"'];
+                $nome = "valor".$i;
+                if($valor== ''){
+                    $$nome = '-';
+                }
+            }
+    
+            $cnpj_f = $valor0;
+            $nome_f = $valor2;
+            $fone_f = $valor3;
+            $gmail_f = $valor4;
+            $cep_f = $valor5;
             echo '<table class="tabela-fornecedor-usado">
                 <thead>
-                <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
+                <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Empresa Selecionada</div></td></tr>
                 </thead>
                 <tr>
-                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito">'.$nome_f.'</div></div></td>
+                <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Empresa<div class="fornecedor-negrito">'.$nome_f.'</div></div></td>
                 </tr>
                 <tr>
                 <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito">'.$cnpj_f.'</div></div></td>
@@ -56,7 +64,7 @@
                <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Selecione uma Atividade <div class="red">ANTES</div></div></td></tr>
             </thead>
             <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito"></div></div></td>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Empresa<div class="fornecedor-negrito"></div></div></td>
             </tr>
             <tr>
             <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito"></div></div></td>
