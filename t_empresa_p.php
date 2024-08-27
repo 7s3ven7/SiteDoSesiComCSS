@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro produto</title>
+    <title>Tela Inicial</title>
 </head>
 <?php
     $nome = $_GET['nome'];
@@ -17,13 +16,12 @@
             echo $nome.'&nome_atividade='.$nome_atividade;
         }else{
             echo $nome;
-        }
-    }
-    function exibir(){
+        }}
+        function exibir(){
         global $conexao;
-            if(isset($_GET['nome_atividade'])){
+        if(isset($_GET['nome_atividade'])){
         $nome_atividade = $_GET['nome_atividade'];
-        $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
+        $sql = 'SELECT * FROM `empresa_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
         $resultado = $conexao->query($sql);
         $row = mysqli_fetch_array($resultado);
         $v1 = $row['0'];
@@ -58,7 +56,7 @@
             <tr>
             <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$v3.'</div></div></td>
             </tr>';}
-            else{
+        else{
                 echo '<table class="tabela-fornecedor-usado">
             <thead>
             <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
@@ -67,37 +65,34 @@
             } 
         echo '</table>';
     }
-         
-    function cadastrar(){
+    function cadastro(){
         global $conexao;
-        $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
-        $nome_f = $conexao->real_escape_string($_POST["nome_fornecedor"]);
-        $gmail_f = $conexao->real_escape_string($_POST["gmail_fornecedor"]);
-        $cep_f = $conexao->real_escape_string($_POST["cep_fornecedro"]);
-        $telefone_f = $conexao->real_escape_string($_POST["telefone_fornecedor"]);
-        $id_atividade = $_GET['nome_atividade'];
-        $sql = 'SELECT `nome_f` FROM `fornecedor_p` WHERE `nome_f` = "'.$nome_f.'"';
-        $resultado_1 = $conexao->query($sql);
-        if($resultado_1->num_rows != 0){
-            echo '<div class="texto-aviso-turma">O fornecedor '.$nome_f.' já esta existe, tente outro</div>';
-        }else{
-            $sql = 'INSERT INTO `fornecedor_p` (`CNPJ_f`,`id_atividade`,`nome_f`,`fone_f`,`gmail_f`,`CEP_f`) VALUES ("'.$cnpj_f.'","'.$id_atividade.'","'.$nome_f.'","'.$telefone_f.'","'.$gmail_f.'","'.$cep_f.'");';
-            $resultado = $conexao->query($sql);
-        }
+        $cnpj = $_POST['cnpj'];
+        $nome_e = $_POST['nome_e'];
+        $gmail = $_POST['gmail'];
+        $cep = $_POST['cep'];
+        $telefone = $_POST['telefone'];
+        $nome_atividade = $_GET['nome_atividade'];
+        $sql = 'INSERT INTO `empresa_p`(`CNPJ_e`,`gmail_e`,`fone_e`,`CEP_e`,`nome_e`,`id_atividade`) 
+        VALUES ("' . $cnpj . '","' . $gmail . '","' . $telefone . '","' . $cep . '","' . $nome_e . '","'.$nome_atividade.'");';
+        $resultado = $conexao -> query($sql);
+        header('location:t_empresa_p.php?nome='.$_GET['nome'].'&nome_atividade='.$_GET['nome_atividade']);
     }
     $hostname = "127.0.0.1";
     $name = "u935055604_wesley";
     $password = "XwZX1383";
     $DB = "u935055604_dados";
-        $conexao = new mysqli($hostname, $name, $password, $DB);
+    $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
-            echo "Failes conection: " . $conexao->connect_error;
+            echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
             exit();
-        } else {
-            if(isset($_POST['cnpj_fornecedor']) and isset($_POST['nome_fornecedor']) and isset($_POST['gmail_fornecedor']) and  isset($_POST['cep_fornecedro']) and  isset($_POST['telefone_fornecedor']) and isset($_GET['nome_atividade'])){
-            cadastrar();
+        }
+        else{
+            if(isset($_GET["cadastro"])){
+                cadastro();
             }
-    }?>
+        }
+        ?>
 
 <body>
     <div class='caixa-menu-geral'>
@@ -157,31 +152,42 @@
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
         <div class="caixa-esquerda-turma">
-            <div class="texto-grande-turma">Crie seu Fornecedor</div>
+            <div class="texto-grande-turma">Crie sua Empresa</div>
             <div class="caixa-esquerda-turma-dentro">
-                <form method="POST" action='t_fornecedor_p.php?nome=<?php redirect()?>'>
-                    <div class="texto-cinza-turma">Fornecedor: </div>
-                    <input class="botao-turma-input" type="text" placeholder="nome" name="nome_fornecedor">
+                <form method="POST" action='t_empresa_p.php?cadastro=v&nome=<?php redirect()?>'>
+                    <div class="texto-cinza-turma">Empresa: </div>
+                    <input class="botao-turma-input" type="text" placeholder="nome" name="nome_e">
                     <div class="texto-cinza-turma">CNPJ:</div>
-                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cnpj_fornecedor">
+                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cnpj">
                     <div class="texto-cinza-turma">CEP: </div>
-                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cep_fornecedro">
+                    <input class="botao-turma-input" type="text" placeholder="000.000.000-00" name="cep">
                     <div class="texto-cinza-turma">Gmail:</div>
-                    <input class="botao-turma-input" type="text" placeholder="fornecedor@gmail.com"
-                        name="gmail_fornecedor">
+                    <input class="botao-turma-input" type="text" placeholder="fornecedor@gmail.com" name="gmail">
                     <div class="texto-cinza-turma">Telefone:</div>
-                    <input class="botao-turma-input" type="text" placeholder="(00) 00000-0000"
-                        name="telefone_fornecedor">
+                    <input class="botao-turma-input" type="text" placeholder="(00) 00000-0000" name="telefone">
                     <br>
                     <input class="botao-turma-submit" type="submit" value="Cadastrar turma">
                 </form>
             </div>
         </div>
-        <div class="caixa-direita-turma">
+        <<<<<<< HEAD:Certo/t_empresa_p.php <div class="caixa-direita-turma">
             <?php exibir(); ?>
-        </div>
+    </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+    =======
+    <div class="caixa-direita-turma">
+        <?php
+                if(isset($_GET['nome_atividade'])){
+                    exibir();
+                }else{
+                    exibir_erro();
+                }
+            ?>
+    </div>
+    </div>
+    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+    >>>>>>> 373564bfcac61f493e7194395d2ebad97cc5f642:t_empresa_p.php
 </body>
 
 </html>
