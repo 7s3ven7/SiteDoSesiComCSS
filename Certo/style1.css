@@ -1,0 +1,1639 @@
+/*-----------------------------------------------------------------------------------------Exemplos-----------------------------------------------------------------------------------------*/
+.div {
+    font-size: 1em;
+    background-color: white;
+    color: white;
+    width: 1em;
+    height: 1em;
+    display: grid;
+    flex-direction: row;
+    justify-content: grid;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    padding: 1em;
+    margin: 1em;
+}
+
+/*-----------------------------------------------------------------------------------------Geral-----------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    width: 25vw;
+    height: 1vh;
+    background-color: whitesmoke;
+    left: -1px;
+    position: absolute;
+    border: 0.01em solid black;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+}
+
+summary {
+    font-size: 1.5em;
+    width: 11.5vw;
+    height: 7vh;
+    background-color: green;
+    color: white;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    left: 1.5vw;
+    position: relative;
+    padding-left: 0.5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-top: 1.5vh;
+}
+
+/*-----------------------------------------------------------------------------------------Logar/Cadastro-----------------------------------------------------------------------------------------*/
+/*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
+.caixa-fundo {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.caixa-meio {
+    background-color: rgb(222, 222, 222);
+    border: 0.01em solid black;
+    border-radius: 1em;
+    width: 25vw;
+    height: 60vh;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    padding-top: 3vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.caixa-logar-dentro {
+    height: 20vh;
+    padding-top: 1vh;
+    text-align: left;
+    align-items: left;
+    line-height: 250%;
+}
+
+.caixa-logar-dentro-baixo {
+    height: 10vh;
+    padding-top: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 150%;
+}
+
+.caixa-meio-cadastro {
+    background-color: rgb(222, 222, 222);
+    border: 0.01em solid black;
+    border-radius: 1em;
+    width: 25vw;
+    height: 60vh;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.caixa-cadastro-dentro {
+    height: 25vh;
+    padding-top: 0.5vh;
+    text-align: left;
+    align-items: left;
+    line-height: 225%;
+}
+
+.caixa-cadastro-dentro-baixo {
+    height: 10vh;
+    padding-top: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 75%;
+}
+
+/*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
+.texto-grande {
+    font-size: 4em;
+    color: darkgreen;
+}
+
+.texto-grande-mini {
+    font-size: 2.5em;
+    color: darkgreen;
+}
+
+.texto-medio {
+    font-size: 1.75em;
+    color: rgb(94, 94, 94);
+}
+
+.texto-pequeno {
+    font-size: 1em;
+    color: darkgreen;
+}
+
+.texto-cinza {
+    font-size: 2.5em;
+    color: gray;
+}
+
+/*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
+.botao-logar-input {
+    width: 100%;
+    height: 4vh;
+    color: rgb(99, 99, 99);
+    border: 0.01em;
+    border-radius: 1em;
+    border-bottom: 0.01em solid black;
+    text-align: center;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.botao-logar-submit {
+    width: 75%;
+    height: 5vh;
+    background-color: green;
+    color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-top: 2.5vh;
+    position: relative;
+}
+
+.botao-cadastro-input {
+    width: 100%;
+    height: 3.25vh;
+    color: rgb(99, 99, 99);
+    border: 0.01em;
+    border-radius: 1em;
+    border-bottom: 0.01em solid black;
+    text-align: center;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.botao-cadastro-submit {
+    width: 75%;
+    height: 4.5vh;
+    background-color: green;
+    color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-top: 2.5vh;
+    position: relative;
+}
+
+/*-----------------------------------------------------------------------------------------Telas_Professor/Aluno-----------------------------------------------------------------------------------------*/
+/*_________________________________________________________________________________________Caixa_________________________________________________________________________________________*/
+.caixa-menu-geral {
+    width: 15vw;
+    min-height: 100vh;
+    max-width: 15vw;
+    background-color: rgb(222, 222, 222);
+    border-right: 1vh solid gray;
+    position: fixed;
+    padding-top: 7.5vh;
+    padding-bottom: 2.5vh;
+}
+
+.caixa-sumario-geral {
+    top: 15vh;
+    width: 15vw;
+    min-height: 100vh;
+    position: absolute;
+    padding-bottom: 2.5vh;
+}
+
+.espaco {
+    width: 1vw;
+    height: 1vh;
+    background-color: transparent;
+}
+
+.caixa-tela-informacao-geral {
+    width: 85vw;
+    height: 92.7%;
+    background-color: whitesmoke;
+    position: fixed;
+    left: 15vw;
+    top: 7.25vh;
+}
+
+.conta-geral {
+    font-size: 3.5vh;
+    width: 85vw;
+    height: 7.5vh;
+    background-color: rgb(222, 222, 222);
+    border-bottom: 1vh solid gray;
+    position: fixed;
+    left: 15vw;
+    top: 0;
+    text-align: center;
+    padding-top: 1.5vh;
+    padding-bottom: 2vh;
+}
+
+.caixa-esquerda-turma {
+    width: 40vw;
+    height: 95vh;
+    background-color: rgb(250, 250, 250);
+    border-right: 1vh solid gray;
+    position: absolute;
+}
+
+.caixa-esquerda-turma-dentro {
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 20vw;
+    height: 60vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.caixa-esquerda-fornecedor-dentro {
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 35vw;
+    height: 60vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.caixa-direita-turma {
+    width: 45vw;
+    height: 95vh;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    left: 40vw;
+    padding: 5vw;
+    padding-top: 0;
+}
+
+.caixa-direita-turma-dentro {
+    margin-top: 2.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 35vw;
+    height: 70vh;
+    background-color: whitesmoke;
+    border: 0.01em solid black;
+}
+
+.caixa-config-turma-aluno {
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border: 0.01em solid black;
+    bottom: 0;
+    position: absolute;
+}
+
+.tabela-fornecedor {
+    background-color: white;
+    width: 20vw;
+    align-items: left;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 0.1em solid black;
+}
+
+.td-fornecedor {
+    align-items: left;
+    text-align: left;
+    height: 10vh;
+    padding: 1vw;
+    border: 0.01em solid black;
+
+}
+
+.caixa-esquerda-empresa {
+    width: 40vw;
+    height: 93vh;
+    background-color: rgb(250, 250, 250);
+    border-right: 1vh solid gray;
+    position: absolute;
+}
+
+.caixa-esquerda-empresa-dentro {
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 30vw;
+    height: 25vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.caixa-direita-empresa {
+    width: 46vw;
+    height: 95vh;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    left: 40vw;
+    padding: 5vw;
+    padding-top: 0;
+}
+
+.caixa-direita-empresa-dentro {
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 35vw;
+    height: 70vh;
+    background-color: whitesmoke;
+    border: 0.01em solid black;
+}
+
+.caixa-inicial-prduto {
+    width: 16vw;
+    height: 22vh;
+    background-color: green;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+    padding-top: 2vh;
+    margin-top: 1.5vh;
+    border: 0.07em solid black;
+    border-radius: 75px;
+    top: 28vh;
+}
+
+.caixa-principal-fundo-superior-produto {
+    width: 100%;
+    height: 58.5vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3vh;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+}
+
+.caixa-principal-superior-prduto {
+    width: 100%;
+    height: 35vh;
+    background-color: whitesmoke;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5vh;
+    padding: 3vh;
+}
+
+.linha-central {
+    width: 100%;
+    height: 1.5vh;
+    background-color: grey;
+    position: relative;
+}
+
+.caixa-qualitat-1-r-a {
+    width: 49%;
+    height: 71.9vh;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid gray;
+    border-left: 0;
+    border-right: 0.5vh solid gray;
+    position: relative;
+    top: 6.9vh;
+    padding: 2.5vh;
+    margin-bottom: 11.3vh;
+}
+
+.caixa-qualitat-2-r-a {
+    width: 51%;
+    height: 72vh;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid gray;
+    border-right: 0;
+    border-left: 0.5vh solid gray;
+    position: absolute;
+    margin-top: 9.9vh;
+    top: 1.7vh;
+    left: 49%;
+    padding: 2.5vh;
+    padding-top: 2.6vh;
+}
+
+.caixa-qualitat-3-r-a {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 47%;
+    padding-right: 50%;
+}
+
+.caixa-qualitat-r-a {
+    width: 19vw;
+    height: 8.7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 35%;
+    text-align: center;
+}
+
+.caixa-qualitat-e-a {
+    left: .9%;
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.7vh solid gray;
+    border-top: 0;
+    position: relative;
+    margin-bottom: 11.3vh;
+}
+
+.caixa-qualitat-1-e-a {
+    top: 11.6vh;
+    width: 49%;
+    height: 72vh;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid gray;
+    border-left: 0;
+    border-right: 0.5vh solid gray;
+    position: absolute;
+    padding: 2.5vh;
+}
+
+.caixa-qualitat-2-e-a {
+    width: 51%;
+    height: 72vh;
+    background-color: rgb(250, 250, 250);
+    border: 1vh solid gray;
+    border-right: 0;
+    border-left: 0.5vh solid gray;
+    position: absolute;
+    margin-top: 9.9vh;
+    top: 1.7vh;
+    left: 49%;
+    padding: 2.5vh;
+    padding-top: 2.6vh;
+}
+
+.caixa-qualitat-3-e-a {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 47%;
+    padding-right: 50%;
+}
+
+.caixa-quant-1-r-a {
+    width: 19vw;
+    height: 8.7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 35%;
+    text-align: center;
+}
+
+.caixa-quant-2-r-a {
+    width: 15vw;
+    height: 13vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-3-r-a {
+    width: 15vw;
+    height: 13.2vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-4-r-a {
+    width: 15vw;
+    height: 7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-1-e-a {
+    width: 19vw;
+    height: 8.7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    left: 38.7%;
+    text-align: center;
+}
+
+.caixa-quant-2-e-a {
+    width: 15vw;
+    height: 13vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-3-e-a {
+    width: 15vw;
+    height: 13.2vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-quant-4-e-a {
+    width: 15vw;
+    height: 7vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.caixa-principal-quantitativo-r-p {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    margin-left: 34vw;
+    margin-right: 35vw;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+    padding-top: 1.25vh;
+    margin-top: 30vh;
+    border-radius: 10px;
+
+}
+
+.caixa-principal2-quantitativo-r-p {
+    width: 50vw;
+    height: 36vh;
+    border: 0.01em solid black;
+    position: relative;
+    border-radius: 20px;
+}
+
+.linha-divisao-caixa-central-quant-r-p {
+    width: 25vw;
+    height: 15vh;
+    margin-bottom: 0;
+    border: 0.1em solid black;
+    position: center;
+    margin-right: 2vw;
+    border-radius: 20px;
+}
+
+.caixa-estoque {
+    width: 20vw;
+    height: 10vh;
+    background-color: rgb(250, 250, 250);
+    border: 0.5vh solid grey;
+    position: relative;
+    text-align: center;
+}
+
+.tabela_quantitativo_r_p {
+    width: 70vw;
+    height: 55vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    margin-top: 10vh;
+    background-color: rgb(50, 29, 240);
+    align-items: center;
+    text-align: center;
+}
+
+.subtabela_quantitativo_r_p {
+    width: 25vw;
+    height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    margin-top: 10vh;
+    background-color: rgb(228, 6, 17);
+    align-items: center;
+    text-align: center;
+}
+
+
+.tabela_quantitativo_e_p {
+    width: 55vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 10vh;
+    background-color: white;
+    border: 5px solid black;
+    padding: 3vh;
+}
+
+
+.tabela-t-nota-r-a {
+    width: 65vw;
+    height: 55vh;
+    border: 0.1em solid black;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12.5vh;
+    padding: 1vh;
+}
+
+.td-t-nota-r-a {
+    padding: 1vh;
+    width: 25%;
+    height: 4vh;
+    border: 0.01em solid black;
+}
+
+.td-t-nota-r-a-texto {
+    font-size: xx-large;
+    width: 100%;
+    color: gray;
+}
+
+.td-t-nota-r-a-valor {
+    font-size: medium;
+    width: 50%;
+    color: black;
+    background-color: whitesmoke;
+    border: 0.01em solid black;
+    border-radius: 5px;
+    padding: 0.25vh;
+    margin-top: 0.25vh;
+}
+
+.tabela-fornecedor-usado {
+    width: 30vw;
+    height: 50vh;
+    right: 7.5vw;
+    position: absolute;
+    border: 2px solid black;
+    top: 15vh;
+}
+
+.td-fornecedor-usado-left {
+    width: 100%;
+    height: 16.666666666%;
+    border: 0.01em solid black;
+    text-align: left;
+    padding: 1vh;
+    padding-left: 2.5vh;
+    background-color: white;
+    text-align: center;
+}
+
+.td-fornecedor-usado-topo {
+    width: 100%;
+    height: 16.666666666%;
+    border: 0.01em solid black;
+    text-align: left;
+    padding: 1vh;
+    padding-left: 2.5vh;
+    background-color: white;
+    text-align: center;
+}
+
+.tabela-turma {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-empresa {
+    width: 100%;
+    max-width: 35vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-r-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-r-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-r-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-r-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-e-a {
+    width: 39vw;
+    height: 65.5vh;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.tabela-qualitat-2-e-a {
+    width: 40vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+.td-qualitat-e-a {
+    width: 25vw;
+    border: 0.01em solid black;
+    text-align: center;
+    font-size: 28.6px;
+}
+
+.td-qualitat-2-e-a {
+    width: 10vw;
+    border: 0.01em solid black;
+    text-align: center;
+}
+
+/*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
+.menu {
+    width: 14vw;
+    height: 10vh;
+    font-size: 8vh;
+    position: relative;
+    color: rgb(0, 50, 0);
+    background-color: rgb(222, 222, 222);
+    padding-left: 2.5vw;
+}
+
+.texto-grande-turma {
+    font-size: 5em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
+.texto-grande-fornecedor {
+    font-size: 4em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.texto-medio-turma {
+    font-size: 4em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
+.texto-cinza-turma {
+    font-size: 2em;
+    color: rgb(100, 100, 100);
+    width: 100%;
+    height: 5vh;
+}
+
+.texto-aviso-turma {
+    width: 80%;
+    height: 4.5vh;
+    color: black;
+    background-color: rgb(255, 173, 173);
+    border: 0.01em solid darkred;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding: 0.75vh;
+    font-size: 1.5em;
+}
+
+.texto-aviso-turma-tabela {
+    width: 60%;
+    height: 4.5vh;
+    color: black;
+    background-color: rgb(255, 173, 173);
+    border: 0.01em solid darkred;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    padding: 0.75vh;
+    font-size: 1.5em;
+    top: 30vh;
+}
+
+.linha-topo {
+    min-width: 4.5vw;
+    max-width: 15vw;
+    max-height: 3.5vh;
+    border: 0.01em solid black;
+    background-color: white;
+}
+
+.linha-ex-select-num {
+    width: 5vw;
+    max-height: 3vh;
+    border: 0.01em solid black;
+    background-color: white;
+}
+
+.linha-topo-2 {
+    font-size: 1.5em;
+    min-width: 4.5vw;
+    max-width: 15vw;
+    height: 4vh;
+    border: 0.01em solid black;
+    background-color: white;
+}
+
+.linha-ex-select-num-2 {
+    font-size: 1.5em;
+    width: 5vw;
+    height: 3.6vh;
+    border: 0.01em solid black;
+    background-color: white;
+}
+
+.linha-topo-modificacao {
+    width: 20%;
+    height: 3.6vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.linha-topo-modificacao-mini {
+    height: 3.6vh;
+    width: 10%;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.text-topo-turma-modificacao {
+    font-size: 1.5em;
+}
+
+.linha-topo-modificacao-top {
+    width: 20%;
+    height: 5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.linha-topo-modificacao-mini-top {
+    width: 10%;
+    height: 5vh;
+    background-color: white;
+    border: 0.01em solid black;
+}
+
+.texto-grande-empresa {
+    font-size: 4.3em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
+.texto-medio-empresa {
+    font-size: 2.7em;
+    color: rgb(0, 90, 0);
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
+.texto-cinza-empresa {
+    font-size: 2em;
+    color: rgb(100, 100, 100);
+    width: 100%;
+    height: 2.5vh;
+
+}
+
+.texto-pequeno-empresa {
+    font-size: 1.2em;
+    color: darkgreen;
+}
+
+.texto-pequeno-forne {
+    font-size: 1.8em;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.texto-pequeno2-forne {
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: relative;
+
+}
+
+.numero-fornecedor {
+    font-size: 2em;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    width: 15vw;
+    border: 0.01em solid black;
+    border-radius: 100px;
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-medio-qualitat-r-a {
+    font-size: 1.25vw;
+    color: black;
+}
+
+.texto-pequeno-qualitat-r-a {
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+}
+
+.texto-grande-qualitat-e-a {
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
+.texto-pequeno-qualitat-e-a {
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+}
+
+.texto-central-produto {
+    font-size: 3em;
+    width: 20vw;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1em solid white;
+    border-bottom: 0.1em solid black;
+    border-radius: 10px;
+    padding-bottom: 0.8vh;
+}
+
+.texto-cinza-produto-principal {
+    font-size: 2em;
+    color: rgb(100, 100, 100);
+    width: 55vw;
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+
+}
+
+.texto-medio-quant-r-a {
+    font-size: 1.25vw;
+    color: black;
+}
+
+.texto-medio-quant-e-a {
+    font-size: 1.25vw;
+    color: black;
+}
+
+.texto-medio-estoque {
+    font-size: 1.5vw;
+    color: black;
+}
+
+.texto-cinza-principal-quant-r-p {
+    font-size: 1em;
+    color: rgb(100, 100, 100);
+    width: 20%;
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+}
+
+.texto-central2-principal-quantitativo-r-p {
+    width: 25vw;
+    font-size: 3em;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 2.5vh;
+    margin-bottom: -3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-central-quantitativo-e-p {
+    width: 23vw;
+    font-size: 2.1em;
+    text-align: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    position: relative;
+    border: 0.01em solid black;
+}
+
+.texto-central2-quantitativo-e-p {
+    width: 25vw;
+    font-size: 3em;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 2.5vh;
+    margin-bottom: -3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error {
+    width: 30.5vw;
+    height: 6vh;
+    font-size: xx-large;
+    color: black;
+    background-color: salmon;
+    border: 0.01em solid black;
+    position: relative;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    padding: 0.75vh;
+    border-radius: 30px;
+}
+
+.texto-fornecedor-usado {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.fornecedor-negrito {
+    font-weight: normal;
+    font-size: xx-large;
+    background-color: white;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    padding-bottom: 1vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.texto-aviso-fornecedor{
+    width:25vw;
+    height:5vh;
+    padding:1vh;
+    padding-bottom:1vh;
+    background-color: salmon;
+    text-align: center;
+    border:0.01em solid black;
+    font-size:1.5em;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    border-radius: 50px;
+}
+/*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
+.botao-sumario {
+    font-size: 1.25em;
+    width: 9.5vw;
+    height: 4vh;
+    background-color: green;
+    color: white;
+    border: 0.01em solid black;
+    border-radius: 10px;
+    left: 3.5vw;
+    position: relative;
+    padding-left: 0.5vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-top: 0.5vh;
+    text-align: left;
+}
+
+.botao-turma-input {
+    font-size: 1em;
+    width: 100%;
+    height: 4.5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+}
+
+.botao-turma-submit {
+    margin-top: 1.5vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: absolute;
+    width: 60%;
+    height: 6.5vh;
+    font-size: 1.25em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 10px;
+}
+
+.botao-select-turma {
+    width: 2vh;
+    height: 2vh;
+    margin: 0.3vh;
+    background-color: rgb(255, 80, 80);
+    color: rgb(255, 80, 80);
+}
+
+#botao-select-turma {
+    width: 2vh;
+    height: 2vh;
+    margin: 0.3vh;
+    background-color: lightgreen;
+    color: lightgreen;
+}
+
+.botao-exclusao-turma {
+    font-size: 0.0001px;
+    width: 1vw;
+    height: 1vw;
+    border: 0.2em solid black;
+    border-radius: 50px;
+    color: rgb(255, 77, 77);
+    background-color: rgb(255, 77, 77);
+    transition: 0.15s;
+}
+
+.botao-exclusao-turma:hover {
+    color: rgb(206, 0, 0);
+    background-color: rgb(206, 0, 0);
+}
+
+.botao-modificacao-turma {
+    width: 100%;
+    height: 2vh;
+    background-color: white;
+    border: 0;
+    transition: 0.15s;
+    border: 0.01em solid black;
+    border-radius: 10px;
+}
+
+.botao-modificacao-turma:hover {
+    background-color: rgb(0, 161, 0);
+    color: white;
+    border: 0;
+}
+
+.botao-senha-turma {
+    width: 1vw;
+    height: 1vw;
+    background-color: salmon;
+    color: salmon;
+    top: -0.2vh;
+    position: relative;
+}
+
+.botao-modificar-turma {
+    width: 100%;
+    height: 3vh;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    border: white;
+}
+
+.salvar-alteracao {
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.salvar-alteracao:hover {
+    background-color: green;
+    color: white;
+}
+
+.passar-pagina {
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.passar-pagina:hover {
+    background-color: green;
+    color: white;
+}
+
+.botao-empresa-input {
+    font-size: 1em;
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+}
+
+.botao-empresa-input-pequeno {
+    font-size: 1em;
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+}
+
+.botao-empresa-submit {
+    margin-top: 1%;
+    margin-left: 33%;
+    margin-right: 20%;
+    position: absolute;
+    width: 30%;
+    height: 5vh;
+    font-size: 1.25em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.botao-input-quant-r-p {
+    border-right: black solid 1vw;
+    margin-right: 1.5vw;
+}
+
+.botao-input-qualitat-e-a {
+    width: 10vw;
+    height: 1.5vw;
+    border-radius: 10px;
+    border-right: black solid 0.01em;
+    margin-right: 1.5vw;
+    font-size: 15px;
+}
+
+.botao-submit-qualitat-r-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+}
+
+.botao-qualitat-submit-2-r-a {
+    right: 45.2%;
+    top: 92.5%;
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.botao-qualitat-submit-e-a {
+    margin-top: 1%;
+    right: 40%;
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.botao-input-qualitat-r-a {
+    width: 11.5vw;
+    height: 1.8vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    top: 3%;
+}
+
+.botao-qualitat-submit-2-e-a {
+    right: 45.2%;
+    top: 92.5%;
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 0.01em solid black;
+    border-radius: 20px;
+}
+
+.check-qualitat-r-a {
+    position: relative;
+    height: 1.5vh;
+    background-color: #eee;
+}
+
+.check-qualitat-e-a {
+    position: relative;
+    height: 1.5vh;
+    background-color: #eee;
+}
+
+.check-quant-r-a {
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vh;
+    background-color: #eee;
+}
+
+.check-quant-e-a {
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vh;
+    background-color: #eee;
+}
+
+.botao-input-quant-e-a {
+    width: 11.5vw;
+    height: 1.8vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    top: 3%;
+}
+
+.botao-input-quant-2-e-a {
+    width: 13vw;
+    height: 3vh;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+}
+
+.botao-input-quant-3-e-a {
+    width: 10vw;
+    height: 2.6vh;
+    border-radius: 5px;
+    font-size: 2vh;
+    position: relative;
+    padding: 2%;
+}
+
+.botao-input-quant-r-a {
+    width: 11.5vw;
+    height: 1.8vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    top: 3%;
+}
+
+.botao-input-quant-2-r-a {
+    width: 13vw;
+    height: 3vh;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+}
+
+.botao-input-quant-3-r-a {
+    width: 10vw;
+    height: 2.6vh;
+    border-radius: 5px;
+    font-size: 2vh;
+    position: relative;
+    padding: 2%;
+}
+
+.botao-submit-quant-r-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+    color: white;
+    background-color: green;
+}
+
+.botao-submit-2-quant-r-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: relative;
+}
+
+.botao-submit-quant-e-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+}
+
+.botao-submit-2-quant-e-a {
+    width: 6.3vw;
+    height: 2vw;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: relative;
+}
+
+.botao-central-escrever-quant-r-a {
+    width: 7.8vw;
+    height: 3.5vh;
+    font: 1.5em;
+    border-radius: 15px;
+    border: 0.08 solid black;
+    position: center;
+    text-align: center;
+    align-items: center;
+}
+
+.botao-central-input-quant-r-p {
+    font-size: 1em;
+    width: 100%;
+    height: 4.5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+}
+
+.botao-central-enviar-quant-r-p {
+    width: 5vw;
+    height: 3.8vh;
+    font: 1.5em;
+    border-radius: 15px;
+    border: 0.08em solid black;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-top: 10vh;
+    margin-right: 41vw;
+    margin-left: 39vw;
+    transition: 0.5s;
+}
+
+.botao-central-enviar-quant-r-p:hover {
+    background-color: white;
+    color: black;
+    border-bottom: 0.01em solid black;
+}
+
+.botao-input-estoque {
+    width: 11.5vw;
+    height: 2vw;
+    border-radius: 10px;
+    font-size: 1.3em;
+    position: relative;
+    margin-top: 1%;
+}
+
+.botao-submit-estoque {
+    width: 6.3vw;
+    height: 2vh;
+    font: 1em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: center;
+    text-align: center;
+    position: relative;
+    margin-left: 4%;
+}
+
+
+.botao-central-escrever-quant-e-p {
+    width: 7.8vw;
+    height: 3.5vh;
+    font: 1.5em;
+    border-radius: 15px;
+    border: 0.08 solid black;
+    position: center;
+    text-align: center;
+    align-items: center;
+}
+
+.botao-central-enviar-quant-e-p {
+    width: 5vw;
+    height: 3.8vh;
+    font: 1em;
+    border-radius: 15px;
+    border: 0.08em solid black;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-top: 10vh;
+    margin-right: 41vw;
+    margin-left: 39vw;
+    transition: 0.5s;
+}
+
+.botao-central-enviar-quant-e-p:hover {
+    background-color: white;
+    color: black;
+    border-bottom: 0.01em solid black;
+}
+
+.botao-enviar2-produto {
+    width: 10vw;
+    height: 6vh;
+    font: 2.5em;
+    margin-top: 1.5vh;
+    margin-left: 38vw;
+    margin-right: 45vw;
+    margin-bottom: 2.5vh;
+    color: white;
+    background-color: green;
+    border-radius: 15px;
+    border: 0.07em solid black;
+    position: relative;
+    transition: 0.05s;
+    text-align: center;
+}
+
+.botao-enviar2-produto:hover {
+    background-color: white;
+    color: black;
+    border: 0;
+    font: 2.5em;
+}
+
+.botao-produto-principal {
+    font-size: 1.5em;
+    width: 12vw;
+    height: 5vh;
+    background-color: white;
+    border-bottom: 0.01em solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+}

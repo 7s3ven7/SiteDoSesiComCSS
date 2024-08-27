@@ -73,5 +73,7 @@
 
     </div>
 </body>
-
+<center>
+<div class="texto-grande-controle">Número da Solicitação</div>
+</center>
 </html>

@@ -36,7 +36,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
     <div class="conta-geral">Aluno - <?php echo $nome;?></div>
@@ -55,7 +54,7 @@
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_controle_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
@@ -73,36 +72,26 @@
     </details>
     <details class="details">
         <summary class="sumario">Expedição</summary>
-        <form method="POST" action="t_nota_e_a.php">
+        <form method="POST" action="t_nota_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_e_a.php">
+        <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
-        </form>
-        <form method="POST" action="t_quantitativo_e_a.php">
-            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
-        <form method="POST" action="t_relatorios_a.php">
+        <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
     <div class="caixa-tela-informacao-geral">
-                <form action="t_qualitativo_r_a.php" method="POST">
-                    <center>
-                        <div class="dist-qualitat-r-a">
-                            <div class="texto-grande-qualitat-r-a">
-                                Digite o Código do fornecedor
-                                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
-                                <br>
-                                <input class="botao-submit-qualitat-r-a" type="submit">
-                                <br>
-                            </div>
-                        </div>
-                    </center>
-                </form>
+        <form action="t_qualitativo_r_a.php?nome=<?php redirect()?>" method="POST">
+            <div class="caixa-qualitat-r-a">
+                <div class="texto-medio-qualitat-r-a">Digite o Código do fornecedor</div>
+                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
+                <input class="botao-submit-qualitat-r-a" type="submit">
+            </div>
                 <?php
                 if(isset($_POST['cod_forne'])){            
                         $v1 = $_POST['cod_forne'];

@@ -1,15 +1,11 @@
 <?php
-session_start();
     $hostname = "127.0.0.1";
     $name = "u935055604_wesley";
     $password = "XwZX1383";
     $DB = "u935055604_dados";
 
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
-    if ($conexao->connect_errno) {
-        echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
-        exit();
-    } else{
+    $conexao = new mysqli($hostname, $name, $password, $DB);
+
         $nome = $_GET['nome'];
         function redirect(){
             global $nome;
@@ -18,6 +14,18 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                 echo $nome.'&nome_atividade='.$nome_atividade;
             }else{
                 echo $nome;
+            }
+        }
+        function exibir(){
+            global $conexao;
+            $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$_POST['cod_forne']."';";
+            $resultado = $conexao->query($sql);
+            if($resultado->num_rows != 0){ //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
+                for($i=1;$i<=$resultado->num_rows;$i++){
+                    $row = $resultado -> fetch_array();
+                }
+            } else {
+                exit();
             }
         }?>
     <!DOCTYPE html>
@@ -28,14 +36,13 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
     <div class="conta-geral">Aluno - <?php echo $nome;?></div>
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_nota_r_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
         <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
@@ -47,7 +54,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_controle_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
@@ -71,9 +78,6 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
         <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
-        </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
@@ -81,37 +85,25 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="caixa-tela-informacao-geral">
-                <form action="t_qualitativo_e_a.php" method="POST">
-                    <center>
-                        <div class="dist-qualitat-r-a">
-                            <div class="texto-grande-qualitat-r-a">
-                                Digite o Código do fornecedor
-                                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
-                                <br>
-                                <input class="botao-qualitat-submit-r-a" type="submit">
-                                <br>
-                            </div>
-                        </div>
-                    </center>
-                </form>
+        <form action="t_qualitativo_r_a.php?nome=<?php redirect()?>" method="POST">
+            <div class="caixa-qualitat-r-a">
+                <div class="texto-medio-qualitat-r-a">Digite o Código do fornecedor</div>
+                <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
+                <input class="botao-submit-qualitat-r-a" type="submit">
+            </div>
                 <?php
                 if(isset($_POST['cod_forne'])){            
-                    $v1 = $_POST['cod_forne'];
-                    $_SESSION['cod_forne'] = $v1;
-                    $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
-                    $resultado = $conexao->query($sql);
+                        $v1 = $_POST['cod_forne'];
+                        $_SESSION['cod_forne'] = $v1;
+                        $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+                        $resultado = $conexao->query($sql);
                     if($resultado->num_rows != 0){ //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
                         for($i=1;$i<=$resultado->num_rows;$i++){
                             $row = $resultado -> fetch_array();
                         }
-                    } else {
-                        $conexao -> close();
-                        header("Location: t_qualitativo_e_a.php");
-                        exit();
-                    }
                 echo '
+                <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1-r-a">
                     <table class="tabela-qualitat-r-a">
                         <tr>
@@ -182,9 +174,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
                             <td class="td-qualitat-r-a"><div class="texto-pequeno-qualitat-r-a">Quantidade de unidade: </div></td>
                             <td class="td-qualitat-r-a">'.$row['quant_und'].'</td>
                         </tr>     
-                    </table> ';
-                    }}?>
-                    <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
+                    </table> 
                     </div>
                     <div class="caixa-qualitat-2-r-a">
                     <table class="tabela-qualitat-2-r-a">
@@ -360,18 +350,30 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
 </form>
 </body>
 
-</html>
-<?php
+</html>';} else {
+    $conexao -> close();
+    header("Location: t_qualitativo_r_a.php");
+    exit();
+}
+        }
+        ?>
+        <?php
+        if(isset($_POST['cod_forne'])){       
+            exibir();     
+        }
 
-if(isset($_POST['21'])){
+        if(isset($_POST['21'])){
 
-$conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
 if ($conexao->connect_errno){
 echo "Failed conection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
 exit();
 }else{
-for($i = 1;$i<=20;$i+= 1){ $numero='v' .$i; if(isset($_POST[$i])){ $valor='$' .$numero; $$valor='V' ; echo
-    $valor.'='.$$valor.' <br>';
+for($i = 1;$i<=20;$i+= 1){
+    $numero='v' .$i;
+    if(isset($_POST[$i])){
+    $valor='$'.$numero;
+    $$valor='V';
+    echo $valor.'='.$$valor.' <br>';
     $numero='';
 
     }else {
@@ -385,8 +387,7 @@ for($i = 1;$i<=20;$i+= 1){ $numero='v' .$i; if(isset($_POST[$i])){ $valor='$' .$
     (`container_desgas`,`avari_late_d`,`avari_late_e`,`avari_teto`,`avari_frente`,`sem_lacre`,`adesivo_avariado`,`excesso_altu`,`excesso_d`,`excesso_e`,`excesso_fron`,`painel_avariado`,`sem_cabo_energia`,`sem_lona`,`canhoto_ass`,`volume_correto`,`atraso`,`cod_avariado`,`item_lacrado`,`doca_1`,
     `cod_forne`)
     VALUES
-    ("'.$v1.'","'.$v2.'","'.$v3.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
-    $_SESSION['doca'] = $v20;
+    ("'.$$valor.'","'.$$valor.'","'.$$valor.'","'.$v4.'","'.$v5.'","'.$v6.'","'.$v7.'","'.$v8.'","'.$v9.'","'.$v10.'","'.$v11.'","'.$v12.'","'.$v13.'","'.$v14.'","'.$v15.'","'.$v16.'","'.$v17.'","'.$v18.'","'.$v19.'","'.$v20.'","'.$_SESSION['cod_forne'].'");';
     $resultado = $conexao -> query($SQL);
 
     $conexao->close();
