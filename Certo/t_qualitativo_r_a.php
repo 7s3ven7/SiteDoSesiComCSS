@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 <?php
+    $hostname = "127.0.0.1";
+    $name = "u935055604_wesley";
+    $password = "XwZX1383";
+    $DB = "u935055604_dados";
+
+    $conexao = new mysqli($hostname, $name, $password, $DB);
+
         $nome = $_GET['nome'];
         function redirect(){
             global $nome;
@@ -40,35 +39,35 @@
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
-    <div class="conta-geral">Aluno - <?php //echo $nome;?></div>
+    <div class="conta-geral">Aluno - <?php echo $nome;?></div>
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
         <form method="POST" action="t_nota_r_a.php">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
-        <form method="POST" action="t_qualitativo_r_a.php">
+        <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo">
         </form>
-        <form method="POST" action="t_quantitativo_a.php">
+        <form method="POST" action="t_quantitativo_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Quantitativo">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php">
+        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Estoque</summary>
-        <form method="POST" action="t_estoque_a.php">
+        <form method="POST" action="t_estoque_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Estoque">
         </form>
     </details>
     <details class="details">
         <summary class="sumario">Picking</summary>
-        <form method="POST" action="t_picking_a.php">
+        <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
@@ -90,7 +89,6 @@
             <input class="botao-sumario" type="submit" value="WIP">
         </form>
     </details>
-
     <div class="caixa-tela-informacao-geral">
                 <form action="t_qualitativo_r_a.php" method="POST">
                     <center>
@@ -107,19 +105,14 @@
                 </form>
                 <?php
                 if(isset($_POST['cod_forne'])){            
-                    $v1 = $_POST['cod_forne'];
-                    $_SESSION['cod_forne'] = $v1;
-                    $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
-                    $resultado = $conexao->query($sql);
+                        $v1 = $_POST['cod_forne'];
+                        $_SESSION['cod_forne'] = $v1;
+                        $sql="SELECT * FROM `quantitativo_r_p` WHERE `cod_forne` = '".$v1."';";
+                        $resultado = $conexao->query($sql);
                     if($resultado->num_rows != 0){ //Caso a pesquisa no DB tenha resultado, ele puxa os dados "id" e "tipo" do DB
                         for($i=1;$i<=$resultado->num_rows;$i++){
                             $row = $resultado -> fetch_array();
                         }
-                    } else {
-                        $conexao -> close();
-                        header("Location: t_qualitativo_r_a.php");
-                        exit();
-                    }
                 echo '
                 <form method="POST" action="t_qualitativo_r_a.php">
                 <div class="caixa-qualitat-1-r-a">
@@ -368,17 +361,14 @@
 </form>
 </body>
 
-</html>';
+</html>';} else {
+    $conexao -> close();
+    header("Location: t_qualitativo_r_a.php");
+    exit();
+}
         }
         ?>
         <?php
-    $hostname = "127.0.0.1";
-    $name = "u935055604_wesley";
-    $password = "XwZX1383";
-    $DB = "u935055604_dados";
-
-    $conexao = new mysqli($hostname, $name, $password, $DB);
-    
         if(isset($_POST['cod_forne'])){       
             exibir();     
         }
