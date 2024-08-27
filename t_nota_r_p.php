@@ -144,30 +144,6 @@
                 <td class="texto-central-quantitativo-e-p">CNPJ Remetente: </td>
                 <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ">
             </table>
-            <div class=""></div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class=""></div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class=""></div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class=""></div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class=""></div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
         <div id="conta-geral">Professor - <?php echo $nome;?></div>
 </body>
 

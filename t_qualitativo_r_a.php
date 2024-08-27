@@ -28,7 +28,7 @@
                 exit();
             }
         }?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -36,6 +36,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
@@ -43,7 +44,7 @@
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form method="POST" action="t_nota_r_a.php">
+        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
         <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
@@ -93,7 +94,7 @@
                 <input class="botao-input-qualitat-r-a" type="number" name="cod_forne">
                 <input class="botao-submit-qualitat-r-a" type="submit">
             </div>
-                <?php
+            <?php
                 if(isset($_POST['cod_forne'])){            
                         $v1 = $_POST['cod_forne'];
                         $_SESSION['cod_forne'] = $v1;
@@ -104,7 +105,7 @@
                             $row = $resultado -> fetch_array();
                         }
                 echo '
-                <form method="POST" action="t_qualitativo_r_a.php">
+                <form method="POST" action="t_qualitativo_r_a.php'; redirect();echo '">
                 <div class="caixa-qualitat-1-r-a">
                     <table class="tabela-qualitat-r-a">
                         <tr>
@@ -353,12 +354,13 @@
 
 </html>';} else {
     $conexao -> close();
-    header("Location: t_qualitativo_r_a.php");
+    $redireciona = "'location:t_qualitativo_r_a.php?".redirect()."'";
+    header($redireciona);
     exit();
 }
         }
         ?>
-        <?php
+            <?php
         if(isset($_POST['cod_forne'])){       
             exibir();     
         }
