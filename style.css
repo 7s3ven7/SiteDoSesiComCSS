@@ -395,7 +395,7 @@ summary:hover{
     padding-top: 3vh;
     text-align: center;
     align-items: center;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .caixa-principal-superior-prduto {
@@ -1652,5 +1652,8 @@ summary:hover{
     width:20%;
     height:4vh;
     background-color: white;
+    border:0.01em solid black;
+}
+.borda{
     border:0.01em solid black;
 }

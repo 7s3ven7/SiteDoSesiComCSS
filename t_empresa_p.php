@@ -56,12 +56,27 @@
             <tr>
             <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$v3.'</div></div></td>
             </tr>';}
-        else{
-                echo '<table class="tabela-fornecedor-usado">
+            else{
+        echo '<table class="tabela-fornecedor-usado">
             <thead>
-            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
-            </thead>';
-        echo '<tr><td><div class="texto-aviso-fornecedor">Nenhuma Atividade Encontrada</div></td></tr>';
+            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Selecione uma Atividade <div class="red">ANTES</div></div></td></tr>
+            </thead>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito"></div></div></td>
+            </tr>
+            <tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito"></div></div></td>
+            </tr>        
+        </table>';
             } 
         echo '</table>';
     }
@@ -170,24 +185,11 @@
                 </form>
             </div>
         </div>
-        <<<<<<< HEAD:Certo/t_empresa_p.php <div class="caixa-direita-turma">
+        <div class="caixa-direita-turma">
             <?php exibir(); ?>
-    </div>
-    </div>
-    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
-    =======
-    <div class="caixa-direita-turma">
-        <?php
-                if(isset($_GET['nome_atividade'])){
-                    exibir();
-                }else{
-                    exibir_erro();
-                }
-            ?>
-    </div>
+        </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
-    >>>>>>> 373564bfcac61f493e7194395d2ebad97cc5f642:t_empresa_p.php
 </body>
 
 </html>

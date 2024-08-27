@@ -59,15 +59,6 @@
             <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$v3.'</div></div></td>
             </tr>';}
             else{
-                echo '<table class="tabela-fornecedor-usado">
-            <thead>
-            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
-            </thead>';
-        echo '<tr><td><div class="texto-aviso-fornecedor">Nenhuma Atividade Encontrada</div></td></tr>';
-            } 
-        echo '</table>';
-    }
-    function exibir_erro(){
         echo '<table class="tabela-fornecedor-usado">
             <thead>
             <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Selecione uma Atividade <div class="red">ANTES</div></div></td></tr>
@@ -88,8 +79,9 @@
             <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito"></div></div></td>
             </tr>        
         </table>';
+            } 
+        echo '</table>';
     }
-         
     function cadastrar(){
         global $conexao;
         $cnpj_f = $conexao->real_escape_string($_POST["cnpj_fornecedor"]);
@@ -200,17 +192,7 @@
             </div>
         </div>
         <div class="caixa-direita-turma">
-<<<<<<< HEAD:Certo/t_fornecedor_p.php
             <?php exibir(); ?>
-=======
-            <?php
-                if(isset($_GET['nome_atividade'])){
-                    exibir();
-                }else{
-                    exibir_erro();
-                }
-            ?>
->>>>>>> 373564bfcac61f493e7194395d2ebad97cc5f642:t_fornecedor_p.php
         </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
