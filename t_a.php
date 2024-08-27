@@ -62,9 +62,6 @@
         <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect();?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect();?>">
-            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
-        </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
