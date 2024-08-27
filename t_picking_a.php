@@ -18,6 +18,7 @@
         }
     }
         ?>
+
 <body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
@@ -70,7 +71,7 @@
     </details>
 
     <div class="caixa-tela-informacao-geral">
-        <form action="t_picking_a.php" method="POST">
+        <form action="t_picking_a.php?nome=<?php redirect();?>" method="POST">
             <div class="">
                 <div class="">Digite o nome do produto</div>
                 <input class="" type="text" name="nome_p">

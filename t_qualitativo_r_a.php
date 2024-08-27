@@ -44,7 +44,7 @@
     <div class='espaco'></div>
     <details class='details'>
         <summary class="sumario">Recebimento</summary>
-        <form method="POST" action="t_nota_r_a.php">
+        <form method="POST" action="t_nota_r_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Nota (WIP)">
         </form>
         <form method="POST" action="t_qualitativo_r_a.php?nome=<?php redirect()?>">
