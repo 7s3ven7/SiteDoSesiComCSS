@@ -118,21 +118,25 @@
         <input class="botao-negar-controle-a" type="submit" value="negar" name="negar">
         <?php
         echo '
+        <br>
+        <br>
         <center>
-        <table class="">
-        <tr>Produto
+        <table border 1px>
+        <tr>
+        <th>
+            Produto
+        </th>
+        <th>
+            Unidade
+        </th>
+        <th>
+            Quantidade
+        </th>
         </tr>
         <tr>
-        Unidade
-        </tr>
-        <tr>
-        Quantidade
-        </tr>
-        <td>
-        '.$s5.'
-        </td>
-        <tr>
-        '.$s6.'
+        <td>aaaaaaaaa</td>
+        <td>aaaaaaaaaaa</td>
+        <td>aaaaaaaaaaaaaaas</td>
         </tr>
         </table>
         </center>
