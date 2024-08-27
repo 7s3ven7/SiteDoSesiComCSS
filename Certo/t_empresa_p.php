@@ -174,7 +174,7 @@
             <?php exibir(); ?>
         </div>
     </div>
-        <div class='conta-geral'>Professor - <?php echo $nome;?></div>
+    <div class='conta-geral'>Professor - <?php echo $nome;?></div>
 </body>
 
 </html>
