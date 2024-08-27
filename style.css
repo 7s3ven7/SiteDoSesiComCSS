@@ -51,9 +51,10 @@ summary {
     margin-top: 1.5vh;
     transition: 0.25s;
 }
-summary:hover{
+
+summary:hover {
     background-color: white;
-    color:green;
+    color: green;
 }
 
 /*-----------------------------------------------------------------------------------------Logar/Cadastro-----------------------------------------------------------------------------------------*/
@@ -408,7 +409,7 @@ summary:hover{
     text-align: center;
     align-items: center;
     margin-top: 1.5vh;
-    border:0.01em solid black;
+    border: 0.01em solid black;
 }
 
 .linha-central {
@@ -796,6 +797,7 @@ summary:hover{
     text-align: center;
 }
 
+
 /*_________________________________________________________________________________________Textos_________________________________________________________________________________________*/
 .menu {
     width: 14vw;
@@ -1025,16 +1027,16 @@ summary:hover{
 
 .texto-cinza-produto-principal {
     font-size: 1.75em;
-    color: rgb(30,30,30);
+    color: rgb(30, 30, 30);
     width: 20%;
     height: 5vh;
     text-align: center;
     align-items: center;
     background-color: white;
-    border:0.01em solid black;
+    border: 0.01em solid black;
     text-align: left;
-    padding:0.25vh;
-    padding-left:1vh;
+    padding: 0.25vh;
+    padding-left: 1vh;
 }
 
 .texto-medio-quant-r-a {
@@ -1062,7 +1064,7 @@ summary:hover{
 }
 
 .texto-central2-principal-quantitativo-r-p {
-    width: 25vw;
+    width: 38vw;
     font-size: 3em;
     text-align: center;
     color: black;
@@ -1081,11 +1083,11 @@ summary:hover{
     color: black;
     background-color: white;
     position: relative;
-    border: 0.01em solid black;
+
 }
 
 .texto-central2-quantitativo-e-p {
-    width: 25vw;
+    width: 38vw;
     font-size: 3em;
     text-align: center;
     color: black;
@@ -1129,16 +1131,18 @@ summary:hover{
     margin-left: auto;
     margin-right: auto;
 }
-.red{
-    width:40%;
-    margin-left:auto;
-    margin-right:auto;
-    border:0.01em solid black;
+
+.red {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.01em solid black;
     background-color: salmon;
-    color:black;
-    padding-left:1vh;
-    padding-right:1vh;
+    color: black;
+    padding-left: 1vh;
+    padding-right: 1vh;
 }
+
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
     font-size: 1.25em;
@@ -1157,9 +1161,10 @@ summary:hover{
     text-align: left;
     transition: 0.25s;
 }
-.botao-sumario:hover{
+
+.botao-sumario:hover {
     background-color: white;
-    color:green;
+    color: green;
 }
 
 .botao-turma-input {
@@ -1599,9 +1604,9 @@ summary:hover{
 }
 
 .botao-central-enviar-quant-e-p {
-    width: 5vw;
-    height: 3.8vh;
-    font: 1em;
+    width: 14vw;
+    height: 6.4vh;
+    font: 2em;
     border-radius: 15px;
     border: 0.08em solid black;
     position: relative;
@@ -1610,8 +1615,8 @@ summary:hover{
     background-color: green;
     color: white;
     margin-top: 10vh;
-    margin-right: 41vw;
-    margin-left: 39vw;
+    margin-right: 35vw;
+    margin-left: 35vw;
     transition: 0.5s;
 }
 
@@ -1624,7 +1629,7 @@ summary:hover{
 .botao-enviar2-produto {
     width: 10vw;
     height: 6vh;
-    margin-top:2vh;
+    margin-top: 2vh;
     font-size: 1.5em;
     color: white;
     background-color: green;
@@ -1637,7 +1642,7 @@ summary:hover{
 
 .botao-enviar2-produto:hover {
     background-color: white;
-    color:green;
+    color: green;
 }
 
 .botao-produto-principal {
@@ -1645,12 +1650,13 @@ summary:hover{
     width: 100%;
     height: 4vh;
     background-color: white;
-    border:0.01em solid white;
+    border: 0.01em solid white;
     text-align: center;
 }
-.td-produto-principal{
-    width:20%;
-    height:4vh;
+
+.td-produto-principal {
+    width: 20%;
+    height: 4vh;
     background-color: white;
-    border:0.01em solid black;
+    border: 0.01em solid black;
 }
