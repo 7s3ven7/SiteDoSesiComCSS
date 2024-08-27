@@ -79,106 +79,72 @@
     <div class="caixa-tela-informacao-geral">
     <div class="texto-central2-quantitativo-e-p">Escreva sua nota fiscal</div>  
         <form method="POST" action="t_nota_r_p.php">
-            <table class="tabela_quantitativo_e_p">
-        <div id="">
-        <div id="">
-            <div class="">Número da Danfe</div>
-            <input class="" type="text" name="danfe">
-        </div>
-        <div id="">
-            <div class="">Número Nota</div>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">CNPJ Empresa</div>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">CEP do Empresa</div>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Data de emissão</div>
-            <input class="" type="date" name="nota">
-        </div>
-        <div id="">
-            <div class="">Hora da emissão</div>
-            <input class="" type="time" name="nota">
-        </div>
-        <div id="">
-            <div class="">Nome Empresa</div>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Telefone Empresa</div>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Código</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Descrição do Produto</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Lote</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">NCM</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">CST</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">CFOP</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Unidade</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Quantidade</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Valor unitário</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Valor total</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Nome Remetente</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">Telefone Remetente</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="">
-            <div class="">CNPJ Remetente</div>
-            <hr>
-            <input class="" type="text" name="nota">
-        </div>
-        <div id="conta-geral">Professor - <?php echo $nome;?></div>
+            <table class="tabela_principal_nota_r_p">
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Número da Danfe: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="1" placeholder="1234"></td>
+                    <td class="texto-central-quantitativo-e-p">Número Nota: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="2" placeholder="Aplle"></td> 
+                </tr>    
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">CNPJ Empresa: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="3" placeholder="SENU-123456-2"></td>
+                    <td class="texto-central-quantitativo-e-p">CEP do Empresa: </td> 
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="4" placeholder="Titanaique"></td>            
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Data de emissão: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="5" placeholder="Aplle"></td>
+                    <td class="texto-central-quantitativo-e-p">Hora da emissão: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="6" placeholder="2201"></td>   
+                </tr>
+                <tr>             
+                    <td class="texto-central-quantitativo-e-p">Nome Empresa: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="7" placeholder="Lacre"></td>
+                    <td class="texto-central-quantitativo-e-p">Telefone Empresa: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="8" placeholder="SIF"></td>                    
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Código: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="9" placeholder="Temperatura"></td>
+                    <td class="texto-central-quantitativo-e-p">Descrição do Produto: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="10" placeholder="IMO"></td>                   
+                </tr>
+                <tr>                    
+                    <td class="texto-central-quantitativo-e-p">Lote: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="11" placeholder="Número"></td>
+                    <td class="texto-central-quantitativo-e-p">NCM: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="12" placeholder="A1"></td>                   
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">CST: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                    <td class="texto-central-quantitativo-e-p">CFOP: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Unidade: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                    <td class="texto-central-quantitativo-e-p">Quantidade: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Valor unitário: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                    <td class="texto-central-quantitativo-e-p">Valor total: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Nome Remetente: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                    <td class="texto-central-quantitativo-e-p">Telefone Remetente: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
+                </tr>
+                <tr>
+                <td class="texto-central-quantitativo-e-p">CNPJ Remetente: </td>
+                <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ">
+            </table>
+        <div class="conta-geral">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

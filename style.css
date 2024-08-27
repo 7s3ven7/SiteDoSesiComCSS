@@ -663,6 +663,20 @@ summary:hover {
     padding: 3vh;
 }
 
+.tabela_principal_nota_r_p {
+    width: 60vw;
+    height: 52vh;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    margin-top: 7vh;
+    margin-left: 15vw;
+    margin-right: 35vw;
+    background-color: white;
+    border: 0.1em solid black;
+    margin-bottom: 4vh;
+
+}
 
 .tabela-t-nota-r-a {
     width: 65vw;
@@ -1124,8 +1138,8 @@ summary:hover {
     font-weight: bold;
 }
 
-.texto-grande-controle-a{
-    font-size: 2.1em;
+.texto-grande-controle-a {
+    font-size: 1.5em;
     color: rgb(0, 0, 0);
 }
 
@@ -1627,52 +1641,6 @@ summary:hover {
     background-color: white;
     color: black;
     border-bottom: 0.01em solid black;
-}
-
-.botao-input-controle-a{
-    width: 13vw;
-    height: 3vh;
-    font-size: large;
-    border: 0.1em solid black;
-    border-radius: 5px;
-}
-
-.botao-submit-controle-a{
-    width: 5vw;
-    height: 3vh;
-    font-size: 1.2em;
-    border-radius: 10px;
-    border: 0.1em solid black;
-    text-align: center;
-    position: relative;
-    color: white;
-    background-color: green;
-}
-
-.botao-permitir-controle-a{
-    width: 7vw;
-    height: 5vh;
-    font-size: 1.5em;
-    border-radius: 10px;
-    border: 0.1em solid black;
-    position: absolute;
-    color: white;
-    background-color: darkgreen;
-    left: 33.4vw;
-    top: 80vh;
-}
-
-.botao-negar-controle-a{
-    width: 7vw;
-    height: 5vh;
-    font-size: 1.5em;
-    border-radius: 10px;
-    border: 0.1em solid black;
-    position: absolute;
-    color: white;
-    background-color: darkred;
-    left: 44.6vw;
-    top: 80vh
 }
 
 .botao-enviar2-produto {
