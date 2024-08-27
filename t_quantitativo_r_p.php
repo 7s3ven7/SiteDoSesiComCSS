@@ -120,55 +120,52 @@
     </div>
     <div class="menu">Menu</div>
     <div  class='caixa-tela-informacao-geral'>
-        <div class="texto-central2-principal-quantitativo-r-p">Digite a parte quantitativa</div>   
+        <div class="texto-central2-principal-quantitativo-r-p">Digite a parte quantitativa de recebimento</div>   
             <form method="POST" action="t_quantitativo_r_p.php">
-
-            
-
-
-            <table class="tabela_quantitativo_r_p">
-                <tr class="subtabela_quantitativo_r_p">
-                    <td class="texto-cinza-principal-quant-r-p">Código do fornecedor: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Nome da empresa: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Modelo do container: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Navio: </td>
+            <table class="tabela_quantitativo_e_p">
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Código do fornecedor: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="1" placeholder="1234"></td>
+                    <td class="texto-central-quantitativo-e-p">Nome da empresa: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="2" placeholder="Aplle"></td> 
                 </tr>    
                 <tr>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="1" placeholder="1234"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="2" placeholder="Aplle"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="3" placeholder="SENU-123456-2"></td> 
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="4" placeholder="Titanaique"></td>
-                
-                </tr>
-                <tr class="subtabela_quantitativo_r_p">
-                    <td class="texto-cinza-principal-quant-r-p">Nome do fornecedor: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Tipo do container: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Lacre: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Lacre SIF: </td>
-                </tr>
-                <tr> 
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="5" placeholder="Aplle"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="6" placeholder="2201"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="7" placeholder="Lacre"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="8" placeholder="SIF"></td>
-                </tr>
-                <tr class="subtabela_quantitativo_r_p">
-                    <td class="texto-cinza-principal-quant-r-p">Temperatura: </td>
-                    <td class="texto-cinza-principal-quant-r-p">IMO: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Número ONU: </td>
-                    <td class="texto-cinza-principal-quant-r-p">Lotes: </td>
-                    <td class="texto-cinza-principal-quant-r-p">CNPJ do destinatário: </td>
+                    <td class="texto-central-quantitativo-e-p">Modelo do container: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="3" placeholder="SENU-123456-2"></td>
+                    <td class="texto-central-quantitativo-e-p">Navio: </td> 
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="4" placeholder="Titanaique"></td>            
                 </tr>
                 <tr>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="9" placeholder="Temperatura"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="10" placeholder="IMO"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="11" placeholder="Número"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="12" placeholder="A1"></td>
-                    <td><input class="botao-central-escrever-quant-r-p" type="text" name="13" placeholder="CNPJ"></td>
+                    <td class="texto-central-quantitativo-e-p">Nome do fornecedor: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="5" placeholder="Aplle"></td>
+                    <td class="texto-central-quantitativo-e-p">Tipo do container: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="6" placeholder="2201"></td>   
+                </tr>
+                <tr>             
+                    <td class="texto-central-quantitativo-e-p">Lacre: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="7" placeholder="Lacre"></td>
+                    <td class="texto-central-quantitativo-e-p">Lacre SIF: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="8" placeholder="SIF"></td>                    
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">Temperatura: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="9" placeholder="Temperatura"></td>
+                    <td class="texto-central-quantitativo-e-p">IMO: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="10" placeholder="IMO"></td>                   
+                </tr>
+                <tr>                    
+                    <td class="texto-central-quantitativo-e-p">Número ONU: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="11" placeholder="Número"></td>
+                    <td class="texto-central-quantitativo-e-p">Lotes: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="12" placeholder="A1"></td>                   
+                </tr>
+                <tr>
+                    <td class="texto-central-quantitativo-e-p">CNPJ do destinatário: </td>
+                    <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ"></td>
                 </tr>
             </table>
         </form>
-        <input class="botao-central-enviar-quant-r-p" type="submit" value="Enviar" name="enviar">
+        <input class="botao-central-enviar-quant-e-p" type="submit" value="Enviar" name="enviar">
 
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>

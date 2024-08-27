@@ -121,7 +121,7 @@
     </div>
     <div class="menu">Menu</div>
     <div class="caixa-tela-informacao-geral">
-    <div class="texto-central2-quantitativo-e-p">Digite a parte quantitativa</div>  
+    <div class="texto-central2-quantitativo-e-p">Digite a parte quantitativa de expedição</div>  
         <form method="POST" action="t_quantitativo_e_p.php">
             <table class="tabela_quantitativo_e_p">
                 <tr>

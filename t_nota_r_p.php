@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,10 +76,11 @@
         </details>
     </div>
     <div class="menu">Menu</div>
-    <div class="">
+    <div class="caixa-tela-informacao-geral">
+    <div class="texto-central2-quantitativo-e-p">Escreva sua nota fiscal</div>  
+        <form method="POST" action="t_nota_r_p.php">
+            <table class="tabela_quantitativo_e_p">
         <div id="">
-            <img src="../../img/logo.png" width="250px" height="200px">
-        </div>
         <div id="">
             <div class="">Número da Danfe</div>
             <input class="" type="text" name="danfe">
@@ -177,7 +178,7 @@
             <hr>
             <input class="" type="text" name="nota">
         </div>
-        <div id="">Professor - <?php echo $nome;?></div>
+        <div id="conta-geral">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>
