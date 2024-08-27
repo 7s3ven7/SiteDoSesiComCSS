@@ -1630,12 +1630,49 @@ summary:hover {
 }
 
 .botao-input-controle-a{
-    width: 15vw;
-    height: 4vh;
+    width: 13vw;
+    height: 3vh;
+    font-size: large;
+    border: 0.1em solid black;
+    border-radius: 5px;
 }
 
 .botao-submit-controle-a{
+    width: 5vw;
+    height: 3vh;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    text-align: center;
+    position: relative;
+    color: white;
+    background-color: green;
+}
 
+.botao-permitir-controle-a{
+    width: 7vw;
+    height: 5vh;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: absolute;
+    color: white;
+    background-color: darkgreen;
+    left: 33.4vw;
+    top: 80vh;
+}
+
+.botao-negar-controle-a{
+    width: 7vw;
+    height: 5vh;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 0.1em solid black;
+    position: absolute;
+    color: white;
+    background-color: darkred;
+    left: 44.6vw;
+    top: 80vh
 }
 
 .botao-enviar2-produto {
