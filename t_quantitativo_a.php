@@ -47,8 +47,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="Controle">
+        <form method="POST" action="t_controle_a.php?nome=<?php redirect()?>">
+            <input class="botao-sumario" type="submit" value="Controle (WIP)">
         </form>
     </details>
     <details class="details">
@@ -60,7 +60,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     <details class="details">
         <summary class="sumario">Picking</summary>
         <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="WIP">
+            <input class="botao-sumario" type="submit" value="Picking (WIP)">
         </form>
     </details>
     <details class="details">
@@ -75,7 +75,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     <details class="details">
         <summary class="sumario">Relatórios</summary>
         <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="WIP">
+            <input class="botao-sumario" type="submit" value="Relatórios (WIP)">
         </form>
     </details>
 
