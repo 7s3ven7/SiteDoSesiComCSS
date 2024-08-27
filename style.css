@@ -663,6 +663,19 @@ summary:hover {
     padding: 3vh;
 }
 
+.tabela_principal_nota_r_p {
+    width: 65vw;
+    height: 45vh;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    background-color: white;
+    border: 0.1em solid black;
+    margin-bottom: 3vh;
+}
 
 .tabela-t-nota-r-a {
     width: 65vw;
@@ -1124,7 +1137,7 @@ summary:hover {
     font-weight: bold;
 }
 
-.texto-grande-controle-a{
+.texto-grande-controle-a {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
 }
