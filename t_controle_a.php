@@ -70,10 +70,10 @@
         </form>
     </details>
     <div class="caixa-tela-informacao-geral">
-
+    <center>
+        <div class="texto-grande-controle-a">Número da Solicitação</div>
+    </center>
     </div>
 </body>
-<center>
-<div class="texto-grande-controle">Número da Solicitação</div>
-</center>
+
 </html>

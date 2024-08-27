@@ -36,6 +36,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<body>
     <div class="caixa-menu-geral"></div>
     <div class="menu">Menu</div>
     <div class="conta-geral">Aluno - <?php echo $nome;?></div>

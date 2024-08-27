@@ -1122,6 +1122,11 @@ summary:hover{
     font-weight: bold;
 }
 
+.texto-grande-controle-a{
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
 .fornecedor-negrito {
     font-weight: normal;
     font-size: xx-large;
