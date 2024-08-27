@@ -144,7 +144,7 @@
                 <td class="texto-central-quantitativo-e-p">CNPJ Remetente: </td>
                 <td><input class="botao-central-escrever-quant-e-p" type="text" name="13" placeholder="CNPJ">
             </table>
-        <div id="conta-geral">Professor - <?php echo $nome;?></div>
+        <div class="conta-geral">Professor - <?php echo $nome;?></div>
 </body>
 
 </html>

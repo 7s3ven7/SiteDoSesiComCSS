@@ -664,16 +664,18 @@ summary:hover {
 }
 
 .tabela_principal_nota_r_p {
-    width: 65vw;
-    height: 45vh;
-    position: relative;
+    width: 60vw;
+    height: 52vh;
+    position: absolute;
     text-align: center;
     align-items: center;
-    margin-top: 4vh;
-    margin-left: 35vw;
+    margin-top: 7vh;
+    margin-left: 15vw;
     margin-right: 35vw;
     background-color: white;
     border: 0.1em solid black;
+    margin-bottom: 4vh;
+
 }
 
 .tabela-t-nota-r-a {
