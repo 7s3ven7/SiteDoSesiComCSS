@@ -64,7 +64,7 @@ session_start();
                     $conexao->close();
                     header('Location: t_a.php?nome='.$nome, true, 301);
                     exit();
-                }       
+                }
             } else {
                 $conexao->close();
                 header('Location: index.php', true, 301);
