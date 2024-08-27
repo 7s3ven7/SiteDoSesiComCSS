@@ -1122,7 +1122,20 @@ summary {
     margin-left: auto;
     margin-right: auto;
 }
-
+.texto-aviso-fornecedor{
+    width:25vw;
+    height:5vh;
+    padding:1vh;
+    padding-bottom:1vh;
+    background-color: salmon;
+    text-align: center;
+    border:0.01em solid black;
+    font-size:1.5em;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    border-radius: 50px;
+}
 /*_________________________________________________________________________________________Botões_________________________________________________________________________________________*/
 .botao-sumario {
     font-size: 1.25em;

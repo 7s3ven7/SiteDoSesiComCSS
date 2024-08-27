@@ -21,36 +21,51 @@
     }
     function exibir(){
         global $conexao;
+            if(isset($_GET['nome_atividade'])){
         $nome_atividade = $_GET['nome_atividade'];
         $sql = 'SELECT * FROM `fornecedor_p` WHERE `id_atividade` = "'.$nome_atividade.'"';
         $resultado = $conexao->query($sql);
         $row = mysqli_fetch_array($resultado);
-        $cnpj_f = $row['0'];
-        $atividade = $row['1'];
-        $nome_f = $row['2'];
-        $fone_f = $row['3'];
-        $gmail_f = $row['4'];
-        $cep_f = $row['5'];
+        $v1 = $row['0'];
+        $v2 = $row['2'];
+        $v3 = $row['3'];
+        $v4 = $row['4'];
+        $v5 = $row['5'];
+        for($i = 1;$i <= 5;$i++){
+            $valor = 'v'.$i;
+            if($$valor == ''){
+                $$valor = '-';
+            }else{
+                $$valor = $$valor;
+            }
+        }
         echo '<table class="tabela-fornecedor-usado">
             <thead>
             <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
-            </thead>
-            <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito">'.$nome_f.'</div></div></td>
+            </thead>';
+        echo '<tr>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Fornecedor<div class="fornecedor-negrito">'.$v2.'</div></div></td>
             </tr>
             <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito">'.$cnpj_f.'</div></div></td>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CNPJ<div class="fornecedor-negrito">'.$v1.'</div></div></td>
             </tr>
             <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito">'.$cep_f.'</div></div></td>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">CEP<div class="fornecedor-negrito">'.$v5.'</div></div></td>
             </tr>
             <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito">'.$gmail_f.'</div></div></td>
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Gmail<div class="fornecedor-negrito">'.$v4.'</div></div></td>
             </tr>
             <tr>
-            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$fone_f.'</div></div></td>
-            </tr>        
-        </table>';
+            <td class="td-fornecedor-usado-left"><div class="texto-fornecedor-usado">Telefone<div class="fornecedor-negrito">'.$v3.'</div></div></td>
+            </tr>';}
+            else{
+                echo '<table class="tabela-fornecedor-usado">
+            <thead>
+            <tr><td colspan="2" class="td-fornecedor-usado-topo"><div class="texto-fornecedor-usado">Fornecedor Selecionado</div></td></tr>
+            </thead>';
+        echo '<tr><td><div class="texto-aviso-fornecedor">Nenhuma Atividade Encontrada</div></td></tr>';
+            } 
+        echo '</table>';
     }
          
     function cadastrar(){
@@ -163,8 +178,7 @@
             </div>
         </div>
         <div class="caixa-direita-turma">
-            <?php
-            exibir(); ?>
+            <?php exibir(); ?>
         </div>
     </div>
     <div class='conta-geral'>Professor - <?php echo $nome;?></div>
