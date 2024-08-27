@@ -1125,7 +1125,7 @@ summary:hover {
 }
 
 .texto-grande-controle-a{
-    font-size: 1.5em;
+    font-size: 2.1em;
     color: rgb(0, 0, 0);
 }
 
@@ -1627,6 +1627,15 @@ summary:hover {
     background-color: white;
     color: black;
     border-bottom: 0.01em solid black;
+}
+
+.botao-input-controle-a{
+    width: 15vw;
+    height: 4vh;
+}
+
+.botao-submit-controle-a{
+
 }
 
 .botao-enviar2-produto {

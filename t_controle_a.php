@@ -72,6 +72,8 @@
     <div class="caixa-tela-informacao-geral">
     <center>
         <div class="texto-grande-controle-a">Número da Solicitação</div>
+        <input class="botao-input-controle-a" type="number" name="cod_forne">
+        <input class="botao-submit-controle-a" type="submit">
     </center>
     </div>
 </body>
