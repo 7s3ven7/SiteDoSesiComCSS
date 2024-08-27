@@ -47,8 +47,8 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     </details>
     <details class="details">
         <summary class="sumario">Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="Controle">
+        <form method="POST" action="t_controle_a.php?nome=<?php redirect()?>">
+            <input class="botao-sumario" type="submit" value="Controle (WIP)">
         </form>
     </details>
     <details class="details">
@@ -60,7 +60,7 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
     <details class="details">
         <summary class="sumario">Picking</summary>
         <form method="POST" action="t_picking_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="WIP">
+            <input class="botao-sumario" type="submit" value="Picking (WIP)">
         </form>
     </details>
     <details class="details">
@@ -71,14 +71,11 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
         <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
         </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
-        </form>
     </details>
     <details class="details">
         <summary class="sumario">Relatórios</summary>
         <form method="POST" action="t_relatorios_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="WIP">
+            <input class="botao-sumario" type="submit" value="Relatórios (WIP)">
         </form>
     </details>
 
@@ -95,12 +92,6 @@ $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o D
         <form action="t_quantitativo_a.php" method="POST">
         <?php
     if(isset($_POST['cod_forne'])){
-        $hostname = "127.0.0.1";
-        $name = "root";
-        $password = "root";
-        $DB = "dados";
-
-        $conexao = new mysqli($hostname, $name, $password, $DB);//Tenta conexão com o DB
         if ($conexao->connect_errno) {
             echo "Failed connection: " . $conexao->connect_error; //erro caso não consiga conectar ao DB
             header("Location: t_quantitativo_a.php");

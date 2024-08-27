@@ -37,7 +37,7 @@
     </details>
     <details>
         <summary>Controle</summary>
-        <form method="POST" action="t_docas_r_a.php?nome=<?php redirect()?>">
+        <form method="POST" action="t_controle_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Controle">
         </form>
     </details>
@@ -60,9 +60,6 @@
         </form>
         <form method="POST" action="t_qualitativo_e_a.php?nome=<?php redirect()?>">
             <input class="botao-sumario" type="submit" value="Qualitativo (WIP)">
-        </form>
-        <form method="POST" action="t_quantitativo_e_a.php?nome=<?php redirect()?>">
-            <input class="botao-sumario" type="submit" value="Quantitativo (WIP)">
         </form>
     </details>
     <details>
@@ -120,18 +117,8 @@
                 $s13 = $row['12'];//Coluna
                 $s14 = $row['13'];//Andar
                 $s15 = $row['14'];//Ap
-                $s16 = $_SESSION['doca'];
-                    if($s16 == 'V'){
-                        $s16 = 1;
-                    }elseif($s16 == 'F'){
-                        $s16 = 2;
-                    }
                 echo '
                 <table class="">
-                    <tr>
-                        <td class="texto-medio-estoque">Doca:
-                        <input class="" type="number" value="'.$s16.'"></td>
-                    </tr>
                     <tr>
                         <td class="texto-medio-estoque">Nome do produto
                         <input class="" type="text" value="'.$s4.'"></td>
